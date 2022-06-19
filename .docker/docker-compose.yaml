@@ -3,16 +3,16 @@ services:
     build: TFB-Bungee
     #target: development
     expose:
-      - 25565
-      - 8804
+      - 25565:25565
+      - 8804:8804
   mysql:
     image: mariadb
     restart: always
     expose: 
-      - 3306
+      - 3306:3306
     command: --init-file /data/application/init.sql
     volumes:
-      - ./init.sql:/data/application/init.sql
+        - .docker/init.sql:/data/application/init.sql
     environment:
         MYSQL_USER: tfbdev
         MYSQL_PASSWORD: tfb123
