@@ -6,7 +6,7 @@ services:
       - 25565
       - 8804
   mysql:
-    image: mariadb
+    image: mysql
     restart: always
     expose: 
       - 3306
