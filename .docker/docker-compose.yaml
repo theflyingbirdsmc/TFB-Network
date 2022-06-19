@@ -8,8 +8,8 @@ services:
       - 8804
     environment:
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
-      #PLUGET_USER:
-      #PLUGET_PASS:
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
   mysql:
     image: mysql:latest
     restart: always
