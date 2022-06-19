@@ -7,15 +7,15 @@ services:
       - 25565
       - 8804
     environment:
-      GITHUB_REPOSITORY: https://github.com/theflyingbirdsmc/TFB-Bungee.git
-      PLUGET_USER:
-      PLUGET_PASS:
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
+      #PLUGET_USER:
+      #PLUGET_PASS:
   mysql:
     image: mysql:latest
     restart: always
     expose:
       - 3306
     environment:
-      MYSQL_DATABASE: s1_luckperms
-      MYSQL_USER: tfbdev
-      MYSQL_PASSWORD: tfb123
+      - MYSQL_DATABASE=s1_luckperms
+      - MYSQL_USER=tfbdev
+      - MYSQL_PASSWORD=tfb123
