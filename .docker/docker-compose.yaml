@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   bungee:
-    build: TFB-Bungee
+    build: "TFB-Bungee"
     #target: development
     expose:
       - 25565
