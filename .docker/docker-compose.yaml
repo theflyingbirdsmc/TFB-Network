@@ -11,9 +11,7 @@ services:
     restart: always
     expose: 
       - 3306
-    #command: --init-file /docker-entrypoint-initdb.d/init.sql
-    volumes:
-        - ./setup.sql:/docker-entrypoint-initdb.d"
     environment:
+        MYSQL_DATABASE: s1_luckperms
         MYSQL_USER: tfbdev
         MYSQL_PASSWORD: tfb123
