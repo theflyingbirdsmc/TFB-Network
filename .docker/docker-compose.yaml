@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   bungee:
-    build: test
+    build: TFB-Bungee
     #target: development
     expose:
       - 25565
@@ -9,9 +9,9 @@ services:
   mysql:
     image: mysql:latest
     restart: always
-    expose: 
+    expose:
       - 3306
     environment:
-        MYSQL_DATABASE: s1_luckperms
-        MYSQL_USER: tfbdev
-        MYSQL_PASSWORD: tfb123
+      MYSQL_DATABASE: s1_luckperms
+      MYSQL_USER: tfbdev
+      MYSQL_PASSWORD: tfb123
