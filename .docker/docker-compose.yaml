@@ -1,0 +1,14 @@
+services:
+  bungee:
+    build: TFB-Bungee
+    #target: development
+  mysql:
+    image: mariadb
+    restart: always
+    expose: 3306
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./init.sql:/data/application/init.sql
+    environment:
+        MYSQL_USER: tfbdev
+        MYSQL_PASSWORD: tfb123

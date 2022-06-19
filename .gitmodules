@@ -1,0 +1,6 @@
+[submodule "FuglensTestServer"]
+	path = FuglensTestServer
+	url = https://github.com/theflyingbirdsmc/FuglensTestServer
+[submodule "TFB-Bungee"]
+	path = TFB-Bungee
+	url = https://github.com/theflyingbirdsmc/TFB-Bungee.git
