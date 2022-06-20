@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 services:
   bungee:
     image: ghcr.io/theflyingbirdsmc/pluget:latest
@@ -11,7 +11,9 @@ services:
       - GITHUB_EMAIL=fuglenbusiness@gmail.com
       - GITHUB_USERNAME=Fuglen
     volumes:
-      - "~/minecraft_data:/home/container"
+      - "tfb:/home/container"
+volumes:
+  tfb:
   # mysql:
   #   image: mysql:latest
   #   restart: always
