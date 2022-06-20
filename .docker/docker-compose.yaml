@@ -12,7 +12,7 @@ services:
       - GITHUB_USERNAME=Fuglen
       - BUILD_NUMBER=latest
       - MINECRAFT_VERSION=latest
-      - DL_PATH=
+      #- DL_PATH=
       - SERVER_JARFILE=server.jar
   mysql:
     image: mysql:latest
