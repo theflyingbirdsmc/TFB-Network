@@ -3,7 +3,7 @@ services:
   bungee:
     image: ghcr.io/theflyingbirdsmc/pluget:latest
     #target: development
-    expose:
+    ports:
       - 25565:25565
       - 8804:8804
     environment:
