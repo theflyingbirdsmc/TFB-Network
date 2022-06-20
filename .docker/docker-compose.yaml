@@ -11,7 +11,7 @@ services:
       - GITHUB_EMAIL=fuglenbusiness@gmail.com
       - GITHUB_USERNAME=Fuglen
     volumes:
-      - "~/minecraft_data:/data"
+      - "~/minecraft_data:/home/container"
   # mysql:
   #   image: mysql:latest
   #   restart: always
