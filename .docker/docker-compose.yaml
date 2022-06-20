@@ -10,10 +10,6 @@ services:
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
       - GITHUB_EMAIL=fuglenbusiness@gmail.com
       - GITHUB_USERNAME=Fuglen
-      - BUILD_NUMBER=latest
-      - MINECRAFT_VERSION=latest
-      #- DL_PATH=
-      - SERVER_JARFILE=server.jar
   mysql:
     image: mysql:latest
     restart: always
