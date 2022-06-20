@@ -10,12 +10,12 @@ services:
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
       - GITHUB_EMAIL=fuglenbusiness@gmail.com
       - GITHUB_USERNAME=Fuglen
-  mysql:
-    image: mysql:latest
-    restart: always
-    expose:
-      - 3306
-    environment:
-      - MYSQL_DATABASE=s1_luckperms
-      - MYSQL_USER=tfbdev
-      - MYSQL_PASSWORD=tfb123
+  # mysql:
+  #   image: mysql:latest
+  #   restart: always
+  #   expose:
+  #     - 3306
+  #   environment:
+  #     - MYSQL_DATABASE=s1_luckperms
+  #     - MYSQL_USER=tfbdev
+  #     - MYSQL_PASSWORD=tfb123
