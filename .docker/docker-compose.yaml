@@ -14,7 +14,7 @@ services:
       - MINECRAFT_VERSION=latest
       - SERVER_JARFILE=server.jar
     volumes:
-      - "tfb:/home/container"
+      - "bungee:/home/container"
   lobby:
     image: ghcr.io/theflyingbirdsmc/pluget:latest
     ports:
@@ -27,9 +27,10 @@ services:
       - MINECRAFT_VERSION=latest
       - SERVER_JARFILE=server.jar
     volumes:
-      - "tfb:/home/container"
+      - "lobby:/home/container"
 volumes:
-  tfb:
+  bungee:
+  lobby:
   # mysql:
   #   image: mysql:latest
   #   restart: always
