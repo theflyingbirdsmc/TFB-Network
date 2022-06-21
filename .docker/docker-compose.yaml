@@ -26,6 +26,8 @@ services:
       - BUILD_NUMBER=latest
       - MINECRAFT_VERSION=latest
       - SERVER_JARFILE=server.jar
+    volumes:
+      - "tfb:/home/container"
 volumes:
   tfb:
   # mysql:
