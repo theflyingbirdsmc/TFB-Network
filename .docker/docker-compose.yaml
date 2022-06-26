@@ -1,20 +1,20 @@
 version: "3.9"
 services:
-  bungee:
-    image: ghcr.io/theflyingbirdsmc/pluget:latest
-    #target: development
-    ports:
-      - 25565:25565
-      - 8804:8804
-    environment:
-      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
-      - GITHUB_EMAIL=fuglenbusiness@gmail.com
-      - GITHUB_USERNAME=Fuglen
-      - BUILD_NUMBER=latest
-      - MINECRAFT_VERSION=latest
-      - SERVER_JARFILE=server.jar
-    volumes:
-      - "bungee:/home/container"
+  # bungee:
+  #   image: ghcr.io/theflyingbirdsmc/pluget:latest
+  #   #target: development
+  #   ports:
+  #     - 25565:25565
+  #     - 8804:8804
+  #   environment:
+  #     - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
+  #     - GITHUB_EMAIL=fuglenbusiness@gmail.com
+  #     - GITHUB_USERNAME=Fuglen
+  #     - BUILD_NUMBER=latest
+  #     - MINECRAFT_VERSION=latest
+  #     - SERVER_JARFILE=server.jar
+  #   volumes:
+  #     - "bungee:/home/container"
   lobby:
     image: ghcr.io/theflyingbirdsmc/pluget:latest
     ports:
@@ -26,6 +26,8 @@ services:
       - BUILD_NUMBER=latest
       - MINECRAFT_VERSION=latest
       - SERVER_JARFILE=server.jar
+      - SFTP_USER=
+      - SFTP_PASS=
     volumes:
       - "lobby:/home/container"
 volumes:
