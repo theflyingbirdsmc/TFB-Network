@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+  bungee:
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    #target: development
+    ports:
+      - 25565:25565
+      - 8804:8804
+    environment:
+      - COMPOSE_PROJECT_NAME=Bungee
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
+      - GITHUB_EMAIL=fuglenbusiness@gmail.com
+      - GITHUB_USERNAME=Fuglen
+      - BUILD_NUMBER=latest
+      - MINECRAFT_VERSION=latest
+      - SERVER_JARFILE=server.jar
+    volumes:
+      - "bungee:/home/container"
+  lobby:
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    ports:
+      - 25600:25600
+    environment:
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Lobby.git
+      - GITHUB_EMAIL=fuglenbusiness@gmail.com
+      - GITHUB_USERNAME=Fuglen
+      - BUILD_NUMBER=latest
+      - MINECRAFT_VERSION=1.18.2
+      - SERVER_JARFILE=server.jar
+    volumes:
+      - "lobby:/home/container"
+volumes:
+  bungee:
+  lobby:
+  # mysql:
+  #   image: mysql:latest
+  #   restart: always
+  #   expose:
+  #     - 3306
+  #   environment:
+  #     - MYSQL_DATABASE=s1_luckperms
+  #     - MYSQL_USER=tfbdev
+  #     - MYSQL_PASSWORD=tfb123
