@@ -26,8 +26,6 @@ services:
       - BUILD_NUMBER=latest
       - MINECRAFT_VERSION=latest
       - SERVER_JARFILE=server.jar
-      - SFTP_USER=
-      - SFTP_PASS=
     volumes:
       - "lobby:/home/container"
 volumes:
