@@ -24,7 +24,7 @@ services:
       - GITHUB_EMAIL=fuglenbusiness@gmail.com
       - GITHUB_USERNAME=Fuglen
       - BUILD_NUMBER=latest
-      - MINECRAFT_VERSION=latest
+      - MINECRAFT_VERSION=1.18.2
       - SERVER_JARFILE=server.jar
     volumes:
       - "lobby:/home/container"
