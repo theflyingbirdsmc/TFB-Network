@@ -1,0 +1,3 @@
+[submodule "TFB-Lobby"]
+	path = TFB-Lobby
+	url = https://github.com/theflyingbirdsmc/TFB-Lobby.git
