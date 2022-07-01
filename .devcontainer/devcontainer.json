@@ -3,5 +3,12 @@
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/container/TFB,type=bind",
     "workspaceFolder": "/home/container/TFB",
     "dockerComposeFile": "docker-compose.yml",
-    "service": "bungee"
+	"service": "bungee",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"liximomo.sftp"
+			]
+		}
+	}
 }

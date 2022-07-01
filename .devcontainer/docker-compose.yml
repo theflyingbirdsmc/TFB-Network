@@ -1,8 +1,10 @@
 version: "3.9"
 services:
   bungee:
+    container_name: Bungee
     image: ghcr.io/theflyingbirdsmc/pluget:latest
-    #target: development
+    depends_on:
+      - mysql
     ports:
       - 25565:25565
       - 8804:8804
@@ -17,7 +19,11 @@ services:
     volumes:
       - "bungee:/home/container"
   lobby:
+    container_name: Lobby
     image: ghcr.io/theflyingbirdsmc/pluget:latest
+    depends_on:
+      - bungee
+      - mysql
     ports:
       - 25600:25600
     environment:
@@ -29,15 +35,16 @@ services:
       - SERVER_JARFILE=server.jar
     volumes:
       - "lobby:/home/container"
+  mysql:
+    image: mysql:latest
+    restart: always
+    expose:
+      - 3306
+    environment:
+      - MYSQL_DATABASE=s1_luckperms
+      - MYSQL_USER=tfbdev
+      - MYSQL_PASSWORD=tfb123
 volumes:
   bungee:
   lobby:
-  # mysql:
-  #   image: mysql:latest
-  #   restart: always
-  #   expose:
-  #     - 3306
-  #   environment:
-  #     - MYSQL_DATABASE=s1_luckperms
-  #     - MYSQL_USER=tfbdev
-  #     - MYSQL_PASSWORD=tfb123
+  mysql:
