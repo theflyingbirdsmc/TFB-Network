@@ -1,0 +1,83 @@
+version: "3.9"
+services:
+  bungee:
+    container_name: Bungee
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    depends_on:
+      - database
+    ports:
+      - 25565:25565
+      - 8804:8804
+    environment:
+      - COMPOSE_PROJECT_NAME=Bungee
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
+      - GITHUB_EMAIL=fuglenbusiness@gmail.com
+      - GITHUB_USERNAME=Fuglen
+      - BUILD_NUMBER=latest
+      - MINECRAFT_VERSION=latest
+      - SERVER_JARFILE=server.jar
+    volumes:
+      - "bungee:/home/container"
+    networks:
+      - tfb
+  lobby:
+    container_name: Lobby
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    depends_on:
+      - bungee
+      - database
+    ports:
+      - 25600:25600
+    environment:
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Lobby.git
+      - BUILD_NUMBER=latest
+      - MINECRAFT_VERSION=1.18.2
+      - SERVER_JARFILE=server.jar
+    volumes:
+      - "lobby:/home/container"
+    networks:
+      - tfb
+  creative:
+    container_name: Creative
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    depends_on:
+      - bungee
+      - database
+      - lobby
+    ports:
+      - 25601:25601
+    environment:
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Creative.git
+      - BUILD_NUMBER=latest
+      - MINECRAFT_VERSION=1.18.2
+      - SERVER_JARFILE=server.jar
+    volumes:
+      - "creative:/home/container"
+    networks:
+      - tfb
+  database:
+    container_name: Database
+    image: mariadb:10.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - "database:/var/lib/mysql"
+      - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+    networks:
+      tfb:
+        ipv4_address: 172.17.0.1
+volumes:
+  bungee:
+  lobby:
+  creative:
+  database:
+networks:
+  tfb:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.17.0.0/16
+          gateway: 172.17.0.10

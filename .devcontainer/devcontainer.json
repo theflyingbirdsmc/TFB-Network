@@ -1,8 +1,8 @@
 {
-    "name": "TFB-Network",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/home/container/TFB,type=bind",
-    "workspaceFolder": "/home/container/TFB",
-    "dockerComposeFile": "docker-compose.yml",
+	"name": "TFB-Bungee",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/container/TFB,type=bind",
+	"workspaceFolder": "/home/container/TFB",
+	"dockerComposeFile": "../docker-compose.yml",
 	"service": "bungee",
 	"customizations": {
 		"vscode": {
