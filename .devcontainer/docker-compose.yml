@@ -8,34 +8,32 @@ services:
     ports:
       - 25565:25565
       - 8804:8804
+      - 25600:25600
+      - 25601:25601
     environment:
       - COMPOSE_PROJECT_NAME=Bungee
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
-      - GITHUB_EMAIL=fuglenbusiness@gmail.com
-      - GITHUB_USERNAME=Fuglen
-    tty: true
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
       - "bungee:/home/container"
     networks:
-      - tfb
+      tfb:
+        ipv4_address: 172.18.0.1
   lobby:
     container_name: Lobby
     image: ghcr.io/theflyingbirdsmc/pluget:latest
     depends_on:
       - bungee
       - database
-    ports:
-      - 25600:25600
     environment:
       - COMPOSE_PROJECT_NAME=Lobby
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Lobby.git
-      - GITHUB_EMAIL=fuglenbusiness@gmail.com
-      - GITHUB_USERNAME=Fuglen
-    tty: true
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
       - "lobby:/home/container"
-    networks:
-      - tfb
+    network_mode: "service:bungee"
   creative:
     container_name: Creative
     image: ghcr.io/theflyingbirdsmc/pluget:latest
@@ -43,18 +41,14 @@ services:
       - bungee
       - database
       - lobby
-    ports:
-      - 25601:25601
     environment:
       - COMPOSE_PROJECT_NAME=Creative
       - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Creative.git
-      - GITHUB_EMAIL=fuglenbusiness@gmail.com
-      - GITHUB_USERNAME=Fuglen
-    tty: true
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
       - "creative:/home/container"
-    networks:
-      - tfb
+    network_mode: "service:bungee"
   database:
     container_name: Database
     image: mariadb:10.7
@@ -63,7 +57,6 @@ services:
       - 3306:3306
     environment:
       - MYSQL_ROOT_PASSWORD=password
-    tty: true
     volumes:
       - "database:/var/lib/mysql"
       - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
@@ -80,5 +73,5 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.17.0.0/16
-          gateway: 172.17.0.10
+        - subnet: 172.0.0.0/8
+          gateway: 172.0.0.1
