@@ -1,6 +1,0 @@
-[submodule "TFB-Lobby"]
-	path = TFB-Lobby
-	url = https://github.com/theflyingbirdsmc/TFB-Lobby.git
-[submodule "TFB-Creative"]
-	path = TFB-Creative
-	url = https://github.com/theflyingbirdsmc/TFB-Creative.git
