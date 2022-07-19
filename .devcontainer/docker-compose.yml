@@ -34,6 +34,21 @@ services:
     volumes:
       - "lobby:/home/container"
     network_mode: "service:bungee"
+  vanilla:
+    container_name: Vanilladk
+    image: ghcr.io/theflyingbirdsmc/pluget:latest
+    depends_on:
+      - bungee
+      - database
+      - lobby
+    environment:
+      - COMPOSE_PROJECT_NAME=Creative
+      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Vanilla.git
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
+    volumes:
+      - "vanilla:/home/container"
+    network_mode: "service:bungee"
   creative:
     container_name: Creative
     image: ghcr.io/theflyingbirdsmc/pluget:latest
@@ -68,6 +83,7 @@ volumes:
   lobby:
   creative:
   database:
+  vanilla:
 networks:
   tfb:
     driver: bridge
