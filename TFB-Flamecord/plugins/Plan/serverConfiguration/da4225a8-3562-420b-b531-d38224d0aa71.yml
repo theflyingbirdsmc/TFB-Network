@@ -196,6 +196,8 @@ World_aliases:
         world_nether: world_nether
         parkour: parkour
         Gokke: Gokke
+        TEST: "TEST"
+        temp: "temp"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"

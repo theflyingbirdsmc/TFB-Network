@@ -198,6 +198,7 @@ World_aliases:
         GiantTree: GiantTree
         teen: teen
         Experimental: Experimental
+        TEST: "TEST"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"
@@ -274,6 +275,7 @@ Customized_files:
         vendor/fontawesome-free/css/all,min,css: false
         vendor/fontawesome-free/webfonts/fa-brands-400,woff2: false
         vendor/fontawesome-free/webfonts/fa-regular-400,woff2: false
+        vendor/fontawesome-free/webfonts/fa-solid-900,woff: false
         vendor/fontawesome-free/webfonts/fa-solid-900,woff2: false
         vendor/fullcalendar/fullcalendar,min,css: false
         vendor/fullcalendar/fullcalendar,min,js: false

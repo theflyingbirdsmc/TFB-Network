@@ -195,6 +195,7 @@ World_aliases:
         world: world
         teen: teen
         world_nether: world_nether
+        world_the_end: "world_the_end"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"

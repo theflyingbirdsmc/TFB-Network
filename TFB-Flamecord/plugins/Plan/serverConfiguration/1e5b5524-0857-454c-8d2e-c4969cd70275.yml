@@ -197,6 +197,7 @@ World_aliases:
         GiantTree: GiantTree
         test: test
         TFBCreative: TFBCreative
+        world_nether: "world_nether"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"

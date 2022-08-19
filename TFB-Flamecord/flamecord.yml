@@ -77,10 +77,15 @@ antibot:
     time: 1000
     log: true
   firewall:
-    enabled: true
-    ipset: true
+    enabled: false
+    ipset: false
     time: 60
     log: true
+    exceptions:
+    - BadPacketException
+    - QuietException
+    - IllegalStateConfig
+    - FastException
   nickname:
     enabled: true
     firewall: true
