@@ -1,19 +1,13 @@
 version: "3.9"
 services:
-  bungee:
-    container_name: Bungee
-    image: ghcr.io/theflyingbirdsmc/pluget:latest
+  tfb:
+    container_name: TFB
+    build: ./
     depends_on:
       - database
     ports:
       - 25565:25565
-      - 8804:8804
-      - 25600:25600
-      - 25601:25601
-      - 25700:25700
     environment:
-      - COMPOSE_PROJECT_NAME=Bungee
-      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Bungee.git
       - GITHUB_EMAIL=${GITHUB_EMAIL}
       - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
