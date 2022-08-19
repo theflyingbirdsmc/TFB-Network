@@ -24,6 +24,8 @@ cd /home/container/TFB
 ls -a
 git clone https://github.com/Neocky/pluGET.git pluGET
 git clone https://github.com/2lstudios-mc/FlameCord.git FlameCord
+git init
+git remote add origin https://github.com/theflyingbirdsmc/TFB-Network.git
 git config --global user.email "$GITHUB_EMAIL"
 git config --global user.name "$GITHUB_USERNAME"
 
