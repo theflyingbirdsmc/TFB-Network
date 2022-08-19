@@ -12,6 +12,7 @@ services:
       - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
       - "tfb:/home/container"
+      - "../:/home/container/TFB"
   database:
     container_name: Database
     image: mariadb:10.7
