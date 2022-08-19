@@ -1,14 +1,14 @@
 {
-	"name": "TFB-Bungee",
+	"name": "TFB",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/home/container/TFB,type=bind",
 	"workspaceFolder": "/home/container/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
 	"remoteUser": "container",
-	"service": "bungee",
+	"service": "tfb",
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"liximomo.sftp"
+				"Natizyskunk.sftp"
 			]
 		}
 	}
