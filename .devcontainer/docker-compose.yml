@@ -17,54 +17,7 @@ services:
       - GITHUB_EMAIL=${GITHUB_EMAIL}
       - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
-      - "bungee:/home/container"
-    networks:
-      tfb:
-        ipv4_address: 172.18.0.1
-  lobby:
-    container_name: Lobby
-    image: ghcr.io/theflyingbirdsmc/pluget:latest
-    depends_on:
-      - bungee
-      - database
-    environment:
-      - COMPOSE_PROJECT_NAME=Lobby
-      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Lobby.git
-      - GITHUB_EMAIL=${GITHUB_EMAIL}
-      - GITHUB_USERNAME=${GITHUB_USERNAME}
-    volumes:
-      - "lobby:/home/container"
-    network_mode: "service:bungee"
-  vanilla:
-    container_name: Vanilladk
-    image: ghcr.io/theflyingbirdsmc/pluget:latest
-    depends_on:
-      - bungee
-      - database
-      - lobby
-    environment:
-      - COMPOSE_PROJECT_NAME=Creative
-      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Vanilla.git
-      - GITHUB_EMAIL=${GITHUB_EMAIL}
-      - GITHUB_USERNAME=${GITHUB_USERNAME}
-    volumes:
-      - "vanilla:/home/container"
-    network_mode: "service:bungee"
-  creative:
-    container_name: Creative
-    image: ghcr.io/theflyingbirdsmc/pluget:latest
-    depends_on:
-      - bungee
-      - database
-      - lobby
-    environment:
-      - COMPOSE_PROJECT_NAME=Creative
-      - GITHUB_REPOSITORY=https://github.com/theflyingbirdsmc/TFB-Creative.git
-      - GITHUB_EMAIL=${GITHUB_EMAIL}
-      - GITHUB_USERNAME=${GITHUB_USERNAME}
-    volumes:
-      - "creative:/home/container"
-    network_mode: "service:bungee"
+      - "tfb:/home/container"
   database:
     container_name: Database
     image: mariadb:10.7
@@ -76,19 +29,6 @@ services:
     volumes:
       - "database:/var/lib/mysql"
       - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
-    networks:
-      tfb:
-        ipv4_address: 172.17.0.1
 volumes:
-  bungee:
-  lobby:
-  creative:
-  database:
-  vanilla:
-networks:
   tfb:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.0.0.0/8
-          gateway: 172.0.0.1
+  database:
