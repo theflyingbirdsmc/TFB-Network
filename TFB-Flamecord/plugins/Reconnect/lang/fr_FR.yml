@@ -1,0 +1,27 @@
+reconnectionTitle:
+  # You can add animations to the reconnecting texts by using the animations placeholder.
+  title: "&cRedémarrage%dots%"
+  subTitle: "&eMerci de patienter"
+  actionBar: "&bVous serez &aautomatiquement reconnecté &bdans quelques instant"
+
+# The text that should be displayed, when the plugin managed to establish a connection to the previous server.
+# Leave empty if you don't wish any title or action bar message to be displayed.
+connectionTitle:
+  title: "&aReconnexion%dots%"
+  subTitle: "&eMerci de patienter"
+  actionBar: "&aReconnexion au serveur%dots%"
+
+# The text that should be displayed, when the plugin didn't manage to
+# establish a connection to the previous server within time limits and connected the player to the fallback server.
+# Includes a kick message in the event of no fallback server being found.
+# Leave empty if you don't wish any title or action bar message to be displayed.
+failTitle:
+  title: "&4Échec"
+  subTitle: "&cEssayez de vous reconnecter dans quelques instants."
+  actionBar: "&bVous avez été déplacé vers le hub!"
+
+# The kick message for when no fallback server was found when the plugin failed to reconnect a user.
+failKickMessage: "&4La reconnexion a échoué. Veuillez réessayer plus tard."
+
+# config version (no touchy)
+version: 1

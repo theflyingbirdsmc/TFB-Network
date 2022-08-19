@@ -1,0 +1,93 @@
+# Set bungeecoord to true on servers on the network (In VotingPlugin)
+# Set server name in each server related to what it is on bungee
+#
+# MYSQL Required on all setups
+# MYSQL INFO --------------------------
+Host: '172.17.0.1'
+# Default port is 3306
+Port: 3306
+Database: 's1_votingplugin'
+Username: 'u1_JNNwqMj5DK'
+Password: 'VD5KzT4Yks9G120w+MxgU11T'
+# Max number of connections
+MaxConnections: 1
+# Table name prefix, for use with mutliple servers
+Prefix: ''
+#UseSSL: true
+#PublicKeyRetrieval: false
+#Attempt to use mariadb driver
+#UseMariaDB: true
+
+Debug: false
+# Have a reward on each server
+# If false, will send to online server only
+SendVotesToAllServers: false
+# List of servers the plugin won't send the vote to
+# Uses names from bungeecoord config, only needed for non SOCKETS setup
+BlockedServers:
+- hub
+
+# What type of bungee setup
+# Requires restart and set on all servers
+# https://github.com/BenCodez/VotingPlugin/wiki/Bungeecoord-Setups
+# Available:
+# SOCKETS 
+# PLUGINMESSAGING 
+# MYSQL
+BungeeMethod: PLUGINMESSAGING
+
+# If false, votes will be checked if user is a valid player that has joined to server
+# Works for PLUGINMESSAGING and SOCKETS methods only
+# This requires spigot servers AllowUnJoined to be set to true in Config.yml
+AllowUnJoined: false
+
+# Points to give on vote
+PointsOnVote: 1
+
+# If true, bungee will handle adding totals
+# If false, spigot servers will EACH set their own totals
+# If false, AllowUnJoined should false on bungee, spigot servers will handle that
+# Recommened to leave true, setting to false setups are currently unsupported
+BungeeManageTotals: true
+
+# Support for redis
+# experimental
+RedisSupport: false
+
+# Tell servers to broadcast
+# Set DisableBroadcast to true on spigot servers (BungeeSettings.yml) as well
+Broadcast: true
+
+VoteParty:
+  # If enabled, will trigger vote party reward 
+  # in BungeeSettings.yml under BungeeVotePartyReward
+  # Only runs rewards for online players
+  Enabled: false
+  # Votes required
+  VotesRequired: 100
+  # Increase amount required on each vote party
+  IncreaseVotesRequired: 0
+  # If false, will only send to servers listed below
+  SendToAllServers: true
+  # Servers to send to, if SendToAllServers is false
+  ServersToSend: []
+  # List of commands to run on bungee server
+  # Set spigot commands in BungeeSettings.yml
+  BungeeCommands: []
+  Broadcast: '&aVote party has been reached!'
+  
+
+# ----------------------------
+# PLUGINMESSAGING Settings
+# ----------------------------
+
+# Applies to PLUGINMESSAGING only
+# Votes will be forwarded when specific player is online
+WaitForUserOnline: false
+
+# ----------------------------
+# SOCKET Settings
+# ONLY for SOCKET method
+# ----------------------------
+# Options available here:
+# https://github.com/BenCodez/VotingPlugin/wiki/Bungee-Setup-SOCKETS

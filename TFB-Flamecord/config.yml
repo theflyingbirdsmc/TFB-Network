@@ -1,0 +1,79 @@
+enforce_secure_profile: false
+server_connect_timeout: 5000
+listeners:
+- bind_local_address: true
+  force_default_server: true
+  forced_hosts:
+    pvp.md-5.net: pvp
+  host: 0.0.0.0:25565
+  max_players: 2022
+  motd: ''
+  ping_passthrough: false
+  priorities:
+  - lobby
+  proxy_protocol: false
+  query_enabled: false
+  query_port: 25565
+  tab_list: GLOBAL_PING
+  tab_size: 60
+remote_ping_cache: -1
+network_compression_threshold: 256
+permissions:
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+log_pings: true
+connection_throttle_limit: 3
+prevent_proxy_connections: false
+timeout: 10000
+player_limit: 2021
+ip_forward: true
+groups:
+  md_5:
+  - admin
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+stats: eeff8c06-80b0-49a1-ab8c-697022039a24
+online_mode: true
+forge_support: false
+disabled_commands:
+- disabledcommandhere
+servers:
+  creative:
+    address: 172.18.0.1:25601
+    motd: ''
+    restricted: false
+  crowdcontrol:
+    address: 172.18.0.1:25606
+    motd: ''
+    restricted: false
+  factions:
+    address: 172.18.0.1:25603
+    motd: ''
+    restricted: false
+  kitpvp:
+    address: 172.18.0.1:25607
+    motd: ''
+    restricted: false
+  lobby:
+    address: 172.18.0.1:25600
+    motd: ''
+    restricted: false
+  museum:
+    address: 172.18.0.1:25605
+    motd: ''
+    restricted: false
+  parkour:
+    address: 172.18.0.1:25604
+    motd: ''
+    restricted: false
+  vanilladk:
+    address: 172.18.0.1:25700
+    motd: ''
+    restricted: false

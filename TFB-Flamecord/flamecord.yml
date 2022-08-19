@@ -1,0 +1,120 @@
+custom-motd:
+  motd:
+    enabled: true
+    motds:
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+                            &cGives you wings
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+                  &cMay contain traces of feathers!
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+                &cMay contain traces of bird seeds!
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+          &bThere are &a6 &bbirds for every human on &aearth
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+      &bThere are &a+11.000 &bbird species, which one are you?
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+      &eJoin our &9Discord &etoday! &8- &adiscord.theflyingbirds.net
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+      &eAwesome ranks available at &8- &ashop.theflyingbirds.net
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+      &eYou are awesome, dont let others tell you otherwise!
+    - |-
+      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
+      &r          &eSome day is not a day of the week.
+  sample:
+    enabled: true
+    samples:
+    - |-
+      &r        &4T&1F&2B &8- &4The &1Flying &2Birds
+
+      &eStore&7:&a shop.theflyingbirds.net
+      &eDiscord&7:&a discord.theflyingbirds.net
+      &eStats&7:&a stats.theflyingbirds.net
+  protocol:
+    enabled: false
+    name: FlameCord 1.7-1.18
+  maxplayers:
+    enabled: false
+    amount: 1000
+    justonemore: false
+  fakeplayers:
+    enabled: false
+    amount: 3
+    mode: DIVISION
+allow-invalid-names: false
+antibot:
+  accounts:
+    enabled: true
+    firewall: true
+    limit: 3
+    log: true
+  country:
+    enabled: true
+    firewall: true
+    blacklist:
+    - CN
+    - HK
+    - RU
+    - IN
+    - TH
+    - ID
+    - DZ
+    - VN
+    - IR
+    - PK
+    log: true
+  fastchat:
+    enabled: true
+    firewall: true
+    time: 1000
+    log: true
+  firewall:
+    enabled: true
+    ipset: true
+    time: 60
+    log: true
+  nickname:
+    enabled: true
+    firewall: true
+    blacklist:
+    - mcstorm
+    - mcdown
+    - mcbot
+    - theresa_bot
+    - dropbot
+    - kingbot
+    log: true
+  password:
+    enabled: true
+    firewall: true
+    limit: 3
+    log: true
+  ratelimit:
+    enabled: true
+    firewall: true
+    connections-per-second: 3
+    pings-per-second: 8
+    log: true
+  reconnect:
+    enabled: true
+    attempts: 2
+    pings: 0
+    max-time: 10000
+    connection-threshold: 1
+    connection-threshold-limit: 8000
+    log: true
+tcp-fast-open: 3
+logger:
+  initialhandler: false
+  exceptions: false
+  dump: false
+  haproxy: false
+  detailed-connect-errors: false
