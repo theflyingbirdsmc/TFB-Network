@@ -1,5 +1,4 @@
 enforce_secure_profile: false
-server_connect_timeout: 5000
 listeners:
 - bind_local_address: true
   force_default_server: true
@@ -29,9 +28,10 @@ permissions:
   - bungeecord.command.list
 log_pings: true
 connection_throttle_limit: 3
-prevent_proxy_connections: false
+server_connect_timeout: 5000
 timeout: 10000
 player_limit: 2021
+prevent_proxy_connections: false
 ip_forward: true
 groups:
   md_5:
@@ -46,31 +46,31 @@ disabled_commands:
 - disabledcommandhere
 servers:
   creative:
-    address: 172.18.0.1:25601
+    address: 127.0.0.1:25601
     motd: ''
     restricted: false
   crowdcontrol:
-    address: 172.18.0.1:25606
+    address: 127.0.0.1:25606
     motd: ''
     restricted: false
   factions:
-    address: 172.18.0.1:25603
+    address: 127.0.0.1:25603
     motd: ''
     restricted: false
   kitpvp:
-    address: 172.18.0.1:25607
+    address: 127.0.0.1:25607
     motd: ''
     restricted: false
   lobby:
-    address: 172.18.0.1:25600
+    address: 127.0.0.1:25600
     motd: ''
     restricted: false
   museum:
-    address: 172.18.0.1:25605
+    address: 127.0.0.1:25605
     motd: ''
     restricted: false
   parkour:
-    address: 172.18.0.1:25604
+    address: 127.0.0.1:25604
     motd: ''
     restricted: false
   vanilladk:
