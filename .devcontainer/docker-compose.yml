@@ -13,6 +13,8 @@ services:
     volumes:
       - "tfb:/home/container"
       - "../:/home/container/TFB"
+    networks:
+      tfb: 172.17.0.3
   database:
     container_name: Database
     image: mariadb:10.7
@@ -24,6 +26,11 @@ services:
     volumes:
       - "database:/var/lib/mysql"
       - "./init.sql:/docker-entrypoint-initdb.d/init.sql"
+    networks:
+      tfb: 172.17.0.2
 volumes:
   tfb:
   database:
+networks:
+  tfb:
+    driver: bridge
