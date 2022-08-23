@@ -3,7 +3,7 @@
 #
 # MYSQL Required on all setups
 # MYSQL INFO --------------------------
-Host: '172.17.0.1'
+Host: '172.17.0.2'
 # Default port is 3306
 Port: 3306
 Database: 's1_votingplugin'
