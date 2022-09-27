@@ -1,4 +1,5 @@
 enforce_secure_profile: false
+server_connect_timeout: 5000
 listeners:
 - bind_local_address: true
   force_default_server: true
@@ -28,9 +29,8 @@ permissions:
   - bungeecord.command.list
 log_pings: true
 connection_throttle_limit: 3
-server_connect_timeout: 5000
+prevent_proxy_connections: false
 timeout: 10000
-stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 player_limit: 2021
 ip_forward: true
 groups:
@@ -39,7 +39,7 @@ groups:
 remote_ping_timeout: 5000
 connection_throttle: 4000
 log_commands: false
-prevent_proxy_connections: false
+stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
