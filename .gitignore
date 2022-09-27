@@ -2,6 +2,8 @@
 *.*db
 *.zip
 *.gz
+*.schematic
+*.schem
 pkcs.p12
 *.key
 /logs/*
