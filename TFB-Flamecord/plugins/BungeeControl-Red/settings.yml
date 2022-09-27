@@ -19,9 +19,7 @@ Server_Aliases:
 # -------------------------------------------------------------------------------------------------
 # Represents settings for player messages such as join, quit and switch messages
 # -------------------------------------------------------------------------------------------------
-Messages_New:
-
-  # THIS SECTION IS WORK IN PROGRESS !!
+Messages:
  
   # What aspects of messages should be enabled?
   # Options: join, quit, switch
@@ -49,11 +47,9 @@ Messages_New:
   # Prefix:
   #   join: "&8[&2+&8] &7"
   #   quit: "&8[&4-&8] &7"
-  #   kick: "&8[&4-&8] &7"
-  #   death: "&8[&4x&8] &7"
-  #   timed: "{announce_prefix}"
+  #   switch: "&8[&d->&8] &7"
   Prefix:
-  
+   
   # If you want to display join message after other plugins, you can send it
   # a bit later such as 1 tick later than the other messages. 
   # **YOU CANNOT OVERRIDE THIS WITH THE "DELAY" OPERATOR**
@@ -143,6 +139,11 @@ Integration:
 # Available: bungee, bungee-sync, operator, redis, player-message
 # -------------------------------------------------------------------------------------------------
 Debug: []
+
+# -------------------------------------------------------------------------------------------------
+# Plugin's prefix before some messages, defaults to empty.
+# -------------------------------------------------------------------------------------------------
+Prefix: ''
 
 # -------------------------------------------------------------------------------------------------
 # Do not change this value, otherwise it will corrupt your plugin installation!

@@ -1,0 +1,15 @@
+# Directly defined reward file. WRONG PLACE TO EDIT THIS! DO NOT EDIT
+
+Standard:
+  Commands:
+  - gmysteryboxes give %player% 1 ex=7d c:(1:40,2:30,3:25,4:15,5:10)
+  Messages:
+    Player: '&aThanks for voting, you have received an &bMystery Egg &a, enjoy!'
+Lucky:
+  '10':
+    Commands:
+    - gmysteryboxes gift %player% 1
+    Messages:
+      Player: '&aYou were lucky and received an &bMystery Egg Gift &ayou can send
+        to a friend!'
+DirectlyDefinedReward: true

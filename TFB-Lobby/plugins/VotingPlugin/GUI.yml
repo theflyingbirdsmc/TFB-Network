@@ -1,0 +1,313 @@
+# Configure GUI's here
+# Note: Slots start at 0 instead of 1, max slot is 53 (don't go over) (E.g: last slot in first row of inventory is 8)
+# Item Material's can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#
+# GUI Methods:
+# - BOOK
+# - CHEST
+# - CHAT (Disables GUI)
+GUIMethod:
+  Today: CHEST # BOOK not available (future update?)
+  TopVoter: CHEST # BOOK not available (future update?)
+  Last: CHEST # BOOK not available (future update?)
+  Next: CHEST
+  Total: CHEST # BOOK not available (future update?)
+  # GUI for /vote
+  URL: CHEST
+  Best: CHEST # BOOK not available (future update?)
+  Streak: CHEST # BOOK not available (future update?)
+  GUI: CHEST # CHAT/BOOK not availabe for this (future update?)
+
+# Enable command for last month gui
+# Requires restart to take effect
+LastMonthGUI: false
+
+CHEST:
+  # GUI for /vote gui, /vgui, /votegui
+  VoteGUI:
+    # Items will be ordered as listed here
+    # You can add items following this format, even set slots
+    # See extra item below. GUI will auto resize to what is needed
+    URL:
+      # Standard item format, lore is automaticly applied 
+      Item:
+        Material: BOW
+        Amount: 1
+        Name: '&4URL'
+        Lore:
+        - '&aClick me for links'
+    # You can set skulls of the player using the following
+    # Remove the # to enable
+    # Skull: '%Player%'
+    Next:
+      Item:
+        Material: COMPASS
+        Amount: 1
+        Name: '&4Next'
+    Last:
+      Item:
+        Material: CLOCK
+        Amount: 1
+        Name: '&4Last'
+    Total:
+      Item:
+        Material: CHEST
+        Amount: 1
+        Name: '&4Total'
+    Top:
+      Item:
+        Material: OAK_SIGN
+        Amount: 1
+        Name: '&4Top'
+    Today:
+      Item:
+        Material: BOOK
+        Amount: 1
+        Name: '&4Today'
+    Shop:
+      Item:
+        Material: DIAMOND
+        Amount: 1
+        Name: '&4Vote Shop'
+        Lore:
+        - '&aYou currently have %points% points'
+  # 'ExtraName' below is an identifier, can be whatever
+  # ExtraItem:
+  # Item:
+  # Material: 'DIRT'
+  # Amount: 1
+  # Name: 'Extra item'
+  # # Works on most GUI items
+  # Slot: 10
+  # # Send rewards on click, run commands, check conditions, etc
+  # Rewards: []
+
+    # GUI for /vote url, /vote
+  VoteURL:
+    # GUI Name
+    Name: '&cVoteURL'
+    BackButton: true
+    SiteName: '&c%Name%'
+    SiteNameCanVote: '&a%Name%'
+    SeeURL: '&cClick to see URL'
+    NextVote: '&cCan Vote In: %Info%'
+    # Start slot for specific site buttons
+    # StartSlot: 1
+    ViewAllUrlsButtonEnabled: true
+    AllUrlsButton:
+      # Set slot for AllUrlsButton
+      # Slot: 0
+      RequireAllSitesVoted: true
+      AlreadyVotedItem:
+        Material: REDSTONE_BLOCK
+        Data: 0
+        Amount: 1
+        Name: '&4All Voting Sites'
+        Lore:
+        - '&cClick Me'
+      CanVoteItem:
+        Material: EMERALD_BLOCK
+        Data: 0
+        Amount: 1
+        Name: '&4All Voting Sites'
+        Lore:
+        - '&cClick Me'
+    AlreadyVotedItem:
+      Material: REDSTONE_BLOCK
+      Data: 0
+      Amount: 1
+    CanVoteItem:
+      Material: EMERALD_BLOCK
+      Data: 0
+      Amount: 1
+    # URL when clicking item in /vote (GUI version)
+    URLText: '%VoteUrl%'
+  # #Add Extra items
+  # ExtraItems:
+  # Item1:
+  # Material: DIRT
+  # Amount: 1
+  # Slot: 1
+  # #Can run commands or effects
+  # Rewards: []
+
+  VoteLast:
+    Name: 'VoteLast: %player%'
+    BackButton: true
+    # Lines for each vote site
+    # %time% = time, using timeformat below
+    # %timesince% = time since vote
+    Line: '&6%timeSince%'
+  VoteNext:
+    Name: 'VoteNext: %player%'
+    BackButton: true
+  VoteToday:
+    Name: VoteToday
+    Line: '&6%VoteSite% : %Time%'
+    IconTitle: '%player%'
+    BackButton: true
+    UseSkull: true
+    # If UseSkull is false, use this item
+    PlayerItem:
+      Material: PAPER
+      Amount: 1
+  VoteTop:
+    Name: VoteTop %topvoter%
+    BackButton: true
+    # Item of top voter (change material below)
+    Item:
+      Name: '&3&l%position%: &3%player%'
+      Lore: '&3&lVotes: &3%votes%'
+    # Opens main GUI of the specific player that gets clicked
+    OpenMainGUIOnClick: true
+    SwitchItem:
+      Name: '&3Switch TopVoter'
+      Lore: '&bCurrently: %Top%'
+      Material: OAK_SIGN
+      Amount: 1
+      # 8 Slots over from the bottom left
+      # Bottom of GUI
+      Slot: 7
+    # Number of topvoters to display on each GUI page, must be a multiple of 9
+    Size: 27
+    # If true, /vote top will show player heads
+    UseSkull: true
+    # Item for player in GUI if use skull is false
+    PlayerItem:
+      Material: PAPER
+  VoteTotal:
+    Name: 'VoteTotal: %player%'
+    BackButton: true
+    DayTotal:
+      Item:
+        Material: CLOCK
+        Name: '&cDaily Total'
+        Lore: '&c&lTotal: &c%Total%'
+        Amount: 1
+    WeekTotal:
+      Item:
+        Material: CLOCK
+        Name: '&cWeekly Total'
+        Lore: '&c&lTotal: &c%Total%'
+        Amount: 1
+    MonthTotal:
+      Item:
+        Material: CLOCK
+        Name: '&cMonthly Total'
+        Lore: '&c&lTotal: &c%Total%'
+        Amount: 1
+    AllTimeTotal:
+      Item:
+        Material: CLOCK
+        Name: '&cAllTime Total'
+        Lore: '&c&lTotal: &c%Total%'
+        Amount: 1
+  VoteBest:
+    Name: 'VoteBest: %player%'
+    BackButton: true
+    DayBest:
+      Item:
+        Material: CLOCK
+        Name: '&cDaily Best'
+        Lore: '&c&lBest: &c%Best%'
+        Amount: 1
+    WeekBest:
+      Item:
+        Material: CLOCK
+        Name: '&cWeekly Best'
+        Lore: '&c&lBest: &c%Best%'
+        Amount: 1
+    MonthBest:
+      Item:
+        Material: CLOCK
+        Name: '&cMonthly Best'
+        Lore: '&c&lBest: &c%Best%'
+        Amount: 1
+  VoteStreak:
+    Name: 'VoteStreak: %player%'
+    BackButton: false
+    CurrentDayStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cCurrent Daily Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+    CurrentWeekStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cCurrent Weekly Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+    CurrentMonthStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cCurrent Monthly Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+    HighestDayStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cHighest Daily Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+    HighestWeekStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cHighest Weekly Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+    HighestMonthStreak:
+      Item:
+        Material: CLOCK
+        Name: '&cHighest Monthly Streak'
+        Lore: '&c&lStreak: &c%Streak%'
+        Amount: 1
+  VoteURLSite:
+    Name: 'VoteSite: %site%'
+  VoteGUIName: '&cVoteGUI: &c&l%player%'
+  VoteRewardName: VoteReward
+  VoteShopName: VoteShop
+  
+  BackButton:
+    Material: BARRIER
+    Data: 0
+    Amount: 1
+    Name: '&8Back to VoteGUI'
+    # If true, clicking back button will open VoteURL
+    OpenVoteURL: false
+    # If true, backbutton will be the last slot of the GUI
+    EndOfGUI: false
+  
+  VoteShopBackButton: true
+  VoteShopEnabled: true
+  # Hide items in vote shop which user can not buy
+  VoteShopHideLimitedReached: true
+  # Requires above to be false
+  VoteShopLimitReached: '&aYou reached your limit'
+  VoteShopRequireConfirmation: false
+  VoteShopDisabled: '&cVote shop disabled'
+  Shop: {}
+  
+  ShopConfirmPurchase:
+    Title: Confirm Purchase?
+    YesItem:
+      Material: EMERALD_BLOCK
+      Amount: 1
+      Name: '&aYes'
+    NoItem:
+      Material: BARRIER
+      Amount: 1
+      Name: '&cNo'
+
+
+BOOK:
+  VoteURLBookGUI:
+    Title: '&cVoteURL'
+    CanVoteText: Click me
+    CanVoteColor: GREEN
+    AlreadyVotedText: Click me
+    AlreadyVotedColor: RED
+    Layout:
+    - '&3&l%Sitename%'
+    - '[UrlText]'
+

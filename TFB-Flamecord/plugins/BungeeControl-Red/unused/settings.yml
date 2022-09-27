@@ -1,0 +1,7 @@
+Messages_New:
+  Apply_On: []
+  Ignored_Servers:
+  - silent_server
+  Stop_On_First_Match: true
+  Prefix: null
+  Defer_Join_Message_By: 1 tick

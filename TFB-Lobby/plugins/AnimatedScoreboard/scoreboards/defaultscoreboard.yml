@@ -1,0 +1,49 @@
+#This is where you create the scoreboard, the first section will always be the title. 
+#Every section after that will be a line displayed on the scoreboard. You can have a max
+#of 15 lines display due to the limitations of minecraft.
+display:
+    #This is the first section, it will always be the title of the scoreboard. 
+    #You can also use placeholders here if you want.
+    title:
+      #This is the text that will be display as the title, it can have as many lines as you want and it will automatically rotate through them or
+      #choose a random one, depending on what you set random to.
+      text:
+      - "&amc.theflyingbirds.net"
+      #If this is true there will be a random line every time it updates. 
+      #If it is false than it will rotate through them and you can make some animations with it.
+      random: false
+      #The time between updates, 20 ticks is 1 second.
+      #Every x ticks it will go to the next line, if random is false, once all lines are displayed it will go to the first line.
+      interval: 20
+    #This section is the first line, here you set the data of that line. It doesn't matter what the name of the section is, as long
+    # as there is no other section with the exact same name 
+    line-1:
+      #Same as with the title, no limit on text. If you just put " " here it will display a blank line on the scoreboard.
+      text:
+      - " "
+      #If it should be random or not.
+      random: false
+      #The time between updates, 20 ticks is 1 second.
+      #Every x ticks it will go to the next line, if random is false, once all lines are displayed it will go to the first line.
+      interval: 200
+      #The score display next to the text, this can only be a number and not removed.
+      # If the score of the other lines are higher than this one, they will be displayed above this one.
+      score: 0
+    line-2:
+      text:
+      - 'Online&8: &a%bungee_lobby%&8/&a%bungee_total%'
+      random: false
+      interval: 50
+      score: 0
+    line-3:
+      text:
+      - "Ping&8: %player_colored_ping% &ams"
+      random: false
+      interval: 1200
+      score: 0
+    line-5:
+      text:
+      - "TPS&8: %server_tps_1_colored%"
+      random: false
+      interval: 1200
+      score: 0

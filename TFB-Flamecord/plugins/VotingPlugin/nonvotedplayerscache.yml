@@ -1,1 +1,4 @@
-NonVotedPlayers: {}
+NonVotedPlayers:
+  MubleMC:
+    UUID: f945279e-fc24-468c-b115-497b942f3d4c
+    LastTime: 1664112012218

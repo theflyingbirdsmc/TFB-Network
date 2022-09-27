@@ -1,0 +1,10 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format used in the global channel.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  everything:
+    Message: '&8[&3{channel}&8] &f{player_name}&7: &f{message}'

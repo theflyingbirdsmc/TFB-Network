@@ -1,0 +1,54 @@
+# +----------------------------------------------------+ #
+# <                      Prompts                       > #
+# <                   Configuration                    > #
+# +----------------------------------------------------+ #
+
+# PlayerUI formatting
+# 
+# Skull-Name-Format - The display name format
+#                     for the player heads
+# 
+# Size - the size of the UI (multiple of 9, between 18-54)
+# 
+# Sorted - Should the player heads be sorted?
+# Per-World - Only show player in the current world?
+PlayerUI:
+  Skull-Name-Format: '&6%s'
+  Size: 54
+  Previous:
+    Item: Feather
+    Column: 3
+    Text: '&7◀◀ Previous'
+  Next:
+    Item: Feather
+    Column: 7
+    Text: Next ▶▶
+  Cancel:
+    Item: Barrier
+    Column: 5
+    Text: '&7Cancel ✘'
+  Sorted: false
+  Per-World: false
+
+# AnvilUI formatting
+# 
+# Enable-Title - Show the first line of the prompt
+# (if with {br}) as title of Anvil GUI
+# 
+# Item - The item to place on the Anvil GUI
+# 
+# Enchanted - Do you want the item enchanted?
+# 
+# Custom-Title - If title is enabled, and if custom
+# title is not empty, CommandPrompter will use this instead
+AnvilGUI:
+  Enable-Title: true
+  Custom-Title: ''
+  Item: Paper
+  Enchanted: false
+
+# Text Prompt Config
+TextPrompt:
+  Clickable-Cancel: true
+  Cancel-Message: '&7[&c&l✘&7]'
+  Cancel-Hover-Message: '&7Click here to cancel command completion'

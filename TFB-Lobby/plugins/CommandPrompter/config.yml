@@ -1,0 +1,80 @@
+# +----------------------------------------------------+ #
+# <                  Command Prompter                  > #
+# <                   Configuration                    > #
+# +----------------------------------------------------+ #
+
+# Set the plugin prefix
+Prompt-Prefix: '[&3Prompter&r] '
+
+# After how many seconds until
+# CommandPrompter cancels a
+# prompt
+Prompt-Timeout: 300
+
+# Word that cancels command
+# prompting.
+Cancel-Keyword: cancel
+
+# Enable permission check
+# before a player can use
+# the prompting feature
+# 
+# Checking for commandprompter.use
+Enable-Permission: false
+
+# Allow CommandPrompter to
+# check if it''s up to date.
+Update-Checker: true
+
+# This will determine if
+# a part of a command is
+# a prompt.
+# 
+# ONLY CHANGE THE FIRST AND LAST
+# I.E (.*?), {.*?}, or [.*?]
+Argument-Regex: <.*?>
+
+# Enable debug mode for CommandPrompter.
+Debug-Mode: false
+
+# Enable unsafe features for
+# CommandPrompter. Enabling this
+# allows CommandPrompter to
+# modify the command map and
+# catch dispatched commands
+Enable-Unsafe: false
+
+# If Enable-Unsafe is set to
+# true, this delay (in ticks)
+# will be used before modifying
+# the command map to allow all
+# plugins to register all of
+# their commands First
+# 
+# If you experience issues,
+# increase the value of this delay.
+# Note that 20 ticks is 1 second.
+Modification-Delay: 1
+
+# Should CommandPrompter send
+# the completed command to the
+# player before dispatching it?
+Show-Complete-Command: true
+
+# Enable fancy logger
+# Do /commandprompter reload to
+# apply the change
+Fancy-Logger: true
+
+# What commands should CommandPrompter ignore
+# 
+# When a command is ignored, CommandPrompter
+# will not proceed to check if the command
+# contains a prompt.
+# 
+# Do not include the /
+# 
+# VentureChat channels are automatically ignored.
+Ignored-Commands:
+- sampleCommand
+- sampleCommand2

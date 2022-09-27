@@ -1,0 +1,7 @@
+*.jar
+*.*db
+pkcs.p12
+*.key
+/logs/*
+*.log*
+.vscode

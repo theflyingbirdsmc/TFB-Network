@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format shown to spying players when a sign is placed.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  top:
+    Message: '&4&m--------------------------------------------------&r'
+  centered:
+    Message: <center>&cAdvertisement Detected
+  bottom:
+    Message:
+    - ' '
+    - ' &7Player: &f{player}'
+    - ' &7Message: &f{message}'
+    - ' &7Time: &f{timestamp}'
+    - '&4&m--------------------------------------------------'
+    #Suggest_Command: "/tempban {player} 10m Advertising is not allowed!"

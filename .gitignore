@@ -1,5 +1,7 @@
 *.jar
 *.*db
+*.zip
+*.gz
 pkcs.p12
 *.key
 /logs/*
@@ -14,3 +16,7 @@ libraries
 logs/
 /FlameCord
 /pluGET
+TFB-Lobby/plugins/LuckPerms/editor-keystore.json
+TFB-Flamecord/plugins/BuycraftX/config.properties
+.vscode/sftp.json
+

@@ -1,0 +1,93 @@
+# ---------------------------------------------------------------------- #
+#              THIS MENU WAS MADE USING DELUXEMENUS v1.12.0              #
+# ---------------------------------------------------------------------- #
+#                                                                        #
+# NOTE: This menu was made for a seperate yaml-file!                     #
+#       Add the following code to the config.yml of DeluxeMenus and      #
+#       reload the plugin (/dm reload).                                  #
+#                                                                        #
+# gui_menus:                                                             #
+#   serverselector:                                                      #
+#     file: serverselector.yml                                           #
+#                                                                        #
+# After that, replace the newly created file with this one and reload    #
+# again!                                                                 #
+# ---------------------------------------------------------------------- #
+menu_title: '&#AA0000T&#0000AAF&#00AA00B &8- &#AA0000The &#0000AAFlying &#00AA00Birds'
+open_command: tfb
+register_command: true
+update_interval: 1
+items:
+  'discord':
+    display_name: '#5865F2Discord'
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg3M2MxMmJmZmI1MjUxYTBiODhkNWFlNzVjNzI0N2NiMzlhNzVmZjFhODFjYmU0YzhhMzliMzExZGRlZGEifX19
+    slot: 4
+    lore:
+    - '&eClick me to get a link in chat!'
+    - ''
+    - '&f- &aStay connected with everything TFB ;)'
+    - '&f- &aGet your TFB rank as a Discord role'
+    - '&f- &aMeet other birds :>'
+    
+  'vanilla_server':
+    material: GRASS
+    slot: 2
+    priority: 1
+    update: true
+    view_requirement:
+      requirements:
+        vanila_online:
+          type: string equals ignorecase
+          input: '%pinger_online_127.0.0.1:25700%'
+          output: '&aOnline'
+    display_name: '&7Vanilla'
+    lore:
+    - ''
+    - '&7Online: &a%pinger_players_127.0.0.1:25700%'
+    - '&7Description: &bOnly vanilla!'
+    - ''
+    - '&fClick to join!'
+    - ''
+    left_click_commands:
+    - '[close]'
+    - '[message] &7Connecting to server &aVanilla&7...'
+    - '[connect] vanilla'
+    right_click_commands:
+    - '[close]'
+    - '[message] &7Connecting to server &aVanilla&7...'
+    - '[connect] vanilla'
+  'vanilla_offline':
+    material: BARRIER
+    slot: 2
+    priority: 2
+    update: true
+    display_name: '&7Vanilla'
+    lore:
+    - ''
+    - '&cThis server is currently offline'
+    - '&cPlease contact a staff-member,'
+    - ''
+    - '&fClick to refresh!'
+    - ''
+    left_click_commands:
+    - '[refresh]'
+    right_click_commands:
+    - '[refresh]'
+  'games_server':
+    material: IRON_SWORD
+    slot: 6
+    update: true
+    display_name: '&9Games'
+    lore:
+    - ''
+    - '&7Online: %server_online%'
+    - '&7Description: &bThe best minigames EVER!'
+    - ''
+    - '&fYou are here!'
+    - ''
+    left_click_commands:
+    - '[message] &cYou are already on this server!'
+    - '[close]'
+    right_click_commands:
+    - '[message] &cYou are already on this server!'
+    - '[close]'

@@ -1,0 +1,18 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format shown to the receiver of a private message.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  # You can use {receiver_prefix} to show the receiver's prefix. Does not work on bungee.
+  everything:
+    Message: '&c[PM] &8[&f{sender} &7-> &f{receiver_or_you}&8] &f{message}'
+    Hover:
+    - '&fPrivate Message'
+    - '&3Received: &f{timestamp}'
+    - '&3Sender: &f{sender}'
+    - ''
+    - '&7Click to reply.'
+    Suggest_Command: '/r '
