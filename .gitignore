@@ -18,6 +18,7 @@ libraries
 logs/
 /FlameCord
 /pluGET
+*/banned-ips.json
 */plugins/LuckPerms/editor-keystore.json
 */plugins/BuycraftX/config.properties
 .vscode/sftp.json

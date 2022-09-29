@@ -1,0 +1,22 @@
+location: Creative:-5.001:163.000:-5.536
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&eWelcome to &4T&1F&2B &fCreative&e!'
+    height: 0.3
+  - content: '&0'
+    height: 0.3
+  - content: '&9/plot help &f- See more detailed commands.'
+    height: 0.3
+  - content: '&9/plot claim &f- Claim any available plot.'
+    height: 0.3
+  - content: '&9/plot auto &f- Gives you a random available plot.'
+    height: 0.3
+  - content: '&9/plot add <player> &f- Add a player to you plot.'
+    height: 0.3
+  actions: {}

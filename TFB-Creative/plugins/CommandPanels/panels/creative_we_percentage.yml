@@ -1,0 +1,42 @@
+panels:
+  creative_we_percentage:
+    perm: default
+    rows: 6
+    title: '&dWorld Edit commands &8(&cFAWE&8)'
+    commands:
+    - we percentage
+    item:
+      '45':
+        material: RED_WOOL
+        stack: 1
+        name: '&cGo back'
+        commands:
+        - cp creative_we
+      '1':
+        material: LIME_WOOL
+        stack: 1
+        name: ''
+      '3':
+        material: LIME_WOOL
+        stack: 1
+        name: ''
+      '10':
+        material: AIR
+        itemType:
+        - placeable 
+        stack: 1
+        name: 'Set an item here!'
+      '12':
+        material: AIR
+        itemType:
+        - placeable 
+        stack: 1
+        name: ''
+      '19':
+        material: RED_WOOL
+        stack: 1
+        name: ''
+      '21':
+        material: RED_WOOL
+        stack: 1
+        name: ''

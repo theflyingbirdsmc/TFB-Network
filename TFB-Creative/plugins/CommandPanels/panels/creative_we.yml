@@ -1,0 +1,46 @@
+panels:
+  creative_we:
+    perm: default
+    rows: 6
+    title: '&dWorld Edit commands &8(&cFAWE&8)'
+    commands:
+    - tfb we
+    item:
+      '45':
+        material: RED_WOOL
+        stack: 1
+        name: '&cGo back'
+        commands:
+        - cp creative
+      '9':
+        material: BARRIER
+        stack: 1
+        name: '&cYou need a block in your hand!'
+        has0:
+          value0: 'yes'
+          compare0: '%checkitem_inhand:main%'
+          material: '%player_item_in_hand%'
+          name: '&eSphere brush with your chosen block!'
+          lore:
+          - '&fType&7: &aSphere'
+          - '&fDiameter&7:'
+          - ' &7- &fLeft click&7: &a2'
+          - ' &7- &fRight click&7: &a4'
+          - ' &7- &fMiddle click&7: &a8'
+          - ' &7- &fShift+Right click&7: &a16'
+          commands:
+          - minecraft:item replace entity Fuglen weapon.mainhand with arrow{display:{Name:'{"text":"§2%javascript_topascalcase_{player_item_in_hand}% §ebrush"}'}}
+          - right= sudo= /brush sphere %cp-material-9% 2
+          - left= sudo= /brush sphere %cp-material-9% 4
+          - middle= sudo= /brush sphere %cp-material-9% 8
+          - rightshift= sudo= /brush sphere %cp-material-9% 16
+          - cpc
+      '14':
+        stack: 1
+        compare0: '%checkitem_inhand:main%'
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjdkNmJlMWRjYTUzNTJhNTY5M2UyOWVhMzVkODA2YjJhMjdjNGE5N2I2NGVlYmJmNjMyYzk5OGQ1OTQ4ZjFjNCJ9fX0=
+        name: '&eSphere brush with your chosen block!'
+        lore:
+        - '&fType&7: &aSphere with percentages!'
+        commands:
+        - cp creative_we_percentage

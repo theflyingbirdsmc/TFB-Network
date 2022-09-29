@@ -1,0 +1,7 @@
+Type: FORMAT
+Key: "ping"
+Value: "player.getHandle().ping"
+Sender_Condition: ""
+Receiver_Condition: ""
+Sender_Permission: ""
+Receiver_Permission: ""

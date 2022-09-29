@@ -1,0 +1,21 @@
+prefix: ''
+
+# SQLite section
+sqlite:
+  # Should SQLite be used?
+  use: false
+  # The file to use
+  db: "storage"
+
+# MySQL section
+mysql:
+  # Should MySQL be used?
+  use: true
+  host: "172.17.0.1"
+  port: "3306"
+  user: "u6_anT4Fq4n9J"
+  password: "^cj.jK8.gWyr1sNrT=dRE5aO"
+  database: "s6_plot_db"
+  # Set additional properties: https://goo.gl/wngtN8
+  properties: 
+  - "useSSL=true"

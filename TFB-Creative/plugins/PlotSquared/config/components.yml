@@ -1,0 +1,9 @@
+presets:
+- component: floor
+  cost: 0.0
+  pattern: '##wool'
+  name: <rainbow:2>Disco Floor</rainbow>
+  icon: yellow_wool
+  description:
+  - <gold>Spice up your plot floor</gold>
+  permission: ''

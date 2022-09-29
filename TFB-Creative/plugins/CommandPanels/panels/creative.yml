@@ -1,0 +1,23 @@
+panels:
+  creative:
+    perm: creative
+    rows: 6
+    title: '&fCreative'
+    paneltype:
+    - nocommand
+    outside-commands:
+    - cpc
+    commands:
+    - help
+    item:
+      '42':
+        material: cps= self
+        stack: 1
+        name: §aAbout You
+      '38':
+        material: WOODEN_AXE
+        stack: 1
+        name: §dWorldEdit Commands
+        commands:
+        - cp creative_we
+        

@@ -1,0 +1,9 @@
+Info:
+  location: Creative, -5.001, 163.000, -5.536
+  lines:
+  - '&eWelcome to &4T&1F&2B &fCreative&e!'
+  - '&0'
+  - '&9/plot help &f- See more detailed commands.'
+  - '&9/plot claim &f- Claim any available plot.'
+  - '&9/plot auto &f- Gives you a random available plot.'
+  - '&9/plot add <player> &f- Add a player to you plot.'

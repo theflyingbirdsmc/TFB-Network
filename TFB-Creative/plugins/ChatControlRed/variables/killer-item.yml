@@ -1,0 +1,41 @@
+Type: MESSAGE
+Key: "killer_item"
+Value: |-
+
+    // A valid JavaScript code follows below. You can use the "player" variable to get
+    // Bukkit's player instance. 
+    itemDisplayName();
+    
+    function itemDisplayName() {
+        var item = player.getInventory().getItemInHand();
+    
+        // Change these three variables to alter the color of the killer item and what name
+        // shall we use if killer had no item
+        var textColor = '&a';
+        var bracketColor = '&f';
+        var airName = 'fists';
+    
+        if (item.hasItemMeta() && item.getItemMeta().hasDisplayName()) {
+            var itemName = player.getInventory().getItemInHand().getItemMeta().getDisplayName();
+    
+            return bracketColor + '[' + textColor + itemName + bracketColor + ']';
+    
+        } else {
+            var wordUtils = Java.type("org.apache.commons.lang.WordUtils");
+    
+            var itemMaterial = player.getInventory().getItemInHand().getType().name();
+            var itemDefaultName = wordUtils.capitalizeFully(itemMaterial.equals("AIR") || itemMaterial.contains("_AIR") ? airName : itemMaterial.replaceAll('_', ' '));
+    
+            return bracketColor + '[' + textColor + itemDefaultName + bracketColor + ']';
+        }
+    }
+
+Hover_Item: "player.getItemInHand()"
+Hover: []
+Open_Url: ""
+Suggest_Command: ""
+Run_Command: ""
+Sender_Condition: ""
+Receiver_Condition: ""
+Sender_Permission: ""
+Receiver_Permission: ""

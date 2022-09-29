@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format used as a message of the day.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  everything:
+    Message:
+    - '&8*--------------------------------------------------*'
+    - '&fHello {player}, we kindly welcome you to &e{server_name}&f and wish you great experience :)'
+    - ''
+    - '&6Version: &f{nms_version}'
+    - '&6Changelog:'
+    - '&7- &fAdded ChatControl Red plugin.'
+    - ''
+    - '&6Help &7- &f/help &6Settings &7- &f/menu &6Web &7- &f/web'
+    - '&8*--------------------------------------------------*'
+    #- "&7The chat is NOT monitored and we respect your privacy rights. Just kidding."
