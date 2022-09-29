@@ -1,0 +1,79 @@
+panels:
+  faction_shop:
+    perm: default
+    rows: 5
+    title: '#AA0000Faction #0000AAShop &r(#00AA00Sell Only&r)'
+    empty: air
+    commands:
+    - open= faction_shop
+    item:
+      '3':
+        material: cps= self
+        stack: 1
+        name: '&f%cp-player-displayname% Info'
+        commands:
+        lore:
+        - '&fWallet: &b$%vault_eco_balance_formatted%'
+      '4':
+        material: BOOK
+        stack: 1
+        name: '&eShop Info'
+        commands:
+        lore:
+        - '&fOnly selling is available here'
+        - '&fUse playershops to buy items from others'
+        - ''
+        - '&fHover over an item to see your "&bInv&f" amount'
+        - '&bInv &f= &bInventory'
+        - ''
+        - '&fUpgrade &b%factionsuuid_faction_name%&f at /f upgrades'
+      '5':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYzOGQ2MTIwM2U0ZTZhMmM5MjQ4MDMwNjA5ZWZiNTc3YjRmZTllZjc4NmNhNDBkYjk0M2Y1M2Y0ODBhZTY4OCJ9fX0=
+        stack: 1
+        name: '&eFaction Bank'
+        commands:
+        - left= open= factionbank_deposit
+        - right= open= factionbank_withdraw
+        lore:
+        - '&b%factionsuuid_faction_name%&f' 
+        - '&fBalance: &b$%factionsuuid_faction_bank_balance%'
+        - ''
+        - '&fLeft click to deposit.'
+        - '&fRight click to withdraw.'
+      '20':
+        material: STONE
+        stack: 1
+        name: '&fBlocks'
+        commands:
+        - open= shop_blocks
+      '21':
+        material: WHEAT
+        stack: 1
+        name: '&fFarming'
+        commands:
+        - open= shop_farming
+      '22':
+        material: DIAMOND
+        stack: 1
+        name: '&fMaterials'
+        commands:
+        - open= shop_materials
+      '23':
+        material: ROTTEN_FLESH
+        stack: 1
+        name: '&fMob Drops'
+        commands:
+        - open= shop_mobdrops
+      '24':
+        material: COOKED_BEEF
+        stack: 1
+        name: '&fFood'
+        commands:
+        - open= shop_food
+      '40':
+        material: BARRIER
+        stack: 1
+        name: '&fClose Shop'
+        commands:
+        - cpc
+

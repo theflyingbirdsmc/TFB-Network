@@ -1,0 +1,25 @@
+location: world:0.583:203.168:-6.868
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&o&nAhoy cap''n'
+    height: 0.3
+  - content: Here we sail ships 'n explore worlds like nobody has ever seen.
+    height: 0.3
+  - content: Be ready t' raise yer cutlass 'n claim yer land.
+    height: 0.3
+  - content: Fight fer blood, sweat 'n tears in a dangerous wilderness where anythin'
+      can happen.
+    height: 0.3
+  - content: Invade yer hostiles 'n commandeer thar land so ye can finally call this
+      world yers!
+    height: 0.3
+  - content: Take a dive whenever ye're ready. Don't forget t' type /TFB, if ye're
+      completely lost.
+    height: 0.3
+  actions: {}

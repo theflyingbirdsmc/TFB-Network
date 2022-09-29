@@ -1,0 +1,74 @@
+#     ██████╗ ██████╗ ██████╗ ███████╗██╗  ██╗    ███████╗███████╗ █████╗ ████████╗██╗   ██╗██████╗ ███████╗███████╗
+#    ██╔════╝██╔═══██╗██╔══██╗██╔════╝╚██╗██╔╝    ██╔════╝██╔════╝██╔══██╗╚══██╔══╝██║   ██║██╔══██╗██╔════╝██╔════╝
+#    ██║     ██║   ██║██████╔╝█████╗   ╚███╔╝     █████╗  █████╗  ███████║   ██║   ██║   ██║██████╔╝█████╗  ███████╗
+#    ██║     ██║   ██║██╔══██╗██╔══╝   ██╔██╗     ██╔══╝  ██╔══╝  ██╔══██║   ██║   ██║   ██║██╔══██╗██╔══╝  ╚════██║
+#    ╚██████╗╚██████╔╝██║  ██║███████╗██╔╝ ██╗    ██║     ███████╗██║  ██║   ██║   ╚██████╔╝██║  ██║███████╗███████║
+#<-------------------------------------->NOTES<-------------------------------------->#
+#All Color Codes Can Be Used!
+#Refer to: https://wiki.ess3.net/mc/
+#Enable and Disable Any Feature by Simply Switching Variable to true or false!
+#<-------------------------------------->NOTES<-------------------------------------->#
+
+Features:
+  Anti-Boat-Placement: false #Denies Players From Placing Boats
+  Anti-Minecart-Placement: false #Denies Players From Placing Minecarts
+  Anti-Vehicle-Teleport: true #Denies Block Phasing Through Exiting Vehicles!
+  EnderPearl-Cooldown: false #Places a Cooldown on Ender Pearls!
+  Anti-Nether-Portal: false #Denies players teleporting from nether portals
+  Anti-End-Portal: false #Denies players teleporting from end portals
+  No-Cursor-Drop: true #When a player closes their inventory whilst a item is on their cursor it does not drop on the ground it goes back into their inventory
+  Armor-Swap: true #Allows PLayers To Right-Click Armor and Rotate Their Equipped Armor Into Their Hotbar just by right-clicking
+  Blocked-Enchantments: false #Denies Specific Enchantments Whilst Being In Enchantment Table
+  Anti-Block-Placement: true #Configurable List Below For Specific Blocks You Do NOT want your players placing
+  Anti-Baby-Zombies: true #Denies Baby Zombies and Pig Zombies from Spawning
+  Anti-Mob-Movement: false #Configurable List Provided Below of which mobs you DO NOT want to move
+  Anti-Mob-Targeting: false #Denies Mob Targeting
+  Iron-Golem-Health: true #Configurable Amount of Health an Iron Golem can spawn in with
+  Water-Proof-Blazes: true #Denies Water Damage To Blazes (Useful for most Factions Servers)
+  Anti-Book-Quill-Crash: true #Denies Players to be able to do book and quill crashes
+  Anti-Dupe: true #Multiple general dupe patches, more to be added soon
+  Anti-Nether-Roof: true #Denies Pistons breaching the nether roof.
+  Anti-Piston-Glitch: false #Denies Automatic Piston Farms
+  Anti-Wilderness-Spawner: false #Denies Spawners From Spawning in Wilderness
+  Auto-Respawn: false #Automatically Respawn on Death
+  Book-Disenchant: false #Left-Click and enchantment table, to remove all the enchantments off of an item
+  Border-Patches: true #Various Border Patches, Useful for Most Factions Servers
+  Anti-Explosion-Damage: false #Denies Players from Taking Damage To TNT
+  Anti-Dragon-Egg-TP: true #Denies Dragon Egg Teleport
+  Enemy-Spawner-Mine: false #Denies Players to Mine spawners if they are in {x} radius of an enemy
+  Insta-Sponge-Break: true #Instantly Break Sponges
+  Anti-Natural-Mobs: false #Denies all natural mob spawns
+  God-Apple-Cooldown: false #Denies players spam eating god apples
+  Global-Gamemode: true #Allows ops to change worlds and keep their gamemode
+
+AntiSpawnerMine:
+  Radius: 20.0 # Radius that the player will be denied mining spawners when an enemy is near.
+
+Cooldowns:
+  EnderPearl: 15 #Amount of time in seconds
+  God_Apple: 60
+
+ironGolemHealth: 50.0 #50.0 = 25 hearts
+
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html
+# eg. DURABILITY:1
+BlockedEnchants:
+  - example
+
+Armor-Swap-Cooldown: 500 #This is in Milliseconds - 500 = .5 seconds
+
+Denied-Blocks: #List Here A Bunch OF Blocks You Do NOT Want Players To Place
+  - 'BEDROCK'
+
+Anti-Mob-Movement:
+  Mob-List:
+    - 'CREEPER'
+    - 'BLAZE'
+
+Anti-Mob-Targeting:
+  Mob-List:
+    - 'CREEPER'
+    - 'BLAZE'
+
+
+

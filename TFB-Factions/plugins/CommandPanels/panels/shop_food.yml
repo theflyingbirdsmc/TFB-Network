@@ -1,0 +1,213 @@
+panels:
+  shop_food:
+    perm: default
+    rows: 5
+    title: 'Food'
+    empty: air
+    item:
+      '40':
+        material: RED_WOOL
+        stack: 1
+        name: '&cGo back'
+        commands:
+        - open= faction_shop
+      '1':
+        material: APPLE
+        stack: 1
+        name: '&bApple &7(&fInv: &e%checkitem_amount_mat:apple%&7)'
+        commands:
+        - left= sell apple 1
+        - right= sell apple 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '2':
+        material: MELON_SLICE
+        stack: 1
+        name: '&bMelon Slice &7(&fInv: &e%checkitem_amount_mat:melon_slice%&7)'
+        commands:
+        - left= sell melon_slice 1
+        - right= sell melon_slice 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '3':
+        material: BREAD
+        stack: 1
+        name: '&bBread &7(&fInv: &e%checkitem_amount_mat:bread%&7)'
+        commands:
+        - left= sell bread 1
+        - right= sell bread 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '4':
+        material: BEETROOT
+        stack: 1
+        name: '&bBeetroot &7(&fInv: &e%checkitem_amount_mat:beetroot%&7)'
+        commands:
+        - left= sell beetroot 1
+        - right= sell beetroot 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '5':
+        material: SWEET_BERRIES
+        stack: 1
+        name: '&bSweet Berries &7(&fInv: &e%checkitem_amount_mat:sweet_berries%&7)'
+        commands:
+        - left= sell sweet_berries 1
+        - right= sell sweet_berries 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '6':
+        material: GOLDEN_APPLE
+        stack: 1
+        name: '&bGolden Apple &7(&fInv: &e%checkitem_amount_mat:golden_apple%&7)'
+        commands:
+        - left= sell golden_apple 1
+        - right= sell golden_apple 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '7':
+        material: GLOW_BERRIES
+        stack: 1
+        name: '&bGlow Berries &7(&fInv: &e%checkitem_amount_mat:glow_berries%&7)'
+        commands:
+        - left= sell glow_berries 1
+        - right= sell glow_berries 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '10':
+        material: POTATO
+        stack: 1
+        name: '&bPotato &7(&fInv: &e%checkitem_amount_mat:potato%&7)'
+        commands:
+        - left= sell potato 1
+        - right= sell potato 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '11':
+        material: BAKED_POTATO
+        stack: 1
+        name: '&bBaked Potato &7(&fInv: &e%checkitem_amount_mat:baked_potato%&7)'
+        commands:
+        - left= sell baked_potato 1
+        - right= sell baked_potato 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '12':
+        material: POISONOUS_POTATO
+        stack: 1
+        name: '&bPoisonous Potato &7(&fInv: &e%checkitem_amount_mat:poisonous_potato%&7)'
+        commands:
+        - left= sell poisonous_potato 1
+        - right= sell poisonous_potato 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '13':
+        material: CARROT
+        stack: 1
+        name: '&bCarrot &7(&fInv: &e%checkitem_amount_mat:carrot%&7)'
+        commands:
+        - left= sell carrot 1
+        - right= sell carrot 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '14':
+        material: COD
+        stack: 1
+        name: '&bCod &7(&fInv: &e%checkitem_amount_mat:dirt%&7)'
+        commands:
+        - left= sell cod 1
+        - right= sell cod 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '15':
+        material: TROPICAL_FISH
+        stack: 1
+        name: '&bTropical Fish &7(&fInv: &e%checkitem_amount_mat:tropical_fish%&7)'
+        commands:
+        - left= sell tropical_fish 1
+        - right= sell tropical_fish 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '16':
+        material: SALMON
+        stack: 1
+        name: '&bSalmon &7(&fInv: &e%checkitem_amount_mat:salmon%&7)'
+        commands:
+        - left= sell salmon 1
+        - right= sell salmon 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '19':
+        material: PUFFERFISH
+        stack: 1
+        name: '&bPufferfish &7(&fInv: &e%checkitem_amount_mat:pufferfish%&7)'
+        commands:
+        - left= sell pufferfish 1
+        - right= sell pufferfish 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '20':
+        material: MUTTON
+        stack: 1
+        name: '&bMutton &7(&fInv: &e%checkitem_amount_mat:mutton%&7)'
+        commands:
+        - left= sell mutton 1
+        - right= sell mutton 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '21':
+        material: BEEF
+        stack: 1
+        name: '&bBeef &7(&fInv: &e%checkitem_amount_mat:beef%&7)'
+        commands:
+        - left= sell beef 1
+        - right= sell beef 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '22':
+        material: PORKCHOP
+        stack: 1
+        name: '&bPorkchop &7(&fInv: &e%checkitem_amount_mat:porkchop%&7)'
+        commands:
+        - left= sell porkchop 1
+        - right= sell porkchop 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '23':
+        material: RABBIT
+        stack: 1
+        name: '&bRabbit &7(&fInv: &e%checkitem_amount_mat:rabbit%&7)'
+        commands:
+        - left= sell rabbit 1
+        - right= sell rabbit 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'
+      '24':
+        material: CHICKEN
+        stack: 1
+        name: '&bChicken &7(&fInv: &e%checkitem_amount_mat:raw_chicken%&7)'
+        commands:
+        - left= sell chicken 1
+        - right= sell chicken 64
+        lore:
+        - '&fLeft click to sell 1'
+        - '&fRight click to sell 64'

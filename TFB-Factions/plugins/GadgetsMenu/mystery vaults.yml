@@ -1,0 +1,8 @@
+Mystery-Vaults:
+  Factions:
+    BlockFace: SOUTH
+    Location:
+      world: world
+      x: 0.0
+      y: 199.0
+      z: -12.0

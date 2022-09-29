@@ -1,0 +1,175 @@
+panels:
+  factionbank_withdraw:
+    perm: default
+    rows: 5
+    title: 'Faction Bank Withdraw'
+    empty: air
+    item:
+        '36':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= faction_shop
+        '0':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$100'
+          commands:
+          - f bank withdraw 100
+        '1':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$200'
+          commands:
+          - f bank withdraw 200
+        '2':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$300'
+          commands:
+          - f bank withdraw 300
+        '3':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$400'
+          commands:
+          - f bank withdraw 400
+        '4':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$500'
+          commands:
+          - f bank withdraw 500
+        '5':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$1000'
+          commands:
+          - f bank withdraw 1000
+        '6':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$1500'
+          commands:
+          - f bank withdraw 1500
+        '7':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$2000'
+          commands:
+          - f bank withdraw 2000
+        '8':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$2500'
+          commands:
+          - f bank withdraw 2500
+        '9':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$3000'
+          commands:
+          - f bank withdraw 3000
+        '10':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$3500'
+          commands:
+          - f bank withdraw 3500
+        '11':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$4000'
+          commands:
+          - f bank withdraw 4000
+        '12':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$4500'
+          commands:
+          - f bank withdraw 4500
+        '13':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$5000'
+          commands:
+          - f bank withdraw 5000
+        '14':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$6000'
+          commands:
+          - f bank withdraw 6000
+        '15':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$7000'
+          commands:
+          - f bank withdraw 7000
+        '16':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$8000'
+          commands:
+          - f bank withdraw 8000
+        '17':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$9000'
+          commands:
+          - f bank withdraw 9000
+        '18':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$10.000'
+          commands:
+          - f bank withdraw 10000
+        '19':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$15.000'
+          commands:
+          - f bank withdraw 15000
+        '20':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$20.000'
+          commands:
+          - f bank withdraw 20000
+        '21':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$50.000'
+          commands:
+          - f bank withdraw 50000
+        '22':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$100.000'
+          commands:
+          - f bank withdraw 100000
+        '23':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$200.000'
+          commands:
+          - f bank withdraw 200000
+        '24':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$500.000'
+          commands:
+          - f bank withdraw 500000
+        '25':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$800.000'
+          commands:
+          - f bank withdraw 800000
+        '26':
+          material: BOOK
+          stack: 1
+          name: '&fTake &b$1 Mil'
+          commands:
+          - f bank withdraw 1000000

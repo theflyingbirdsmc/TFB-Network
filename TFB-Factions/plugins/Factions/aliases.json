@@ -1,0 +1,524 @@
+{
+  "friendlyFire": [
+    "friendlyfire",
+    "ff"
+  ],
+  "notifications": [
+    "notifications",
+    "notis"
+  ],
+  "alts_alts": [
+    "alts",
+    "alt"
+  ],
+  "alts_list": [
+    "list",
+    "l"
+  ],
+  "alts_invite": [
+    "invite"
+  ],
+  "alts_kick": [
+    "kick"
+  ],
+  "audit": [
+    "audit",
+    "log",
+    "logs"
+  ],
+  "check": [
+    "check"
+  ],
+  "weewoo": [
+    "weewoo"
+  ],
+  "chest": [
+    "chest",
+    "pv"
+  ],
+  "claim_auto": [
+    "autoclaim"
+  ],
+  "claim_claim": [
+    "claim"
+  ],
+  "claim_at": [
+    "claimat"
+  ],
+  "claim_claimFill": [
+    "claimfill",
+    "cf"
+  ],
+  "claim_line": [
+    "claimline",
+    "cl"
+  ],
+  "claim_corner": [
+    "corner"
+  ],
+  "corner_list": [
+    "clist",
+    "cornerlist"
+  ],
+  "delfHome": [
+    "delhome",
+    "deletehome"
+  ],
+  "unclaim_all_safe": [
+    "safeunclaimall",
+    "safedeclaimall"
+  ],
+  "unclaim_unclaim": [
+    "unclaim",
+    "declaim"
+  ],
+  "unclaim_all_unsafe": [
+    "unclaimall",
+    "declaimall"
+  ],
+  "unclaim_all_war": [
+    "warunclaimall",
+    "wardeclaimall"
+  ],
+  "money_money": [
+    "money",
+    "bank"
+  ],
+  "money_balance": [
+    "b",
+    "balance"
+  ],
+  "money_deposit": [
+    "d",
+    "deposit"
+  ],
+  "money_transfer_Ff": [
+    "ff"
+  ],
+  "money_transfer_Fp": [
+    "fp"
+  ],
+  "money_transfer_Pf": [
+    "pf"
+  ],
+  "money_withdraw": [
+    "w",
+    "withdraw"
+  ],
+  "grace": [
+    "grace"
+  ],
+  "logout": [
+    "logout"
+  ],
+  "rally": [
+    "rally"
+  ],
+  "points_balance": [
+    "balance",
+    "bal"
+  ],
+  "points_points": [
+    "points"
+  ],
+  "points_add": [
+    "add"
+  ],
+  "points_remove": [
+    "remove"
+  ],
+  "points_set": [
+    "set"
+  ],
+  "relation_ally": [
+    "ally"
+  ],
+  "relation_enemy": [
+    "enemy"
+  ],
+  "relation_neutral": [
+    "neutral"
+  ],
+  "relation_truce": [
+    "truce"
+  ],
+  "reserve": [
+    "reserve"
+  ],
+  "roles_demote": [
+    "demote"
+  ],
+  "roles_promote": [
+    "promote"
+  ],
+  "tnt_tnt": [
+    "tnt"
+  ],
+  "boosters": [
+    "boosters"
+  ],
+  "giveBooster": [
+    "givebooster"
+  ],
+  "tnt_tntfill": [
+    "tntfill"
+  ],
+  "wild": [
+    "wild"
+  ],
+  "admin": [
+    "admin",
+    "setadmin",
+    "leader",
+    "setleader"
+  ],
+  "ahome": [
+    "ahome"
+  ],
+  "announce": [
+    "ann",
+    "announce"
+  ],
+  "help": [
+    "help",
+    "h",
+    "?"
+  ],
+  "ban_ban": [
+    "ban"
+  ],
+  "ban_banlist": [
+    "banlist",
+    "bans",
+    "banl"
+  ],
+  "banner": [
+    "banner"
+  ],
+  "boom": [
+    "noboom",
+    "explosions",
+    "toggleexplosions"
+  ],
+  "bypass": [
+    "bypass"
+  ],
+  "chat": [
+    "chat",
+    "c"
+  ],
+  "chatspy": [
+    "chatspy"
+  ],
+  "checkpoint": [
+    "checkp",
+    "checkpoint",
+    "cpoint"
+  ],
+  "coleader": [
+    "coleader",
+    "setcoleader",
+    "co",
+    "setco"
+  ],
+  "config": [
+    "config"
+  ],
+  "convert": [
+    "convert"
+  ],
+  "coords": [
+    "coords",
+    "coord"
+  ],
+  "create": [
+    "create"
+  ],
+  "debug": [
+    "debug"
+  ],
+  "deinvite": [
+    "deinvite",
+    "deinv"
+  ],
+  "deletefwarp": [
+    "delwarp",
+    "dw",
+    "deletewarp"
+  ],
+  "description": [
+    "desc",
+    "description"
+  ],
+  "disband": [
+    "disband"
+  ],
+  "roster": [
+    "roster"
+  ],
+  "discord_discord": [
+    "discord"
+  ],
+  "drain": [
+    "drain"
+  ],
+  "global": [
+    "gchat",
+    "global",
+    "globalchat"
+  ],
+  "fly": [
+    "fly"
+  ],
+  "focus": [
+    "focus"
+  ],
+  "warp": [
+    "warp",
+    "warps"
+  ],
+  "getvault": [
+    "getvault"
+  ],
+  "home": [
+    "home"
+  ],
+  "inspect": [
+    "inspect",
+    "ins"
+  ],
+  "invsee": [
+    "invsee",
+    "inventorysee"
+  ],
+  "invite": [
+    "invite",
+    "inv"
+  ],
+  "join": [
+    "join"
+  ],
+  "kick": [
+    "kick"
+  ],
+  "killholograms": [
+    "killholos"
+  ],
+  "leave": [
+    "leave"
+  ],
+  "list": [
+    "list",
+    "ls"
+  ],
+  "lock": [
+    "lock"
+  ],
+  "logins": [
+    "logins",
+    "login",
+    "logouts"
+  ],
+  "lookup": [
+    "lookup"
+  ],
+  "lowPower": [
+    "lowpower"
+  ],
+  "map_map": [
+    "map"
+  ],
+  "map_height": [
+    "mapheight",
+    "mh"
+  ],
+  "mod": [
+    "mod",
+    "setmod",
+    "officer",
+    "setofficer"
+  ],
+  "modifyPower": [
+    "mp",
+    "pm",
+    "modpower",
+    "modifypower"
+  ],
+  "near": [
+    "near",
+    "nearby"
+  ],
+  "open": [
+    "open"
+  ],
+  "owner_owner": [
+    "owner"
+  ],
+  "owner_list": [
+    "ownerlist"
+  ],
+  "paypal_see": [
+    "paypal",
+    "seepaypal"
+  ],
+  "paypal_set": [
+    "setpaypal"
+  ],
+  "peaceful": [
+    "peaceful"
+  ],
+  "perm": [
+    "perm",
+    "perms",
+    "permission",
+    "permissions"
+  ],
+  "permanent_faction": [
+    "permanent"
+  ],
+  "permanent_power": [
+    "permanentpower"
+  ],
+  "titles": [
+    "titles"
+  ],
+  "power_power": [
+    "pow",
+    "power"
+  ],
+  "power_boost": [
+    "powerboost"
+  ],
+  "reload": [
+    "reload"
+  ],
+  "rules": [
+    "r",
+    "rule",
+    "rules"
+  ],
+  "saveAll": [
+    "save",
+    "saveall"
+  ],
+  "scoreboard": [
+    "sb",
+    "scoreboard"
+  ],
+  "setPower": [
+    "setpower",
+    "sp"
+  ],
+  "setTnt": [
+    "settnt",
+    "st"
+  ],
+  "spawnerChunks": [
+    "spawnerchunk"
+  ],
+  "seeChunk": [
+    "sc",
+    "seechunk"
+  ],
+  "discord_see": [
+    "seediscord"
+  ],
+  "discord_set": [
+    "setdiscord"
+  ],
+  "setBanner": [
+    "setbanner"
+  ],
+  "setDefaultRole": [
+    "defaultrole",
+    "def",
+    "default",
+    "defaultrank"
+  ],
+  "setWarp": [
+    "sw",
+    "setwarp"
+  ],
+  "setHome": [
+    "sethome"
+  ],
+  "setMaxVaults": [
+    "smv",
+    "setmaxvaults"
+  ],
+  "show_show": [
+    "show",
+    "who"
+  ],
+  "show_claims": [
+    "showclaim",
+    "showclaims"
+  ],
+  "show_invites": [
+    "showinvites"
+  ],
+  "spawnerlock": [
+    "lockspawners",
+    "spawnerlock"
+  ],
+  "status": [
+    "s",
+    "status"
+  ],
+  "stealth": [
+    "stealth",
+    "ninja"
+  ],
+  "strikes_strikes": [
+    "strikes"
+  ],
+  "strikes_give": [
+    "give"
+  ],
+  "strikes_info": [
+    "info"
+  ],
+  "strikes_set": [
+    "set"
+  ],
+  "strikes_take": [
+    "take"
+  ],
+  "stuck": [
+    "stuck",
+    "halp!"
+  ],
+  "tag": [
+    "tag",
+    "rename"
+  ],
+  "title": [
+    "title"
+  ],
+  "toggleAllianceChat": [
+    "tac",
+    "ac",
+    "togglealliancechat"
+  ],
+  "top": [
+    "t",
+    "top"
+  ],
+  "tpBanner": [
+    "tpbanner"
+  ],
+  "unban": [
+    "unban"
+  ],
+  "upgrades": [
+    "upgrades",
+    "upgrade"
+  ],
+  "vault": [
+    "vault"
+  ],
+  "viewChest": [
+    "viewchest",
+    "viewpv"
+  ]
+}

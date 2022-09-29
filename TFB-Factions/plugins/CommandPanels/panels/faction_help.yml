@@ -1,0 +1,35 @@
+panels:
+  faction_help:
+    perm: default
+    rows: 1
+    title: 'Help and rules :)'
+    commands:
+    - help
+    item:
+      '0':
+        material: RED_WOOL
+        stack: 1
+        name: '&cGo back'
+        commands:
+        - cp tfb
+      '2':
+        material: book
+        stack: 1
+        name: '&cRules on TFB Factions'
+        lore:
+        - "- &eAs always, follow the global #AA0000T#0000AAF#00AA00B &erules"
+        - "- &eGriefing/Raiding is &aALLOWED&e, don't forget to claim!"
+        - "- &eTrading is with own responsibility!"
+      '4':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWM0OTcwZWE5MWFiMDZlY2U1OWQ0NWZjZTc2MDRkMjU1NDMxZjJlMDNhNzM3YjIyNjA4MmM0Y2NlMWFjYTFjNCJ9fX0=
+        stack: 1
+        name: '&bHelp'
+        lore:
+        - "- &eRemember Staff is always happy to help, "
+        - "&eother players might be too"
+      '6':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjZlNTIyZDkxODI1MjE0OWU2ZWRlMmVkZjNmZTBmMmMyYzU4ZmVlNmFjMTFjYjg4YzYxNzIwNzIxOGFlNDU5NSJ9fX0=
+        stack: 1
+        name: '&bCommands'
+        lore:
+        - "- &e/factions help &7- Help from the Factions plugin"
