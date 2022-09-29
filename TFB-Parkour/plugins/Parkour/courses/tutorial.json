@@ -1,0 +1,57 @@
+{
+   "Views": 378,
+   "Checkpoints": 2,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "tutorial",
+   "EconomyFinishReward": 0.1,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 127,
+         "CheckpointY": 9,
+         "CheckpointZ": -236,
+         "Location": {
+            "world": "Parkour",
+            "x": 127.5,
+            "y": 10.5,
+            "z": -235.5,
+            "pitch": 76.200134,
+            "yaw": -0.49127162
+         }
+      },
+      "1": {
+         "CheckpointX": 127,
+         "CheckpointY": 10,
+         "CheckpointZ": -227,
+         "Location": {
+            "world": "Parkour",
+            "x": 127.5,
+            "y": 11.5,
+            "z": -226.5,
+            "pitch": 73.20027,
+            "yaw": -1.3920898
+         }
+      },
+      "2": {
+         "CheckpointX": 127,
+         "CheckpointY": 10,
+         "CheckpointZ": -217,
+         "Location": {
+            "world": "Parkour",
+            "x": 127.5,
+            "y": 11.5,
+            "z": -216.5,
+            "pitch": 73.20027,
+            "yaw": -1.3920898
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 267,
+   "DisplayName": "Tutorial",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "DieInVoid": true,
+   "RewardLevelAdd": 0
+}

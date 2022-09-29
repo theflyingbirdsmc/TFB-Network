@@ -1,0 +1,72 @@
+{
+   "MinimumLevel": 0,
+   "Views": 94,
+   "Checkpoints": 3,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "hard",
+   "EconomyFinishReward": 300,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 193,
+         "CheckpointY": 10,
+         "CheckpointZ": 19,
+         "Location": {
+            "world": "parkour",
+            "x": 193.5,
+            "y": 11.5,
+            "z": 19.5,
+            "pitch": 2.5501637,
+            "yaw": -1.0985718
+         }
+      },
+      "1": {
+         "CheckpointX": 193,
+         "CheckpointY": 12,
+         "CheckpointZ": 39,
+         "Location": {
+            "world": "parkour",
+            "x": 193.5,
+            "y": 13.5,
+            "z": 39.5,
+            "pitch": 57.89988,
+            "yaw": -2.5846558
+         }
+      },
+      "2": {
+         "CheckpointX": 193,
+         "CheckpointY": 12,
+         "CheckpointZ": 65,
+         "Location": {
+            "world": "parkour",
+            "x": 193.5,
+            "y": 13.5,
+            "z": 65.5,
+            "pitch": 63.149918,
+            "yaw": -2.4344788
+         }
+      },
+      "3": {
+         "CheckpointX": 189,
+         "CheckpointY": 13,
+         "CheckpointZ": 98,
+         "Location": {
+            "world": "parkour",
+            "x": 189.5,
+            "y": 14.5,
+            "z": 98.5,
+            "pitch": 74.40027,
+            "yaw": 156.861
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 11,
+   "DisplayName": "Hard",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 10,
+   "DieInVoid": true,
+   "RewardLevelAdd": 6
+}

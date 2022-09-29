@@ -1,0 +1,98 @@
+{
+   "MinimumLevel": 0,
+   "Views": 21,
+   "Checkpoints": 5,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "treeoflife",
+   "EconomyFinishReward": 300,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -263,
+         "CheckpointY": 7,
+         "CheckpointZ": 105,
+         "Location": {
+            "world": "parkour",
+            "x": -262.5,
+            "y": 8.5,
+            "z": 105.5,
+            "pitch": 2.399713,
+            "yaw": 178.24278
+         }
+      },
+      "1": {
+         "CheckpointX": -269,
+         "CheckpointY": 28,
+         "CheckpointZ": 87,
+         "Location": {
+            "world": "parkour",
+            "x": -268.5,
+            "y": 29.5,
+            "z": 87.5,
+            "pitch": 76.80013,
+            "yaw": 163.75797
+         }
+      },
+      "2": {
+         "CheckpointX": -270,
+         "CheckpointY": 14,
+         "CheckpointZ": 73,
+         "Location": {
+            "world": "parkour",
+            "x": -269.5,
+            "y": 15.5,
+            "z": 73.5,
+            "pitch": 48.15018,
+            "yaw": 104.06174
+         }
+      },
+      "3": {
+         "CheckpointX": -254,
+         "CheckpointY": 38,
+         "CheckpointZ": 51,
+         "Location": {
+            "world": "parkour",
+            "x": -253.5,
+            "y": 39.5,
+            "z": 51.5,
+            "pitch": 48.44995,
+            "yaw": -58.395325
+         }
+      },
+      "4": {
+         "CheckpointX": -234,
+         "CheckpointY": 35,
+         "CheckpointZ": 50,
+         "Location": {
+            "world": "parkour",
+            "x": -233.5,
+            "y": 36.5,
+            "z": 50.5,
+            "pitch": 60.250484,
+            "yaw": -27.14931
+         }
+      },
+      "5": {
+         "CheckpointX": -239,
+         "CheckpointY": 30,
+         "CheckpointZ": 61,
+         "Location": {
+            "world": "parkour",
+            "x": -238.5,
+            "y": 31.5,
+            "z": 61.5,
+            "pitch": 29.350452,
+            "yaw": 40.650665
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 2,
+   "DisplayName": "TreeOfLife",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 30,
+   "DieInVoid": true,
+   "RewardLevelAdd": 3
+}

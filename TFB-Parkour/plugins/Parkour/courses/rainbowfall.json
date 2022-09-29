@@ -1,0 +1,72 @@
+{
+   "MinimumLevel": 0,
+   "Views": 23,
+   "Checkpoints": 3,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "rainbowfall",
+   "EconomyFinishReward": 420,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -65,
+         "CheckpointY": 9,
+         "CheckpointZ": -304,
+         "Location": {
+            "world": "Parkour",
+            "x": -64.5,
+            "y": 10.5,
+            "z": -303.5,
+            "pitch": 12.29978,
+            "yaw": -91.40632
+         }
+      },
+      "1": {
+         "CheckpointX": -53,
+         "CheckpointY": 9,
+         "CheckpointZ": -304,
+         "Location": {
+            "world": "Parkour",
+            "x": -52.5,
+            "y": 10.5,
+            "z": -303.5,
+            "pitch": 37.049793,
+            "yaw": 90.84409
+         }
+      },
+      "2": {
+         "CheckpointX": -52,
+         "CheckpointY": 6,
+         "CheckpointZ": -304,
+         "Location": {
+            "world": "Parkour",
+            "x": -51.5,
+            "y": 7.5,
+            "z": -303.5,
+            "pitch": 69.60058,
+            "yaw": -96.80632
+         }
+      },
+      "3": {
+         "CheckpointX": -52,
+         "CheckpointY": 1,
+         "CheckpointZ": -304,
+         "Location": {
+            "world": "Parkour",
+            "x": -51.5,
+            "y": 2.5,
+            "z": -303.5,
+            "pitch": 57.150642,
+            "yaw": -90.805725
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 0,
+   "DisplayName": "RainbowFall",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 20,
+   "RewardLevelAdd": 6,
+   "DieInVoid": true
+}

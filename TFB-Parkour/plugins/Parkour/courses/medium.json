@@ -1,0 +1,47 @@
+{
+   "ManualCheckpoints": false,
+   "MinimumLevel": 0,
+   "Views": 615,
+   "Checkpoints": 1,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "medium",
+   "EconomyFinishReward": 50,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 207,
+         "CheckpointY": 10,
+         "CheckpointZ": 5,
+         "Location": {
+            "world": "parkour",
+            "x": 207.5,
+            "y": 11.5,
+            "z": 5.5,
+            "pitch": 0.7499566,
+            "yaw": -90.34949
+         }
+      },
+      "1": {
+         "CheckpointX": 237,
+         "CheckpointY": 14,
+         "CheckpointZ": 9,
+         "Location": {
+            "world": "parkour",
+            "x": 237.5,
+            "y": 15.5,
+            "z": 9.5,
+            "pitch": 72.150055,
+            "yaw": -2.88555
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 39,
+   "DisplayName": "Medium",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 5,
+   "DieInVoid": true,
+   "RewardLevelAdd": 3
+}

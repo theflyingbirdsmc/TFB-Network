@@ -1,0 +1,54 @@
+{
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 193,
+         "CheckpointY": 10,
+         "CheckpointZ": -9,
+         "Location": {
+            "world": "parkour",
+            "x": 193.5,
+            "y": 11.5,
+            "z": -8.5,
+            "pitch": 0.4498431,
+            "yaw": 179.73438
+         }
+      },
+      "1": {
+         "CheckpointX": 192,
+         "CheckpointY": 12,
+         "CheckpointZ": -25,
+         "Location": {
+            "world": "parkour",
+            "x": 192.5,
+            "y": 13.5,
+            "z": -24.5,
+            "pitch": 7.0559487,
+            "yaw": 179.5342
+         }
+      },
+      "2": {
+         "CheckpointX": 192,
+         "CheckpointY": 12,
+         "CheckpointZ": -39,
+         "Location": {
+            "world": "parkour",
+            "x": 192.5,
+            "y": 13.5,
+            "z": -38.5,
+            "pitch": 16.52492,
+            "yaw": 179.74068
+         }
+      }
+   },
+   "Views": 613,
+   "Checkpoints": 2,
+   "DisplayName": "Easy",
+   "Completed": 474,
+   "Creator": "KatieDeForest",
+   "MaxFallTicks": 5,
+   "Name": "easy",
+   "EconomyFinishReward": 10,
+   "RewardLevelAdd": 1,
+   "DieInVoid": true
+}

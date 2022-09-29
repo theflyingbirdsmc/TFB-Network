@@ -1,0 +1,98 @@
+# -------------------------------------------------------------------------------------------------
+# ChatControl supports dynamic, high performance variables you create! They can be used across
+# the plugin, for example in formatting your chat or death messages. Currently, the folder
+# variables/ stores all custom variables in each separate yml file.
+#
+# Variables can not only be used to display information, but because you can write your own full
+# code in JavaScript to display them, they can also do whatever you would wish for your
+# players/server, such as sneaking in code to send sounds or spawn monsters.
+#
+# Coding this variable requires a little bit of JavaScript knowledge, see the link below.
+#
+# For documentation and help, please see this link:
+# https://github.com/kangarko/ChatControl-Red/wiki/JavaScript-Variables
+# -------------------------------------------------------------------------------------------------
+
+# Where should this variable be used?
+#
+# FORMAT = used in your formats with {syntax}, players cannot use it
+# MESSAGE = players can use it with [syntax] in their chat messages
+Type: message
+
+# The key we look for in the chat surrounded by [] brackets, example:
+# chat message: "Hello everyone, I have an [item] in my hand" if your key is equal to "item"
+Key: item
+
+# The value the key will be replaced to. This uses JavaScript.
+Value: |-
+    // A valid JavaScript code follows below. You can use the "player" variable to get
+    // Bukkit's player instance. 
+    
+    // Call the function
+    displayName();
+    
+    function displayName() {
+      var item = player.getItemInHand();
+      var air = Java.type("org.bukkit.Material").AIR;
+     
+      // Special support for throwing exceptions, you can begin the exception
+      // with "event handled: ". We will cancel the event for you, in this case, the chat message,
+      // and then send the message to the player that appears after that.
+      if (item == null || item.getType() == air) 
+        throw "event handled: You must be holding an item to use [item]!";
+    
+      var metadata = item.getItemMeta();
+      
+      // If the item has meta data and a custom name, show that name instead
+      if (metadata != null && metadata.hasDisplayName())
+        return metadata.getDisplayName();
+    
+      // Example of using Java classes to show custom names for custom types
+      // JavaScript has to wrap all Java classes using Java.type, see 
+      // https://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/#invoking-java-methods-from-javascript
+      var stone = Java.type("org.bukkit.Material").STONE;
+       
+      // You can, for example, print custom names for certain materials
+      //if (item.getType() == stone)
+      //  return "My Shiny Little Stone";
+    
+      // We use a class that is packed in Spigot server's JAR to capitalize our item
+      var wordUtils = Java.type("org.apache.commons.lang.WordUtils");
+      var name = item.getType().name().toLowerCase().replace('_', ' ').replace('_', ' ');
+    
+      // Return the item name deducted from item's type, capitalized
+      return wordUtils.capitalize(name);
+    }
+
+# What JavaScript condition must return true for this variable to show?
+# You can put variables in here to get replaced.
+Sender_Condition: ''
+
+# What permission must the message sender have in order for this variable to display to him?
+Sender_Permission: ''
+
+# See Sender_Condition, except that we evaluate the JavaScript for each chat message receiver
+# and only show the message to those receivers for which the condition returns true.
+Receiver_Condition: ''
+
+# What permission must the message receiver have in order for this variable to display to them?
+Receiver_Permission: ''
+
+# What texts should be displayed when we hover the mouse
+# over this variable in the chat
+Hover: []
+
+# What ItemStack should be displayed when we hover the mouse over this variable in the chat
+Hover_Item: player.getItemInHand()
+
+# What website URL should be opened when we click with the mouse
+# on this variable in the chat
+Open_Url: ''
+
+# What command should appear in the player command box on his screen
+# if he clicks on this variable in the chat
+Suggest_Command: ''
+
+# What command should run as the sender when he clicks the mouse on this variable?
+# Minecraft only supports 1 command!
+Run_Command: ''

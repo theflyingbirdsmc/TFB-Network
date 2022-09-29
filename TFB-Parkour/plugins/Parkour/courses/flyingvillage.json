@@ -1,0 +1,109 @@
+{
+   "MinimumLevel": 0,
+   "Views": 10,
+   "Checkpoints": 6,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "flyingvillage",
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -273,
+         "CheckpointY": 1,
+         "CheckpointZ": 156,
+         "Location": {
+            "world": "parkour",
+            "x": -272.5,
+            "y": 2.5,
+            "z": 156.5,
+            "pitch": 8.999947,
+            "yaw": -0.7628479
+         }
+      },
+      "1": {
+         "CheckpointX": -277,
+         "CheckpointY": 10,
+         "CheckpointZ": 176,
+         "Location": {
+            "world": "parkour",
+            "x": -276.5,
+            "y": 11.5,
+            "z": 176.5,
+            "pitch": 80.54986,
+            "yaw": -96.101074
+         }
+      },
+      "2": {
+         "CheckpointX": -280,
+         "CheckpointY": 15,
+         "CheckpointZ": 178,
+         "Location": {
+            "world": "parkour",
+            "x": -279.5,
+            "y": 16.5,
+            "z": 178.5,
+            "pitch": 85.34976,
+            "yaw": -87.35217
+         }
+      },
+      "3": {
+         "CheckpointX": -264,
+         "CheckpointY": 13,
+         "CheckpointZ": 168,
+         "Location": {
+            "world": "parkour",
+            "x": -263.5,
+            "y": 14.5,
+            "z": 168.5,
+            "pitch": 87.6004,
+            "yaw": 5.0884266
+         }
+      },
+      "4": {
+         "CheckpointX": -270,
+         "CheckpointY": 19,
+         "CheckpointZ": 173,
+         "Location": {
+            "world": "parkour",
+            "x": -269.5,
+            "y": 20.5,
+            "z": 173.5,
+            "pitch": 46.949455,
+            "yaw": -89.58264
+         }
+      },
+      "5": {
+         "CheckpointX": -272,
+         "CheckpointY": 24,
+         "CheckpointZ": 175,
+         "Location": {
+            "world": "parkour",
+            "x": -271.5,
+            "y": 25.5,
+            "z": 175.5,
+            "pitch": 87.89998,
+            "yaw": 167.95007
+         }
+      },
+      "6": {
+         "CheckpointX": -267,
+         "CheckpointY": 30,
+         "CheckpointZ": 171,
+         "Location": {
+            "world": "parkour",
+            "x": -266.5,
+            "y": 31.5,
+            "z": 171.5,
+            "pitch": 48.150024,
+            "yaw": 90.15234
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 0,
+   "DisplayName": "FlyingVillage",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "DieInVoid": true,
+   "RewardLevelAdd": 1
+}

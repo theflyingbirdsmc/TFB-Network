@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format shown to the sender of a private message.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  everything:
+    Message: '&c[PM] &8[&fyou &7-> &f{receiver}&8] &f{message}'
+    Hover:
+    - '&fPrivate Message'
+    - '&3Received: &f{timestamp}'
+    - '&3Sender: &f{sender}'
+    - ''
+    - '&7Click to reply.'
+    Suggest_Command: '/r '

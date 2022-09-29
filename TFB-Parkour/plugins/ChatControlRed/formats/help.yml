@@ -1,0 +1,28 @@
+# -----------------------------------------------------------------------------------------
+# An example format used to render help (basically anything) when calling /help
+# from rules/command.rs
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  everything:
+    Message:
+    - '&8&m-----------------------------------------------------&r'
+    - '<center>&6Welcome to {server_name}'
+    - ' '
+    - '&6Version: &f{nms_version}'
+    - '&6Website: &fhttps://mineacademy.org'
+    - '&6Commands:'
+    - ' &7- &f/rules &7Learn and agree to server rules.'
+    - ' &7- &f/discord &7Join our Discord community.'
+    - ' '
+    - ' '
+  # You can create a book named "help" with "/chc book" and make
+  # players able to read it by clicking on the message below!
+  #book:
+  #  Message:
+  #  - "&6&nClick here&6 to read the story of our server."
+  #  Run_Command:
+  #  - "/{label} book open help {player}"

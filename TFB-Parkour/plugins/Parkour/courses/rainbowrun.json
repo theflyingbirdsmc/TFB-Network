@@ -1,0 +1,150 @@
+{
+   "MinimumLevel": 0,
+   "Views": 28,
+   "Checkpoints": 9,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "rainbowrun",
+   "EconomyFinishReward": 80,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -99,
+         "CheckpointY": 9,
+         "CheckpointZ": -304,
+         "Location": {
+            "world": "Parkour",
+            "x": -98.5,
+            "y": 10.5,
+            "z": -303.5,
+            "pitch": 21.59992,
+            "yaw": 89.96454
+         }
+      },
+      "1": {
+         "CheckpointX": -142,
+         "CheckpointY": 31,
+         "CheckpointZ": -300,
+         "Location": {
+            "world": "Parkour",
+            "x": -141.5,
+            "y": 32.5,
+            "z": -299.5,
+            "pitch": 88.64999,
+            "yaw": 91.16821
+         }
+      },
+      "2": {
+         "CheckpointX": -145,
+         "CheckpointY": 14,
+         "CheckpointZ": -296,
+         "Location": {
+            "world": "Parkour",
+            "x": -144.5,
+            "y": 15.5,
+            "z": -295.5,
+            "pitch": 84.75006,
+            "yaw": 2.6721191
+         }
+      },
+      "3": {
+         "CheckpointX": -144,
+         "CheckpointY": 14,
+         "CheckpointZ": -290,
+         "Location": {
+            "world": "Parkour",
+            "x": -143.5,
+            "y": 15.5,
+            "z": -289.5,
+            "pitch": 84.7506,
+            "yaw": -36.785095
+         }
+      },
+      "4": {
+         "CheckpointX": -146,
+         "CheckpointY": 11,
+         "CheckpointZ": -283,
+         "Location": {
+            "world": "Parkour",
+            "x": -145.5,
+            "y": 12.5,
+            "z": -282.5,
+            "pitch": 66.00041,
+            "yaw": -2.5862122
+         }
+      },
+      "5": {
+         "CheckpointX": -140,
+         "CheckpointY": 12,
+         "CheckpointZ": -281,
+         "Location": {
+            "world": "Parkour",
+            "x": -139.5,
+            "y": 13.5,
+            "z": -280.5,
+            "pitch": 82.950645,
+            "yaw": -158.58432
+         }
+      },
+      "6": {
+         "CheckpointX": -132,
+         "CheckpointY": 8,
+         "CheckpointZ": -283,
+         "Location": {
+            "world": "Parkour",
+            "x": -131.5,
+            "y": 9.5,
+            "z": -282.5,
+            "pitch": 65.250465,
+            "yaw": -173.58379
+         }
+      },
+      "7": {
+         "CheckpointX": -132,
+         "CheckpointY": 3,
+         "CheckpointZ": -291,
+         "Location": {
+            "world": "Parkour",
+            "x": -131.5,
+            "y": 4.5,
+            "z": -290.5,
+            "pitch": 68.25053,
+            "yaw": -100.23392
+         }
+      },
+      "8": {
+         "CheckpointX": -140,
+         "CheckpointY": 3,
+         "CheckpointZ": -290,
+         "Location": {
+            "world": "Parkour",
+            "x": -139.5,
+            "y": 4.5,
+            "z": -289.5,
+            "pitch": 65.10062,
+            "yaw": 92.815796
+         }
+      },
+      "9": {
+         "CheckpointX": -147,
+         "CheckpointY": 0,
+         "CheckpointZ": -294,
+         "Location": {
+            "world": "Parkour",
+            "x": -146.5,
+            "y": 1.5,
+            "z": -293.5,
+            "pitch": 89.85,
+            "yaw": -171.03421
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 4,
+   "DisplayName": "RainbowRun",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 30,
+   "DieInVoid": true,
+   "RewardLevelAdd": 3
+}

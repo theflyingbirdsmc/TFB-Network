@@ -1,0 +1,67 @@
+{
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 9722,
+         "CheckpointY": 8,
+         "CheckpointZ": 9881,
+         "Location": {
+            "world": "parkour",
+            "x": 9722.5,
+            "y": 9.5,
+            "z": 9881.5,
+            "pitch": 1.0505017,
+            "yaw": 44.73874
+         }
+      },
+      "1": {
+         "CheckpointX": 9716,
+         "CheckpointY": 11,
+         "CheckpointZ": 9911,
+         "Location": {
+            "world": "parkour",
+            "x": 9716.5,
+            "y": 12.5,
+            "z": 9911.5,
+            "pitch": 7.3229647,
+            "yaw": 38.13202
+         }
+      },
+      "2": {
+         "CheckpointX": 9718,
+         "CheckpointY": 21,
+         "CheckpointZ": 9925,
+         "Location": {
+            "world": "parkour",
+            "x": 9718.5,
+            "y": 22.5,
+            "z": 9925.5,
+            "pitch": 0.11643296,
+            "yaw": 0.62734985
+         }
+      },
+      "3": {
+         "CheckpointX": 9666,
+         "CheckpointY": 24,
+         "CheckpointZ": 9933,
+         "Location": {
+            "world": "parkour",
+            "x": 9666.5,
+            "y": 25.5,
+            "z": 9933.5,
+            "pitch": 4.4536276,
+            "yaw": 179.12445
+         }
+      }
+   },
+   "Views": 21,
+   "Checkpoints": 3,
+   "DisplayName": "NetherDream",
+   "Completed": 5,
+   "Creator": "TheProKillerGirl",
+   "LinkedLobby": "default",
+   "MaxFallTicks": 3,
+   "Name": "netherdream",
+   "RewardLevelAdd": 1,
+   "DieInVoid": true
+}

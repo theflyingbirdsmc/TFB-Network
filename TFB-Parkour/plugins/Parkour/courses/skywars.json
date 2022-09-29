@@ -1,0 +1,137 @@
+{
+   "MinimumLevel": 0,
+   "Views": 15,
+   "Checkpoints": 8,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "skywars",
+   "EconomyFinishReward": 600,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -247,
+         "CheckpointY": 2,
+         "CheckpointZ": 119,
+         "Location": {
+            "world": "parkour",
+            "x": -246.5,
+            "y": 3.5,
+            "z": 119.5,
+            "pitch": 1.900396,
+            "yaw": -89.201416
+         }
+      },
+      "1": {
+         "CheckpointX": -175,
+         "CheckpointY": 2,
+         "CheckpointZ": 117,
+         "Location": {
+            "world": "parkour",
+            "x": -174.5,
+            "y": 3.5,
+            "z": 117.5,
+            "pitch": 60.850033,
+            "yaw": -154.3475
+         }
+      },
+      "2": {
+         "CheckpointX": -165,
+         "CheckpointY": 3,
+         "CheckpointZ": 62,
+         "Location": {
+            "world": "parkour",
+            "x": -164.5,
+            "y": 4.5,
+            "z": 62.5,
+            "pitch": 46.149754,
+            "yaw": -0.9395752
+         }
+      },
+      "3": {
+         "CheckpointX": -158,
+         "CheckpointY": 6,
+         "CheckpointZ": 84,
+         "Location": {
+            "world": "parkour",
+            "x": -157.5,
+            "y": 7.5,
+            "z": 84.5,
+            "pitch": 74.10098,
+            "yaw": -13.241409
+         }
+      },
+      "4": {
+         "CheckpointX": -161,
+         "CheckpointY": 2,
+         "CheckpointZ": 110,
+         "Location": {
+            "world": "parkour",
+            "x": -160.5,
+            "y": 3.5,
+            "z": 110.5,
+            "pitch": 69.15101,
+            "yaw": -36.491623
+         }
+      },
+      "5": {
+         "CheckpointX": -140,
+         "CheckpointY": 7,
+         "CheckpointZ": 119,
+         "Location": {
+            "world": "parkour",
+            "x": -139.5,
+            "y": 8.5,
+            "z": 119.5,
+            "pitch": 58.650223,
+            "yaw": -94.08502
+         }
+      },
+      "6": {
+         "CheckpointX": -119,
+         "CheckpointY": 5,
+         "CheckpointZ": 166,
+         "Location": {
+            "world": "parkour",
+            "x": -118.5,
+            "y": 6.5,
+            "z": 166.5,
+            "pitch": 66.601524,
+            "yaw": 96.40808
+         }
+      },
+      "7": {
+         "CheckpointX": -160,
+         "CheckpointY": 3,
+         "CheckpointZ": 181,
+         "Location": {
+            "world": "parkour",
+            "x": -159.5,
+            "y": 4.5,
+            "z": 181.5,
+            "pitch": 44.101185,
+            "yaw": 80.3587
+         }
+      },
+      "8": {
+         "CheckpointX": -165,
+         "CheckpointY": 6,
+         "CheckpointZ": 144,
+         "Location": {
+            "world": "parkour",
+            "x": -164.5,
+            "y": 7.5,
+            "z": 144.5,
+            "pitch": 70.20147,
+            "yaw": 166.00716
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 0,
+   "DisplayName": "Skywars",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 10,
+   "DieInVoid": true,
+   "RewardLevelAdd": 4
+}

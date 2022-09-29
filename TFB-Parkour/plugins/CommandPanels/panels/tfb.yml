@@ -1,0 +1,171 @@
+panels:
+  tfb:
+    paneltype:
+    - nocommand
+    perm: tfb
+    refresh-delay: 5
+    rows: 6
+    title: '      #AA0000T#0000AAF#00AA00B &8- #AA0000The #0000AAFlying #00AA00Birds'
+    commands:
+    - tfb
+    - TFB
+    open-with-item:
+      material: COMPASS
+      stationary: 4
+      name: '#AA0000T#0000AAF#00AA00B &eMenu &8(&7/tfb&8)'
+      #lore:
+      #- '%javascript_tfb_compass_lore,{player_locale_short}%'
+      commands:
+      - open= tfb
+    item:
+      '1':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '9':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '2':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg3M2MxMmJmZmI1MjUxYTBiODhkNWFlNzVjNzI0N2NiMzlhNzVmZjFhODFjYmU0YzhhMzliMzExZGRlZGEifX19
+        stack: 1
+        name: '%javascript_tfb_discord_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_discord_lore,{player_locale_short}%'
+        commands:
+        - msg= %javascript_tfb_discord_message,{player_locale_short}%
+      '3':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjdkNmJlMWRjYTUzNTJhNTY5M2UyOWVhMzVkODA2YjJhMjdjNGE5N2I2NGVlYmJmNjMyYzk5OGQ1OTQ4ZjFjNCJ9fX0=
+        stack: 1
+        name: '%javascript_tfb_stats_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_stats_lore,{player_locale_short}%'
+        commands:
+        - msg= %javascript_tfb_stats_message,{player_locale_short}%
+      '4':
+        material: cps= self
+        stack: 1
+        name: '%javascript_tfb_profile_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_profile_lore,{player_locale_short}%'
+      '5':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JkYjhmMzc5NjE0MmFhYTNlYjg5Y2NiZWM3MTcwNWQ0YTIxNjkyZWI3Yzg0NjZkMmE3OWIyMWFlMTRiMzI2In19fQ==
+        stack: 1
+        name: '%javascript_tfb_shop_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_shop_lore,{player_locale_short}%'
+        commands:
+        - msg= %javascript_tfb_shop_message,{player_locale_short}%
+      '6':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJmNmMwN2EzMjZkZWY5ODRlNzJmNzcyZWQ2NDU0NDlmNWVjOTZjNmNhMjU2NDk5YjVkMmI4NGE4ZGNlIn19fQ==
+        stack: 1
+        name: '%javascript_tfb_youtube_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_youtube_lore,{player_locale_short}%'
+        commands:
+        - msg= %javascript_tfb_youtube_message,{player_locale_short}%
+      '13':
+        material: NETHER_STAR
+        stack: 1
+        name: '#AA0000T#0000AAF#00AA00B &aCosmetics'
+        lore:
+        - '%javascript_tfb_cosmetics_lore,{player_locale_short}%'
+        commands:
+        - gmenu main
+      # '12':
+      # material: RED_BANNER
+      # banner:
+      # - WHITE,HALF_HORIZONTAL
+      # - RED,STRIPE_TOP
+      # - RED,HALF_HORIZONTAL_MIRROR
+      # - RED,HALF_HORIZONTAL_MIRROR
+      # - WHITE,STRIPE_CENTER
+      # - WHITE,STRIPE_CENTER
+      # stack: 1
+      # name: '&4Danish &fServers'
+      # '14':
+      # material: BLUE_BANNER
+      # banner:
+      # - GREEN,GLOBE
+      # stack: 1
+      # name: '&2Global &fServers'
+      '17':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '29':
+        material: GRASS_BLOCK
+        stack: 1
+        name: '%javascript_tfb_vanilladk_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_vanilladk_lore,{player_locale_short}%'
+        commands:
+        - server= vanilladk
+      '30':
+        material: SLIME_BLOCK
+        stack: 1
+        name: '%javascript_tfb_parkoureu_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_parkoureu_lore,{player_locale_short}%'
+        commands:
+        - server= parkour
+      '31':
+        material: END_CRYSTAL
+        stack: 1
+        name: '%javascript_tfb_lobby_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_lobby_lore,{player_locale_short}%'
+        commands:
+        - server= lobby
+      '32':
+        material: BEDROCK
+        stack: 1
+        name: '%javascript_tfb_creativeeu_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_creativeeu_lore,{player_locale_short}%'
+        commands:
+        - server= creative
+      '33':
+        material: TNT
+        stack: 1
+        name: '%javascript_tfb_factionseu_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_factionseu_lore,{player_locale_short}%'
+        commands:
+        - server= factions
+      '36':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '45':
+        material: BLACK_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '46':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '44':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '52':
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '53':
+        material: BLACK_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '7':
+        material: GRAY_STAINED_GLASS_PANE
+        stack: 1
+        name: ' '
+      '8':
+        material: BLACK_STAINED_GLASS_PANE
+        stack: 1
+        name: ' '
+      '0':
+        material: BLACK_STAINED_GLASS_PANE
+        stack: 1
+        name: ' '

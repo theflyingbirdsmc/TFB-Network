@@ -1,0 +1,37 @@
+{
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 868,
+         "CheckpointY": -5,
+         "CheckpointZ": 852,
+         "Location": {
+            "world": "parkour",
+            "x": 868.5,
+            "y": -3.5,
+            "z": 852.5,
+            "pitch": 52.94942,
+            "yaw": -3.3529968
+         }
+      },
+      "1": {
+         "CheckpointX": 868,
+         "CheckpointY": -5,
+         "CheckpointZ": 854,
+         "Location": {
+            "world": "parkour",
+            "x": 868.5,
+            "y": -3.5,
+            "z": 854.5,
+            "pitch": 62.09945,
+            "yaw": -3.3502421
+         }
+      }
+   },
+   "Views": 5,
+   "Checkpoints": 1,
+   "Completed": 2,
+   "RewardParkoins": 0,
+   "Creator": "KatieDeForest",
+   "Name": "test",
+   "EconomyFinishReward": 1
+}

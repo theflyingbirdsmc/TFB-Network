@@ -1,0 +1,85 @@
+{
+   "MinimumLevel": 0,
+   "Views": 82,
+   "Checkpoints": 4,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "Name": "expert",
+   "EconomyFinishReward": 650,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 179,
+         "CheckpointY": 10,
+         "CheckpointZ": 5,
+         "Location": {
+            "world": "parkour",
+            "x": 179.5,
+            "y": 11.5,
+            "z": 5.5,
+            "pitch": 5.400079,
+            "yaw": 89.20926
+         }
+      },
+      "1": {
+         "CheckpointX": 158,
+         "CheckpointY": 10,
+         "CheckpointZ": 5,
+         "Location": {
+            "world": "parkour",
+            "x": 158.5,
+            "y": 11.5,
+            "z": 5.5,
+            "pitch": 70.5002,
+            "yaw": 169.91133
+         }
+      },
+      "2": {
+         "CheckpointX": 146,
+         "CheckpointY": 11,
+         "CheckpointZ": 5,
+         "Location": {
+            "world": "parkour",
+            "x": 146.5,
+            "y": 12.5,
+            "z": 5.5,
+            "pitch": 80.85055,
+            "yaw": 173.66087
+         }
+      },
+      "3": {
+         "CheckpointX": 148,
+         "CheckpointY": 6,
+         "CheckpointZ": -35,
+         "Location": {
+            "world": "parkour",
+            "x": 148.5,
+            "y": 7.5,
+            "z": -34.5,
+            "pitch": 68.850494,
+            "yaw": 100.46353
+         }
+      },
+      "4": {
+         "CheckpointX": 132,
+         "CheckpointY": 6,
+         "CheckpointZ": -32,
+         "Location": {
+            "world": "parkour",
+            "x": 132.5,
+            "y": 7.5,
+            "z": -31.5,
+            "pitch": 75.45073,
+            "yaw": 87.11401
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 2,
+   "DisplayName": "Expert",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 10,
+   "DieInVoid": true,
+   "RewardLevelAdd": 10
+}

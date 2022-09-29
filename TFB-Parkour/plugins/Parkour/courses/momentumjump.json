@@ -1,0 +1,42 @@
+{
+   "Views": 183,
+   "Checkpoints": 1,
+   "Creator": "Fuglen",
+   "Name": "momentumjump",
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 918,
+         "CheckpointY": 63,
+         "CheckpointZ": 1384,
+         "Location": {
+            "world": "parkour",
+            "x": 918.5,
+            "y": 64.5,
+            "z": 1384.5,
+            "pitch": 12.9947815,
+            "yaw": 3.1322021
+         }
+      },
+      "1": {
+         "CheckpointX": 914,
+         "CheckpointY": 64,
+         "CheckpointZ": 1412,
+         "Location": {
+            "world": "parkour",
+            "x": 914.5,
+            "y": 65.5,
+            "z": 1412.5,
+            "pitch": 90,
+            "yaw": -3.074524
+         }
+      }
+   },
+   "DisplayName": "MomentumJump",
+   "HasFallDamage": false,
+   "Completed": 109,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 35,
+   "DieInVoid": true,
+   "RewardLevelAdd": 0
+}

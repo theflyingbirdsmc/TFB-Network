@@ -1,0 +1,15 @@
+# -----------------------------------------------------------------------------------------
+# The default chat format shown to spying players when an item is renamed.
+# In addition to player variables you can use these:
+# {item_type} and {item_name}
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  front:
+    Message: '&7[{location}] {player} renamed: '
+  item:
+    Message: '{item_name}'
+    Hover_Item: player.getItemInHand()

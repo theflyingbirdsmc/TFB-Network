@@ -1,0 +1,24 @@
+default: 
+   SOUL_SAND: 
+      Action: norun
+   MOSSY_COBBLESTONE: 
+      Action: bounce
+      Strength: 5.0
+      Duration: 200
+   GOLD_BLOCK: 
+      Action: finish
+   OBSIDIAN: 
+      Action: death
+   REDSTONE_BLOCK: 
+      Action: repulse
+      Strength: 2
+   PISTON: 
+      Action: launch
+      Strength: 2
+   LAPIS_BLOCK: 
+      Action: climb
+      Strength: 2.2
+   ICE: 
+      Action: speed
+      Strength: 2
+      Duration: 1

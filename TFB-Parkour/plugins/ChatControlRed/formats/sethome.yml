@@ -1,0 +1,17 @@
+# -----------------------------------------------------------------------------------------
+# An example format used in chat bots (see rules/chat.rs) to help players set a home.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  front:
+    Message: '&8[&cBot&8] &7{player}, click '
+  clickable:
+    Message: '&4[here]'
+    Hover:
+    - 'Click me to set your home!'
+    Run_Command: /sethome
+  end:
+    Message: ' &7to set a home at your location!'

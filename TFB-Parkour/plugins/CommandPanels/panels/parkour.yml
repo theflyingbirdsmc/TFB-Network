@@ -1,0 +1,81 @@
+panels:
+  parkour:
+    perm: default
+    rows: 3
+    title: '#AA0000T#0000AAF#00AA00B &eParkour'
+    empty: air
+    open-with-item:
+      material: SLIME_BLOCK
+      stationary: 0
+      name: '#AA0000T#0000AAF#00AA00B &eParkour'
+      lore:
+      - 'Jump or dive like an Eagle, in our' 
+      - 'amazing parkour and dropper courses' 
+      commands:
+      - open= parkour        
+    item:
+      '9':
+        material: SLIME_BLOCK
+        stack: 1
+        name: '&fCasual Parkour!'
+        commands:
+        - open= parkour_casual
+        lore:
+        - 'Play however you want'
+        - 'Be free like a bird'
+      '10':
+        material: HONEY_BLOCK
+        stack: 1
+        name: '&fRanked Parkour!'
+        commands:
+        - open= parkour_ranked
+        lore:
+        - 'Earn levels by completing courses'
+        - 'Courses gets increasingly harder'
+      '11':
+        material: PLAYER_HEAD
+        stack: 1
+        name: '&fPlayer Courses'
+        commands:
+        - open= parkour_playercourses
+        lore:
+        - 'Courses made by other players'
+        - 'Create your own and let others play it!'
+      '13':
+        material: EGG
+        stack: 1
+        name: '&r&b%parkour_course_displayname_tutorial%&r (Views: &b%parkour_course_views_tutorial%&r)'
+        lore:
+        - Learn how to play parkour
+        - ''
+        - '&eBest time: &f%parkour_course_record_tutorial_player%&8: &b%parkour_course_record_tutorial_time%'
+        - '&eCreated by: &f%parkour_course_creator_tutorial%'
+        - '&eReward: &b$%parkour_course_ecoreward_tutorial% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_tutorial%'
+        - '&eOnline: &b%parkour_course_players_tutorial%'
+        commands:
+        - left= parkour join tutorial
+        - right= parkour stats tutorial
+        - middle= parkour leaderboard tutorial
+      '15':
+        material: DROPPER
+        stack: 1
+        name: '&fDropper!'
+        commands:
+        - open= dropper_courses
+      '4':
+        material: BOOK
+        stack: 1
+        name: '&fRules & hints!'
+        lore:
+        - '1: Follow the regular TFB rules'
+        - '2: You need all checkpoints to finish'
+        - '3: Do not hold/press spacebar on slimeblocks'
+        - '4: Phoenix can get custom created courses'
+        - '5: Fall damage is enabled with no regen'
+        - '6: Lvl also equals difficulty'
+      '22':
+        material: REDSTONE
+        stack: 1
+        name: '&fSettings!'
+        commands:
+        - open= parkour_settings

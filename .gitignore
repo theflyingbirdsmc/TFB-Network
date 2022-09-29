@@ -24,3 +24,4 @@ logs/
 .vscode/sftp.json
 */plugins/Essentials/userdata/*
 */plugins/EssentialsGeoIP/config.yml
+*/plugins/Parkour/players/*

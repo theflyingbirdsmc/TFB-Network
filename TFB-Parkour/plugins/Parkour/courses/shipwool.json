@@ -1,0 +1,53 @@
+{
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": 9995,
+         "CheckpointY": 11,
+         "CheckpointZ": 9941,
+         "Location": {
+            "world": "parkour",
+            "x": 9995.5,
+            "y": 12.5,
+            "z": 9941.5,
+            "pitch": 12.528088,
+            "yaw": -0.5578003
+         }
+      },
+      "1": {
+         "CheckpointX": 9995,
+         "CheckpointY": 17,
+         "CheckpointZ": 9969,
+         "Location": {
+            "world": "parkour",
+            "x": 9995.5,
+            "y": 18.5,
+            "z": 9969.5,
+            "pitch": 10.392442,
+            "yaw": 0.10760498
+         }
+      },
+      "2": {
+         "CheckpointX": 9996,
+         "CheckpointY": 17,
+         "CheckpointZ": 9983,
+         "Location": {
+            "world": "parkour",
+            "x": 9996.5,
+            "y": 18.5,
+            "z": 9983.5,
+            "pitch": 10.659269,
+            "yaw": -0.95965576
+         }
+      }
+   },
+   "Views": 44,
+   "Checkpoints": 2,
+   "Completed": 9,
+   "DisplayName": "ShipWool",
+   "Creator": "Skibet_DK",
+   "LinkedLobby": "default",
+   "Name": "shipwool",
+   "DieInVoid": true,
+   "RewardLevelAdd": 1
+}

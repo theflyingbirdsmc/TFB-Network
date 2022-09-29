@@ -1,0 +1,47 @@
+{
+   "MinimumLevel": 0,
+   "Views": 19,
+   "Checkpoints": 1,
+   "Creator": "KatieDeForest",
+   "RewardOnce": false,
+   "DieInLiquid": false,
+   "Name": "rainbowclimb",
+   "EconomyFinishReward": 160,
+   "Ready": true,
+   "Checkpoint": {
+      "0": {
+         "CheckpointX": -82,
+         "CheckpointY": 9,
+         "CheckpointZ": -321,
+         "Location": {
+            "world": "Parkour",
+            "x": -81.5,
+            "y": 10.5,
+            "z": -320.5,
+            "pitch": 9.1491375,
+            "yaw": 177.98288
+         }
+      },
+      "1": {
+         "CheckpointX": -85,
+         "CheckpointY": 29,
+         "CheckpointZ": -330,
+         "Location": {
+            "world": "Parkour",
+            "x": -84.5,
+            "y": 30.5,
+            "z": -329.5,
+            "pitch": 89.7,
+            "yaw": 174.98373
+         }
+      }
+   },
+   "RewardLevel": 0,
+   "Completed": 3,
+   "DisplayName": "RainbowClimb",
+   "RewardParkoins": 0,
+   "LinkedLobby": "default",
+   "MaxFallTicks": 10,
+   "DieInVoid": true,
+   "RewardLevelAdd": 4
+}

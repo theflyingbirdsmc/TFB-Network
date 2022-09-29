@@ -1,0 +1,36 @@
+# -----------------------------------------------------------------------------------------
+# The default spy format shown to players spying channels.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  delete-chat:
+    Message: '&8[&4X&8] &f'
+    Receiver_Permission: chatcontrol.removemessages
+    Hover:
+    - '&cRemove this message from chat for all players.'
+    Run_Command: /{label} internal remove {message_uuid}
+
+  spies-prefix:
+    Message: '&8[&5Spy&8] &f'
+    Hover:
+    - '&dClick to stop spying {channel} channel.'
+    Run_Command: /{label_spy} toggle chat {channel}
+
+  channel:
+    Message: '&8[&9{channel}&8] &f'
+    Hover:
+    - '&dClick to stop spying {channel} channel.'
+    Run_Command: /{label_spy} toggle chat {channel}
+
+  player-name:
+    #Message: "{player_nick}"
+    Message: '{player_name}'
+    Hover:
+    - '&7Click to message.'
+    Suggest_Command: '/tell {player_name} '
+
+  message:
+    Message: '&7: {message}'
