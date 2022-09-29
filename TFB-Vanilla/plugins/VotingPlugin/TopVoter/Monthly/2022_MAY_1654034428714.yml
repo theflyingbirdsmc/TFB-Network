@@ -1,0 +1,11 @@
+# Saving top voters for Monthly, file also contains other top voter info as backup
+
+AllTime:
+- '1: Fuglen: 123'
+- '2: SimonBird883: 22'
+- '3: KatieDeForest: 13'
+- '4: Im_Trofast: 6'
+Monthly:
+- '1: Fuglen: 15'
+- '2: SimonBird883: 13'
+- '3: KatieDeForest: 8'

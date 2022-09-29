@@ -1,0 +1,28 @@
+LastUpdated: 1664356008622
+IntColumns:
+- VotePartyVotes
+- MilestoneCount
+- MonthTotal
+- AllTimeTotal
+- DailyTotal
+- WeeklyTotal
+- Points
+- DayVoteStreak
+- BestDayVoteStreak
+- WeekVoteStreak
+- BestWeekVoteStreak
+- MonthVoteStreak
+- HighestDailyTotal
+- HighestMonthlyTotal
+- HighestWeeklyTotal
+- LastMonthTotal
+- BestMonthVoteStreak
+VotingPlugin:
+  Version: 'git-Paper-177 (MC: 1.19.2)'
+  ServiceSites:
+  - Minecraftlist.dk
+PluginVersions:
+  VotingPlugin: 6.8.4
+Month: SEPTEMBER
+PrevWeek: 40
+PrevDay: 28

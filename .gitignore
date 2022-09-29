@@ -18,9 +18,8 @@ libraries
 logs/
 /FlameCord
 /pluGET
-TFB-Lobby/plugins/LuckPerms/editor-keystore.json
-TFB-Flamecord/plugins/BuycraftX/config.properties
+*/plugins/LuckPerms/editor-keystore.json
+*/plugins/BuycraftX/config.properties
 .vscode/sftp.json
 */plugins/Essentials/userdata/*
-TFB-Lobby/plugins/EssentialsGeoIP/config.yml
-TFB-Lobby/plugins/BuycraftX/config.properties
+*/plugins/EssentialsGeoIP/config.yml
