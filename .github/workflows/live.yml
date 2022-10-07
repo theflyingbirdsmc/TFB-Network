@@ -25,7 +25,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Run yaml-transform script
-        run: |
-            ls -la
-            ./scripts/transform.sh
+        run: ./.github/workflows/scripts/transform.sh
         shell: bash
