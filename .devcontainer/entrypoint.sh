@@ -74,7 +74,6 @@ chmod +x flamecord
 # 	echo -e "Build: ${BUILD_NUMBER}"
 # 	echo -e "JAR Name of Build: ${JAR_NAME}"
 # 	DOWNLOAD_URL=https://papermc.io/api/v2/projects/${PROJECT}/versions/${MINECRAFT_VERSION}/builds/${BUILD_NUMBER}/downloads/${JAR_NAME}
-
 #     cd /home/container/TFB
 #     echo -e "Running curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}"
 #     curl -o ${SERVER_JARFILE} ${DOWNLOAD_URL}
