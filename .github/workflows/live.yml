@@ -26,5 +26,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run yaml-transform script
-        run: ./.github/scripts/transform.sh
+        run: ./scripts/transform.sh
         shell: bash
