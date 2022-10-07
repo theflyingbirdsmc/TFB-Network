@@ -1,4 +1,4 @@
-yaml_file="/TFB-Flamecord/config.yml"
+yaml_file="/home/runner/work/TFB-Network/TFB-Network/TFB-Flamecord/config.yml"
 key="disabled_commands"
 new_value="'- disabledcommandhere'"
 
