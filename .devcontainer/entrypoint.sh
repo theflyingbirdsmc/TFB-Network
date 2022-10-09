@@ -28,8 +28,8 @@ git config --global user.name "$GITHUB_USERNAME"
 git clone https://github.com/Neocky/pluGET.git pluGET
 git clone https://github.com/2lstudios-mc/FlameCord.git FlameCord
 rm -rf FlameCord/.git/ pluGET/.git/ # We only want the files not the repo.
-# git init
-# git remote add origin https://github.com/theflyingbirdsmc/TFB-Network.git
+git init
+git remote add origin https://github.com/theflyingbirdsmc/TFB-Network.git
 
 
 echo -e "installing pluGET requirements.."

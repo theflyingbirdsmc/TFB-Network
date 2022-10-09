@@ -4,6 +4,7 @@
 *.gz
 *.schematic
 *.schem
+*.env
 pkcs.p12
 *.key
 /logs/*
