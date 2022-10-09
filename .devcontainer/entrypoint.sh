@@ -28,6 +28,7 @@ git init
 git remote add origin https://github.com/theflyingbirdsmc/TFB-Network.git
 git config --global user.email "$GITHUB_EMAIL"
 git config --global user.name "$GITHUB_USERNAME"
+rm -rf FlameCord/.git/ pluGET/.git/ # We only want the files not the repo.
 git config core.filemode false # Ignore file permissions
 
 echo -e "installing pluGET requirements.."
