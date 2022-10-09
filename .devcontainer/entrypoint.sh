@@ -31,7 +31,7 @@ git clone https://github.com/2lstudios-mc/FlameCord.git FlameCord
 rm -rf FlameCord/.git/ pluGET/.git/ # We only want the files not the repo.
 git init
 git remote add origin https://github.com/theflyingbirdsmc/TFB-Network.git
-
+git reset --hard # Not sure why..
 
 echo -e "installing pluGET requirements.."
 #chown -R 777 ./pluGET
