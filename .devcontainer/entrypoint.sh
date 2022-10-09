@@ -21,6 +21,7 @@ echo -e "Cloning down pluGET & FlameCord"
 
 cd /home/container/TFB
 
+git config --global --add safe.directory /home/container/TFB # Seriously..?
 git config --global core.filemode false # Ignore file permissions
 git config --global core.autocrlf input # To make sure it works on Linux from Windows
 git config --global user.email "$GITHUB_EMAIL"
