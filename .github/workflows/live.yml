@@ -27,7 +27,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: test
         with:
-          cmd: "jq .test[] package.json -r"
+          cmd: "jq .test[] live_values.json -r"
           multiline: true
 
       - name: Show servers
