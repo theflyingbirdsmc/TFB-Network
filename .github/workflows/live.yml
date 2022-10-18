@@ -24,11 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Extract all keywords from config.json
+      - name: Extract all keywords from live_values.json
         uses: sergeysova/jq-action@v2
         id: test
         with:
-          cmd: "jq .test[] live_values.json -r"
+          cmd: "jq .test[] scripts/live_values.json -r"
           multiline: true
 
       - name: Show servers
