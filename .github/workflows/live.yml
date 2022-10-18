@@ -30,7 +30,6 @@ jobs:
         with:
           file: "./.github/workflows/scripts/live_values.yml" # File to read from
           key-path: '["TFB-Flamecord/config.yml"]' # Access the runs key then the using key and retuns the value.
-
       - name: Display read-yaml output
         run: echo "${{ steps.live_values.outputs.data }}"
 
@@ -40,3 +39,5 @@ jobs:
         with:
           file: "./TFB-Flamecord/config.yml" # File to read from
           key-path: "${{ steps.live_values.outputs.data }}" # Access the runs key then the using key and retuns the value.
+      - name: Display read-file output
+        run: echo "${{ steps.read-file.outputs.data }}"
