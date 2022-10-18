@@ -27,12 +27,12 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: test
         with:
-          cmd: "jq .TFB-Flamecord/config.yml[] package.json -r"
+          cmd: "jq .test[] package.json -r"
           multiline: true
 
       - name: Show servers
         run: |
           keywords="${{ steps.test.outputs.value }}"
-          for test in $TFB-Flamecord/config.yml; do
+          for test in $test; do
             echo "$test"
           done
