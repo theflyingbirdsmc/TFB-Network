@@ -28,7 +28,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: file
         with:
-          cmd: 'jq ."TFB-Flamecord/config.yml" ./.github/workflows/scripts/live_values.json -r'
+          cmd: 'jq .["TFB-Flamecord/config.yml"] ./.github/workflows/scripts/live_values.json -r'
           multiline: true
 
       - name: Show servers
