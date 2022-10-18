@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "live" branch
   push:
-    branches: [ "live" ]
+    branches: ["live"]
   pull_request:
-    branches: [ "live" ]
+    branches: ["live"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,9 +23,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - name: Run yaml-transform script
+      - name: Extract all keywords from config.json
+        uses: sergeysova/jq-action@v2
+        id: test
+        with:
+          cmd: "jq .TFB-Flamecord/config.yml[] package.json -r"
+          multiline: true
+
+      - name: Show servers
         run: |
-            chmod +x .github/workflows/scripts/transform.sh
-            ./.github/workflows/scripts/transform.sh
-        shell: bash
+          keywords="${{ steps.test.outputs.value }}"
+          for test in $TFB-Flamecord/config.yml; do
+            echo "$test"
+          done
