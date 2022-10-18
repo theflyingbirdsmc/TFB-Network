@@ -34,6 +34,6 @@ jobs:
       - name: Show servers
         run: |
           keywords="${{ steps.file.outputs.value }}"
-          for keyword in $TFB-Flamecord/config.yml; do
+          for keyword in $keywords; do
             echo "$keyword"
           done
