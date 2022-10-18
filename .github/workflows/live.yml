@@ -26,14 +26,14 @@ jobs:
       - uses: actions/checkout@v3
       - name: Extract all keywords from live_values.json
         uses: sergeysova/jq-action@v2
-        id: test
+        id: file
         with:
-          cmd: "jq .test[] ./.github/workflows/scripts/live_values.json -r"
+          cmd: "jq .TFB-Flamecord/config.yml[] ./.github/workflows/scripts/live_values.json -r"
           multiline: true
 
       - name: Show servers
         run: |
-          keywords="${{ steps.test.outputs.value }}"
-          for test in $test; do
-            echo "$test"
+          keywords="${{ steps.file.outputs.value }}"
+          for keyword in $TFB-Flamecord/config.yml; do
+            echo "$keyword"
           done
