@@ -28,7 +28,7 @@ jobs:
         uses: sergeysova/jq-action@v2
         id: test
         with:
-          cmd: "jq .test[] scripts/live_values.json -r"
+          cmd: "jq .test[] ./.github/workflows/scripts/live_values.json -r"
           multiline: true
 
       - name: Show servers
