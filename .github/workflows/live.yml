@@ -41,16 +41,15 @@ jobs:
           key-path: "${{ steps.live_values.outputs.data }}" # Access the runs key then the using key and retuns the value.
       - name: Display read-file output
         run: echo "${{ steps.read-file.outputs.data }}"
-      
-      - uses: actions/checkout@v3
-        uses: fjogeleit/yaml-update-action@main
+
+      - uses: fjogeleit/yaml-update-action@main
+      - name: update yaml
         with:
-          valueFile: './TFB-Flamecord/config.yml'
+          valueFile: "./TFB-Flamecord/config.yml"
           description: Test GitHub Action
-          message: 'Update file' 
-          title: 'Version Updates '
+          message: "Update file"
+          title: "Version Updates "
           changes: |
             {
               "steps.live_values.outputs.data": "${{ steps.read-file.outputs.data }}"
             }
-        
