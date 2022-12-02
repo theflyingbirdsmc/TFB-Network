@@ -15,8 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "transform"
+  transform:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -41,3 +41,16 @@ jobs:
           key-path: "${{ steps.live_values.outputs.data }}" # Access the runs key then the using key and retuns the value.
       - name: Display read-file output
         run: echo "${{ steps.read-file.outputs.data }}"
+      
+      - uses: actions/checkout@v3
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: './TFB-Flamecord/config.yml'
+          description: Test GitHub Action
+          message: 'Update file' 
+          title: 'Version Updates '
+          changes: |
+            {
+              "steps.live_values.outputs.data": "${{ steps.read-file.outputs.data }}"
+            }
+        
