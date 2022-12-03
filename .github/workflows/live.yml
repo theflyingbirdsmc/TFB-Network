@@ -15,26 +15,25 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  getChangedFiles:
+  # This workflow contains a single job called "transform"
+  transform:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.changed-files.outputs.all_changed_files }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref }}
-          fetch-depth: 2
+          fetch-depth: 0
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v34
 
-  # This workflow contains a single job called "transform"
-  transform:
-    needs: getChangedFiles
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
@@ -47,8 +46,6 @@ jobs:
           key-path: '["TFB-Flamecord/config.yml"]' # Access the runs key then the using key and retuns the value.
       - name: Display read-yaml output
         run: echo "${{ steps.live_values.outputs.data }}"
-      - name: Display files
-        run: echo "${{ needs.getChangedFiles.outputs.matrix }}"
 
       - name: Read values in file on live
         id: read-file
