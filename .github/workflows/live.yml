@@ -51,7 +51,8 @@ jobs:
           valueFile: "TFB-Flamecord/config.yml"
           description: Test GitHub Action
           message: "Update file"
-          title: "Version Updates "
+          title: "Version Updates"
+          branch: dev
           changes: |
             {
               "TFB-Flamecord/config.yml": {"servers":${{ steps.read-file.outputs.data}}}
