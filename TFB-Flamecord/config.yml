@@ -43,13 +43,13 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - herewegoagain
+  - thisisit
 servers:
   creative:
     address: 17.44.24.234:25601
     motd: ""
     restricted: false
   crowdcontrol:
-    address: 172.18.0.1:25606
+    address: 172.18.0.1
     motd: ""
     restricted: false
