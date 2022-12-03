@@ -2,45 +2,45 @@ custom-motd:
   motd:
     enabled: true
     motds:
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-                            &cGives you wings
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-                  &cMay contain traces of feathers!
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-                &cMay contain traces of bird seeds!
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-          &bThere are &a6 &bbirds for every human on &aearth
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-      &bThere are &a+11.000 &bbird species, which one are you?
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-      &eJoin our &9Discord &etoday! &8- &adiscord.theflyingbirds.net
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-      &eAwesome ranks available at &8- &ashop.theflyingbirds.net
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-      &eYou are awesome, dont let others tell you otherwise!
-    - |-
-      &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.18.X
-      &r          &eSome day is not a day of the week.
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+                              &cGives you wings
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+                    &cMay contain traces of feathers!
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+                  &cMay contain traces of bird seeds!
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+            &bThere are &a6 &bbirds for every human on &aearth
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+        &bThere are &a+11.000 &bbird species, which one are you?
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+        &eJoin our &9Discord &etoday! &8- &adiscord.theflyingbirds.net
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+        &eAwesome ranks available at &8- &ashop.theflyingbirds.net
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+        &eYou are awesome, dont let others tell you otherwise!
+      - |-
+        &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
+        &r          &eSome day is not a day of the week.
   sample:
     enabled: true
     samples:
-    - |-
-      &r        &4T&1F&2B &8- &4The &1Flying &2Birds
+      - |-
+        &r        &4T&1F&2B &8- &4The &1Flying &2Birds
 
-      &eStore&7:&a shop.theflyingbirds.net
-      &eDiscord&7:&a discord.theflyingbirds.net
-      &eStats&7:&a stats.theflyingbirds.net
+        &eStore&7:&a shop.theflyingbirds.net
+        &eDiscord&7:&a discord.theflyingbirds.net
+        &eStats&7:&a stats.theflyingbirds.net
   protocol:
     enabled: false
-    name: FlameCord 1.7-1.18
+    name: FlameCord 1.7-1.19
   maxplayers:
     enabled: false
     amount: 1000
@@ -60,16 +60,16 @@ antibot:
     enabled: true
     firewall: true
     blacklist:
-    - CN
-    - HK
-    - RU
-    - IN
-    - TH
-    - ID
-    - DZ
-    - VN
-    - IR
-    - PK
+      - CN
+      - HK
+      - RU
+      - IN
+      - TH
+      - ID
+      - DZ
+      - VN
+      - IR
+      - PK
     log: true
   fastchat:
     enabled: true
@@ -82,20 +82,20 @@ antibot:
     time: 60
     log: true
     exceptions:
-    - BadPacketException
-    - QuietException
-    - IllegalStateConfig
-    - FastException
+      - BadPacketException
+      - QuietException
+      - IllegalStateConfig
+      - FastException
   nickname:
     enabled: true
     firewall: true
     blacklist:
-    - mcstorm
-    - mcdown
-    - mcbot
-    - theresa_bot
-    - dropbot
-    - kingbot
+      - mcstorm
+      - mcdown
+      - mcbot
+      - theresa_bot
+      - dropbot
+      - kingbot
     log: true
   password:
     enabled: true
