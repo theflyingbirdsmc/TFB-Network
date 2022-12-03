@@ -43,10 +43,10 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - thisshouldbeherehehehehe
+  - herewegoagain
 servers:
   creative:
-    address: 1723.4234.234.234:25601
+    address: 17.44.24.234:25601
     motd: ""
     restricted: false
   crowdcontrol:
