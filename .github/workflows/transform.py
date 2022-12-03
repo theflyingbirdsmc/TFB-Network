@@ -7,5 +7,5 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
     live_values = yaml.load(f, Loader=yaml.FullLoader)
 
 print("live values: ", live_values)
-for k, v in live_values:
-    print(k, "->", v)
+for element in live_values:
+    print(element)
