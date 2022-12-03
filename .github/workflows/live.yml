@@ -48,10 +48,11 @@ jobs:
 
       - uses: fjogeleit/yaml-update-action@main
         with:
-          valueFile: "./TFB-Flamecord/config.yml"
+          valueFile: "TFB-Flamecord/config.yml"
           description: Test GitHub Action
           message: "Update file"
           title: "Version Updates "
+          updateFile: true
           changes: |
             {
               "steps.live_values.outputs.data": "${{ steps.read-file.outputs.data }}"
