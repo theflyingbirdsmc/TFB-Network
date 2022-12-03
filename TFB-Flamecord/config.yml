@@ -43,7 +43,7 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - thisshouldnotbehere2
+  - thisshouldbeherehehehehe
 servers:
   creative:
     address: 1723.4234.234.234:25601
@@ -51,29 +51,5 @@ servers:
     restricted: false
   crowdcontrol:
     address: 172.18.0.1:25606
-    motd: ""
-    restricted: false
-  factions:
-    address: 172.18.0.1:25603
-    motd: ""
-    restricted: false
-  kitpvp:
-    address: 172.18.0.1:25607
-    motd: ""
-    restricted: false
-  lobby:
-    address: 172.18.0.1:25600
-    motd: ""
-    restricted: false
-  museum:
-    address: 172.18.0.1:25605
-    motd: ""
-    restricted: false
-  parkour:
-    address: 172.18.0.1:25604
-    motd: ""
-    restricted: false
-  vanilladk:
-    address: 172.18.0.1:25700
     motd: ""
     restricted: false
