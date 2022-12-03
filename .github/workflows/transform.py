@@ -10,7 +10,8 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 
 for element in live_values:
   if file_path in element:
-    print(element[file_path])
+    for v in element:
+        print(v)
 
 
 print("File path:", file_path)
