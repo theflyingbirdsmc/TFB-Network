@@ -8,4 +8,4 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 
 print("live values: ", live_values)
 if file_path in live_values:
-    print(live_values[file_path])
+    print(live_values[file_path][0])
