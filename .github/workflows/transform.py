@@ -10,7 +10,5 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 print(live_values)
 for element in live_values:
   if file_path in element:
-    print(element)
-
-
-print("File path:", file_path)
+    print(element[0]) 
+    print(element[0][0])
