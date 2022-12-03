@@ -17,6 +17,8 @@ on:
 jobs:
   getChangedFiles:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.changed-files.outputs.all_changed_files }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -24,8 +26,7 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v34
-        outputs:
-          matrix: ${{ steps.changed-files.outputs.all_changed_files }}
+
   # This workflow contains a single job called "transform"
   transform:
     needs: getChangedFiles
