@@ -1,14 +1,12 @@
 import os
-import ruamel.yaml
+import yaml
 
 file_path = os.environ['FILE_PATH']
-yaml = ruamel.yaml.YAML()
-yaml.preserve_quotes = True
 
-with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as fp:
-    live_values = yaml.load(fp)
+with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as f:
+    live_values = yaml.load_all(f,Loader=yaml.FullLoader)
+
 print("live values: ", live_values)
-for element in live_values:
-  if file_path in element:
-    print("1: ", element[1]) 
-    print("2: ", element[1][0])
+for doc in live_values:
+    for k, v in doc.items():
+        print(k, "->", v)
