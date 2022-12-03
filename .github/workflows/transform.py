@@ -7,5 +7,5 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
     live_values = yaml.load(f, Loader=yaml.FullLoader)
 
 print("live values: ", live_values)
-for element in live_values:
-    print(element)
+if file_path in live_values:
+    print(live_values[file_path])
