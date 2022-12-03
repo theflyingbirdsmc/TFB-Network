@@ -38,8 +38,9 @@ jobs:
 
       - name: List all changed files
         run: |
-          ls -al
-
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            FILE_PATH=$file python .git/workflows/transform.py
+          done
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v3
       #   with:
