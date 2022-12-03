@@ -34,6 +34,7 @@ jobs:
         uses: tj-actions/changed-files@v34
       - name: Checkout and run python
         uses: actions/checkout@v3
+      - name: Run python pls
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             python3 transform.py
