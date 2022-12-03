@@ -55,5 +55,5 @@ jobs:
           updateFile: true
           changes: |
             {
-              "servers": "${{ steps.read-file.outputs.data }}"
+              "servers": ${{ steps.read-file.outputs.data }}
             }
