@@ -22,9 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v14.6
+        uses: tj-actions/changed-files@v34
 
       - name: List all changed files
         run: |
