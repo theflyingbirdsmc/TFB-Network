@@ -7,7 +7,7 @@ listeners:
       pvp.md-5.net: pvp
     host: 0.0.0.0:25565
     max_players: 2022
-    motd: ''
+    motd: ""
     ping_passthrough: false
     priorities:
       - lobby
@@ -45,35 +45,31 @@ forge_support: false
 disabled_commands:
   - thisisit2
 servers:
-  creative:
-    address: 172.18.0.1:25601
-    motd: ''
-    restricted: false
   crowdcontrol:
     address: 172.18.0.1:25606
-    motd: ''
+    motd: ""
     restricted: false
   factions:
     address: 172.18.0.1:25603
-    motd: ''
+    motd: ""
     restricted: false
   kitpvp:
     address: 172.18.0.1:25607
-    motd: ''
+    motd: ""
     restricted: false
   lobby:
     address: 172.18.0.1:25600
-    motd: ''
+    motd: ""
     restricted: false
   museum:
     address: 172.18.0.1:25605
-    motd: ''
+    motd: ""
     restricted: false
   parkour:
     address: 172.18.0.1:25604
-    motd: ''
+    motd: ""
     restricted: false
   vanilladk:
     address: 172.18.0.1:25700
-    motd: ''
+    motd: ""
     restricted: false
