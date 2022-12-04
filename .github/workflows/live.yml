@@ -60,8 +60,4 @@ jobs:
           title: "Version Updates"
           branch: dev
           changes: |
-            {
-              "TFB-Flamecord/config.yml": {
-                "servers": ${{ steps.read-file.outputs.data}}
-                },
-            }
+            ${{ needs.getvalues.outputs.values }}
