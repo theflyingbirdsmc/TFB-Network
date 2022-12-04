@@ -18,6 +18,7 @@ for file in file_path:
             yamlFileFromLive = yaml.unsafe_load(f)
         output[file] = yamlFileFromLive[live_values[file]]
 
-json_object = json.dumps(output, indent=4)
+json_object = json.dumps(output)
+
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={json_object}', file=fh)
+    print(f'{name}={str(json_object)}', file=fh)
