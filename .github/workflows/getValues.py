@@ -1,5 +1,6 @@
 import os
 import yaml
+import json
 
 file_path = os.environ['FILE_PATHS'].split(" ")
 print(file_path)
@@ -17,5 +18,6 @@ for file in file_path:
             yamlFileFromLive = yaml.unsafe_load(f)
         output[file] = yamlFileFromLive[live_values[file]]
 
+json_object = json.dumps(output, indent=4)
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={output}', file=fh)
+    print(f'{name}={json_object}', file=fh)
