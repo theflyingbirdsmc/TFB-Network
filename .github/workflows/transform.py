@@ -13,4 +13,4 @@ if file_path in live_values:
         yamlFileFromLive = yaml.load(f, Loader=yaml.FullLoader)
     for value in live_values[file_path]:
         
-    print(live_values[file_path][0])
+        print(live_values[file_path][0])
