@@ -46,7 +46,7 @@ disabled_commands:
   - thisshoulddoit
 servers:
   crowdcontrol:
-    address: 172.18.0.1:25606
+    address: 3333333333.18.0.1:25606
     motd: ""
     restricted: false
   factions:
