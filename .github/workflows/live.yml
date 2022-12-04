@@ -37,10 +37,11 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v34
 
-      - name: Get changed file's values from Live
+      - name: Checkout to Live
         uses: actions/checkout@v3
         with:
           ref: live
+      - name: Get file's values from Live
         id: values
         run: |
           FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/getValues.py
