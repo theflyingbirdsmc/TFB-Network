@@ -39,7 +39,7 @@ jobs:
       - name: List all changed files
         id: result
         run: |
-          FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/transform.py
+          FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/getValues.py
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v3
       #   with:
