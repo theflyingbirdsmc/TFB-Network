@@ -15,7 +15,7 @@ for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
             yamlFileFromLive = yaml.safe_load(f)
-        output[file, live_values[file]] = yamlFileFromLive[live_values[file]]
+        output[file + live_values[file]] = yamlFileFromLive[live_values[file]]
 
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
