@@ -69,5 +69,7 @@ jobs:
 
       - name: Transform files with values from Live
         id: transform
+        env:
+          LIVE_VALUES: ${{ needs.getvalues.outputs.values }}
         run: |
-          LIVE_VALUES='${{ needs.getvalues.outputs.values }}' python .github/workflows/transform.py
+          python .github/workflows/transform.py
