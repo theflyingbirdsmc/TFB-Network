@@ -27,12 +27,14 @@ jobs:
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
       - name: Install Python dependencies
         run: python -m pip install --upgrade pip pyyaml
+
       - name: Get changed files from Dev
         id: changed-files
         uses: tj-actions/changed-files@v34
@@ -41,6 +43,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: live
+
       - name: Get file's values from Live
         id: values
         run: |
@@ -52,12 +55,19 @@ jobs:
       - name: Checkout to dev repo
         uses: actions/checkout@v3
       - run: echo ${{ needs.getvalues.outputs.values }}
-      - uses: fjogeleit/yaml-update-action@main
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          valueFile: "TFB-Flamecord/config.yml"
-          description: Test GitHub Action
-          message: "Transformed file"
-          title: "Version Updates"
-          branch: dev
-          changes: |
-            ${{ needs.getvalues.outputs.values }}
+          python-version: "3.10"
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip ruamel.yaml
+
+      - name: Checkout to Dev
+        uses: actions/checkout@v3
+
+      - name: Transform files with values from Live
+        id: transform
+        run: |
+          LIVE_VALUES='${{ needs.getvalues.outputs.values }}' python .github/workflows/transform.py
