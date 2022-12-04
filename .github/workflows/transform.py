@@ -13,5 +13,5 @@ for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file) as f:
             yamlFileFromLive = yaml.load(f, Loader=yaml.FullLoader)
-        print(live_values[file_path])
+        print(live_values[file])
         # for value in live_values[file_path]
