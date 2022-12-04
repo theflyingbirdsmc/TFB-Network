@@ -15,4 +15,4 @@ for file in file_path:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
             yamlFileFromLive = yaml.unsafe_load(f)
         output[file] = yamlFileFromLive[live_values[file]]
-print("f{getvalues_result}={output} >> $GITHUB_OUTPUT")
+print(output)
