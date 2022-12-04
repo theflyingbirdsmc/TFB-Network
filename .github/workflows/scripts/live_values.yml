@@ -1,2 +1,2 @@
-TFB-Flamecord/config.yml:
-  - servers
+TFB-Flamecord/config.yml: servers
+TFB-Creative/plugins/Plan/config.yml: Database
