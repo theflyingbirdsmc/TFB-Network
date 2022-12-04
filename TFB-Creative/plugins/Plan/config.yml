@@ -42,8 +42,8 @@ Database:
 Webserver:
     Port: 8804
     Alternative_IP: false
-        # %port% is replaced automatically with Webserver.Port
-        Address: stats.theflyingbirds.net:%port%
+      # %port% is replaced automatically with Webserver.Port
+      Address: stats.theflyingbirds.net:%port%
     # InternalIP usually does not need to be changed, only change it if you know what you're doing!
     # 0.0.0.0 allocates Internal (local) IP automatically for the WebServer.
     Internal_IP: 65.108.8.46
