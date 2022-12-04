@@ -1,7 +1,7 @@
 import os
 import yaml
 
-file_path = os.environ['FILE_PATH']
+file_path = os.environ['FILE_PATHS']
 print(file_path)
 
 with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as f:
