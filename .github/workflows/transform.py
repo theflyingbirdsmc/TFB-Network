@@ -1,7 +1,7 @@
 import os
 import ruamel.yaml
 
-live_values = os.environ['LIVE_VALUES']
+live_values = os.environ.get('LIVE_VALUES')
 print(type(live_values))
 print(live_values)
 
