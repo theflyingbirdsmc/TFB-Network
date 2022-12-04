@@ -8,10 +8,12 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
     live_values = yaml.load(f, Loader=yaml.FullLoader)
 
 print("live values: ", live_values)
+output = {}
 
 for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
             yamlFileFromLive = yaml.unsafe_load(f)
-        print(yamlFileFromLive[live_values[file]])
+        output[file] = yamlFileFromLive[live_values[file]]
+        print(output)
         # for value in live_values[file_path]

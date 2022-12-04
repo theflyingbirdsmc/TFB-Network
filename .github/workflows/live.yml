@@ -37,6 +37,7 @@ jobs:
         uses: tj-actions/changed-files@v34
 
       - name: List all changed files
+        id: result
         run: |
           FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/transform.py
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
