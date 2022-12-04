@@ -25,7 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref }}
           fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -45,39 +44,19 @@ jobs:
     runs-on: ubuntu-latest
     needs: getvalues
     steps:
+      - name: Checkout to dev repo
+        uses: actions/checkout@v3
       - run: echo ${{ needs.getvalues.outputs.values }}
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v3
-      #   with:
-      #     ref: live
-      # - name: Run read-yaml action
-      #   id: live_values
-      #   uses: jbutcher5/read-yaml@main # You may wish to replace main with a version tag such as '1.6' etc.
-      #   with:
-      #     file: "./.github/workflows/scripts/live_values.yml" # File to read from
-      #     key-path: '["TFB-Flamecord/config.yml"]' # Access the runs key then the using key and retuns the value.
-      # - name: Display read-yaml output
-      #   run: echo "${{ steps.live_values.outputs.data }}"
-
-      # - name: Read values in file on live
-      #   id: read-file
-      #   uses: jbutcher5/read-yaml@main # You may wish to replace main with a version tag such as '1.6' etc.
-      #   with:
-      #     file: "./TFB-Flamecord/config.yml" # File to read from
-      #     key-path: "${{ steps.live_values.outputs.data }}" # Access the runs key then the using key and retuns the value.
-      # - name: Display read-file output
-      #   run: echo "${{ steps.read-file.outputs.data }}"
-
-      # - uses: actions/checkout@v3
-
-      # - uses: fjogeleit/yaml-update-action@main
-      #   with:
-      #     valueFile: "TFB-Flamecord/config.yml"
-      #     description: Test GitHub Action
-      #     message: "Transformed file"
-      #     title: "Version Updates"
-      #     branch: dev
-      #     changes: |
-      #       {
-      #         "TFB-Flamecord/config.yml": {"servers":${{ steps.read-file.outputs.data}}}
-      #       }
+      - uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: "TFB-Flamecord/config.yml"
+          description: Test GitHub Action
+          message: "Transformed file"
+          title: "Version Updates"
+          branch: dev
+          changes: |
+            {
+              "TFB-Flamecord/config.yml": {
+                "servers": ${{ steps.read-file.outputs.data}}
+                },
+            }
