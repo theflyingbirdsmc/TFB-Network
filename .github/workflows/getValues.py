@@ -9,10 +9,13 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 
 print("live values: ", live_values)
 output = {}
+name = 'getvalues_result'
 
 for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
             yamlFileFromLive = yaml.unsafe_load(f)
         output[file] = yamlFileFromLive[live_values[file]]
-print(output)
+
+with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+    print(f'{name}={output}', file=fh)
