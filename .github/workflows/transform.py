@@ -16,8 +16,12 @@ for key, value in live_values:
     if key.startswith("TFB-"):
         with open('/home/runner/work/TFB-Network/TFB-Network/' + key, 'r') as f:
             yamlFileFromDev = yaml.load(f)
-        if 
-
+        for elem in yamlFileFromDev:
+            if elem == value:
+                elem[value] = value[0]
+                output = yaml.dump(yamlFileFromDev)
+                yaml.dump(yamlFileFromDev)
+                break 
 name = 'getvalues_result'
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
