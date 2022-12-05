@@ -12,9 +12,9 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 
 output = {}
 
-for key, value in live_values:
-    if key.startswith("TFB-"):
-        with open('/home/runner/work/TFB-Network/TFB-Network/' + key, 'r') as f:
+for value in live_values:
+    if value.startswith("TFB-"):
+        with open('/home/runner/work/TFB-Network/TFB-Network/' + value, 'r') as f:
             yamlFileFromDev = yaml.load(f)
         for elem in yamlFileFromDev:
             if elem == value:
