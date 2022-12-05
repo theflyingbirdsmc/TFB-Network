@@ -43,7 +43,7 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - thisshoulddoit
+  - justachange
 servers:
   crowdcontrol:
     address: 432w5.18.0.1:25606
