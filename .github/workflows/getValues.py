@@ -6,7 +6,7 @@ file_path = os.environ['FILE_PATHS'].split(" ")
 print(file_path)
 
 with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as fp:
-    live_values = ruamel.yaml.load(fp)
+    live_values = ruamel.yaml.safe_load(fp)
 
 print("live values: ", live_values)
 output = {}
