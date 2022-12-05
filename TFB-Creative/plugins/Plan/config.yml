@@ -27,7 +27,7 @@ Plugin:
 Database:
   Type: SQLite
   MySQL:
-    Host: lmaoo
+    Host: lmao
     Port: 3306
     User: root
     Password: minecraft
