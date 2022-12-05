@@ -1,12 +1,20 @@
 import os
-import ruamel.yaml
-import json
+import yaml
+import re
 
 file_path = os.environ['FILE_PATHS'].split(" ")
 print(file_path)
 
-with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as fp:
-    live_values = ruamel.yaml.safe_load(fp)
+# remove resolver entries for On/Off/Yes/No
+for ch in "OoYyNn":
+    if len(Resolver.yaml_implicit_resolvers[ch]) == 1:
+        del Resolver.yaml_implicit_resolvers[ch]
+    else:
+        Resolver.yaml_implicit_resolvers[ch] = [x for x in
+                Resolver.yaml_implicit_resolvers[ch] if x[0] != 'tag:yaml.org,2002:bool']
+
+with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as f:
+    live_values = yaml.load(f, Loader=yaml.FullLoader)
 
 print("live values: ", live_values)
 output = {}
@@ -15,13 +23,10 @@ name = 'getvalues_result'
 
 for file in file_path:
     if file in live_values:
-        with open('/home/runner/work/TFB-Network/TFB-Network/' + file) as fp:
-            yamlFileFromLive = ruamel.yaml.round_trip_load(fp)
-            print(type(yamlFileFromLive))
+        with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
+            yamlFileFromLive = yaml.load(f, Loader=yaml.FullLoader)
         result[live_values[file]] = yamlFileFromLive[live_values[file]]
         output[file] = result
-        result = {}
 
-finalResult = ruamel.yaml.round_trip_dump(output)
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
