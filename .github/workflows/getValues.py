@@ -1,5 +1,6 @@
 import os
 import yaml
+import json
 
 file_path = os.environ['FILE_PATHS'].split(" ")
 print(file_path)
@@ -20,5 +21,6 @@ for file in file_path:
         output[file] = result
         result = {}
 
+print("OUTPUT: " + str(output))
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={output}', file=fh)
+    print(f'{name}={str(output)}', file=fh)
