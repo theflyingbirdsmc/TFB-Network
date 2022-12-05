@@ -9,6 +9,7 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
 
 print("live values: ", live_values)
 output = {}
+result = {}
 name = 'getvalues_result'
 
 for file in file_path:
