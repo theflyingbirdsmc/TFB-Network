@@ -8,7 +8,7 @@ live_values = os.environ.get('LIVE_VALUES')
 print("live values: ", live_values)
 
 with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as f:
-    live_values = yaml.load(f, Loader=yaml.FullLoader)
+    live_values = yaml.load(f)
 
 output = {}
 
