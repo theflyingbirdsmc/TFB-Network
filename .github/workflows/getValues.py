@@ -29,6 +29,7 @@ for file in file_path:
             print(yamlFileFromLive)
         result[live_values[file]] = yamlFileFromLive[live_values[file]]
         output[file] = result
+        result= {}
 
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
