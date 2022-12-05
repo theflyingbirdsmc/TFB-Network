@@ -1,4 +1,5 @@
 import os
+from yaml.resolver import Resolver
 import yaml
 
 file_path = os.environ['FILE_PATHS'].split(" ")

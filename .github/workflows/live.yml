@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.10"
       - name: Install Python dependencies
-        run: python -m pip install --upgrade pip pyyaml re
+        run: python -m pip install --upgrade pip pyyaml regex
 
       - name: Get changed files from Dev
         id: changed-files
