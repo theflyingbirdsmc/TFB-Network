@@ -14,15 +14,14 @@ output = {}
 
 for value in live_values:
     if value.startswith("TFB-"):
-        with open('/home/runner/work/TFB-Network/TFB-Network/' + value, 'w') as f:
+        with open('/home/runner/work/TFB-Network/TFB-Network/' + value) as f:
             yamlFileFromDev = yaml.load(f)
         for elem in yamlFileFromDev:
+            print(str(elem), str(value))
             if elem == value:
-                elem[value] = value[0]
-                output = yaml.dump(yamlFileFromDev)
-                print(output)
+                print("FOUND IT!")
                 # yaml.dump(yamlFileFromDev)
-                break 
+                break
 name = 'getvalues_result'
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
