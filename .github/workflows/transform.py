@@ -17,7 +17,7 @@ for value in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + value) as f:
             yamlFileFromDev = yaml.load(f)
         for elem in yamlFileFromDev:
-            print(str(elem), str(value))
+            print(str(elem), str(live_values[value]))
             if elem == value:
                 print("FOUND IT!")
                 # yaml.dump(yamlFileFromDev)
