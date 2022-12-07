@@ -27,7 +27,7 @@ Plugin:
 Database:
   Type: SQLite
   MySQL:
-    Host: wfewef
+    Host: FIND THEM!!!
     Port: 3306
     User: root
     Password: minecraft
