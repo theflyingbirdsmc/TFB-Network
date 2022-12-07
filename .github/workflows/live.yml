@@ -73,3 +73,6 @@ jobs:
           LIVE_VALUES: ${{ needs.getvalues.outputs.values }}
         run: |
           python .github/workflows/transform.py
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git status
