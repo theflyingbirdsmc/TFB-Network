@@ -9,11 +9,12 @@ print("live values: ", live_values)
 
 
 for live_value in live_values:
-    if value.startswith("TFB-"):
-        # Load the YAML file into a dictionary
+    if live_value.startswith("TFB-"):
+
+    # Load the YAML file into a dictionary
         with open('/home/runner/work/TFB-Network/TFB-Network/' + live_value, "r") as file:
             yamlFileFromDev = YAML()
-        # Replace the keys in the dictionary with the dictionaries in the replacements
+    # Replace the keys in the dictionary with the dictionaries in the replacements
         for key, value in yamlFileFromDev.items():
             print("Key: " + str(key) + "value: " + str(value))
         # yamlFileFromDev[key] = value
