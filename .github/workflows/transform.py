@@ -55,6 +55,4 @@ for live_value in live_values:
 #                 print("FOUND IT!")
 #                 # yaml.dump(yamlFileFromDev)
 #                 break
-name = 'getvalues_result'
-with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={output}', file=fh)
+
