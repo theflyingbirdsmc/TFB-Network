@@ -8,24 +8,25 @@ print("live values: ", live_values)
 #     live_values = yaml.load(f)
 
 
-for live_key, live_value in live_values.items():
+for live_value in live_values:
     # Load the YAML file into a dictionary
-    with open('/home/runner/work/TFB-Network/TFB-Network/' + live_key, "r") as file:
+    with open('/home/runner/work/TFB-Network/TFB-Network/' + value, "r") as file:
         yamlFileFromDev = YAML()
     # Replace the keys in the dictionary with the dictionaries in the replacements
     for key, value in yamlFileFromDev.items():
-        yamlFileFromDev[live_key] = live_value
+        print("Key: " + str(key) + "value: " + str(value))
+        # yamlFileFromDev[key] = value
+    # with open("/home/runner/work/TFB-Network/TFB-Network/" + live_key, "w") as file:
+    #     yaml.dump(yamlFileFromDev, file)
 
-    # Save the updated dictionary to the YAML file
-    with open("/home/runner/work/TFB-Network/TFB-Network/" + live_key, "w") as file:
-        yaml.dump(yamlFileFromDev, file)
-
-name = 'getvalues_result'
-with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={yamlFileFromDev}', file=fh)
-
+# name = 'getvalues_result'
+# with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+#     print(f'{name}={yamlFileFromDev}', file=fh)
 
 
+# Save the updated dictionary to the YAML file
+# with open("data.yaml", "w") as file:
+#   yaml.dump(data, file)
 
 
 
@@ -52,4 +53,6 @@ with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
 #                 print("FOUND IT!")
 #                 # yaml.dump(yamlFileFromDev)
 #                 break
-
+name = 'getvalues_result'
+with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+    print(f'{name}={output}', file=fh)
