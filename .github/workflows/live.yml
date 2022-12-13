@@ -69,4 +69,4 @@ jobs:
 
       - name: Transform files with values from Live
         id: transform
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
