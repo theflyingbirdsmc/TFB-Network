@@ -27,9 +27,9 @@ Plugin:
 Database:
   Type: SQLite
   MySQL:
-    Host: FIND THEM!!!
+    Host: 123.543.435
     Port: 3306
-    User: root
+    User: IShouldNotBeHere
     Password: minecraft
     Database: Plan
     # Launch options to append after mysql driver address
