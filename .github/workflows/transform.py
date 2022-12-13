@@ -1,6 +1,7 @@
 import os
 from ruamel.yaml import YAML
 
+yaml = YAML()
 live_values = os.environ.get('LIVE_VALUES')
 print("live values: ", live_values)
 
@@ -10,12 +11,8 @@ print("live values: ", live_values)
 
 for live_value in live_values:
     if live_value.startswith("TFB-"):
-
-    # Load the YAML file into a dictionary
-        with open('/home/runner/work/TFB-Network/TFB-Network/' + live_value, "r") as file:
-            yamlFileFromDev = yaml.load(file)
-    # Replace the keys in the dictionary with the dictionaries in the replacements
-        for key, value in yamlFileFromDev.items():
+        # Replace the keys in the dictionary with the dictionaries in the replacements
+        for key, value in yaml.load(open('/home/runner/work/TFB-Network/TFB-Network/' + live_value)).items():
             print("Key: " + str(key) + "value: " + str(value))
         # yamlFileFromDev[key] = value
     # with open("/home/runner/work/TFB-Network/TFB-Network/" + live_key, "w") as file:
