@@ -18,7 +18,7 @@ for value in live_values:
             yamlFileFromDev = yaml.load(f)
         for elem in yamlFileFromDev:
             print(str(elem), str(live_values[value]))
-            if elem == value:
+            if str(elem) == str(live_values[value]):
                 print("FOUND IT!")
                 # yaml.dump(yamlFileFromDev)
                 break
