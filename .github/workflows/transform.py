@@ -19,7 +19,7 @@ for value in live_values:
         for elem in yamlFileFromDev:
             replacementFromLive = live_values.get(elem)
             # print(str(elem), str(live_values[value]))
-            if str(elem) == str(live_values[value]):
+            if elem == live_values[value]:
                 # print("FOUND IT!")
                 print(replacementFromLive)
                 # yamlFileFromDev[elem] = live_values[value]
