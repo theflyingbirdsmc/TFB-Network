@@ -10,6 +10,7 @@ print("live values: ", live_values)
 
 
 for live_value in live_values:
+    print(str(live_value))
     if live_value.startswith("TFB-"):
         # Replace the keys in the dictionary with the dictionaries in the replacements
         for key, value in yaml.load(open('/home/runner/work/TFB-Network/TFB-Network/' + live_value)).items():
