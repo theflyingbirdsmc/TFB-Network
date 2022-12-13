@@ -17,10 +17,12 @@ for value in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + value) as f:
             yamlFileFromDev = yaml.load(f)
         for elem in yamlFileFromDev:
-            print(str(elem), str(live_values[value]))
+            replacementFromLive = live_values.get(elem)
+            # print(str(elem), str(live_values[value]))
             if str(elem) == str(live_values[value]):
-                print("FOUND IT!")
-                yamlFileFromDev[elem] = live_values[value]
+                # print("FOUND IT!")
+                print(replacementFromLive)
+                # yamlFileFromDev[elem] = live_values[value]
                 # yaml.dump(yamlFileFromDev)
                 break
         # Save the updated dictionary to the YAML file
