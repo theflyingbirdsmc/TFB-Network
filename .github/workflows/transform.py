@@ -9,15 +9,16 @@ print("live values: ", live_values)
 #     live_values = yaml.load(f)
 
 
-for live_value in live_values:
-    print(str(live_values[live_value]))
-    if live_value.startswith("TFB-"):
-        # Replace the keys in the dictionary with the dictionaries in the replacements
-        for key, value in yaml.load(open('/home/runner/work/TFB-Network/TFB-Network/' + live_value)).items():
-            print("Key: " + str(key) + "value: " + str(value))
-        # yamlFileFromDev[key] = value
-    # with open("/home/runner/work/TFB-Network/TFB-Network/" + live_key, "w") as file:
-    #     yaml.dump(yamlFileFromDev, file)
+for value in live_values:
+    if value.startswith("TFB-"):
+        with open('/home/runner/work/TFB-Network/TFB-Network/' + value) as f:
+            yamlFileFromDev = yaml.load(f)
+        for elem in yamlFileFromDev:
+            print(str(elem), str(live_values[value]))
+            if elem == live_values[value]:
+                print("FOUND IT!")
+                # yaml.dump(yamlFileFromDev)
+                break
 
 # name = 'getvalues_result'
 # with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
