@@ -69,7 +69,11 @@ jobs:
 
       - name: Transform files with values from Live
         id: transform
-
+        env:
+          LIVE_VALUES: ${{ needs.getvalues.outputs.values }}
+        run: |
+          python .github/workflows/transform.py
+          
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Apply Live values
+          commit_message: Apply php-cs-fixer changes
