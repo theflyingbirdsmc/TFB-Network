@@ -29,7 +29,7 @@ Database:
   MySQL:
     Host: 123.543.435
     Port: 3306
-    User: IShouldNotBeHere
+    User: and then it works lmao
     Password: minecraft
     Database: Plan
     # Launch options to append after mysql driver address
