@@ -46,6 +46,6 @@ disabled_commands:
   - gg
 servers:
   crowdcontrol:
-    address: 4325.18.0.1:25606
+    address: 435.18.0.1:25606
     motd: ""
     restricted: false
