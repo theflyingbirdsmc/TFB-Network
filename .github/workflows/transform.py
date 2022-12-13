@@ -30,29 +30,3 @@ for value in live_values:
 name = 'getvalues_result'
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
-
-
-# Load the YAML file into a dictionary
-with open("data.yaml", "r") as file:
-  yaml = YAML()
-  data = yaml.load(file)
-
-# Define the dictionary to replace the keys
-replacements = {
-  "key1": {
-    "subkey1": "value1",
-    "subkey2": "value2"
-  },
-  "key2": {
-    "subkey1": "value3",
-    "subkey2": "value4"
-  }
-}
-
-# Replace the keys in the dictionary with the dictionaries in the replacements
-for key, value in replacements.items():
-  data[key] = value
-
-# Save the updated dictionary to the YAML file
-with open("data.yaml", "w") as file:
-  yaml.dump(data, file)
