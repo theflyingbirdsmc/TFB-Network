@@ -27,18 +27,13 @@ Plugin:
 Database:
   Type: SQLite
   MySQL:
-    Host: 123.543.435
-    Port: 3306
-    User: plsss
+    Host: localhost
+    Port: '3306'
+    User: root
     Password: minecraft
     Database: Plan
-    # Launch options to append after mysql driver address
-    Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
-    Max_connections: 8
-# -----------------------------------------------------
-# More information about SSL Certificate Settings:
-# https://github.com/plan-player-analytics/Plan/wiki/SSL-Certificate-%28HTTPS%29-Set-Up
-# -----------------------------------------------------
+    Launch_options: ?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC
+    Max_connections: '8'
 Webserver:
   Port: 8804
   Alternative_IP:
@@ -82,8 +77,8 @@ Webserver:
     IP_whitelist:
       Enabled: false
       Whitelist:
-        - "192.168.0.0"
-        - "0:0:0:0:0:0:0:1"
+      - "192.168.0.0"
+      - "0:0:0:0:0:0:0:1"
     # Does not affect existing cookies
     Cookies_expire_after:
       Time: 2
@@ -218,7 +213,7 @@ World_aliases:
     world: world
   # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
   Regex:
-    - "Alias for world:^abc$"
+  - "Alias for world:^abc$"
 # -----------------------------------------------------
 # These settings will make Plan write .js, .css, .json and .html files to some location on disk.
 # Relative path will render to /plugins/Plan/path
@@ -252,10 +247,10 @@ Plugins:
     Secret: "-"
   Factions:
     HideFactions:
-      - ExampleFaction
+    - ExampleFaction
   Towny:
     HideTowns:
-      - ExampleTown
+    - ExampleTown
 Customized_files:
   Path: "web"
   # Web dev mode enables all customized files and disables webserver resource cache for instant changes on browser refresh.
