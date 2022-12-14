@@ -32,7 +32,7 @@ for file_path, file_data in input_data.items():
             config_data[key] = value
 
     # # Save the updated file
-    with open("/home/runner/work/TFB-Network/TFB-Network/" + file_path, "r") as file:
+    with open("/home/runner/work/TFB-Network/TFB-Network/" + file_path, "w") as file:
     # with open("C:/Users/simon/Documents/Projects/TFB-Network/" + file_path, "w") as file:
         yaml.dump(config_data, file)
 
