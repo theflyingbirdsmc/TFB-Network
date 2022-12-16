@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: Checkout to dev repo
         uses: actions/checkout@v3
-      - run: echo ${{ needs.getvalues.outputs.values }}
+      # - run: echo ${{ needs.getvalues.outputs.values }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
