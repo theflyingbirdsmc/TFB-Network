@@ -8,7 +8,7 @@ yaml.preserve_quotes = False
 
 root_path = "/home/runner/work/TFB-Network/TFB-Network/"
 # root_path = "E:/The Flying Birds/TFB-Dev/TFB-Network/"
-input_data = ast.literal_eval(os.environ.get('LIVE_VALUES'))
+input_data = os.environ.get('LIVE_VALUES')
 # input_data = {'TFB-Creative/plugins/Plan/config.yml': {'Database': {'Type': 'SQLite', 'MySQL': {'Host': 'localhost', 'Port': '3306', 'User': 'root', 'Password': 'minecraft', 'Database': 'Plan', 'Launch_options': '?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC', 'Max_connections': '8'}}}, 'TFB-Flamecord/config.yml': {'servers': {'crowdcontrol': {'address': '3333333333.18.0.1:25606', 'motd': '', 'restricted': 'false'}, 'factions': {'address': '172.18.0.1:25603', 'motd': '', 'restricted': 'false'}, 'kitpvp': {'address': '172.18.0.1:25607', 'motd': '', 'restricted': 'false'}, 'lobby': {'address': '172.18.0.1:25600', 'motd': '', 'restricted': 'false'}, 'museum': {'address': '172.18.0.1:25605', 'motd': '', 'restricted': 'false'}, 'parkour': {'address': '172.18.0.1:25604', 'motd': '', 'restricted': 'false'}, 'vanilladk': {'address': '172.18.0.1:25700', 'motd': '', 'restricted': 'false'}}}}
 print("live values: ", type(input_data))
 
