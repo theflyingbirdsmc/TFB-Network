@@ -1,6 +1,7 @@
 import os
 import yaml
 from yaml.resolver import Resolver
+from collections import OrderedDict
 import re
 
 file_path = os.environ['FILE_PATHS'].split(" ")
@@ -18,8 +19,8 @@ with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/l
     live_values = yaml.load(f, Loader=yaml.FullLoader)
 
 # print("live values: ", live_values)
-output = {}
-result = {}
+output = OrderedDict()
+result = OrderedDict()
 name = 'getvalues_result'
 
 for file in file_path:
