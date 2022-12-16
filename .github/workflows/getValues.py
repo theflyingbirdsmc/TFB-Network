@@ -1,9 +1,9 @@
 import os
-import yaml
-from yaml.resolver import Resolver
+import ruamel.yaml
 from collections import OrderedDict
-import re
 
+yaml = ruamel.yaml.YAML()
+yaml.preserve_quotes = False
 file_path = os.environ['FILE_PATHS'].split(" ")
 print(file_path)
 
@@ -14,9 +14,8 @@ print(file_path)
 #     else:
 #         Resolver.yaml_implicit_resolvers[ch] = [x for x in
 #                 Resolver.yaml_implicit_resolvers[ch] if x[0] != 'tag:yaml.org,2002:bool']
-
-with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml') as f:
-    live_values = yaml.load(f, Loader=yaml.BaseLoader)
+with open('/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml', "r") as file:
+    live_values = yaml.load(file)
 
 # print("live values: ", live_values)
 output = OrderedDict()
@@ -26,7 +25,7 @@ name = 'getvalues_result'
 for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
-            yamlFileFromLive = yaml.load(f, Loader=yaml.BaseLoader)
+            yamlFileFromLive = yaml.load(f)
             print(yamlFileFromLive)
         result[live_values[file]] = yamlFileFromLive[live_values[file]]
         output[file] = result
