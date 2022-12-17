@@ -48,13 +48,13 @@ jobs:
         id: values
         run: |
           FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/getValues.py
-          tree -f
+          tree -f .github/workflows/
 
       - name: Archive live values
         uses: actions/upload-artifact@v3
         with:
           name: live-values
-          path: livevalues.yml
+          path: .github/workflows/livevalues.yml
   transform:
     runs-on: ubuntu-latest
     needs: getvalues
@@ -78,7 +78,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: live-values
-          path: livevalues.yml
+          path: .github/workflows/livevalues.yml
 
       - name: Transform files with values from Live
         id: transform
