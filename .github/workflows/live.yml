@@ -78,7 +78,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: live-values
-          path: .github/workflows/scripts/livevalues.yml
+          path: .github/workflows/scripts
 
       - name: Transform files with values from Live
         id: transform
