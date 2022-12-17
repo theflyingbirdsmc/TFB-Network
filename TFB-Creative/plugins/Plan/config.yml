@@ -28,12 +28,17 @@ Database:
   Type: SQLite
   MySQL:
     Host: localhost
-    Port: '3306'
+    Port: 3306
     User: root
     Password: minecraft
     Database: Plan
-    Launch_options: ?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC
-    Max_connections: '8'
+    # Launch options to append after mysql driver address
+    Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
+    Max_connections: 8
+# -----------------------------------------------------
+# More information about SSL Certificate Settings:
+# https://github.com/plan-player-analytics/Plan/wiki/SSL-Certificate-%28HTTPS%29-Set-Up
+# -----------------------------------------------------
 Webserver:
   Port: 8804
   Alternative_IP:
