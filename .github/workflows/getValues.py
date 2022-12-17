@@ -9,7 +9,7 @@ file_path = os.environ['FILE_PATHS'].split(" ")
 # file_path = ['.github/workflows/getValues.py', '.github/workflows/live.yml', '.github/workflows/transform.py', 'TFB-Creative/plugins/Plan/config.yml', 'TFB-Flamecord/config.yml']
 print(file_path)
 
-root_path = '/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml'
+root_path = '/home/runner/work/TFB-Network/TFB-Network/'
 # root_path = 'E:/The Flying Birds/TFB-Dev/TFB-Network/'
 
 # remove resolver entries for True/False
