@@ -83,7 +83,7 @@ jobs:
       - name: Transform files with values from Live
         id: transform
         run: |
-          tree -f
+          tree -f .github/workflows
           python .github/workflows/transform.py
 
       - uses: stefanzweifel/git-auto-commit-action@v4
