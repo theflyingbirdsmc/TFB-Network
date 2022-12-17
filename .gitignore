@@ -26,3 +26,4 @@ logs/
 */plugins/Essentials/userdata/*
 */plugins/EssentialsGeoIP/config.yml
 */plugins/Parkour/players/*
+.github/workflows/scripts/livevalues.yml
