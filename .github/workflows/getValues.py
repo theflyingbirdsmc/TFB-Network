@@ -4,7 +4,7 @@ from collections import OrderedDict
 from io import StringIO
 
 yaml = ruamel.yaml.YAML()
-yaml.preserve_quotes = False
+yaml.preserve_quotes = True
 yaml.Representer.add_representer(OrderedDict, yaml.Representer.represent_dict)
 file_path = os.environ['FILE_PATHS'].split(" ")
 # file_path = ['.github/workflows/getValues.py', '.github/workflows/live.yml', '.github/workflows/transform.py', 'TFB-Creative/plugins/Plan/config.yml', 'TFB-Flamecord/config.yml']
