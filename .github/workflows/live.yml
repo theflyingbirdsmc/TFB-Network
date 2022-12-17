@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: live-values
-          path: .github/workflows/livevalues.yml
+          path: .github/workflows/scripts/livevalues.yml
   transform:
     runs-on: ubuntu-latest
     needs: getvalues
@@ -78,7 +78,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: live-values
-          path: .github/workflows/livevalues.yml
+          path: .github/workflows/scripts/livevalues.yml
 
       - name: Transform files with values from Live
         id: transform
