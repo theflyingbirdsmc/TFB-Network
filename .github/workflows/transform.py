@@ -5,6 +5,7 @@ import json
 
 yaml = ruamel.yaml.YAML()
 yaml.preserve_quotes = True
+yaml.indent(mapping=2, sequence=2, offset=0)
 
 root_path = "/home/runner/work/TFB-Network/TFB-Network/"
 # root_path = "E:/The Flying Birds/TFB-Dev/TFB-Network/"  # Use locally
