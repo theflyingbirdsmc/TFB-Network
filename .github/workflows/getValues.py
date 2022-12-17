@@ -1,15 +1,16 @@
 import os
 import ruamel.yaml
 from collections import OrderedDict
+from io import StringIO
 
 yaml = ruamel.yaml.YAML()
 yaml.preserve_quotes = False
-# file_path = os.environ['FILE_PATHS'].split(" ")
-file_path = ['.github/workflows/getValues.py', '.github/workflows/live.yml', '.github/workflows/transform.py', 'TFB-Creative/plugins/Plan/config.yml', 'TFB-Flamecord/config.yml']
+file_path = os.environ['FILE_PATHS'].split(" ")
+# file_path = ['.github/workflows/getValues.py', '.github/workflows/live.yml', '.github/workflows/transform.py', 'TFB-Creative/plugins/Plan/config.yml', 'TFB-Flamecord/config.yml']
 print(file_path)
 
-# root_path = '/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml'
-root_path = 'E:/The Flying Birds/TFB-Dev/TFB-Network/'
+root_path = '/home/runner/work/TFB-Network/TFB-Network/.github/workflows/scripts/live_values.yml'
+# root_path = 'E:/The Flying Birds/TFB-Dev/TFB-Network/'
 
 # remove resolver entries for True/False
 # for ch in "TtFf":
@@ -34,7 +35,15 @@ for file in file_path:
         result[live_values[file]] = yamlFileFromLive[live_values[file]]
         output[file] = result
         result= {}
-print(output)
 
-# with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-#     print(f'{name}={output}', file=fh)
+# Use the StringIO class to create a file-like object in memory
+yaml_str = StringIO()
+
+# Use the ruamel.yaml.dump() function to generate a string representation of the object
+yaml.dump(output, yaml_str)
+
+# Print the contents of the StringIO object to the console
+print(yaml_str.getvalue())
+
+with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+    print(f'{name}={yaml_str}', file=fh)
