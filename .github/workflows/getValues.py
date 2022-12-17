@@ -5,6 +5,7 @@ from io import StringIO
 
 yaml = ruamel.yaml.YAML()
 yaml.preserve_quotes = False
+yaml.Representer.add_representer(OrderedDict, yaml.Representer.represent_dict)
 file_path = os.environ['FILE_PATHS'].split(" ")
 # file_path = ['.github/workflows/getValues.py', '.github/workflows/live.yml', '.github/workflows/transform.py', 'TFB-Creative/plugins/Plan/config.yml', 'TFB-Flamecord/config.yml']
 print(file_path)
@@ -12,13 +13,6 @@ print(file_path)
 root_path = '/home/runner/work/TFB-Network/TFB-Network/'
 # root_path = 'E:/The Flying Birds/TFB-Dev/TFB-Network/'
 
-# remove resolver entries for True/False
-# for ch in "TtFf":
-#     if len(Resolver.yaml_implicit_resolvers[ch]) == 1:
-#         del Resolver.yaml_implicit_resolvers[ch]
-#     else:
-#         Resolver.yaml_implicit_resolvers[ch] = [x for x in
-#                 Resolver.yaml_implicit_resolvers[ch] if x[0] != 'tag:yaml.org,2002:bool']
 with open(root_path + '.github/workflows/scripts/live_values.yml', "r") as file:
     live_values = yaml.load(file)
 
