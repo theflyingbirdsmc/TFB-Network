@@ -37,7 +37,7 @@ for file in file_path:
         result= {}
 
 # Use the open() function to create a file object
-with open('livevalues.yml', 'w') as outfile:
+with open(root_path + '.github/workflows/scripts/livevalues.yml', 'w') as outfile:
     # Use the ruamel.yaml.dump() function to generate a string representation of the object
     # and write it to the file
     yaml.dump(output, outfile)
