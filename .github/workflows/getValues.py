@@ -36,14 +36,8 @@ for file in file_path:
         output[file] = result
         result= {}
 
-# Use the StringIO class to create a file-like object in memory
-yaml_str = StringIO()
-
-# Use the ruamel.yaml.dump() function to generate a string representation of the object
-yaml.dump(output, yaml_str)
-
-# Print the contents of the StringIO object to the console
-print(yaml_str.getvalue())
-
-with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={yaml_str}', file=fh)
+# Use the open() function to create a file object
+with open('livevalues.yml', 'w') as outfile:
+    # Use the ruamel.yaml.dump() function to generate a string representation of the object
+    # and write it to the file
+    yaml.dump(output, outfile)
