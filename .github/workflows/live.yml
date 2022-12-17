@@ -48,6 +48,7 @@ jobs:
         id: values
         run: |
           FILE_PATHS='${{steps.changed-files.outputs.all_changed_files}}' python .github/workflows/getValues.py
+          tree -f
 
       - name: Archive live values
         uses: actions/upload-artifact@v3
