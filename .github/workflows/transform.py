@@ -36,6 +36,3 @@ for file_path, file_data in live_values.items():
     with open(root_path + file_path, "w") as file:
         yaml.dump(config_data, file)
 
-files_changed = 'files_changed'
-with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-    print(f'{name}={output}', file=fh)
