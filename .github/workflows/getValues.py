@@ -1,4 +1,5 @@
 import os
+from yaml.resolver import Resolver
 import yaml
 
 file_path = os.environ['FILE_PATHS'].split(" ")
@@ -14,8 +15,8 @@ name = 'getvalues_result'
 for file in file_path:
     if file in live_values:
         with open('/home/runner/work/TFB-Network/TFB-Network/' + file, 'r') as f:
-            yamlFileFromLive = yaml.unsafe_load(f)
-        output[file] = yamlFileFromLive[live_values[file]]
+            yamlFileFromLive = yaml.safe_load(f)
+        output = yamlFileFromLive[live_values]
 
 with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
     print(f'{name}={output}', file=fh)
