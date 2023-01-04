@@ -46,9 +46,9 @@ disabled_commands:
 - teeest
 servers:
   crowdcontrol:
-    address: 33387.18.0.1:25606
-    motd: ''
-    restricted: 'false'
+    address: 172.18.0.1:25606
+    motd: ""
+    restricted: false
   factions:
     address: 172.18.0.1:25603
     motd: ''
