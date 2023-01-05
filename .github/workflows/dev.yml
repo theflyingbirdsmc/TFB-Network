@@ -78,6 +78,8 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          branch: live
+          token: ${{ secrets.TFB_PAT }}
           file_pattern: "."
           commit_message: Apply values from Live
   deploy:
