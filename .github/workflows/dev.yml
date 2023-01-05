@@ -63,6 +63,8 @@ jobs:
 
       - name: Checkout to Dev
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.TFB_PAT }}
 
       - name: Download live values
         uses: actions/download-artifact@v3
@@ -79,7 +81,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: live
-          token: ${{ secrets.TFB_PAT }}
           file_pattern: "."
           commit_message: Apply values from Live
   deploy:
