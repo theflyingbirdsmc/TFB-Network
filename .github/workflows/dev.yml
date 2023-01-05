@@ -1,9 +1,11 @@
 name: Dev
 
 # Controls when the workflow will run
-on:
+on:  
   push:
-    branches: ["dev"]
+  pull_request:
+    branches:
+      - dev
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
