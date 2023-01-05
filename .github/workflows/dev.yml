@@ -54,6 +54,8 @@ jobs:
         with:
           ref: ${{ github.ref }}
           token: ${{ secrets.TFB_PAT }}
+
+      - name: Test
         run: echo ${{ github.ref }}
 
       - name: Setup Python
