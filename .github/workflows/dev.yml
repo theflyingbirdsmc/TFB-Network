@@ -52,11 +52,11 @@ jobs:
       - name: Checkout to dev repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref }}
+          ref: ${{ github.head_ref }}
           token: ${{ secrets.TFB_PAT }}
 
       - name: Test
-        run: echo ${{ github.ref }}
+        run: echo ${{ github.head_ref }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
