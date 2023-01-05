@@ -114,4 +114,4 @@ jobs:
         id: transform
         run: |
           tree -f .github/workflows
-          python .github/workflows/transform.py
+          python .github/workflows/deploy.py
