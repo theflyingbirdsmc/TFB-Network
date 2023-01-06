@@ -83,17 +83,12 @@ jobs:
         run: |
           python .github/workflows/transform.py
       
-      - name: Push changes to live branch
-        uses: actions/git-push@v1
+      - uses: actions/checkout@v3
         with:
-          branch: live
-          force: false
+          ref: ${{ github.event.pull_request.head.ref }}
+          message: 'Updated with values from Live'
+          push: 'origin live'
 
-      # - uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     file_pattern: "."
-      #     commit_message: Apply values from Live
-      #     branch: live
       
   deploy:
     runs-on: ubuntu-latest
