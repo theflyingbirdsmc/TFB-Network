@@ -7,7 +7,7 @@ listeners:
     pvp.md-5.net: pvp
   host: 0.0.0.0:25565
   max_players: 2022
-  motd: ""
+  motd: ''
   ping_passthrough: false
   priorities:
   - lobby
@@ -46,30 +46,30 @@ disabled_commands:
 - wearealmo
 servers:
   crowdcontrol:
-    address: 123.43.0.1:25606
-    motd: ""
+    address: 99999.18.0.1:25606
+    motd: ''
     restricted: false
   factions:
     address: 172.18.0.1:25603
     motd: ''
-    restricted: 'false'
+    restricted: false
   kitpvp:
     address: 172.18.0.1:25607
     motd: ''
-    restricted: 'false'
+    restricted: false
   lobby:
     address: 172.18.0.1:25600
     motd: ''
-    restricted: 'false'
+    restricted: false
   museum:
     address: 172.18.0.1:25605
     motd: ''
-    restricted: 'false'
+    restricted: false
   parkour:
     address: 172.18.0.1:25604
     motd: ''
-    restricted: 'false'
+    restricted: false
   vanilladk:
     address: 172.18.0.1:25700
     motd: ''
-    restricted: 'false'
+    restricted: false
