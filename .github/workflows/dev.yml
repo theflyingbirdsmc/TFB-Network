@@ -58,8 +58,7 @@ jobs:
       - name: Checkout to dev repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.TFB_PAT }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Test
         run: echo ${{ github.head_ref }}
@@ -83,9 +82,9 @@ jobs:
         run: |
           python .github/workflows/transform.py
       
-      - uses: actions/checkout@v3
+      - name: Push to live
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
           message: 'Updated with values from Live'
           push: 'origin live'
 
