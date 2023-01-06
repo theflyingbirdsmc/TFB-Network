@@ -43,10 +43,10 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-- abigchange
+- wearealmo
 servers:
   crowdcontrol:
-    address: 542.18456.0.1:25606
+    address: 123.43.0.1:25606
     motd: ""
     restricted: false
   factions:
