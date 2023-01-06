@@ -46,7 +46,7 @@ disabled_commands:
 - tee
 servers:
   crowdcontrol:
-    address: 5452.18.0.1:25606
+    address: 542.18456.0.1:25606
     motd: ""
     restricted: false
   factions:
