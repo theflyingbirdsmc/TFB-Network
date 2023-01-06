@@ -82,12 +82,18 @@ jobs:
         run: |
           python .github/workflows/transform.py
       
-      - name: Push to live
-        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+      - name: Commit file(s)
+        uses: EndBug/add-and-commit@v9
         with:
           message: 'Updated with values from Live'
-          push: 'live'
 
+      - name: Push to Live
+        uses: everlytic/branch-merge@1.1.2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
+          target_branch: 'live'
+          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
       
   deploy:
     runs-on: ubuntu-latest
