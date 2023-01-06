@@ -18,9 +18,6 @@ jobs:
       values: ${{ steps.values.outputs.getvalues_result }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: pull request
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
