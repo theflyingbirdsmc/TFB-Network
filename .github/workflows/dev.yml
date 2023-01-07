@@ -86,6 +86,7 @@ jobs:
           git checkout ${{ github.event.pull_request.head.ref }}
           python .github/workflows/transform.py
           git commit -am "Apply values from Live"
+          git pull origin live
           git push origin ${{ github.event.pull_request.head.ref }}:live
       
       # - name: Commit file(s)
