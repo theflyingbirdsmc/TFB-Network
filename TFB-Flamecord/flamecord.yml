@@ -4,7 +4,7 @@ custom-motd:
     motds:
       - |-
         &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
-                              &cGives you wings
+                              &bGives you wings
       - |-
         &r             &4T&1F&2B &8- &4The &1Flying &2Birds &8| &e1.19.X
                     &cMay contain traces of feathers!
