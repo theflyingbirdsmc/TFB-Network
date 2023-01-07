@@ -46,7 +46,7 @@ disabled_commands:
 - wearealmo
 servers:
   crowdcontrol:
-    address: 111111.43.0.1:25606
+    address: 111.43.0.1:25606
     motd: ""
     restricted: false
   factions:
