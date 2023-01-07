@@ -80,6 +80,9 @@ jobs:
       - name: Transform files with values from Live
         id: transform
         run: |
+          user_info=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/users/${{ github.actor }})
+          git config --global user.email "$(echo $user_info | jq -r '.email')"
+          git config --global user.name "$(echo $user_info | jq -r '.name')"
           git checkout ${{ github.event.pull_request.head.ref }}
           python .github/workflows/transform.py
           git commit -am "Apply values from Live"
