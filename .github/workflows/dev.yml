@@ -80,20 +80,23 @@ jobs:
       - name: Transform files with values from Live
         id: transform
         run: |
+          git checkout ${{ github.event.pull_request.head.ref }}
           python .github/workflows/transform.py
+          git commit -am "Apply values from Live"
+          git push origin ${{ github.event.pull_request.head.ref }}:live
       
-      - name: Commit file(s)
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Updated with values from Live'
+      # - name: Commit file(s)
+      #   uses: EndBug/add-and-commit@v9
+      #   with:
+      #     message: 'Updated with values from Live'
 
-      - name: Push to Live
-        uses: everlytic/branch-merge@1.1.2
-        with:
-          github_token: ${{ github.token }}
-          source_ref: ${{ github.ref }}
-          target_branch: 'live'
-          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
+      # - name: Push to Live
+      #   uses: everlytic/branch-merge@1.1.2
+      #   with:
+      #     github_token: ${{ github.token }}
+      #     source_ref: ${{ github.ref }}
+      #     target_branch: 'live'
+      #     commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
       
   deploy:
     runs-on: ubuntu-latest
