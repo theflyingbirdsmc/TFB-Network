@@ -89,7 +89,7 @@ jobs:
           git commit -am "Apply values from Live"
 
           git config pull.ff true
-          git pull origin live
+          git pull origin live --allow-unrelated-histories
           git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
       
       # - name: Commit file(s)
