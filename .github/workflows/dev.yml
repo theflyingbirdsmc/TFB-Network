@@ -89,8 +89,8 @@ jobs:
           git commit -am "Apply values from Live"
 
           git config pull.ff true
-          git pull origin live --force-with-lease
-          git push origin ${{ github.event.pull_request.head.ref }}:live
+          git pull origin live
+          git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
       
       # - name: Commit file(s)
       #   uses: EndBug/add-and-commit@v9
