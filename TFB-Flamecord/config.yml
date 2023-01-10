@@ -46,7 +46,7 @@ disabled_commands:
   - test
 servers:
   crowdcontrol:
-    address: force.43.0.1:25606
+    address: force.434.0.1:25606
     motd: ""
     restricted: false
   factions:
