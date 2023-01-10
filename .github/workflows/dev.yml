@@ -124,5 +124,4 @@ jobs:
       - name: Transform files with values from Live
         id: transform
         run: |
-          tree -f .github/workflows
-          python .github/workflows/deploy.py
+          FILE_PATHS='${{ needs.getvalues.outputs.values }}' python .github/workflows/deploy.py
