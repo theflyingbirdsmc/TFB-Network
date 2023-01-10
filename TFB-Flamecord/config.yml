@@ -46,7 +46,7 @@ disabled_commands:
   - test
 servers:
   crowdcontrol:
-    address: hello.43.0.1:25606
+    address: hel.43.0.1:25606
     motd: ""
     restricted: false
   factions:
