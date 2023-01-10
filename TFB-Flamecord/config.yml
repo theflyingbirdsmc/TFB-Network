@@ -50,7 +50,7 @@ servers:
     motd: ""
     restricted: false
   factions:
-    address: 172.18.0.1:25603
+    address: this.18.0.1:25603
     motd: ''
     restricted: 'false'
   kitpvp:
