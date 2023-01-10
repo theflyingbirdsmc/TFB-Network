@@ -87,7 +87,10 @@ jobs:
 
           python .github/workflows/transform.py
           git commit -am "Apply values from Live"
-
+          
+          echo "FETCHING"
+          git fetch
+          
           echo "PUSHING"
           git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
       
