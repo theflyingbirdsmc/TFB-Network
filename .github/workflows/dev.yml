@@ -126,9 +126,9 @@ jobs:
       - name: Deploy changes to Live server
         id: transform
         env:
-            SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
-            SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
-            SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
-            SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
+          SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
+          SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
+          SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
+          SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
         run: |
           FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
