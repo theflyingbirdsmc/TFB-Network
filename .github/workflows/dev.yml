@@ -121,7 +121,7 @@ jobs:
           name: live-values
           path: .github/workflows/scripts
 
-      - name: Transform files with values from Live
+      - name: Deploy changes to Live server
         id: transform
         run: |
           FILE_PATHS='${{ needs.getvalues.outputs.values }}' python .github/workflows/deploy.py
