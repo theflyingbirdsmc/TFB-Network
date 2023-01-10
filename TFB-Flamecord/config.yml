@@ -46,11 +46,11 @@ disabled_commands:
   - test
 servers:
   crowdcontrol:
-    address: f44.43.0.1:25606
+    address: 43.0.1:25606
     motd: ""
     restricted: false
   factions:
-    address: this.18.0.1:25603
+    address: .18.0.1:25603
     motd: ''
     restricted: 'false'
   kitpvp:
