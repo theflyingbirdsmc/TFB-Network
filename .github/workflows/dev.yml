@@ -88,8 +88,10 @@ jobs:
           python .github/workflows/transform.py
           git commit -am "Apply values from Live"
 
+          echo "PULLING"
           git config pull.ff true
           git pull origin live --allow-unrelated-histories
+          echo "PUSHING"
           git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
       
   deploy:
