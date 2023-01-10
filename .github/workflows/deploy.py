@@ -14,7 +14,7 @@ server_sftpusernames = {
     "TFB-TEST": SFTP_TFB_TEST_USERNAME
 }
 for file in file_path:
-    for server, username in server_sftpusernames:
+    for server, username in server_sftpusernames.items():
         if server in file:
             print("I'm + " + server_sftpusernames[server] + "for the server " + server)
     # with pysftp.Connection('mc.theflyingbirds.net', username='', password='secret') as sftp:
