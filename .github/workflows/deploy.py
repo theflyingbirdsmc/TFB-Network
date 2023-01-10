@@ -6,10 +6,12 @@ file_path = os.environ['FILE_PATHS'].split(" ")
 SFTP_TFB_PASSWORD = os.environ['SFTP_TFB_PASSWORD']
 SFTP_TFB_LOBBY_USERNAME = os.environ['SFTP_TFB_LOBBY_USERNAME']
 SFTP_TFB_FLAMECORD_USERNAME = os.environ['SFTP_TFB_FLAMECORD_USERNAME']
+SFTP_TFB_TEST_USERNAME = os.environ['SFTP_TFB_TEST_USERNAME']
 
 server_sftpusernames = {
     "TFB-Lobby": SFTP_TFB_LOBBY_USERNAME,
-    "TFB-Flamecord": SFTP_TFB_FLAMECORD_USERNAME
+    "TFB-Flamecord": SFTP_TFB_FLAMECORD_USERNAME,
+    "TFB-TEST": SFTP_TFB_TEST_USERNAME
 }
 for file in file_path:
     for server, username in server_sftpusernames:
