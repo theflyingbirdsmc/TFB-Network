@@ -7,7 +7,7 @@ listeners:
     pvp.md-5.net: pvp
   host: 0.0.0.0:25565
   max_players: 2022
-  motd: ""
+  motd: ''
   ping_passthrough: false
   priorities:
   - lobby
@@ -43,14 +43,14 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - ISHOULDBEONLIVE
+- ISHOULDBEONLIVE
 servers:
   crowdcontrol:
-    address: 33.0.1:25606
-    motd: ""
+    address: force.434.0.1:25606
+    motd: ''
     restricted: false
   factions:
-    address: .18.0.1:25603
+    address: 172.18.0.1:25603
     motd: ''
     restricted: 'false'
   kitpvp:
