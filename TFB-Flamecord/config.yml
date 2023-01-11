@@ -43,7 +43,7 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-- updatemepls
+- heregoes
 servers:
   CustomSMP:
     address: 192.168.0.20:25605
