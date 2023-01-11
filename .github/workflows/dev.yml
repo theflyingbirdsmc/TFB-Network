@@ -124,7 +124,7 @@ jobs:
           path: .github/workflows/scripts
 
       - name: Deploy changes to Live server
-        id: transform
+        id: deploy
         env:
           SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
           SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
