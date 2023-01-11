@@ -1,5 +1,7 @@
 import os
-import pysftp
+import paramiko
+ssh_client = paramiko.SSHClient()
+ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 file_path = os.environ['FILE_PATHS'].split(" ")
 print(str(file_path))
@@ -17,7 +19,8 @@ server_sftpusernames = {
 for file in file_path:
     for server, username in server_sftpusernames.items():
         if server in file:
+            remotePath = file.Substring(file.IndexOf('/') + 1);
             print("I'm + " + server_sftpusernames[server] + "for the server " + server)
-            with pysftp.Connection('germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022) as sftp:
-                with sftp.cd('/home/container'):
-                    sftp.put(file)  	# upload file to /home/container on remote
+            ssh_client.connect(hostname='germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022)
+            s = ssh_client.open_sftp()
+            s.put(file, remotePath)
