@@ -19,7 +19,7 @@ server_sftpusernames = {
 for file in file_path:
     for server, username in server_sftpusernames.items():
         if server in file:
-            remotePath = file.Substring(file.IndexOf('/') + 1);
+            remotePath = file[file.find('/'):]
             print("I'm + " + server_sftpusernames[server] + "for the server " + server)
             ssh_client.connect(hostname='germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022)
             s = ssh_client.open_sftp()
