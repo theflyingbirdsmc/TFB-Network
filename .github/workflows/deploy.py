@@ -1,7 +1,7 @@
 import os
 
 file_path = os.environ['FILE_PATHS'].split(" ")
-
+print(str(file_path))
 
 SFTP_TFB_PASSWORD = os.environ['SFTP_TFB_PASSWORD']
 SFTP_TFB_LOBBY_USERNAME = os.environ['SFTP_TFB_LOBBY_USERNAME']
