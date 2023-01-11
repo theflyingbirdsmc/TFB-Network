@@ -43,10 +43,10 @@ stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
-  - MyNewBranch
+  - imrunningoutofnam
 servers:
   crowdcontrol:
-    address: MyNewBranch.0.1:25606
+    address: 33.0.1:25606
     motd: ""
     restricted: false
   factions:
