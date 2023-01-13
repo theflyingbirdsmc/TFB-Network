@@ -38,7 +38,7 @@ CMD         CMD ["jshell"]
 LABEL       author="Simon Fugl" maintainer="fuglenbusiness@gmail.com"
 LABEL 		org.opencontainers.image.source="https://github.com/theflyingbirdsmc/pluGET"
 
-RUN 		apk add curl ca-certificates nano openssl git fontconfig maven jq gcc build-base
+RUN 		apk add curl ca-certificates nano openssl git fontconfig maven jq gcc build-base gradle
 
 ARG         user=container
 ARG         home=/home/$user
