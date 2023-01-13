@@ -1,0 +1,58 @@
+plugins {
+  id 'org.yaml' version '1.3.1'
+}
+
+dependencyManagement {
+    configurations.all {
+        resolutionStrategy {
+            eachDependency { DependencyResolveDetails details ->
+                if(details.requested.group == 'com.example') {
+                    details.useVersion '1.0.0'
+                }
+            }
+        }
+    }
+}
+
+task extractPluginsYML(type: Copy) {
+    from zipTree("TFB-Vanilla/plugins/*.jar")
+    into("extracted")
+    include 'plugin.yml'
+    eachFile { file ->
+        def pluginName = file.name.replace("/plugin.yml", "")
+        file.rename(file.name, "${pluginName}.yml")
+    }
+}
+
+task readPluginsInfo {
+    doLast {
+        fileTree("extracted").visit { FileVisitDetails details ->
+            if(details.fileName.endsWith(".yml")) {
+                def pluginInfo = new Yaml().load(details.file.newReader())
+
+                println "Name: ${pluginInfo.name}"
+                println "Author: ${pluginInfo.author}"
+                println "Version: ${pluginInfo.version}"
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://artifactory.theflyingbirds.net/repository/TFB-Plugins/"
+    }
+}
+
+task uploadPlugin(type: Upload) {
+    repositories {
+        maven {
+            url "https://artifactory.theflyingbirds.net/repository/TFB-Plugins/"
+            credentials {
+                username = "tfb"
+                password = 'password'
+            }
+        }
+    }
+    publications = [publishing.publications.mavenJava]
+}
