@@ -1,7 +1,7 @@
 {
    "ManualCheckpoints": false,
    "MinimumLevel": 0,
-   "Views": 615,
+   "Views": 617,
    "Checkpoints": 1,
    "Creator": "KatieDeForest",
    "RewardOnce": false,
@@ -37,7 +37,7 @@
       }
    },
    "RewardLevel": 0,
-   "Completed": 39,
+   "Completed": 40,
    "DisplayName": "Medium",
    "RewardParkoins": 0,
    "LinkedLobby": "default",

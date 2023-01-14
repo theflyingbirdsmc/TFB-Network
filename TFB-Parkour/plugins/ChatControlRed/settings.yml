@@ -1392,10 +1392,11 @@ Locale: en
 Prefix: '&8[&cChatControl&8]&7 '
 
 # -------------------------------------------------------------------------------------------------
-# How we should look up player data?
+# How we should look up player data? 
 #
 # true = look up and save player data by their Mojang unique ID (recommended on online servers)
 # false = use player names to save and load player data (recommended on offline servers)
+#         (requires external database, otherwise ignored)
 # -------------------------------------------------------------------------------------------------
 UUID_Lookup: true
 

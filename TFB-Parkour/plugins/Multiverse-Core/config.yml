@@ -29,7 +29,7 @@ multiverse-configuration:
   silentstart: 'false'
   messagecooldown: '5000'
   version: '2.9'
-  firstspawnworld: parkour
+  firstspawnworld: world_parkour
   teleportcooldown: '1000'
   defaultportalsearch: 'false'
   portalsearchradius: '128'

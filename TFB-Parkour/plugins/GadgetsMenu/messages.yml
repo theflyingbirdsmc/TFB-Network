@@ -143,6 +143,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰&7✰✰✰✰'
+        Show: true
       2-Star:
         Name: '&bMystery Egg &e✰✰'
         Material: TURTLE_EGG
@@ -158,6 +159,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰✰&7✰✰✰'
+        Show: true
       3-Star:
         Name: '&bMystery Egg &e✰✰✰'
         Material: TURTLE_EGG
@@ -173,6 +175,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰✰✰&7✰✰'
+        Show: true
       4-Star:
         Name: '&bMystery Egg &e✰✰✰✰'
         Material: TURTLE_EGG
@@ -188,6 +191,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b3'
         - ''
         - '&7Quality: &e✰✰✰✰&7✰'
+        Show: true
       5-Star:
         Name: '&bMystery Egg &e✰✰✰✰✰'
         Material: TURTLE_EGG
@@ -203,6 +207,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b4'
         - ''
         - '&7Quality: &e✰✰✰✰✰'
+        Show: true
   Gift-Inventory-Menu:
     GUI-Name: Gift Inventory
     Items:
@@ -985,3 +990,5 @@ No-Recent-Loot-Found: none
 Loading: '&cLoading...'
 Received-Mystery-Boxes: '{PREFIX}&eYou''ve received &b{MYSTERY_BOXES} Mystery Eggs
   &efrom &b{PLAYER}&e.'
+Failed-To-Reload-Plugin: '{PREFIX}&cUnable to reload GadgetsMenu plugin. The plugin
+  has been disabled. You need to restart the server to re-enable the plugin.'

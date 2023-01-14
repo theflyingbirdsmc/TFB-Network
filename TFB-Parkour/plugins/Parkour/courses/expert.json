@@ -1,6 +1,6 @@
 {
    "MinimumLevel": 0,
-   "Views": 82,
+   "Views": 92,
    "Checkpoints": 4,
    "Creator": "KatieDeForest",
    "RewardOnce": false,
@@ -75,11 +75,12 @@
       }
    },
    "RewardLevel": 0,
-   "Completed": 2,
+   "Completed": 3,
    "DisplayName": "Expert",
    "RewardParkoins": 0,
    "LinkedLobby": "default",
    "MaxFallTicks": 10,
+   "JoinItems": [],
    "DieInVoid": true,
    "RewardLevelAdd": 10
 }
