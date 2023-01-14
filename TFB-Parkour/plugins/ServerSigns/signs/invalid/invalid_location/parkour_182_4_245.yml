@@ -1,0 +1,46 @@
+permissions: []
+permissionMessage: ''
+cancelPermission: ''
+cancelPermissionMessage: ''
+world: parkour
+X: 182
+Y: 4
+Z: 245
+price: 0.0
+exp: 0
+cooldown: 0
+globalCooldown: 0
+lastGlobalUse: 0
+confirmation: false
+confirmationMessage: ''
+cancel_mode: ALWAYS
+commands:
+  '0':
+    command: '&4T&1F&2B &9Discord&f: &bhttps://discord.gg/YFTy2cxRs8'
+    type: MESSAGE
+    delay: 0
+    grantPerms: []
+    alwaysPersisted: false
+    interactValue: 0
+grantPermissions: []
+priceItems: []
+heldItems: []
+pi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+hi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+loops: -1
+loop_delay: 1
+uses_limit: 0
+uses_tally: 12
+protectedBlocks:
+- parkour,182,4,244
+displayInternalMessages: true
+timeLimitMaximum: 0
+timeLimitMinimum: 0

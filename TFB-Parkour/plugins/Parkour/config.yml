@@ -111,28 +111,28 @@ CourseDefault:
 ParkourTool:
   LastCheckpoint:
     Material: EMERALD_BLOCK
-    Slot: 0
+    Slot: 3
   HideAll:
     Material: GRAY_DYE
-    Slot: 1
+    Slot: 5
     Global: true
     ActivateOnJoin: false
   HideAllEnabled:
     Material: LIME_DYE
-    Slot: 1
+    Slot: 5
   Leave:
-    Material: GOLD_BLOCK
-    Slot: 2
+    Material: REDSTONE_BLOCK
+    Slot: 7
   Restart:
-    Material: STICK
-    Slot: 3
+    Material: DIAMOND_BLOCK
+    Slot: 1
     SecondCooldown: 1
   Freedom:
-    Material: REDSTONE_TORCH
-    Slot: 4
+    Material: AIR
+    Slot: 9
     SecondCooldown: 1
   Rockets:
-    Material: FIREWORK_ROCKET
+    Material: AIR
     Slot: 4
 ParkourChallenge:
   HidePlayers: false

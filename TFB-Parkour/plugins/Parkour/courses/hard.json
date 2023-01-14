@@ -1,6 +1,6 @@
 {
    "MinimumLevel": 0,
-   "Views": 94,
+   "Views": 95,
    "Checkpoints": 3,
    "Creator": "KatieDeForest",
    "RewardOnce": false,
@@ -62,7 +62,7 @@
       }
    },
    "RewardLevel": 0,
-   "Completed": 11,
+   "Completed": 12,
    "DisplayName": "Hard",
    "RewardParkoins": 0,
    "LinkedLobby": "default",

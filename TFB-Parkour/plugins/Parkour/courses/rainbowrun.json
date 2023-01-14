@@ -1,6 +1,6 @@
 {
    "MinimumLevel": 0,
-   "Views": 28,
+   "Views": 30,
    "Checkpoints": 9,
    "Creator": "KatieDeForest",
    "RewardOnce": false,
@@ -140,7 +140,7 @@
       }
    },
    "RewardLevel": 0,
-   "Completed": 4,
+   "Completed": 6,
    "DisplayName": "RainbowRun",
    "RewardParkoins": 0,
    "LinkedLobby": "default",
