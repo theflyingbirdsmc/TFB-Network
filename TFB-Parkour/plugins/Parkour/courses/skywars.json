@@ -13,7 +13,7 @@
          "CheckpointY": 2,
          "CheckpointZ": 119,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -246.5,
             "y": 3.5,
             "z": 119.5,
@@ -26,7 +26,7 @@
          "CheckpointY": 2,
          "CheckpointZ": 117,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -174.5,
             "y": 3.5,
             "z": 117.5,
@@ -39,7 +39,7 @@
          "CheckpointY": 3,
          "CheckpointZ": 62,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -164.5,
             "y": 4.5,
             "z": 62.5,
@@ -52,7 +52,7 @@
          "CheckpointY": 6,
          "CheckpointZ": 84,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -157.5,
             "y": 7.5,
             "z": 84.5,
@@ -65,7 +65,7 @@
          "CheckpointY": 2,
          "CheckpointZ": 110,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -160.5,
             "y": 3.5,
             "z": 110.5,
@@ -78,7 +78,7 @@
          "CheckpointY": 7,
          "CheckpointZ": 119,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -139.5,
             "y": 8.5,
             "z": 119.5,
@@ -91,7 +91,7 @@
          "CheckpointY": 5,
          "CheckpointZ": 166,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -118.5,
             "y": 6.5,
             "z": 166.5,
@@ -104,7 +104,7 @@
          "CheckpointY": 3,
          "CheckpointZ": 181,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -159.5,
             "y": 4.5,
             "z": 181.5,
@@ -117,7 +117,7 @@
          "CheckpointY": 6,
          "CheckpointZ": 144,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": -164.5,
             "y": 7.5,
             "z": 144.5,

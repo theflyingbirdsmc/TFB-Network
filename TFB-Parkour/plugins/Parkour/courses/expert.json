@@ -13,7 +13,7 @@
          "CheckpointY": 10,
          "CheckpointZ": 5,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": 179.5,
             "y": 11.5,
             "z": 5.5,
@@ -26,7 +26,7 @@
          "CheckpointY": 10,
          "CheckpointZ": 5,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": 158.5,
             "y": 11.5,
             "z": 5.5,
@@ -39,7 +39,7 @@
          "CheckpointY": 11,
          "CheckpointZ": 5,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": 146.5,
             "y": 12.5,
             "z": 5.5,
@@ -52,7 +52,7 @@
          "CheckpointY": 6,
          "CheckpointZ": -35,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": 148.5,
             "y": 7.5,
             "z": -34.5,
@@ -65,7 +65,7 @@
          "CheckpointY": 6,
          "CheckpointZ": -32,
          "Location": {
-            "world": "parkour",
+            "world": "world_parkour",
             "x": 132.5,
             "y": 7.5,
             "z": -31.5,

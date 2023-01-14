@@ -14,7 +14,7 @@
          "CheckpointY": 9,
          "CheckpointZ": -321,
          "Location": {
-            "world": "Parkour",
+            "world": "world_parkour",
             "x": -81.5,
             "y": 10.5,
             "z": -320.5,
@@ -27,7 +27,7 @@
          "CheckpointY": 29,
          "CheckpointZ": -330,
          "Location": {
-            "world": "Parkour",
+            "world": "world_parkour",
             "x": -84.5,
             "y": 30.5,
             "z": -329.5,
