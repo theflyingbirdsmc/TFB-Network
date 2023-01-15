@@ -30,3 +30,5 @@ logs/
 *world_*
 *.gradle
 *build/
+**/gradle.properties
+TFB-Vanilla/gradle.properties
