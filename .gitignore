@@ -28,3 +28,5 @@ logs/
 */plugins/Parkour/players/*
 .github/workflows/scripts/livevalues.yml
 *world_*
+*.gradle
+*build/
