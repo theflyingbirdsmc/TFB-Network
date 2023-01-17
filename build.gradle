@@ -55,8 +55,6 @@ publishing {
                 println("")
 
                 if (urlExists(repositoryUrl)) {
-                    println("# Existing artifact found")
-                    println("")
                     println("Artifact with version $ARTIFACT_VERSION already exist - increase the version to publish")
                 } else {
                     println("# No existing artifact found. Preceding to publish")
