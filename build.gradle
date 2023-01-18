@@ -42,14 +42,16 @@ publishing {
                 def yaml = new Yaml()
                 def plugin = yaml.load(jarFile.getInputStream(pluginYml))
                 def ARTIFACT_ID = plugin.name
-                def ARTIFACT_VERSION = plugin.version.replace(" ", "-")
+                def ARTIFACT_VERSION = plugin.version.toString()
+                if(ARTIFACT_VERSION.contains(" ")) {
+                    ARTIFACT_VERSION = ARTIFACT_VERSION.replace(" ", "-")
+                }
                 def ARTIFACT_GROUP = plugin.name
                 
                 def pomFileName = "${ARTIFACT_ID}-${ARTIFACT_VERSION}.pom"
                 def artifactPath = "${ARTIFACT_GROUP.replace(".", "/")}/${ARTIFACT_ID}/${ARTIFACT_VERSION}/${pomFileName}"
                 def repositoryUrl = "${MAVEN_URL}${artifactPath}"
 
-                println(repositoryUrl)
 
                 println("# searching for existing artifact with name ${ARTIFACT_ID} version ${ARTIFACT_VERSION}")
                 println("")
