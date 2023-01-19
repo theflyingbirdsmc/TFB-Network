@@ -15,7 +15,7 @@ now = datetime.now()
 # dd/mm/YY H:M:S
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
-log = open(root_path + '.github/logs.txt', "w+")
+log = open(root_path + '.github/transformlog.txt', "w+")
 log.write(dt_string + " - If any files have been edited they will be shown here")
 
 with open(root_path + '.github/workflows/scripts/livevalues.yml') as f:
