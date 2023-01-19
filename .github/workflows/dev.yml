@@ -84,7 +84,7 @@ jobs:
           git config --global user.email "theflyingbirds1@gmail.com"
           git checkout ${{ github.event.pull_request.head.ref }}
 
-          rm -r logs/*
+          rm -r /home/runner/work/TFB-Network/TFB-Network/.github/workflows/logs/*
 
           python .github/workflows/transform.py
           git status
