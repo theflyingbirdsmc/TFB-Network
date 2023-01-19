@@ -87,9 +87,10 @@ jobs:
           python .github/workflows/transform.py
           git status
           git commit -am "Apply values from Live"
+          git status
           
           echo "PUSHING"
-          git push --force-with-lease ${{ github.event.pull_request.head.ref }} live
+          git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
       
       - name: Get changed files from PR
         id: changed-files
