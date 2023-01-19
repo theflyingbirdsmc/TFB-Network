@@ -76,6 +76,12 @@ jobs:
         with:
           name: live-values
           path: .github/workflows/scripts
+      - name: Check if artifact file is empty
+        run: |
+          if [[ ! -s .github/workflows/scripts/livevalues.yml ]]; then
+            echo "Artifact file is empty, skipping transform step"
+            exit 0
+          fi
 
       - name: Transform files with values from Live and commit/push
         id: transform
@@ -86,26 +92,38 @@ jobs:
 
           python .github/workflows/transform.py
           git commit -am "Apply values from Live"
-          
-          echo "FETCHING"
-          git fetch
-          
-          echo "PUSHING"
-          git push --force-with-lease origin ${{ github.event.pull_request.head.ref }}:live
-      
-      - name: Get changed files from PR
-        id: changed-files
-        uses: tj-actions/changed-files@v35
+
+  deploy_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get changed files from PR
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+      with:
+        since_last_remote_commit: true
+
+    - name: Deploy changes to Live server
+      id: deploy
+      env:
+        SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
+        SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
+        SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
+        SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
+      run: |
+        FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
+
+  merge_pull_request:
+    if: ${{ steps.getvalues.outputs.values == '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge pull request into live branch
+        uses: actions/github-script@v3
         with:
-          since_last_remote_commit: true
-
-      - name: Deploy changes to Live server
-        id: deploy
-        env:
-          SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
-          SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
-          SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
-          SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
-        run: |
-          FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
-
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const octokit = new Octokit();
+            octokit.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number
+            });
