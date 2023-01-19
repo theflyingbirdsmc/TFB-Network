@@ -96,26 +96,39 @@ jobs:
   deploy_pull_request:
     runs-on: ubuntu-latest
     steps:
-    - name: Get changed files from PR
-      id: changed-files
-      uses: tj-actions/changed-files@v35
-      with:
-        since_last_remote_commit: true
+      - name: Checkout to PR
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.TFB_PAT }}
 
-    - name: Deploy changes to Live server
-      id: deploy
-      env:
-        SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
-        SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
-        SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
-        SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
-      run: |
-        FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
+      - name: Get changed files from PR
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          since_last_remote_commit: true
+
+      - name: Deploy changes to Live server
+        id: deploy
+        env:
+          SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
+          SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
+          SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
+          SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
+        run: |
+          FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
 
   merge_pull_request:
-    if: ${{ steps.getvalues.outputs.values == '' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout to PR
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.TFB_PAT }}
+          
       - name: Merge pull request into live branch
         uses: actions/github-script@v3
         with:
