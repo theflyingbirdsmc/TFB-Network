@@ -2,6 +2,7 @@ import os
 import ruamel.yaml
 from io import StringIO
 import json
+from datetime import datetime
 
 yaml = ruamel.yaml.YAML()
 yaml.preserve_quotes = False
@@ -9,6 +10,13 @@ yaml.indent(mapping=2, sequence=2, offset=0)
 
 root_path = "/home/runner/work/TFB-Network/TFB-Network/"
 # root_path = "E:/The Flying Birds/TFB-Dev/TFB-Network/"  # Use locally
+
+now = datetime.now()
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+log = open(root_path + '.github/logs.txt', "w+")
+log.write(dt_string + " - If any files have been edited they will be shown here")
 
 with open(root_path + '.github/workflows/scripts/livevalues.yml') as f:
     live_values = yaml.load(f)
@@ -19,7 +27,7 @@ for file_path, file_data in live_values.items():
     print("FILE PATHS: " + str(file_path))
     print("FILE KEY: " + str(keys[0]))
     print("FILE DATA: " + str(file_data.get(keys[0])))
-    # yaml = YAML()
+
     with open(root_path + file_path, "r") as file:
         config_data = yaml.load(file)
     print("LOCAL: " + str(config_data))
@@ -35,4 +43,4 @@ for file_path, file_data in live_values.items():
     # # Save the updated file
     with open(root_path + file_path, "w") as file:
         yaml.dump(config_data, file)
-
+        log.write("UPDATED THE FILE: " + str(file_path) + " WITH THE DATA: " + str(config_data))

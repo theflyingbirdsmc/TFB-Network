@@ -84,24 +84,14 @@ jobs:
           git config --global user.email "theflyingbirds1@gmail.com"
           git checkout ${{ github.event.pull_request.head.ref }}
 
-          python .github/workflows/transform.py
-          if git diff --quiet ; then
-            echo "No changes to commit"
-          else
-            git commit -am "Apply values from Live"
-          fi
+          rm -r logs/*
 
-      - name: Create a pull request
-        uses: actions/create-pull-request@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "Merge to live"
-          head: ${{ github.event.pull_request.head.ref }}
-          base: live
-      - name: Merge pull request
-        uses: actions/merge-pull-request@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          python .github/workflows/transform.py
+          git status
+          git commit -am "Apply values from Live"
+          
+          echo "PUSHING"
+          git push --force-with-lease ${{ github.event.pull_request.head.ref }} live
       
       - name: Get changed files from PR
         id: changed-files
