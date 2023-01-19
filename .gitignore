@@ -16,7 +16,7 @@ pkcs.p12
 .vscode-server
 cache
 libraries
-logs/
+TFB-**/logs/
 /FlameCord
 /pluGET
 */banned-ips.json
