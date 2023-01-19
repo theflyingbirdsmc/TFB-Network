@@ -76,6 +76,7 @@ jobs:
         with:
           name: live-values
           path: .github/workflows/scripts
+
       - name: Check if artifact file is empty
         run: |
           if [[ ! -s .github/workflows/scripts/livevalues.yml ]]; then
@@ -94,6 +95,7 @@ jobs:
           git commit -am "Apply values from Live"
 
   deploy_pull_request:
+    needs: transform_deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout to PR
@@ -121,22 +123,9 @@ jobs:
 
   merge_pull_request:
     runs-on: ubuntu-latest
+    needs: transform_deploy
     steps:
-      - name: Checkout to PR
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.ref }}
-          token: ${{ secrets.TFB_PAT }}
-          
+      - name: Checkout to live branch
+        run: git checkout live
       - name: Merge pull request into live branch
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const octokit = new Octokit();
-            octokit.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number
-            });
+        run: git merge ${{github.event.pull_request.head.ref}} --no-ff
