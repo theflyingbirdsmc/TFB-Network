@@ -86,7 +86,8 @@ jobs:
 
           python .github/workflows/transform.py
           git status
-          git commit -am "Apply values from Live"
+          git add .
+          git commit -am "Values from Live"
           git status
           
           echo "PUSHING"
