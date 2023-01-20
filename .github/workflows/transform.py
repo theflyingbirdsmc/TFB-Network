@@ -9,17 +9,18 @@ yaml.preserve_quotes = False
 yaml.indent(mapping=2, sequence=2, offset=0)
 
 root_path = "/home/runner/work/TFB-Network/TFB-Network/"
+# root_path = "/home/container/TFB/" # Use in container
 # root_path = "E:/The Flying Birds/TFB-Dev/TFB-Network/"  # Use locally
 
 now = datetime.now()
 # dd/mm/YY H:M:S
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
-log = open(root_path + '.github/transformlog.txt', "w+")
-log.write(dt_string + " - If any files have been edited they will be shown here")
+log = open('./transformlog.txt', "w+")
+log.write(dt_string + " - If any files have been edited they will be shown here\n")
 
 with open(root_path + '.github/workflows/scripts/livevalues.yml') as f:
-    live_values = yaml.load(f)
+    live_values = yaml.load(f) or {} # If livevalues.yml returns none we want empty directory instead
 
 for file_path, file_data in live_values.items():
     # Load the file using the YAML class
@@ -43,4 +44,4 @@ for file_path, file_data in live_values.items():
     # # Save the updated file
     with open(root_path + file_path, "w") as file:
         yaml.dump(config_data, file)
-        log.write("UPDATED THE FILE: " + str(file_path) + " WITH THE DATA: " + str(config_data))
+        log.write("UPDATED THE FILE: " + str(file_path) + " WITH THE DATA: " + str(config_data) + "\n")
