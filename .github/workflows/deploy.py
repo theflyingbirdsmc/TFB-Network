@@ -22,5 +22,12 @@ for file in file_path:
             remotePath = file[file.find('/'):]
             print("I'm + " + server_sftpusernames[server] + "for the server " + server)
             ssh_client.connect(hostname='germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022)
-            s = ssh_client.open_sftp()
-            s.put(file, remotePath)
+            sftp = ssh_client.open_sftp()
+            sftp.put(file, remotePath)
+
+            if "gradle.build" in file:
+                localPath = file.split('/')[0]
+                print(remotePath)
+
+                files = sftp.listdir()
+                print(str(files))
