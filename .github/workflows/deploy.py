@@ -1,5 +1,7 @@
 import os
 import paramiko
+import subprocess
+
 ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
@@ -28,6 +30,8 @@ for file in file_path:
             if "gradle.build" in file:
                 localPath = file.split('/')[0]
                 print(remotePath)
+                localPlugins = subprocess.check_output('gradle plugins -p ' + localPath, shell=True)
+                print(localPlugins.decode("utf-8"))
 
-                files = sftp.listdir()
+                live_server = sftp.listdir()
                 print(str(files))
