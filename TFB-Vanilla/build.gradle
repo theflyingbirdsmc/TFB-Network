@@ -7,7 +7,7 @@ dependencies {
     implementation 'Server:Paper:1.19.3-379'
     implementation 'GadgetsMenu:GadgetsMenu:5.2.14'
     implementation 'Plan:Plan:5.5-build-2150'
-    implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.7'
+    implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.9'
 }
 
 repositories {
