@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+dependencies {
+    implementation 'Server:Paper:1.19.3-379'
+    implementation 'BuycraftX:BuycraftX:12.0.8'
+    implementation 'ChatControlRed:ChatControlRed:10.16.1'
+    implementation 'CommandPanels:CommandPanels:3.18.3.0'
+    implementation 'DecentHolograms:DecentHolograms:2.7.8'
+    implementation 'Essentials:Essentials:2.19.7'
+    implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.7'
+    implementation 'EssentialsChat:EssentialsChat:2.19.7'
+    implementation 'EssentialsGeoIP:EssentialsGeoIP:2.19.4'
+    implementation 'EssentialsProtect:EssentialsProtect:2.19.7'
+    implementation 'EssentialsSpawn:EssentialsSpawn:2.19.7'
+    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.5.1-SNAPSHOT-335;7db1e9c'
+    implementation 'GadgetsMenu:GadgetsMenu:5.2.14'
+    implementation 'GSit:GSit:1.3.0'
+    implementation 'LibsDisguises:LibsDisguises:10.0.31'
+    implementation 'LuckPerms:LuckPerms:5.4.56'
+    implementation 'Multiverse-Core:Multiverse-Core:4.3.1-b861'
+    implementation 'PlaceholderAPI:PlaceholderAPI:2.11.2'
+    implementation 'Plan:Plan:5.5-build-2150'
+    implementation 'ProtocolLib:ProtocolLib:5.0.0-SNAPSHOT-b593'
+    implementation 'SuperVanish:SuperVanish:6.2.12'
+    implementation 'TAB:TAB:3.2.1'
+    implementation 'Vault:Vault:1.7.3-b131'
+    implementation 'ViaBackwards:ViaBackwards:4.5.1'
+    implementation 'ViaVersion:ViaVersion:4.5.1'
+    implementation 'VoidGen:VoidGen:2.2.1'
+    implementation 'VotingPlugin:VotingPlugin:6.10.0'
+    implementation 'WorldGuard:WorldGuard:7.0.8-beta-01+cbb2ba7'
+}
+
+repositories {
+    mavenCentral {
+        url "${MAVEN_URL}"
+        credentials {
+            username = "${MAVEN_USERNAME}"
+            password = "${MAVEN_PASSWORD}"
+        }
+    }
+}
+
+task plugins(type: Copy) {
+    delete fileTree(dir: 'plugins', include: 'plugins/*.jar')
+    from configurations.compileClasspath
+    exclude '*Paper*', '*Flamecord*'
+    into "plugins"
+}
+
+task server(type: Copy) {
+    delete fileTree(dir: '.' , include: './*.jar')
+    from configurations.compileClasspath
+    include 'Paper-*', 'Flamecord-*'
+    rename '.*-(.+)', 'server.jar'
+    into "."
+}

@@ -28,6 +28,6 @@ TFB-**/logs/
 */plugins/Parkour/players/*
 .github/workflows/scripts/livevalues.yml
 *world_*
-*.gradle
+**/.gradle
 *build/
 **/gradle.properties

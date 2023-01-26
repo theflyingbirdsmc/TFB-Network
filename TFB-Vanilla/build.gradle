@@ -20,18 +20,19 @@ repositories {
     }
 }
 
-clean {
-  delete fileTree(dir: 'plugins' , include: '/*.jar')
-}
+// clean {
+//   delete fileTree(dir: 'plugins' , include: '/*.jar')
+// }
 
 task plugins(type: Copy) {
-    delete fileTree(dir: 'plugins' , include: '/*.jar')
+    delete fileTree(dir: 'plugins', include: 'plugins/*.jar')
     from configurations.compileClasspath
-    into "/home/container/TFB/TFB-Vanilla/plugins"
+    exclude '*Paper*', '*Flamecord*'
+    into "plugins"
 }
 
 task server(type: Copy) {
-    delete fileTree(dir: '.' , include: '/*.jar')
+    delete fileTree(dir: '.' , include: './*.jar')
     from configurations.compileClasspath
     include 'Paper-*', 'Flamecord-*'
     rename '.*-(.+)', 'server.jar'
