@@ -75,11 +75,11 @@ change-tab-complete-name: false
 # If the teleport destination is unsafe, should players be teleported to the nearest safe location?
 # If this is set to true, Essentials will attempt to teleport players close to the intended destination.
 # If this is set to false, attempted teleports to unsafe locations will be cancelled with a warning.
-teleport-safety: true
+teleport-safety: false
 
 # This forcefully disables teleport safety checks without a warning if attempting to teleport to unsafe locations.
 # teleport-safety and this option need to be set to true to force teleportation to dangerous locations.
-force-disable-teleport-safety: false
+force-disable-teleport-safety: true
 
 # If a player is teleporting to an unsafe location in creative, adventure, or god mode; they will not be teleported to a
 # safe location. If you'd like players to be teleported to a safe location all of the time, set this option to true.
@@ -360,7 +360,7 @@ use-nbt-serialization-in-createkit: false
 # Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.
 
 enabledSigns:
-  #- color
+  - color
   #- balance
   #- buy
   #- sell
@@ -754,9 +754,9 @@ world-home-permissions: false
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
   default: 3
-  budgie: 10
-  colibri: 25
-  phoenix: 1000
+  budgie: 4
+  colibri: 5
+  phoenix: 10
 
 # In this example someone with 'essentials.sethome.multiple' and 'essentials.sethome.multiple.vip' will have 5 homes.
 # Remember, they MUST have both permission nodes in order to be able to set multiple homes.
@@ -897,7 +897,7 @@ chat:
   # {TEAMPREFIX} - The sender's scoreboard team prefix.
   # {TEAMSUFFIX} - The sender's scoreboard team suffix.
 
-  format: '{DISPLAYNAME} &8»&r {MESSAGE}'
+  format: ''
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 

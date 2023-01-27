@@ -43,7 +43,7 @@ Channels:
   Ignore_Worlds: []
   
   # What commands should trigger our main channel command?
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'channel'
   - 'ch'
@@ -84,6 +84,13 @@ Channels:
   # bypass permissions for operators, this functions applies to everyone. 
   Antispam_Broadcast_Threshold: 1 second
   
+  # If a player chats in a ranged channel and nobody can her his message (we ignore vanished
+  # players), we send him a warning message (which you can disable in localization/messages_en.yml
+  # by setting Player.Channel_Range_Notification key to "").
+  #
+  # How long should we wait between displaying each notification that nobody is nearby to chat?
+  Ranged_Channel_No_Near_Player_Delay: 3 seconds
+  
   # Set to false to free up memory when you autojoin players to channels and won't let
   # players change their channels, or you only have one channel that all players subscribe to.
   Save_To_Database: true
@@ -105,9 +112,13 @@ Channels:
   #                   Warning: The only way to hide console log is to cancel the event,
   #                   which may conflict with DynMap or other plugins. Be careful hiding this!
   #
-  # - Format_Discord:  Overrides the format from above for messages shown on Discord. To disable, do NOT
-  #                    use the Discord_Channel_Id option below and we simply won't send messages to Discord.
-  #                    For messages sent from Discord to Minecraft, we use the standard Format option.
+  # - Format_Discord: Overrides the format from above for messages shown on Discord. To disable, do NOT
+  #                   use the Discord_Channel_Id option below and we simply won't send messages to Discord.
+  #                   For messages sent from Discord to Minecraft, we use the standard Format option.
+  #
+  # - Format_Discord_Webhook_Name: If Integration.Discord.Webhook is enabled, this option overrides the
+  #                                name shown on the message, if you want to show a player's prefix here
+  #                                simply set it to "[{player_prefix}] {player_name}" for example.
   #
   # - Format_Spy: Overrides the spy format from the "Spy" section below. Set to "none" to hide.
   #
@@ -124,14 +135,19 @@ Channels:
   # - Party: Makes the channel players only reach other players in the same party. This can work
   #          together with Range, but does not require that option. 
   #          Available values: factions-faction, plotsquared-plot, towny-town, towny-nation,
-  #          mcmmo-party, towny-ally and lands-land
+  #          mcmmo-party, towny-ally, lands-land, bentobox-island-visitor, bentobox-island-coop,
+  #          bentobox-island-trusted, bentobox-island-member, bentobox-island-subowner
+  #          bentobox-island-owner, bentobox-island-mod and bentobox-island-admin
   #          Warning: The Party option does not work over BungeeCord!
   #
   # - Message_Delay: This overrides Anti_Spam.Chat.Delay so you can chat chat delay per channel.
   #                  Put string values there like "5 seconds" or "1 minute" etc.
   #
-  # - Bungee: true/false option. This overrides Integration.BungeeCord from below, so you can
-  #           disable BungeeCord message synchronization for some channels.
+  # - Bungee: true/false option. If not set, we default to Integration.BungeeCord option. 
+  #
+  # - Bungee_Spy: true/false option. True = we will send channel messages to spying administrators 
+  #               over BungeeCord network. This works even if Bungee is disabled so you can spy
+  #               local chat over your network. If not set, defaults to "Bungee" option, see above.
   #
   # - Discord_Channel_Id: a numeric ID of your Discord channel to link this channel with, see:
   #                       https://github.com/kangarko/ChatControl-Red/wiki/Discord
@@ -496,13 +512,21 @@ Private_Messages:
   # If you type /tell <player> we toggle automode for you, so chat messages will go to their inbox.
   # You won't need to type /r or /tell <player> to send a message to this player.
   Auto_Mode: true
+
+  # Should we toggle off private messages by default for players?
+  # When set to true, users will need to toggle on private messages to send/receive them.
+  # Once manually toggled back on, we remember their choice and won't toggle PMs off next time.
+  #
+  # [IMPORTANT] If `Clear_Cache_On_Disconnect` is enabled, users will need to toggle PMs on
+  # each time they join the server.
+  Disabled_By_Default: false
   
   # If you type /tell <player> we toggle automode for you, so chat messages will go to their inbox.
   # If you stop typing after the given amount of time, we automatically disable automode, if any.
   Auto_Mode_Leave_Threshold: 5 minutes
   
   # The tell command aliases.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Tell_Aliases:
   - 'tell'
   - 'w'
@@ -514,7 +538,7 @@ Private_Messages:
   - 'whisper'
   
   # The reply command aliases.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Reply_Aliases:
   - 'reply'
   - 'r'
@@ -579,6 +603,10 @@ Messages:
   # a bit later such as 1 tick later than the other messages. 
   # **YOU CANNOT OVERRIDE THIS WITH THE "DELAY" OPERATOR**
   Defer_Join_Message_By: 1 tick
+  
+  # If you have a custom resource pack you can delay showing join messages until player accept 
+  # and downloads it. We will not show anything on decline/failed download.
+  Delay_Until_Resource_Pack_Loaded: false
   
   # The SHORTEST delay when sending timed messages. You CANNOT use "delay" operator lower than this
   # in your messages/timed.rs file. When no delay operator is used, we use Timed_Delay as default. 
@@ -662,7 +690,7 @@ Me:
   Enabled: false
   
   # What commands will invoke the me feature?
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'me'
   
@@ -678,7 +706,7 @@ List:
   Enabled: false
   
   # What commands will invoke the list feature?
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'list'
   - 'ls'
@@ -712,7 +740,7 @@ Ignore:
   Bidirectional: false
   
   # The commands that invoke the ignore feature.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'ignore'
   - 'ig'
@@ -736,7 +764,7 @@ Mute:
   Broadcast: true
 
   # The commands that invoke the mute feature.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'mute'
   
@@ -785,11 +813,15 @@ Motd:
   # Should we enable this feature?
   Enabled: false
   
+  # Run motd on a separate thread? Experimental and may break custom variables calling Bukkit API
+  # Recommended if you are downloading images in your format
+  Async: false
+  
   # How long to wait to show motd on join?
   Delay: 3 ticks
   
   # The commands that manually show the motd to the player.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'motd'
   - 'news'
@@ -840,7 +872,7 @@ Mail:
   Enabled: false
   
   # The commands that invoke the mail command.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'mail'
   - 'email'
@@ -866,7 +898,7 @@ Tag:
   Apply_On: []
   
   # The commands that invoke the tag command.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'tag'
   
@@ -891,7 +923,7 @@ Tag:
 Real_Name:
 
   # The commands that invoke the tag command.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'realname'
   - 'realn'
@@ -925,7 +957,7 @@ Toggle:
   - 'pm'
   
   # The commands that invoke the toggle command.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'toggle'
   - 'tg'
@@ -954,7 +986,7 @@ Spy:
   Prefix: '&8[&5Spy&8] '
   
   # The commands that invoke the spy command.
-  # EDIT AS YOU WISH BUT DO NOT REMOVE THE FIRST ALIAS
+  # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'spy'
   
@@ -1285,7 +1317,11 @@ Integration:
     # do not have DiscordSRV installed but their channels have Discord & Bungee enabled to
     # forward the message to this server and use this server's DiscordSRV plugin to send
     # it to Discord. Only set this to true for 1 server on your network that has DiscordSRV
-    # installed to avoid duplication.
+    # installed to avoid duplication. 
+    #
+    # When this option is set to true, due to a technical limitation in order for a discord message 
+    # to be forwarded, at least one person has to be on the server with DiscordSRV installed. If no
+    # one is on that server, no message will be forwarded to the other servers on your network.
     #
     # TO AVOID DUPLICATED MESSAGES, ONLY INSTALL DISCORDSRV ONE 1 SERVER ON YOUR NETWORK
     #
@@ -1374,7 +1410,12 @@ Command_Aliases:
 # to your messages/ folder where you can edit it.
 # See tutorial here: https://github.com/kangarko/ChatControl-Red/wiki/Localization
 #
-# Available: en (English) and fr (French)
+# AVAILABLE TRANSLATIONS: en (English) - fr (French)
+#                         tw (Traditional Chinese - Credits: github.com/twseer67875)
+#                         it (Italian - Credits: builtbybit.com/members/bugabuseme.191293/)
+#
+# If you wish to share your translation, feel free to submit it on our github by opening a new issue: https://github.com/kangarko/ChatControl-Red/issues/new
+# You will be credited in this file, like our other kind translators, and in the update log!
 # -------------------------------------------------------------------------------------------------
 Locale: en
 
@@ -1385,10 +1426,11 @@ Locale: en
 Prefix: '&8[&cChatControl&8]&7 '
 
 # -------------------------------------------------------------------------------------------------
-# How we should look up player data?
+# How we should look up player data? 
 #
-# true = look up and save player data by their Mojang unique ID (recommended on online servers)
+# true = look up and save player data by his Mojang unique ID (recommended on online servers)
 # false = use player names to save and load player data (recommended on offline servers)
+#         (requires external database, otherwise ignored)
 # -------------------------------------------------------------------------------------------------
 UUID_Lookup: true
 
@@ -1400,7 +1442,7 @@ UUID_Lookup: true
 Clear_Data_If_Inactive: 90 days
 
 # -------------------------------------------------------------------------------------------------
-# We store temporary player data such as their last message (used for antispam) even after they
+# We store temporary player data such as his last message (used for antispam) even after they
 # disconnect. Set this to true to clear it (recommended for hub servers with many players
 # reconnecting so that it will save memory). The downside is that some checks will reset on quit.
 # -------------------------------------------------------------------------------------------------

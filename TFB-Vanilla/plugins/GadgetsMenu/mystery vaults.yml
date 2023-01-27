@@ -1,8 +1,0 @@
-Mystery-Vaults:
-  VanillaSpawn:
-    BlockFace: EAST
-    Location:
-      world: world
-      x: -16.0
-      y: 121.0
-      z: -4.0
