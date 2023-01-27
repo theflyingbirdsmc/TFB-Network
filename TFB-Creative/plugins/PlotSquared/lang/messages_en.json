@@ -719,5 +719,7 @@
   "flags.flag_description_projectiles": "<gray>Prevents guests from shooting projectiles on the plot when set to false.</gray>",
   "info.plot_list_player_unknown": "<hover:show_text:\"<red>The owner of this plot is unknown</red>\"><white><info.unknown></white></hover>",
   "info.plot_list_player_server": "<hover:show_text:\"<red>The plot is owned by the server</red>\"><white><info.server></white></hover>",
-  "info.plot_list_player_everyone": "<hover:show_text:\"<blue>The plot is owned by everyone</blue>\"><white><info.everyone></white></hover>"
+  "info.plot_list_player_everyone": "<hover:show_text:\"<blue>The plot is owned by everyone</blue>\"><white><info.everyone></white></hover>",
+  "member.player_not_removed": "<prefix><gray><player></gray><red> is neither added, trusted or denied on the plot, thus doesn't need to be removed.</red>",
+  "flags.flag_description_beacon_effect": "<gray>Enables beacon effects on the plot.</gray>"
 }

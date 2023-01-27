@@ -54,6 +54,7 @@ scoreboard-teams:
     static-lines:
       myCustomLine: 0.66
     disable-in-servers: []
+  can-see-friendly-invisibles: false
 yellow-number-in-tablist:
   enabled: true
   value: '%ping%'

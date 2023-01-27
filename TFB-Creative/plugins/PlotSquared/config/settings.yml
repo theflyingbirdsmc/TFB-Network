@@ -74,6 +74,8 @@ enabled-components:
   kill-road-mobs: true
   # Also kill any road mobs that are being ridden, or are leashed
   kill-owned-road-mobs: false
+  # Also kill any road mobs that are named
+  kill-named-road-mobs: false
   # Kill items on roads (Stick, Paper, etc.)
   kill-road-items: true
   # Kill vehicles on roads (Boat, Minecart, etc.)
@@ -116,6 +118,8 @@ enabled-components:
   - "ap"
   # Whether PlotSquared should hook into MvDWPlaceholderAPI or not
   use-mvdwapi: true
+  # Prevent cross plot beacon effects
+  disable-beacon-effect-overflow: true
 
 # This is an auto clearing task called `task1`
 auto-clear:
@@ -189,20 +193,20 @@ ratings:
 # Teleportation related settings
 teleport:
   # Teleport to your plot on death
-  on-death: false
+  on-death: true
   # Teleport to your plot on login
-  on-login: false
+  on-login: true
   # Teleport to your plot on claim (/plot claim)
-  on-claim: true
+  on-claim: false
   # Teleport to your plot on auto (/plot auto)
   on-auto: true
   # Add a delay to all teleport commands (in seconds)
   # Assign `plots.teleport.delay.bypass` to bypass the cooldown
   delay: 0
   # Teleport outside of the plot before clearing
-  on-clear: true
+  on-clear: false
   # Teleport outside of the plot before deleting
-  on-delete: true
+  on-delete: false
   # The visit command is ordered by world instead of globally
   per-world-visit: false
   # Search merged plots for having multiple owners when using the visit command
