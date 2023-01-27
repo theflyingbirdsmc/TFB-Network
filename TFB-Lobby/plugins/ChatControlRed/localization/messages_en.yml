@@ -121,6 +121,9 @@ Channels:
 # Messages related to commands
 # -------------------------------------------------------------------------------------------------
 Commands:
+  # true = https://i.imgur.com/us88BCT.png
+  # false = https://i.imgur.com/N7jLu7v.png
+  Simple_Help_Design: false
   No_Console: '&cYou may only use this command as a player.'
   No_BungeeCord: You need BungeeCord enabled use this feature.
   No_MySQL: This command requires MySQL enabled in settings.yml.
@@ -309,11 +312,13 @@ Commands:
     Invalid_Decoration: 'Invalid chat decoration. Use & or name syntax. Available: {0}'
     Decoration_Not_Allowed: Please only enter colors not decorations.
     Color_Not_Allowed: Please only enter decorations not colors.
-    Success_Color: Set {0} chat color to {1}&7
-    Success_Decoration: Set {0} chat decoration to {1}&r&7
-    Reset: Set {0} chat color to default
-    Reset_Decoration: Set {0} chat decoration to default
-
+    Reset_Color: '&7Reset chat color for {0}.'
+    Set_Color: '&7Set chat color to {1} &7for {0}.'
+    Reset_Color_Set_Decoration: '&7Reset chat color and set decoration to {1}&r&7 for {0}.'
+    Set_Color_Set_Decoration: '&7Set chat color to {1}&7 and set decoration to {2}&r&7 for {0}.'
+    Reset_Color_Reset_Decoration: '&7Reset both chat color and decoration for {0}.'
+    Set_Color_Reset_Decoration: '&7Set chat color to {1}&7 and reset decoration for {0}.'
+    
   Forward:
     Usage: <server> <command...>
     Description: Forward commands to BungeeCord.

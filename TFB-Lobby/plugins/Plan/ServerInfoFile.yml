@@ -2,5 +2,5 @@
 # Tread with caution.
 Server:
     ID: 2
-    UUID: ff5894f0-14ef-454d-9200-15a1901a05fa
+    UUID: "ff5894f0-14ef-454d-9200-15a1901a05fa"
     Web_address: "https://www.example.address"
