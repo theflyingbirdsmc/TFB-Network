@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    // Network plugins
     implementation 'Server:Paper:1.19.3-379'
     implementation 'GadgetsMenu:GadgetsMenu:5.2.14'
     implementation 'Plan:Plan:5.5-build-2150'

@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    // Network plugins
     implementation 'Server:Paper:1.19.3-379'
     implementation 'BuycraftX:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.16.1'
