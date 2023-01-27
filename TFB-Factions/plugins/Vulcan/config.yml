@@ -3145,6 +3145,18 @@ checks:
           max: 3
           multiple: 0.5
           decay: 0.25
+      o:
+        enabled: false
+        punishable: false
+        discord-alert-interval: 1
+        broadcast-punishment: false
+        max-violations: 12
+        alert-interval: 1
+        dont-alert-until: 1
+        maximum-ping: 100000
+        minimum-tps: 19.0
+        punishment-commands:
+        - kick %player% &c[Vulcan] Unfair Advantage
     timer:
       a:
         enabled: true

@@ -1,8 +1,8 @@
-############################################################
+# ###########################################################
 # +------------------------------------------------------+ #
 # |                  F Permission GUI                    | #
 # +------------------------------------------------------+ #
-############################################################
+# ###########################################################
 
 # This is the Faction permissions GUI, it consists of 2 inventories
 #
@@ -23,6 +23,7 @@
 # 2nd: Dummy items, these items server no other purpose than to look good, they have their own
 # items defined in dummy items, and can later be assigned to specific slots in the GUI's
 fperm-gui:
+  denyCommandsToEditPerms: false
   relation:
     # GUI Name
     name: '&8&lFaction Permissions'
@@ -30,7 +31,7 @@ fperm-gui:
     rows: 4
     # These are the slots where the relations are going to be placed on the first GUI
     # Note: Slots start at 0 and end at one less that GUI size
-    #Setting a slot to -1 will disable it
+    # Setting a slot to -1 will disable it
     slots:
       recruit: 10
       normal: 12
@@ -51,9 +52,9 @@ fperm-gui:
       enemy: DIAMOND_AXE
       neutral: WOOD_AXE
     Placeholder-Item:
-      Name: '&c{relation}&f Permissions!' #{relation} placeholder now returns with the first letter being capital :D
+      Name: '&c{relation}&f Permissions!' # {relation} placeholder now returns with the first letter being capital :D
   action:
-    name: 'Faction Permissions'
+    name: Faction Permissions
     rows: 6
     Access-Colors:
       Allow: '&a'
@@ -160,23 +161,23 @@ fperm-gui:
     placeholder-item:
       name: '&c&lPermission to {action}'
       lore:
-        - ''
-        - '&4&l* &cStatus: &f{action-access-color}{action-access}'
-        - ''
-        - '&7&l* &eDescription: {description}'
-        - ''
-        - '&2&l* &aLeft click to &a&lAllow&a.'
-        - '&4&l* &cRight click to &c&lDeny&c.'
-        - '&8&l* &7Middle click to &7&lUndefine&7.'
+      - ''
+      - '&4&l* &cStatus: &f{action-access-color}{action-access}'
+      - ''
+      - '&7&l* &eDescription: {description}'
+      - ''
+      - '&2&l* &aLeft click to &a&lAllow&a.'
+      - '&4&l* &cRight click to &c&lDeny&c.'
+      - '&8&l* &7Middle click to &7&lUndefine&7.'
   # Back item will be take you to the previous GUI
   back-item:
     Type: ARROW
     Name: '&c&l<- Back'
     Lore:
-      - '&7Click to return to previous menu.'
+    - '&7Click to return to previous menu.'
   # Dummy Items
   dummy-item:
     Type: BLACK_STAINED_GLASS_PANE
     Name: ' '
     Lore:
-      - ' '
+    - ' '

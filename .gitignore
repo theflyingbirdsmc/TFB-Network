@@ -32,3 +32,5 @@ TFB-**/logs/
 *build/
 **/gradle.properties
 TFB-Creative/plugins/ChatControlRed/log.csv
+TFB-Factions/plugins/Vulcan/violations.txt
+**/ImageOnMap/images/*

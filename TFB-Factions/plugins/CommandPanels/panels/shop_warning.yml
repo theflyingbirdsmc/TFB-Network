@@ -1,0 +1,23 @@
+panels:
+  shop_warning:
+    perm: default
+    rows: 5
+    title: '&cWarning!'
+    empty: air
+    item:
+      '40':
+        material: RED_WOOL
+        stack: 1
+        name: '&cGo back'
+        commands:
+        - open= faction_shop
+      '14':
+        material: ROTTEN_FLESH
+        stack: 1
+        name: '&bRotten Flesh &7(&fInv: &a%checkitem_amount_mat:rotten_flesh%&7)'
+        commands:
+        - left= sell rotten_flesh 1
+        - right= sell rotten_flesh 64
+        lore:
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:rotten_flesh%'
+      

@@ -57,3 +57,7 @@ expansions:
   checkitem:
     give_enabled: true
     remove_enabled: true
+  math:
+    Rounding: half-up
+    Decimals: 3
+    Debug: false

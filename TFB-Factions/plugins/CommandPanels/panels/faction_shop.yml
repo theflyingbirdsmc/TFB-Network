@@ -6,6 +6,7 @@ panels:
     empty: air
     commands:
     - open= faction_shop
+    - shop
     item:
       '3':
         material: cps= self
@@ -13,7 +14,7 @@ panels:
         name: '&f%cp-player-displayname% Info'
         commands:
         lore:
-        - '&fWallet: &b$%vault_eco_balance_formatted%'
+        - '&fWallet: &e$&a%vault_eco_balance%'
       '4':
         material: BOOK
         stack: 1
@@ -36,7 +37,7 @@ panels:
         - right= open= factionbank_withdraw
         lore:
         - '&b%factionsuuid_faction_name%&f' 
-        - '&fBalance: &b$%factionsuuid_faction_bank_balance%'
+        - '&fBalance: &e$&a%factionsuuid_faction_bank_balance%'
         - ''
         - '&fLeft click to deposit.'
         - '&fRight click to withdraw.'

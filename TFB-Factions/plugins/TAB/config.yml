@@ -4,7 +4,8 @@ header-footer:
   disable-in-worlds:
   - disabledworld
   header:
-  - '&7mc.&#ee2b23T&#f04923h&#f26622e &#3551d7F&#366dd9l&#3789dby&#38a4ddi&#39c0dfn&#3adce1g &#00ff00B&#3fff00i&#7dff00r&#bcff00d&#faff00s&7.net'
+  - '&7mc.&#ee2b23T&#f04923h&#f26622e &#3551d7F&#366dd9l&#3789dby&#38a4ddi&#39c0dfn&#3adce1g
+    &#00ff00B&#3fff00i&#7dff00r&#bcff00d&#faff00s&7.net'
   - ''
   footer:
   - ''
@@ -52,6 +53,7 @@ scoreboard-teams:
     static-lines:
       myCustomLine: 0.66
     disable-in-servers: []
+  can-see-friendly-invisibles: false
 yellow-number-in-tablist:
   enabled: true
   value: '%ping%'
@@ -104,7 +106,6 @@ scoreboard:
   - disabledworld
   scoreboards:
     admin:
-      #display-condition: permission:tab.scoreboard.admin
       title: Admin scoreboard
       lines:
       - '&6Network:'
@@ -121,7 +122,8 @@ scoreboard:
       - '&f* &bUptime&7: &f%server_uptime%'
       - '&f* &bMemory&7: &f%memory-used%&7/&4%memory-max%'
     default:
-      title: '&#ee2b23T&#f04923h&#f26622e &#3551d7F&#366dd9l&#3789dby&#38a4ddi&#39c0dfn&#3adce1g &#00ff00B&#3fff00i&#7dff00r&#bcff00d&#faff00s'
+      title: '&#ee2b23T&#f04923h&#f26622e &#3551d7F&#366dd9l&#3789dby&#38a4ddi&#39c0dfn&#3adce1g
+        &#00ff00B&#3fff00i&#7dff00r&#bcff00d&#faff00s'
       lines:
       - '&6Network:'
       - '&f* &eOnline&7: &a%online%&7/&f%bungee_total%'
@@ -135,7 +137,7 @@ scoreboard:
       - '&f* &eChat&7: &f%chatcontrolred_channel%'
       - '&f* &ePing&7: &a%ping%&7ms'
     factions:
-      title: 'Faction Information'
+      title: Faction Information
       lines:
       - ''
       - '&6%factionsuuid_faction_name%:'
