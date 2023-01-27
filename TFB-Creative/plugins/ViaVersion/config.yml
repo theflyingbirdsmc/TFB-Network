@@ -4,11 +4,11 @@
 # Discord - https://viaversion.com/discord
 # viaversion.com - Discussion tab
 # Docs - https://docs.viaversion.com/display/VIAVERSION/Configuration
-# 
-# ----------------------------------------------------------#
+#
+#----------------------------------------------------------#
 #                     GLOBAL OPTIONS                       #
-# ----------------------------------------------------------#
-# 
+#----------------------------------------------------------#
+#
 # Should ViaVersion check for updates?
 checkforupdates: true
 # Send the supported versions with the Status (Ping) response packet
@@ -16,7 +16,8 @@ send-supported-versions: false
 # Easier to configure alternative to 'block-protocols'. Uses readable version strings with possible '<' and '>' prefixes.
 # An example to block 1.16.4, everything below 1.16, as well as everything above 1.17.1 would be: ["<1.16", "1.16.4", ">1.17.1"]
 # You can use both this and the block-protocols option at the same time as well.
-block-versions: []
+block-versions:
+- <1.19
 # Block specific Minecraft protocol version numbers.
 # List of all Minecraft protocol versions: http://wiki.vg/Protocol_version_numbers, or use a generator: https://via.krusic22.com
 block-protocols: []
@@ -28,22 +29,22 @@ block-disconnect-msg: You are using an unsupported Minecraft version!
 reload-disconnect-msg: Server reload, please rejoin!
 # We warn when there's a error converting item and block data over versions, should we suppress these? (Only suggested if spamming)
 suppress-conversion-warnings: false
-# 
-# ----------------------------------------------------------#
+#
+#----------------------------------------------------------#
 #                  GLOBAL PACKET LIMITER                   #
-# ----------------------------------------------------------#
+#----------------------------------------------------------#
 # THIS FEATURE IS DISABLED ON 1.17.1+ PAPER SERVERS, SINCE IT HAS A BETTER PACKET-LIMITER INBUILT
-# 
+#
 # Packets Per Second (PPS) limiter (Use -1 on max-pps and tracking-period to disable)
 # Clients by default send around 20-90 packets per second.
-# 
+#
 # What is the maximum per second a client can send (Use %pps to display their pps)
 # Use -1 to disable.
 max-pps: 800
 max-pps-kick-msg: You are sending too many packets!
-# 
+#
 # We can also kick them if over a period they send over a threshold a certain amount of times.
-# 
+#
 # Period to track (in seconds)
 # Use -1 to disable.
 tracking-period: 6
@@ -53,11 +54,11 @@ tracking-warning-pps: 120
 # This can never be higher than "tracking-period"
 tracking-max-warnings: 4
 tracking-max-kick-msg: You are sending too many packets, :(
-# 
-# ----------------------------------------------------------#
+#
+#----------------------------------------------------------#
 #                 MULTIPLE VERSIONS OPTIONS                #
-# ----------------------------------------------------------#
-# 
+#----------------------------------------------------------#
+#
 # Should we enable our hologram patch?
 # If they're in the wrong place enable this
 hologram-patch: false
@@ -94,7 +95,7 @@ fix-non-full-blocklight: true
 fix-1_14-health-nan: true
 # Should 1.15+ clients respawn instantly / without showing a death screen?
 use-1_15-instant-respawn: false
-# 
+#
 # Enable serverside block-connections for 1.13+ clients - all of the options in this section are built around this option
 serverside-blockconnections: true
 # Sets the method for the block connections (world for highly experimental (USE AT OWN RISK) world-level or packet for packet-level)
@@ -106,24 +107,32 @@ reduce-blockstorage-memory: false
 flowerstem-when-block-above: false
 # Vines that are not connected to blocks will be mapped to air, else 1.13+ would still be able to climb up on them.
 vine-climb-fix: false
-# 
+#
 # Ignores incoming plugin channel messages of 1.16+ clients with channel names longer than 32 characters.
 # CraftBukkit had this limit hardcoded until 1.16, so we have to assume any server/proxy might have this arbitrary check present.
 ignore-long-1_16-channel-names: true
-# 
+#
 # Force 1.17+ client to accept the server resource pack; they will automatically disconnect if they decline.
 forced-use-1_17-resource-pack: false
 # The message to be displayed at the prompt when the 1.17+ client receives the server resource pack.
 resource-pack-1_17-prompt: ''
-# 
+#
 # Caches light until chunks are unloaded to allow subsequent chunk update packets as opposed to instantly uncaching when the first chunk data is sent.
 # Only disable this if you know what you are doing.
 cache-1_17-light: true
-# 
-# ----------------------------------------------------------#
+#
+# 1.19 chat type formats used for 1.19.1+ clients.
+chat-types-1_19:
+  chat.type.text: <%s> %s
+  chat.type.announcement: '[%s] %s'
+  commands.message.display.incoming: '%s whispers to you: %s'
+  chat.type.team.text: '%s <%s> %s'
+  chat.type.emote: '* %s %s'
+#
+#----------------------------------------------------------#
 #             1.9+ CLIENTS ON 1.8 SERVERS OPTIONS          #
-# ----------------------------------------------------------#
-# 
+#----------------------------------------------------------#
+#
 # No collide options, these allow you to configure how collision works.
 # Do you want us to prevent collision?
 prevent-collision: true

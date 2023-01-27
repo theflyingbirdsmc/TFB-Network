@@ -319,6 +319,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰&7✰✰✰✰'
+        Show: true
       2-Star:
         Name: '&bMystery Egg &e✰✰'
         Material: TURTLE_EGG
@@ -334,6 +335,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰✰&7✰✰✰'
+        Show: true
       3-Star:
         Name: '&bMystery Egg &e✰✰✰'
         Material: TURTLE_EGG
@@ -349,6 +351,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b1'
         - ''
         - '&7Quality: &e✰✰✰&7✰✰'
+        Show: true
       4-Star:
         Name: '&bMystery Egg &e✰✰✰✰'
         Material: TURTLE_EGG
@@ -364,6 +367,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b3'
         - ''
         - '&7Quality: &e✰✰✰✰&7✰'
+        Show: true
       5-Star:
         Name: '&bMystery Egg &e✰✰✰✰✰'
         Material: TURTLE_EGG
@@ -379,6 +383,7 @@ GUI-Menus:
         - '&6Legendary items&7: &b4'
         - ''
         - '&7Quality: &e✰✰✰✰✰'
+        Show: true
   Gift-Inventory-Menu:
     GUI-Name: Gift Inventory
     Items:

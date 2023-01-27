@@ -1,0 +1,22 @@
+### Server Information ###
+Report generated on Fri Dec 30 22:51:06 CET 2022
+
+Operating system: Linux | 5.15.0-56-generic | amd64
+Java version: 17.0.2 | Oracle Corporation
+Server version: BUNGEECORD / 1.2.1
+Server IP and port: /0.0.0.0 / 25565
+Online mode: true
+Buycraft is-bungeecord setting: false
+
+### Plugin Information ###
+Plugin version: 12.0.8
+Platform: BUNGEECORD / 1.2.1
+
+Connected to Buycraft? false
+Web store information found? false
+Players in queue: []
+
+### Service status ###
+Can access Buycraft plugin API (https://plugin.buycraft.net)
+Can access Google over HTTPS (https://encrypted.google.com)
+Can access Google over HTTP (http://www.google.com)

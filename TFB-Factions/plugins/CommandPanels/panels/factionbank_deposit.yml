@@ -14,162 +14,162 @@ panels:
         '0':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$100'
+          name: '&fTransfer &e$&a100'
           commands:
           - f bank deposit 100
         '1':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$200'
+          name: '&fTransfer &e$&a200'
           commands:
           - f bank deposit 200
         '2':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$300'
+          name: '&fTransfer &e$&a300'
           commands:
           - f bank deposit 300
         '3':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$400'
+          name: '&fTransfer &e$&a400'
           commands:
           - f bank deposit 400
         '4':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$500'
+          name: '&fTransfer &e$&a500'
           commands:
           - f bank deposit 500
         '5':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$1000'
+          name: '&fTransfer &e$&a1000'
           commands:
           - f bank deposit 1000
         '6':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$1500'
+          name: '&fTransfer &e$&a1500'
           commands:
           - f bank deposit 1500
         '7':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$2000'
+          name: '&fTransfer &e$&a2000'
           commands:
           - f bank deposit 2000
         '8':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$2500'
+          name: '&fTransfer &e$&a2500'
           commands:
           - f bank deposit 2500
         '9':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$3000'
+          name: '&fTransfer &e$&a3000'
           commands:
           - f bank deposit 3000
         '10':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$3500'
+          name: '&fTransfer &e$&a3500'
           commands:
           - f bank deposit 3500
         '11':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$4000'
+          name: '&fTransfer &e$&a4000'
           commands:
           - f bank deposit 4000
         '12':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$4500'
+          name: '&fTransfer &e$&a4500'
           commands:
           - f bank deposit 4500
         '13':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$5000'
+          name: '&fTransfer &e$&a5000'
           commands:
           - f bank deposit 5000
         '14':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$6000'
+          name: '&fTransfer &e$&a6000'
           commands:
           - f bank deposit 6000
         '15':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$7000'
+          name: '&fTransfer &e$&a7000'
           commands:
           - f bank deposit 7000
         '16':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$8000'
+          name: '&fTransfer &e$&a8000'
           commands:
           - f bank deposit 8000
         '17':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$9000'
+          name: '&fTransfer &e$&a9000'
           commands:
           - f bank deposit 9000
         '18':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$10.000'
+          name: '&fTransfer &e$&a10.000'
           commands:
           - f bank deposit 10000
         '19':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$15.000'
+          name: '&fTransfer &e$&a15.000'
           commands:
           - f bank deposit 15000
         '20':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$20.000'
+          name: '&fTransfer &e$&a20.000'
           commands:
           - f bank deposit 20000
         '21':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$50.000'
+          name: '&fTransfer &e$&a50.000'
           commands:
           - f bank deposit 50000
         '22':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$100.000'
+          name: '&fTransfer &e$&a100.000'
           commands:
           - f bank deposit 100000
         '23':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$200.000'
+          name: '&fTransfer &e$&a200.000'
           commands:
           - f bank deposit 200000
         '24':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$500.000'
+          name: '&fTransfer &e$&a500.000'
           commands:
           - f bank deposit 500000
         '25':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$800.000'
+          name: '&fTransfer &e$&a800.000'
           commands:
           - f bank deposit 800000
         '26':
           material: BOOK
           stack: 1
-          name: '&fTransfer &b$1 Mil'
+          name: '&fTransfer &e$&a1 Mil'
           commands:
           - f bank deposit 1000000

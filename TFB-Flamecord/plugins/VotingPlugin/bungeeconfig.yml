@@ -3,12 +3,12 @@
 #
 # MYSQL Required on all setups
 # MYSQL INFO --------------------------
-Host: '172.17.0.1'
+Host: '65.108.8.46'
 # Default port is 3306
 Port: 3306
 Database: 's1_votingplugin'
-Username: 'u1_JNNwqMj5DK'
-Password: 'VD5KzT4Yks9G120w+MxgU11T'
+Username: 'u1_ouoD9Ps4h4'
+Password: 'dZ4VQh4VogXkhwB@!Cr3oFO+'
 # Max number of connections
 MaxConnections: 1
 # Table name prefix, for use with mutliple servers

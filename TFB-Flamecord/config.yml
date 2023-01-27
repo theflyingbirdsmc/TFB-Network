@@ -46,7 +46,7 @@ disabled_commands:
 - JustOneMore
 servers:
   CustomSMP:
-    address: 345555.18.0.1:25605
+    address: 172.18.0.1:25605
     motd: ''
     restricted: false
   creative:

@@ -1,3 +1,7 @@
-# SuperVanish v6.2.7 - Data file
+# SuperVanish v6.2.12 - Data file
 
 InvisiblePlayers: []
+PlayerData:
+  2a007b6b-8868-45f4-a994-23e556fb3030:
+    information:
+      name: lucasc_dk

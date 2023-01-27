@@ -26,6 +26,10 @@ chunk-loading:
   player-max-chunk-load-rate: -1.0
   player-max-concurrent-loads: 20.0
   target-player-chunk-send-rate: 100.0
+chunk-system:
+  gen-parallelism: default
+  io-threads: -1
+  worker-threads: -1
 collisions:
   enable-player-collisions: true
   send-full-pos-for-hard-colliding-entities: true
@@ -62,6 +66,9 @@ messages:
     Please contact the server administrators if you believe that this is in error.
   use-display-name-in-quit-message: false
 misc:
+  chat-threads:
+    chat-executor-core-size: -1
+    chat-executor-max-size: -1
   fix-entity-position-desync: true
   lag-compensate-block-breaking: true
   load-permissions-yml-before-plugins: true
@@ -115,6 +122,7 @@ timings:
   url: https://timings.aikar.co/
   verbose: true
 unsupported-settings:
+  allow-grindstone-overstacking: false
   allow-headless-pistons: false
   allow-permanent-block-break-exploits: false
   allow-piston-duplication: false

@@ -3,19 +3,19 @@ prefix: ''
 # SQLite section
 sqlite:
   # Should SQLite be used?
-  use: false
+  use: true
   # The file to use
   db: "storage"
 
 # MySQL section
 mysql:
   # Should MySQL be used?
-  use: true
-  host: "172.17.0.1"
+  use: false
+  host: "65.108.8.46"
   port: "3306"
-  user: "u6_anT4Fq4n9J"
-  password: "^cj.jK8.gWyr1sNrT=dRE5aO"
-  database: "s6_plot_db"
+  user: "u5_DEXeIJnxSl"
+  password: "x2IQ^K4prZAW=^uTzpGMMG@u"
+  database: "s5_plotsquared"
   # Set additional properties: https://goo.gl/wngtN8
   properties: 
   - "useSSL=true"

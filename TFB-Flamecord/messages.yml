@@ -109,3 +109,28 @@ antibot_country: |-
 secure_profile_required: A secure profile is required to join this server.
 secure_profile_expired: Secure profile expired.
 secure_profile_invalid: Secure profile invalid.
+flamecord_firewall_help: '&c/flamecord firewall <add/remove> <ip>'
+flamecord_firewall_add: '&cThe ip {0} was added to the firewall!'
+flamecord_firewall_remove: '&cThe ip {0} was removed from the firewall!'
+server_command_hover_players: '{0} players'
+antibot_stats: |-
+  &c&lFlameCord Antibot Stats
+   &7■ Total Pings: &a{0}
+   &7■ Total Connections: &b{1}
+
+   &7■ Current Pings: &a{2}
+   &7■ Current Connections: &b{3}
+flamecord_bplugins_nopermission: '&cYou don''t have permission to do this!'
+flamecord_bplugins_separator: ', '
+flamecord_bplugins_header: '&aPlugins ({0}): '
+flamecord_bip_nopermission: '&cYou don''t have permission to do this!'
+flamecord_bip_offline: '&cThe player is not online!'
+flamecord_bip_usage: '&c/bip <player>'
+flamecord_bip: |-
+  &aInformation about {0}&a:
+  &aUUID: &b{1}
+  &aIP: &b{2}
+  &aPing: &b{3}ms
+  &aLocale: &b{4}
+  &aView Distance: &b{5}
+  &aCurrent Server: &b{6}

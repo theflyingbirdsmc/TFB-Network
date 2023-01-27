@@ -1,9 +1,9 @@
 # These first 6 aren't configurable
 issues: "https://github.com/IntellectualSites/FastAsyncWorldEdit/issues"
 wiki: "https://intellectualsites.github.io/fastasyncworldedit-documentation/"
-date: "Fri Sep 02 00:00:00 CEST 2022"
-build: "https://ci.athion.net/job/FastAsyncWorldEdit/254"
-commit: "https://github.com/IntellectualSites/FastAsyncWorldEdit/commit/f16bde8b"
+date: "Sun Jan 29 00:00:00 CET 2023"
+build: "https://ci.athion.net/job/FastAsyncWorldEdit/335"
+commit: "https://github.com/IntellectualSites/FastAsyncWorldEdit/commit/f824e164"
 platform: "Bukkit"
 # Set true to enable WorldEdit restrictions per region (e.g. PlotSquared or WorldGuard).
 # To be allowed to WorldEdit in a region, users need the appropriate
@@ -339,8 +339,8 @@ limits:
     #  - If fast-placement is disabled, this may cause edits to be slower.
     universal-disallowed-blocks: true
     # List of blocks to deny use of. Can be either an entire block type or a block with a specific property value.
-    # Where block properties are specified, any blockstate with the property will be disallowed (i.g. all directions
-    # of a waterlogged fence). For blocking/remapping of all occurence of a property like waterlogged, see
+    # Where block properties are specified, any blockstate with the property will be disallowed (e.g. all directions
+    # of a waterlogged fence). For blocking/remapping of all occurrences of a property like waterlogged, see
     # remap-properties below.
     # Example block property blocking:
     #  - "minecraft:conduit[waterlogged=true]"

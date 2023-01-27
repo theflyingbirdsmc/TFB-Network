@@ -112,6 +112,9 @@ COMMAND:
       ENOUGH:
         POINTS: '&cYour faction does not have enough points to purchase this upgrade!'
     DISABLED: '&c[!] &7Faction Upgrades are &cdisabled&7.'
+    LEVEL:
+      ERROR: '&c[!] &7Faction Upgrade &e%1$s &7of level &e%2$s &7led to an invalid
+        value&7.'
   CORNER:
     CANT:
       CLAIM: '&c&l[!] &cYou may not claim this corner!'
@@ -392,6 +395,9 @@ COMMAND:
     DESCRIPTION: Invite a player to your faction
     BANNED: '&c&l[!]&7 &7%1$s &cis banned &7from your Faction. &cNot &7sending an
       invite.'
+    NOT:
+      IN:
+        ROSTER: '&c&l[!] &b%s &7is not in your factions roster!'
   DEINVITE:
     CANDEINVITE: '&c&l[!]&7 Players you can &cdeinvite: '
     CLICKTODEINVITE: '&c&l[!]&7 Click to &crevoke&7 invite for &c%1$s'
@@ -533,6 +539,9 @@ COMMAND:
     MOVEDLOG: '&c&l[!]&7 &c%1$s &7moved the player&c %2$s &7into the faction&c %3$s&7.'
     DESCRIPTION: '&a&l» &7Join a faction'
     BANNED: '&c&l[!]&7 You are &cbanned &7from &c%1$s.'
+    NOT:
+      IN:
+        ROSTER: '&c&l[!] &7You cannot join this faction, you''re not on their roster!'
   KICK:
     CANDIDATES: '&c&l[!]&7 Players you can kick: '
     CLICKTOKICK: 'Click to kick '
@@ -1154,6 +1163,50 @@ COMMAND:
       DESCRIPTION: Toggle global chat and only allow factions based chats
   MISSION:
     DESCRIPTION: Opens missions gui
+  SANDBOTS:
+    DESCRIPTION: The ability to spawn sandbots in
+  SET:
+    BASE:
+      REGION:
+        FAILED: '&cPlease wait {time} minutes before resetting your base region.'
+        SUCCESS: '&aSaved {claims} connected claims in a 50x50 radius as your faction''s
+          base region.'
+        DESCRIPTION: Set base region for faction
+        RESET: '&aYour factions Base Region has been successfully cleared'
+        MAX:
+          REGIONS: '&c&l[!] &7Your faction already has set their base region &e%1$s&7/&e%2$s
+            times!'
+        GRACE: '&c&l[!] &7You may not set your base region whilst &cgrace is disabled&7!'
+        NOT:
+          CLAIMS: '&c&l[!] &7You must be in &eyour own claims &7to use this command!'
+    RELATION:
+      SUCCESS: '&c&l[!] &7You have set a relation of &e%1$s &7between &b%2$s and &b%3$s&7.'
+      DESCRIPTION: Set the relation of 2 factions.
+  SHIELD:
+    DESCRIPTION: Use of shield selection guis
+  ROSTER:
+    DESCRIPTION: manage your roster
+    GRACE: '&c&l[!] &7You may not edit your faction roster whilst grace period is
+      disabled!'
+    ADD:
+      LIMIT: '&c&l[!] &7You may not add more people to your roster. &b%1$s&7/&b%2$s
+        &7Roster Players'
+    GUI:
+      KICK: '&a&l[!] &7You have removed &b%1$s &7from your faction roster.'
+  ROSTERADD:
+    NEED:
+      ROLE: '&c[!] &7You need to enter a role'
+    COLEADER: '&c[!] &7You cannot set them as a leader try coleader'
+    DESCRIPTION: add users to your roster
+  ROSTERMANGE:
+    KICKUSAGE: '&cSet a factions roster kicks'
+  ROSTERKICK:
+    NOTMEMBER: '&c&l[!] &7This player is not in your factions roster'
+    DESCRIPTION: Kick roster members from your faction
+    NOTALT: '&c&l[!] &7Player is not on your roster'
+  ROSTERREMOVE:
+    NOTENOUGH:
+      KICKS: '&cYou have no more roster kicks avaiable'
 command:
   help:
     invitations: 'You might want to close it and use invitations:'
@@ -1506,8 +1559,25 @@ MISSION:
       COMPLETED: '&c&l[!] &7Your faction has completed all available missions.'
     FINISHED: '&c&l[!] &7Your faction has successfully completed %1$s mission!'
     CANCELLED: '&c&l[!] &7You have cancelled your factions current mission!'
+    FAILED: '&c&l[!] &7Your faction has failed %1$s &cmission!'
   ALREAD:
     COMPLETED: '&c&l[!] &7You may not restart a mission you have already completed'
+  TRIBUTE:
+    ITEM:
+      DENIED:
+        TRANSFER: '&c&l[!] &7There are no tribute missions that accept &b%1$s&7.'
+  RANDOM:
+    MODE:
+      DENIED: '&c&l[!] &7Please select the %1$s&7 item to have a random mission assigned.'
+  CANCEL:
+    POINTS:
+      TAKEN: '&cFaction Mission cancelled for &e%1$s points! &cNew Point Balance:
+        &e%2$s'
+    NOT:
+      ENOUGH:
+        POINTS: '&cYour faction does not have enough points to cancel this mission!'
+  TOCANCEL: to cancel this mission.
+  FORCANCEL: for cancelling this mission.
 PLAYER:
   NOT:
     FOUND: '&c&l[!] &b%1$s &7is either not online or not in your faction!'
@@ -1612,6 +1682,7 @@ ROLE:
   MODERATOR: moderator
   NORMAL: normal member
   RECRUIT: recruit
+  LIST: '&eTry using &arecruit, normal, moderator, coleader'
 REGION:
   SAFEZONE: safezone
   WARZONE: warzone
@@ -1652,3 +1723,6 @@ WARMUPS:
   CANCELLED: '&cYou have cancelled your warmup.'
 PLACEHOLDERAPI:
   'NULL': ''
+UPGRADE:
+  TOUPGRADE: to buy the %1$s upgrade
+  FORUPGRADE: for buying the %1$s upgrade

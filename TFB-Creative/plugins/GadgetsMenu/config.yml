@@ -7,11 +7,11 @@
 Player-Data:
   Storage: mysql
   MySQL:
-    hostname: 172.17.0.1
-    username: u2_Inrh4NpKmd
+    hostname: 65.108.8.46
+    username: u2_oeN5DZ9Msp
     database: s2_gadgetsmenu
     port: '3306'
-    password: '@5KPuEj^^mAwz.4OhwMg3v^q'
+    password: ^DqHSSNgoX.IQCre6=.x2.J4
     useSSL: false
 
 Cosmetic-Item-Purchase:
@@ -113,7 +113,7 @@ Menu-Item:
   - '&7so keep playing and stay awesome!'
 # List of the worlds where cosmetics are enabled!
 Enabled-Worlds:
-- Creative
+- world_creative
 # List of the disabled cosmetics.
 # Set to true to disable it.
 Disabled-Cosmetics:

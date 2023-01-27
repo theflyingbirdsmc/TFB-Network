@@ -766,7 +766,7 @@ compass-towards-home-perm: false
 
 # If no home is set, would you like to send the player to spawn?
 # If set to false, players will not be teleported when they run /home without setting a home first.
-spawn-if-no-home: true
+spawn-if-no-home: false
 
 # Should players be asked to provide confirmation for homes which they attempt to overwrite?
 confirm-home-overwrite: false
@@ -1086,17 +1086,17 @@ protect:
   # For which block types would you like to be alerted?
   # You can find a list of items at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html.
   alert:
-    on-placement: LAVA,TNT,LAVA_BUCKET
-    on-use: LAVA_BUCKET
+    on-placement:
+    on-use:
     on-break:
 
   blacklist:
 
     # Which blocks should people be prevented from placing?
-    placement: LAVA,TNT,LAVA_BUCKET
+    placement:
 
     # Which items should people be prevented from using?
-    usage: LAVA_BUCKET
+    usage:
 
     # Which blocks should people be prevented from breaking?
     break:
@@ -1147,7 +1147,7 @@ respawn-listener-priority: high
 spawn-join-listener-priority: high
 
 # When users die, should they respawn at their first home or bed, instead of the spawnpoint?
-respawn-at-home: false
+respawn-at-home: true
 
 # When users die, should they respawn at their bed instead of the spawnpoint?
 # The value of respawn-at-home (above) has to be true.
@@ -1157,7 +1157,7 @@ respawn-at-home-bed: false
 respawn-at-anchor: false
 
 # Teleport all joining players to the spawnpoint
-spawn-on-join: true
+spawn-on-join: false
 # The following value of `guests` states that all players in group `guests` will be teleported to spawn when joining.
 #spawn-on-join: guests
 # The following list value states that all players in group `guests` and `admin` are to be teleported to spawn when joining. 

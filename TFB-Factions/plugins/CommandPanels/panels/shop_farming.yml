@@ -14,191 +14,191 @@ panels:
       '1':
         material: OAK_SAPLING
         stack: 1
-        name: '&bOak Sapling &7(&fInv: &e%checkitem_amount_mat:oak_sapling%&7)'
+        name: '&bOak Sapling &7(&fInv: &a%checkitem_amount_mat:oak_sapling%&7)'
         commands:
         - left= sell oak_sapling 1
         - right= sell oak_sapling 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:oak_sapling%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:oak_sapling}%'
       '2':
         material: DARK_OAK_SAPLING
         stack: 1
-        name: '&bDark Oak Sapling &7(&fInv: &e%checkitem_amount_mat:dark_oak_sapling%&7)'
+        name: '&bDark Oak Sapling &7(&fInv: &a%checkitem_amount_mat:dark_oak_sapling%&7)'
         commands:
         - left= sell dark_oak_sapling 1
         - right= sell dark_oak_sapling 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:dark_oak_sapling%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:dark_oak_sapling}%'
       '3':
         material: BIRCH_SAPLING
         stack: 1
-        name: '&bBirch Sapling &7(&fInv: &e%checkitem_amount_mat:birch_sapling%&7)'
+        name: '&bBirch Sapling &7(&fInv: &a%checkitem_amount_mat:birch_sapling%&7)'
         commands:
         - left= sell birch_sapling 1
         - right= sell birch_sapling 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:birch_sapling%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:birch_sapling}%'
       '4':
         material: SPRUCE_SAPLING
         stack: 1
-        name: '&bSpruce Sapling &7(&fInv: &e%checkitem_amount_mat:spruce_sapling%&7)'
+        name: '&bSpruce Sapling &7(&fInv: &a%checkitem_amount_mat:spruce_sapling%&7)'
         commands:
         - left= sell spruce_sapling 1
         - right= sell spruce_sapling 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:spruce_sapling%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:spruce_sapling}%'
       '5':
         material: SUGAR_CANE
         stack: 1
-        name: '&bSugar Cane &7(&fInv: &e%checkitem_amount_mat:sugar_cane%&7)'
+        name: '&bSugar Cane &7(&fInv: &a%checkitem_amount_mat:sugar_cane%&7)'
         commands:
         - left= sell sugar_cane 1
         - right= sell sugar_cane 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:sugar_cane%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:sugar_cane}%'
       '6':
         material: KELP
         stack: 1
-        name: '&bKelp &7(&fInv: &e%checkitem_amount_mat:kelp%&7)'
+        name: '&bKelp &7(&fInv: &a%checkitem_amount_mat:kelp%&7)'
         commands:
         - left= sell kelp 1
         - right= sell kelp 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:kelp%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:kelp}%'
       '7':
         material: BAMBOO
         stack: 1
-        name: '&bBamboo &7(&fInv: &e%checkitem_amount_mat:bamboo%&7)'
+        name: '&bBamboo &7(&fInv: &a%checkitem_amount_mat:bamboo%&7)'
         commands:
         - left= sell bamboo 1
         - right= sell bamboo 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:bamboo%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:bamboo}%'
       '10':
         material: WHEAT_SEEDS
         stack: 1
-        name: '&bWheat Seeds &7(&fInv: &e%checkitem_amount_mat:wheat_seeds%&7)'
+        name: '&bWheat Seeds &7(&fInv: &a%checkitem_amount_mat:wheat_seeds%&7)'
         commands:
         - left= sell wheat_seeds 1
         - right= sell wheat_seeds 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:wheat_seeds%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:wheat_seeds}%'
       '11':
         material: MELON_SEEDS
         stack: 1
-        name: '&bMelon Seeds &7(&fInv: &e%checkitem_amount_mat:melon_seeds%&7)'
+        name: '&bMelon Seeds &7(&fInv: &a%checkitem_amount_mat:melon_seeds%&7)'
         commands:
         - left= sell melon_seeds 1
         - right= sell melon_seeds 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:melon_seeds%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:melon_seeds}%'
       '12':
         material: PUMPKIN_SEEDS
         stack: 1
-        name: '&bPumpkin Seeds &7(&fInv: &e%checkitem_amount_mat:pumpkin_seeds%&7)'
+        name: '&bPumpkin Seeds &7(&fInv: &a%checkitem_amount_mat:pumpkin_seeds%&7)'
         commands:
         - left= sell pumpkin_seeds 1
         - right= sell pumpkin_seeds 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:pumpkin_seeds%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:pumpkin_seeds}%'
       '13':
         material: COCOA_BEANS
         stack: 1
-        name: '&bCocoa Beans &7(&fInv: &e%checkitem_amount_mat:cocoa_beans%&7)'
+        name: '&bCocoa Beans &7(&fInv: &a%checkitem_amount_mat:cocoa_beans%&7)'
         commands:
         - left= sell cocoa_beans 1
         - right= sell cocoa_beans 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:cocoa_beans%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:cocoa_beans}%'
       '14':
         material: BEETROOT_SEEDS
         stack: 1
-        name: '&bBeetroot Seeds &7(&fInv: &e%checkitem_amount_mat:beetroot_seeds%&7)'
+        name: '&bBeetroot Seeds &7(&fInv: &a%checkitem_amount_mat:beetroot_seeds%&7)'
         commands:
         - left= sell beetroot_seeds 1
         - right= sell beetroot_seeds 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:beetroot_seeds%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:beetroot_seeds}%'
       '15':
         material: NETHER_WART
         stack: 1
-        name: '&bNether Wart &7(&fInv: &e%checkitem_amount_mat:nether_wart%&7)'
+        name: '&bNether Wart &7(&fInv: &a%checkitem_amount_mat:nether_wart%&7)'
         commands:
         - left= sell nether_wart 1
         - right= sell nether_wart 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:nether_wart%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:nether_wart}%'
       '16':
         material: WHEAT
         stack: 1
-        name: '&bWheat &7(&fInv: &e%checkitem_amount_mat:wheat%&7)'
+        name: '&bWheat &7(&fInv: &a%checkitem_amount_mat:wheat%&7)'
         commands:
         - left= sell wheat 1
         - right= sell wheat 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:wheat%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:wheat}%'
       '19':
         material: CACTUS
         stack: 1
-        name: '&bCactus &7(&fInv: &e%checkitem_amount_mat:cactus%&7)'
+        name: '&bCactus &7(&fInv: &a%checkitem_amount_mat:cactus%&7)'
         commands:
         - left= sell cactus 1
         - right= sell cactus 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:cactus%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:cactus}%'
       '20':
         material: MELON
         stack: 1
-        name: '&bMelon &7(&fInv: &e%checkitem_amount_mat:melon%&7)'
+        name: '&bMelon &7(&fInv: &a%checkitem_amount_mat:melon%&7)'
         commands:
         - left= sell melon 1
         - right= sell melon 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:melon%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:melon}%'
       '21':
         material: PUMPKIN
         stack: 1
-        name: '&bPumpkin &7(&fInv: &e%checkitem_amount_mat:pumpkin%&7)'
+        name: '&bPumpkin &7(&fInv: &a%checkitem_amount_mat:pumpkin%&7)'
         commands:
         - left= sell pumpkin 1
         - right= sell pumpkin 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:pumpkin%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:pumpkin}%'
       '22':
         material: EGG
         stack: 1
-        name: '&bEgg &7(&fInv: &e%checkitem_amount_mat:egg%&7)'
+        name: '&bEgg &7(&fInv: &a%checkitem_amount_mat:egg%&7)'
         commands:
         - left= sell egg 1
         - right= sell egg 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:egg%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:egg}%'
       '23':
         material: POPPY
         stack: 1
-        name: '&bPoppy &7(&fInv: &e%checkitem_amount_mat:poppy%&7)'
+        name: '&bPoppy &7(&fInv: &a%checkitem_amount_mat:poppy%&7)'
         commands:
         - left= sell poppy 1
         - right= sell poppy 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:poppy%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:poppy}%'
         

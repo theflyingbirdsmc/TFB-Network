@@ -25,11 +25,11 @@ Plugin:
 # -----------------------------------------------------
 Database:
     MySQL:
-        Host: 172.18.0.1 #This is a comment
+        Host: 65.108.8.46
         Port: 3306
-        User: u1_4LGq8BhoN1
-        Password: h6WsdIc=^qWc6xX!7C@EDy48
-        Database: s1_Plan
+        User: u1_IfPFyakFRt
+        Password: kccEHEZYlXDPh.3!JW84dyHp
+        Database: s1_plan
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
         Max_connections: 8
@@ -39,24 +39,29 @@ Database:
 # -----------------------------------------------------
 Webserver:
     Port: 8804
-    Alternative_IP: true
+    Alternative_IP:
         # %port% is replaced automatically with Webserver.Port
-        Address: stats.theflyingbirds.net:%port%
+        Address: stats.theflyingbirds.net
+        Enabled: true
     # InternalIP usually does not need to be changed, only change it if you know what you're doing!
     # 0.0.0.0 allocates Internal (local) IP automatically for the WebServer.
     Internal_IP: 0.0.0.0
     Cache:
-        Reduced_refresh_barrier: 15
+        Reduced_refresh_barrier:
             Unit: SECONDS
-        Invalidate_query_results_on_disk_after: 7
+            Time: 15
+        Invalidate_query_results_on_disk_after:
             Unit: DAYS
-        Invalidate_disk_cache_after: 2
+            Time: 7
+        Invalidate_disk_cache_after:
             Unit: DAYS
-        Invalidate_memory_cache_after: 5
+            Time: 2
+        Invalidate_memory_cache_after:
             Unit: MINUTES
+            Time: 5
     Security:
         SSL_certificate:
-            KeyStore_path: pkcs.p12
+            KeyStore_path: proxy
             Key_pass: tfb123
             Store_pass: tfb123
             Alias: tfb
@@ -69,15 +74,21 @@ Webserver:
         # Allows using the whitelist & brute-force shield with a reverse-proxy.
         # ! Make sure non-proxy access is not possible, it would allow IP spoofing !
         Use_X-Forwarded-For_Header: false
-        IP_whitelist: false
+        IP_whitelist:
             Whitelist:
               - "192.168.0.0"
               - "0:0:0:0:0:0:0:1"
+            Enabled: false
         # Does not affect existing cookies
-        Cookies_expire_after: 2
+        Cookies_expire_after:
             Unit: HOURS
+            # Does not affect existing cookies
+            Time: 2
+        Access_log:
+            Print_to_console: false
+            Remove_logs_after_days: 30
     Disable_Webserver: false
-    External_Webserver_address: "https://stats.theflyingbirds.net"
+    External_Webserver_address: "https://65.108.8.46"
 # -----------------------------------------------------
 Data_gathering:
     Geolocations: true
@@ -86,43 +97,59 @@ Data_gathering:
     Accept_GeoLite2_EULA: true
     Ping: true
     Disk_space: true
+    # Does not affect already gathered data
+    Preserve_join_address_case: false
 # -----------------------------------------------------
 # Supported time units: MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS
 # -----------------------------------------------------
 Time:
     Delays:
-        Ping_server_enable_delay: 300
+        Ping_server_enable_delay:
             Unit: SECONDS
-        Ping_player_join_delay: 30
+            Time: 300
+        Ping_player_join_delay:
             Unit: SECONDS
-        Wait_for_DB_Transactions_on_disable: 20
+            Time: 30
+        Wait_for_DB_Transactions_on_disable:
             Unit: SECONDS
+            Time: 20
     Thresholds:
         # How long player needs to be idle until Plan considers them AFK
-        AFK_threshold: 3
+        AFK_threshold:
             Unit: MINUTES
+            # How long player needs to be idle until Plan considers them AFK
+            Time: 3
         # Activity Index considers last 3 weeks and uses these thresholds in the calculation
         # The index is a number from 0 to 5.
         # These numbers were calibrated with data of 250 players (Small sample size).
         Activity_index:
-            Playtime_threshold: 30
+            Playtime_threshold:
                 Unit: MINUTES
-        Remove_inactive_player_data_after: 180
+                Time: 30
+        Remove_inactive_player_data_after:
             Unit: DAYS
+            Time: 180
         # Includes players online, tps and performance time series
-        Remove_time_series_data_after: 90
+        Remove_time_series_data_after:
             Unit: DAYS
-        Remove_ping_data_after: 14
+            # Includes players online, tps and performance time series
+            Time: 90
+        Remove_ping_data_after:
             Unit: DAYS
-        Remove_disabled_extension_data_after: 2
+            Time: 14
+        Remove_disabled_extension_data_after:
             Unit: DAYS
+            Time: 2
     Periodic_tasks:
-        Extension_data_refresh_every: 1
+        Extension_data_refresh_every:
             Unit: HOURS
-        Check_DB_for_server_config_files_every: 1
+            Time: 1
+        Check_DB_for_server_config_files_every:
             Unit: MINUTES
-        Clean_Database_every: 1
+            Time: 1
+        Clean_Database_every:
             Unit: HOURS
+            Time: 1
 # -----------------------------------------------------
 Display_options:
     # More information about Themes:
@@ -171,14 +198,14 @@ Formatting:
     Dates:
         # Show_recent_day_names replaces day number with Today, Yesterday, Wednesday etc.
         Show_recent_day_names: true
-            # Non-regex pattern to replace
-            DatePattern: 'MMM d YYYY'
         Full: 'MMM d YYYY, HH:mm:ss'
         NoSeconds: 'MMM d YYYY, HH:mm'
         JustClock: 'HH:mm:ss'
         # TimeZone Option uses format 'GMT+2' or 'GMT-04:30'
         # Other valid options are 'server' and 'UTC'
         TimeZone: 'server'
+        # Non-regex pattern to replace
+        Show_recent_day_names_date_pattern: 'MMM d YYYY'
 # -----------------------------------------------------
 # World aliases can be used to rename worlds and to combine multiple worlds into a group.
 # -----------------------------------------------------
@@ -199,6 +226,13 @@ World_aliases:
         teen: teen
         Experimental: Experimental
         TEST: "TEST"
+        temp: "temp"
+        RealArchitecture: "RealArchitecture"
+        TheLandOfTheFree: "TheLandOfTheFree"
+        world_creative: "world_creative"
+        world_backup: "world_backup"
+        world_parkour: "world_parkour"
+        world_lobby: "world_lobby"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"
@@ -221,8 +255,11 @@ Export:
     Export_player_on_login_and_logout: false
     # If there are multiple servers the period is divided evenly to avoid export of all servers at once
     # Also affects Players page export
-    Server_refresh_period: 20
+    Server_refresh_period:
         Unit: MINUTES
+        # If there are multiple servers the period is divided evenly to avoid export of all servers at once
+        # Also affects Players page export
+        Time: 20
 # -----------------------------------------------------
 # These settings affect Plugin data integration.
 # If a plugin is causing issues the integration can be disabled by setting Plugin_name.Enabled: false

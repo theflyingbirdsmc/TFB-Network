@@ -14,230 +14,230 @@ panels:
         - open= faction_shop
       '1':
         material: DIRT
-        name: '&bDirt &7(&fInv: &e%checkitem_amount_mat:dirt%&7)'
+        name: '&bDirt &7(&fInv: &a%checkitem_amount_mat:dirt%&7)'
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:dirt%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:dirt}%'
         commands:
         - left= sell dirt 1
         - right= sell dirt 64
       '2':
         material: COBBLESTONE
         stack: 1
-        name: '&bCobblestone &7(&fInv: &e%checkitem_amount_mat:cobblestone%&7)'
+        name: '&bCobblestone &7(&fInv: &a%checkitem_amount_mat:cobblestone%&7)'
         commands:
         - left= sell cobblestone 1
         - right= sell cobblestone 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:cobblestone%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:cobblestone}%'
       '3':
         material: SAND
         stack: 1
-        name: '&bSand &7(&fInv: &e%checkitem_amount_mat:sand%&7)'
+        name: '&bSand &7(&fInv: &a%checkitem_amount_mat:sand%&7)'
         commands:
         - left= sell sand 1
         - right= sell sand 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:sand%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:sand}%'
       '4':
         material: SANDSTONE
         stack: 1
-        name: '&bSandstone &7(&fInv: &e%checkitem_amount_mat:sandstone%&7)'
+        name: '&bSandstone &7(&fInv: &a%checkitem_amount_mat:sandstone%&7)'
         commands:
         - left= sell sandstone 1
         - right= sell sandstone 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:sandstone%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:sandstone}%'
       '5':
         material: GRANITE
         stack: 1
-        name: '&bGranite &7(&fInv: &e%checkitem_amount_mat:granite%&7)'
+        name: '&bGranite &7(&fInv: &a%checkitem_amount_mat:granite%&7)'
         commands:
         - left= sell granite 1
         - right= sell granite 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:granite%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:granite}%'
       '6':
         material: DIORITE
         stack: 1
-        name: '&bDiorite &7(&fInv: &e%checkitem_amount_mat:diorite%&7)'
+        name: '&bDiorite &7(&fInv: &a%checkitem_amount_mat:diorite%&7)'
         commands:
         - left= sell diorite 1
         - right= sell diorite 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:diorite%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:diorite}%'
       '7':
         material: ANDESITE
         stack: 1
-        name: '&bAndesite &7(&fInv: &e%checkitem_amount_mat:andesite%&7)'
+        name: '&bAndesite &7(&fInv: &a%checkitem_amount_mat:andesite%&7)'
         commands:
         - left= sell andesite 1
         - right= sell andesite 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:andesite%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:andesite}%'
       '10':
         material: OAK_LOG
         stack: 1
-        name: '&bOak Log &7(&fInv: &e%checkitem_amount_mat:oak_log%&7)'
+        name: '&bOak Log &7(&fInv: &a%checkitem_amount_mat:oak_log%&7)'
         commands:
         - left= sell oak_log 1
         - right= sell oak_log 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:oak_log%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:oak_log}%'
       '11':
         material: DARK_OAK_LOG
         stack: 1
-        name: '&bDark Oak Log &7(&fInv: &e%checkitem_amount_mat:dark_oak_log%&7)'
+        name: '&bDark Oak Log &7(&fInv: &a%checkitem_amount_mat:dark_oak_log%&7)'
         commands:
         - left= sell dark_oak_log 1
         - right= sell dark_oak_log 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:dark_oak_log%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:dark_oak_log}%'
       '12':
         material: BIRCH_LOG
         stack: 1
-        name: '&bBirch Log &7(&fInv: &e%checkitem_amount_mat:birch_log%&7)'
+        name: '&bBirch Log &7(&fInv: &a%checkitem_amount_mat:birch_log%&7)'
         commands:
         - left= sell birch_log 1
         - right= sell birch_log 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:birch_log%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:birch_log}%'
       '13':
         material: SPRUCE_LOG
         stack: 1
-        name: '&bSpruce Log &7(&fInv: &e%checkitem_amount_mat:spruce_log%&7)'
+        name: '&bSpruce Log &7(&fInv: &a%checkitem_amount_mat:spruce_log%&7)'
         commands:
         - left= sell spruce_log 1
         - right= sell spruce_log 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:spruce_log%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:spruce_log}%'
       '14':
         material: COBBLED_DEEPSLATE
         stack: 1
-        name: '&bCobbled Deepslate &7(&fInv: &e%checkitem_amount_mat:cobbled_deepslate%&7)'
+        name: '&bCobbled Deepslate &7(&fInv: &a%checkitem_amount_mat:cobbled_deepslate%&7)'
         commands:
         - left= sell cobbled_deepslate 1
         - right= sell cobbled_deepslate 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:cobbled_deepslate%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:cobbled_deepslate}%'
       '15':
         material: BLACKSTONE
         stack: 1
-        name: '&bBlackstone &7(&fInv: &e%checkitem_amount_mat:blackstone%&7)'
+        name: '&bBlackstone &7(&fInv: &a%checkitem_amount_mat:blackstone%&7)'
         commands:
         - left= sell blackstone 1
         - right= sell blackstone 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:blackstone%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:blackstone}%'
       '16':
         material: STONE_BRICKS
         stack: 1
-        name: '&bStone Bricks &7(&fInv: &e%checkitem_amount_mat:stone_bricks%&7)'
+        name: '&bStone Bricks &7(&fInv: &a%checkitem_amount_mat:stone_bricks%&7)'
         commands:
         - left= sell stone_bricks 1
         - right= sell stone_bricks 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:stone_bricks%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:stone_bricks}%'
       '19':
         material: BASALT
         stack: 1
-        name: '&bBasalt &7(&fInv: &e%checkitem_amount_mat:basalt%&7)'
+        name: '&bBasalt &7(&fInv: &a%checkitem_amount_mat:basalt%&7)'
         commands:
         - left= sell basalt 1
         - right= sell basalt 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:basalt%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:basalt}%'
       '20':
         material: NETHERRACK
         stack: 1
-        name: '&bNetherrack &7(&fInv: &e%checkitem_amount_mat:netherrack%&7)'
+        name: '&bNetherrack &7(&fInv: &a%checkitem_amount_mat:netherrack%&7)'
         commands:
         - left= sell netherrack 1
         - right= sell netherrack 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:netherrack%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:netherrack}%'
       '21':
         material: SOUL_SAND
         stack: 1
-        name: '&bSoul Sand &7(&fInv: &e%checkitem_amount_mat:soul_sand%&7)'
+        name: '&bSoul Sand &7(&fInv: &a%checkitem_amount_mat:soul_sand%&7)'
         commands:
         - left= sell soul_sand 1
         - right= sell soul_sand 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:soul_sand%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:soul_sand}%'
       '22':
         material: TUFF
         stack: 1
-        name: '&bTuff &7(&fInv: &e%checkitem_amount_mat:tuff%&7)'
+        name: '&bTuff &7(&fInv: &a%checkitem_amount_mat:tuff%&7)'
         commands:
         - left= sell tuff 1
         - right= sell tuff 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:tuff%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:tuff}%'
       '23':
         material: CALCITE
         stack: 1
-        name: '&bCalcite &7(&fInv: &e%checkitem_amount_mat:calcite%&7)'
+        name: '&bCalcite &7(&fInv: &a%checkitem_amount_mat:calcite%&7)'
         commands:
         - left= sell calcite 1
         - right= sell calcite 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:calcite%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:calcite}%'
       '24':
         material: GRAVEL
         stack: 1
-        name: '&bGravel &7(&fInv: &e%checkitem_amount_mat:gravel%&7)'
+        name: '&bGravel &7(&fInv: &a%checkitem_amount_mat:gravel%&7)'
         commands:
         - left= sell gravel 1
         - right= sell gravel 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:gravel%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:gravel}%'
       '25':
         material: MOSS_BLOCK
         stack: 1
-        name: '&bMoss Block &7(&fInv: &e%checkitem_amount_mat:moss_block%&7)'
+        name: '&bMoss Block &7(&fInv: &a%checkitem_amount_mat:moss_block%&7)'
         commands:
         - left= sell moss_block 1
         - right= sell moss_block 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:moss_block%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:moss_block}%'
       '28':
         material: END_STONE
         stack: 1
-        name: '&bEnd Stone &7(&fInv: &e%checkitem_amount_mat:end_stone%&7)'
+        name: '&bEnd Stone &7(&fInv: &a%checkitem_amount_mat:end_stone%&7)'
         commands:
         - left= sell end_stone 1
         - right= sell end_stone 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:end_stone%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:end_stone}%'
       '29':
         material: CLAY
         stack: 1
-        name: '&bClay &7(&fInv: &e%checkitem_amount_mat:clay%&7)'
+        name: '&bClay &7(&fInv: &a%checkitem_amount_mat:clay%&7)'
         commands:
         - left= sell clay 1
         - right= sell clay 64
         lore:
-        - '&fLeft click to sell 1'
-        - '&fRight click to sell 64'
+        - '&fLeft click to sell 1, for &e$&a%essentials_worth:clay%'
+        - '&fRight click to sell 64, for &e$&a%math_2:0_64*{essentials_worth:clay}%'

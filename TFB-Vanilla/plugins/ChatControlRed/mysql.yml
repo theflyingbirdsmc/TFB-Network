@@ -11,19 +11,19 @@
 
 # Use an external database to store logs, mails and user data (channels, nicks, etc.)?
 # If false, then we store these date into your data.db file.
-Enabled: true
+Enabled: false
 
 # The host and the port to connect to
-Host: 172.17.0.1:3306
+Host: 65.108.8.46:3306
 
 # The database name
-Database: s1_chc
+Database: s2_chatcontrolred
 
 # The username
-User: u1_uxbuoP33Zt
+User: u2_FqhK8IpLLx
 
 # The password
-Password: W!f@9.Vz!HG^aOJx7hOmRez0
+Password: rJx!vY=aUNPZ2@c=PRjwZshm
 
 # ADVANCED: The full connector line, do not modify unless you know what you are doing.
 # If facing issues try appending &useUnicode=yes&characterEncoding=UTF-8 at the end.

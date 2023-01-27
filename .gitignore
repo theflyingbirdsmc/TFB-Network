@@ -31,3 +31,10 @@ TFB-**/logs/
 **/.gradle
 *build/
 **/gradle.properties
+**/plugins/ChatControlRed/log.csv
+**/plugins/Vulcan/violations.txt
+**/ImageOnMap/images/*
+**/plugins/Essentials/usermap.csv
+**/plugins/Vulcan/punishments.txt
+**/plugins/Vulcan/violations.txt
+**/crash-reports/**

@@ -1,4 +1,4 @@
-LastUpdated: 1664356008622
+LastUpdated: 1674835229185
 IntColumns:
 - VotePartyVotes
 - MilestoneCount
@@ -18,11 +18,14 @@ IntColumns:
 - LastMonthTotal
 - BestMonthVoteStreak
 VotingPlugin:
-  Version: 'git-Paper-177 (MC: 1.19.2)'
+  Version: 'git-Paper-365 (MC: 1.19.3)'
   ServiceSites:
   - Minecraftlist.dk
+  BungeeVotePartyCurrent: 0
+  BungeeVotePartyRequired: 100
 PluginVersions:
-  VotingPlugin: 6.8.4
-Month: SEPTEMBER
-PrevWeek: 40
-PrevDay: 28
+  VotingPlugin: 6.10.0
+Month: JANUARY
+PrevWeek: 4
+PrevDay: 27
+IgnoreTime: false

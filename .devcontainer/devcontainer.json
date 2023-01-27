@@ -4,12 +4,5 @@
 	"workspaceFolder": "/home/container/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
 	"remoteUser": "container",
-	"service": "tfb",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"Natizyskunk.sftp"
-			]
-		}
-	}
+	"service": "tfb"
 }
