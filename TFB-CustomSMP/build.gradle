@@ -6,7 +6,7 @@ plugins {
 dependencies {
     // Network plugins
     implementation 'Server:Paper:1.19.3-379'
-    implementation 'GadgetsMenu:GadgetsMenu:5.2.14'
+    implementation 'GadgetsMenu:GadgetsMenu:5.2.15'
     implementation 'Plan:Plan:5.5-build-2150'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.9'
 }
@@ -22,14 +22,18 @@ repositories {
 }
 
 task plugins(type: Copy) {
-    delete fileTree(dir: 'plugins', include: 'plugins/*.jar')
+    doFirst{
+    delete fileTree(dir: 'plugins/.', include: '/*.jar')
+    }
     from configurations.compileClasspath
     exclude '*Paper*', '*Flamecord*'
     into "plugins"
 }
 
 task server(type: Copy) {
-    delete fileTree(dir: '.' , include: './*.jar')
+    doFirst{
+    delete fileTree(dir: '/.' , include: 'server.jar')
+    }
     from configurations.compileClasspath
     include 'Paper-*', 'Flamecord-*'
     rename '.*-(.+)', 'server.jar'
