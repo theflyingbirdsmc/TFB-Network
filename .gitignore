@@ -31,3 +31,4 @@ TFB-**/logs/
 *.gradle
 *build/
 **/gradle.properties
+TFB-Creative/plugins/ChatControlRed/log.csv
