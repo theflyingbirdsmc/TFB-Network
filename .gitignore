@@ -38,3 +38,4 @@ TFB-**/logs/
 **/plugins/Vulcan/punishments.txt
 **/plugins/Vulcan/violations.txt
 **/crash-reports/**
+**/plugins/Multiverse-Core/worlds.yml
