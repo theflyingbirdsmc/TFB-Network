@@ -103,8 +103,12 @@ jobs:
         id: deploy
         env:
           SFTP_TFB_PASSWORD: ${{ secrets.SFTP_TFB_PASSWORD }}
-          SFTP_TFB_TEST_USERNAME: ${{ secrets.SFTP_TFB_TEST_USERNAME }}
           SFTP_TFB_FLAMECORD_USERNAME: ${{ secrets.SFTP_TFB_FLAMECORD_USERNAME }}
           SFTP_TFB_LOBBY_USERNAME: ${{ secrets.SFTP_TFB_LOBBY_USERNAME }}
+          SFTP_TFB_VANILLA_USERNAME: ${{ secrets.SFTP_TFB_VANILLA_USERNAME }}
+          SFTP_TFB_FACTIONS_USERNAME: ${{ secrets.SFTP_TFB_FACTIONS_USERNAME }}
+          SFTP_TFB_PARKOUR_USERNAME: ${{ secrets.SFTP_TFB_PARKOUR_USERNAME }}
+          SFTP_TFB_CREATIVE_USERNAME: ${{ secrets.SFTP_TFB_CREATIVE_USERNAME }}
+          SFTP_TFB_CUSTOMSMP_USERNAME: ${{ secrets.SFTP_TFB_CUSTOMSMP_USERNAME }}
         run: |
           FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
