@@ -278,12 +278,12 @@ Plugins:
         Enabled: false
     PlaceholderAPI:
         Load_these_placeholders_on_join:
-          - %plan_server_uuid%
+          - '%plan_server_uuid%'
         Tracked_player_placeholders:
-          - %parkour_player_rank%
-          - %parkour_player_level%
-          - %parkour_player_courses_completed%
-          - %parkour_current_course_deaths%
+          - '%parkour_player_rank%'
+          - '%parkour_player_level%'
+          - '%parkour_player_courses_completed%'
+          - '%parkour_current_course_deaths%'
         Enabled: true
     Towny:
         HideTowns:
