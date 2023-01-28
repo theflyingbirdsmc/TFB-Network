@@ -195,7 +195,7 @@ Formatting:
         Days: '%days%d '
         Hours: '%hours%h '
         Minutes: '%minutes%m '
-        Seconds: %seconds%s
+        Seconds: '%seconds%s '
         Zero: 0s
     # Dates settings use Java SimpleDateFormat.
     # You can find the patterns & examples here:

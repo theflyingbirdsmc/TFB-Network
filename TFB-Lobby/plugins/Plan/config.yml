@@ -195,7 +195,7 @@ Formatting:
         Days: '%days%d '
         Hours: '%hours%h '
         Minutes: '%minutes%m '
-        Seconds: %seconds%s
+        Seconds: '%seconds%s '
         Zero: 0s
     # Dates settings use Java SimpleDateFormat.
     # You can find the patterns & examples here:
@@ -273,9 +273,9 @@ Plugins:
         Enabled: true
     PlaceholderAPI:
         Load_these_placeholders_on_join:
-          - %plan_server_uuid%
+          - '%plan_server_uuid%'
         Tracked_player_placeholders:
-          - %example_placeholder%
+          - '%example_placeholder%'
         Enabled: true
     Towny:
         HideTowns:
