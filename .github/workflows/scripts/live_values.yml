@@ -20,6 +20,14 @@ TFB-Factions/plugins/Plan/config.yml: Database
 TFB-Parkour/plugins/Plan/config.yml: Database
 TFB-CustomSMP/plugins/Plan/config.yml: Database
 
+TFB-Flamecord/plugins/Plan/config.yml: Webserver
+TFB-Lobby/plugins/Plan/config.yml: Webserver
+TFB-Creative/plugins/Plan/config.yml: Webserver
+TFB-Vanilla/plugins/Plan/config.yml: Webserver
+TFB-Factions/plugins/Plan/config.yml: Webserver
+TFB-Parkour/plugins/Plan/config.yml: Webserver
+TFB-CustomSMP/plugins/Plan/config.yml: Webserver
+
 TFB-Flamecord/plugins/LuckPerms/config.yml: data
 TFB-Lobby/plugins/LuckPerms/config.yml: data
 TFB-Creative/plugins/LuckPerms/config.yml: data
