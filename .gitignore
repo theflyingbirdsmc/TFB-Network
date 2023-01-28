@@ -38,6 +38,7 @@ TFB-**/logs/
 **/plugins/Vulcan/punishments.txt
 **/plugins/Vulcan/violations.txt
 **/crash-reports/**
+**/plugins/Multiverse-Core/worlds.yml
 TFB-*/plugins/VotingPlugin/ServerData.yml
 TFB-*/plugins/ProtocolLib/lastupdate
 TFB-*/plugins/VotingPlugin/nonvotedplayerscache.yml

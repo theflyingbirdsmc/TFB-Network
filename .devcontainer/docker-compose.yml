@@ -7,6 +7,8 @@ services:
       - database
     ports:
       - 25565:25565
+      - 8804:8804
+      - 8192:8192
     environment:
       - GITHUB_EMAIL=${GITHUB_EMAIL}
       - GITHUB_USERNAME=${GITHUB_USERNAME}

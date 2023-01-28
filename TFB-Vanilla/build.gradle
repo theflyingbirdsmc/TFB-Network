@@ -44,6 +44,7 @@ repositories {
     }
 }
 
+// Type "gradle plugins" in terminal to update plugins
 task plugins(type: Copy) {
     doFirst{
     delete fileTree(dir: 'plugins/.', include: '/*.jar')
@@ -53,6 +54,7 @@ task plugins(type: Copy) {
     into "plugins"
 }
 
+// Type "gradle server" in terminal to update server
 task server(type: Copy) {
     doFirst{
     delete fileTree(dir: '/.' , include: 'server.jar')

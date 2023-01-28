@@ -4,7 +4,8 @@ panels:
     - nocommand
     perm: tfb
     rows: 6
-    title: '      #AA0000T#0000AAF#00AA00B &8- #AA0000The #0000AAFlying #00AA00Birds'
+    title: '      #ee2b23T#3551d7F#00ff00B &7- #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g
+    #00ff00B#3fff00i#7dff00r#bcff00d#faff00s'
     empty: 
     outside-commands:
     - cpc
