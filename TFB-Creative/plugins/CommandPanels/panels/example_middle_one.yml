@@ -9,7 +9,7 @@ panels:
     rows: 3
     title: Example
     animatevalue: 15
-    refresh-delay: 5
+    refresh-delay: 4
     panelType:
     - nocommand
     empty: YELLOW_STAINED_GLASS_PANE

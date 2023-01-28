@@ -42,6 +42,7 @@ dependencies {
     implementation 'ParkourTopTen:ParkourTopTen:4.0'
 }
 
+// TFB Artifactory
 repositories {
     mavenCentral {
         url "${MAVEN_URL}"

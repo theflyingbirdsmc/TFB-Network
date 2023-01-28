@@ -43,6 +43,7 @@ dependencies {
     implementation 'Factions:Factions:1.6.9.5-4.0.1-RC'
 }
 
+// TFB Artifactory
 repositories {
     mavenCentral {
         url "${MAVEN_URL}"
