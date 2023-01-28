@@ -60,7 +60,7 @@ panels:
       '13':
         material: NETHER_STAR
         stack: 1
-        name: '#AA0000T#0000AAF#00AA00B &aCosmetics'
+        name: '#ee2b23T#3551d7F#00ff00B &aCosmetics'
         lore:
         - '%javascript_tfb_cosmetics_lore,{player_locale_short}%'
         commands:

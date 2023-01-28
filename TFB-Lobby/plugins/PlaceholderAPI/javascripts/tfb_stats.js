@@ -9,10 +9,10 @@ function tfbStats() {
     if (type == "name") {
         switch (lang) {
             case "da":
-                return "#AA0000T#0000AAF#00AA00B #368F17Statistikker";
+                return "#ee2b23T#3551d7F#00ff00B #368F17Statistikker";
                 break;
             default:
-                return "#AA0000T#0000AAF#00AA00B #368F17Statistics";
+                return "#ee2b23T#3551d7F#00ff00B #368F17Statistics";
         }
 
     } else if (type == "lore") {

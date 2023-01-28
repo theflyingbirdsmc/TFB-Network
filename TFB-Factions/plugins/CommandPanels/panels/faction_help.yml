@@ -17,7 +17,7 @@ panels:
         stack: 1
         name: '&cRules on TFB Factions'
         lore:
-        - "- &eAs always, follow the global #AA0000T#0000AAF#00AA00B &erules"
+        - "- &eAs always, follow the global #ee2b23T#3551d7F#00ff00B &erules"
         - "- &eGriefing/Raiding is &aALLOWED&e, don't forget to claim!"
         - "- &eTrading is with own responsibility!"
       '4':
