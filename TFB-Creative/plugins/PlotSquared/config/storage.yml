@@ -11,7 +11,7 @@ sqlite:
 mysql:
   # Should MySQL be used?
   use: false
-  host: "65.108.8.46"
+  host: "172.18.0.1"
   port: "3306"
   user: "u5_DEXeIJnxSl"
   password: "x2IQ^K4prZAW=^uTzpGMMG@u"

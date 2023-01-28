@@ -38,6 +38,7 @@ custom-motd:
   protocol:
     enabled: false
     name: '&c&lMaintenance'
+    always-show: false
   maxplayers:
     enabled: false
     amount: 1000
@@ -60,6 +61,8 @@ antibot:
     firewall: true
     limit: 3
     log: true
+    whitelist:
+    - Nickname
   country:
     enabled: true
     firewall: true
@@ -91,6 +94,7 @@ antibot:
     log: true
     whitelist:
     - 127.0.0.1
+    ipset: true
   nickname:
     enabled: true
     firewall: true

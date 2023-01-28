@@ -27,7 +27,7 @@ Plugin:
 Database:
     Type: MySQL
     MySQL:
-        Host: 65.108.8.46
+        Host: 172.18.0.1
         Port: 3306
         User: u1_IfPFyakFRt
         Password: kccEHEZYlXDPh.3!JW84dyHp
@@ -47,7 +47,7 @@ Webserver:
         Enabled: false
     # InternalIP usually does not need to be changed, only change it if you know what you're doing!
     # 0.0.0.0 allocates Internal (local) IP automatically for the WebServer.
-    Internal_IP: 65.108.8.46
+    Internal_IP: 172.18.0.1
     Cache:
         Reduced_refresh_barrier:
             Unit: SECONDS

@@ -25,7 +25,7 @@ Plugin:
 # -----------------------------------------------------
 Database:
     MySQL:
-        Host: 65.108.8.46
+        Host: 172.18.0.1
         Port: 3306
         User: u1_IfPFyakFRt
         Password: kccEHEZYlXDPh.3!JW84dyHp
@@ -88,7 +88,7 @@ Webserver:
             Print_to_console: false
             Remove_logs_after_days: 30
     Disable_Webserver: false
-    External_Webserver_address: "https://65.108.8.46"
+    External_Webserver_address: "https://172.18.0.1"
 # -----------------------------------------------------
 Data_gathering:
     Geolocations: true

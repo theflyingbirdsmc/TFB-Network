@@ -14,7 +14,7 @@
 Enabled: true
 
 # The host and the port to connect to
-Host: 65.108.8.46
+Host: 172.18.0.1
 
 # The database name
 Database: s2_chatcontrolred
