@@ -54,6 +54,7 @@ USER        root
 RUN         mkdir /home/container/TFB/ && chown container /home/container/TFB/
 USER        $user
 COPY        ./entrypoint.sh /
+COPY        ./gradle.properties /home/container/TFB/.gradle/
 
 #RUN	        echo -e $GITHUB_REPOSITORY
 #"/bin/bash", "-c",
