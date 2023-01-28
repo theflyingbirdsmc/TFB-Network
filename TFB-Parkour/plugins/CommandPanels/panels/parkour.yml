@@ -2,12 +2,12 @@ panels:
   parkour:
     perm: default
     rows: 3
-    title: '#AA0000T#0000AAF#00AA00B &eParkour'
+    title: '#ee2b23T#3551d7F#00ff00B &eParkour'
     empty: air
     open-with-item:
       material: SLIME_BLOCK
       stationary: 0
-      name: '#AA0000T#0000AAF#00AA00B &eParkour'
+      name: '#ee2b23T#3551d7F#00ff00B &eParkour'
       lore:
       - 'Jump or dive like an Eagle, in our' 
       - 'amazing parkour and dropper courses' 

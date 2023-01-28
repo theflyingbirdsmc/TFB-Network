@@ -48,7 +48,7 @@ panels:
       '4':
         material: cps= self
         stack: 1
-        name: '&eYour profile on #AA0000T#0000AAF#00AA00B'
+        name: '&eYour profile on #ee2b23T#3551d7F#00ff00B'
         lore:
         - '&eThis is all about you :)'
       '5':
