@@ -3,6 +3,7 @@ plugins {
     id 'groovy'
 }
 
+// Use environment instead of gradle.properties
 if("$System.env.MAVEN_URL" != null) {
     ext.MAVEN_URL="$System.env.MAVEN_URL"
     ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
