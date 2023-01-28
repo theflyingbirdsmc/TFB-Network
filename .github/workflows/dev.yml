@@ -110,5 +110,8 @@ jobs:
           SFTP_TFB_PARKOUR_USERNAME: ${{ secrets.SFTP_TFB_PARKOUR_USERNAME }}
           SFTP_TFB_CREATIVE_USERNAME: ${{ secrets.SFTP_TFB_CREATIVE_USERNAME }}
           SFTP_TFB_CUSTOMSMP_USERNAME: ${{ secrets.SFTP_TFB_CUSTOMSMP_USERNAME }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_URL: ${{ secrets.MAVEN_URL }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
         run: |
           FILE_PATHS='${{ steps.changed-files.outputs.all_changed_files }}' python .github/workflows/deploy.py
