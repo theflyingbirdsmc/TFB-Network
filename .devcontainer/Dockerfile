@@ -52,6 +52,7 @@ RUN         adduser \
 WORKDIR     $home
 USER        root
 RUN         mkdir /home/container/TFB/ && chown container /home/container/TFB/
+RUN         mkdir /home/container/TFB/.gradle/ && chown container /home/container/TFB/.gradle/
 USER        $user
 COPY        ./entrypoint.sh /
 COPY        ./gradle.properties /home/container/TFB/.gradle/
