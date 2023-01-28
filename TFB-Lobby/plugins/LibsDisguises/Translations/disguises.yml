@@ -523,3 +523,6 @@
 
 # Name for the ChestBoat EntityType, this is used in radius commands
 "ChestBoat": "ChestBoat"
+
+# Name for the CAMEL disguise
+"Camel": "Camel"

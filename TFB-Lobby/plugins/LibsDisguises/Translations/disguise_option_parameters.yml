@@ -5194,3 +5194,144 @@
 
 # Used for the disguise option Potion Effect
 "Darkness": "Darkness"
+
+# Used for the disguise option Material
+"BAMBOO_PLANKS": "BAMBOO_PLANKS"
+
+# Used for the disguise option Material
+"BAMBOO_MOSAIC": "BAMBOO_MOSAIC"
+
+# Used for the disguise option Material
+"BAMBOO_BLOCK": "BAMBOO_BLOCK"
+
+# Used for the disguise option Material
+"STRIPPED_BAMBOO_BLOCK": "STRIPPED_BAMBOO_BLOCK"
+
+# Used for the disguise option Material
+"BAMBOO_SLAB": "BAMBOO_SLAB"
+
+# Used for the disguise option Material
+"BAMBOO_MOSAIC_SLAB": "BAMBOO_MOSAIC_SLAB"
+
+# Used for the disguise option Material
+"CHISELED_BOOKSHELF": "CHISELED_BOOKSHELF"
+
+# Used for the disguise option Material
+"BAMBOO_FENCE": "BAMBOO_FENCE"
+
+# Used for the disguise option Material
+"BAMBOO_STAIRS": "BAMBOO_STAIRS"
+
+# Used for the disguise option Material
+"BAMBOO_MOSAIC_STAIRS": "BAMBOO_MOSAIC_STAIRS"
+
+# Used for the disguise option Material
+"BAMBOO_BUTTON": "BAMBOO_BUTTON"
+
+# Used for the disguise option Material
+"BAMBOO_PRESSURE_PLATE": "BAMBOO_PRESSURE_PLATE"
+
+# Used for the disguise option Material
+"BAMBOO_DOOR": "BAMBOO_DOOR"
+
+# Used for the disguise option Material
+"BAMBOO_TRAPDOOR": "BAMBOO_TRAPDOOR"
+
+# Used for the disguise option Material
+"BAMBOO_FENCE_GATE": "BAMBOO_FENCE_GATE"
+
+# Used for the disguise option Material
+"BAMBOO_RAFT": "BAMBOO_RAFT"
+
+# Used for the disguise option Material
+"BAMBOO_CHEST_RAFT": "BAMBOO_CHEST_RAFT"
+
+# Used for the disguise option Material
+"BAMBOO_SIGN": "BAMBOO_SIGN"
+
+# Used for the disguise option Material
+"OAK_HANGING_SIGN": "OAK_HANGING_SIGN"
+
+# Used for the disguise option Material
+"SPRUCE_HANGING_SIGN": "SPRUCE_HANGING_SIGN"
+
+# Used for the disguise option Material
+"BIRCH_HANGING_SIGN": "BIRCH_HANGING_SIGN"
+
+# Used for the disguise option Material
+"JUNGLE_HANGING_SIGN": "JUNGLE_HANGING_SIGN"
+
+# Used for the disguise option Material
+"ACACIA_HANGING_SIGN": "ACACIA_HANGING_SIGN"
+
+# Used for the disguise option Material
+"DARK_OAK_HANGING_SIGN": "DARK_OAK_HANGING_SIGN"
+
+# Used for the disguise option Material
+"MANGROVE_HANGING_SIGN": "MANGROVE_HANGING_SIGN"
+
+# Used for the disguise option Material
+"BAMBOO_HANGING_SIGN": "BAMBOO_HANGING_SIGN"
+
+# Used for the disguise option Material
+"CRIMSON_HANGING_SIGN": "CRIMSON_HANGING_SIGN"
+
+# Used for the disguise option Material
+"WARPED_HANGING_SIGN": "WARPED_HANGING_SIGN"
+
+# Used for the disguise option Material
+"CAMEL_SPAWN_EGG": "CAMEL_SPAWN_EGG"
+
+# Used for the disguise option Material
+"ENDER_DRAGON_SPAWN_EGG": "ENDER_DRAGON_SPAWN_EGG"
+
+# Used for the disguise option Material
+"IRON_GOLEM_SPAWN_EGG": "IRON_GOLEM_SPAWN_EGG"
+
+# Used for the disguise option Material
+"SNOW_GOLEM_SPAWN_EGG": "SNOW_GOLEM_SPAWN_EGG"
+
+# Used for the disguise option Material
+"WITHER_SPAWN_EGG": "WITHER_SPAWN_EGG"
+
+# Used for the disguise option Material
+"PIGLIN_HEAD": "PIGLIN_HEAD"
+
+# Used for the disguise option Material
+"BAMBOO_WALL_SIGN": "BAMBOO_WALL_SIGN"
+
+# Used for the disguise option Material
+"OAK_WALL_HANGING_SIGN": "OAK_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"SPRUCE_WALL_HANGING_SIGN": "SPRUCE_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"BIRCH_WALL_HANGING_SIGN": "BIRCH_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"ACACIA_WALL_HANGING_SIGN": "ACACIA_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"JUNGLE_WALL_HANGING_SIGN": "JUNGLE_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"DARK_OAK_WALL_HANGING_SIGN": "DARK_OAK_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"MANGROVE_WALL_HANGING_SIGN": "MANGROVE_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"CRIMSON_WALL_HANGING_SIGN": "CRIMSON_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"WARPED_WALL_HANGING_SIGN": "WARPED_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"BAMBOO_WALL_HANGING_SIGN": "BAMBOO_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"PIGLIN_WALL_HEAD": "PIGLIN_WALL_HEAD"
+
+# Used for the disguise option SoundGroup
+"CAMEL": "CAMEL"
