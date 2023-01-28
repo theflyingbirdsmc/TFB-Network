@@ -43,6 +43,7 @@ dependencies {
     implementation 'PlotSquared:PlotSquared:6.10.6-Premium'
 }
 
+// TFB Artifactory
 repositories {
     mavenCentral {
         url "${MAVEN_URL}"

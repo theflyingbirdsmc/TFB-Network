@@ -21,6 +21,7 @@ dependencies {
     implementation 'VotingPlugin:VotingPlugin:6.10.0'
 }
 
+// TFB Artifactory
 repositories {
     mavenCentral {
         url "${MAVEN_URL}"
