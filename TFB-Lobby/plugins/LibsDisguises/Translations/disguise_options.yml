@@ -571,3 +571,6 @@
 
 # Found in the disguise options for Goat and uses a boolean
 "setHasRightHorn": "setHasRightHorn"
+
+# Found in the disguise options for Slime and uses a int
+"setUnsafeSize": "setUnsafeSize"
