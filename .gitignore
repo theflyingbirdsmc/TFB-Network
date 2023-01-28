@@ -38,3 +38,11 @@ TFB-**/logs/
 **/plugins/Vulcan/punishments.txt
 **/plugins/Vulcan/violations.txt
 **/crash-reports/**
+TFB-*/plugins/VotingPlugin/ServerData.yml
+TFB-*/plugins/ProtocolLib/lastupdate
+TFB-*/plugins/VotingPlugin/nonvotedplayerscache.yml
+TFB-*/plugins/Plan/serverConfiguration/*.yml
+TFB-*/plugins/LibsDisguises/internal.yml
+TFB-*/plugins/ProtocolLib/lastupdate
+TFB-*/usercache.json
+TFB-Lobby/plugins/LibsDisguises/internal.yml
