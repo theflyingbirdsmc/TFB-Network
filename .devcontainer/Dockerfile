@@ -36,7 +36,6 @@ CMD         /bin/sh -c set -eux; 		arch="$(apk --print-arch)"; 	case "$arch" in 
 CMD         CMD ["jshell"]
 
 LABEL       author="Simon Fugl" maintainer="fuglenbusiness@gmail.com"
-LABEL 		org.opencontainers.image.source="https://github.com/theflyingbirdsmc/pluGET"
 
 RUN 		apk add curl ca-certificates nano openssl git fontconfig maven jq gcc build-base gradle
 
@@ -53,12 +52,12 @@ WORKDIR     $home
 USER        root
 RUN         mkdir /home/container/TFB/ && chown container /home/container/TFB/
 USER        $user
-COPY        ./entrypoint.sh /
+# COPY        ./entrypoint.sh /
 
 #RUN	        echo -e $GITHUB_REPOSITORY
 #"/bin/bash", "-c",
-ENTRYPOINT  ["/entrypoint.sh"]
-CMD         ["$GITHUB_EMAIL", "$GITHUB_USERNAME"]
+# ENTRYPOINT  ["/entrypoint.sh"]
+# CMD         ["$GITHUB_EMAIL", "$GITHUB_USERNAME"]
 
 #ENTRYPOINT  ["java","-Xms128M","-Xmx1024M","-XX:+UseG1GC", "-XX:+ParallelRefProcEnabled", "-XX:MaxGCPauseMillis=200", "-XX:+UnlockExperimentalVMOptions", "-XX:+DisableExplicitGC", "-XX:+AlwaysPreTouch", "-XX:G1NewSizePercent=30", "-XX:G1MaxNewSizePercent=40", "-XX:G1HeapRegionSize=8M", "-XX:G1ReservePercent=20", "-XX:G1HeapWastePercent=5", "-XX:G1MixedGCCountTarget=4", "-XX:InitiatingHeapOccupancyPercent=15", "-XX:G1MixedGCLiveThresholdPercent=90", "-XX:G1RSetUpdatingPauseTimePercent=5", "-XX:SurvivorRatio=32", "-XX:+PerfDisableSharedMem", "-XX:MaxTenuringThreshold=1", "-Dusing.aikars.flags=https://mcflags.emc.gs", "-Daikars.new.flags=true", "-Dterminal.jline=false -Dterminal.ansi=true", "-jar", "server.jar", "nogui"]
 #CMD         tail -f /dev/null
