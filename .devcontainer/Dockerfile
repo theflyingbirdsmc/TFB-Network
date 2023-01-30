@@ -37,7 +37,8 @@ FROM 		--platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jdk-jammy
 
 LABEL       author="Simon Fugl" maintainer="fuglenbusiness@gmail.com"
 
-RUN 		apk add curl ca-certificates nano openssl git fontconfig maven jq gcc build-base gradle
+RUN 		apt-get update -y \
+ 			&& apt-get install -y curl ca-certificates nano openssl git fontconfig maven jq gcc build-base gradle
 
 ARG         user=container
 ARG         home=/home/$user
