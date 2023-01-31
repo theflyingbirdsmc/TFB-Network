@@ -7,10 +7,10 @@ buildscript{
     }
     repositories {
         mavenCentral {
-            url "${MAVEN_URL}"
+            url "$System.env.MAVEN_URL"
             credentials {
-                username = "${MAVEN_USERNAME}"
-                password = "${MAVEN_PASSWORD}"
+                username = "$System.env.MAVEN_USERNAME"
+                password = "$System.env.MAVEN_PASSWORD"
             }
         }
     }
@@ -81,10 +81,10 @@ publishing {
     }
     repositories {
         mavenCentral {
-            url "${MAVEN_URL}"
+            url "$System.env.MAVEN_URL"
             credentials {
-                username = "${MAVEN_USERNAME}"
-                password = "${MAVEN_PASSWORD}"
+                username = "$System.env.MAVEN_USERNAME"
+                password = "$System.env.MAVEN_PASSWORD"
             }
         }
     }
@@ -115,6 +115,6 @@ def urlExists(String repositoryUrl) {
 }
 
 def getBase64EncodedCredentials() {
-    def s = "${MAVEN_USERNAME}" + ":" + "${MAVEN_PASSWORD}"
+    def s = "$System.env.MAVEN_USERNAME" + ":" + "$System.env.MAVEN_PASSWORD"
     return s.bytes.encodeBase64().toString()
 }
