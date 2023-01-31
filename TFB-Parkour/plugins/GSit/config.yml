@@ -20,7 +20,7 @@ Options:
   get-up-sneak: true
 
   # Defines whether a player is returned to the place where he started sitting or posing
-  get-up-return: false
+  get-up-return: true
 
   # Defines whether a player gets up if the connected block breaks
   get-up-break: true
