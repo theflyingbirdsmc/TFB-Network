@@ -93,7 +93,7 @@ panels:
         - '&eOnline&7: &a%bungee_vanilladk%'
         - '%javascript_tfb_vanilladk_lore,{player_locale_short}%'
         commands:
-        - force-server= vanilladk
+        - server= vanilladk
       '30':
         material: SLIME_BLOCK
         stack: 1
@@ -102,7 +102,7 @@ panels:
         - '&eOnline&7: &a%bungee_parkour%'
         - '%javascript_tfb_parkoureu_lore,{player_locale_short}%'
         commands:
-        - force-server= parkour
+        - server= parkour
       '31':
         material: END_CRYSTAL
         stack: 1
@@ -111,7 +111,7 @@ panels:
         - '&eOnline&7: &a%bungee_lobby%'
         - '%javascript_tfb_lobby_lore,{player_locale_short}%'
         commands:
-        - force-server= lobby
+        - server= lobby
       '32':
         material: BEDROCK
         stack: 1
@@ -120,7 +120,7 @@ panels:
         - '&eOnline&7: &a%bungee_creative%'
         - '%javascript_tfb_creativeeu_lore,{player_locale_short}%'
         commands:
-        - force-server= creative
+        - server= creative
       '33':
         material: TNT
         stack: 1
@@ -129,7 +129,7 @@ panels:
         - '&eOnline&7: &a%bungee_factions%'
         - '%javascript_tfb_factionseu_lore,{player_locale_short}%'
         commands:
-        - force-server= factions
+        - server= factions
       '36':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '

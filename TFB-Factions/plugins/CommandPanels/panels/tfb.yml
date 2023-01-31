@@ -94,7 +94,7 @@ panels:
         - '&eOnline&7: &a%bungee_parkour%'
         - '&eClick to connect'
         commands:
-        - force-server= parkour
+        - server= parkour
       '31':
         material: END_CRYSTAL
         stack: 1
@@ -103,7 +103,7 @@ panels:
         - '&eOnline&7: &a%bungee_lobby%'
         - '&eClick to connect'
         commands:
-        - force-server= lobby
+        - server= lobby
       '32':
         material: BEDROCK
         stack: 1
@@ -112,7 +112,7 @@ panels:
         - '&eOnline&7: &a%bungee_creative%'
         - '&eClick to connect'
         commands:
-        - force-server= creative
+        - server= creative
       '33':
         material: TNT
         stack: 1
