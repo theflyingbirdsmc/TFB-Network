@@ -463,7 +463,7 @@ afk-list-name: "none"
 # When a player enters or exits AFK mode, should the AFK notification be broadcast
 # to the entire server, or just to the player?
 # When this setting is false, only the player will be notified upon changing their AFK state.
-broadcast-afk-message: true
+broadcast-afk-message: false
 
 # You can disable the death messages of Minecraft here.
 death-messages: true
