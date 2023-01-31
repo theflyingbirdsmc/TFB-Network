@@ -50,7 +50,7 @@ publishing {
                 
                 def pomFileName = "${ARTIFACT_ID}-${ARTIFACT_VERSION}.pom"
                 def artifactPath = "${ARTIFACT_GROUP.replace(".", "/")}/${ARTIFACT_ID}/${ARTIFACT_VERSION}/${pomFileName}"
-                def repositoryUrl = "${MAVEN_URL}${artifactPath}"
+                def repositoryUrl = "$System.env.MAVEN_URL"+"${artifactPath}"
 
 
                 println("# searching for existing artifact with name ${ARTIFACT_ID} version ${ARTIFACT_VERSION}")
