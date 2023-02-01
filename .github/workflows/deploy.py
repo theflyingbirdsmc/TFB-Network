@@ -30,6 +30,19 @@ server_sftpusernames = {
     "TFB-Creative": SFTP_TFB_CREATIVE_USERNAME,
     "TFB-CustomSMP": SFTP_TFB_CUSTOMSMP_USERNAME
 }
+
+def remove_empty_directories(sftp, remote_path):
+    parts = remote_path.split("/")[:-1]
+    for i in range(len(parts), 0, -1):
+        cur_path = "/".join(parts[:i])
+        try:
+            files = sftp.listdir(cur_path)
+            if len(files) == 0:
+                print("Deleting directory:", cur_path)
+                sftp.rmdir(cur_path)
+        except IOError:
+            break
+
 for file in file_path:
     for server, username in server_sftpusernames.items():
         if server in file:
@@ -37,6 +50,12 @@ for file in file_path:
             # print("I'm + " + server_sftpusernames[server] + "for the server " + server)
             ssh_client.connect(hostname='germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022, allow_agent=False)
             sftp = ssh_client.open_sftp()
+
+            
+            if not os.path.isfile(root_path + file):
+                sftp.remove(remotePath)
+                remove_empty_directories(sftp, remotePath)
+            
             sftp.put(root_path + file, remotePath)
             print(remotePath)
 
