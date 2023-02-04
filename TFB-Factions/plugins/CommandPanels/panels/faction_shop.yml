@@ -14,7 +14,7 @@ panels:
         name: '&f%cp-player-displayname% Info'
         commands:
         lore:
-        - '&fWallet: &e$&a%vault_eco_balance%'
+        - '&fWallet: &e$&a%vault_eco_balance_commas%'
       '4':
         material: BOOK
         stack: 1
