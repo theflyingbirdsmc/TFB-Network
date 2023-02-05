@@ -36,6 +36,7 @@ dependencies {
     implementation 'ViaVersion:ViaVersion:4.5.1'
     implementation 'VotingPlugin:VotingPlugin:6.10.0'
     implementation 'WorldGuard:WorldGuard:7.0.8-beta-01+cbb2ba7'
+    implementation 'Vulcan:Vulcan:2.7.1'
     
     // Local plugins
     implementation 'VoidGen:VoidGen:2.2.1'

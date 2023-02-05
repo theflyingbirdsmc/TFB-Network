@@ -40,6 +40,7 @@ dependencies {
     implementation 'VotingPlugin:VotingPlugin:6.10.0'
     implementation 'PlotSquared:PlotSquared:6.10.6-Premium'
     implementation 'WorldGuard:WorldGuard:7.0.8-beta-01+cbb2ba7'
+    implementation 'Vulcan:Vulcan:2.7.1'
 }
 
 // TFB Artifactory
