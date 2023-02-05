@@ -46,38 +46,38 @@ disabled_commands:
 - JustOneMore
 servers:
   CustomSMP:
-    address: 172.18.0.1:25605
+    address: localhost:25605
     motd: ''
     restricted: false
   creative:
-    address: 172.18.0.1:25601
+    address: localhost:25601
     motd: ''
     restricted: false
   crowdcontrol:
-    address: 172.18.0.1:25606
+    address: localhost:25606
     motd: ''
     restricted: false
   factions:
-    address: 172.18.0.1:25603
+    address: localhost:25603
     motd: ''
     restricted: false
   kitpvp:
-    address: 172.18.0.1:25607
+    address: localhost:25607
     motd: ''
     restricted: false
   lobby:
-    address: 172.18.0.1:25600
+    address: localhost:25600
     motd: ''
     restricted: false
   museum:
-    address: 172.18.0.1:25602
+    address: localhost:25602
     motd: ''
     restricted: false
   parkour:
-    address: 172.18.0.1:25604
+    address: localhost:25604
     motd: ''
     restricted: false
   vanilladk:
-    address: 172.18.0.1:25700
+    address: localhost:25700
     motd: ''
     restricted: false
