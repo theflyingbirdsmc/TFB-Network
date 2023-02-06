@@ -9,7 +9,7 @@
 ### IP: mc.theflyingbirds.net
 
 ### What is TFB - The Flying Birds?
-We strive to innovate the way a Minecraft server is to be maintained, one commit at a time.
+We strive to innovate the way a Minecraft server is to be maintained, one commit at a time. 
 We are probably worlds first public open-source Minecraft server network - Made by players, for players!
 
 ### Want to contribute?
