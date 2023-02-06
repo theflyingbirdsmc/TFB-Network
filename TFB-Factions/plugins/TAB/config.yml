@@ -106,6 +106,7 @@ scoreboard:
   - disabledworld
   scoreboards:
     admin:
+      display-condition: permission:tab.scoreboard.admin
       title: Admin scoreboard
       lines:
       - '&6Network:'
