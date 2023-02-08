@@ -37,7 +37,7 @@ publishing {
     publications {
         for ( f in filesToPublish ) {
             def jarFile = new JarFile(f)
-            def pluginYml = jarFile.getEntry("plugin.yml")
+            def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
             if (pluginYml != null) {
                 def yaml = new Yaml()
                 def plugin = yaml.load(jarFile.getInputStream(pluginYml))

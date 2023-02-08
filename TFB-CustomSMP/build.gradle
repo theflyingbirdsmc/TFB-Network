@@ -13,8 +13,8 @@ if("$System.env.MAVEN_URL" != null) {
 dependencies {
     // Network plugins
     implementation 'Server:Paper:1.19.3-379'
-    implementation 'GadgetsMenu:GadgetsMenu:5.2.15'
-    implementation 'Plan:Plan:5.5-build-2150'
+    implementation 'GadgetsMenu:GadgetsMenu:5.2.16'
+    implementation 'Plan:Plan:5.5-build-2172'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.7'
 }
 
