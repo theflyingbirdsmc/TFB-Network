@@ -85,6 +85,7 @@ CourseDefault:
     Material: AIR
     Amount: 0
     XP: 0
+    Label: ''
   Commands:
     CombinePerCourseCommands: true
   Command:
@@ -107,6 +108,8 @@ CourseDefault:
     PlayerCourseRecord:
     - ''
     GlobalCourseRecord:
+    - ''
+    Restart:
     - ''
 ParkourTool:
   LastCheckpoint:
@@ -134,6 +137,7 @@ ParkourTool:
   Rockets:
     Material: AIR
     Slot: 4
+    SecondCooldown: 1
 ParkourChallenge:
   HidePlayers: false
   CountdownFrom: 5
@@ -169,6 +173,9 @@ AutoStart:
   Material: BEDROCK
   TickDelay: 0
   IncludeWorldName: false
+  RestartWhenOnCourse:
+    Enabled: true
+    Teleport: false
 Scoreboard:
   Enabled: true
   CourseName:
@@ -272,6 +279,7 @@ Other:
     StandardFormat: HH:mm:ss:SSS
     DetailedFormat: HH:mm:ss:SSS
     TimeZone: GMT
+    PlaceholderFormat: HH:mm:ss:SSS
   OnServerShutdown:
     BackupFiles: true
   OnPlayerBan:
@@ -285,6 +293,7 @@ Plugin:
     Enabled: true
   Vault:
     Enabled: true
+    RegisterParkoins: false
   PlaceholderAPI:
     Enabled: true
     CacheTime: 15
@@ -298,6 +307,6 @@ MySQL:
   Username: Username
   Password: Password
   LegacyDriver: false
-Version: 7.0.4
+Version: 7.1.0
 LobbySettings:
   EnforceWorld: false
