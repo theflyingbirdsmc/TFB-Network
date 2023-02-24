@@ -2,12 +2,12 @@ panels:
   parkour:
     perm: default
     rows: 6
-    title: '#ee2b23T#3551d7F#00ff00B &eParkour'
+    title: '#ee2b23T#3551d7F#00ff00B &eParkour & More'
     empty: air
     open-with-item:
       material: SLIME_BLOCK
       stationary: 0
-      name: '#ee2b23T#3551d7F#00ff00B &eParkour'
+      name: '#ee2b23T#3551d7F#00ff00B &eParkour & More'
       lore:
       - 'Jump or dive like an Eagle, in our' 
       - 'amazing parkour and dropper courses' 
@@ -153,6 +153,15 @@ panels:
         lore:
         - Learn how to play elytra
       '4':
+        material: cps= self
+        stack: 1
+        name: '&cPlayer Stats!'
+        lore:
+        - '&eGame Level: &b%parkour_player_level%'
+        - '&eBalance: &b%vault_eco_balance_commas%'
+        - '&eCompleted: &b%parkour_player_courses_completed%'
+        - '&eLast Finished: &b%parkour_player_last_completed%'
+      '53':
         material: BOOK
         stack: 1
         name: '&fRules & hints!'
@@ -163,9 +172,11 @@ panels:
         - '4: Phoenix can get custom created courses'
         - '5: Fall damage is enabled with no regen'
         - '6: Lvl also equals difficulty'
-      '53':
-        material: REDSTONE
+      '45':
+        material: WHITE_DYE
         stack: 1
-        name: '&fSettings!'
+        name: '&cToggle quiet mode'
         commands:
-        - open= parkour_settings
+        - parkour quiet
+        lore:
+        - 'Disables on-screen text'
