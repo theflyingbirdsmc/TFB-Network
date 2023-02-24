@@ -16,10 +16,10 @@ dependencies {
     implementation 'BungeeControl-Red:BungeeControl-Red:3.13.5'
     implementation 'BuycraftX-Bungee:BuycraftX-Bungee:12.0.8'
     implementation 'LuckPerms-Bungee:LuckPerms-Bungee:5.4.56'
-    implementation 'Plan:Plan:5.5-build-2150'
-    implementation 'Reconnect:Reconnect:1.5.5'
+    implementation 'Plan:Plan:5.5-build-2172'
+    implementation 'Reconnect:Reconnect:1.6.5'
     implementation 'VulcanBungee:VulcanBungee:2.0.4'
-    implementation 'VotingPlugin:VotingPlugin:6.10.0'
+    implementation 'VotingPlugin:VotingPlugin:6.11.1'
 }
 
 // TFB Artifactory
