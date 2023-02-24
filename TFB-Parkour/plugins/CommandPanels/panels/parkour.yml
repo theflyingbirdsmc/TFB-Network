@@ -1,7 +1,7 @@
 panels:
   parkour:
     perm: default
-    rows: 3
+    rows: 6
     title: '#ee2b23T#3551d7F#00ff00B &eParkour'
     empty: air
     open-with-item:
@@ -12,9 +12,9 @@ panels:
       - 'Jump or dive like an Eagle, in our' 
       - 'amazing parkour and dropper courses' 
       commands:
-      - open= parkour        
+      - open= parkour
     item:
-      '9':
+      '1':
         material: SLIME_BLOCK
         stack: 1
         name: '&fCasual Parkour!'
@@ -23,7 +23,7 @@ panels:
         lore:
         - 'Play however you want'
         - 'Be free like a bird'
-      '10':
+      '9':
         material: HONEY_BLOCK
         stack: 1
         name: '&fRanked Parkour!'
@@ -35,13 +35,13 @@ panels:
       '11':
         material: PLAYER_HEAD
         stack: 1
-        name: '&fPlayer Courses'
+        name: '&fParkour Player Courses'
         commands:
         - open= parkour_playercourses
         lore:
         - 'Courses made by other players'
         - 'Create your own and let others play it!'
-      '13':
+      '10':
         material: EGG
         stack: 1
         name: '&r&b%parkour_course_displayname_tutorial%&r (Views: &b%parkour_course_views_tutorial%&r)'
@@ -56,12 +56,102 @@ panels:
         - left= parkour join tutorial
         - right= parkour stats tutorial
         - middle= parkour leaderboard tutorial
-      '15':
+      '16':
+        material: EGG
+        stack: 1
+        name: '&r&bTutorial Coming Soon...'
+        lore:
+        - Learn how to play dropper
+      '7':
         material: DROPPER
         stack: 1
-        name: '&fDropper!'
+        name: '&fCasual Dropper!'
         commands:
-        - open= dropper_courses
+        - open= dropper_casual
+        lore:
+        - 'Play however you want'
+        - 'Be free like a bird'
+      '17':
+        material: OBSERVER
+        stack: 1
+        name: '&fRanked Dropper!'
+        commands:
+        - open= dropper_ranked
+        lore:
+        - 'Earn levels by completing courses'
+        - 'Courses gets increasingly harder'
+      '15':
+        material: PLAYER_HEAD
+        stack: 1
+        name: '&fDropper Player Courses'
+        commands:
+        - open= dropper_playercourses
+        lore:
+        - 'Courses made by other players'
+        - 'Create your own and let others play it!'
+      '19':
+        material: TNT
+        stack: 1
+        name: '&fParkour Challenges!'
+        commands:
+        - open= parkour_challenges
+        lore:
+        - 'Compete against your friends'
+        - 'Special challenge only courses'
+        - 'Set a wager, winner gets prize'
+      '25':
+        material: SCULK_SENSOR
+        stack: 1
+        name: '&fDropper Challenges!'
+        commands:
+        - open= dropper_challenges
+        lore:
+        - 'Compete against your friends'
+        - 'Special challenge only courses'
+        - 'Set a wager, winner gets prize'
+      '39':
+        material: ELYTRA
+        stack: 1
+        name: '&fCasual Elytra!'
+        commands:
+        - open= elytra_casual
+        lore:
+        - 'Play however you want'
+        - 'Be free like a bird'
+      '41':
+        material: SHULKER_BOX
+        stack: 1
+        name: '&fRanked Elytra!'
+        commands:
+        - open= elytra_ranked
+        lore:
+        - 'Earn levels by completing courses'
+        - 'Courses gets increasingly harder'
+      '31':
+        material: PLAYER_HEAD
+        stack: 1
+        name: '&fElytra Player Courses'
+        commands:
+        - open= elytra_playercourses
+        lore:
+        - 'Courses made by other players'
+        - 'Create your own and let others play it!'
+      '49':
+        material: REPEATER
+        stack: 1
+        name: '&fElytra Challenges!'
+        commands:
+        - open= elytra_challenges
+        lore:
+        - 'Compete against your friends'
+        - 'Special challenge only courses'
+        - 'Set a wager, winner gets prize'
+      '40':
+        material: EGG
+        stack: 1
+        name: '&r&bTutorial Coming Soon...'
+        lore:
+        - Learn how to play elytra
       '4':
         material: BOOK
         stack: 1
@@ -73,7 +163,7 @@ panels:
         - '4: Phoenix can get custom created courses'
         - '5: Fall damage is enabled with no regen'
         - '6: Lvl also equals difficulty'
-      '22':
+      '53':
         material: REDSTONE
         stack: 1
         name: '&fSettings!'
