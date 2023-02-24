@@ -54,6 +54,7 @@ scoreboard-teams:
     static-lines:
       myCustomLine: 0.66
     disable-in-servers: []
+  can-see-friendly-invisibles: false
 yellow-number-in-tablist:
   enabled: true
   value: '%ping%'
@@ -106,7 +107,6 @@ scoreboard:
   - disabledworld
   scoreboards:
     admin:
-      #display-condition: permission:tab.scoreboard.admin
       title: Admin scoreboard
       lines:
       - '&6Network:'
@@ -116,7 +116,7 @@ scoreboard:
       - '&6Parkour Info:'
       - '&f* &eLevel&7: &f%parkour_player_level%'
       - '&f* &eCompleted&7: &f%parkour_player_courses_completed%'
-      - '&f* &eBalance&7: &f$%vault_eco_balance_formatted%'
+      - '&f* &eBalance&7: &f$%vault_eco_balance_commas%'
       - ''
       - '&6Server Info:'
       - '&f* &eChat&7: &f%chatcontrolred_channel%'
@@ -133,7 +133,7 @@ scoreboard:
       - '&6Parkour Info:'
       - '&f* &eLevel&7: &f%parkour_player_level%'
       - '&f* &eCompleted&7: &f%parkour_player_courses_completed%'
-      - '&f* &eBalance&7: &f$%vault_eco_balance_formatted%'
+      - '&f* &eBalance&7: &f$%vault_eco_balance_commas%'
       - ''
       - '&6Personal Info:'
       - '&f* &eChat&7: &f%chatcontrolred_channel%'
