@@ -24,8 +24,8 @@ cd /home/container/TFB
 git config --global --add safe.directory /home/container/TFB # Seriously..?
 git config --global core.filemode false # Ignore file permissions
 git config --global core.autocrlf input # To make sure it works on Linux from Windows
-git config --global user.email "$GITHUB_EMAIL"
-git config --global user.name "$GITHUB_USERNAME"
+# git config --global user.email "$GITHUB_EMAIL"
+# git config --global user.name "$GITHUB_USERNAME"
 git clone https://github.com/Neocky/pluGET.git pluGET
 git clone https://github.com/2lstudios-mc/FlameCord.git FlameCord
 rm -rf FlameCord/.git/ pluGET/.git/ # We only want the files not the repo.
