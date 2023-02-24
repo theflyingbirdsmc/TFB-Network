@@ -51,7 +51,7 @@ OnFinish:
   TeleportAway: true
   TeleportBeforePrize: false
   TeleportDelay: 0
-  TeleportToJoinLocation: true
+  TeleportToJoinLocation: false
   UpdatePlayerDatabaseTime: true
 OnLeave:
   TeleportToLinkedLobby: true
