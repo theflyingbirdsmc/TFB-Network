@@ -2,7 +2,7 @@ panels:
   parkour_playercourses:
     perm: default
     rows: 5
-    title: '&8Player Courses'
+    title: '&8Parkour Player Courses'
     empty: air
     panelType:
     - static
