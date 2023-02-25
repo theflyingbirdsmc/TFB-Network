@@ -113,7 +113,7 @@ Menu-Item:
   - '&7so keep playing and stay awesome!'
 # List of the worlds where cosmetics are enabled!
 Enabled-Worlds:
-- world
+- world_lobby
 # List of the disabled cosmetics.
 # Set to true to disable it.
 Disabled-Cosmetics:
