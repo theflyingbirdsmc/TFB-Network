@@ -9,7 +9,7 @@ VoteSites:
     Enabled: true
     
     # Display name of voting site
-    Name: Minecraftlist.dk
+    Name: MinecraftList
     
     # Priority of this site
     # Used for sorted list
@@ -23,18 +23,18 @@ VoteSites:
     # Gotten from voting on the site (will be in console/log)
     # Usually is the main part of the url(e.g. PlanetMinecraft.com), but not always
     # See console when you vote (it will notify you if the plugin didn't find a votingsite matching the service site
-    ServiceSite: Minecraftlist
+    ServiceSite: Minecraftlist.dk
     
     # vote url for /vote
     # Format for this can be set in Config.yml
     # Do not include colors here
     # If you need to force a url set the url as this:
     # VoteURL: '[Text="ANY TEXT TO CLICK ON HERE",url="URLHERE"]'
-    VoteURL: VoteURL
+    VoteURL: '[Text="Minecraftlist.dk",url="https://minecraftlist.dk/vote/0f69fd50-8975-4172-a5bc-897846970489"]'
     
     # Time between votes in hours (used for /vote next)
     # Most sites are 24 hours
-    VoteDelay: 24.0
+    VoteDelay: 0
     
     # Use to have a minute votedelay
     # VoteDelayMin: 30
@@ -58,59 +58,58 @@ VoteSites:
     # VoteSite Material for some GUI's
     # Removing this may result in an error, required on each site
     DisplayItem:
-      Material: GRASS
+      Material: DIAMOND
       Amount: 1
-    Rewards:
-      Messages:
-        Player: '&aThanks for voting on %ServiceSite%!'
+    
+    # Rewards to give
+
   # Site 2 example
-  Site2:
-    Enabled: false
-    Name: Site2
-    ServiceSite: PlanetMinecraft.com
-    VoteURL: link to vote URL here, used in /vote
+  Curseforge:
+    Enabled: true
+    
+    # Display name of voting site
+    Name: CurseForge
+    
+    Priority: 1
+    ServiceSite: CurseForge.com
+    VoteURL: '[Text="Curseforge.com",url="https://www.curseforge.com/servers/server/the-flying-birds"]'
+    
     VoteDelay: 24
+    WaitUntilVoteDelay: false
+    
+    VoteDelayDaily: true
+    
+    # Offset time for /vote next caculations
+    TimeOffSet: 0
+    ForceOffline: false
     DisplayItem:
       Material: DIAMOND
       Amount: 1
-    Rewards:
-      Commands:
-      - say hello
-      # Advanced example
-      # 50% chance for reward1, if reward1 not given then 20% chance to get reward2, if reward2 not given then fallback
-      AdvancedPriority:
-        # Similar to priority, but no need to have to use reward files
-        # Add requirements under each reward
-        # Will go in order from list here and try to run each of the following rewards...
-        # This name can be anything, but they need to be different
-        Reward1:
-          Chance: 50
-          # Any other requirement here
-          # If any requirement fails, the next reward will be attempted
-          # Use permission requirement for rank based rewards
-          # RequirePermission: true
-          # Permission: 'permhere'
-          Messages:
-            Player: You got first reward
-        Reward2:
-          Chance: 20
-          Messages:
-            Player: You got second reward
-        # Fallback, 100% chance, after other rewards fail chances
-        Fallback:
-          Messages:
-            Player: You got unlucky
-      
-      # Give 1 diamond
-      Items:
-        item1:
-          Material: DIAMOND
-          Amount: 1
-      
-      Messages:
-        Player: You voted
+
+  MineList:
+    Enabled: true
+    
+    # Display name of voting site
+    Name: MineList
+    
+    Priority: 10
+    ServiceSite: MineList.dk
+    VoteURL: '[Text="MineList.dk",url="https://minelist.dk/server/the-flying-birds/"]'
+    
+    VoteDelay: 24
+    WaitUntilVoteDelay: false
+    
+    VoteDelayDaily: true
+    
+    # Offset time for /vote next caculations
+    TimeOffSet: 0
+    ForceOffline: false
+    DisplayItem:
+      Material: DIAMOND
+      Amount: 1
 
 # Reward for any site
 # Similar to AnySiteReward
 # This requires the site to be configured in order to get the reward.
-EverySiteReward: {}
+EverySiteReward:
+  Rewards: MysteryEggs

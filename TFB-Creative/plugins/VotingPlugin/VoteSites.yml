@@ -60,10 +60,6 @@ VoteSites:
     DisplayItem:
       Material: DIAMOND
       Amount: 1
-    
-    # Rewards to give
-
-  # Site 2 example
   Curseforge:
     Enabled: true
     
