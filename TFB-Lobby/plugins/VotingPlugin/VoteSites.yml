@@ -62,8 +62,7 @@ VoteSites:
       Amount: 1
     
     # Rewards to give
-    # https://github.com/BenCodez/AdvancedCore/wiki/Rewards
-    Rewards: MysteryEggs
+
   # Site 2 example
   Curseforge:
     Enabled: true
