@@ -51,10 +51,8 @@ for file in file_path:
             ssh_client.connect(hostname='germany01.theflyingbirds.net', username=server_sftpusernames[server], password=SFTP_TFB_PASSWORD, port=2022, allow_agent=False)
             sftp = ssh_client.open_sftp()
 
-            
             if not os.path.isfile(root_path + file):
                 sftp.remove(remotePath)
-                remove_empty_directories(sftp, remotePath)
             
             sftp.put(root_path + file, remotePath)
             print(remotePath)
