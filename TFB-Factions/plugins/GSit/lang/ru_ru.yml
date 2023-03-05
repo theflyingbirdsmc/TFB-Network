@@ -1,11 +1,4 @@
-#
-# Language-File created by:		TioLopew
-#
-
-
-
 Plugin:
-  plugin-reload: '[P]&a Плагин был успешно перезагружен.'
   
   plugin-enabled: '[P]&a Плагин был включен.'
   plugin-link: '[P]&a Соединение с &6 %Link%&a Успешно!'
@@ -15,14 +8,49 @@ Plugin:
     [P]&aСкачайте последнюю версию:
     [P]&6 %Path%
   plugin-version: '[P]&c Плагин не может быть использован с этой версией сервера! (&b%Version%&c)'
+  plugin-reload: '[P]&a Плагин был успешно перезагружен.'
   plugin-disabled: '[P]&a Плагин был успешно отключен.'
   plugin-prefix: '&7[&6GSit&7]'
 
 
 
 Messages:
+  
+  command-permission-error: '[P]&c У вас нет права для использования этой команды!'
+  command-sender-error: '[P]&c Этот отправитель не может выполнить эту команду!'
+  command-version-error: |-
+    [P]&c Устаревшая версия сервера! (&b%Version%&c)
+    [P]&c Обновите версию для использования!
+  
+  command-gsit-toggle-on: '[P]&a Теперь вы можете сесть, нажав.'
+  command-gsit-toggle-off: '[P]&a Вы больше не можете сесть, нажав.'
+  command-gsit-playertoggle-on: '[P]&a Теперь вы можете сесть на игрока, нажав.'
+  command-gsit-playertoggle-off: '[P]&a Вы больше не можете сесть на игрока, нажав.'
   command-gcrawl-toggle-on: '[P]&a Вы включили возможность ползания через двойное приседание.'
   command-gcrawl-toggle-off: '[P]&a Вы выключили возможность ползания через двойное приседание.'
+  
+  action-sit-now-error: '[P]&c Вы не можете сидеть сейчас!'
+  action-sit-world-error: '[P]&c Вы не можете сидеть в этом мире!'
+  action-sit-location-error: '[P]&c Ты не можешь здесь сидеть!'
+  action-sit-safe-error: '[P]&c Здесь сидеть небезопасно!'
+  action-sit-region-error: '[P]&c Вы не можете сидеть в этом регионе!'
+  action-sit-kick-error: '[P]&c Кто-то уже сидит здесь!'
+  action-sit-info: '&aИспользуйте &6 <lang:key.sneak>&a, чтобы встать.'
+  
+  action-playersit-info: '&aИспользуйте &6 <lang:key.sneak>&a, чтобы встать.'
+  
+  action-pose-now-error: '[P]&c Вы не можете использовать эту команду сейчас!'
+  action-pose-world-error: '[P]&c Вы не можете использовать эту команду в этом мире!'
+  action-pose-location-error: '[P]&c Здесь нельзя использовать эту команду!'
+  action-pose-safe-error: '[P]&c Здесь небезопасно использовать эту команду!'
+  action-pose-region-error: '[P]&c Вы не можете использовать эту команду в этом регионе!'
+  action-pose-kick-error: '[P]&c Кто-то уже здесь использует эту команду!'
+  action-pose-info: '&aИспользуйте &6 <lang:key.sneak>&a, чтобы встать.'
+  
+  action-crawl-now-error: '[P]&c Вы не можете ползать сейчас!'
+  action-crawl-world-error: '[P]&c Вы не можете ползать в этом мире!'
+  action-crawl-region-error: '[P]&c Вы не можете ползать в этом регионе!'
+  action-crawl-info: '&aИспользуйте &6 <lang:key.sneak>&a, чтобы встать.'
   
   action-emote-none-error: '[P]&c Вы не используете эмоцию сейчас!'
   action-emote-stop-error: '[P]&c Вы не можете перестать использовать эмоцию!'
@@ -31,40 +59,5 @@ Messages:
   action-emote-now-error: '[P]&c Вы не можете использовать эмоцию сейчас!'
   action-emote-world-error: '[P]&c Ты не можешь использовать эмоции в этом мире!'
   action-emote-region-error: '[P]&c Ты не можешь использовать эмоции в этом регионе!'
-  command-reload: '[P]&a Конфиг успешно перезагружен.'
-  
-  command-permission-error: '[P]&c У вас нет права для использования этой команды!'
-  command-sender-error: '[P]&c Этот отправитель не может выполнить эту команду!'
-  command-version-error: |-
-    [P]&c Outdated Server Version! (&b%Version%&c)
-    [P]&c Update the Server to use this Feature!
-  
-  command-gsit-toggle-on: '[P]&a Теперь вы можете сесть, нажав.'
-  command-gsit-toggle-off: '[P]&a Вы больше не можете сесть, нажав.'
-  command-gsit-playertoggle-on: '[P]&a Теперь вы можете сесть на игрока, нажав.'
-  command-gsit-playertoggle-off: '[P]&a Вы больше не можете сесть на игрока, нажав.'
-  
-  action-sit-now-error: '[P]&c Вы не можете сидеть сейчас!'
-  action-sit-world-error: '[P]&c Вы не можете сидеть в этом мире!'
-  action-sit-location-error: '[P]&c Ты не можешь здесь сидеть!'
-  action-sit-safe-error: '[P]&c Здесь сидеть небезопасно!'
-  action-sit-region-error: '[P]&c Вы не можете сидеть в этом регионе!'
-  action-sit-kick-error: '[P]&c Кто-то уже сидит здесь!'
-  action-sit-info: '&aИспользуйте &6 <translatekey:key.sneak>&a, чтобы встать.'
-  
-  action-playersit-info: '&aИспользуйте &6 <translatekey:key.sneak>&a, чтобы встать.'
-  
-  action-pose-now-error: '[P]&c Вы не можете использовать эту команду сейчас!'
-  action-pose-world-error: '[P]&c Вы не можете использовать эту команду в этом мире!'
-  action-pose-location-error: '[P]&c Здесь нельзя использовать эту команду!'
-  action-pose-safe-error: '[P]&c Здесь небезопасно использовать эту команду!'
-  action-pose-region-error: '[P]&c Вы не можете использовать эту команду в этом регионе!'
-  action-pose-kick-error: '[P]&c Кто-то уже здесь использует эту команду!'
-  action-pose-info: '&aИспользуйте &6 <translatekey:key.sneak>&a, чтобы встать.'
-  
-  action-crawl-now-error: '[P]&c Вы не можете ползать сейчас!'
-  action-crawl-world-error: '[P]&c Вы не можете ползать в этом мире!'
-  action-crawl-region-error: '[P]&c Вы не можете ползать в этом регионе!'
-  action-crawl-info: '&aИспользуйте &6 <translatekey:key.sneak>&a, чтобы встать.'
   
   action-blocked-error: '[P]&c Вам не разрешено выполнять эту команду прямо сейчас!'

@@ -3,6 +3,7 @@
 *.zip
 *.gz
 *.schematic
+*.bd
 *.schem
 *.env
 pkcs.p12
