@@ -160,15 +160,11 @@ Channels:
     standard:
       Format: chat
       Format_Spy: '@noprefix chat'
-    admin:
-      Format: admin-chat
-      Format_Console: '[A-chat {player}] {message}'
+      Bungee: false
+    staff:
+      Format: staff
     global:
       Format: global-chat
-    ranged:
-      Format: '&6[ranged] &7{pl_prefix+}{player}:{pl_suffix} {message}'
-      Range: 100
-      Bungee: false
     helpop:
       Format: helpop
       
@@ -1289,7 +1285,7 @@ Integration:
     Enabled: true
       
     # The optional prefix before all messages so that you know where they are coming from.
-    Prefix: '&8[&dBungee/{bungee_server_name}] '
+    Prefix: ''
 
   # Integration with DiscordSRV. 
   Discord:

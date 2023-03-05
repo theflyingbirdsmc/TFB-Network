@@ -324,3 +324,10 @@
 
 #match \:rip\:
 #then replace rest in spaghetti never forgetti
+
+
+# Send messages starting with ">" to staff channel
+match ^(\>)(.*)
+then command channel send staff $2
+then deny
+dont verbose

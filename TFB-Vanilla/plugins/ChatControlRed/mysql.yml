@@ -11,7 +11,7 @@
 
 # Use an external database to store logs, mails and user data (channels, nicks, etc.)?
 # If false, then we store these date into your data.db file.
-Enabled: false
+Enabled: true
 
 # The host and the port to connect to
 Host: 172.18.0.1:3306
