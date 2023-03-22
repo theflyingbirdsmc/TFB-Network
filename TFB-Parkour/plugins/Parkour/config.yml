@@ -30,7 +30,7 @@ OnCourse:
   PreventEntitiesAttacking: true
   PreventJoiningDifferentCourse: true
   PreventPlayerCollisions: true
-  PreventFireDamage: false
+  PreventFireDamage: true
   SequentialCheckpoints:
     Enabled: true
     AlertPlayer: true
