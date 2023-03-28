@@ -68,17 +68,30 @@
 # Create a /helpop command that sends messages to a channel.
 # -----------------------------------------------------------------------------------------------
 
-# Catch "/helpop" command and send usage.
-#match ^\/helpop$
+# Catch "/staffchat" command and send usage.
+match ^\/staffchat$
+dont verbose
+then warn &cDescription: Send a message to online staff members.
+then warn &cUsage: /staffchat <message> - use /sc for short
+then deny
+
+# Catch "/sc" command and send usage.
+match ^\/sc$
+dont verbose
+then warn &cDescription: Send a message to online staff members.
+then warn &cUsage: /sc <message>
+then deny
+
+# Catch "/staffchat <message>" and redirect to the helpop channel.
+#match ^(\/staffchat) (.*)
 #dont verbose
-#then warn &cDescription: Send a message to online staff members.
-#then warn &cUsage: /helpop <message>
+#then command channel send staff $2
 #then deny
 
-# Catch "/helpop <message>" and redirect to the helpop channel.
-#match ^(\/helpop) (.*)
+# Catch "/sc <message>" and redirect to the helpop channel.
+#match ^(\/sc) (.*)
 #dont verbose
-#then command channel send helpop $2
+#then command channel send staff $2
 #then deny
  
 # -----------------------------------------------------------------------------------------------

@@ -11,6 +11,5 @@ Parts:
     - '&7Server: &f{server_name}'
     Run_Command: /server {server_name}
     Message: '&8[&bStaff&8]&r {player_nick}'
-  
   message:
     Message: ' &8»&r &b{message}'
