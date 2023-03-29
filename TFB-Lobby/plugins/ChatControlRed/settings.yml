@@ -162,11 +162,11 @@ Channels:
       Format_Spy: '@noprefix chat'
       Bungee: false
     staffChat:
-      Format: staff
+      Format: staffchat
     global:
-      Format: global-chat
+      Format: globalchat
     helpstaff:
-      Format: helpstaff
+      Format: helpchat
       
 # -------------------------------------------------------------------------------------------------
 # Prevent flooding the chat with junk / repetitive messages.

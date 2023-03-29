@@ -147,6 +147,7 @@ dynamics:
     disable-coral-block-fade: false
     snow-fall-blocks: []
     disable-rock-growth: false
+    disable-sculk-growth: false
 blacklist:
     use-as-whitelist: false
     logging:

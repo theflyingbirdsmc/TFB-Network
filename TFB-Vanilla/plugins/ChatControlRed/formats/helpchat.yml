@@ -5,11 +5,17 @@
 
 # The parts of this format.
 Parts:
-  everything:
+  player:
+    Hover:
+    - '&eClick to reply in channel'
+    Suggest_Command: '/hc '
+    Message: '&8[&cHelpChat&8]'
+  channel:
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'
     - '&7Server: &f{server_name}'
+    - '&eClick to join player'
     Run_Command: /server {server_name}
-    Message: '&8[&bStaff&8]&r {player_nick}'
+    Message: '&r {player_nick}'
   message:
-    Message: ' &8»&r &b{message}'
+    Message: ' &8»&r &c{message}'

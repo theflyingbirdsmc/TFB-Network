@@ -82,17 +82,33 @@ then warn &cDescription: Send a message to online staff members.
 then warn &cUsage: /sc <message>
 then deny
 
-# Catch "/staffchat <message>" and redirect to the helpop channel.
-#match ^(\/staffchat) (.*)
-#dont verbose
-#then command channel send staff $2
-#then deny
+# Catch "/globalchat <message>" and redirect to the globalchat channel.
+match ^\/globalchat$
+dont verbose
+then warn &cDescription: Send a message to the global chat channel.
+then warn &cUsage: /globalchat <message>
+then deny
 
-# Catch "/sc <message>" and redirect to the helpop channel.
-#match ^(\/sc) (.*)
-#dont verbose
-#then command channel send staff $2
-#then deny
+# Catch "/gc <message>" and redirect to the global chat channel.
+match ^\/gc$
+dont verbose
+then warn &cDescription: Send a message to the global chat channel.
+then warn &cUsage: /gc <message>
+then deny
+
+# Catch "/helpchat <message>" and redirect to the helpchat channel.
+match ^\/helpchat$
+dont verbose
+then warn &cDescription: Send a message to the help chat channel.
+then warn &cUsage: /helpchat <message>
+then deny
+
+# Catch "/hc <message>" and redirect to the help chat channel.
+match ^\/hc$
+dont verbose
+then warn &cDescription: Send a message to the chat channel.
+then warn &cUsage: /globalchat <message>
+then deny
  
 # -----------------------------------------------------------------------------------------------
 # Create a /nick command that executes a longer /tag nick command.

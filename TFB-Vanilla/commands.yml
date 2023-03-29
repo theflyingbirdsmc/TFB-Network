@@ -7,13 +7,13 @@ aliases:
   - channel send staff $$1-
   sc:
   - channel send staff $$1-
-
+  
   globalchat:
   - channel send global $$1-
   gc:
-  - channel send staff $$1-
-
-  helpstaff:
-  - channel send staff $$1-
-  sc:
-  - channel send staff $$1-
+  - channel send global $$1-
+  
+  helpchat:
+  - channel send help $$1-
+  hc:
+  - channel send help $$1-
