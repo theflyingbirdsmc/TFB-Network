@@ -9,7 +9,7 @@ Parts:
     Hover:
     - '&eClick to reply in channel'
     Suggest_Command: '/hc '
-    Message: '&8[&cHelpChat&8]'
+    Message: '&8[#ee2b23T#3551d7F#00ff00B&8-&cHelp&8]'
   channel:
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'
