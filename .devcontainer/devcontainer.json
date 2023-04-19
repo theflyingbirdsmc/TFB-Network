@@ -4,5 +4,10 @@
 	"workspaceFolder": "/home/container/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
 	"remoteUser": "container",
-	"service": "tfb"
+	"service": "tfb",
+	"features": {
+    		"ghcr.io/devcontainers/features/common-utils:2": {
+      			"version": "latest"
+    		}
+	}
 }
