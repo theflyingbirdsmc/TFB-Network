@@ -6,8 +6,6 @@
 	"remoteUser": "container",
 	"service": "tfb",
 	"features": {
-    		"ghcr.io/devcontainers/features/common-utils:2": {
-      			"version": "latest"
-    		}
+		"ghcr.io/devcontainers/features/common-utils:2": {}
 	}
 }
