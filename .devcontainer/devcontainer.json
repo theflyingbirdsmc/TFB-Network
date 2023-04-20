@@ -1,6 +1,6 @@
 {
 	"name": "TFB",
-	"workspaceFolder": "/home/codespace/TFB",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"dockerComposeFile": "./docker-compose.yml",
 	"service": "tfb",
 	"features": {

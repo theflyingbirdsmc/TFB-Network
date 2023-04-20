@@ -12,7 +12,7 @@ services:
     command: sleep infinity
     network_mode: service:database
     volumes:
-      - "../:/home/codespace/TFB"
+      - ../..:/workspaces:cached
   database:
     container_name: Database
     image: mariadb:10.7
