@@ -10,7 +10,6 @@ services:
       - 8804:8804
       - 8192:8192
     command: sleep infinity
-    network_mode: service:database
     volumes:
       - ../..:/workspaces:cached
   database:
