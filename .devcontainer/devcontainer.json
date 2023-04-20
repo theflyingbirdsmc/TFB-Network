@@ -3,9 +3,12 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/home/codespace/TFB,type=bind",
 	"workspaceFolder": "/home/codespace/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
-	"remoteUser": "container",
+	"remoteUser": "codespace",
 	"service": "tfb",
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {}
-	}
+  	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+      		  	"installGradle": "false"
+    	}
 }
