@@ -9,6 +9,8 @@ services:
       - 25565:25565
       - 8804:8804
       - 8192:8192
+    command: sleep infinity
+    network_mode: service:database
     volumes:
       - "../:/home/codespace/TFB"
   database:
