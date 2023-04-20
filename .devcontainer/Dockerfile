@@ -40,7 +40,7 @@ LABEL 		org.opencontainers.image.source="https://github.com/theflyingbirdsmc/plu
 
 RUN 		apk add curl ca-certificates nano openssl git fontconfig maven jq gcc build-base gradle
 
-ARG         user=container
+ARG         user=codespace
 ARG         home=/home/$user
 RUN         addgroup -S docker
 RUN         adduser \
@@ -51,7 +51,7 @@ RUN         adduser \
             $user
 WORKDIR     $home
 USER        root
-RUN         mkdir /home/container/TFB/ && chown container /home/container/TFB/
+RUN         mkdir /home/codespace/TFB/ && chown container /home/codespace/TFB/
 USER        $user
 COPY        ./entrypoint.sh /
 
