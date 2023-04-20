@@ -9,6 +9,6 @@
 			"version": "none",
 			"installMaven": "false",
       		"installGradle": "true"
-    	}
+    		}
 	}
 }
