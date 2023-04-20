@@ -1,12 +1,14 @@
 {
 	"name": "TFB",
+	"workspaceFolder": "/home/codespace/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
 	"remoteUser": "codespace",
 	"service": "tfb",
-  	"features": {
+	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
 			"installMaven": "false",
-      		  	"installGradle": "true"
+      		"installGradle": "true"
     	}
+	}
 }
