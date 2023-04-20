@@ -10,5 +10,5 @@
 			"installMaven": "false",
       		"installGradle": "true"
     		}
-	}
+	  }
 }
