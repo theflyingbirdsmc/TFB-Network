@@ -1,7 +1,7 @@
 {
 	"name": "TFB",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/home/container/TFB,type=bind",
-	"workspaceFolder": "/home/container/TFB",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/codespace/TFB,type=bind",
+	"workspaceFolder": "/home/codespace/TFB",
 	"dockerComposeFile": "./docker-compose.yml",
 	"remoteUser": "container",
 	"service": "tfb",
