@@ -16,7 +16,7 @@ OnCourse:
   CheckpointMaterial: STONE_PLATE
   DisableItemDrop: true
   DisableItemPickup: true
-  DisablePlayerDamage: true
+  DisablePlayerDamage: false
   DisableFallDamage: false
   DisableFly: false
   DisplayLiveTime: true
@@ -30,7 +30,7 @@ OnCourse:
   PreventEntitiesAttacking: true
   PreventJoiningDifferentCourse: true
   PreventPlayerCollisions: true
-  PreventFireDamage: true
+  PreventFireDamage: false
   SequentialCheckpoints:
     Enabled: true
     AlertPlayer: true

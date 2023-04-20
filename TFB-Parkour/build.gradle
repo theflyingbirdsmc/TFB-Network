@@ -40,8 +40,8 @@ dependencies {
     
     // Local plugins
     implementation 'VoidGen:VoidGen:2.2.1'
-    implementation 'Parkour:Parkour:7.1.0'
-    implementation 'ParkourTopTen:ParkourTopTen:4.0'
+    implementation 'Parkour:Parkour:7.2.0'
+    implementation 'ParkourTopTen:ParkourTopTen:4.1'
 }
 
 // TFB Artifactory
