@@ -2,16 +2,13 @@ version: "3.9"
 services:
   tfb:
     container_name: TFB
-    build: ./
+    image: mcr.microsoft.com/devcontainers/java:0-17
     depends_on:
       - database
     ports:
       - 25565:25565
       - 8804:8804
       - 8192:8192
-    environment:
-      - GITHUB_EMAIL=${GITHUB_EMAIL}
-      - GITHUB_USERNAME=${GITHUB_USERNAME}
     volumes:
       - "../:/home/container/TFB"
   database:
