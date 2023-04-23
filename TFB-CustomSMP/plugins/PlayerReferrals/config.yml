@@ -22,7 +22,7 @@ refer-each-other: false
 
 # If enabled, will log the ip of players once they join and makes sure players can not be referred by someone with the same IP address
 # I strongly recommend using this in combination with a VPN blocker of your choice, to prevent easily bypassing this.
-ip-check: false
+ip-check: true
 
 # Global rewards a player will receive when they referred another player, milestones can be set further down the config file
 # Commands will be executed by the console
