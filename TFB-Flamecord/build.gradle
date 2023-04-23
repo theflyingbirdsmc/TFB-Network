@@ -11,14 +11,14 @@ if("$System.env.MAVEN_URL" != null) {
 }
 
 dependencies {
-    implementation 'Server:Flamecord:1.3.1'
+    implementation 'Server:Flamecord:1.4.4'
     implementation 'Votifier:Votifier:2.7.3'
     implementation 'BungeeControl-Red:BungeeControl-Red:3.13.5'
     implementation 'BuycraftX-Bungee:BuycraftX-Bungee:12.0.8'
-    implementation 'LuckPerms-Bungee:LuckPerms-Bungee:5.4.56'
+    implementation 'LuckPerms-Bungee:LuckPerms-Bungee:5.4.71'
     implementation 'Plan:Plan:5.5-build-2172'
     implementation 'Reconnect:Reconnect:1.6.5'
-    implementation 'VulcanBungee:VulcanBungee:2.0.4'
+    implementation 'VulcanBungee:VulcanBungee:1.0.6'
     implementation 'VotingPlugin:VotingPlugin:6.11.1'
 }
 

@@ -117,6 +117,8 @@ antibot:
     connections-per-second: 3
     pings-per-second: 64
     log: true
+    whitelist:
+    - 127.0.0.1
   reconnect:
     enabled: true
     attempts: 2
@@ -132,3 +134,8 @@ antibot:
     vls-per-byte: 0.0017
     vls-per-packet: 0.1
     vls-to-kick: 100.0
+  proxy:
+    enabled: true
+    log: true
+    firewall: true
+compression-level: 6
