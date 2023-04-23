@@ -12,7 +12,7 @@ if("$System.env.MAVEN_URL" != null) {
 
 dependencies {
     // Network plugins
-    implementation 'Server:Paper:1.19.3-379'
+    implementation 'Server:Paper:1.19.3-387'
     implementation 'BuycraftX:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.16.11'
     implementation 'CommandPanels:CommandPanels:3.18.3.0'
