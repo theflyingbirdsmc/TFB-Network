@@ -43,7 +43,7 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.1'
 
     // Server plugins
-    implementation 'PlotSquared:PlotSquared:6.10.9-Premium'
+    implementation 'PlotSquared:PlotSquared:6.11.1-Premium'
     implementation 'PlotHider:PlotHider:6.0.1'
 }
 

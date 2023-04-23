@@ -43,7 +43,7 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.1'
 
     // Server plugins
-    implementation 'Factions:Factions:1.6.9.5-4.0.2-RC'
+    implementation 'Factions:Factions:1.6.9.5-4.1.0-RC'
 }
 
 // TFB Artifactory
