@@ -4,7 +4,7 @@
 # The current version of this configuration. Do NOT change this value!
 # If the plugin uses a more recent config version, this config gets replaced by it
 #   while a backup of the old config will be kept as "config.old.ver.<OLD VERSION>.yml".
-version: 16
+version: 15
 
 # Should debugging messages be shown?
 debug: false
@@ -25,21 +25,6 @@ Animations:
     - "&7.&b.&7."
     - "&7..&b.&7"
 
-# Music that should play when a user is reconnecting
-# If there is more than one value it will randomly select one
-# Requires Protocolize to work
-# Doesn't work <1.9
-# For a list of sounds see: https://gitlab.com/-/snippets/2356589
-Reconnection Music:
-  MUSIC_CREDITS:
-    Category: master
-    Volume: 1.0
-    Pitch: 1.0
-  MUSIC_DRAGON:
-    Category: master
-    Volume: 1.0
-    Pitch: 1.0
-
 # This value should not be changed unless you are experiencing issues with titles "flickering" on bedrock clients
 # In which case you should change this value to 1 second (1000)
 # Minimum value is 50 Maximum value is 5000
@@ -53,8 +38,8 @@ default-locale: "en_US"
 # The amount of milliseconds the plugin will wait before attempting to check if the server is alive.
 # This must be at least 500, however if you use an automatic restart plugin that kicks players
 #   reconnect may actually reconnect them before the server stops accepting new connections. This may cause unstable behavior.
-# Recommended value is 16000
-delay-before-trying: 16000
+# Recommended value is 8000
+delay-before-trying: 8000
 
 # The amount of milliseconds the plugin will wait between each new connection attempt per player - per server.
 # Depending on server size and hardware having 20+ people reconnect at once can cause issues in the game, plugins and or databases.
@@ -67,7 +52,7 @@ delay-between-reconnects: 1000
 # How much MORE time between reconnects should we wait for a connection to finalize.
 # A connection is considered "finalized" once the server sends a dimension to the client.
 # This "can" help in preventing server overloads before allowing another reconnect attempt.
-# However, you should still set delay-between-reconnects to a reasonable value in-case of plugins sending
+# However you should still set delay-between-reconnects to a reasonable value in-case of plugins sending
 #   dimension changes to the client and or to issues (see above)
 # Recommended value is 2000
 connect-finalization-timeout: 2000
@@ -75,7 +60,7 @@ connect-finalization-timeout: 2000
 # The amount of milliseconds the plugin will wait for the proxy-server connection to establish, before it decides to try again. 
 # Note: If a connection is not finalized within this timeframe another attempt will be made.
 # Any reconnect that times out will be chucked back at the start of the reconnect queue.
-# Cannot be less than 2000 + connect-finalization-timeout
+# Cannot be less then 2000 + connect-finalization-timeout
 # Recommended value is 6000
 reconnect-timeout: 6000
 
