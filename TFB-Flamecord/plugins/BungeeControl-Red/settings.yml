@@ -125,6 +125,15 @@ Integration:
     # https://github.com/kangarko/ChatControl-Red/wiki/Variables#bungeecontrol-red-variables
     Player_Name: '{player_nick}'
 
+
+# -------------------------------------------------------------------------------------------------
+# Enable the ability of ChatControl on Spigot to forward console commands?
+#
+# At this point we are investigating a potential vulnerability so we recommend enabling this only
+# for private servers with trusted clients.
+# -------------------------------------------------------------------------------------------------
+Enable_Forward_Command: false
+
 # -------------------------------------------------------------------------------------------------
 # List of section names that will print informative messages about their features.
 # You normally don't need to edit this unless you have problems or been navigated by the dev.

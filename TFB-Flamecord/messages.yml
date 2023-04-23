@@ -134,3 +134,9 @@ flamecord_bip: |-
   &aLocale: &b{4}
   &aView Distance: &b{5}
   &aCurrent Server: &b{6}
+antibot_proxy: |-
+  &c&lFlameCord
+
+  &cYou are using a Proxy/VPN! ({0})
+
+  &cError? Contact us on discord.gg/gF36AT3
