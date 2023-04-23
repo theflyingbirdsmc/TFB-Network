@@ -41,6 +41,7 @@ dependencies {
     implementation 'VotingPlugin:VotingPlugin:6.11.1'
     implementation 'WorldGuard:WorldGuard:7.0.8-beta-01+cbb2ba7'
     implementation 'Vulcan:Vulcan:2.7.1'
+    implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
 }
 
 // TFB Artifactory
