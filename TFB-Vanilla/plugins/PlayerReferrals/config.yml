@@ -53,13 +53,13 @@ milestones:
     message: "&3You reached &b%score% &3and have received additional rewards!"
   10:
     commands:
-      - "gmysteryboxes give %username% 25 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes give %username% 20 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
       - "gmysteryboxes gift %username% 10 msg=false"
     message: "&3You reached &b%score% &3and have received additional rewards!"
   25:
     commands:
       - "gmysteryboxes give %username% 50 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
-      - "gmysteryboxes gift %username% 25 msg=false"
+      - "gmysteryboxes gift %username% 20 msg=false"
     message: "&3You reached &b%score% &3and have received additional rewards!"
   50:
     commands:
@@ -68,7 +68,7 @@ milestones:
     message: "&3You reached &b%score% &3and have received additional rewards!"
   100:
     commands:
-      - "gmysteryboxes give %username% 250 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes give %username% 200 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
       - "gmysteryboxes gift %username% 100 msg=false"
     message: "&3You reached &b%score% &3and have received additional rewards!"
 
