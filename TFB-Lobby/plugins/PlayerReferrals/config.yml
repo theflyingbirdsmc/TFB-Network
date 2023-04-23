@@ -7,14 +7,14 @@ bStats: true
 # ALL PLACEHOLDERS ARE CASE-SENSITIVE
 
 # Type of database to use, choose SQLITE for a local database and MYSQL if you use a MYSQL database
-database-type: SQLITE
+database-type: MYSQL
 
 # This will only be used if you use MYSQL as database-type
-host: "localhost"
-port: 3306
-database: "database"
-username: "username"
-password: "password"
+host: '65.108.8.46'
+port: '3306'
+database: 's2_playerreferals'
+username: 'u2_wdkOuuJO27'
+password: 'EDMgT5VOIaSa0TWw@b9LeuXW'
 table-prefix: 'ref_'
 
 # If true, players are able to refer each other
@@ -22,14 +22,15 @@ refer-each-other: false
 
 # If enabled, will log the ip of players once they join and makes sure players can not be referred by someone with the same IP address
 # I strongly recommend using this in combination with a VPN blocker of your choice, to prevent easily bypassing this.
-ip-check: true
+ip-check: false
 
 # Global rewards a player will receive when they referred another player, milestones can be set further down the config file
 # Commands will be executed by the console
 # Placeholders: %username%, %score%, %referredUsername%
 referral-rewards:
   commands:
-    - "eco give %username% 50"
+    - "gmysteryboxes give %username% 5 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+    - "gmysteryboxes gift %username% 1 msg=false"
   message: "&3You referred &b%referredUsername% &3and have received rewards! Your current score is &b%score%&3."
 
 # Rewards a player will receive when they get referred by another player
@@ -37,7 +38,8 @@ referral-rewards:
 # Placeholders: %username%, %referralUsername%
 referred-rewards:
   commands:
-    - "eco give %username% 25"
+    - "gmysteryboxes give %username% 5 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+    - "gmysteryboxes gift %username% 1 msg=false"
   message: "&bYou &3and &b%referralUsername% &3have both received rewards!"
 
 # Milestones allow you to give special rewards once a player reaches a certain referral-score
@@ -46,7 +48,28 @@ enable-milestones: true
 milestones:
   5:
     commands:
-      - "eco give %username% 100"
+      - "gmysteryboxes give %username% 10 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes gift %username% 5 msg=false"
+    message: "&3You reached &b%score% &3and have received additional rewards!"
+  10:
+    commands:
+      - "gmysteryboxes give %username% 25 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes gift %username% 10 msg=false"
+    message: "&3You reached &b%score% &3and have received additional rewards!"
+  25:
+    commands:
+      - "gmysteryboxes give %username% 50 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes gift %username% 25 msg=false"
+    message: "&3You reached &b%score% &3and have received additional rewards!"
+  50:
+    commands:
+      - "gmysteryboxes give %username% 100 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes gift %username% 50 msg=false"
+    message: "&3You reached &b%score% &3and have received additional rewards!"
+  100:
+    commands:
+      - "gmysteryboxes give %username% 250 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false"
+      - "gmysteryboxes gift %username% 100 msg=false"
     message: "&3You reached &b%score% &3and have received additional rewards!"
 
 # To disable this, use -1
