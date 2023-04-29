@@ -17,6 +17,7 @@ dependencies {
     implementation 'BuycraftX:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.16.11'
     implementation 'CommandPanels:CommandPanels:3.18.3.0'
+    implementation 'CoreProtect:CoreProtect:21.3'
     implementation 'DecentHolograms:DecentHolograms:2.7.11'
     implementation 'Essentials:Essentials:2.19.7'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.7'
