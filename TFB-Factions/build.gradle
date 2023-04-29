@@ -12,10 +12,12 @@ if("$System.env.MAVEN_URL" != null) {
 
 dependencies {
     // Network plugins
-    implementation 'Server:Paper:1.19.3-379'
+    implementation 'Server:Paper:1.19.3-387'
+    implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
     implementation 'BuycraftX:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.16.11'
     implementation 'CommandPanels:CommandPanels:3.18.3.0'
+    implementation 'CoreProtect:CoreProtect:21.3'
     implementation 'DecentHolograms:DecentHolograms:2.7.11'
     implementation 'Essentials:Essentials:2.19.7'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.7'
@@ -23,15 +25,15 @@ dependencies {
     implementation 'EssentialsGeoIP:EssentialsGeoIP:2.19.7'
     implementation 'EssentialsProtect:EssentialsProtect:2.19.7'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.19.7'
-    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.5.2-SNAPSHOT-348;cd00bf9'
+    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.0-SNAPSHOT-402;86acb1c'
     implementation 'GadgetsMenu:GadgetsMenu:5.2.16'
     implementation 'GSit:GSit:1.3.6'
     implementation 'LibsDisguises:LibsDisguises:10.0.32'
-    implementation 'LuckPerms:LuckPerms:5.4.60'
+    implementation 'LuckPerms:LuckPerms:5.4.71'
     implementation 'Multiverse-Core:Multiverse-Core:4.3.1-b861'
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.2'
     implementation 'Plan:Plan:5.5-build-2172'
-    implementation 'ProtocolLib:ProtocolLib:5.0.0-SNAPSHOT-b612'
+    implementation 'ProtocolLib:ProtocolLib:5.0.0-SNAPSHOT-636'
     implementation 'SuperVanish:SuperVanish:6.2.15'
     implementation 'TAB:TAB:3.2.4'
     implementation 'Vault:Vault:1.7.3-b131'
@@ -42,7 +44,7 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.1'
 
     // Server plugins
-    implementation 'Factions:Factions:1.6.9.5-4.0.2-RC'
+    implementation 'Factions:Factions:1.6.9.5-4.1.0-RC'
 }
 
 // TFB Artifactory
