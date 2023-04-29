@@ -64,10 +64,6 @@ Channels:
   # based on their autojoin permission on /chc reload?
   Autojoin_On_Reload: true
   
-  # Save yourself from accidentally revealing you are online by disabling your ability to send
-  # direct chat messages. You will need to use "/channel send" instead.
-  Prevent_Vanish_Chat: false
-  
   # The default console format unless overriden below. Does not support formats.
   # Set this to "default" in your channel settings to use the channel's format instead.
   Format_Console: '[{channel}] {player}: {message}'
@@ -94,6 +90,9 @@ Channels:
   # Set to false to free up memory when you autojoin players to channels and won't let
   # players change their channels, or you only have one channel that all players subscribe to.
   Save_To_Database: true
+  
+  # Removes the [Not Secure] misinformation label from the console chat.
+  Remove_Insecure_Chat_Tag: true
   
   # Channels are preconfigured public chat rooms where players can message each other.
   # You can add various keys and remove those you don't use, see this tutorial:
@@ -131,6 +130,9 @@ Channels:
   #
   # - Range_Worlds: If "Range" is set to "*", which means everyone on world sees the message,
   #                 this is a list of worlds that are connected where players chat together.
+  #
+  # - Min_Players_For_Range: The minimum online players to enable ranged chat. I.e. if the value is 20,
+  #                          then if there is 0-19 players, global chat will be used.
   # 
   # - Party: Makes the channel players only reach other players in the same party. This can work
   #          together with Range, but does not require that option. 
@@ -471,6 +473,7 @@ Rules:
   # [WARNING] This will remove all custom colors in the message in case it is filtered!
   # TURNING THIS OFF will break packet rules and make players able to bypass rules by using colors.
   # LEAVING THIS ON will break "then replace" if the replaced message contains colors.
+  # You can override this setting by using the strip colors operator in each individual rule.
   Strip_Colors: true
   
   # Replace accents before matching? Such as "dáma" to "dama" or "gjøre" to "gjore" etc.
@@ -479,12 +482,17 @@ Rules:
   # [IMPORTANT] If this is enabled, DO NOT USE accents in your rules because using them will break
   # the rule. Only put "match dama" or "match gjore" and all "dama", "dáma" and "gjøre" and "gjore" 
   # will automatically be matched for you.
+  # You can override this setting by using the strip accents operator in each individual rule.
   Strip_Accents: true
   
   # Evaluate the "match" operator in rules/ case insensitively? Poses slight performance penalty.
-  # NB: When testing on regex101.com make sure you toggle "insensitive" and "unicode" flags
-  # when testing expressions to get accurate results: https://i.imgur.com/QEDZx5N.png
+  # NB: When testing on regex101.com make sure you toggle "insensitive" flag
   Case_Insensitive: true
+  
+  # Evaluate the "match" operator in rules/ as well as other regexes in settings.yml (i.e. in Whitelist)
+  # using the unicode flag? Enable this if your server is in a non-English language.
+  # NB: When testing on regex101.com make sure you toggle "unicode" flag
+  Unicode: false
   
   # Prevent regular expressions from rules and messages freezing the server if they take 
   # more time than the amount specified below, in milliseconds.
@@ -564,17 +572,20 @@ Private_Messages:
 # Represents settings for player messages such as join, quit, death and timed messages
 # -------------------------------------------------------------------------------------------------
 Messages:
- 
+
   # What aspects of messages should be enabled?
-  # Options: join, quit, kick, death, timed
   #
   # If you have another plugin handling join/quit etc. messages, remove them from list below.
   # If you want to hide those messages, leave them in Apply_On and empty your messages/ .rs files.
+  #
+  # Options: join, quit, kick, death, timed
   Apply_On: []
   
   # Files in messages/ folder are read from top to bottom. 
   # You can either STOP sending more messages to player after he receives the first one or send all
-  # messages. Put what messages types here from Apply_On here should only send the 1st message.  
+  # messages. Put what messages types here that should only send the 1st message.  
+  #
+  # Options: join, quit, kick, death, timed
   Stop_On_First_Match: true
   
   # Automatically append prefix to messages of the given type. Edit/remove/add sections below
@@ -894,7 +905,7 @@ Tag:
   # PS: If you want to type /nick instead of "/tag nick" to invoke this command, see rules/command.rs
   # file (line 85 by default) and comment the two command rules for this alias.
   #
-  # Available options: prefix, nick, suffix
+  # Options: prefix, nick, suffix
   Apply_On: []
   
   # The commands that invoke the tag command.
@@ -946,9 +957,9 @@ Tab_List:
 Toggle:
   
   # Where should we enable this feature?
-  # Available: chat, mail, announcement, me, pm, soundnotify
-  #
   # Leave empty to completely prevent players from disabling all of these features.
+  #
+  # Options: chat, mail, announcement, me, pm, soundnotify
   Apply_On:
   - 'chat'
   - 'mail'
@@ -1303,7 +1314,8 @@ Integration:
     # client cannot show many characters so they can show as [] or even kick players.
     Remove_Emojis: true
     
-    # Beta: Send player channel messages through the webhook feature of Discord? 
+    # Beta: Send player channel messages through the webhook feature of Discord?
+    # This breaks the [X] removing message ability on Discord (removing messages in game will work) 
     Webhook: false
     
     # Discord does not let us edit messages, so we must remove the original message and resend

@@ -141,16 +141,19 @@ Channels:
   #                 https://github.com/kangarko/ChatControl-Red/wiki/Listener-Priorities
   #
   List:
-    English:
+    standard:
       Format: chat
       Format_Spy: '@noprefix chat'
-    Staff:
-      Format: admin-chat
-      Format_Console: '[A-chat {player}] {message}'
-    Danish:
-      Format: chat
-    Helpop:
-      Format: helpop
+      Bungee: false
+    TFB-Lead:
+      Format: tfb-lead
+      Bungee: true
+    TFB-Chat:
+      Format: tfb-chat
+      Bungee: true
+    TFB-Help:
+      Format: tfb-help
+      Bungee: true
       
 # -------------------------------------------------------------------------------------------------
 # Prevent flooding the chat with junk / repetitive messages.

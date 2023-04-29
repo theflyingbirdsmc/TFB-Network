@@ -144,20 +144,16 @@ Channels:
     standard:
       Format: chat
       Format_Spy: '@noprefix chat'
-    admin:
-      Format: admin-chat
-      Format_Console: '[A-chat {player}] {message}'
-    global:
-      Format: global-chat
-    ranged:
-      Format: '&6[ranged] &7{pl_prefix+}{player}:{pl_suffix} {message}'
-      Range: 100
       Bungee: false
-    towny:
-      Format: chat
-      Party: towny-town
-    helpop:
-      Format: helpop
+    TFB-Lead:
+      Format: tfb-lead
+      Bungee: true
+    TFB-Chat:
+      Format: tfb-chat
+      Bungee: true
+    TFB-Help:
+      Format: tfb-help
+      Bungee: true
       
 # -------------------------------------------------------------------------------------------------
 # Prevent flooding the chat with junk / repetitive messages.
