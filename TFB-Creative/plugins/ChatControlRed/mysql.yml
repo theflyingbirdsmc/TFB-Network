@@ -13,6 +13,12 @@
 # If false, then we store these date into your data.db file.
 Enabled: true
 
+# Enable the more modern HikariCP connection pool? 
+# If you have issues, try adding &allowPublicKeyRetrieval=true (or false) at the end of "Line" key,
+# as well as changing autoReconnect from true to false. Test various combinations or eventually
+# set this key to false as last-resort solution.
+Hikari: true
+
 # The host and the port to connect to
 Host: 172.18.0.1
 
