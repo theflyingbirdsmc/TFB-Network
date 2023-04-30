@@ -3,8 +3,20 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
-  - init: gradle build
-
-
+  - name: Start containers
+    command: |
+      docker-compose up -d
+  - name: Change ownership of folders
+    command: |
+      gp sync-await containers # Wait for the container task
+      sudo chown gitpod:gitpod -R ./TFB-*/
+      sudo chown gitpod:gitpod -R ./build.gradle
+ports:
+  - name: Minecraft Default Port
+    port: 25565
+    onOpen: open-preview
+    visibility: public
