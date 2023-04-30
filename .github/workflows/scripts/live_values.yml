@@ -49,3 +49,10 @@ TFB-Vanilla/plugins/ChatControlRed/mysql.yml: Host
 TFB-Factions/plugins/ChatControlRed/mysql.yml: Host
 TFB-Parkour/plugins/ChatControlRed/mysql.yml: Host
 TFB-CustomSMP/plugins/ChatControlRed/mysql.yml: Host
+
+TFB-Lobby/plugins/PlayerReferrals/config.yml: host
+TFB-Creative/plugins/PlayerReferrals/config.yml: host
+TFB-Vanilla/plugins/PlayerReferrals/config.yml: host
+TFB-Factions/plugins/PlayerReferrals/config.yml: host
+TFB-Parkour/plugins/PlayerReferrals/config.yml: host
+# TFB-CustomSMP/plugins/PlayerReferrals/config.yml: host
