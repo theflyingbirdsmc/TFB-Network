@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  # tfb:
+  #   container_name: TFB
+  #   image: mcr.microsoft.com/devcontainers/java:17
+  #   depends_on:
+  #     - database
+  #   ports:
+  #     - 25565:25565
+  #     - 8804:8804
+  #     - 8192:8192
+  #   command: sleep infinity
+  #   volumes:
+  #     - ../..:/workspaces:cached
+  database:
+    container_name: Database
+    image: mariadb:10.7
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - "database:/var/lib/mysql"
+      - "./db_init.sql:/docker-entrypoint-initdb.d/init.sql"
+volumes:
+  tfb:
+  database:
