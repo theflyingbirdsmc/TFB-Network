@@ -3,6 +3,7 @@ panels:
     paneltype:
     - nocommand
     perm: tfb
+    refresh-delay: 4
     rows: 6
     title: '      #ee2b23T#3551d7F#00ff00B &7- #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s'
     empty: 
@@ -12,132 +13,159 @@ panels:
     - tfb
     - TFB
     item:
-      '0':
-        material: BLACK_STAINED_GLASS_PANE
-        name: ' '
       '1':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '9':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '2':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg3M2MxMmJmZmI1MjUxYTBiODhkNWFlNzVjNzI0N2NiMzlhNzVmZjFhODFjYmU0YzhhMzliMzExZGRlZGEifX19
         stack: 1
-        name: '#5865F2Discord'
+        name: '%javascript_tfb_discord_name,{player_locale_short}%'
         lore:
-        - '&eClick me to get a link in chat!'
-        - ''
-        - '&f- &aStay connected with everything TFB ;)'
-        - '&f- &aGet your TFB rank as a Discord role'
-        - '&f- &aMeet other birds :>'
+        - '%javascript_tfb_discord_lore,{player_locale_short}%'
         commands:
-        - msg= &adiscord.theflyingbirds.net&r &8- &eClick me to join!
+        - msg= %javascript_tfb_discord_message,{player_locale_short}%
       '3':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjdkNmJlMWRjYTUzNTJhNTY5M2UyOWVhMzVkODA2YjJhMjdjNGE5N2I2NGVlYmJmNjMyYzk5OGQ1OTQ4ZjFjNCJ9fX0=
         stack: 1
-        name: '#368F17Statistics'
+        name: '%javascript_tfb_stats_name,{player_locale_short}%'
         lore:
-        - '&eClick me to get a link in chat!'
-        - ''
-        - '&f- &aCheck statistics about yourself and other players'
-        - '&f- &aIf you have a rank, you can see server statistics!'
+        - '%javascript_tfb_stats_lore,{player_locale_short}%'
         commands:
-        - msg= &ahttps://stats.theflyingbirds.net:8804 &8- &eClick me to see stats
+        - msg= %javascript_tfb_stats_message,{player_locale_short}%
       '4':
         material: cps= self
         stack: 1
-        name: '&eYour profile on #ee2b23T#3551d7F#00ff00B'
+        name: '%javascript_tfb_profile_name,{player_locale_short}%'
         lore:
-        - '&eThis is all about you :)'
+        - '%javascript_tfb_profile_lore,{player_locale_short}%'
       '5':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JkYjhmMzc5NjE0MmFhYTNlYjg5Y2NiZWM3MTcwNWQ0YTIxNjkyZWI3Yzg0NjZkMmE3OWIyMWFlMTRiMzI2In19fQ==
         stack: 1
-        name: '#235babTebex'
+        name: '%javascript_tfb_shop_name,{player_locale_short}%'
         lore:
-        - '&eClick me to get a link in chat!'
-        #- ''
-        #- '&f- &aRight click to see more info about our ranks'
+        - '%javascript_tfb_shop_lore,{player_locale_short}%'
         commands:
-        - msg= &ashop.theflyingbirds.net&r &8- &eClick me to visit our shop!
+        - msg= %javascript_tfb_shop_message,{player_locale_short}%
       '6':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJmNmMwN2EzMjZkZWY5ODRlNzJmNzcyZWQ2NDU0NDlmNWVjOTZjNmNhMjU2NDk5YjVkMmI4NGE4ZGNlIn19fQ==
         stack: 1
-        name: '#FF0000YouTube'
+        name: '%javascript_tfb_youtube_name,{player_locale_short}%'
         lore:
-        - '&eClick me to get a link in chat!'
-        - ''
-        - '&f- &aEnjoy :)'
+        - '%javascript_tfb_youtube_lore,{player_locale_short}%'
         commands:
-        - msg= &ayoutube.com/user/theflyingbirdsmc&r &8- &eClick me to visit our youtube channel!
-      '7':
-        material: GRAY_STAINED_GLASS_PANE
-        name: ' '
-      '8':
-        material: BLACK_STAINED_GLASS_PANE
-        name: ' '
+        - msg= %javascript_tfb_youtube_message,{player_locale_short}%
+      '13':
+        material: NETHER_STAR
+        stack: 1
+        name: '#ee2b23T#3551d7F#00ff00B &aCosmetics'
+        lore:
+        - '%javascript_tfb_cosmetics_lore,{player_locale_short}%'
+        commands:
+        - gmenu main
+      # '12':
+      # material: RED_BANNER
+      # banner:
+      # - WHITE,HALF_HORIZONTAL
+      # - RED,STRIPE_TOP
+      # - RED,HALF_HORIZONTAL_MIRROR
+      # - RED,HALF_HORIZONTAL_MIRROR
+      # - WHITE,STRIPE_CENTER
+      # - WHITE,STRIPE_CENTER
+      # stack: 1
+      # name: '&4Danish &fServers'
+      # '14':
+      # material: BLUE_BANNER
+      # banner:
+      # - GREEN,GLOBE
+      # stack: 1
+      # name: '&2Global &fServers'
       '17':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
-      '29':
-        material: CRAFTING_TABLE
         stack: 1
-        name: '&aVanilla Survival'
+      '29':
+        material: GRASS_BLOCK
+        stack: 1
+        name: '%javascript_tfb_vanilladk_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25700%&8)'
         lore:
-        - '&eOnline&7: &a%bungee_vanilla%'
-        - '&eClick to connect'
+        - '&eOnline&7: &a%bungee_vanilladk%'
+        - '%javascript_tfb_vanilladk_lore,{player_locale_short}%'
+        commands:
+        - server= vanilladk
       '30':
         material: SLIME_BLOCK
         stack: 1
-        name: '&aPar&eko&cur'
+        name: '%javascript_tfb_parkoureu_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25604%&8)'
         lore:
         - '&eOnline&7: &a%bungee_parkour%'
-        - '&eClick to connect'
+        - '%javascript_tfb_parkoureu_lore,{player_locale_short}%'
         commands:
         - server= parkour
       '31':
         material: END_CRYSTAL
         stack: 1
-        name: '&bLobby'
+        name: '%javascript_tfb_lobby_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25600%&8)'
         lore:
         - '&eOnline&7: &a%bungee_lobby%'
-        - '&eClick to connect'
+        - '%javascript_tfb_lobby_lore,{player_locale_short}%'
         commands:
         - server= lobby
       '32':
         material: BEDROCK
         stack: 1
-        name: '&fCreative'
+        name: '%javascript_tfb_creativeeu_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25601%&8)'
         lore:
         - '&eOnline&7: &a%bungee_creative%'
-        - '&eClick to connect'
+        - '%javascript_tfb_creativeeu_lore,{player_locale_short}%'
         commands:
         - server= creative
       '33':
         material: TNT
         stack: 1
-        name: '&cFactions'
+        name: '%javascript_tfb_factionseu_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25603%&8)'
         lore:
         - '&eOnline&7: &a%bungee_factions%'
-        - '&eClick for help & rules'
+        - '%javascript_tfb_factionseu_lore,{player_locale_short}%'
         commands:
-        - cp faction_help
-        
+        - server= factions
       '36':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '45':
         material: BLACK_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '46':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '44':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '52':
         material: GRAY_STAINED_GLASS_PANE
         name: ' '
+        stack: 1
       '53':
         material: BLACK_STAINED_GLASS_PANE
+        name: ' '
+        stack: 1
+      '7':
+        material: GRAY_STAINED_GLASS_PANE
+        stack: 1
+        name: ' '
+      '8':
+        material: BLACK_STAINED_GLASS_PANE
+        stack: 1
+        name: ' '
+      '0':
+        material: BLACK_STAINED_GLASS_PANE
+        stack: 1
         name: ' '

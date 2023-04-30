@@ -89,7 +89,7 @@ panels:
       # name: '&2Global &fServers'
       '17':
         material: GRAY_STAINED_GLASS_PANE
-        name: '\n'
+        name: ' '
         stack: 1
       '29':
         material: GRASS_BLOCK
@@ -172,4 +172,3 @@ panels:
         material: BLACK_STAINED_GLASS_PANE
         stack: 1
         name: ' '
-
