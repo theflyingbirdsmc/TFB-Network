@@ -18,4 +18,4 @@ Parts:
     Run_Command: /server {server_name}
     Message: '&r {player_nick}'
   message:
-    Message: ' &8»&r &b{message}'
+    Message: ' &8»&r &a{message}'
