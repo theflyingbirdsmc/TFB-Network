@@ -94,7 +94,7 @@ per-world-playerlist:
     - paintball
     - bedwars
 scoreboard:
-  enabled: true
+  enabled: false
   toggle-command: /sb
   remember-toggle-choice: true
   hidden-by-default: false
@@ -108,11 +108,8 @@ scoreboard:
     default:
       title: '&6&l%factionsuuid_faction_name%'
       lines:
-      #- ' &8» &cLeader&7: &f%factionsuuid_faction_leader%'
       - ' &8» &cMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%'
       - ' &8» &cPower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%'
-      #- ' &8» &cChunks Claimed&7: &f%factionsuuid_faction_claims%'
-      #- ' &8» &cChunks Value&7: &f%factionsuuid_faction_land_value%'
       - ' &8» &cBank&7: &f%factionsuuid_faction_bank_balance%'
       - ' &8» &cDeaths&7: &f%factionsuuid_faction_deaths%'
       - ' &8» &cTotal Kills&7: &f%factionsuuid_faction_kills%'
