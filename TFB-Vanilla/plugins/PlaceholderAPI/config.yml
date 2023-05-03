@@ -45,7 +45,7 @@ expansions:
     server_name: A Minecraft Server
   pinger:
     offline: '&cOffline'
-    check_interval: 30
+    check_interval: 5
     online: '&aOnline'
   javascript:
     debug: false

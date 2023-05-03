@@ -18,10 +18,10 @@ function tfbFactionsEU() {
     } else if (type  == "lore") {
         switch(lang) {
             case "da":
-                return "&eType&8: &7Engelsk\\n&eKlik for at joine nu!";
+                return "&eSprog&8: &7Engelsk\\n&eKlik for at joine nu!";
                 break;
             default:
-                return "&eType&8: &7English\\n&eClick to connect now!";
+                return "&eLanguage&8: &7English\\n&eClick to connect now!";
         }
     } else if (type  == "message") {
         switch(lang) {

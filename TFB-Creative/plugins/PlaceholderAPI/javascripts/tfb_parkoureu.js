@@ -9,10 +9,10 @@ function tfbParkourEU() {
     if(type == "name") {
         switch(lang) {
             case "da":
-                return "&aPar&eko&cur";
+                return "&aParkour";
                 break;
             default:
-                return "&aPar&eko&cur";
+                return "&aParkour";
         }
             
     } else if (type  == "lore") {

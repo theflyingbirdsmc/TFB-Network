@@ -49,5 +49,11 @@ tfb_factionseu:
   file: tfb_factionseu.js
 tfb_chats:
   file: tfb_chats.js
+tfb_chat_player:
+  file: tfb_chat_player.js
+tfb_chat_help:
+  file: tfb_chat_help.js
+tfb_chat_staff:
+  file: tfb_chat_staff.js
 example:
   file: example.js

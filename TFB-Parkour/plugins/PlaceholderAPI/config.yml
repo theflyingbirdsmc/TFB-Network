@@ -18,15 +18,23 @@ boolean:
 date_format: MM/dd/yy HH:mm:ss
 debug: false
 expansions:
-  parkour:
-    lang:
-      no-prize-delay: '0'
-      no-time-recorded: No time recorded
-  javascript:
-    debug: false
-    github_script_downloads: false
-    argument_split: ','
-    use_quick_js: false
+  player:
+    ping_color:
+      medium: '&e'
+      high: '&c'
+      low: '&a'
+    ping_value:
+      high: 100
+      medium: 50
+    direction:
+      north: N
+      south: S
+      north_west: NW
+      north_east: NE
+      east: E
+      south_east: SE
+      west: W
+      south_west: SW
   bungee:
     check_interval: 30
   server:
@@ -35,14 +43,13 @@ expansions:
       low: '&c'
       medium: '&e'
     server_name: A Minecraft Server
-  vault:
-    baltop:
-      check_delay: 30
-      cache_size: 100
-      enabled: false
-    formatting:
-      thousands: k
-      trillions: T
-      quadrillions: Q
-      billions: B
-      millions: M
+  pinger:
+    offline: '&cOffline'
+    check_interval: 5
+    online: '&aOnline'
+  javascript:
+    debug: false
+    github_script_downloads: false
+    argument_split: ','
+    use_quick_js: false
+    enable_parse_command: false

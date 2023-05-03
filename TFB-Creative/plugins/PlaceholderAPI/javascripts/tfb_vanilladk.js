@@ -9,10 +9,10 @@ function tfbVanillaDK() {
     if(type == "name") {
         switch(lang) {
             case "da":
-                return "&aVanilla Survival";
+                return "&2Vanilla ";
                 break;
             default:
-                return "&aVanilla Survival";
+                return "&2Vanilla";
         }
             
     } else if (type  == "lore") {

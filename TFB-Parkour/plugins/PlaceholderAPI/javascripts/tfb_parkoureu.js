@@ -9,19 +9,19 @@ function tfbParkourEU() {
     if(type == "name") {
         switch(lang) {
             case "da":
-                return "&aPar&eko&cur";
+                return "&aParkour";
                 break;
             default:
-                return "&aPar&eko&cur";
+                return "&aParkour";
         }
             
     } else if (type  == "lore") {
         switch(lang) {
             case "da":
-                return "&eType&8: &7EU\\n&eKlik for at joine nu!";
+                return "&eSprog&8: &7Dansk/Engelsk\\n&eKlik for at joine nu!";
                 break;
             default:
-                return "&eType&8: &7EU\\n&eClick to connect now!";
+                return "&eLanguage&8: &7Danish/English\\n&eClick to connect now!";
         }
     } else if (type  == "message") {
         switch(lang) {

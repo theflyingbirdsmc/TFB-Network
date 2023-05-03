@@ -26,10 +26,10 @@ function tfbStats() {
     } else if (type == "message") {
         switch (lang) {
             case "da":
-                return "&ahttps://stats.theflyingbirds.net:8804 &8<- &eKlik her for at joine!";
+                return "&ahttps://stats.theflyingbirds.net &8<- &eKlik her for at joine!";
                 break;
             default:
-                return "&ahttps://stats.theflyingbirds.net:8804 &8<- &eClick me to see stats";
+                return "&ahttps://stats.theflyingbirds.net &8<- &eClick me to see stats";
         }
     } else { return "error"; }
 }
