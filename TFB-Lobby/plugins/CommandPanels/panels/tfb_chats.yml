@@ -1,5 +1,6 @@
 panels:
   tfb_chats:
+    perm: tfb_chats
     rows: 1
     title: '#ee2b23T#3551d7F#00ff00B &eNetwork Chats'
     empty:
@@ -15,6 +16,7 @@ panels:
         - right= ch j TFB-Chat read
         - rightshift= ch l TFB-Chat
       '4':
+        material: air
         has0:
           value0: '%cp-player-name% HASPERM'
           compare0: chatcontrol.

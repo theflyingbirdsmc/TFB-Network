@@ -81,9 +81,7 @@ panels:
         lore:
         - '%javascript_tfb_chats_lore,{player_locale_short}%'
         commands:
-        - left= ch
-        - right= ch ls
-        - cpc
+        - cp tfb_chats
       # '12':
       # material: RED_BANNER
       # banner:
