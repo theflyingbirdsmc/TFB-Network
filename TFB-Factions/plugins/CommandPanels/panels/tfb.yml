@@ -29,6 +29,7 @@ panels:
         - '%javascript_tfb_discord_lore,{player_locale_short}%'
         commands:
         - msg= %javascript_tfb_discord_message,{player_locale_short}%
+        - cpc
       '3':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjdkNmJlMWRjYTUzNTJhNTY5M2UyOWVhMzVkODA2YjJhMjdjNGE5N2I2NGVlYmJmNjMyYzk5OGQ1OTQ4ZjFjNCJ9fX0=
         stack: 1
@@ -37,6 +38,7 @@ panels:
         - '%javascript_tfb_stats_lore,{player_locale_short}%'
         commands:
         - msg= %javascript_tfb_stats_message,{player_locale_short}%
+        - cpc
       '4':
         material: cps= self
         stack: 1
@@ -51,6 +53,7 @@ panels:
         - '%javascript_tfb_shop_lore,{player_locale_short}%'
         commands:
         - msg= %javascript_tfb_shop_message,{player_locale_short}%
+        - cpc
       '6':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJmNmMwN2EzMjZkZWY5ODRlNzJmNzcyZWQ2NDU0NDlmNWVjOTZjNmNhMjU2NDk5YjVkMmI4NGE4ZGNlIn19fQ==
         stack: 1
@@ -59,6 +62,7 @@ panels:
         - '%javascript_tfb_youtube_lore,{player_locale_short}%'
         commands:
         - msg= %javascript_tfb_youtube_message,{player_locale_short}%
+        - cpc
       '13':
         material: NETHER_STAR
         stack: 1
@@ -67,6 +71,16 @@ panels:
         - '%javascript_tfb_cosmetics_lore,{player_locale_short}%'
         commands:
         - gmenu main
+      '10':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQ3ZmNjNWQ3ZDJhZDIwNGZiMjVmM2ZiNmYxODRhNmVkMTdkZGVmNWEzNTc4ZWJhNWEzNzc3NWUyZTIzMzlkOSJ9fX0=
+        stack: 1
+        name: '%javascript_tfb_chats_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_chats_lore,{player_locale_short}%'
+        commands:
+        - left= ch
+        - right= ch ls
+        - cpc
       # '12':
       # material: RED_BANNER
       # banner:

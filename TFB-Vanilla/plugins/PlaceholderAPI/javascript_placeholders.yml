@@ -47,5 +47,7 @@ tfb_creativeeu:
   file: tfb_creativeeu.js
 tfb_factionseu:
   file: tfb_factionseu.js
+tfb_chats:
+  file: tfb_chats.js
 example:
   file: example.js

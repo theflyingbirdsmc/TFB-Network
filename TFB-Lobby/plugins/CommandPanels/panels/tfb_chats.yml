@@ -1,0 +1,39 @@
+panels:
+  tfb_chats:
+    rows: 1
+    title: '#ee2b23T#3551d7F#00ff00B &eNetwork Chats'
+    empty:
+    item:
+      '2':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNjJmOGRlM2IwZDQwZDYyYTNjNGNlNjUzMTRmMDNhNGIxNjQwMWQ4OTViYWRjMWRkMDhmZTg1YjlmYzFhMyJ9fX0=
+        stack: 1
+        name: '%javascript_tfb_chat_player_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_chat_player_lore,{player_locale_short}%'
+        commands:
+        - left= ch j TFB-Chat write
+        - right= ch j TFB-Chat read
+        - rightshift= ch l TFB-Chat
+      '4':
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: chatcontrol.
+          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNjJmOGRlM2IwZDQwZDYyYTNjNGNlNjUzMTRmMDNhNGIxNjQwMWQ4OTViYWRjMWRkMDhmZTg1YjlmYzFhMyJ9fX0=
+          stack: 1
+          name: '%javascript_tfb_chat_staff_name,{player_locale_short}%'
+          lore:
+          - '%javascript_tfb_chat_staff_lore,{player_locale_short}%'
+          commands:
+          - left= ch j TFB-Chat write
+          - right= ch j TFB-Chat read
+          - rightshift= ch l TFB-Chat
+      '6':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGEyZmRlMzRkMzRjODU4OGU1OGJmZDc5MGNlMTgwMjVmNzg0MzM5OWRlZTJhYjRjZWRjMmMwYjQ2M2ZkMWUifX19
+        stack: 1
+        name: '%javascript_tfb_chat_help_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_chat_help_lore,{player_locale_short}%'
+        commands:
+        - left= ch j TFB-Help write
+        - right= ch j TFB-Help read
+        - rightshift= ch l TFB-Help

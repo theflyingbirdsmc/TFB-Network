@@ -144,8 +144,8 @@ Channels:
       Format: chat
       Format_Spy: "@noprefix chat"
       Bungee: false
-    TFB-Lead:
-      Format: tfb-lead
+    TFB-Staff:
+      Format: tfb-staff
       Bungee: true
     TFB-Chat:
       Format: tfb-chat

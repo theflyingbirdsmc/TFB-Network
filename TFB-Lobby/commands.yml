@@ -1,14 +1,18 @@
 command-block-overrides: []
 ignore-vanilla-permissions: false
 aliases:
-  tfb:
-  - commandpanel
-  TFB:
-  - commandpanel
+  icanhasbukkit:
+  - version $1-
   h:
   - channel send TFB-Help $$1-
   c:
   - channel send TFB-Chat $$1-
   l:
-  - channel send TFB-Lead $$1-
+  - channel send TFB-Staff $$1-
+  example_panel:
+  - commandpanel
+  tfb:
+  - commandpanel
+  TFB:
+  - commandpanel
 

@@ -61,3 +61,13 @@ expansions:
     Rounding: half-up
     Decimals: 3
     Debug: false
+  javascript:
+    enable_parse_command: false
+    debug: false
+    github_script_downloads: false
+    argument_split: ','
+    use_quick_js: false
+  pinger:
+    offline: '&cOffline'
+    check_interval: 30
+    online: '&aOnline'

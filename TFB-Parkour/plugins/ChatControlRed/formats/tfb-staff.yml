@@ -9,7 +9,7 @@ Parts:
     Hover:
     - '&eClick to reply in channel'
     Suggest_Command: '/l '
-    Message: '&8[&#ee2b23T&#3551d7F&#00ff00B &bLead&8]'
+    Message: '&8[&#ee2b23T&#3551d7F&#00ff00B &bStaff&8]'
   player:
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'

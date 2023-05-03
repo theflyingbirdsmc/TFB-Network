@@ -22,5 +22,5 @@ aliases:
   c:
   - channel send TFB-Chat $$1-
   l:
-  - channel send TFB-Lead $$1-
+  - channel send TFB-Staff $$1-
 
