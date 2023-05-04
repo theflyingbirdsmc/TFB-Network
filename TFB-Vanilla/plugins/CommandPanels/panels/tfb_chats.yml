@@ -5,6 +5,12 @@ panels:
     title: '#ee2b23T#3551d7F#00ff00B &eNetwork Chats'
     empty:
     item:
+      '0':
+        material: arrow
+        stack: 1
+        name: '%javascript_back_name,{player_locale_short}%'
+        commands:
+        - cp tfb
       '2':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNjJmOGRlM2IwZDQwZDYyYTNjNGNlNjUzMTRmMDNhNGIxNjQwMWQ4OTViYWRjMWRkMDhmZTg1YjlmYzFhMyJ9fX0=
         stack: 1
@@ -16,18 +22,15 @@ panels:
         - right= ch j TFB-Chat read
         - rightshift= ch l TFB-Chat
       '4':
-        has0:
-          value0: '%cp-player-name% HASPERM'
-          compare0: chatcontrol.
-          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNjJmOGRlM2IwZDQwZDYyYTNjNGNlNjUzMTRmMDNhNGIxNjQwMWQ4OTViYWRjMWRkMDhmZTg1YjlmYzFhMyJ9fX0=
-          stack: 1
-          name: '%javascript_tfb_chat_staff_name,{player_locale_short}%'
-          lore:
-          - '%javascript_tfb_chat_staff_lore,{player_locale_short}%'
-          commands:
-          - left= ch j TFB-Chat write
-          - right= ch j TFB-Chat read
-          - rightshift= ch l TFB-Chat
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjY3OWY0OGNkNDExZmViMTVjMjgwYjVkMTVkOWQ2NjBmM2ZjMDA0NWJkMmE4NmQ4NGJkNDU1YWJiYmRlYjY1MyJ9fX0=
+        stack: 1
+        name: '%javascript_tfb_chat_standard_name,{player_locale_short}%'
+        lore:
+        - '%javascript_tfb_chat_standard_lore,{player_locale_short}%'
+        commands:
+        - left= ch j Danish write
+        - right= ch j Danish read
+        - rightshift= ch l Danish
       '6':
         material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGEyZmRlMzRkMzRjODU4OGU1OGJmZDc5MGNlMTgwMjVmNzg0MzM5OWRlZTJhYjRjZWRjMmMwYjQ2M2ZkMWUifX19
         stack: 1
@@ -38,3 +41,17 @@ panels:
         - left= ch j TFB-Help write
         - right= ch j TFB-Help read
         - rightshift= ch l TFB-Help
+      '8':
+        material: air
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: chatcontrol.panel.staff
+          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjFjNjJmOGRlM2IwZDQwZDYyYTNjNGNlNjUzMTRmMDNhNGIxNjQwMWQ4OTViYWRjMWRkMDhmZTg1YjlmYzFhMyJ9fX0=
+          stack: 1
+          name: '%javascript_tfb_chat_staff_name,{player_locale_short}%'
+          lore:
+          - '%javascript_tfb_chat_staff_lore,{player_locale_short}%'
+          commands:
+          - left= ch j TFB-Staff write
+          - right= ch j TFB-Staff read
+          - rightshift= ch l TFB-Staff
