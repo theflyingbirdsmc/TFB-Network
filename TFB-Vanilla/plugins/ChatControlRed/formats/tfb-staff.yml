@@ -8,7 +8,7 @@ Parts:
   channel:
     Hover:
     - '&eClick to reply in channel'
-    Suggest_Command: '/l '
+    Suggest_Command: '/s '
     Message: '&8[&#ee2b23T&#3551d7F&#00ff00B &bStaff&8]'
   player:
     Hover:
