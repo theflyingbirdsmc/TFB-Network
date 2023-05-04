@@ -33,10 +33,10 @@ function translate() {
     } else if (type == "lore") {
         switch (lang) {
             case "da":
-                return "&7Chat med alle staff på tværs af netværket!\\n\\n&eVenstreklik &7for at &askrive\\n&eHøjreklik &7for at &blæse\\n&eShift + højreklik &7for at &cforlade";
+                return "&7Chat med alle staff på tværs af netværket!\\n&dGenvej: &a/s &8<&abesked&8>\\n\\n&eVenstreklik &7for at &askrive\\n&eHøjreklik &7for at &blæse\\n&eShift + højreklik &7for at &cforlade";
                 break;
             default:
-                return "&7Chat with all staff on the network!\\n\\n&eLeft click &7to &awrite\\n&eRight click &7to &bread\\n&eShift + right click &7to &cleave";
+                return "&7Chat with all staff on the network!\\n&dShortcut: &a/s &8<&amessage&8>\\n\\n&eLeft click &7to &awrite\\n&eRight click &7to &bread\\n&eShift + right click &7to &cleave";
         }
     } else { return "error"; }
 }
