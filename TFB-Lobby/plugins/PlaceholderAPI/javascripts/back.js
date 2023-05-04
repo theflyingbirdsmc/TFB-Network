@@ -1,6 +1,6 @@
 var lang = "";
 var type = "";
-function tfbDiscord() {
+function translate() {
     if (args.length == 2) {
         type = args[0];
         lang = args[1];
@@ -9,21 +9,21 @@ function tfbDiscord() {
     if (type == "name") {
         switch (lang) {
             case "da":
-                return "#ee2b23T#3551d7F#00ff00B &eNetværk Chats";
+                return "&cTilbage";
                 break;
             default:
-                return "#ee2b23T#3551d7F#00ff00B &eNetwork Chats";
+                return "&cBack";
         }
 
     } else if (type == "lore") {
         switch (lang) {
             case "da":
-                return "&7Skriv i chats på tværs af netværket!\\n&aKlik &7for at se dine chats";
+                return "";
                 break;
             default:
-                return "&7Text in chats across the network!\\n&aClick &7to see your chats";
+                return "";
         }
     } else { return "error"; }
 }
 
-tfbDiscord();
+translate();

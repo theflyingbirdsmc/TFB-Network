@@ -1,5 +1,5 @@
 # PlaceholderAPI
-# Version: 2.11.1
+# Version: 2.10.10
 # Created by: extended_clip
 # Contributors: https://github.com/PlaceholderAPI/PlaceholderAPI/graphs/contributors
 # Issues: https://github.com/PlaceholderAPI/PlaceholderAPI/issues
@@ -18,14 +18,6 @@ boolean:
 date_format: MM/dd/yy HH:mm:ss
 debug: false
 expansions:
-  bungee:
-    check_interval: 30
-  server:
-    tps_color:
-      high: '&a'
-      low: '&c'
-      medium: '&e'
-    server_name: A Minecraft Server
   player:
     ping_color:
       medium: '&e'
@@ -43,31 +35,21 @@ expansions:
       south_east: SE
       west: W
       south_west: SW
-  vault:
-    baltop:
-      check_delay: 30
-      cache_size: 100
-      enabled: false
-    formatting:
-      thousands: k
-      trillions: T
-      quadrillions: Q
-      billions: B
-      millions: M
-  checkitem:
-    give_enabled: true
-    remove_enabled: true
-  math:
-    Rounding: half-up
-    Decimals: 3
-    Debug: false
+  bungee:
+    check_interval: 30
+  server:
+    tps_color:
+      high: '&a'
+      low: '&c'
+      medium: '&e'
+    server_name: A Minecraft Server
+  pinger:
+    offline: '&cOffline'
+    check_interval: 5
+    online: '&aOnline'
   javascript:
-    enable_parse_command: false
     debug: false
     github_script_downloads: false
     argument_split: ','
     use_quick_js: false
-  pinger:
-    offline: '&cOffline'
-    check_interval: 30
-    online: '&aOnline'
+    enable_parse_command: false

@@ -50,7 +50,7 @@ Channels:
   
   # How many channels a player can read at once maximum? 
   # You can override this in "Groups" section below.
-  Max_Read_Channels: 3
+  Max_Read_Channels: 5
   
   # true = When you join a new channel for writing, we make you read your old channel.
   # false = When you join, we leave you from your old writing channel.
