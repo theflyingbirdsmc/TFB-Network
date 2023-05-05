@@ -162,7 +162,7 @@ Channels:
   #                 https://github.com/kangarko/ChatControl-Red/wiki/Listener-Priorities
   #
   List:
-    standard:
+    English:
       Format: chat
       Format_Spy: '@noprefix chat'
       Bungee: false
