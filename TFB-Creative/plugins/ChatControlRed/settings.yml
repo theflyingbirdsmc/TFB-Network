@@ -1210,7 +1210,7 @@ Integration:
     # Hook to BungeeCord? **Install BungeeControl Red: https://www.mc-market.org/resources/24248/ **
     # [IMPORTANT] Change your server-name key in server.properties first (make this key unique
     # for each server)
-    Enabled: false
+    Enabled: true
 
     # The optional prefix before all messages so that you know where they are coming from.
     Prefix: "&8[&dBungee/{bungee_server_name}] "

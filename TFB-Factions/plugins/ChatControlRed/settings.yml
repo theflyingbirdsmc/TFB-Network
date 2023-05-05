@@ -91,8 +91,11 @@ Channels:
   # players change their channels, or you only have one channel that all players subscribe to.
   Save_To_Database: true
   
-  # Removes the [Not Secure] misinformation label from the console chat.
-  Remove_Insecure_Chat_Tag: true
+  # Requires Minecraft 1.19+. Cancels the chat event and logs the message using our own method.
+  # 1. Removes the [Not Secure] misinformation label from the console chat.
+  # 2. Fixes Paper/Spigot not showing console message colors properly.
+  # PLEASE NOTE THIS CAN CONFLICT WITH YOUR THIRD PARTY PLUGINS, MAKE SURE TO TEST THIS OPTION.
+  Alternative_Console_Sending: false
   
   # Channels are preconfigured public chat rooms where players can message each other.
   # You can add various keys and remove those you don't use, see this tutorial:
@@ -1296,7 +1299,7 @@ Integration:
     # Hook to BungeeCord? **Install BungeeControl Red: https://www.mc-market.org/resources/24248/ **
     # [IMPORTANT] Change your server-name key in server.properties first (make this key unique
     # for each server)
-    Enabled: false
+    Enabled: true
       
     # The optional prefix before all messages so that you know where they are coming from.
     Prefix: '&8[&dBungee/{bungee_server_name}] '
