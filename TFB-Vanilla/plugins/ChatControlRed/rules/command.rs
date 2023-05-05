@@ -68,18 +68,47 @@
 # Create a /helpop command that sends messages to a channel.
 # -----------------------------------------------------------------------------------------------
 
-# Catch "/helpop" command and send usage.
-#match ^\/helpop$
-#dont verbose
-#then warn &cDescription: Send a message to online staff members.
-#then warn &cUsage: /helpop <message>
-#then deny
+# Catch "/staffchat" command and send usage.
+match ^\/staffchat$
+dont verbose
+then warn &cDescription: Send a message to online staff members.
+then warn &cUsage: /staffchat <message> - use /sc for short
+then deny
 
-# Catch "/helpop <message>" and redirect to the helpop channel.
-#match ^(\/helpop) (.*)
-#dont verbose
-#then command channel send helpop $2
-#then deny
+# Catch "/sc" command and send usage.
+match ^\/sc$
+dont verbose
+then warn &cDescription: Send a message to online staff members.
+then warn &cUsage: /sc <message>
+then deny
+
+# Catch "/globalchat <message>" and redirect to the globalchat channel.
+match ^\/globalchat$
+dont verbose
+then warn &cDescription: Send a message to the global chat channel.
+then warn &cUsage: /globalchat <message>
+then deny
+
+# Catch "/gc <message>" and redirect to the global chat channel.
+match ^\/gc$
+dont verbose
+then warn &cDescription: Send a message to the global chat channel.
+then warn &cUsage: /gc <message>
+then deny
+
+# Catch "/helpchat <message>" and redirect to the helpchat channel.
+match ^\/helpchat$
+dont verbose
+then warn &cDescription: Send a message to the help chat channel.
+then warn &cUsage: /helpchat <message>
+then deny
+
+# Catch "/hc <message>" and redirect to the help chat channel.
+match ^\/hc$
+dont verbose
+then warn &cDescription: Send a message to the chat channel.
+then warn &cUsage: /globalchat <message>
+then deny
  
 # -----------------------------------------------------------------------------------------------
 # Create a /nick command that executes a longer /tag nick command.

@@ -30,7 +30,7 @@ dependencies {
     implementation 'LibsDisguises:LibsDisguises:10.0.32'
     implementation 'LuckPerms:LuckPerms:5.4.71'
     implementation 'Multiverse-Core:Multiverse-Core:4.3.1-b861'
-    implementation 'PlaceholderAPI:PlaceholderAPI:2.11.2'
+    implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
     implementation 'Plan:Plan:5.5-build-2172'
     implementation 'ProtocolLib:ProtocolLib:5.0.0-SNAPSHOT-636'
     implementation 'SuperVanish:SuperVanish:6.2.15'

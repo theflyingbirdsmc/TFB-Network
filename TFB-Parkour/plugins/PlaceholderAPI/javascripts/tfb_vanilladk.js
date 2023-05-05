@@ -9,19 +9,19 @@ function tfbVanillaDK() {
     if(type == "name") {
         switch(lang) {
             case "da":
-                return "&aVanilla Survival";
+                return "&2Vanilla ";
                 break;
             default:
-                return "&aVanilla Survival";
+                return "&2Vanilla";
         }
             
     } else if (type  == "lore") {
         switch(lang) {
             case "da":
-                return "&eType&8: &7Dansk\\n&eKlik for at joine nu!";
+                return "&eSprog&8: &7Dansk\\n&eKlik for at joine nu!";
                 break;
             default:
-                return "&eType&8: &7Danish\\n&eClick to connect now!";
+                return "&eLanguage&8: &7Danish\\n&eClick to connect now!";
         }
     } else if (type  == "message") {
         switch(lang) {

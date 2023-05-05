@@ -15,6 +15,16 @@ ignore-vanilla-permissions: false
 aliases:
   icanhasbukkit:
   - version $1-
+  tfb:
+  - commandpanel
+  TFB:
+  - commandpanel
+  h:
+  - channel send TFB-Help $$1-
+  c:
+  - channel send TFB-Chat $$1-
+  l:
+  - channel send TFB-Staff $$1-
   sell:
   - economyshopgui:sellall $1-
   open=:
@@ -23,9 +33,3 @@ aliases:
   - commandpanel
   f $1-shop:
   - shop
-  tfb:
-  - commandpanel
-  TFB:
-  - commandpanel
-  help:
-  - commandpanel
