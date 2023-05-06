@@ -94,7 +94,7 @@ per-world-playerlist:
     - paintball
     - bedwars
 scoreboard:
-  enabled: true
+  enabled: false
   toggle-command: /sb
   remember-toggle-choice: true
   hidden-by-default: false
@@ -105,52 +105,19 @@ scoreboard:
   disable-in-worlds:
   - disabledworld
   scoreboards:
-    admin:
-      display-condition: permission:tab.scoreboard.admin
-      title: Admin scoreboard
-      lines:
-      - '&6Network:'
-      - '&f* &eOnline&7: &a%online%&7/&f%bungee_total%'
-      - '&f* &eStaff&7: &f%staffonline%'
-      - ''
-      - '&6Personal Info:'
-      - '&f* &eChat&7: &f%chatcontrolred_channel%'
-      - '&f* &ePing&7: &a%ping%&7ms'
-      - ''
-      - '&6Server Info:'
-      - '&f* &eBiome&7: &f%world_biome%'
-      - '&f* &e⌚&7: &f%world_time_world%'
-      - '&f* &bUptime&7: &f%server_uptime%'
-      - '&f* &bMemory&7: &f%memory-used%&7/&4%memory-max%'
     default:
-      title: '&#ee2b23T&#f04923h&#f26622e &#3551d7F&#366dd9l&#3789dby&#38a4ddi&#39c0dfn&#3adce1g
-        &#00ff00B&#3fff00i&#7dff00r&#bcff00d&#faff00s'
+      title: '&6&l%factionsuuid_faction_name%'
       lines:
-      - '&6Network:'
-      - '&f* &eOnline&7: &a%online%&7/&f%bungee_total%'
-      - '&f* &eStaff&7: &f%staffonline%'
+      - ' &8» &cMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%'
+      - ' &8» &cPower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%'
+      - ' &8» &cBank&7: &f%factionsuuid_faction_bank_balance%'
+      - ' &8» &cDeaths&7: &f%factionsuuid_faction_deaths%'
+      - ' &8» &cTotal Kills&7: &f%factionsuuid_faction_kills%'
       - ''
-      - '&6Server Info:'
-      - '&f* &eBiome&7: &f%world_biome%'
-      - '&f* &e⌚&7: &f%world_time_world%'
-      - ''
-      - '&6Personal Info:'
-      - '&f* &eChat&7: &f%chatcontrolred_channel%'
-      - '&f* &ePing&7: &a%ping%&7ms'
-    factions:
-      title: Faction Information
-      lines:
-      - ''
-      - '&6%factionsuuid_faction_name%:'
-      - ''
-      - '&f* &eLeader&7: &f%factionsuuid_faction_leader%'
-      - '&f* &ePower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%'
-      - '&f* &eChunks Claimed&7: &f%factionsuuid_faction_claims%'
-      - '&f* &eChunks Value&7: &f%factionsuuid_faction_land_value%'
-      - '&f* &eFaction Balance&7: &f%factionsuuid_faction_bank_balance%'
-      - '&f* &eMembers Online&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%'
-      - '&f* &eTotal Kills&7: &f%factionsuuid_faction_kills%'
-      - '&f* &eTotal Deaths&7: &f%factionsuuid_faction_deaths%'
+      - '&6&lGeneral info'
+      - ' &8» &eBalance&7: &f$%vault_eco_balance_commas%'
+      - ' &8» &e⌚&7: &f%world_time_world%'
+      - ' &8» &eBiome&7: &f%world_biome%'
 ping-spoof:
   enabled: false
   value: 0
