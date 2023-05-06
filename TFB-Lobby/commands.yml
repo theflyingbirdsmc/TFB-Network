@@ -1,6 +1,8 @@
 command-block-overrides: []
 ignore-vanilla-permissions: false
 aliases:
+  essentials:s:
+  - []
   icanhasbukkit:
   - version $1-
   h:

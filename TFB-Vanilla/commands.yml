@@ -1,6 +1,8 @@
 command-block-overrides: []
 ignore-vanilla-permissions: false
 aliases:
+  essentials:s:
+  - []
   tfb:
   - commandpanel
   TFB:
