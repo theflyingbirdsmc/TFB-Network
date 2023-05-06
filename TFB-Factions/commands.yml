@@ -23,7 +23,7 @@ aliases:
   - channel send TFB-Help $$1-
   c:
   - channel send TFB-Chat $$1-
-  l:
+  s:
   - channel send TFB-Staff $$1-
   sell:
   - economyshopgui:sellall $1-

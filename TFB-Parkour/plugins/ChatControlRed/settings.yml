@@ -1213,7 +1213,7 @@ Integration:
     Enabled: false
 
     # The optional prefix before all messages so that you know where they are coming from.
-    Prefix: "&8[&dBungee/{bungee_server_name}] "
+    Prefix: ''
 
   # Integration with DiscordSRV.
   Discord:

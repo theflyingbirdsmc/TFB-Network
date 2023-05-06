@@ -1,8 +1,8 @@
 # SaberFactions by Driftay
 # Report issues: https://github.com/Driftay/Saber-Factions/issues/new
-# Live support: https://discord.gg/TFxWKeX
+# Live support: https://discord.gg/saber
 # Spigot Site: https://www.spigotmc.org/resources/saberfactions-1-7-1-13-the-complete-factions-solution.68840/
-# Website: https://www.saberllc.net/
+# Website: https://www.saberdev.org/
 
 Config-Version: 1.1
 
@@ -14,11 +14,11 @@ debug: false
 
 # Prevent find factions exploit
 # This will help limit how many times a player can be sent a map of factions.
-# Set this to the cooldown you want, in miliseconds, for a map to be shown to a player.
+# Set this to the cool down you want, in milliseconds, for a map to be shown to a player.
 # If you want to log when a player violates this (only happens on chunk enter so it shouldn't be too spammy),
-#   set log to true and it will be logged to console as "player tried to show a faction map too soon and triggered exploit blocker."
+#   set log to true, and it will be logged to console as "player tried to show a faction map too soon and triggered exploit blocker."
 findfactionsexploit:
-  cooldown: 2000 # in miliseconds. 2000 = 2 seconds.
+  cooldown: 2000 # in milliseconds. 2000 = 2 seconds.
   log: false
 
 ### Hard Core Settings ###
@@ -55,16 +55,16 @@ max-warps: 5
 # If enabled is set to false, it will ignore the values.
 warp-cost:
   enabled: false
-  setwarp: 1000
-  delwarp: 0
-  warp: 100
+  setwarp: 5
+  delwarp: 5
+  warp: 5
 
 # Faction Fly
 # Enable Faction Fly:
 enable-faction-flight: false
 ffly:
   enemy-radius-check: 1 #How frequently to check enemy radius, in seconds. Set to 0 to disable checking.
-  AutoEnable: false
+  AutoEnable: true
   CombatFlyCooldown: 10 #Cooldown in seconds for someone being in combat before their fly is automatically re-enabled
   enemies-near-disable-flight: true #This means F Stealth Will Be Redundant
   disable-flight-on-generic-damage: false #Any Damage a Player Takes Their Flight Will Be Disabled
@@ -104,7 +104,7 @@ tooltips:
   # It adds tooltips to each player in the list here, nothing else.
   # {group} will show the players primary group if you have vault installed.
   # {balance} will show their balance if you have vault installed.
-  # {lastSeen} will show human readable info on when the player was last seen, or online.
+  # {lastSeen} will show human-readable info on when the player was last seen, or online.
   show:
     - "&6&l* &eUsername: &7{name}"
     - "&6&l* &eRank: &7{group}"
@@ -119,9 +119,9 @@ tooltips:
 scoreboard:
 
   # send faction change message as well when scoreboard is up?
-  also-send-chat: false
+  also-send-chat: true
   # How long do we want scoreboards to stay if set temporarily.
-  expiration: 10
+  expiration: 7
 
   # FInfo scoreboard is displayed when a player walks into a new Faction's territory.
   # Scoreboard disappears after <expiration> seconds.
@@ -132,24 +132,22 @@ scoreboard:
   # {warps} - the number of warps that a faction has set.
   # The title of the scoreboard will be the Faction's tag and colored according to the relation with the player's Faction.
   # Commenting this section out will cause the info to appear in chat as the plugin originally did.
-  finfo-enabled: true
+  finfo-enabled: false
 
   # SUPPORTS PLACEHOLDERS
   finfo:
-    - "&8» &eLeader&7: &f%factionsuuid_faction_leader%"
-    - "&8» &eMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%"
-    - ''
-    - "&8» &eKills&7: &f%factionsuuid_faction_kills%"
-    - "&8» &eDeaths&7: &f%factionsuuid_faction_deaths%"
-    - ''
-    - "&8» &ePower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%"
-    - "&8» &eLand&7: &f%factionsuuid_faction_claims%"
-    - "&8» &eFounded&7: &f%factionsuuid_faction_founded%"
-
+    - "&6Power"
+    - "{power}"
+    - "&3Members"
+    - "{online}/{members}"
+    - "&4Leader"
+    - "{leader}"
+    - "&bTerritory"
+    - "{chunks}"
 
   # Default board that will always show up if a player wants it to.
-  # This can show any arbitrary text or you can use a lot of variables to replace things.
-  # Replace {name} - player's name. {faction} - player's faction title, factionless if none.
+  # This can show any arbitrary text, or you can use a lot of variables to replace things.
+  # Replace {name} - player's name. {faction} - player's faction title, faction-less if none.
   # {totalOnline} - total players on the server. {balance} - player's balance.
   # {maxPower} - player's max power.
   # {powerBoost} - player's powerboost.
@@ -157,57 +155,56 @@ scoreboard:
   ######################################################
   ##################### SCOREBOARD #####################
   ######################################################
-  default-enabled: true # This is to enable or disable the scoreboard: false = Disabled
-  default-title: "&4T&1F&2B &cFactions" # Can use any of the values from above but this won't update once it's set (so don't set {balance}).
+  default-enabled: false # This is to enable or disable the scoreboard: false = Disabled
+  default-title: "&cSaberFactions" # Can use any of the values from above but this won't update once it's set (so don't set {balance}).
   default-update-interval: 2 # in seconds.
-  # This will show faction prefixes colored based on relation on nametags and in the tab.
+  # This will show faction prefixes colored based on relation on name-tags and in the tab.
   #   The scoreboard needs to be enabled for this to work.
   default-prefixes: true
   # SUPPORTS PLACEHOLDERS
   default:
-    - '&2&l%factionsuuid_faction_name%'
-    - ' &8» &eMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%'
-    - ' &8» &ePower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%'
-    - ' &8» &eBank&7: &f%factionsuuid_faction_bank_balance%'
-    - ' &8» &eDeaths&7: &f%factionsuuid_faction_deaths%'
-    - ' &8» &eTotal Kills&7: &f%factionsuuid_faction_kills%'
-    - ''
-    - '&2&lGeneral info'
-    - ' &8» &eBalance&7: &f$%vault_eco_balance_commas%'
-    - ' &8» &e⌚&7: &f%world_time_world%'
-    - ' &8» &eBiome&7: &f%world_biome%'
+    - "&7&m--------------------------"
+    - "&4&lFaction Info &8»"
+    - " &8» &cLeader&7: &f{leader}"
+    - " &8» &cMembers&7: &f{online}&7/&f{members}"
+    - " &8» &cPower&7: &f{power}&7/&f{maxPower}"
+    - "&m"
+    - "&4&lFaction Stats &8»"
+    - " &8» &cDeaths&7: &f{faction-deaths}"
+    - " &8» &cBalance&7: &f{faction-balance}"
+    - ""
+    - " &8» &cYour Balance&7: &f{balance}"
+    - "&7&m---------------------------"
 
   #Formatted ONLY When A User is NOT in a Faction
   factionless-enabled: true
   factionless:
-    - '&6Network:'
-    - '&f* &eOnline&7: &a%online%&7/&f%bungee_total%'
-    - '&f* &eStaff&7: &f%staffonline%'
-    - '&f* &ePing&7: &a%player_colored_ping%&7ms'
-    - ''
-    - '&bMystery:'
-    - '&f* &eEggs&7: &f%gadgetsmenu_mystery_boxes%'
-    - '&f* &eEggshells&7: &f%gadgetsmenu_mystery_dust%'
-    - ''
-    - '&6Server Info:'
-    - '&f* &eBiome&7: &f%world_biome%'
-    - '&f* &e⌚&7: &f%world_time_world%'
+    - "&7&m--------------------------"
+    - "&4&lInformation &8»"
+    - " &8» &cPlayer&7: &f{name}"
+    - " &8» &cRank&7: &f{group}"
+    - " &8» &cBalance&7: &f${balance}"
+    - "&m"
+    - "&4&lServer Info &8» "
+    - " &8» &cFaction: &fN/A"
+    - " &8» &cOnline Players&7: &f{total-online}"
+    - "&7&m---------------------------"
 
 
 
-# Configration section for warmups.
+# Configuration section for warmups.
 # Warmup times are in seconds - if a value of 0 is set, there is no warmup.
 warmups:
   # Delay for /f home
-  f-home: 5
+  f-home: 15
   # Delay for /f warp
-  f-warp: 5
+  f-warp: 10
   # Delay for /f fly
   f-fly: 0
   #Delay for /f checkpoint's teleport
-  f-checkpoint: 5
+  f-checkpoint: 10
   #Delay for /f tpbanner
-  f-banner: 5
+  f-banner: 10
   #Delay for /f wild
   f-wild: 5
 
@@ -221,8 +218,8 @@ warmups:
 # Limits factions to having a max number of each relation.
 # Setting to 0 means none allowed. -1 for disabled.
 # This will have no effect on default or existing relations, only when relations are changed.
-# It is advised that you set the default relation to -1 so they can always go back to that.
-# Otherwise Factions could be stuck with not being able to unenemy other Factions.
+# It is advised that you set the default relation to -1, so they can always go back to that.
+# Otherwise, Factions could be stuck with not being able to enemy other Factions.
 max-relations:
   enabled: true
   ally: 1
@@ -258,8 +255,7 @@ hcf:
   # Set to 0 for no freeze. Time is in seconds.
   powerfreeze: 0
 
-  # Buffer Zone
-  # Buffer Zone is an chunk area required between claims of different Factions.
+  # Buffer Zone is a chunk area required between claims of different Factions.
   # This is default to 0 and has always been that way. Meaning Factions can have
   #   claims that border each other.
   # If this is set to 3, then Factions need to have 3 chunks between their claim
@@ -282,7 +278,7 @@ hcf:
 ############################################################
 
 # You can use any variable here, including fancy messages. Color codes and or tags work fine.
-# Lines that arent defined wont be sent (home not set, faction not peaceful / permanent, dtr freeze)
+# Lines that aren't defined won't be sent (home not set, faction not peaceful / permanent, dtr freeze)
 
 # SUPPORTS PLACEHOLDERS
 show:
@@ -306,8 +302,8 @@ show:
 relational-show: true
 minimal-show: false
 
-# Factions that should be exempt from /f show, case sensitive, useful for a
-# serverteam faction, since the command shows vanished players otherwise
+# Factions that should be exempt from /f show, case-sensitive, useful for a
+# server team faction, since the command shows vanished players otherwise
 show-exempt:
   - Wilderness
 
@@ -315,7 +311,8 @@ show-exempt:
 # THIS IS FOR /f map tool tips.
 
 # You can use any variable here, including fancy messages. Color codes and or tags work fine.
-# Lines that arent defined wont be sent (home not set, faction not peaceful / permanent, dtr freeze)
+# Lines that aren't defined won't be sent (home not set, faction not peaceful / permanent, dtr freeze)
+
 map:
   # First line can be {header} for default header, or any string (we recommend &m for smooth lines ;plugin)
   - ''
@@ -429,7 +426,7 @@ help:
 fwarp-gui:
   name: "Faction Warps"
   rows: 3
-  password-timeout: 10
+  password-timeout: 5
   warp-slots:
     - 11
     - 12
@@ -469,7 +466,7 @@ faction-leader-broadcast: true #Disabling this will not make leader changes appe
 # |                Faction Check System                   |#
 # +------------------------------------------------------+ #
 ############################################################
-#Everything else from display names to lores, is managed by lang.yml, so edit it there
+#Everything else from display names to lore's, is managed by lang.yml, so edit it there
 f-check:
   gui-rows: 3 #Rows for the check gui
   wall-check:
@@ -534,7 +531,7 @@ frules:
 #Faction Tnt Resolved Around A Virtual TNT Bank With Upgrades If Enabled
 ftnt:
   Enabled: true
-  Bank-Limit: 250000
+  Bank-Limit: 100
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -552,7 +549,7 @@ fdiscord:
 ############################################################
 #This option allows factions to set their paypal link to their specific faction
 fpaypal:
-  Enabled: true
+  Enabled: false
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -577,7 +574,7 @@ fnear:
 # |           Faction Command Cooldowns                  | #
 # +------------------------------------------------------+ #
 ############################################################
-fcooldowns: #All of These Cooldowns Are In Seconds
+fcooldowns: #All of These Cool downs Are In Seconds
   f-open: 5
   f-disband: 10
   f-create: 10
@@ -617,6 +614,7 @@ f-disband-gui:
     Type: BLACK_WOOL
     Name: ' '
     Lore:
+      - ' '
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -698,7 +696,7 @@ fbanners:
       - '&e&l* &fStrength II'
       - '&e&l* &fSpeed II'
   Banner-Cost: 5000 #The amount charged to change a banner into a War Banner
-  Banner-Time: 3600 #IN SECONDS - This is how long the banner will last.
+  Banner-Time: 60 #IN SECONDS - This is how long the banner will last.
   Banner-Place-Cooldown: 300
   Banner-Effect-Radius: 16
   Effects:
@@ -766,10 +764,12 @@ faudit-gui:
 #Title when moving between chunks
 Title:
   Show-Title: true
+  Cached: true #Titles will be run on an ASYNC Task To Avoid Spam
+
   # You can configure the time in 1.9 or higher! The values are in ticks (20 ticks = 1 second)
   Options:
     FadeInTime: 1
-    ShowTime: 40
+    ShowTime: 10
     FadeOutTime: 1
   Format:
     Title: '{Faction}'
