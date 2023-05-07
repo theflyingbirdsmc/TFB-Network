@@ -9,19 +9,59 @@ function translate() {
     if (type == "header") {
         switch (lang) {
             case "da":
-                return "            #f0f0f0Velkommen til #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
+                return "#f0f0f0Velkommen til #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
                 break;
             default:
-                return "             #f0f0f0Welcome to #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
+                return "              #f0f0f0Welcome to #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
         }
 
-    } else if (type == "lore") {
+    } else if (type == "1") {
         switch (lang) {
             case "da":
-                return "&7Chat med alle på tværs af netværket!\\n&dGenvej: &a/c &8<&abesked&8>\\n\\n&eVenstreklik &7for at &askrive\\n&eHøjreklik &7for at &blæse\\n&eShift + højreklik &7for at &cforlade";
+                return "";
                 break;
             default:
-                return "&7Chat with all players on the network!\\n&dShortcut: &a/c &8<&amessage&8>\\n\\n&eLeft click &7to &awrite\\n&eRight click &7to &bread\\n&eShift + right click &7to &cleave";
+                return "                #f0f0f0Use &a/tfb #f0f0f0to get started";
+        }
+    } else if (type == "2") {
+        switch (lang) {
+            case "da":
+                return "";
+                break;
+            default:
+                return "";
+        }
+    } else if (type == "3") {
+        switch (lang) {
+            case "da":
+                return "";
+                break;
+            default:
+                return "                 #f0f0f0Referred by a friend?";
+        }
+    } else if (type == "4") {
+        switch (lang) {
+            case "da":
+                return "";
+                break;
+            default:
+                return "           #f0f0f0Use &a/refer &8<&aname&8> #f0f0f0for rewards!";
+        }
+    } else if (type == "5") {
+        switch (lang) {
+            case "da":
+                return "";
+                break;
+            default:
+                return "";
+        }
+    } else if (type == "6") {
+        switch (lang) {
+            case "da":
+                return "";
+                break;
+            default:
+                return "         #f0f0f0We hope you get a #f0f0f0&oflying #f0f0f0pleasure!";
         }
     } else { return "error"; }
 }
