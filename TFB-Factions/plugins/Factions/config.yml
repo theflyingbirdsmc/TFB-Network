@@ -119,9 +119,9 @@ tooltips:
 scoreboard:
 
   # send faction change message as well when scoreboard is up?
-  also-send-chat: true
+  also-send-chat: false
   # How long do we want scoreboards to stay if set temporarily.
-  expiration: 7
+  expiration: 10
 
   # FInfo scoreboard is displayed when a player walks into a new Faction's territory.
   # Scoreboard disappears after <expiration> seconds.
@@ -132,22 +132,24 @@ scoreboard:
   # {warps} - the number of warps that a faction has set.
   # The title of the scoreboard will be the Faction's tag and colored according to the relation with the player's Faction.
   # Commenting this section out will cause the info to appear in chat as the plugin originally did.
-  finfo-enabled: false
+  finfo-enabled: true
 
   # SUPPORTS PLACEHOLDERS
   finfo:
-    - "&6Power"
-    - "{power}"
-    - "&3Members"
-    - "{online}/{members}"
-    - "&4Leader"
-    - "{leader}"
-    - "&bTerritory"
-    - "{chunks}"
+    - "&8» &eLeader&7: &f%factionsuuid_faction_leader%"
+    - "&8» &eMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%"
+    - ''
+    - "&8» &eKills&7: &f%factionsuuid_faction_kills%"
+    - "&8» &eDeaths&7: &f%factionsuuid_faction_deaths%"
+    - ''
+    - "&8» &ePower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%"
+    - "&8» &eLand&7: &f%factionsuuid_faction_claims%"
+    - "&8» &eFounded&7: &f%factionsuuid_faction_founded%"
+
 
   # Default board that will always show up if a player wants it to.
-  # This can show any arbitrary text, or you can use a lot of variables to replace things.
-  # Replace {name} - player's name. {faction} - player's faction title, faction-less if none.
+  # This can show any arbitrary text or you can use a lot of variables to replace things.
+  # Replace {name} - player's name. {faction} - player's faction title, factionless if none.
   # {totalOnline} - total players on the server. {balance} - player's balance.
   # {maxPower} - player's max power.
   # {powerBoost} - player's powerboost.
@@ -155,56 +157,57 @@ scoreboard:
   ######################################################
   ##################### SCOREBOARD #####################
   ######################################################
-  default-enabled: false # This is to enable or disable the scoreboard: false = Disabled
-  default-title: "&cSaberFactions" # Can use any of the values from above but this won't update once it's set (so don't set {balance}).
+  default-enabled: true # This is to enable or disable the scoreboard: false = Disabled
+  default-title: "&4T&1F&2B &cFactions" # Can use any of the values from above but this won't update once it's set (so don't set {balance}).
   default-update-interval: 2 # in seconds.
-  # This will show faction prefixes colored based on relation on name-tags and in the tab.
+  # This will show faction prefixes colored based on relation on nametags and in the tab.
   #   The scoreboard needs to be enabled for this to work.
   default-prefixes: true
   # SUPPORTS PLACEHOLDERS
   default:
-    - "&7&m--------------------------"
-    - "&4&lFaction Info &8»"
-    - " &8» &cLeader&7: &f{leader}"
-    - " &8» &cMembers&7: &f{online}&7/&f{members}"
-    - " &8» &cPower&7: &f{power}&7/&f{maxPower}"
-    - "&m"
-    - "&4&lFaction Stats &8»"
-    - " &8» &cDeaths&7: &f{faction-deaths}"
-    - " &8» &cBalance&7: &f{faction-balance}"
-    - ""
-    - " &8» &cYour Balance&7: &f{balance}"
-    - "&7&m---------------------------"
+    - '&2&l%factionsuuid_faction_name%'
+    - ' &8» &eMembers&7: &f%factionsuuid_faction_online%/%factionsuuid_faction_size%'
+    - ' &8» &ePower&7: &f%factionsuuid_faction_power%/%factionsuuid_faction_powermax%'
+    - ' &8» &eBank&7: &f%factionsuuid_faction_bank_balance%'
+    - ' &8» &eDeaths&7: &f%factionsuuid_faction_deaths%'
+    - ' &8» &eTotal Kills&7: &f%factionsuuid_faction_kills%'
+    - ''
+    - '&2&lGeneral info'
+    - ' &8» &eBalance&7: &f$%vault_eco_balance_commas%'
+    - ' &8» &e⌚&7: &f%world_time_world%'
+    - ' &8» &eBiome&7: &f%world_biome%'
 
   #Formatted ONLY When A User is NOT in a Faction
   factionless-enabled: true
   factionless:
-    - "&7&m--------------------------"
-    - "&4&lInformation &8»"
-    - " &8» &cPlayer&7: &f{name}"
-    - " &8» &cRank&7: &f{group}"
-    - " &8» &cBalance&7: &f${balance}"
-    - "&m"
-    - "&4&lServer Info &8» "
-    - " &8» &cFaction: &fN/A"
-    - " &8» &cOnline Players&7: &f{total-online}"
-    - "&7&m---------------------------"
+    - '&6Network:'
+    - '&f* &eOnline&7: &a%online%&7/&f%bungee_total%'
+    - '&f* &eStaff&7: &f%staffonline%'
+    - '&f* &ePing&7: &a%player_colored_ping%&7ms'
+    - ''
+    - '&bMystery:'
+    - '&f* &eEggs&7: &f%gadgetsmenu_mystery_boxes%'
+    - '&f* &eEggshells&7: &f%gadgetsmenu_mystery_dust%'
+    - ''
+    - '&6Server Info:'
+    - '&f* &eBiome&7: &f%world_biome%'
+    - '&f* &e⌚&7: &f%world_time_world%'
 
 
 
-# Configuration section for warmups.
+# Configration section for warmups.
 # Warmup times are in seconds - if a value of 0 is set, there is no warmup.
 warmups:
   # Delay for /f home
-  f-home: 15
+  f-home: 5
   # Delay for /f warp
-  f-warp: 10
+  f-warp: 5
   # Delay for /f fly
   f-fly: 0
   #Delay for /f checkpoint's teleport
-  f-checkpoint: 10
+  f-checkpoint: 5
   #Delay for /f tpbanner
-  f-banner: 10
+  f-banner: 5
   #Delay for /f wild
   f-wild: 5
 
