@@ -835,7 +835,7 @@ Motd:
   Async: false
   
   # How long to wait to show motd on join?
-  Delay: 20 ticks
+  Delay: 60 ticks
   
   # The commands that manually show the motd to the player.
   # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
