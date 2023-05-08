@@ -9,7 +9,7 @@ function translate() {
     if (type == "header") {
         switch (lang) {
             case "da":
-                return "            #f0f0f0Velkommen tilbage {player_nick}";
+                return "<center>#f0f0f0Velkommen tilbage {player_nick}";
                 break;
             default:
                 return "              #f0f0f0Welcome to #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
