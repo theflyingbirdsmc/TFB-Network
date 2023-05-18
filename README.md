@@ -5,6 +5,7 @@
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UCNKmFh8X63_4URPr7TRVdng?style=social)](https://www.youtube.com/@theflyingbirdsmc)
 [![Lines](https://sloc.xyz/github/theflyingbirdsmc/TFB-Network)](https://github.com/theflyingbirdsmc/TFB-Network)
 [![Size](https://img.shields.io/github/repo-size/theflyingbirdsmc/TFB-Network)](https://github.com/theflyingbirdsmc/TFB-Network)
+[![Open in Coder](https://coder.theflyingbirds.net/open-in-coder.svg)](https://coder.theflyingbirds.net/templates/TFB/workspace)
 # Welcome to The Flying Birds Minecraft Network
 ### IP: mc.theflyingbirds.net
 
