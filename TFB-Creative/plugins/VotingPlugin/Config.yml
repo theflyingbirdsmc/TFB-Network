@@ -14,7 +14,7 @@ DataStorage: MYSQL
 # Information for mysql
 # See the end of the config for cache options
 MySQL:
-  Host: '65.108.8.46'
+  Host: 'localhost'
   # Default port is 3306
   Port: 3306
   Database: 's1_votingplugin'
