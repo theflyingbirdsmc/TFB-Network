@@ -14,7 +14,7 @@ We are probably worlds first public open-source Minecraft server network - Made 
 
 ### We are using Coder to develop on TFB!
 [![Open in Coder](https://coder.theflyingbirds.net/open-in-coder.svg)](https://coder.theflyingbirds.net/templates/TFB/workspace)
-  
+
 ### Want to contribute?
 You are more than welcome to!
 Join our Discord, join the server, read the wiki or view our project board [here](https://github.com/orgs/theflyingbirdsmc/projects/1)
