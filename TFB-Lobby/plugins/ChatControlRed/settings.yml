@@ -1173,7 +1173,7 @@ Newcomer:
   # How much time must a player spend on the server to no longer be considered as a newcomer?
   # This is NOT the first time player joined, but the actual time he spent on your server.
   # Set to 0 to disable this feature, or set a time like "1 hour" in human readable format
-  Threshold: 0 minutes
+  Threshold: 5 hours
   
   # In which worlds should we enable this feature? Useful when you have a newbie world.
   # Example: [survival, nether, end]. Set to ["*"] to enable in all worlds.

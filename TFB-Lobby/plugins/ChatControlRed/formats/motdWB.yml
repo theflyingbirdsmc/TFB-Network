@@ -5,16 +5,21 @@
 
 # The parts of this format.
 Parts:
+  Header:
+    Message:
+    - ' '
+    - '<center>%javascript_motdWB_header,{player_locale_short}%'
+  Vote:
+    Message:
+    - ' '
+    - '<center>%javascript_motdWB_1,{player_locale_short}%'
   MOTD:
     Message:
-    - '<center>%javascript_motdWB_header,{player_locale_short}%'
-    - ' '
-    - '%javascript_motdWB_1,{player_locale_short}%'
-    - '%javascript_motdWB_2,{player_locale_short}%'
-    - '%javascript_motdWB_3,{player_locale_short}%'
-    - '%javascript_motdWB_4,{player_locale_short}%'
-    - '%javascript_motdWB_5,{player_locale_short}%'
-    - '%javascript_motdWB_6,{player_locale_short}%'
+    - '<center>%javascript_motdWB_2,{player_locale_short}%'
+    - '<center>%javascript_motdWB_3,{player_locale_short}%'
+    - '<center>%javascript_motdWB_4,{player_locale_short}%'
+    - '<center>%javascript_motdWB_5,{player_locale_short}%'
+    - '<center>%javascript_motdWB_6,{player_locale_short}%'
     - ' '
     - ' '
   discord:
