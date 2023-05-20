@@ -1,5 +1,17 @@
 var lang = "";
 var type = "";
+
+function getRandomMessage(messages) {
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    return messages[randomIndex];
+}
+
+var greetings = [
+    "#f0f0f0Welcome back, &dKatieDeForest#f0f0f0! Soar high and conquer the skie",
+    "#f0f0f0Hey &dKatieDeForest#f0f0f0! Ready to spread your wings and explore?",
+    "#f0f0f0Greetings, &dKatieDeForest#f0f0f0! Let's tweet some Minecraft magic"
+];
+
 function translate() {
     if (args.length == 2) {
         type = args[0];
@@ -9,10 +21,10 @@ function translate() {
     if (type == "header") {
         switch (lang) {
             case "da":
-                return "#f0f0f0Velkommen tilbage {player_nick}";
+                return getRandomMessage(greetings);
                 break;
             default:
-                return "#f0f0f0Welcome to #ee2b23T#f04923h#f26622e #3551d7F#366dd9l#3789dby#38a4ddi#39c0dfn#3adce1g #00ff00B#3fff00i#7dff00r#bcff00d#faff00s";
+                return getRandomMessage(greetings);
         }
 
     } else if (type == "1") {

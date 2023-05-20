@@ -8,15 +8,17 @@ Parts:
   MOTD:
     Message:
     - '<center>%javascript_motdWB_header,{player_locale_short}%'
-    - '<center>Hello World! :>'
+    - ' '
     - '%javascript_motdWB_1,{player_locale_short}%'
     - '%javascript_motdWB_2,{player_locale_short}%'
     - '%javascript_motdWB_3,{player_locale_short}%'
     - '%javascript_motdWB_4,{player_locale_short}%'
     - '%javascript_motdWB_5,{player_locale_short}%'
     - '%javascript_motdWB_6,{player_locale_short}%'
+    - ' '
+    - ' '
   discord:
-    Message: '                                                                                    #5865F2Discord &8|'
+    Message: '            #5865F2Discord &8|'
     Hover: '#f0f0f0Join our Discord'
     Open_Url: https://discord.theflyingbirds.net
   github:
