@@ -20,7 +20,7 @@ Enabled: true
 Hikari: true
 
 # The host and the port to connect to
-Host: 172.18.0.1:3306
+Host: localhost:3306
 
 # The database name
 Database: s2_chatcontrolred

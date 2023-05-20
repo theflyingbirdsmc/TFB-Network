@@ -7,7 +7,7 @@
 Player-Data:
   Storage: mysql
   MySQL:
-    hostname: 172.18.0.1
+    hostname: localhost
     username: u2_oeN5DZ9Msp
     database: s2_gadgetsmenu
     port: '3306'

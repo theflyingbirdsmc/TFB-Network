@@ -25,7 +25,7 @@ Plugin:
 # -----------------------------------------------------
 Database:
     MySQL:
-        Host: 172.18.0.1
+        Host: localhost
         Port: 3306
         User: u1_IfPFyakFRt
         Password: kccEHEZYlXDPh.3!JW84dyHp
