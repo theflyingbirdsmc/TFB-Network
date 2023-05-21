@@ -845,7 +845,7 @@ Motd:
   - 'news'
 
   # What message is sent to the player on login? This is fetched from formats/.
-  Format_Motd: motdWB
+  Format_Motd: motd
   
   # What message is sent when the player joins for the first time.
   Format_Motd_First_Time: motd

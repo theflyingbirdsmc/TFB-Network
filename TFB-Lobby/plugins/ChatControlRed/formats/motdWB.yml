@@ -13,6 +13,16 @@ Parts:
     Message:
     - ' '
     - '<center>%javascript_motdWB_1,{player_locale_short}%'
+    Hover:
+    - '&eMy votes'
+    - '&7Total Votes: &a%votingplugin_total_alltime% &f#&e%votingplugin_top_all_position%'
+    - '&7This Month: &a%votingplugin_total_monthly% &f#&e%votingplugin_top_month_position%'
+    - '&7Current Streak: &a%VotingPlugin_DailyVoteStreak% &7days'
+    - '&7Best Vote Streak: &a%VotingPlugin_BestDailyVoteStreak% &7days'
+    - '&7Next Vote: &a%VotingPlugin_Next_AnySite%'
+    - ' '
+    - ''
+    Run_Command: /voteall
   MOTD:
     Message:
     - '<center>%javascript_motdWB_2,{player_locale_short}%'

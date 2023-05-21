@@ -21,8 +21,6 @@ var greetings = [
     "#f0f0f0Bow to the redstone wizard, {player_nick}!",
     "#f0f0f0Hail the Ender Dragon Slayer, {player_nick}!",
     "#f0f0f0Embrace the Architect Extraordinaire, {player_nick}!",
-    "#f0f0f0Enter, the Legendary Enchanter, {player_nick}!",
-    "#f0f0f0Salute, the Mighty Miner, {player_nick}!",
 ];
 
 function translate() {
@@ -46,7 +44,7 @@ function translate() {
                 return "#f0f0f0Brug &a/tfb #f0f0f0for at komme i gang";
                 break;
             default:
-                return "{player_nick}";
+                return "&aClick here to vote &c<3";
         }
     } else if (type == "2") {
         switch (lang) {

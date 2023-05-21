@@ -44,6 +44,15 @@
 
 # The parts of this format.
 Parts:
+  
+  # Show the [Outsider] prefix if the sender is not joined in this channel,
+  # and is not coming from discord. This happens for example on "/channel send".
+  #outsider-prefix: 
+  #  Message: "&8[&cOutsider&8] &f"
+  #  Sender_Condition: "!{player_in_channel_{channel}} && !{sender_is_discord}"
+  
+  # Show the [Spy] prefix only to players who receive this message AND are
+  # spying in the given channel, enabling them to stop spying by clicking on prefix.
   spies-prefix:
     Message: '&8[&5Spy&8] &f'
     Receiver_Condition: '{player_is_spying_{channel}}'
