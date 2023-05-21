@@ -20,25 +20,23 @@ Parts:
     - '&7Current Streak: &a%VotingPlugin_DailyVoteStreak% &7days'
     - '&7Best Vote Streak: &a%VotingPlugin_BestDailyVoteStreak% &7days'
     - '&7Next Vote: &a%VotingPlugin_Next_AnySite%'
-    - ' '
-    - ''
     Run_Command: /voteall
   MOTD:
     Message:
-    - '<center>%javascript_motdWB_2,{player_locale_short}%'
+    - ' '
     - '<center>%javascript_motdWB_3,{player_locale_short}%'
     - '<center>%javascript_motdWB_4,{player_locale_short}%'
-    - '<center>%javascript_motdWB_5,{player_locale_short}%'
+    - ' '
     - '<center>%javascript_motdWB_6,{player_locale_short}%'
     - ' '
     - ' '
   discord:
-    Message: '            #5865F2Discord &8|'
+    Message: '          #5865F2Discord &8|'
     Hover: '#f0f0f0Join our Discord'
     Open_Url: https://discord.theflyingbirds.net
   github:
     Message: ' #f0f0f0Github &8|'
-    Hover: '#f0f0f0See our source code!'
+    Hover: '#f0f0f0View our source code!'
     Open_Url: https://discord.theflyingbirds.net
   menu:
     Message: ' #235babShop &8|'
@@ -46,7 +44,7 @@ Parts:
     Open_Url: https://shop.theflyingbirds.net
   stats:
     Message: ' #368F17Statistics &8|'
-    Hover: '#f0f0f0See statistics of players!'
+    Hover: '#f0f0f0View statistics of players!'
     Open_Url: https://stats.theflyingbirds.net
   youtube:
     Message: ' #FF0000Youtube'

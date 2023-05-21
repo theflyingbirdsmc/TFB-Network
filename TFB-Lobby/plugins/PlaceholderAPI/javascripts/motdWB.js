@@ -23,6 +23,13 @@ var greetings = [
     "#f0f0f0Embrace the Architect Extraordinaire, {player_nick}!",
 ];
 
+var tips = [
+    "#f0f0f0Use &a/tfb #f0f0f0for easy access to... &e&oeverything#f0f0f0!",
+    "#f0f0f0Get your friends to use &a/refer #f0f0f0for rewards!",
+    "#f0f0f0Do you want to improve #ee2b23T#3551d7F#00ff00B#f0f0f0? We're waiting on #5865F2Discord#f0f0f0!",
+    "#f0f0f0Want to build something for #ee2b23T#3551d7F#00ff00B#f0f0f0? We're waiting on #5865F2Discord#f0f0f0!"
+]
+
 function translate() {
     if (args.length == 2) {
         type = args[0];
@@ -60,7 +67,7 @@ function translate() {
                 return "#f0f0f0Henvist af en ven?";
                 break;
             default:
-                return "#f0f0f0Referred by a friend?";
+                return "&eTip of the day&8:";
         }
     } else if (type == "4") {
         switch (lang) {
@@ -68,7 +75,7 @@ function translate() {
                 return "#f0f0f0Brug &a/refer &8<&aven&8> #f0f0f0for belønninger!";
                 break;
             default:
-                return "#f0f0f0Use &a/refer &8<&afriend&8> #f0f0f0for rewards!";
+                return getRandomMessage(tips);
         }
     } else if (type == "5") {
         switch (lang) {

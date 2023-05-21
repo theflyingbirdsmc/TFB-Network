@@ -25,7 +25,7 @@ Parts:
     Open_Url: https://discord.theflyingbirds.net
   github:
     Message: ' #f0f0f0Github &8|'
-    Hover: '#f0f0f0See our source code!'
+    Hover: '#f0f0f0View our source code!'
     Open_Url: https://discord.theflyingbirds.net
   menu:
     Message: ' #235babShop &8|'
@@ -33,7 +33,7 @@ Parts:
     Open_Url: https://shop.theflyingbirds.net
   stats:
     Message: ' #368F17Statistics &8|'
-    Hover: '#f0f0f0See statistics of players!'
+    Hover: '#f0f0f0View statistics of players!'
     Open_Url: https://stats.theflyingbirds.net
   youtube:
     Message: ' #FF0000Youtube'
