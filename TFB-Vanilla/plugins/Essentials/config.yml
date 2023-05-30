@@ -75,7 +75,8 @@ change-tab-complete-name: false
 # If the teleport destination is unsafe, should players be teleported to the nearest safe location?
 # If this is set to true, Essentials will attempt to teleport players close to the intended destination.
 # If this is set to false, attempted teleports to unsafe locations will be cancelled with a warning.
-teleport-safety: false
+
+teleport-safety: true
 
 # This forcefully disables teleport safety checks without a warning if attempting to teleport to unsafe locations.
 # teleport-safety and this option need to be set to true to force teleportation to dangerous locations.
