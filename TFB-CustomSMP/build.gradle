@@ -14,7 +14,7 @@ dependencies {
     // Network plugins
     implementation 'Server:Paper:1.19.3-387'
     implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
-    implementation 'GadgetsMenu:GadgetsMenu:5.2.16'
+    implementation 'GadgetsMenu:GadgetsMenu:5.7.2'
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.19.9'
 }
