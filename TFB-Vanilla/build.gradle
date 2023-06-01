@@ -41,7 +41,7 @@ dependencies {
     implementation 'ViaVersion:ViaVersion:4.6.2'
     implementation 'VotingPlugin:VotingPlugin:6.13'
     implementation 'WorldGuard:WorldGuard:7.0.8+33cdb4a'
-    implementation 'Vulcan:Vulcan:2.7.1'
+    implementation 'Vulcan:Vulcan:2.7.3'
 }
 
 // TFB Artifactory
