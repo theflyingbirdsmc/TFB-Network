@@ -828,7 +828,7 @@ Mute:
 Motd:
 
   # Should we enable this feature?
-  Enabled: true
+  Enabled: false
   
   # Run motd on a separate thread? Experimental and may break custom variables calling Bukkit API
   # Recommended if you are downloading images in your format
