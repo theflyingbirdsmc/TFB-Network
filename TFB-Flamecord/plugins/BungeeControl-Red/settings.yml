@@ -3,7 +3,7 @@
 # !-----------------------------------------------------------------------------------------------!
 #
 #  *IMPORTANT* Ensure you set a unique name for each server in "server.properties" file
-#              in your root server folder. The name must be the same as your server name in
+#              in your slave servers. The name must be the same as your server name in
 #              BungeeCord config.yml.
 #
 # !-----------------------------------------------------------------------------------------------!

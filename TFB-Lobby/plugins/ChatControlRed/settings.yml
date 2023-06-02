@@ -165,6 +165,7 @@ Channels:
     English:
       Format: chat
       Format_Spy: '@noprefix chat'
+      Bungee_Spy: false
       Bungee: false
     TFB-Staff:
       Format: tfb-staff
@@ -835,7 +836,7 @@ Motd:
   Async: false
   
   # How long to wait to show motd on join?
-  Delay: 3 ticks
+  Delay: 60 ticks
   
   # The commands that manually show the motd to the player.
   # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
@@ -844,7 +845,7 @@ Motd:
   - 'news'
 
   # What message is sent to the player on login? This is fetched from formats/.
-  Format_Motd: motd
+  Format_Motd: motdWB
   
   # What message is sent when the player joins for the first time.
   Format_Motd_First_Time: motd
@@ -1173,7 +1174,7 @@ Newcomer:
   # How much time must a player spend on the server to no longer be considered as a newcomer?
   # This is NOT the first time player joined, but the actual time he spent on your server.
   # Set to 0 to disable this feature, or set a time like "1 hour" in human readable format
-  Threshold: 0 minutes
+  Threshold: 5 hours
   
   # In which worlds should we enable this feature? Useful when you have a newbie world.
   # Example: [survival, nether, end]. Set to ["*"] to enable in all worlds.

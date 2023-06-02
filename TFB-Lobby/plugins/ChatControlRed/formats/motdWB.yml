@@ -1,0 +1,52 @@
+# -----------------------------------------------------------------------------------------
+# Represents a chat format file that can be used to stylize messages.
+# See the chat.yml for a tutorial on how this works.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  Header:
+    Message:
+    - ' '
+    - '<center>%javascript_motdWB_header,{player_locale_short}%'
+  Vote:
+    Message:
+    - ' '
+    - '<center>%javascript_motdWB_1,{player_locale_short}%'
+    Hover:
+    - '&eMy votes'
+    - '&7Total Votes: &a%votingplugin_total_alltime% &f#&e%votingplugin_top_all_position%'
+    - '&7This Month: &a%votingplugin_total_monthly% &f#&e%votingplugin_top_month_position%'
+    - '&7Current Streak: &a%VotingPlugin_DailyVoteStreak% &7days'
+    - '&7Best Vote Streak: &a%VotingPlugin_BestDailyVoteStreak% &7days'
+    - '&7Next Vote: &a%VotingPlugin_Next_AnySite%'
+    Run_Command: /voteall
+  MOTD:
+    Message:
+    - ' '
+    - '<center>%javascript_motdWB_3,{player_locale_short}%'
+    - '<center>%javascript_motdWB_4,{player_locale_short}%'
+    - ' '
+    - '<center>%javascript_motdWB_6,{player_locale_short}%'
+    - ' '
+    - ' '
+  discord:
+    Message: '          #5865F2Discord &8|'
+    Hover: '#f0f0f0Join our Discord'
+    Open_Url: https://discord.theflyingbirds.net
+  github:
+    Message: ' #f0f0f0Github &8|'
+    Hover: '#f0f0f0View our source code!'
+    Open_Url: https://discord.theflyingbirds.net
+  menu:
+    Message: ' #235babShop &8|'
+    Hover: '#f0f0f0Visit our shop!'
+    Open_Url: https://shop.theflyingbirds.net
+  stats:
+    Message: ' #368F17Statistics &8|'
+    Hover: '#f0f0f0View statistics of players!'
+    Open_Url: https://stats.theflyingbirds.net
+  youtube:
+    Message: ' #FF0000Youtube'
+    Hover: '#f0f0f0Check out our channel!'
+    Open_Url: https://youtube.com/user/theflyingbirdsmc

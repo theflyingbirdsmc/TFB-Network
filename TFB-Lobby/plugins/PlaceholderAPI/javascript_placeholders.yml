@@ -82,5 +82,9 @@ tfb_chat_help:
   file: tfb_chat_help.js
 tfb_chat_staff:
   file: tfb_chat_staff.js
+motd:
+  file: motd.js
+motdWB:
+  file: motdWB.js
 example:
   file: example.js

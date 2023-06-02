@@ -60,10 +60,10 @@ VoteReminding:
   # Use /vote next to see when you can be reminded
   # Players require the perm "VotingPlugin.Login.RemindVotes" or "VotingPlugin.Player"
   # To remind if any votesite is available (rather than all) use the permission "VotingPlugin.Login.RemindVotes.Any"
-  Enabled: true
+  Enabled: false
 
   # Will remind player on login if he can vote
-  RemindOnLogin: true
+  RemindOnLogin: false
   
   # Whether or not to remind only once when the player can vote
   # Does not apply to login reminds.
@@ -71,7 +71,7 @@ VoteReminding:
 
   # Delay to remind votes in minutes
   # Set to -1 to disable
-  RemindDelay: 30
+  RemindDelay: -1
 
   # Run rewards
   # and have the default message
