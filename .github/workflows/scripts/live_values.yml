@@ -4,13 +4,13 @@ TFB-Creative/plugins/PlotSquared/config/storage.yml: mysql
 
 TFB-Vanilla/plugins/CoreProtect/config.yml: mysql-host
 
-TFB-Flamecord/plugins/VotingPlugin/bungeeconfig.yml: Host
-TFB-Lobby/plugins/VotingPlugin/Config.yml: MySQL
-TFB-Creative/plugins/VotingPlugin/Config.yml: MySQL
-TFB-Vanilla/plugins/VotingPlugin/Config.yml: MySQL
-TFB-Factions/plugins/VotingPlugin/Config.yml: MySQL
-TFB-Parkour/plugins/VotingPlugin/Config.yml: MySQL
-TFB-CustomSMP/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-Flamecord/plugins/VotingPlugin/bungeeconfig.yml: Host
+# TFB-Lobby/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-Creative/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-Vanilla/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-Factions/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-Parkour/plugins/VotingPlugin/Config.yml: MySQL
+# TFB-CustomSMP/plugins/VotingPlugin/Config.yml: MySQL
 
 TFB-Flamecord/plugins/Plan/config.yml: Database
 TFB-Lobby/plugins/Plan/config.yml: Database
