@@ -26,6 +26,7 @@ dependencies {
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.1'
     implementation 'GadgetsMenu:GadgetsMenu:5.7.2'
+    implementation 'HexNicks:HexNicks:3.1.0'
     implementation 'GSit:GSit:1.4.4'
     implementation 'LibsDisguises:LibsDisguises:10.0.34'
     implementation 'LuckPerms:LuckPerms:5.4.79'
