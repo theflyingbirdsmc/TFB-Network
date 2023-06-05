@@ -57,8 +57,8 @@ TFB-Factions/plugins/PlayerReferrals/config.yml: host
 TFB-Parkour/plugins/PlayerReferrals/config.yml: host
 # TFB-CustomSMP/plugins/PlayerReferrals/config.yml: host
 
-TFB-Lobby/plugins/HexNicks/config.yml: host
-TFB-Creative/plugins/HexNicks/config.yml: host
-TFB-Vanilla/plugins/HexNicks/config.yml: host
-TFB-Factions/plugins/HexNicks/config.yml: host
-TFB-Parkour/plugins/HexNicks/config.yml: host
+# TFB-Lobby/plugins/HexNicks/config.yml: host
+# TFB-Creative/plugins/HexNicks/config.yml: host
+# TFB-Vanilla/plugins/HexNicks/config.yml: host
+# TFB-Factions/plugins/HexNicks/config.yml: host
+# TFB-Parkour/plugins/HexNicks/config.yml: host
