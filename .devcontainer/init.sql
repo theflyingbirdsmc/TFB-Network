@@ -52,4 +52,4 @@ FLUSH PRIVILEGES;
 DROP USER IF EXISTS 'u2_js3sZ1TlmU';
 CREATE USER 'u2_js3sZ1TlmU'@'%';
 CREATE DATABASE IF NOT EXISTS s2_hexnicks;
-GRANT ALL ON s2_hexnicks.* TO 's2_hexnicks'@'%' IDENTIFIED BY '^zbJ!kcND3w!UAjkdQZofY5=';
+GRANT ALL ON s2_hexnicks.* TO 'u2_js3sZ1TlmU'@'%' IDENTIFIED BY '^zbJ!kcND3w!UAjkdQZofY5=';
