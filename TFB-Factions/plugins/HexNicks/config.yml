@@ -46,7 +46,7 @@ nickother-override: false
 # Strict will prevent players from having the same characters. If strict is disabled (default) then players can
 # have the same name with different colors, but the same name with the same colors will be blocked.
 prevent-duplicate-nicks: true
-prevent-duplicate-nicks-strict: false
+prevent-duplicate-nicks-strict: true
 
 # A list of nicknames that will not be allowed, ignoring case.
 # This list can also accept regex.
@@ -62,12 +62,12 @@ blocked-nicknames:
 
 # Database settings
 # Only enable this if you know what you're doing and have an existing database
-database-enabled: false
-host: 172.18.0.1
+database-enabled: true
+host: localhost
 port: '3306'
 database: s2_hexnicks
-username: hexnicks_user
-password: hexnicks_password
+username: u2_js3sZ1TlmU
+password: ^zbJ!kcND3w!UAjkdQZofY5=
 use-ssl: false
 auto-reconnect: false
 # The maximum lifetime of a connection in milliseconds. This should be lower than your database's wait timeout.
