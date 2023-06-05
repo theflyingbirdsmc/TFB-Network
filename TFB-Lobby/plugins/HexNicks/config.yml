@@ -15,14 +15,14 @@ require-alphanumeric: true
 
 # The plugin needs a chat formatter for nicknames to format properly in chat
 # HexNicks can do this itself but if you have another formatter such as EssentialsChat or VaultChatFormatter you should disable this
-chat-formatter: true
+chat-formatter: false
 
 # The format of chat messages. Must include {displayname} and {message} placeholders.
 # May also include {prefix} and {suffix} placeholders. These items will be pulled from Vault if it is hooked.
 chat-format: <{displayname}> {message}
 
 # Whether to support legacy nicknames (&a, &l, etc.)
-legacy-colors: false
+legacy-colors: true
 
 # The default color of nicknames if no color code is provided on nickname creation.
 # This MUST be a hex code string. No color names or legacy codes.
@@ -30,10 +30,10 @@ default-nick-color: '#FFFFFF'
 
 # The default color of usernames for users without nicknames.
 # This MUST be a hex code string. No color names or legacy codes.
-default-username-color: '#FFFFFF'
+default-username-color: '#FFFF55'
 
 # Whether to send opped players messages when the plugin has an update.
-update-prompt: true
+update-prompt: false
 
 # Whether to set a user's Essentials nickname on /nick to fix some Essentials compatibility.
 override-essentials: true
