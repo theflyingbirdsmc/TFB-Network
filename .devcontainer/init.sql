@@ -47,3 +47,9 @@ CREATE USER 'u2_wdkOuuJO27'@'%';
 CREATE DATABASE IF NOT EXISTS s2_playerreferals;
 GRANT ALL ON s2_playerreferals.* TO 'u2_wdkOuuJO27'@'%' IDENTIFIED BY 'EDMgT5VOIaSa0TWw@b9LeuXW';
 FLUSH PRIVILEGES;
+
+-- HEXNICKS --
+DROP USER IF EXISTS 'u2_js3sZ1TlmU';
+CREATE USER 'u2_js3sZ1TlmU'@'%';
+CREATE DATABASE IF NOT EXISTS s2_hexnicks;
+GRANT ALL ON s2_hexnicks.* TO 's2_hexnicks'@'%' IDENTIFIED BY '^zbJ!kcND3w!UAjkdQZofY5=';
