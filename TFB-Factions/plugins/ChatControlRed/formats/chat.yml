@@ -45,6 +45,11 @@
 # The parts of this format.
 Parts:
   
+  # Show the [Read] prefix if the receiver is only reading this channel.
+  read-prefix:
+    Message: '&8[&bRead&8] '
+    Receiver_Condition: '''{player_channel_mode_{channel}}'' == ''read'''
+  
   # Show the [Outsider] prefix if the sender is not joined in this channel,
   # and is not coming from discord. This happens for example on "/channel send".
   #outsider-prefix: 
@@ -59,96 +64,9 @@ Parts:
     Hover:
     - '&dClick to stop spying {channel} channel.'
     Run_Command: /{label_spy} toggle chat {channel}
-  Standard:
-    Sender_Permission: chatcontrol.prefix.standard
-    Message: '{player_nick}'
-    Gradient: YELLOW - YELLOW
+  Name:
+    Message: '%hexnicks_nick_hex%'
     Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  Budgie:
-    Sender_Permission: chatcontrol.prefix.budgie
-    Message: '{player_nick}'
-    Gradient: '#00ff00 - #faff00'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  Colibri:
-    Sender_Permission: chatcontrol.prefix.colibri
-    Message: '{player_nick}'
-    Gradient: '#3551d7 - #3adce1'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  Phoenix:
-    Sender_Permission: chatcontrol.prefix.phoenix
-    Message: '{player_nick}'
-    Gradient: '#ee2b23 - #f26622'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  ServerManager:
-    Sender_Permission: chatcontrol.prefix.sm
-    Message: '{player_nick}'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  ChiefServerManager:
-    Sender_Permission: chatcontrol.prefix.csm
-    Message: '{player_nick}'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  ChiefTechnologyOfficer:
-    Sender_Permission: chatcontrol.prefix.cto
-    Message: '{player_nick}'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
-    - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Time: &f%plan_player_server_time_active%'
-  Founder:
-    Sender_Permission: chatcontrol.prefix.founder
-    Message: '{player_nick}'
-    Hover:
-    - '&cFaction Info'
-    - '&7Faction: &f%factionsuuid_faction_name%'
-    - '&7Role: &f%factionsuuid_player_role_name% &8(&f%factionsuuid_player_role%&8)'
-    - ''
-    - '#ee2b23T#3551d7F#00ff00B &aInfo'
     - '&7Rank: &f%luckperms_primary_group_name%'
     - '&7Time: &f%plan_player_server_time_active%'
 

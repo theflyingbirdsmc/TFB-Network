@@ -50,15 +50,6 @@ Parts:
     Message: '&8[&bRead&8] '
     Receiver_Condition: '''{player_channel_mode_{channel}}'' == ''read'''
   
-  # Show the [Discord] prefix if the sender is from Discord (we use our own
-  # special variable for this) and add some interactive elements.
-  discord-prefix:
-    Message: '&8[&9Discord&8] &f'
-    Sender_Condition: '{sender_is_discord}'
-    Hover:
-    - '&bJoin our Discord at mineacademy.org/discord'
-    Open_Url: https://mineacademy.org/discord
-  
   # Show the [Outsider] prefix if the sender is not joined in this channel,
   # and is not coming from discord. This happens for example on "/channel send".
   #outsider-prefix: 
@@ -73,33 +64,11 @@ Parts:
     Hover:
     - '&dClick to stop spying {channel} channel.'
     Run_Command: /{label_spy} toggle chat {channel}
-
-  # Finally, pull the regular player prefix from your permissions plugin using Vault.
-  # The + at the end of the variable automatically inserts a space if player has prefix.
-  # E.g. "admin" turns into "admin ". If there's no prefix, you won't end with a trailing space.
-  prefix:
-    Message: '{player_prefix+}'
-    Hover:
-    - '&7{player_prefix+}{player_name} {player_suffix}'
-    - '&7Ping&8: &f{ping}ms'
-    - '&7Rank&8: &f{player_group}'
-    - '&7Posted: &f{timestamp}'
-    - ''
-    - '&7Click to learn more about ranks.'
-      # You can also use PlaceholderAPI variables here
-      #- '&7First join: &e{player_first_join_date}'
-    Open_Url: https://mineacademy.org/project-orion
-
-  # Display a typical player name to players with the given permission. change {player_name} 
-  # to {player_nick} to show nick instead. We'll revert to show normal name if player has no nick.
-  # To display a name in rainbow colors, uncomment "Gradient". This requires MC 1.16+
-  player-name:
-    Message: '{player_nick}'
-    #Message: "{player_name}"
-    #Gradient: RED - YELLOW
+  Name:
+    Message: '%hexnicks_nick_hex%'
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'
-    - '&7Total time played on server: &f%plan_player_server_time_active%'
+    - '&7Time: &f%plan_player_server_time_active%'
 
   # And finally, show the message the player has typed out, prepending it with player's
   # suffix from your permission plugin. We replace {chat_color} and {chat_decoration} with the 

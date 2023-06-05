@@ -17,7 +17,7 @@ example_group:
 _DEFAULT_:
   tabprefix: "%vault-prefix%"
   tagprefix: "%vault-prefix%"
-  customtabname: "%essentials_nickname%"
+  customtabname: "%hexnicks_nick_hex%"
   customtagname: "%essentials_nickname%" # don't forget to enable unlimited nametag mode to make this one work
   tabsuffix: "%vault-suffix%%afk%"
   tagsuffix: "%vault-suffix%%afk%"
