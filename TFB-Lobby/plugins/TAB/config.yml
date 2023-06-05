@@ -11,7 +11,7 @@ header-footer:
   - ''
   footer:
   - ''
-  - '&6Shop&8: &etheflyingbirds.tebex.io'
+  - '&eshop.theflyingbirds.net'
 per-world:
   world1:
     header:
@@ -42,7 +42,6 @@ scoreboard-teams:
   - disabledworld
   unlimited-nametag-mode:
     enabled: true
-    use-marker-tag-for-1-8-x-clients: false
     disable-on-boats: true
     space-between-lines: 0.22
     disable-in-worlds:
@@ -184,3 +183,6 @@ mysql:
   database: tab
   username: user
   password: password
+use-online-uuid-in-tablist: true
+global-playerlist:
+  enabled: false
