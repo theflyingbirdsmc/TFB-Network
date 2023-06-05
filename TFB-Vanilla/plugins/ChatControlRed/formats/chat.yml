@@ -65,13 +65,14 @@ Parts:
     - '&dClick to stop spying {channel} channel.'
     Run_Command: /{label_spy} toggle chat {channel}
   Default:
-    Sender_Permission: chatcontrol.prefix.standard
+    Sender_Permission: chatcontrol.prefix.default
     Message: '{player_nick}'
     Gradient: YELLOW - YELLOW
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'
     - '&7Time: &f%plan_player_server_time_active%'
   Standard:
+    Sender_Permission: chatcontrol.prefix.standard
     Message: '%hexnicks_nick_hex%'
     Hover:
     - '&7Rank: &f%luckperms_primary_group_name%'
