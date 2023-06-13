@@ -45,7 +45,7 @@ forge_support: false
 disabled_commands:
 - revertaddresses
 servers:
-  CustomSMP:
+  vanillaplus:
     address: localhost:25605
     motd: ''
     restricted: false
