@@ -32,11 +32,11 @@ jobs:
 
       # Run Gradle server
       - name: Start Gradle server
-        run: gradlew --no-daemon --continuous -p TFB-Flamecord &
+        run: gradle --no-daemon --continuous -p TFB-Flamecord &
 
       # Run Gradle plugins task
       - name: Run Gradle build
-        run: gradlew plugins TFB-Flamecord/build.gradle
+        run: gradle plugins TFB-Flamecord/build.gradle
 
       # Run Gradle server task
       - name: Run Gradle build
