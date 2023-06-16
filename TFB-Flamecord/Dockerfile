@@ -1,8 +1,7 @@
 FROM openjdk:17-slim
 
 RUN sudo apt-get gradle
+LABEL author="Lucas Christensen & Simon Fugl"
 COPY * /
-
-RUN gradle server && gradle plugins
 
 CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]

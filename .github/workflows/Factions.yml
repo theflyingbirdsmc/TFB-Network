@@ -1,9 +1,9 @@
-name: Build and Publish Docker Image to Nexus Artifactory
+name: Build and Publish Factions Docker Image to Nexus Artifactory
 
 on:
   push:
     paths:
-      - 'TFB-*/**'
+      - 'TFB-Factions/**'
 
 jobs:
   build-test-publish:
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
       # Set up Docker
-      - name: Set up Docker Buildx
+      - name: Set up Docker Build
         uses: docker/setup-buildx-action@v2
 
       # Login to Nexus Artifactory
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./TFB-Flamecord # specifying the directory where your Dockerfile is
+          context: ./TFB-Factions # specifying the directory where your Dockerfile is
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: artifactory.theflyingbirds.net/repository/servers/v2/flamecord:latest # change this to your image name
+          tags: ${{ secrets.MAVEN_DOCKER_REPO }}/factions:latest # change this to your image name
