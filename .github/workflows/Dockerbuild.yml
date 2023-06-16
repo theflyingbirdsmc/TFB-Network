@@ -33,4 +33,4 @@ jobs:
           context: ./TFB-Flamecord # specifying the directory where your Dockerfile is
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: artifactory.theflyingbirds.net/repository/servers/v2/flamecord:latest # change this to your image name
+          tags: ${{ secrets.MAVEN_DOCKER_REPO }}/repository/servers/v2/flamecord:latest # change this to your image name
