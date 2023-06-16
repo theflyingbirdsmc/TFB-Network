@@ -3,7 +3,7 @@ FROM openjdk:17-slim
 LABEL author="Lucas Christensen & Simon Fugl"
 
 RUN apt-get update; \
-    apt-get -y install default-jdk wget
+    apt-get -y install default-jdk wget unzip
 
 #install Gradle
 WORKDIR /opt/gradle
