@@ -15,32 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Setup Java
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'
-      
-      # Cache Gradle packages
-      - name: Cache Gradle dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      # Run Gradle server
-      - name: Run Gradle server
-        run: ./gradlew -p TFB-Creative server
-      
-      # Run Gradle plugins
-      - name: Run Gradle plugins
-        run: ./gradlew -p TFB-Creative plugins
-
       # Set up Docker
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v2
