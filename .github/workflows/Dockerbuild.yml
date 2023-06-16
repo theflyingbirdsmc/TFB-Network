@@ -2,8 +2,8 @@ name: Build and Publish Docker Image to Nexus Artifactory
 
 on:
   push:
-#    branches:
-#      - dev
+    paths:
+      - 'TFB-*/**'
 
 jobs:
   build-test-publish:
