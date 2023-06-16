@@ -28,9 +28,9 @@ jobs:
 
       # Build and push Docker image
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: ./TFB-Flamecord # specifying the directory where your Dockerfile is
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: artifactory.theflyingbirds.net/repository/servers/flamecord:latest # change this to your image name
+          tags: artifactory.theflyingbirds.net/repository/servers/v2/flamecord:latest # change this to your image name
