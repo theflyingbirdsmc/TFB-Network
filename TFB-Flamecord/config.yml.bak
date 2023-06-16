@@ -5,7 +5,7 @@ listeners:
   forced_hosts:
     pvp.md-5.net: pvp
   host: 0.0.0.0:25565
-  max_players: 2023
+  max_players: 2022
   motd: ''
   ping_passthrough: false
   priorities:
@@ -29,7 +29,7 @@ permissions:
 log_pings: true
 connection_throttle_limit: 3
 server_connect_timeout: 5000
-timeout: 20000
+timeout: 10000
 stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 player_limit: 2021
 ip_forward: true
@@ -43,41 +43,37 @@ prevent_proxy_connections: false
 online_mode: true
 forge_support: false
 disabled_commands:
-- revertaddresses
+- disabledcommandhere
 servers:
-  CustomSMP:
-    address: localhost:25605
-    motd: ''
-    restricted: false
   creative:
-    address: localhost:25601
+    address: 172.18.0.1:25601
     motd: ''
     restricted: false
   crowdcontrol:
-    address: localhost:25606
+    address: 172.18.0.1:25606
     motd: ''
     restricted: false
   factions:
-    address: localhost:25603
+    address: 172.18.0.1:25603
     motd: ''
     restricted: false
   kitpvp:
-    address: localhost:25607
+    address: 172.18.0.1:25607
     motd: ''
     restricted: false
   lobby:
-    address: localhost:25600
+    address: 172.18.0.1:25600
     motd: ''
     restricted: false
   museum:
-    address: localhost:25602
+    address: 172.18.0.1:25605
     motd: ''
     restricted: false
   parkour:
-    address: localhost:25604
+    address: 172.18.0.1:25604
     motd: ''
     restricted: false
   vanilladk:
-    address: localhost:25700
+    address: 172.18.0.1:25700
     motd: ''
     restricted: false
