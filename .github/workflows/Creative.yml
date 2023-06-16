@@ -15,6 +15,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: 'adopt'
+
+      - name: Download Server
+        run: ./gradlew -p TFB-Creative/build.gradle server
+
+      - name: Download Plugins
+        run: ./gradlew -p TFB-Creative/build.gradle plugins
+
       # Set up Docker
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v2
