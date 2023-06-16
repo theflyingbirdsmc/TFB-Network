@@ -33,4 +33,4 @@ jobs:
           context: ./TFB-Flamecord # specifying the directory where your Dockerfile is
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: tfb/flamecord:latest # change this to your image name
+          tags: artifactory.theflyingbirds.net/repository/servers/flamecord:latest # change this to your image name
