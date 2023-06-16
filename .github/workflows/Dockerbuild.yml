@@ -3,7 +3,7 @@ name: Build and Publish Docker Image to Nexus Artifactory
 on:
   push:
 #    branches:
-#      - main
+#      - dev
 
 jobs:
   build-test-publish:
@@ -13,34 +13,6 @@ jobs:
       # Check out the repository
       - name: Checkout code
         uses: actions/checkout@v2
-
-      # Set up Java Environment
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'
-
-      # Cache dependencies
-      - name: Cache Gradle packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/TFB-Flamecord/build.gradle') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      # Run Gradle server
-      - name: Start Gradle server
-        run: gradle --no-daemon --continuous -p TFB-Flamecord &
-
-      # Run Gradle plugins task
-      - name: Run Gradle build
-        run: gradle plugins TFB-Flamecord/build.gradle
-
-      # Run Gradle server task
-      - name: Run Gradle build
-        run: gradle plugins TFB-Flamecord/build.gradle
 
       # Set up Docker
       - name: Set up Docker Buildx
@@ -61,10 +33,4 @@ jobs:
           context: ./TFB-Flamecord # specifying the directory where your Dockerfile is
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: your-nexus-registry-url/your-image-name:latest # change this to your image name
-
-      # Cleanup Gradle server
-      - name: Stop Gradle server
-        if: always()
-        run: pkill -f gradle
-
+          tags: https://artifactory.theflyingbirds.net/repository/servers/flamecord:latest # change this to your image name
