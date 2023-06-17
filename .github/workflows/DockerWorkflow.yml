@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        server: ['Flamecord', 'Creative', 'Vanilla', 'Factions']
+        server: ['flamecord', 'creative', 'vanilla', 'factions']
       
     steps:
       # Check out the repository
