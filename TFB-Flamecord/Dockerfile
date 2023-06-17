@@ -26,7 +26,7 @@ COPY . /tfb/
 
 # # Set Gradle in the environment variables
 # ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
-# WORKDIR /tfb
+WORKDIR /tfb
 # RUN gradle server && gradle plugins
-
+RUN chmod +x *.jar
 CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
