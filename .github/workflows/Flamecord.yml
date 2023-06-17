@@ -34,7 +34,7 @@ jobs:
           file: ./TFB-Flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
           tags: ${{ secrets.MAVEN_DOCKER_REPO }}/flamecord:latest # change this to your image name
-          secrets: |
-            "MAVEN_URL=${{ secrets.MAVEN_URL }}"
-            "MAVEN_USERNAME=${{ secrets.MAVEN_USERNAME }}"
-            "MAVEN_PASSWORD=${{ secrets.MAVEN_PASSWORD }}"
+          build-args: |
+            MAVEN_URL=${{ secrets.MAVEN_URL }}
+            MAVEN_USERNAME=${{ secrets.MAVEN_USERNAME }}
+            MAVEN_PASSWORD=${{ secrets.MAVEN_PASSWORD }}
