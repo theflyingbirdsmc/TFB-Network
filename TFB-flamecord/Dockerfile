@@ -2,32 +2,32 @@ FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
 
-# Define build arguments
-ARG MAVEN_URL
-ARG MAVEN_USERNAME
-ARG MAVEN_PASSWORD
-
-# Set environment variables using build arguments
-ENV MAVEN_URL=${MAVEN_URL}
-ENV MAVEN_USERNAME=${MAVEN_USERNAME}
-ENV MAVEN_PASSWORD=${MAVEN_PASSWORD}
-
 COPY * /tfb/
-RUN ls -a && pwd
+# Define build arguments
+# ARG MAVEN_URL
+# ARG MAVEN_USERNAME
+# ARG MAVEN_PASSWORD
 
-RUN apt-get update; \
-    apt-get -y install default-jdk wget unzip
+# # Set environment variables using build arguments
+# ENV MAVEN_URL=${MAVEN_URL}
+# ENV MAVEN_USERNAME=${MAVEN_USERNAME}
+# ENV MAVEN_PASSWORD=${MAVEN_PASSWORD}
 
-#install Gradle
-WORKDIR /opt/gradle
-RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
-    && unzip gradle-7.3-bin.zip \
-    && rm gradle-7.3-bin.zip
+# RUN ls -a && pwd
 
-# Set Gradle in the environment variables
-ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
-WORKDIR /tfb
+# RUN apt-get update; \
+#     apt-get -y install default-jdk wget unzip
 
-RUN gradle server && gradle plugins
+# #install Gradle
+# WORKDIR /opt/gradle
+# RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
+#     && unzip gradle-7.3-bin.zip \
+#     && rm gradle-7.3-bin.zip
+
+# # Set Gradle in the environment variables
+# ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
+# WORKDIR /tfb
+
+# RUN gradle server && gradle plugins
 
 CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
