@@ -2,6 +2,9 @@ FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
 
+COPY * /
+RUN ls -a && pwd
+
 RUN apt-get update; \
     apt-get -y install default-jdk wget unzip
 
@@ -16,6 +19,5 @@ ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
 
 RUN gradle server && gradle plugins
 
-COPY * /
 
 CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
