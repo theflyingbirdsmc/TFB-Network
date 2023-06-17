@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./TFB-${{ matrix.server }} # specifying the directory where your Dockerfile is
-          file: ./TFB-${{ matrix.server }}/Dockerfile # specifying the path to your Dockerfile
+          #file: ./TFB-${{ matrix.server }}/Dockerfile # specifying the path to your Dockerfile
           push: true
           tags: ${{ secrets.MAVEN_DOCKER_REPO }}/${{ matrix.server }}:latest # change this to your image name
           build-args: |
