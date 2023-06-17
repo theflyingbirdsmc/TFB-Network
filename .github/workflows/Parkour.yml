@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - 'TFB-Parkour/**'
-      - '.github/workflows/Parkour.yml'
 
 jobs:
   build-test-publish:
@@ -23,7 +22,11 @@ jobs:
         uses: gradle/gradle-build-action@v2
     
       - name: Execute Gradle build
-        run: ./gradle server && ./gradle plugins
+        env:
+          MAVEN_URL: ${{ secrets.MAVEN_URL }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+        run: cd TFB-Parkour && gradle server && gradle plugins
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
