@@ -2,16 +2,15 @@ FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
 
-# Mount secrets
-RUN --mount=type=secret,id=MAVEN_URL \
-    --mount=type=secret,id=MAVEN_USER \
-    --mount=type=secret,id=MAVEN_PASSWORD \
-    cat /run/secrets/MAVEN_URL
+# Define build arguments
+ARG MAVEN_URL
+ARG MAVEN_USERNAME
+ARG MAVEN_PASSWORD
 
-# Set secrets as environment variables
-ENV MAVEN_URL=$(cat /run/secrets/MAVEN_URL)
-ENV MAVEN_USERNAME=$(cat /run/secrets/MAVEN_USER)
-ENV MAVEN_PASSWORD=$(cat /run/secrets/MAVEN_PASSWORD)
+# Set environment variables using build arguments
+ENV MAVEN_URL=${MAVEN_URL}
+ENV MAVEN_USERNAME=${MAVEN_USERNAME}
+ENV MAVEN_PASSWORD=${MAVEN_PASSWORD}
 
 COPY * /tfb/
 RUN ls -a && pwd
