@@ -2,7 +2,7 @@ FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
 
-COPY * /
+COPY * /tfb/
 RUN ls -a && pwd
 
 RUN apt-get update; \
@@ -16,7 +16,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
 
 # Set Gradle in the environment variables
 ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
-
+WORKDIR /tfb
 RUN gradle server && gradle plugins
 
 
