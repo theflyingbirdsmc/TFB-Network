@@ -26,7 +26,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: gradle server && gradle plugins
+        run: cd TFB-Flamecord && gradle server && gradle plugins
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
