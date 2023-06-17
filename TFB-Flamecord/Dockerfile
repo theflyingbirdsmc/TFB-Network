@@ -9,7 +9,6 @@ COPY * /tfb/
 # ARG MAVEN_URL
 # ARG MAVEN_USERNAME
 # ARG MAVEN_PASSWORD
-
 # # Set environment variables using build arguments
 # ENV MAVEN_URL=${MAVEN_URL}
 # ENV MAVEN_USERNAME=${MAVEN_USERNAME}
