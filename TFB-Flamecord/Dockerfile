@@ -16,7 +16,6 @@ COPY * /tfb/
 # ENV MAVEN_PASSWORD=${MAVEN_PASSWORD}
 
 # RUN ls -a && pwd
-
 # RUN apt-get update; \
 #     apt-get -y install default-jdk wget unzip
 
