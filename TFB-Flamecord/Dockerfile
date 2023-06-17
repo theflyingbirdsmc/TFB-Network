@@ -2,7 +2,7 @@ FROM openjdk:17-slim
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # Copy server files to a tfb folder
-COPY * /tfb/
+COPY . /tfb/
 
 # Define build arguments
 # ARG MAVEN_URL
