@@ -5,7 +5,8 @@ LABEL author="Lucas Christensen & Simon Fugl"
 # Mount secrets
 RUN --mount=type=secret,id=MAVEN_URL \
     --mount=type=secret,id=MAVEN_USER \
-    --mount=type=secret,id=MAVEN_PASSWORD
+    --mount=type=secret,id=MAVEN_PASSWORD \
+    cat /run/secrets/MAVEN_URL
 
 # Set secrets as environment variables
 ENV MAVEN_URL=$(cat /run/secrets/MAVEN_URL)
