@@ -2,6 +2,16 @@ FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
 
+# Mount secrets
+RUN --mount=type=secret,id=MAVEN_URL \
+    --mount=type=secret,id=MAVEN_USER \
+    --mount=type=secret,id=MAVEN_PASSWORD
+
+# Set secrets as environment variables
+ENV MAVEN_URL=$(cat /run/secrets/MAVEN_URL)
+ENV MAVEN_USERNAME=$(cat /run/secrets/MAVEN_USER)
+ENV MAVEN_PASSWORD=$(cat /run/secrets/MAVEN_PASSWORD)
+
 COPY * /tfb/
 RUN ls -a && pwd
 
@@ -17,7 +27,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
 # Set Gradle in the environment variables
 ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
 WORKDIR /tfb
-RUN gradle server && gradle plugins
 
+RUN gradle server && gradle plugins
 
 CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
