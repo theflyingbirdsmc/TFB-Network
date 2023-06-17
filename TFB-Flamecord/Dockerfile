@@ -1,7 +1,6 @@
 FROM openjdk:17-slim
 
 LABEL author="Lucas Christensen & Simon Fugl"
-
 COPY * /tfb/
 # Define build arguments
 # ARG MAVEN_URL
