@@ -4,6 +4,7 @@ LABEL author="Lucas Christensen & Simon Fugl"
 
 # Copy server files to a tfb folder
 COPY * /tfb/
+
 # Define build arguments
 # ARG MAVEN_URL
 # ARG MAVEN_USERNAME
