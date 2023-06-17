@@ -22,7 +22,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
     
       - name: Execute Gradle build
-        run: ./gradlew server && ./gradlew plugins
+        run: gradle server && gradle plugins
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
