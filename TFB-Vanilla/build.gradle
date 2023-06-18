@@ -44,6 +44,17 @@ dependencies {
     implementation 'VotingPlugin:VotingPlugin:6.13'
     implementation 'WorldGuard:WorldGuard:7.0.8+33cdb4a'
     implementation 'Vulcan:Vulcan:2.7.3'
+
+    //PlaceholderAPI Expansions
+    implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Essentials:1.5.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Player:2.0.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Vault:1.8.1'
+    implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
 }
 
 // TFB Artifactory
