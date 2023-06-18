@@ -45,6 +45,18 @@ dependencies {
     implementation 'VoidGen:VoidGen:2.2.1'
     implementation 'Parkour:Parkour:7.2.0'
     implementation 'ParkourTopTen:ParkourTopTen:4.1'
+
+    //PlaceholderAPI Expansions
+    implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Essentials:1.5.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Parkour:2.0'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Player:2.0.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Vault:1.8.1'
+    implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
 }
 
 // TFB Artifactory
@@ -64,8 +76,18 @@ task plugins(type: Copy) {
     delete fileTree(dir: 'plugins/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    exclude '*Paper*', '*Flamecord*'
-    into "plugins"
+    exclude '*Paper*', '*Flamecord*', '*PAPI-Expansion*'
+    into 'plugins'
+}
+
+// Type "gradle expansions" in terminal to update PAPI Expansions
+task expansions(type: Copy) {
+    doFirst{
+    delete fileTree(dir: 'plugins/PlaceholderAPI/expansions/.', include: '/*.jar')
+    }
+    from configurations.compileClasspath
+    include '*PAPI-Expansion*'
+    into 'plugins/PlaceholderAPI/expansions'
 }
 
 // Type "gradle server" in terminal to update server
@@ -78,3 +100,5 @@ task server(type: Copy) {
     rename '.*-(.+)', 'server.jar'
     into "."
 }
+
+task update(dependsOn: ['server', 'plugins', 'expansions'])
