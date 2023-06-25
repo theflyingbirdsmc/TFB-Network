@@ -10,7 +10,7 @@ metadata:
   #   circleci.com/project-slug: github/example-org/artist-website
   tags:
     - paper
-    - "1.19.4"
+    - "1-19-4"
     - survival
   links:
     - url: https://panel.theflyingbirds.net/server/9aa935d0
