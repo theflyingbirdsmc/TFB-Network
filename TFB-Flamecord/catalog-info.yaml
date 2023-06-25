@@ -21,4 +21,5 @@ spec:
   type: bungeecord
   lifecycle: production
   owner: theflyingbirdsmc/bungeecord
-  system: live-server
+  # system: eu
+  # domain: tfb-network
