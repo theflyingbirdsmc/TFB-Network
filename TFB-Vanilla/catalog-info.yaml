@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Vanilla
+  description: Vanilla survival
+  # labels:
+  #   example.com/custom: custom_label_value
+  # annotations:
+  #   example.com/service-discovery: artistweb
+  #   circleci.com/project-slug: github/example-org/artist-website
+  tags:
+    - paper
+    - "1.19.4"
+    - survival
+  links:
+    - url: https://panel.theflyingbirds.net/server/9aa935d0
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: server
+  lifecycle: production
+  owner: theflyingbirdsmc/dk
+  # system: eu
+  # domain: tfb-network

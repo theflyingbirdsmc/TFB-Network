@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Factions
+  description: Conquer the world with your faction!
+  # labels:
+  #   example.com/custom: custom_label_value
+  # annotations:
+  #   example.com/service-discovery: artistweb
+  #   circleci.com/project-slug: github/example-org/artist-website
+  tags:
+    - paper
+    - "1.19.4"
+    - survival
+  links:
+    - url: https://panel.theflyingbirds.net/server/54ac118d
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: server
+  lifecycle: production
+  owner: theflyingbirdsmc/eu
+  # system: eu
+  # domain: tfb-network
