@@ -18,7 +18,8 @@ panels:
         material: ELYTRA
         stack: 1
         name: '&fRanked Elytra'
-        enchanted: true
+        enchanted: 
+        - true
         commands:
         - open= elytra_ranked
         lore:

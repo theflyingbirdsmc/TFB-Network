@@ -18,7 +18,8 @@ panels:
         material: DROPPER
         stack: 1
         name: '&fRanked Dropper'
-        enchanted: true
+        enchanted: 
+        - true
         commands:
         - open= dropper_ranked
         lore:
