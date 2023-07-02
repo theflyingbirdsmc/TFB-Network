@@ -41,7 +41,7 @@ panels:
         lore:
         - '&7Play however you want'
         - '&7Be free like a bird'
-      '4':
+      '0':
         material: cps= self
         stack: 1
         name: '&fPlayer Stats'
@@ -50,7 +50,7 @@ panels:
         - '&eBalance: &b%vault_eco_balance_commas%'
         - '&eCompleted: &b%parkour_player_courses_completed%'
         - '&eLast Finished: &b%parkour_player_last_completed%'
-      '26':
+      '8':
         material: BOOK
         stack: 1
         name: '&fRules & hints'
@@ -61,7 +61,7 @@ panels:
         - '&b4: &7Phoenix can get custom created courses'
         - '&b5: &7Fall damage is enabled with no regen'
         - '&b6: &7Lvl equals difficulty'
-      '18':
+      '26':
         material: WHITE_DYE
         stack: 1
         name: '&fToggle quiet mode'
@@ -69,3 +69,9 @@ panels:
         - parkour quiet
         lore:
         - '&7Disables on-screen text'
+      '18':
+          material: RED_WOOL
+          stack: 1
+          name: '&cClose Menu'
+          commands:
+          - cpc
