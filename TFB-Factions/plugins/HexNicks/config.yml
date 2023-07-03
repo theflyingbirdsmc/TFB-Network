@@ -63,7 +63,7 @@ blocked-nicknames:
 # Database settings
 # Only enable this if you know what you're doing and have an existing database
 database-enabled: true
-host: 172.18.0.1
+host: localhost
 port: '3306'
 database: s2_hexnicks
 username: u2_js3sZ1TlmU
