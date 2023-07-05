@@ -9,8 +9,10 @@ on:
       - 'TFB-Lobby/**'
       - 'TFB-Parkour/**'
       - 'TFB-Vanilla/**'
+      - '.github/servers.yml'
     branches:
       - live
+      - kubernetes
 
 jobs:
   build-test:
