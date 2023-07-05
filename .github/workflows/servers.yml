@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: [Creative, Factions, Flamecord, Lobby, Parkour, Vanilla]
+        service: [creative, factions, flamecord, lobby, parkour, vanilla]
         include:
           - service: Creative
             directory: TFB-Creative
