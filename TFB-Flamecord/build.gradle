@@ -20,7 +20,7 @@ dependencies {
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'Reconnect:Reconnect:1.6.9'
     implementation 'VulcanBungee:VulcanBungee:1.0.6'
-    implementation 'VotingPlugin:VotingPlugin:6.13'
+    implementation 'VotingPlugin:VotingPlugin:6.13.1'
 }
 
 // TFB Artifactory
