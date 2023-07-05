@@ -106,6 +106,15 @@ panels:
         - '%javascript_tfb_vanilladk_lore,{player_locale_short}%'
         commands:
         - server= vanilladk
+      '38':
+        material: DIRT_BLOCK
+        stack: 1
+        name: '%javascript_tfb_vanilladk_name,{player_locale_short}% &8(&7%pinger_gameversion_172.18.0.1:25701%&8)'
+        lore:
+        - '&eOnline&7: &a%bungee_vanilladk%'
+        - '%javascript_tfb_vanilladk_lore,{player_locale_short}%'
+        commands:
+        - server= vanilladk_old
       '30':
         material: SLIME_BLOCK
         stack: 1
