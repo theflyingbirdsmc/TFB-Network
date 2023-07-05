@@ -33,7 +33,7 @@ dependencies {
     implementation 'LuckPerms:LuckPerms:5.4.79'
     implementation 'Multiverse-Core:Multiverse-Core:4.3.9'
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
-    implementation 'Plan:Plan:5.5-build-2391'
+    //implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
     implementation 'SuperVanish:SuperVanish:6.2.16'
     implementation 'spark:spark:1.10.41'
