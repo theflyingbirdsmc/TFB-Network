@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Vanilla/**'
+      - .github/workflows/Vanilla.yml
 
 jobs:
   build-test-publish:

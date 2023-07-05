@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Flamecord/**'
+      - .github/workflows/Flamecord.yml
 
 jobs:
   build-test-publish:

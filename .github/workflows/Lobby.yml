@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Lobby/**'
+      - .github/workflows/Lobby.yml
 
 jobs:
   build-test-publish:

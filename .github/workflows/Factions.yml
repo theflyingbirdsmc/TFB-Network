@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Factions/**'
+      - .github/workflows/Factions.yml
 
 jobs:
   build-test-publish:

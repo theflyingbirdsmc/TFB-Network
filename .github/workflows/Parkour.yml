@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Parkour/**'
+      - .github/workflows/Parkour.yml
 
 jobs:
   build-test-publish:

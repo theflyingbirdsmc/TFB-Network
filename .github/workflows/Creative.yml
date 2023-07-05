@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'TFB-Creative/**'
+      - .github/workflows/Creative.yml
 
 jobs:
   build-test-publish:
