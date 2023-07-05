@@ -30,10 +30,10 @@ dependencies {
     implementation 'GSit:GSit:1.4.4'
     implementation 'HexNicks:HexNicks:3.1.0'
     implementation 'LibsDisguises:LibsDisguises:10.0.34'
-    //implementation 'LuckPerms:LuckPerms:5.4.79'
+    implementation 'LuckPerms:LuckPerms:5.4.79'
     implementation 'Multiverse-Core:Multiverse-Core:4.3.9'
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
-    //implementation 'Plan:Plan:5.5-build-2391'
+    implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
     implementation 'SuperVanish:SuperVanish:6.2.16'
     implementation 'spark:spark:1.10.41'
@@ -43,7 +43,7 @@ dependencies {
     implementation 'ViaVersion:ViaVersion:4.6.2'
     implementation 'VotingPlugin:VotingPlugin:6.13'
     implementation 'WorldGuard:WorldGuard:7.0.8+33cdb4a'
-    //implementation 'Vulcan:Vulcan:2.7.3'
+    implementation 'Vulcan:Vulcan:2.7.3'
 
     //PlaceholderAPI Expansions
     implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'

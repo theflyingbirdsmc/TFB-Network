@@ -45,24 +45,12 @@ forge_support: false
 disabled_commands:
 - revertaddresses
 servers:
-  CustomSMP:
-    address: customsmp
-    motd: ''
-    restricted: false
   creative:
-    address: creative
-    motd: ''
-    restricted: false
-  crowdcontrol:
-    address: crowdcontrol
+    address: 192.168.100.10:30103
     motd: ''
     restricted: false
   factions:
-    address: factions
-    motd: ''
-    restricted: false
-  kitpvp:
-    address: kitpvp
+    address: 192.168.100.10:30104
     motd: ''
     restricted: false
   lobby:
@@ -70,14 +58,14 @@ servers:
     motd: ''
     restricted: false
   museum:
-    address: museum
+    address: 192.168.100.10:30106
     motd: ''
     restricted: false
   parkour:
-    address: parkour
+    address: 192.168.100.10:30105
     motd: ''
     restricted: false
   vanilla:
-    address: vanilla
+    address: 192.168.100.10:30102
     motd: ''
     restricted: false
