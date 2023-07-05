@@ -57,10 +57,6 @@ servers:
     address: 192.168.100.10:30101
     motd: ''
     restricted: false
-  museum:
-    address: 192.168.100.10:30106
-    motd: ''
-    restricted: false
   parkour:
     address: 192.168.100.10:30105
     motd: ''
