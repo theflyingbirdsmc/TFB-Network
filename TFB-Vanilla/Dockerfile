@@ -7,4 +7,4 @@ COPY . /tfb/
 WORKDIR /tfb
 
 RUN chmod +x *.jar
-CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
+CMD ["java", "-Xms${MIN_MEMORY}", "-Xmx${MAX_MEMORY}", "-jar", "server.jar", "nogui"]
