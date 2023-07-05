@@ -9,7 +9,7 @@ on:
       - 'TFB-Lobby/**'
       - 'TFB-Parkour/**'
       - 'TFB-Vanilla/**'
-      - '.github/servers.yml'
+      - '.github/workflows/servers.yml'
     branches:
       - live
       - kubernetes
