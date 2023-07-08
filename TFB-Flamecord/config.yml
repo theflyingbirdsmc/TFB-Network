@@ -81,7 +81,7 @@ servers:
     address: localhost:25700
     motd: ''
     restricted: false
-  vanilladk_old:
+  vanilla_old:
     address: localhost:25701
     motd: ''
     restricted: false
