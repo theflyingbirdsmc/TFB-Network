@@ -25,7 +25,7 @@ dependencies {
     implementation 'EssentialsGeoIP:EssentialsGeoIP:2.20.0'
     implementation 'EssentialsProtect:EssentialsProtect:2.20.0'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
-    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-518;685248d'
+    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.4'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.3'
     implementation 'GSit:GSit:1.4.9'
     implementation 'HexNicks:HexNicks:3.1.1'
@@ -42,7 +42,7 @@ dependencies {
     implementation 'ViaVersion:ViaVersion:4.7.0'
     implementation 'ViaVersion:ViaVersion:4.7.0'
     implementation 'VotingPlugin:VotingPlugin:6.13.1'
-    implementation 'WorldGuard:WorldGuard:7.0.9-beta1+2249-223b80c'
+    implementation 'WorldGuard:WorldGuard:7.0.8-beta-01+cbb2ba7'
     implementation 'Vulcan:Vulcan:2.7.3'
 
     //PlaceholderAPI Expansions

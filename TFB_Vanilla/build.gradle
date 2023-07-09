@@ -24,7 +24,7 @@ dependencies {
     implementation 'EssentialsChat:EssentialsChat:2.20.0'
     implementation 'EssentialsProtect:EssentialsProtect:2.20.0'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
-    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-518;685248d'
+    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.4'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.3'
     implementation 'GSit:GSit:1.4.9'
     implementation 'HexNicks:HexNicks:3.1.1'
