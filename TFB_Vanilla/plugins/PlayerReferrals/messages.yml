@@ -1,0 +1,66 @@
+prefix: "&8[&3PlayerReferrals&8] "
+
+nonplayer: "This command can only be used by a player, for admin commands please use /referraladmin"
+
+# ---------------------------------------------------
+# ALL PLACEHOLDERS ARE CASESENSITIVE
+# ---------------------------------------------------
+
+
+# In order to remove sections, simple comment the line and it won't be displayed.
+
+# The following placeholders can be used in the messages below:
+# %username% - The username of the player executing the command
+# %score% - The score of the player executing the command
+# %referrerUsername% - The username of the player they have been referred by
+# %minutesRemaining% - The amount of minutes the player has remaining to enter a username
+
+# All the messages below are from the /referral command. They can be seen by all players
+
+# Only the appropriate sections will be shown, for example: referred will not be shown if the player has not been referred by someone.
+referral:
+  score: "&3Your referral score is &b%score%"
+  referred: "&3You have been referred by: &b%referrerUsername%"
+  no-refer: "&3You did not enter a referral username."
+  explanation: "&3If you have been referred by someone, you have &b%minutesRemaining% minutes &3remaining to put in a referral code using &B/referral <username>"
+
+already-referred: "&3You have already been referred by &b%referrerUsername% &3and cannot enter another user"
+out-of-time: "&3Unfortunately, you have run out of time to enter a referral code. Sorry!"
+refer-self: "&3You cannot get referred by yourself..."
+refer-by-referrer: "You cannot be referred by someone who got referred by you."
+player-not-exist: "&3That player has never joined before."
+ip-match: "&3You cannot be referred by someone with the same IP address"
+
+# All the messages below are from the /referraladmin command. They can be seen by players with access to this command.
+
+# The following placeholders can be used in the messages below:
+# %username% - The username of the specified player
+# %score% - The score of the specified player
+# %referrerUsername% - The username of the player they have been referred by
+
+# Only the appropriate sections will be shown, for example: referred-yes will not be shown if the player has not been referred by someone.
+check:
+  score: "&3Score: &b%score%"
+  referred-no: "&b%username% &3has not been referred by anyone"
+  referred-yes: "&3They have been referred by &b%referrerUsername%"
+
+admin-check-no-player-found: "&3No player was found by that name."
+admin-set-no-player-found: "&3No player was found by that name."
+admin-adjust-no-player-found: "&3No player was found by that name."
+admin-reset-no-player-found: "&3No player was found by that name."
+
+admin-reset-success: "&3The referral status of &b%username% &3has been reset. (Not their score)"
+admin-set-success: "&3The score of &b%username% &3has been set to &b%score%"
+
+# %value% - Adjustment value specified
+admin-adjust-success: "&3The score of &b%username% &3has been adjusted by &b%value%&3, their score is now &b%score%"
+
+# No placeholders are allowed in the messages below
+admin-check-usage: "&3Usage: /referraladmin check <player>"
+admin-set-usage: "&3Usage: /referraladmin set <player> <score>"
+admin-adjust-usage: "&3Usage: /referraladmin adjust <player> <value>"
+admin-reset-usage: "&3Usage: /referraladmin reset <player>"
+
+admin-no-permission: "&cYou don't have permission to execute this command."
+
+referrerign-placeholder-empty: "Nobody"
