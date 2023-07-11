@@ -1,0 +1,10 @@
+Custom-Loots:
+  10-Money:
+    Name: '&a10$'
+    Rarity: Common
+    Category: '&cMoney'
+    CanBeFound: false
+    Execute-Command:
+      Enabled: false
+      Commands:
+      - eco give {PLAYER} 10

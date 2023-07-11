@@ -152,9 +152,9 @@ placeholder-output-replacements:
   '%essentials_vanished%':
     'yes': '&7| Vanished'
     'no': ''
-  '%afk%':
-    true: ' &7[afk]&r'
-    false: ''
+  "%essentials_afk%":
+    "yes": " &8😴"
+    "no": ""
   '%essentials_nickname%':
     '%essentials_nickname%': '%player%'
 conditions:

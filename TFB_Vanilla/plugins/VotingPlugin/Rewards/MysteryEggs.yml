@@ -1,0 +1,11 @@
+Commands:
+  - 'gmysteryboxes give %player% 1 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false'
+  - 'gmysteryboxes gift %player% 1 msg=false'
+Messages:
+  Player: '&eThank you for voting, you have recieved a &bMystery Egg &e& &bGift&e!'
+# Lucky:
+#   '10':
+#     Commands:
+#       - 'gmysteryboxes gift %player% 1 msg=false'
+#     Messages:
+#       Player: '&eOh! A &bMystery Gift&e have luckily landed in your &bVault&e that you can send to a friend!'
