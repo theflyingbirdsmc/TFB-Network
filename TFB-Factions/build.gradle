@@ -48,7 +48,7 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.3'
 
     // Server plugins
-    implementation 'Factions:Factions:1.6.9.5-4.1.1-STABLE'
+    implementation 'Factions:Factions:1.6.9.5-4.1.2-STABLE'
 
     //PlaceholderAPI Expansions
     implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
