@@ -1,8 +1,8 @@
 -- LUCKPERMS --
-DROP USER IF EXISTS 'u1_BECy69SA0j';
-CREATE USER 'u1_BECy69SA0j'@'%';
+DROP USER IF EXISTS 'tfb_luckperms';
+CREATE USER 'tfb_luckperms'@'%';
 CREATE DATABASE IF NOT EXISTS s1_luckperms;
-GRANT ALL ON s1_luckperms.* TO 'u1_BECy69SA0j'@'%' IDENTIFIED BY 'wetaDVcdufutpSM+@G4TKj2Q';
+GRANT ALL ON s1_luckperms.* TO 'tfb_luckperms'@'%' IDENTIFIED BY 'uEJq!fjGM!62*&cmX*mBRhT9L2@SgX';
 
 -- PLAN --
 DROP USER IF EXISTS 'u1_IfPFyakFRt'; 

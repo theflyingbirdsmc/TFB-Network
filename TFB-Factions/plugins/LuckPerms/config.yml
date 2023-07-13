@@ -102,8 +102,8 @@ data:
   database: s1_luckperms
 
   # Credentials for the database.
-  username: u1_BECy69SA0j
-  password: 'wetaDVcdufutpSM+@G4TKj2Q'
+  username: tfb_luckperms
+  password: 'uEJq!fjGM!62*&cmX*mBRhT9L2@SgX'
 
   # These settings apply to the MySQL connection pool.
   # - The default values will be suitable for the majority of users.
