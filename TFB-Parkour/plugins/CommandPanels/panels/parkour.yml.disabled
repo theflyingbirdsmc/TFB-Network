@@ -174,7 +174,7 @@ panels:
         - '&b3: &7Do not hold/press spacebar on slimeblocks'
         - '&b4: &7Phoenix can get custom created courses'
         - '&b5: &7Fall damage is enabled with no regen'
-        - '&b6: &7Lvl also equals difficulty'
+        - '&b6: &7Lvl equals difficulty'
       '45':
         material: WHITE_DYE
         stack: 1

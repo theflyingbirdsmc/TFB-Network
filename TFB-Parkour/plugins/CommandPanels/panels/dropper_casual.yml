@@ -15,4 +15,4 @@ panels:
           stack: 1
           name: '&cGo Back'
           commands:
-          - open= parkour
+          - open= dropper_menu

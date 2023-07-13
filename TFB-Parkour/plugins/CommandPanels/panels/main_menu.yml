@@ -1,0 +1,77 @@
+panels:
+  main_menu:
+    perm: default
+    rows: 3
+    title: '#ee2b23T#3551d7F#00ff00B &0Parkour & More'
+    empty: air
+    open-with-item:
+      material: ENCHANTED_BOOK
+      stationary: 0
+      name: '#ee2b23T#3551d7F#00ff00B &fParkour & More'
+      lore:
+      - '&7Jump or dive like an Eagle, in our' 
+      - '&7amazing parkour, dropper & elytra courses' 
+      commands:
+      - open= main_menu
+    item:
+      '11':
+        material: SLIME_BLOCK
+        stack: 1
+        name: '&fParkour Menu'
+        commands:
+        - open= parkour_menu
+        lore:
+        - '&7Play however you want'
+        - '&7Be free like a bird'
+      '15':
+        material: ELYTRA
+        stack: 1
+        name: '&fElytra Menu'
+        commands:
+        - open= elytra_menu
+        lore:
+        - '&7Play however you want'
+        - '&7Be free like a bird'
+      '13':
+        material: DROPPER
+        stack: 1
+        name: '&fDropper Menu'
+        commands:
+        - open= dropper_menu
+        lore:
+        - '&7Play however you want'
+        - '&7Be free like a bird'
+      '0':
+        material: cps= self
+        stack: 1
+        name: '&fPlayer Stats'
+        lore:
+        - '&eGame Level: &b%parkour_player_level%'
+        - '&eBalance: &b%vault_eco_balance_commas%'
+        - '&eCompleted: &b%parkour_player_courses_completed%'
+        - '&eLast Finished: &b%parkour_player_last_completed%'
+      '8':
+        material: BOOK
+        stack: 1
+        name: '&fRules & hints'
+        lore:
+        - '&b1: &7Follow the regular TFB rules'
+        - '&b2: &7You need all checkpoints to finish'
+        - '&b3: &7Do not hold/press spacebar on slimeblocks'
+        - '&b4: &7Phoenix can get custom created courses'
+        - '&b5: &7Fall damage is enabled with no regen'
+        - '&b6: &7Lvl equals difficulty'
+      '26':
+        material: WHITE_DYE
+        stack: 1
+        name: '&fToggle quiet mode'
+        commands:
+        - parkour quiet
+        lore:
+        - '&7Disables on-screen text'
+      '18':
+          material: RED_WOOL
+          stack: 1
+          name: '&cClose Menu'
+          commands:
+          - cpc

@@ -1,0 +1,67 @@
+panels:
+  parkour_menu:
+    perm: default
+    rows: 3
+    title: '&8Parkour Menu'
+    empty: air
+    item:
+      '3':
+        material: SLIME_BLOCK
+        stack: 1
+        name: '&fCasual Parkour'
+        commands:
+        - open= parkour_casual
+        lore:
+        - '&7Play however you want'
+        - '&7Be free like a bird'
+      '5':
+        material: SLIME_BLOCK
+        stack: 1
+        name: '&fRanked Parkour'
+        enchanted: 
+        - true
+        commands:
+        - open= parkour_ranked
+        lore:
+        - '&7Earn levels by completing courses'
+        - '&7Courses gets increasingly harder'
+      '13':
+        material: EGG
+        stack: 1
+        name: '&r&f%parkour_course_displayname_parkourtutorial%&r (&eViews: &b%parkour_course_views_parkourtutorial%&r)'
+        lore:
+        - '&7Learn how to play the parkour mode'
+        - ''
+        - '&eBest time: &f%parkour_course_record_parkourtutorial_player%&8: &b%parkour_course_record_parkourtutorial_time%'
+        - '&eCreated by: &f%parkour_course_creator_parkourtutorial%'
+        - '&eReward: &b$%parkour_course_ecoreward_parkourtutorial% &f+ &elvl up: &b%parkour_course_rewardparkourleveladd_parkourtutorial%'
+        - '&eOnline: &b%parkour_course_players_parkourtutorial%'
+        commands:
+        - 'left= parkour join parkourtutorial'
+        - 'right= parkour stats parkourtutorial'
+        - 'middle= parkour leaderboard parkourtutorial'
+      '21':
+        material: PLAYER_HEAD
+        stack: 1
+        name: '&fParkour Player Courses'
+        commands:
+        - open= parkour_playercourses
+        lore:
+        - '&7Courses made by other players'
+        - '&7Create your own and let others play it!'
+      '23':
+        material: DIAMOND_SWORD
+        stack: 1
+        name: '&fParkour Challenges'
+        commands:
+        - open= parkour_challenges
+        lore:
+        - '&7Compete against your friends'
+        - '&7Special challenge only courses'
+        - '&7Set a wager, winner gets prize'
+      '18':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= main_menu
