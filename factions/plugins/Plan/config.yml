@@ -27,7 +27,7 @@ Plugin:
 Database:
     Type: MySQL
     MySQL:
-        Host: mariadb-0
+        Host: mariadb
         Port: 3306
         User: tfb_plan
         Password: $Z@jJKSLcd7xUekU5qF&VW3#ndU&mm

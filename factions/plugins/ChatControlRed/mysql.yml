@@ -20,7 +20,7 @@ Enabled: true
 Hikari: true
 
 # The host and the port to connect to
-Host: mariadb-0:3306
+Host: mariadb:3306
 
 # The database name
 Database: chatcontrolred
