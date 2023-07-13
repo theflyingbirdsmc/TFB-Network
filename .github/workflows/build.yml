@@ -54,7 +54,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: ${{ secrets.MAVEN_DOCKER_REPO }}
-        username: ${{ secrets.NAVEN_USERNAME }}
+        username: ${{ secrets.MAVEN_USERNAME }}
         password: ${{ secrets.MAVEN_PASSWORD }}
 
     - name: Set project name to lowercase
