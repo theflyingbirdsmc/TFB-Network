@@ -51,7 +51,7 @@ jobs:
 
     - name: Copy jar files
       run: |
-        cp ~/.gradle/caches/.../[*.jar] ${{ matrix.project }}/plugins/
+        cp ~/.gradle/caches/.../*.jar ${{ matrix.project }}/plugins/
 
 
     - name: Login to Artifactory
