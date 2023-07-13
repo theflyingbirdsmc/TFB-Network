@@ -13,6 +13,7 @@ on:
       - 'TFB-Lobby/**'
       - 'TFB-Parkour/**'
       - 'TFB-Vanilla_old/**'
+      - '.github/workflows/build.yml' # Runs if this workflow file itself is modified
 
 jobs:
   docker:
@@ -62,10 +63,9 @@ jobs:
       run: echo "::set-output name=project::$(echo ${{ matrix.project }} | tr '[:upper:]' '[:lower:]')"
 
     - name: Build and push
-      # If the project has been modified in the commit, build and push the Docker image
       if: contains(github.event.head_commit.modified, matrix.project)
       uses: docker/build-push-action@v2
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ steps.lower.outputs.project }}:latest
+        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ env.project }}:latest
