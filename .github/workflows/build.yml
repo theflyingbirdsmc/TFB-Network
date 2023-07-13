@@ -53,9 +53,9 @@ jobs:
       # Login to Docker Registry
       uses: docker/login-action@v2
       with:
-        registry: ${{ secrets.ARTIFACTORY_URL }}
-        username: ${{ secrets.ARTIFACTORY_USERNAME }}
-        password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+        registry: ${{ secrets.MAVEN_DOCKER_REPO }}
+        username: ${{ secrets.NAVEN_USERNAME }}
+        password: ${{ secrets.MAVEN_PASSWORD }}
 
     - name: Set project name to lowercase
       # Converts the project name to lowercase to avoid issues with Docker naming restrictions
@@ -68,4 +68,4 @@ jobs:
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ env.project }}:latest
+        tags: ${{ secrets.MAVEN_DOCKER_REPOO }}/${{ env.project }}:latest
