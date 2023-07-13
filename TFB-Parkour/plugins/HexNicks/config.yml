@@ -66,8 +66,8 @@ database-enabled: true
 host: localhost
 port: '3306'
 database: s2_hexnicks
-username: u2_js3sZ1TlmU
-password: ^zbJ!kcND3w!UAjkdQZofY5=
+username: tfb_hexnicks
+password: j77RqV*scJQ2RSjcx@nRNiXNU&Yow*
 use-ssl: false
 auto-reconnect: false
 # The maximum lifetime of a connection in milliseconds. This should be lower than your database's wait timeout.

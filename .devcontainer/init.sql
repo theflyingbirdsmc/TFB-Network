@@ -49,7 +49,7 @@ GRANT ALL ON s2_playerreferals.* TO 'u2_wdkOuuJO27'@'%' IDENTIFIED BY 'EDMgT5VOI
 FLUSH PRIVILEGES;
 
 -- HEXNICKS --
-DROP USER IF EXISTS 'u2_js3sZ1TlmU';
-CREATE USER 'u2_js3sZ1TlmU'@'%';
+DROP USER IF EXISTS 'tfb_hexnicks';
+CREATE USER 'tfb_hexnicks'@'%';
 CREATE DATABASE IF NOT EXISTS s2_hexnicks;
-GRANT ALL ON s2_hexnicks.* TO 'u2_js3sZ1TlmU'@'%' IDENTIFIED BY '^zbJ!kcND3w!UAjkdQZofY5=';
+GRANT ALL ON s2_hexnicks.* TO 'tfb_hexnicks'@'%' IDENTIFIED BY 'j77RqV*scJQ2RSjcx@nRNiXNU&Yow*';
