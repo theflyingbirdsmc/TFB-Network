@@ -27,8 +27,8 @@ Database:
     MySQL:
         Host: localhost
         Port: 3306
-        User: u1_IfPFyakFRt
-        Password: kccEHEZYlXDPh.3!JW84dyHp
+        User: tfb_chatcontrolred
+        Password: e&cqyYXtqjgfL!hEGMyFpqMi89!g9w
         Database: s1_plan
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"

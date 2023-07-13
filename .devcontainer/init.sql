@@ -5,10 +5,10 @@ CREATE DATABASE IF NOT EXISTS s1_luckperms;
 GRANT ALL ON s1_luckperms.* TO 'tfb_luckperms'@'%' IDENTIFIED BY 'uEJq!fjGM!62*&cmX*mBRhT9L2@SgX';
 
 -- PLAN --
-DROP USER IF EXISTS 'u1_IfPFyakFRt'; 
-CREATE USER 'u1_IfPFyakFRt'@'%';
+DROP USER IF EXISTS 'tfb_chatcontrolred'; 
+CREATE USER 'tfb_chatcontrolred'@'%';
 CREATE DATABASE IF NOT EXISTS s1_plan;
-GRANT ALL ON s1_plan.* TO 'u1_IfPFyakFRt'@'%' IDENTIFIED BY 'kccEHEZYlXDPh.3!JW84dyHp';
+GRANT ALL ON s1_plan.* TO 'tfb_chatcontrolred'@'%' IDENTIFIED BY 'e&cqyYXtqjgfL!hEGMyFpqMi89!g9w';
 
 -- VOTINGPLUGIN --
 DROP USER IF EXISTS 'u1_ouoD9Ps4h4';
