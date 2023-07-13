@@ -16,7 +16,6 @@ jobs:
       matrix:
         project: ["TFB-Vanilla", "TFB-Creative"]
 
-
     steps:
     - name: Check Out Repo
       uses: actions/checkout@v2
@@ -45,15 +44,14 @@ jobs:
         username: ${{ secrets.ARTIFACTORY_USERNAME }}
         password: ${{ secrets.ARTIFACTORY_PASSWORD }}
 
-    - name: Build and push
-      if: contains(github.event.head_commit.modified, steps.check_out_repo.outputs.path)
-      id: convert_to_lowercase
-      run: echo "::set-output name=lowercase_value::${{ matrix.project | lower }}"
+    - name: Set project name to lowercase
+      id: lower
+      run: echo "::set-output name=project::$(echo ${{ matrix.project }} | tr '[:upper:]' '[:lower:]')"
 
     - name: Build and push
-      if: contains(github.event.head_commit.modified, steps.check_out_repo.outputs.path)
+      if: contains(github.event.head_commit.modified, matrix.project)
       uses: docker/build-push-action@v2
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ steps.convert_to_lowercase.outputs.lowercase_value }}:latest
+        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ steps.lower.outputs.project }}:latest
