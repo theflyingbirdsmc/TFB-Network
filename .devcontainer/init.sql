@@ -11,10 +11,10 @@ CREATE DATABASE IF NOT EXISTS s1_plan;
 GRANT ALL ON s1_plan.* TO 'tfb_chatcontrolred'@'%' IDENTIFIED BY 'e&cqyYXtqjgfL!hEGMyFpqMi89!g9w';
 
 -- VOTINGPLUGIN --
-DROP USER IF EXISTS 'u1_ouoD9Ps4h4';
-CREATE USER 'u1_ouoD9Ps4h4'@'%';
+DROP USER IF EXISTS 'tfb_votingplugin';
+CREATE USER 'tfb_votingplugin'@'%';
 CREATE DATABASE IF NOT EXISTS s1_votingplugin;
-GRANT ALL ON s1_votingplugin.* TO 'u1_ouoD9Ps4h4'@'%' IDENTIFIED BY 'dZ4VQh4VogXkhwB@!Cr3oFO+';
+GRANT ALL ON s1_votingplugin.* TO 'tfb_votingplugin'@'%' IDENTIFIED BY '5wZw5@ySSE@zZSd4b#QFrPfsedwhzz';
 
 -- GADGETSMENU --
 DROP USER IF EXISTS 'u2_oeN5DZ9Msp';

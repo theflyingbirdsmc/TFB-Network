@@ -7,8 +7,8 @@ Host: 'localhost'
 # Default port is 3306
 Port: 3306
 Database: 's1_votingplugin'
-Username: 'u1_ouoD9Ps4h4'
-Password: 'dZ4VQh4VogXkhwB@!Cr3oFO+'
+Username: 'tfb_votingplugin'
+Password: '5wZw5@ySSE@zZSd4b#QFrPfsedwhzz'
 # Max number of connections
 MaxConnections: 1
 # Table name prefix, for use with mutliple servers
