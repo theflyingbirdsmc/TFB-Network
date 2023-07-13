@@ -42,10 +42,10 @@ GRANT ALL ON s9_coreprotect.* TO 'u9_OuEs5LpxqL'@'%' IDENTIFIED BY '9l!C+mt2.4Mv
 FLUSH PRIVILEGES;
 
 -- PLAYERREFERALS --
-DROP USER IF EXISTS 'u2_wdkOuuJO27';
-CREATE USER 'u2_wdkOuuJO27'@'%';
+DROP USER IF EXISTS 'tfb_playerreferrals';
+CREATE USER 'tfb_playerreferrals'@'%';
 CREATE DATABASE IF NOT EXISTS s2_playerreferals;
-GRANT ALL ON s2_playerreferals.* TO 'u2_wdkOuuJO27'@'%' IDENTIFIED BY 'EDMgT5VOIaSa0TWw@b9LeuXW';
+GRANT ALL ON s2_playerreferals.* TO 'tfb_playerreferrals'@'%' IDENTIFIED BY 'bxmJaWd#264#aT6JW$UQaQAmq3hbYd';
 FLUSH PRIVILEGES;
 
 -- HEXNICKS --

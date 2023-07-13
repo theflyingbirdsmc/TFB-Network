@@ -13,8 +13,8 @@ database-type: MYSQL
 host: 'localhost'
 port: '3306'
 database: 's2_playerreferals'
-username: 'u2_wdkOuuJO27'
-password: 'EDMgT5VOIaSa0TWw@b9LeuXW'
+username: 'tfb_playerreferrals'
+password: 'bxmJaWd#264#aT6JW$UQaQAmq3hbYd'
 table-prefix: 'ref_'
 
 # If true, players are able to refer each other
