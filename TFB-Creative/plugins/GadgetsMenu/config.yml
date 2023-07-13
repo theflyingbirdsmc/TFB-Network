@@ -8,10 +8,10 @@ Player-Data:
   Storage: mysql
   MySQL:
     hostname: localhost
-    username: u2_oeN5DZ9Msp
-    database: s2_gadgetsmenu
+    username: tfb_gadgetsmenu
+    database: gadgetsmenu
     port: '3306'
-    password: ^DqHSSNgoX.IQCre6=.x2.J4
+    password: vF53CRgmZt*@8y6y3f#ku&L*d4*fj^
     useSSL: false
 
 Cosmetic-Item-Purchase:

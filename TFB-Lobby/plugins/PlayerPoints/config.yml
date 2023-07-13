@@ -109,7 +109,7 @@ mysql-settings:
 
   # MySQL Database Name
   # Default: 
-  database-name: 's2_playerpoints'
+  database-name: 'playerpoints'
 
   # MySQL Database User Name
   # Default: 

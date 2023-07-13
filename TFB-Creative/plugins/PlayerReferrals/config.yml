@@ -12,7 +12,7 @@ database-type: MYSQL
 # This will only be used if you use MYSQL as database-type
 host: 'localhost'
 port: '3306'
-database: 's2_playerreferals'
+database: 'playerreferals'
 username: 'tfb_playerreferrals'
 password: 'bxmJaWd#264#aT6JW$UQaQAmq3hbYd'
 table-prefix: 'ref_'

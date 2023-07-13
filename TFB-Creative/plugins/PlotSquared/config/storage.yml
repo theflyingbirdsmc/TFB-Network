@@ -13,9 +13,9 @@ mysql:
   use: false
   host: "localhost"
   port: "3306"
-  user: "u5_DEXeIJnxSl"
-  password: "x2IQ^K4prZAW=^uTzpGMMG@u"
-  database: "s5_plotsquared"
+  user: "tfb_plotsquared"
+  password: "kBk4x@oQq8ehZ8jF*3mUn&3HMrBz@f"
+  database: "plotsquared"
   # Set additional properties: https://goo.gl/wngtN8
   properties: 
   - "useSSL=true"

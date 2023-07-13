@@ -31,7 +31,7 @@ Database:
         Port: 3306
         User: tfb_plan
         Password: $Z@jJKSLcd7xUekU5qF&VW3#ndU&mm
-        Database: s1_plan
+        Database: plan
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
         Max_connections: 8

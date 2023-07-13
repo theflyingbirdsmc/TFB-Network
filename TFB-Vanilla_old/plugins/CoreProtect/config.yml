@@ -9,9 +9,9 @@ use-mysql: true
 table-prefix: co_
 mysql-host: localhost
 mysql-port: 3306
-mysql-database: s9_coreprotect
-mysql-username: u9_OuEs5LpxqL
-mysql-password: 9l!C+mt2.4MvHb+BqnVkEU+f
+mysql-database: coreprotect
+mysql-username: tfb_coreprotect
+mysql-password: J$ca$cXuj!HQEijVEjh69KuTYC998E
 
 # If modified, will automatically attempt to translate languages phrases.
 # List of language codes: https://coreprotect.net/languages/

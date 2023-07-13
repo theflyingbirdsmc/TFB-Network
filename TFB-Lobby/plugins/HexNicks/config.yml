@@ -65,7 +65,7 @@ blocked-nicknames:
 database-enabled: true
 host: localhost
 port: '3306'
-database: s2_hexnicks
+database: hexnicks
 username: tfb_hexnicks
 password: j77RqV*scJQ2RSjcx@nRNiXNU&Yow*
 use-ssl: false
