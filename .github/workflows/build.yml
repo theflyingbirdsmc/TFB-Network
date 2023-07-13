@@ -47,7 +47,7 @@ jobs:
         MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
       run: |
-        cd ${{ matrix.project }} && gradle update
+        cd ${{ matrix.project }} && gradle server && gradle plugins
 
     - name: Copy jar files
       run: |
