@@ -35,7 +35,7 @@ jobs:
 
     - name: Setup Java and Gradle
       # Setup Java and Gradle for the build
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         distribution: 'adopt'
         java-version: '11'
