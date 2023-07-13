@@ -47,12 +47,7 @@ jobs:
         MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
       run: |
-        cd ${{ matrix.project }} && gradle server && gradle plugins
-
-    - name: Copy jar files
-      run: |
-        cp ~/.gradle/caches/.../*.jar ${{ matrix.project }}/plugins/
-
+        cd ${{ matrix.project }} && gradle update
 
     - name: Login to Artifactory
       # Login to Docker Registry
