@@ -45,43 +45,27 @@ forge_support: false
 disabled_commands:
 - revertaddresses
 servers:
-  CustomSMP:
-    address: localhost:25605
+  lobby:
+    address: lobby-service:25565
     motd: ''
     restricted: false
   creative:
-    address: localhost:25601
-    motd: ''
-    restricted: false
-  crowdcontrol:
-    address: localhost:25606
+    address: creative-service:25565
     motd: ''
     restricted: false
   factions:
-    address: localhost:25603
-    motd: ''
-    restricted: false
-  kitpvp:
-    address: localhost:25607
-    motd: ''
-    restricted: false
-  lobby:
-    address: localhost:25600
-    motd: ''
-    restricted: false
-  museum:
-    address: localhost:25602
+    address: factions-service:25565
     motd: ''
     restricted: false
   parkour:
-    address: localhost:25604
+    address: parkour-service:25565
     motd: ''
     restricted: false
   vanilladk:
-    address: localhost:25700
+    address: vanilladk-service:25565
     motd: ''
     restricted: false
   vanilla_old:
-    address: localhost:25701
+    address: vanillaold-service:25565
     motd: ''
     restricted: false

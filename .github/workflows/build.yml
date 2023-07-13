@@ -1,0 +1,71 @@
+name: Docker Build
+
+# This pipeline runs on push events on 'dev' branch and when any file in the listed paths is modified
+on:
+  push:
+    branches:
+      - dev
+    paths: 
+      - 'TFB-Vanilla/**'
+      - 'TFB-Creative/**'
+      - 'TFB-Factions/**'
+      - 'TFB-Flamecord/**'
+      - 'TFB-Lobby/**'
+      - 'TFB-Parkour/**'
+      - 'TFB-Vanilla_old/**'
+      - '.github/workflows/build.yml' # Runs if this workflow file itself is modified
+
+jobs:
+  docker:
+    # This job is run on an Ubuntu machine
+    runs-on: ubuntu-latest
+    strategy:
+      # The job will be run for each project listed in the matrix
+      matrix:
+        project: ["TFB-Creative","TFB-Factions","TFB-Flamecord","TFB-Lobby","TFB-Parkour","TFB-Vanilla","TFB-Vanilla_old"]
+
+    steps:
+    - name: Check Out Repo
+      # Checkout code base
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      # Setup Docker Buildx to support new features like multi-architecture images, secrets, and SSH mounts
+      uses: docker/setup-buildx-action@v2
+
+    - name: Setup Java and Gradle
+      # Setup Java and Gradle for the build
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Execute Gradle build
+      # Run the Gradle build for the project
+      env:
+        MAVEN_URL: ${{ secrets.MAVEN_URL }}
+        MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+      run: |
+        cd ${{ matrix.project }} && gradle server && gradle plugins    
+
+    - name: Login to Artifactory
+      # Login to Docker Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ secrets.ARTIFACTORY_URL }}
+        username: ${{ secrets.ARTIFACTORY_USERNAME }}
+        password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+
+    - name: Set project name to lowercase
+      # Converts the project name to lowercase to avoid issues with Docker naming restrictions
+      id: lower
+      run: echo "::set-output name=project::$(echo ${{ matrix.project }} | tr '[:upper:]' '[:lower:]')"
+
+    - name: Build and push
+      if: contains(github.event.head_commit.modified, matrix.project)
+      uses: docker/build-push-action@v4
+      with:
+        context: ./${{ matrix.project }}
+        push: true
+        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ env.project }}:latest

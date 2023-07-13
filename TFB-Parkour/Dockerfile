@@ -1,4 +1,4 @@
-FROM openjdk:17-slim
+FROM openjdk:17.0.2-slim
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # Copy server files to a tfb folder
