@@ -1,9 +1,9 @@
-name: Build and Publish Factions Docker Image to Nexus Artifactory
+name: Build and Publish Vanilla Docker Image to Nexus Artifactory
 
 on:
   push:
     paths:
-      - 'TFB-Factions/**'
+      - 'vanilla/**'
 
 jobs:
   build-test-publish:
@@ -26,7 +26,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: cd TFB-Factions && gradle server && gradle plugins
+        run: cd vanilla && gradle server && gradle plugins
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -40,10 +40,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./TFB-Factions # specifying the directory where your Dockerfile is
-          file: ./TFB-Factions/Dockerfile # specifying the path to your Dockerfile
+          context: ./vanilla # specifying the directory where your Dockerfile is
+          file: ./vanilla/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: ${{ secrets.MAVEN_DOCKER_REPO }}/factions:latest # change this to your image name
+          tags: ${{ secrets.MAVEN_DOCKER_REPO }}/vanilla:latest # change this to your image name
   cleanup:
     runs-on: ubuntu-latest
     steps:
