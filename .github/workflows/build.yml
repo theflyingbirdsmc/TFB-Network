@@ -46,10 +46,14 @@ jobs:
         password: ${{ secrets.ARTIFACTORY_PASSWORD }}
 
     - name: Build and push
-      if: contains(github.event.head_commit.modified, matrix.project)
+      if: contains(github.event.head_commit.modified, steps.check_out_repo.outputs.path)
+      id: convert_to_lowercase
+      run: echo "::set-output name=lowercase_value::${{ matrix.project | lower }}"
+
+    - name: Build and push
+      if: contains(github.event.head_commit.modified, steps.check_out_repo.outputs.path)
       uses: docker/build-push-action@v2
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ matrix.project | lower }}:latest
-
+        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ steps.convert_to_lowercase.outputs.lowercase_value }}:latest
