@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'lobby/**'
-      - .github/workflows/lobby.yml
+      - .github/workflows/Lobby.yml
 
 jobs:
   build-test-publish:

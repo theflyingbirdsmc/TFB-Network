@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'creative/**'
-      - .github/workflows/creative.yml
+      - .github/workflows/Creative.yml
 
 jobs:
   build-test-publish:

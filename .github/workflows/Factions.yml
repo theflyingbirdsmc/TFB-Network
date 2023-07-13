@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'factions/**'
-      - .github/workflows/factions.yml
+      - .github/workflows/Factions.yml
 
 
 jobs:

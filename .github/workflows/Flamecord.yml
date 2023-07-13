@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'flamecord/**'
-      - .github/workflows/flamecord.yml
+      - .github/workflows/Flamecord.yml
 
 
 jobs:
