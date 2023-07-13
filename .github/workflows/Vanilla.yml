@@ -2,6 +2,8 @@ name: Build and Publish Vanilla Docker Image to Nexus Artifactory
 
 on:
   push:
+    branches:
+      - dev
     paths:
       - 'vanilla/**'
       - .github/workflows/Vanilla.yml

@@ -2,6 +2,8 @@ name: Build and Publish Creative Docker Image to Nexus Artifactory
 
 on:
   push:
+    branches:
+      - dev
     paths:
       - 'creative/**'
       - .github/workflows/Creative.yml

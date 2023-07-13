@@ -2,10 +2,11 @@ name: Build and Publish Flamecord Docker Image to Nexus Artifactory
 
 on:
   push:
+    branches:
+      - dev
     paths:
       - 'flamecord/**'
       - .github/workflows/Flamecord.yml
-
 
 jobs:
   build-test-publish:
