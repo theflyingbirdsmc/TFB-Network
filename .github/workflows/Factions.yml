@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'factions/**'
+      - .github/workflows/factions.yml
+
 
 jobs:
   build-test-publish:

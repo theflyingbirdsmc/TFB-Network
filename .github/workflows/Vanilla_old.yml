@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'vanilla_old/**'
+      - .github/workflows/Vanilla_old.yml
 
 jobs:
   build-test-publish:

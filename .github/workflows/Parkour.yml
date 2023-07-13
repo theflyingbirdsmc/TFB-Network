@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'parkour/**'
+      - .github/workflows/parkour.yml
 
 jobs:
   build-test-publish:
