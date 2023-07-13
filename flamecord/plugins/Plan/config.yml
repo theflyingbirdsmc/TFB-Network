@@ -25,11 +25,11 @@ Plugin:
 # -----------------------------------------------------
 Database:
     MySQL:
-        Host: localhost
+        Host: mariadb-0
         Port: 3306
-        User: u1_IfPFyakFRt
-        Password: kccEHEZYlXDPh.3!JW84dyHp
-        Database: s1_plan
+        User: tfb_plan
+        Password: $Z@jJKSLcd7xUekU5qF&VW3#ndU&mm
+        Database: plan
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
         Max_connections: 8

@@ -63,11 +63,11 @@ blocked-nicknames:
 # Database settings
 # Only enable this if you know what you're doing and have an existing database
 database-enabled: true
-host: localhost
+host: mariadb-0
 port: '3306'
-database: s2_hexnicks
-username: u2_js3sZ1TlmU
-password: ^zbJ!kcND3w!UAjkdQZofY5=
+database: hexnicks
+username: tfb_hexnicks
+password: j77RqV*scJQ2RSjcx@nRNiXNU&Yow*
 use-ssl: false
 auto-reconnect: false
 # The maximum lifetime of a connection in milliseconds. This should be lower than your database's wait timeout.
