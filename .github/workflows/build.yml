@@ -7,6 +7,7 @@ on:
     paths: 
       - 'TFB_Vanilla/**'
       - 'TFB-Creative/**'
+      - '.github/workflows/build.yml'
 
 jobs:
   docker:
