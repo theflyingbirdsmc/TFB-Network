@@ -10,7 +10,7 @@ bStats: true
 database-type: MYSQL
 
 # This will only be used if you use MYSQL as database-type
-host: 'localhost'
+host: 'mariadb-0'
 port: '3306'
 database: 'playerreferals'
 username: 'tfb_playerreferrals'

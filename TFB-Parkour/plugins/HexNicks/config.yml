@@ -63,7 +63,7 @@ blocked-nicknames:
 # Database settings
 # Only enable this if you know what you're doing and have an existing database
 database-enabled: true
-host: localhost
+host: mariadb-0
 port: '3306'
 database: hexnicks
 username: tfb_hexnicks
