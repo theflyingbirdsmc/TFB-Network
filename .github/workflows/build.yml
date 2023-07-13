@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        project: ["tfb-vanilla", "tfb-creative"]
+        project: ["TFB-Vanilla", "TFB-Creative"]
+
 
     steps:
     - name: Check Out Repo
@@ -50,4 +51,5 @@ jobs:
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ matrix.project }}:latest
+        tags: ${{ secrets.ARTIFACTORY_DOCKER_REPO }}/${{ matrix.project | lower }}:latest
+
