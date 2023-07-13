@@ -5,10 +5,10 @@ CREATE DATABASE IF NOT EXISTS s1_luckperms;
 GRANT ALL ON s1_luckperms.* TO 'tfb_luckperms'@'%' IDENTIFIED BY 'uEJq!fjGM!62*&cmX*mBRhT9L2@SgX';
 
 -- PLAN --
-DROP USER IF EXISTS 'tfb_chatcontrolred'; 
-CREATE USER 'tfb_chatcontrolred'@'%';
+DROP USER IF EXISTS 'tfb_plan'; 
+CREATE USER 'tfb_plan'@'%';
 CREATE DATABASE IF NOT EXISTS s1_plan;
-GRANT ALL ON s1_plan.* TO 'tfb_chatcontrolred'@'%' IDENTIFIED BY 'e&cqyYXtqjgfL!hEGMyFpqMi89!g9w';
+GRANT ALL ON s1_plan.* TO 'tfb_plan'@'%' IDENTIFIED BY '$Z@jJKSLcd7xUekU5qF&VW3#ndU&mm';
 
 -- VOTINGPLUGIN --
 DROP USER IF EXISTS 'tfb_votingplugin';
@@ -23,10 +23,10 @@ CREATE DATABASE IF NOT EXISTS s2_gadgetsmenu;
 GRANT ALL ON s2_gadgetsmenu.* TO 'u2_oeN5DZ9Msp'@'%' IDENTIFIED BY '^DqHSSNgoX.IQCre6=.x2.J4';
 
 -- CHATCONTROLRED --
-DROP USER IF EXISTS 'u2_FqhK8IpLLx';
-CREATE USER 'u2_FqhK8IpLLx'@'%';
+DROP USER IF EXISTS 'tfb_chatcontrolred';
+CREATE USER 'tfb_chatcontrolred'@'%';
 CREATE DATABASE IF NOT EXISTS s2_chatcontrolred;
-GRANT ALL ON s2_chatcontrolred.* TO 'u2_FqhK8IpLLx'@'%' IDENTIFIED BY 'rJx!vY=aUNPZ2@c=PRjwZshm';
+GRANT ALL ON s2_chatcontrolred.* TO 'tfb_chatcontrolred'@'%' IDENTIFIED BY 'e&cqyYXtqjgfL!hEGMyFpqMi89!g9w';
 
 -- PLOTSQUARED --
 DROP USER IF EXISTS 'u5_DEXeIJnxSl';
