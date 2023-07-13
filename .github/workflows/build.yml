@@ -5,8 +5,13 @@ on:
     branches:
       - dev
     paths: 
-      - 'TFB_Vanilla/**'
+      - 'TFB-Vanilla/**'
       - 'TFB-Creative/**'
+      - 'TFB-Factions/**'
+      - 'TFB-Flamecord/**'
+      - 'TFB-Lobby/**'
+      - 'TFB-Parkour/**'
+      - 'TFB-Vanilla_old/**'
       - '.github/workflows/build.yml'
 
 jobs:
