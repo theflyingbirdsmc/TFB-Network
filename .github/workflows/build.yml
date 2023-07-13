@@ -6,14 +6,14 @@ on:
     branches:
       - dev
     paths: 
-      - 'TFB-Vanilla/**'
-      - 'TFB-Creative/**'
-      - 'TFB-Factions/**'
-      - 'TFB-Flamecord/**'
-      - 'TFB-Lobby/**'
-      - 'TFB-Parkour/**'
-      - 'TFB-Vanilla_old/**'
-      - '.github/workflows/build.yml' # Runs if this workflow file itself is modified
+      - 'vanilla/**'
+      - 'creative/**'
+      - 'factions/**'
+      - 'flamecord/**'
+      - 'lobby/**'
+      - 'parkour/**'
+      - 'vanilla_old/**'
+      - '.github/workflows/build.yml' # runs if this workflow file itself is modified
 
 jobs:
   docker:
@@ -22,7 +22,7 @@ jobs:
     strategy:
       # The job will be run for each project listed in the matrix
       matrix:
-        project: ["TFB-Creative","TFB-Factions","TFB-Flamecord","TFB-Lobby","TFB-Parkour","TFB-Vanilla","TFB-Vanilla_old"]
+        project: ["creative","factions","flamecord","lobby","parkour","vanilla","vanilla_old"]
 
     steps:
     - name: Check Out Repo
@@ -57,15 +57,10 @@ jobs:
         username: ${{ secrets.MAVEN_USERNAME }}
         password: ${{ secrets.MAVEN_PASSWORD }}
 
-    - name: Set project name to lowercase
-      # Converts the project name to lowercase to avoid issues with Docker naming restrictions
-      id: lower
-      run: echo "::set-output name=project::$(echo ${{ matrix.project }} | tr '[:upper:]' '[:lower:]')"
-
     - name: Build and push
       if: contains(github.event.head_commit.modified, matrix.project)
       uses: docker/build-push-action@v4
       with:
         context: ./${{ matrix.project }}
         push: true
-        tags: ${{ secrets.MAVEN_DOCKER_REPOO }}/${{ env.project }}:latest
+        tags: ${{ secrets.MAVEN_DOCKER_REPOO }}/${{ matrix.project }}:latest
