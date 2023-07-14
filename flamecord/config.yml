@@ -46,26 +46,26 @@ disabled_commands:
 - revertaddresses
 servers:
   lobby:
-    address: theflyingbirds.net:32001
+    address: mc.theflyingbirds.net:32001
     motd: ''
     restricted: false
   creative:
-    address: theflyingbirds.net:32002
+    address: mc.theflyingbirds.net:32002
     motd: ''
     restricted: false
   factions:
-    address: theflyingbirds.net:32003
+    address: mc.theflyingbirds.net:32003
     motd: ''
     restricted: false
   parkour:
-    address: theflyingbirds.net:32004
+    address: mc.theflyingbirds.net:32004
     motd: ''
     restricted: false
   vanilladk:
-    address: theflyingbirds.net:32005
+    address: mc.theflyingbirds.net:32005
     motd: ''
     restricted: false
   vanilla_old:
-    address: theflyingbirds.net:32006
+    address: mc.theflyingbirds.net:32006
     motd: ''
     restricted: false
