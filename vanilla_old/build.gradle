@@ -43,7 +43,7 @@ dependencies {
     implementation 'ViaVersion:ViaVersion:4.7.0'
     implementation 'VotingPlugin:VotingPlugin:6.13.1'
     implementation 'WorldGuard:WorldGuard:7.0.8+33cdb4a'
-    implementation 'Vulcan:Vulcan:2.7.3'
+    implementation 'Vulcan:Vulcan:2.7.5'
 
     //PlaceholderAPI Expansions
     implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
