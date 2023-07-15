@@ -27,6 +27,11 @@ RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
 # Set Gradle in the environment variables
 ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
 
+
+ARG MAVEN_URL
+ARG MAVEN_USERNAME
+ARG MAVEN_PASSWORD
+
 ENV MAVEN_URL=$MAVEN_URL
 ENV MAVEN_USERNAME=$MAVEN_USERNAME
 ENV MAVEN_PASSWORD=$MAVEN_PASSWORD
