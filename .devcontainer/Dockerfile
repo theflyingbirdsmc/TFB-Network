@@ -13,11 +13,6 @@ RUN apt-get update \
 	openjdk-17-jre \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Download the init.sql file from GitHub
-# WORKDIR /docker-entrypoint-initdb.d
-# RUN sudo wget https://raw.githubusercontent.com/theflyingbirdsmc/TFB-Network/dev/.devcontainer/init.sql
-# RUN sudo chown -R mysql:mysql /docker-entrypoint-initdb.d && sudo chmod -R 700 /docker-entrypoint-initdb.d
-
 #install Gradle
 WORKDIR /opt/gradle
 RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
