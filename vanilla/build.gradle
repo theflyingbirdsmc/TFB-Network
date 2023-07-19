@@ -12,7 +12,7 @@ if("$System.env.MAVEN_URL" != null) {
 
 dependencies {
     // Network plugins
-    implementation 'Server:Paper:1.20.1-80'
+    implementation 'Server:Paper:1.20.1-83'
     implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
     implementation 'BuycraftX:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.19.4'
@@ -24,9 +24,9 @@ dependencies {
     implementation 'EssentialsChat:EssentialsChat:2.20.0'
     implementation 'EssentialsProtect:EssentialsProtect:2.20.0'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
-    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-521;0a19f64'
+    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
-    implementation 'GSit:GSit:1.4.9'
+    implementation 'GSit:GSit:1.4.10'
     implementation 'HexNicks:HexNicks:3.1.1'
     implementation 'LibsDisguises:LibsDisguises:10.0.37'
     implementation 'LuckPerms:LuckPerms:5.4.98'

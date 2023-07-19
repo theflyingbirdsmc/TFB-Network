@@ -4,7 +4,7 @@
 # The current version of this configuration. Do NOT change this value!
 # If the plugin uses a more recent config version, this config gets replaced by it
 #   while a backup of the old config will be kept as "config.old.ver.<OLD VERSION>.yml".
-version: 16
+version: 17
 
 # Should debugging messages be shown?
 debug: false
@@ -86,6 +86,10 @@ reconnect-timeout: 6000
 # be mindful to set this value high enough to also accommodate for delay-between-reconnects. 
 max-reconnect-time: 240000
 
+# The limit for how many times a user can be reconnected before giving up.
+# This value will only reset if the user disconnects from the proxy.
+max-reconnects: 128
+
 # Control what servers users are automatically reconnected to.
 servers:
   # blacklist & whitelist mode
@@ -94,6 +98,11 @@ servers:
   list:
     - "some_server"
     - "some_other_server"
+
+  # Only reconnect players on these servers that have a specified permission
+  permissions:
+    some_server: "some_permission"
+    some_other_server: "some_other_permission"
 
 # This block is necessary for the plugin to differentiate whether a kick happened because of a shutdown or not.
 shutdown:  
@@ -105,6 +114,11 @@ shutdown:
   # You can still use the "ServerReconnectEvent" as a plugin developer to decide on your own whether the user should be reconnected automatically
   # or not.
 
-  # Default value = text: "((?i)^(server closed|server is restarting|outdated (server|client).*))+$"
-  text: "((?i)^(server closed|server is restarting|outdated (server|client).*))+$"
+  # Default value: "((?i)^(server closed|server is restarting|outdated (server|client).*))$"
+  text: "((?i)^(server closed|server is restarting|outdated (server|client).*))$"
   regex: true
+
+  # If this pattern is matched, reconnect will ignore the kick packet/error, and it will be handled normally.
+  # Set to "" to disable.
+  # Default value: "(?i)(multiplayer\\.disconnect\\.expired_public_key)$"
+  exclude-regex: "(?i)(multiplayer\\.disconnect\\.expired_public_key)$"

@@ -47,6 +47,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Chicken:
     Name: '&9Chicken'
     Material: EGG
@@ -97,6 +99,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Chicken:
         Name: '&9Chicken (Baby)'
         Material: WHEAT_SEEDS
@@ -138,6 +142,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Wolf:
     Name: '&9Wolf'
     Material: BONE
@@ -188,6 +194,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Wolf:
         Name: '&9Wolf (Baby)'
         Material: BONE_MEAL
@@ -237,6 +245,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Cat:
     Name: '&5Cat'
     Material: COD
@@ -288,6 +298,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Black Cat:
         Name: '&9Cat: Black (Baby)'
         Material: COOKED_COD
@@ -330,6 +342,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Red Cat:
         Name: '&aCat: Red'
         Material: COOKED_SALMON
@@ -372,6 +386,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Red Cat:
         Name: '&9Cat: Red (Baby)'
         Material: COOKED_SALMON
@@ -414,6 +430,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Siamese Cat:
         Name: '&aCat: Siamese'
         Material: TROPICAL_FISH
@@ -456,6 +474,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Siamese Cat:
         Name: '&9Cat: Siamese (Baby)'
         Material: TROPICAL_FISH
@@ -498,6 +518,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Wild Ocelot:
         Name: '&9Wild Ocelot'
         Material: COD
@@ -540,6 +562,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Wild Ocelot:
         Name: '&5Wild Ocelot (Baby)'
         Material: COD
@@ -576,6 +600,712 @@ Pets:
           - '{LEVEL}{PET_NAME}'
           - '&7EXP: {EXP}'
           - '&7Type: &9Wild Ocelot (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+      Tabby Cat:
+        Name: '&aCat: Tabby'
+        Material: head:de28d30db3f8c3fe50ca4f26f3075e36f003ae8028135a8cd692f24c9a98ae1b
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: Tabby'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Tabby yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Tabby'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Tabby Cat:
+        Name: '&9Cat: Tabby (Baby)'
+        Material: BROWN_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: Tabby (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Tabby (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Tabby (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      British Shorthair Cat:
+        Name: '&aCat: British Shorthair'
+        Material: head:1fcd2e0c2b5df9482ef45f5e1d3cf07778febdd8455d3f02d326029ad79f41cf
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: British Shorthair'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: British Shorthair yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: British Shorthair'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby British Shorthair Cat:
+        Name: '&9Cat: British Shorthair (Baby)'
+        Material: LIGHT_GRAY_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: British Shorthair (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: British Shorthair (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: British Shorthair (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Calico Cat:
+        Name: '&aCat: Calico'
+        Material: head:340097271bb680fe981e859e8ba93fea28b813b1042bd277ea3329bec493eef3
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: Calico'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Calico yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Calico'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Calico Cat:
+        Name: '&9Cat: Calico (Baby)'
+        Material: ORANGE_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: Calico (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Calico (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Calico (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Persian Cat:
+        Name: '&aCat: Persian'
+        Material: head:ff40c746260ef91c96b27159795e87191ae7ce3d5f767bf8c74faad9689af25d
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: Persian'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Persian yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Persian'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Persian Cat:
+        Name: '&9Cat: Persian (Baby)'
+        Material: LIME_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: Persian (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Persian (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Persian (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Ragdoll Cat:
+        Name: '&aCat: Ragdoll'
+        Material: head:dc7a45d25889e3fdf7797cb258e26d4e94f5bc13eef00795dafef2e83e0ab511
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: Ragdoll'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Ragdoll yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Ragdoll'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Ragdoll Cat:
+        Name: '&9Cat: Ragdoll (Baby)'
+        Material: YELLOW_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: Ragdoll (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Ragdoll (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Ragdoll (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      White Cat:
+        Name: '&aCat: White'
+        Material: head:21d15ac9558e98b89aca89d3819503f1c5256c2197dd3c34df5aac4d72e7fbed
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: White'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: White yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: White'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby White Cat:
+        Name: '&9Cat: White (Baby)'
+        Material: WHITE_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: White (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: White (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: White (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Jellie Cat:
+        Name: '&aCat: Jellie'
+        Material: head:a0db41376ca57df10fcb1539e86654eecfd36d3fe75e8176885e93185df280a5
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: Jellie'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Jellie yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Jellie'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Jellie Cat:
+        Name: '&9Cat: Jellie (Baby)'
+        Material: GRAY_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: Jellie (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: Jellie (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: Jellie (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      All Black Cat:
+        Name: '&aCat: All Black'
+        Material: head:22c1e81ff03e82a3e71e0cd5fbec607e11361089aa47f290d46c8a2c07460d92
+        Mystery Dust: 12
+        Rarity: Common
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&aCat: All Black'
+        Move-Speed: 0.7
+        Ride-Speed: 0.45
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Milk
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: All Black yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: All Black'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby All Black Cat:
+        Name: '&9Cat: All Black (Baby)'
+        Material: BLACK_DYE
+        Mystery Dust: 30
+        Rarity: Rare
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&9Cat: All Black (Baby)'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Baked Potato
+          - Flower
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Cookie
+          - Cake
+          - Water
+          - Frisbee
+          Favourite:
+          - Raw Fish
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Cat: All Black (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Cat: All Black (Baby)'
           - ''
           - '&7Status: {HAPPINESS}'
           - ''
@@ -630,6 +1360,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Zombie:
         Name: '&9Zombie (Baby)'
         Material: POTATO
@@ -669,6 +1401,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Husk:
         Name: '&9Zombie Husk'
         Material: head:d674c63c8db5f4ca628d69a3b1f8a36e29d8fd775e1a6bdb6cabb4be4db121
@@ -708,6 +1442,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Husk:
         Name: '&5Zombie Husk (Baby)'
         Material: head:d674c63c8db5f4ca628d69a3b1f8a36e29d8fd775e1a6bdb6cabb4be4db121
@@ -747,6 +1483,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Red Little Helper:
         Name: '&5Red Little Helper'
         Material: LEATHER_HELMET:#FF0000
@@ -786,6 +1524,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Green Little Helper:
         Name: '&5Green Little Helper'
         Material: LEATHER_HELMET:#00FF00
@@ -825,6 +1565,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Bat:
     Name: '&5Bat'
     Material: COAL
@@ -873,6 +1615,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Spider:
     Name: '&5Spider'
     Material: SPIDER_EYE
@@ -921,6 +1665,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Cave Spider:
         Name: '&9Cave Spider'
         Material: STRING
@@ -960,6 +1706,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Snowman:
     Name: '&5Snowman'
     Material: SNOWBALL
@@ -1008,6 +1756,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Rabbit:
     Name: '&6Rabbit'
     Material: CARROT
@@ -1056,6 +1806,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Black Rabbit:
         Name: '&5Rabbit: Black (Baby)'
         Material: CARROT
@@ -1095,6 +1847,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Black & White Rabbit:
         Name: '&5Rabbit: Black & White'
         Material: head:cb8cff4b15b8ca37e25750f345718f289cb22c5b3ad22627a71223faccc
@@ -1134,6 +1888,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Black & White Rabbit:
         Name: '&6Rabbit: Black & White (Baby)'
         Material: CARROT
@@ -1173,6 +1929,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Brown Rabbit:
         Name: '&9Rabbit: Brown'
         Material: head:7d1169b2694a6aba826360992365bcda5a10c89a3aa2b48c438531dd8685c3a7
@@ -1212,6 +1970,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Brown Rabbit:
         Name: '&5Rabbit: Brown (Baby)'
         Material: CARROT
@@ -1251,6 +2011,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Gold Rabbit:
         Name: '&5Rabbit: Gold'
         Material: head:c977a3266bf3b9eaf17e5a02ea5fbb46801159863dd288b93e6c12c9cb
@@ -1290,6 +2052,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Gold Rabbit:
         Name: '&6Rabbit: Gold (Baby)'
         Material: CARROT
@@ -1329,6 +2093,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Salt & Pepper Rabbit:
         Name: '&5Rabbit: Salt & Pepper'
         Material: head:dc29aebe803e5d4dc3b010c9dd56444f863b2d86a6a2afd4a6a721748ba4fa
@@ -1368,6 +2134,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Salt & Pepper Rabbit:
         Name: '&6Rabbit: Salt & Pepper (Baby)'
         Material: CARROT
@@ -1407,6 +2175,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       White Rabbit:
         Name: '&9Rabbit: White'
         Material: head:374d8298797e712bb1f75ad6ffa7734ac4237ea69be1db92f0e41115a2c170cf
@@ -1446,6 +2216,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby White Rabbit:
         Name: '&5Rabbit: White (Baby)'
         Material: CARROT
@@ -1485,6 +2257,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Villager:
     Name: '&6Villager'
     Material: EMERALD
@@ -1533,6 +2307,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Blacksmith Villager:
         Name: '&5Villager: Blacksmith (Baby)'
         Material: IRON_INGOT
@@ -1572,6 +2348,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Butcher Villager:
         Name: '&9Villager: Butcher'
         Material: IRON_AXE
@@ -1611,6 +2389,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Butcher Villager:
         Name: '&5Villager: Butcher (Baby)'
         Material: WOODEN_AXE
@@ -1650,6 +2430,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Farmer Villager:
         Name: '&9Villager: Farmer'
         Material: IRON_HOE
@@ -1689,6 +2471,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Farmer Villager:
         Name: '&5Villager: Farmer (Baby)'
         Material: WOODEN_HOE
@@ -1728,6 +2512,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Librarian Villager:
         Name: '&9Villager: Librarian'
         Material: BOOKSHELF
@@ -1767,6 +2553,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Librarian Villager:
         Name: '&5Villager: Librarian (Baby)'
         Material: BOOK
@@ -1806,6 +2594,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Priest Villager:
         Name: '&9Villager: Priest'
         Material: WRITABLE_BOOK
@@ -1845,6 +2635,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Priest Villager:
         Name: '&5Villager: Priest (Baby)'
         Material: MAP
@@ -1884,6 +2676,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Zombie Villager:
         Name: '&5Villager: Zombie'
         Material: GOLDEN_APPLE
@@ -1923,6 +2717,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Zombie Villager:
         Name: '&6Villager: Zombie (Baby)'
         Material: GOLDEN_HELMET
@@ -1962,6 +2758,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Witch:
         Name: '&5Witch'
         Material: POTION:8196
@@ -2001,6 +2799,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Evoker:
         Name: '&6Evoker'
         Material: head:4f6fb89d1c631bd7e79fe185ba1a6705425f5c31a5ff626521e395d4a6f7e2
@@ -2040,6 +2840,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Vindicator:
         Name: '&6Vindicator'
         Material: head:4f6fb89d1c631bd7e79fe185ba1a6705425f5c31a5ff626521e395d4a6f7e2
@@ -2079,6 +2881,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Illusioner:
         Name: '&6Illusioner'
         Material: head:1c678c9f4c6dd4d991930f82e6e7d8b89b2891f35cba48a4b18539bbe7ec927
@@ -2118,6 +2922,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Golem:
     Name: '&6Golem'
     Material: head:89091d79ea0f59ef7ef94d7bba6e5f17f2f7d4572c44f90f76c4819a714
@@ -2166,6 +2972,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
   Enderman:
     Name: '&6Enderman'
     Material: head:7a59bb0a7a32965b3d90d8eafa899d1835f424509eadd4e6b709ada50b9cf
@@ -2221,6 +3029,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Blaze:
     Name: '&6Blaze'
     Material: BLAZE_ROD
@@ -2269,6 +3079,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Endermite:
     Name: '&6Endermite'
     Material: ENDERMITE_SPAWN_EGG
@@ -2317,6 +3129,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Cow:
     Name: '&6Cow'
     Material: LEATHER
@@ -2366,6 +3180,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Cow:
         Name: '&9Cow (Baby)'
         Material: WHEAT
@@ -2406,6 +3222,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Mushroom Cow:
         Name: '&5Mushroom Cow'
         Material: RED_MUSHROOM
@@ -2445,6 +3263,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Mushroom Cow:
         Name: '&6Mushroom Cow (Baby)'
         Material: BROWN_MUSHROOM
@@ -2484,6 +3304,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Creeper:
     Name: '&6Creeper'
     Material: CREEPER_HEAD
@@ -2532,6 +3354,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Powered Creeper:
         Name: '&6Powered Creeper'
         Material: TNT
@@ -2571,6 +3395,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Horse:
     Name: '&6Horse'
     Material: SADDLE
@@ -2621,6 +3447,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Black Horse:
         Name: '&6Horse: Black (Baby)'
         Material: CHARCOAL
@@ -2662,6 +3490,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Brown Horse:
         Name: '&aHorse: Brown'
         Material: BRICK
@@ -2703,6 +3533,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Brown Horse:
         Name: '&9Horse: Brown (Baby)'
         Material: COCOA_BEANS
@@ -2744,6 +3576,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Chestnut Horse:
         Name: '&9Horse: Chestnut'
         Material: MELON_SEEDS
@@ -2785,6 +3619,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Chestnut Horse:
         Name: '&5Horse: Chestnut (Baby)'
         Material: PUMPKIN_SEEDS
@@ -2826,6 +3662,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Creamy Horse:
         Name: '&9Horse: Creamy'
         Material: MILK_BUCKET
@@ -2867,6 +3705,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Creamy Horse:
         Name: '&5Horse: Creamy (Baby)'
         Material: SUGAR
@@ -2908,6 +3748,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Dark Brown Horse:
         Name: '&9Horse: Dark Brown'
         Material: DARK_OAK_LOG
@@ -2949,6 +3791,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Dark Brown Horse:
         Name: '&5Horse: Dark Brown (Baby)'
         Material: DARK_OAK_PLANKS
@@ -2990,6 +3834,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Gray Horse:
         Name: '&9Horse: Gray'
         Material: APPLE
@@ -3031,6 +3877,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Gray Horse:
         Name: '&5Horse: Gray (Baby)'
         Material: GRAY_DYE
@@ -3072,6 +3920,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       White Horse:
         Name: '&5Horse: White'
         Material: QUARTZ_BLOCK
@@ -3113,6 +3963,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby White Horse:
         Name: '&6Horse: White (Baby)'
         Material: DIORITE
@@ -3154,6 +4006,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Donkey:
         Name: '&9Donkey'
         Material: LEATHER
@@ -3195,6 +4049,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Donkey:
         Name: '&5Donkey (Baby)'
         Material: CARROT
@@ -3236,6 +4092,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Mule:
         Name: '&9Mule'
         Material: COOKED_MUTTON
@@ -3277,6 +4135,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Mule:
         Name: '&5Mule (Baby)'
         Material: MUTTON
@@ -3318,6 +4178,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Skeleton Horse:
         Name: '&6Skeleton Horse'
         Material: BONE
@@ -3357,6 +4219,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Skeleton Horse:
         Name: '&6Skeleton Horse (Baby)'
         Material: BONE_MEAL
@@ -3396,6 +4260,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Undead Horse:
         Name: '&5Undead Horse'
         Material: DARK_OAK_SAPLING
@@ -3435,6 +4301,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Undead Horse:
         Name: '&6Undead Horse (Baby)'
         Material: DEAD_BUSH
@@ -3474,6 +4342,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Pig:
     Name: '&6Pig'
     Material: PORKCHOP
@@ -3524,6 +4394,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Pig:
         Name: '&9Pig (Baby)'
         Material: CARROT
@@ -3566,6 +4438,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Pig Zombie:
         Name: '&5Pig Zombie'
         Material: GOLD_INGOT
@@ -3605,6 +4479,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Pig Zombie:
         Name: '&6Pig Zombie (Baby)'
         Material: GOLD_NUGGET
@@ -3644,6 +4520,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Sheep:
     Name: '&6Sheep'
     Material: WHITE_WOOL
@@ -3696,6 +4574,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Black Sheep:
         Name: '&6Sheep: Black (Baby)'
         Material: BLACK_WOOL
@@ -3739,6 +4619,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Blue Sheep:
         Name: '&9Sheep: Blue'
         Material: BLUE_TERRACOTTA
@@ -3782,6 +4664,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Blue Sheep:
         Name: '&5Sheep: Blue (Baby)'
         Material: BLUE_WOOL
@@ -3825,6 +4709,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Brown Sheep:
         Name: '&aSheep: Brown'
         Material: BROWN_TERRACOTTA
@@ -3868,6 +4754,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Brown Sheep:
         Name: '&9Sheep: Brown (Baby)'
         Material: BROWN_WOOL
@@ -3911,6 +4799,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Cyan Sheep:
         Name: '&9Sheep: Cyan'
         Material: CYAN_TERRACOTTA
@@ -3954,6 +4844,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Cyan Sheep:
         Name: '&5Sheep: Cyan (Baby)'
         Material: CYAN_WOOL
@@ -3997,6 +4889,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Gray Sheep:
         Name: '&aSheep: Gray'
         Material: GRAY_TERRACOTTA
@@ -4040,6 +4934,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Gray Sheep:
         Name: '&9Sheep: Gray (Baby)'
         Material: GRAY_WOOL
@@ -4083,6 +4979,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Green Sheep:
         Name: '&9Sheep: Green'
         Material: GREEN_TERRACOTTA
@@ -4126,6 +5024,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Green Sheep:
         Name: '&5Sheep: Green (Baby)'
         Material: GREEN_WOOL
@@ -4169,6 +5069,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Light Blue Sheep:
         Name: '&9Sheep: Light Blue'
         Material: LIGHT_BLUE_TERRACOTTA
@@ -4212,6 +5114,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Light Blue Sheep:
         Name: '&5Sheep: Light Blue (Baby)'
         Material: LIGHT_BLUE_WOOL
@@ -4255,6 +5159,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Lime Sheep:
         Name: '&9Sheep: Lime'
         Material: LIME_TERRACOTTA
@@ -4298,6 +5204,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Lime Sheep:
         Name: '&5Sheep: Lime (Baby)'
         Material: LIME_WOOL
@@ -4341,6 +5249,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Magenta Sheep:
         Name: '&9Sheep: Magenta'
         Material: MAGENTA_TERRACOTTA
@@ -4384,6 +5294,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Magenta Sheep:
         Name: '&5Sheep: Magenta (Baby)'
         Material: MAGENTA_WOOL
@@ -4427,6 +5339,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Orange Sheep:
         Name: '&9Sheep: Orange'
         Material: ORANGE_TERRACOTTA
@@ -4470,6 +5384,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Orange Sheep:
         Name: '&5Sheep: Orange (Baby)'
         Material: ORANGE_WOOL
@@ -4513,6 +5429,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Pink Sheep:
         Name: '&5Sheep: Pink'
         Material: PINK_TERRACOTTA
@@ -4556,6 +5474,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Pink Sheep:
         Name: '&6Sheep: Pink (Baby)'
         Material: PINK_WOOL
@@ -4599,6 +5519,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Purple Sheep:
         Name: '&9Sheep: Purple'
         Material: PURPLE_TERRACOTTA
@@ -4642,6 +5564,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Purple Sheep:
         Name: '&5Sheep: Purple (Baby)'
         Material: PURPLE_WOOL
@@ -4685,6 +5609,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Red Sheep:
         Name: '&9Sheep: Red'
         Material: RED_TERRACOTTA
@@ -4728,6 +5654,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Red Sheep:
         Name: '&5Sheep: Red (Baby)'
         Material: RED_WOOL
@@ -4771,6 +5699,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Silver Sheep:
         Name: '&aSheep: Silver'
         Material: LIGHT_GRAY_TERRACOTTA
@@ -4814,6 +5744,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Silver Sheep:
         Name: '&9Sheep: Silver (Baby)'
         Material: LIGHT_GRAY_WOOL
@@ -4857,6 +5789,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       White Sheep:
         Name: '&aSheep: White'
         Material: WHITE_TERRACOTTA
@@ -4900,6 +5834,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby White Sheep:
         Name: '&9Sheep: White (Baby)'
         Material: WHITE_WOOL
@@ -4943,6 +5879,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Yellow Sheep:
         Name: '&9Sheep: Yellow'
         Material: YELLOW_TERRACOTTA
@@ -4986,6 +5924,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Yellow Sheep:
         Name: '&5Sheep: Yellow (Baby)'
         Material: YELLOW_WOOL
@@ -5029,6 +5969,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Rainbow Sheep:
         Name: '&6Sheep: Rainbow'
         Material: EXPERIENCE_BOTTLE
@@ -5072,6 +6014,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Slime:
     Name: '&6Slime'
     Material: SLIME_BLOCK
@@ -5120,6 +6064,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Small Slime:
         Name: '&5Slime (Small)'
         Material: SLIME_BLOCK
@@ -5159,6 +6105,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Tiny Slime:
         Name: '&9Slime (Tiny)'
         Material: SLIME_BALL
@@ -5198,6 +6146,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Big Magma Cube:
         Name: '&6Magma Cube (Big)'
         Material: MAGMA_CREAM
@@ -5250,6 +6200,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Small Magma Cube:
         Name: '&5Magma Cube (Small)'
         Material: BLAZE_POWDER
@@ -5302,6 +6254,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Tiny Magma Cube:
         Name: '&9Magma Cube (Tiny)'
         Material: LAVA_BUCKET
@@ -5354,6 +6308,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Skeleton:
     Name: '&6Skeleton'
     Material: BOW
@@ -5402,6 +6358,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Wither Skeleton:
         Name: '&6Wither Skeleton'
         Material: STONE_SWORD
@@ -5441,6 +6399,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Stray Skeleton:
         Name: '&6Stray Skeleton'
         Material: head:78ddf76e555dd5c4aa8a0a5fc584520cd63d489c253de969f7f22f85a9a2d56
@@ -5480,6 +6440,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Squid:
     Name: '&6Squid'
     Material: INK_SAC
@@ -5529,6 +6491,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Polar Bear:
     Name: '&6Polar Bear'
     Material: head:bab178f5cdd750f0e356860aa5539153eb2abec1e146ca57c65d25a5df8fdfe
@@ -5577,6 +6541,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Polar Bear:
         Name: '&6Polar Bear (Baby)'
         Material: head:bab178f5cdd750f0e356860aa5539153eb2abec1e146ca57c65d25a5df8fdfe
@@ -5616,6 +6582,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Llama:
     Name: '&6Llama'
     Material: head:83d9b5915912ffc2b85761d6adcb428a812f9b83ff634e331162ce46c99e9
@@ -5664,6 +6632,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Brown Llama:
         Name: '&6Llama: Brown (Baby)'
         Material: head:c2b1ecff77ffe3b503c30a548eb23a1a08fa26fd67cdff389855d74921368
@@ -5703,6 +6673,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Creamy Llama:
         Name: '&5Llama: Creamy'
         Material: head:80899acfebf947a0effc4022deb080543f7e389116bd4964c2c227ffa34a3375
@@ -5742,6 +6714,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Creamy Llama:
         Name: '&6Llama: Creamy (Baby)'
         Material: head:80899acfebf947a0effc4022deb080543f7e389116bd4964c2c227ffa34a3375
@@ -5781,6 +6755,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Gray Llama:
         Name: '&5Llama: Gray'
         Material: head:cf24e56fd9ffd7133da6d1f3e2f455952b1da462686f753c597ee82299a
@@ -5820,6 +6796,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby Gray Llama:
         Name: '&6Llama: Gray (Baby)'
         Material: head:cf24e56fd9ffd7133da6d1f3e2f455952b1da462686f753c597ee82299a
@@ -5859,6 +6837,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       White Llama:
         Name: '&5Llama: White'
         Material: head:83d9b5915912ffc2b85761d6adcb428a812f9b83ff634e331162ce46c99e9
@@ -5898,6 +6878,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
       Baby White Llama:
         Name: '&6Llama: White (Baby)'
         Material: head:83d9b5915912ffc2b85761d6adcb428a812f9b83ff634e331162ce46c99e9
@@ -5937,6 +6919,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Panda:
     Name: '&6Panda'
     Material: head:dca096eea506301bea6d4b17ee1605625a6f5082c71f74a639cc940439f47166
@@ -5987,6 +6971,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Normal Panda:
         Name: '&6Panda: Normal (Baby)'
         Material: head:dca096eea506301bea6d4b17ee1605625a6f5082c71f74a639cc940439f47166
@@ -6028,6 +7014,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Lazy Panda:
         Name: '&5Panda: Lazy'
         Material: head:7818b681cace1c641919f53edadecb142330d089a826b56219138c33b7a5e0db
@@ -6069,6 +7057,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Lazy Panda:
         Name: '&6Panda: Lazy (Baby)'
         Material: head:7818b681cace1c641919f53edadecb142330d089a826b56219138c33b7a5e0db
@@ -6110,6 +7100,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Worried Panda:
         Name: '&5Panda: Worried'
         Material: head:c8e921c57e54dd07337ffba629e72caf3850d836b76562b1bc3bc5949f2d41d
@@ -6151,6 +7143,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Worried Panda:
         Name: '&6Panda: Worried (Baby)'
         Material: head:c8e921c57e54dd07337ffba629e72caf3850d836b76562b1bc3bc5949f2d41d
@@ -6192,6 +7186,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Playful Panda:
         Name: '&5Panda: Playful'
         Material: head:b6463e64ce29764db3cb46806cee606afc24bdf0ce14b6660c270a96c787426
@@ -6233,6 +7229,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Playful Panda:
         Name: '&6Panda: Playful (Baby)'
         Material: head:b6463e64ce29764db3cb46806cee606afc24bdf0ce14b6660c270a96c787426
@@ -6274,6 +7272,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Brown Panda:
         Name: '&5Panda: Brown'
         Material: head:c5d0d45bf992b072cf5c513e06beefe8bdc809c8150f3d14b883796a7b74e406
@@ -6315,6 +7315,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Brown Panda:
         Name: '&6Panda: Brown (Baby)'
         Material: head:c5d0d45bf992b072cf5c513e06beefe8bdc809c8150f3d14b883796a7b74e406
@@ -6356,6 +7358,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Weak Panda:
         Name: '&5Panda: Weak'
         Material: head:5c2d25e956337d82791fa0e6617a40086f02d6ebfbfd5a6459889cf206fca787
@@ -6397,6 +7401,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Weak Panda:
         Name: '&6Panda: Weak (Baby)'
         Material: head:5c2d25e956337d82791fa0e6617a40086f02d6ebfbfd5a6459889cf206fca787
@@ -6438,6 +7444,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Aggressive Panda:
         Name: '&5Panda: Aggressive'
         Material: head:83fe1e782ae96a30336a03ef74681ce3a6905fcc673fa56c046aaee6aa28307d
@@ -6479,6 +7487,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 4.0
+        Fixed-Distance: 3.0
       Baby Aggressive Panda:
         Name: '&6Panda: Aggressive (Baby)'
         Material: head:83fe1e782ae96a30336a03ef74681ce3a6905fcc673fa56c046aaee6aa28307d
@@ -6520,6 +7530,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Turtle:
     Name: '&6Turtle'
     Material: head:fc8593b91058ff24a0f6845130ed3e449569ce9c6b22fa9cd1ed7360b5045ea3
@@ -6570,6 +7582,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Turtle:
         Name: '&6Turtle (Baby)'
         Material: TURTLE_EGG
@@ -6611,6 +7625,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Fox:
     Name: '&6Fox'
     Material: head:d8954a42e69e0881ae6d24d4281459c144a0d5a968aed35d6d3d73a3c65d26a
@@ -6660,6 +7676,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Red Fox:
         Name: '&6Red Fox (Baby)'
         Material: FOX_SPAWN_EGG
@@ -6700,6 +7718,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Snow Fox:
         Name: '&6Snow Fox'
         Material: head:41436377eb4c4b4e39fb0e1ed8899fb61ee1814a9169b8d08729ef01dc85d1ba
@@ -6740,6 +7760,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Snow Fox:
         Name: '&6Snow Fox (Baby)'
         Material: FOX_SPAWN_EGG
@@ -6780,6 +7802,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Goat:
     Name: '&6Goat'
     Material: head:457a0d538fa08a7affe312903468861720f9fa34e86d44b89dcec5639265f03
@@ -6830,6 +7854,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Goat:
         Name: '&6Goat (Baby)'
         Material: WHEAT
@@ -6871,6 +7897,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Axolotl:
     Name: '&6Axolotl'
     Material: head:debf2b113f4a81370a1cf9d2504e8756b66deef79e9433187da774b96c9f35ba
@@ -6921,6 +7949,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Lucy Axolotl:
         Name: '&6Lucy Axolotl (Baby)'
         Material: head:debf2b113f4a81370a1cf9d2504e8756b66deef79e9433187da774b96c9f35ba
@@ -6962,6 +7992,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Wild Axolotl:
         Name: '&5Wild Axolotl'
         Material: head:5461c4f2cb1eda8e14cd59efb0bf89ea2076f54a08b8b6d0db0bd0797d99bee8
@@ -7003,6 +8035,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Wild Axolotl:
         Name: '&6Wild Axolotl (Baby)'
         Material: head:5461c4f2cb1eda8e14cd59efb0bf89ea2076f54a08b8b6d0db0bd0797d99bee8
@@ -7044,6 +8078,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Gold Axolotl:
         Name: '&5Gold Axolotl'
         Material: head:3a6534c32ab856028558478115d904d52f5f154d80ecb903b866b19099a25e46
@@ -7085,6 +8121,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Gold Axolotl:
         Name: '&6Gold Axolotl (Baby)'
         Material: head:3a6534c32ab856028558478115d904d52f5f154d80ecb903b866b19099a25e46
@@ -7126,6 +8164,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Cyan Axolotl:
         Name: '&5Cyan Axolotl'
         Material: head:1e8c70e6a56161ecdc6b75674070fb308714a2b2b70e1e6d76bc920ce6ce7de6
@@ -7167,6 +8207,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Cyan Axolotl:
         Name: '&6Cyan Axolotl (Baby)'
         Material: head:1e8c70e6a56161ecdc6b75674070fb308714a2b2b70e1e6d76bc920ce6ce7de6
@@ -7208,6 +8250,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Blue Axolotl:
         Name: '&5Blue Axolotl'
         Material: head:357b32c2933bebcd6502cbf406f7df996c8e46e7c6cbfefc5dcdc2fbf5bb54bb
@@ -7249,6 +8293,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Baby Blue Axolotl:
         Name: '&6Blue Axolotl (Baby)'
         Material: head:357b32c2933bebcd6502cbf406f7df996c8e46e7c6cbfefc5dcdc2fbf5bb54bb
@@ -7290,6 +8336,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Allay:
     Name: '&6Allay'
     Material: head:e50294a1747310f104124c6373cc639b712baa57b7d926297b645188b7bb9ab9
@@ -7340,6 +8388,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Frog:
     Name: '&5Frog'
     Material: head:23ce6f9998ed2da757d1e6372f04efa20e57dfc17c3a06478657bbdf51c2f2a2
@@ -7390,6 +8440,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Warm Frog:
         Name: '&5Warm Frog'
         Material: head:f77314fa038ec31357845a93274b4dc884124686728ffe0ded9c35466aca0aab
@@ -7431,6 +8483,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
       Cold Frog:
         Name: '&5Cold Frog'
         Material: head:ce62e8a048d040eb0533ba26a866cd9c2d0928c931c50b4482ac3a3261fab6f0
@@ -7472,6 +8526,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Tadpole:
     Name: '&5Tadpole'
     Material: head:987035f5352334c2cba6ac4c65c2b9059739d6d0e839c1dd98d75d2e77957847
@@ -7522,6 +8578,8 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
   Warden:
     Name: '&6Warden'
     Material: head:c6f74361fb00490a0a98eeb814544ecdd775cb55633dbb114e60d27004cb1020
@@ -7566,6 +8624,275 @@ Pets:
           - '{LEVEL}{PET_NAME}'
           - '&7EXP: {EXP}'
           - '&7Type: &9Warden'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
+  Bee:
+    Name: '&6Bee'
+    Material: head:4420c9c43e095880dcd2e281c81f47b163b478f58a584bb61f93e6e10a155f31
+    GUI-Name: Bee
+    Enabled: true
+    Lore:
+    - '&7Click here to see all pets'
+    - '&7in the Bee category!'
+    Types:
+      Bee:
+        Name: '&5Bee'
+        Material: head:4420c9c43e095880dcd2e281c81f47b163b478f58a584bb61f93e6e10a155f31
+        Mystery Dust: 62
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Bee'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Milk
+          - Feather
+          Favourite:
+          - Flower
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Bee yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Bee'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Bee:
+        Name: '&6Bee (Baby)'
+        Material: HONEYCOMB
+        Mystery Dust: 72
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Bee (Baby)'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Water
+          - Ball
+          Favourite:
+          - Flower
+          - Milk
+          - Feather
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Bee (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Bee (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Angry Bee:
+        Name: '&5Angry Bee'
+        Material: head:d8916ea1ffb39f13dbbf4e62449dd2cbd5d2812f414e97608af0609e139d6115
+        Mystery Dust: 62
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Angry Bee'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Milk
+          - Feather
+          Favourite:
+          - Flower
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Angry Bee yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Angry Bee'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Angry Bee:
+        Name: '&6Angry Bee (Baby)'
+        Material: HONEYCOMB
+        Mystery Dust: 72
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Angry Bee (Baby)'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Water
+          - Ball
+          Favourite:
+          - Flower
+          - Milk
+          - Feather
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Angry Bee (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Angry Bee (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Rolling Bee:
+        Name: '&5Rolling Bee'
+        Material: head:4420c9c43e095880dcd2e281c81f47b163b478f58a584bb61f93e6e10a155f31
+        Mystery Dust: 65
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Rolling Bee'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Milk
+          - Feather
+          Favourite:
+          - Flower
+          - Water
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Rolling Bee yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Rolling Bee'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Rolling Bee:
+        Name: '&6Rolling Bee (Baby)'
+        Material: HONEYCOMB
+        Mystery Dust: 75
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Rolling Bee (Baby)'
+        Move-Speed: 0.55
+        Ride-Speed: 0.35
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Raw Porkchop
+          - Raw Fish
+          - Magma Cream
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Wheat
+          - Water
+          - Ball
+          Favourite:
+          - Flower
+          - Milk
+          - Feather
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Rolling Bee (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Rolling Bee (Baby)'
           - ''
           - '&7Status: {HAPPINESS}'
           - ''

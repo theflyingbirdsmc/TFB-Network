@@ -785,3 +785,6 @@
 
 # Reference: SELF_DISGUISE_HIDDEN
 "<green>Self disguise hidden as it's too tall..": "<green>Self disguise hidden as it's too tall.."
+
+# Reference: PARSE_CANT_LOAD_DETAILS
+"<red>Error! This disguise couldn't be loaded! Tried to parse <green>%s<red> for <green>%s": "<red>Error! This disguise couldn't be loaded! Tried to parse <green>%s<red> for <green>%s"

@@ -311,92 +311,104 @@ Mystery-Boxes:
       - '&7pets in the &bPets Menu.'
   Types:
     Normal-Mystery-Box:
-      Name: '&aMystery Egg'
-      Material: TURTLE_EGG
-      Lore:
+      One-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&aCommon {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰&7✰✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Two-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰&7✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Three-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&9Rare {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&5Epic {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰&7✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Four-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&9Rare {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&5Epic {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰&7✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Five-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&9Rare {ITEM_ONE}'
+        - '&5Epic {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&6Legendary {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Messages:
         Expiry-Date: '&cExpires in {EXPIRY_DATE}'
         Never-Expired: '&7This has no expiration date.'
-        Quality:
-          One-Star:
-          - '&7This egg contains one of the following:'
-          - ''
-          - '&aCommon {ITEM_ONE}'
-          - '&aCommon {ITEM_TWO}'
-          - '&aCommon {ITEM_THREE}'
-          - '&aCommon {ITEM_FOUR}'
-          - '&9Rare {ITEM_FIVE}'
-          - '&5Epic {ITEM_SIX}'
-          - '&6Legendary {ITEM_SEVEN}'
-          - ''
-          - '&7Quality: &e✰&7✰✰✰✰'
-          - '{EXPIRY_DATE}'
-          - ''
-          - '&eClick to open!'
-          Two-Star:
-          - '&7This egg contains one of the following:'
-          - ''
-          - '&aCommon {ITEM_ONE}'
-          - '&aCommon {ITEM_TWO}'
-          - '&aCommon {ITEM_THREE}'
-          - '&9Rare {ITEM_FOUR}'
-          - '&9Rare {ITEM_FIVE}'
-          - '&5Epic {ITEM_SIX}'
-          - '&6Legendary {ITEM_SEVEN}'
-          - ''
-          - '&7Quality: &e✰✰&7✰✰✰'
-          - '{EXPIRY_DATE}'
-          - ''
-          - '&eClick to open!'
-          Three-Star:
-          - '&7This egg contains one of the following:'
-          - ''
-          - '&aCommon {ITEM_ONE}'
-          - '&aCommon {ITEM_TWO}'
-          - '&9Rare {ITEM_THREE}'
-          - '&9Rare {ITEM_FOUR}'
-          - '&5Epic {ITEM_FIVE}'
-          - '&5Epic {ITEM_SIX}'
-          - '&6Legendary {ITEM_SEVEN}'
-          - ''
-          - '&7Quality: &e✰✰✰&7✰✰'
-          - '{EXPIRY_DATE}'
-          - ''
-          - '&eClick to open!'
-          Four-Star:
-          - '&7This egg contains one of the following:'
-          - ''
-          - '&aCommon {ITEM_ONE}'
-          - '&9Rare {ITEM_TWO}'
-          - '&5Epic {ITEM_THREE}'
-          - '&5Epic {ITEM_FOUR}'
-          - '&6Legendary {ITEM_FIVE}'
-          - '&6Legendary {ITEM_SIX}'
-          - '&6Legendary {ITEM_SEVEN}'
-          - ''
-          - '&7Quality: &e✰✰✰✰&7✰'
-          - '{EXPIRY_DATE}'
-          - ''
-          - '&eClick to open!'
-          Five-Star:
-          - '&7This egg contains one of the following:'
-          - ''
-          - '&9Rare {ITEM_ONE}'
-          - '&5Epic {ITEM_TWO}'
-          - '&5Epic {ITEM_THREE}'
-          - '&6Legendary {ITEM_FOUR}'
-          - '&6Legendary {ITEM_FIVE}'
-          - '&6Legendary {ITEM_SIX}'
-          - '&6Legendary {ITEM_SEVEN}'
-          - ''
-          - '&7Quality: &e✰✰✰✰✰'
-          - '{EXPIRY_DATE}'
-          - ''
-          - '&eClick to open!'
     Gifted-Mystery-Box:
-      Name: '&dGifted Mystery Egg'
-      Material: TURTLE_EGG
-      Lore:
-        One-Star:
+      One-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
         - '&7This egg contains one of the following:'
         - ''
         - '&aCommon {ITEM_ONE}'
@@ -413,7 +425,10 @@ Mystery-Boxes:
         - '&7{SENDER}'
         - ''
         - '&eClick to open!'
-        Two-Star:
+      Two-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
         - '&7This egg contains one of the following:'
         - ''
         - '&aCommon {ITEM_ONE}'
@@ -430,7 +445,10 @@ Mystery-Boxes:
         - '&7{SENDER}'
         - ''
         - '&eClick to open!'
-        Three-Star:
+      Three-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
         - '&7This egg contains one of the following:'
         - ''
         - '&aCommon {ITEM_ONE}'
@@ -447,7 +465,10 @@ Mystery-Boxes:
         - '&7{SENDER}'
         - ''
         - '&eClick to open!'
-        Four-Star:
+      Four-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
         - '&7This egg contains one of the following:'
         - ''
         - '&aCommon {ITEM_ONE}'
@@ -464,7 +485,10 @@ Mystery-Boxes:
         - '&7{SENDER}'
         - ''
         - '&eClick to open!'
-        Five-Star:
+      Five-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
         - '&7This egg contains one of the following:'
         - ''
         - '&9Rare {ITEM_ONE}'

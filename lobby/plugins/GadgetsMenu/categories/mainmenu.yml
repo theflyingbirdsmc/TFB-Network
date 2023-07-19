@@ -5,6 +5,7 @@ MainMenu:
     Lore:
     - '&7Collect all the hats and'
     - '&7wear them while in a lobby.'
+    Slot: 11
   Animated Hats:
     Name: '&eAnimated Hats'
     Material: head:5ebfd2396cbabdb42c348bcf41599c87a506a71ef60948c496f95c6cb63141
@@ -12,6 +13,7 @@ MainMenu:
     - '&7These hats take it a step'
     - '&7further and move while on'
     - '&7your head.'
+    Slot: 12
   Particles:
     Name: '&eParticles'
     Material: BLAZE_POWDER
@@ -20,6 +22,7 @@ MainMenu:
     - '&7while standing in lobbies'
     - '&7using these cool particle'
     - '&7effects!'
+    Slot: 13
   Suits:
     Name: '&eSuits'
     Material: GOLDEN_LEGGINGS
@@ -27,6 +30,7 @@ MainMenu:
     - '&7Collect and wear all the'
     - '&7pieces from a specific suit'
     - '&7to gain unique effects!'
+    Slot: 14
   Gadgets:
     Name: '&eGadgets'
     Material: PISTON
@@ -34,6 +38,7 @@ MainMenu:
     - '&7These fun little toys'
     - '&7can be used while'
     - '&7in a lobby.'
+    Slot: 15
   Pets:
     Name: '&ePets'
     Material: BONE
@@ -41,6 +46,7 @@ MainMenu:
     - '&7Unlock these pets to have'
     - '&7them follow you around in'
     - '&7lobbies!'
+    Slot: 19
   Miniatures:
     Name: '&eMiniatures'
     Material: head:9da39269ef45f825ec61bb4f8aa09bd3cf07996fb6fac338a6e91d6699ae425
@@ -48,6 +54,7 @@ MainMenu:
     - '&7Unlock these miniatures to'
     - '&7have a little friend follow'
     - '&7you around in lobbies!'
+    Slot: 20
   Morphs:
     Name: '&eMorphs'
     Material: ZOMBIE_HEAD
@@ -58,6 +65,7 @@ MainMenu:
     - '&7into a monster and unlock'
     - '&7unique powers for everyone'
     - '&7else to see!'
+    Slot: 31
   Banners:
     Name: '&eBanners'
     Material: CUSTOM_MATERIAL_1
@@ -65,6 +73,7 @@ MainMenu:
     - '&7Unlock all the Banners and'
     - '&7wear them as hats while in'
     - '&7in a lobby!'
+    Slot: 22
   Emotes:
     Name: '&eEmotes'
     Material: head:60c432cbc490a8af6e9dfeb28095c0a0ec79fff705fb184674d1e743bd05baa
@@ -73,6 +82,7 @@ MainMenu:
     - '&7world how you''re feeling'
     - '&7with these unique animated'
     - '&7Emotes.'
+    Slot: 24
   Cloaks:
     Name: '&eCloaks'
     Material: ENCHANTING_TABLE
@@ -82,5 +92,16 @@ MainMenu:
     - '&7swag. To activate them,'
     - '&7stand still for 1 second'
     - '&7while in a lobby.'
+    Slot: 25
 Inventory-Size: 54
-Slot-Layout: 11, 12, 13, 14, 15, 19, 20, 31, 22, 24, 25
+Custom-Items:
+  Item-1:
+    Name: '&eCustom Item 1'
+    Material: BOOK
+    Enabled: false
+    Slot: 4
+    Commands:
+    - CONSOLE:say {PLAYER} clicked Custom Item 1.
+    - PLAYER:say I clicked Custom Item 1.
+    Lore:
+    - '&7This is the custom item lore.'
