@@ -99,7 +99,7 @@ Webserver:
         # Disable /auth/register endpoint
         Disable_registration: false
     Disable_Webserver: false
-    External_Webserver_address: "https://0.0.0.0:%port%"
+    External_Webserver_address: "https://stats.theflyingbirds.net"
     # Use absolute path ("C:\Example\Path", "/var/example/path") or relative ("public_html" -> {server}/plugins/Plan/public_html)
     # NOTE: All files in this directory can be read by anyone who can access the webserver.
     # This can be used to host certbot http challenge file, or for customizing Plan React-bundle
