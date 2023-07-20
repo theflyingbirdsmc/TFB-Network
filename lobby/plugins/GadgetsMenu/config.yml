@@ -370,4 +370,4 @@ Blacklisted-Regions:
 # Check for updates if you set to true.
 Check-Update: true
 # Do not edit this.
-Config-Version: 2.0.4
+Config-Version: 2.0.6

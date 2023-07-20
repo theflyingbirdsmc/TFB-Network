@@ -1,0 +1,63 @@
+b8ccdfeba4 - Last occurred: 2023-07-19 Occurrences: 1
+---- Context 1 ----
+Plan v5.5 build 2391
+BungeeCord 1.5.9
+Server v1.5.9
+
+Report this, there is an SQL grammar error.
+Error code: 1146
+SELECT * FROM plan_security LEFT JOIN plan_users on linked_to_uuid=uuid
+SQL Grammar error
+
+---- Stacktrace ----
+com.djrapitops.plan.exceptions.database.DBOpException: SQL Failure: Table 'plan.plan_security' doesn't exist
+   com.djrapitops.plan.exceptions.database.DBOpException.forCause(DBOpException.java:152)
+   com.djrapitops.plan.storage.database.queries.QueryStatement.executeWithConnection(QueryStatement.java:64)
+   com.djrapitops.plan.storage.database.queries.QueryStatement.executeQuery(QueryStatement.java:52)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$query$2(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:102)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:87)
+   com.djrapitops.plan.storage.database.SQLDB.query(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.Database.queryCollection(Database.java:83)
+   com.djrapitops.plan.storage.database.Database.queryList(Database.java:75)
+   com.djrapitops.plan.storage.database.queries.objects.WebUserQueries.lambda$fetchAllUsers$3(WebUserQueries.java:72)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$query$2(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:102)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:87)
+   com.djrapitops.plan.storage.database.SQLDB.query(SQLDB.java:324)
+   com.djrapitops.plan.commands.TabCompleteCache.refreshUserIdentifiers(TabCompleteCache.java:97)
+   com.djrapitops.plan.commands.TabCompleteCache.lambda$enable$0(TabCompleteCache.java:78)
+   com.djrapitops.plan.processing.Processing.lambda$submitNonCritical$1(Processing.java:78)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)
+Caused by:
+java.sql.SQLSyntaxErrorException: Table 'plan.plan_security' doesn't exist
+   com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+   com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+   plan.com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+   plan.com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+   com.djrapitops.plan.storage.database.queries.QueryStatement.executeQuery(QueryStatement.java:72)
+   com.djrapitops.plan.storage.database.queries.QueryStatement.executeWithConnection(QueryStatement.java:62)
+   com.djrapitops.plan.storage.database.queries.QueryStatement.executeQuery(QueryStatement.java:52)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$query$2(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:102)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:87)
+   com.djrapitops.plan.storage.database.SQLDB.query(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.Database.queryCollection(Database.java:83)
+   com.djrapitops.plan.storage.database.Database.queryList(Database.java:75)
+   com.djrapitops.plan.storage.database.queries.objects.WebUserQueries.lambda$fetchAllUsers$3(WebUserQueries.java:72)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$query$2(SQLDB.java:324)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:102)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:87)
+   com.djrapitops.plan.storage.database.SQLDB.query(SQLDB.java:324)
+   com.djrapitops.plan.commands.TabCompleteCache.refreshUserIdentifiers(TabCompleteCache.java:97)
+   com.djrapitops.plan.commands.TabCompleteCache.lambda$enable$0(TabCompleteCache.java:78)
+   com.djrapitops.plan.processing.Processing.lambda$submitNonCritical$1(Processing.java:78)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)

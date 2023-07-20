@@ -526,3 +526,27 @@
 
 # Name for the CAMEL disguise
 "Camel": "Camel"
+
+# Name for the BLOCK_DISPLAY disguise
+"Block Display": "Block Display"
+
+# Name for the INTERACTION disguise
+"Interaction": "Interaction"
+
+# Name for the ITEM_DISPLAY disguise
+"Item Display": "Item Display"
+
+# Name for the SNIFFER disguise
+"Sniffer": "Sniffer"
+
+# Name for the TEXT_DISPLAY disguise
+"Text Display": "Text Display"
+
+# Name for the BlockDisplay EntityType, this is used in radius commands
+"BlockDisplay": "BlockDisplay"
+
+# Name for the ItemDisplay EntityType, this is used in radius commands
+"ItemDisplay": "ItemDisplay"
+
+# Name for the TextDisplay EntityType, this is used in radius commands
+"TextDisplay": "TextDisplay"

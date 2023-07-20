@@ -5335,3 +5335,351 @@
 
 # Used for the disguise option SoundGroup
 "CAMEL": "CAMEL"
+
+# Used for the disguise option Particle
+"CHERRY_LEAVES": "CHERRY_LEAVES"
+
+# Used for the disguise option Particle
+"EGG_CRACK": "EGG_CRACK"
+
+# A disguise option name, has description 14 comma seperated numbers for a position translation
+"Transformation": "Transformation"
+
+# A disguise option descriptive name
+"Translation (Transform, Left Rotation, Scale, Right Rotation). 3, then 4, then 3, then 4 numbers. All seperated by a comma": "Translation (Transform, Left Rotation, Scale, Right Rotation). 3, then 4, then 3, then 4 numbers. All seperated by a comma"
+
+# Description for the disguise option Transformation
+"14 comma seperated numbers for a position translation": "14 comma seperated numbers for a position translation"
+
+# A disguise option name, has description Used as part of a Transformation for the Transform and Scale
+"Vector3f": "Vector3f"
+
+# A disguise option descriptive name
+"Vector3f (X, Y, Z)": "Vector3f (X, Y, Z)"
+
+# Description for the disguise option Vector3f
+"Used as part of a Transformation for the Transform and Scale": "Used as part of a Transformation for the Transform and Scale"
+
+# A disguise option name, has description Four values used to define part of a Transformation for the rotations
+"Quaternion": "Quaternion"
+
+# A disguise option descriptive name
+"Quaternion (X, Y, Z, W)": "Quaternion (X, Y, Z, W)"
+
+# Description for the disguise option Quaternion
+"Four values used to define part of a Transformation for the rotations": "Four values used to define part of a Transformation for the rotations"
+
+# A disguise option name, has description How the Item Display is transformed
+"Item Display Transform": "Item Display Transform"
+
+# Description for the disguise option Item Display Transform
+"How the Item Display is transformed": "How the Item Display is transformed"
+
+# Used for the disguise option Item Display Transform
+"THIRDPERSON_LEFTHAND": "THIRDPERSON_LEFTHAND"
+
+# Used for the disguise option Item Display Transform
+"THIRDPERSON_RIGHTHAND": "THIRDPERSON_RIGHTHAND"
+
+# Used for the disguise option Item Display Transform
+"FIRSTPERSON_LEFTHAND": "FIRSTPERSON_LEFTHAND"
+
+# Used for the disguise option Item Display Transform
+"FIRSTPERSON_RIGHTHAND": "FIRSTPERSON_RIGHTHAND"
+
+# Used for the disguise option Item Display Transform
+"HEAD": "HEAD"
+
+# Used for the disguise option Item Display Transform
+"GUI": "GUI"
+
+# Used for the disguise option Item Display Transform
+"GROUND": "GROUND"
+
+# Used for the disguise option Item Display Transform
+"FIXED": "FIXED"
+
+# A disguise option name, has description How the billboard is aligned
+"Display Billboard": "Display Billboard"
+
+# Description for the disguise option Display Billboard
+"How the billboard is aligned": "How the billboard is aligned"
+
+# Used for the disguise option Display Billboard
+"VERTICAL": "VERTICAL"
+
+# Used for the disguise option Display Billboard
+"HORIZONTAL": "HORIZONTAL"
+
+# Used for the disguise option Display Billboard
+"CENTER": "CENTER"
+
+# A disguise option name, has description How the text is aligned in the display
+"Text Display Alignment": "Text Display Alignment"
+
+# Description for the disguise option Text Display Alignment
+"How the text is aligned in the display": "How the text is aligned in the display"
+
+# A disguise option name, has description The current mindset of a Sniffer
+"Sniffer State": "Sniffer State"
+
+# Description for the disguise option Sniffer State
+"The current mindset of a Sniffer": "The current mindset of a Sniffer"
+
+# Used for the disguise option Sniffer State
+"IDLING": "IDLING"
+
+# Used for the disguise option Sniffer State
+"FEELING_HAPPY": "FEELING_HAPPY"
+
+# Used for the disguise option Sniffer State
+"SCENTING": "SCENTING"
+
+# Used for the disguise option Sniffer State
+"SNIFFING": "SNIFFING"
+
+# Used for the disguise option Sniffer State
+"SEARCHING": "SEARCHING"
+
+# Used for the disguise option Sniffer State
+"DIGGING": "DIGGING"
+
+# Used for the disguise option Sniffer State
+"RISING": "RISING"
+
+# Used for the disguise option Material
+"CHERRY_PLANKS": "CHERRY_PLANKS"
+
+# Used for the disguise option Material
+"CHERRY_SAPLING": "CHERRY_SAPLING"
+
+# Used for the disguise option Material
+"SUSPICIOUS_SAND": "SUSPICIOUS_SAND"
+
+# Used for the disguise option Material
+"SUSPICIOUS_GRAVEL": "SUSPICIOUS_GRAVEL"
+
+# Used for the disguise option Material
+"CHERRY_LOG": "CHERRY_LOG"
+
+# Used for the disguise option Material
+"STRIPPED_CHERRY_LOG": "STRIPPED_CHERRY_LOG"
+
+# Used for the disguise option Material
+"STRIPPED_CHERRY_WOOD": "STRIPPED_CHERRY_WOOD"
+
+# Used for the disguise option Material
+"CHERRY_WOOD": "CHERRY_WOOD"
+
+# Used for the disguise option Material
+"TORCHFLOWER": "TORCHFLOWER"
+
+# Used for the disguise option Material
+"PITCHER_PLANT": "PITCHER_PLANT"
+
+# Used for the disguise option Material
+"PINK_PETALS": "PINK_PETALS"
+
+# Used for the disguise option Material
+"CHERRY_SLAB": "CHERRY_SLAB"
+
+# Used for the disguise option Material
+"DECORATED_POT": "DECORATED_POT"
+
+# Used for the disguise option Material
+"CHERRY_FENCE": "CHERRY_FENCE"
+
+# Used for the disguise option Material
+"CHERRY_STAIRS": "CHERRY_STAIRS"
+
+# Used for the disguise option Material
+"SNIFFER_EGG": "SNIFFER_EGG"
+
+# Used for the disguise option Material
+"CALIBRATED_SCULK_SENSOR": "CALIBRATED_SCULK_SENSOR"
+
+# Used for the disguise option Material
+"CHERRY_BUTTON": "CHERRY_BUTTON"
+
+# Used for the disguise option Material
+"CHERRY_PRESSURE_PLATE": "CHERRY_PRESSURE_PLATE"
+
+# Used for the disguise option Material
+"CHERRY_DOOR": "CHERRY_DOOR"
+
+# Used for the disguise option Material
+"CHERRY_TRAPDOOR": "CHERRY_TRAPDOOR"
+
+# Used for the disguise option Material
+"CHERRY_FENCE_GATE": "CHERRY_FENCE_GATE"
+
+# Used for the disguise option Material
+"CHERRY_BOAT": "CHERRY_BOAT"
+
+# Used for the disguise option Material
+"CHERRY_CHEST_BOAT": "CHERRY_CHEST_BOAT"
+
+# Used for the disguise option Material
+"CHERRY_SIGN": "CHERRY_SIGN"
+
+# Used for the disguise option Material
+"CHERRY_HANGING_SIGN": "CHERRY_HANGING_SIGN"
+
+# Used for the disguise option Material
+"SNIFFER_SPAWN_EGG": "SNIFFER_SPAWN_EGG"
+
+# Used for the disguise option Material
+"TORCHFLOWER_SEEDS": "TORCHFLOWER_SEEDS"
+
+# Used for the disguise option Material
+"PITCHER_POD": "PITCHER_POD"
+
+# Used for the disguise option Material
+"MUSIC_DISC_RELIC": "MUSIC_DISC_RELIC"
+
+# Used for the disguise option Material
+"BRUSH": "BRUSH"
+
+# Used for the disguise option Material
+"NETHERITE_UPGRADE_SMITHING_TEMPLATE": "NETHERITE_UPGRADE_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE": "SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"DUNE_ARMOR_TRIM_SMITHING_TEMPLATE": "DUNE_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"COAST_ARMOR_TRIM_SMITHING_TEMPLATE": "COAST_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"WILD_ARMOR_TRIM_SMITHING_TEMPLATE": "WILD_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"WARD_ARMOR_TRIM_SMITHING_TEMPLATE": "WARD_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"EYE_ARMOR_TRIM_SMITHING_TEMPLATE": "EYE_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"VEX_ARMOR_TRIM_SMITHING_TEMPLATE": "VEX_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"TIDE_ARMOR_TRIM_SMITHING_TEMPLATE": "TIDE_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE": "SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"RIB_ARMOR_TRIM_SMITHING_TEMPLATE": "RIB_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE": "SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE": "WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE": "SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE": "SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"RAISER_ARMOR_TRIM_SMITHING_TEMPLATE": "RAISER_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"HOST_ARMOR_TRIM_SMITHING_TEMPLATE": "HOST_ARMOR_TRIM_SMITHING_TEMPLATE"
+
+# Used for the disguise option Material
+"ANGLER_POTTERY_SHERD": "ANGLER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"ARCHER_POTTERY_SHERD": "ARCHER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"ARMS_UP_POTTERY_SHERD": "ARMS_UP_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"BLADE_POTTERY_SHERD": "BLADE_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"BREWER_POTTERY_SHERD": "BREWER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"BURN_POTTERY_SHERD": "BURN_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"DANGER_POTTERY_SHERD": "DANGER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"EXPLORER_POTTERY_SHERD": "EXPLORER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"FRIEND_POTTERY_SHERD": "FRIEND_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"HEART_POTTERY_SHERD": "HEART_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"HEARTBREAK_POTTERY_SHERD": "HEARTBREAK_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"HOWL_POTTERY_SHERD": "HOWL_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"MINER_POTTERY_SHERD": "MINER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"MOURNER_POTTERY_SHERD": "MOURNER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"PLENTY_POTTERY_SHERD": "PLENTY_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"PRIZE_POTTERY_SHERD": "PRIZE_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"SHEAF_POTTERY_SHERD": "SHEAF_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"SHELTER_POTTERY_SHERD": "SHELTER_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"SKULL_POTTERY_SHERD": "SKULL_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"SNORT_POTTERY_SHERD": "SNORT_POTTERY_SHERD"
+
+# Used for the disguise option Material
+"CHERRY_WALL_SIGN": "CHERRY_WALL_SIGN"
+
+# Used for the disguise option Material
+"CHERRY_WALL_HANGING_SIGN": "CHERRY_WALL_HANGING_SIGN"
+
+# Used for the disguise option Material
+"POTTED_TORCHFLOWER": "POTTED_TORCHFLOWER"
+
+# Used for the disguise option Material
+"POTTED_CHERRY_SAPLING": "POTTED_CHERRY_SAPLING"
+
+# Used for the disguise option Material
+"TORCHFLOWER_CROP": "TORCHFLOWER_CROP"
+
+# Used for the disguise option Material
+"PITCHER_CROP": "PITCHER_CROP"
+
+# Used for the disguise option SoundGroup
+"BLOCK_DISPLAY": "BLOCK_DISPLAY"
+
+# Used for the disguise option SoundGroup
+"INTERACTION": "INTERACTION"
+
+# Used for the disguise option SoundGroup
+"ITEM_DISPLAY": "ITEM_DISPLAY"
+
+# Used for the disguise option SoundGroup
+"SNIFFER": "SNIFFER"
+
+# Used for the disguise option SoundGroup
+"TEXT_DISPLAY": "TEXT_DISPLAY"

@@ -63,6 +63,7 @@ stats:
   forced-stats: {}
 world-settings:
   default:
+    seed-trailruins: 83469867
     seed-ancientcity: 20083232
     seed-buriedtreasure: 10387320
     seed-mineshaft: default
@@ -108,6 +109,8 @@ world-settings:
       exp: 3.0
       item: 2.5
     growth:
+      torchflower-modifier: 100
+      pitcherplant-modifier: 100
       twistingvines-modifier: 100
       weepingvines-modifier: 100
       cavevines-modifier: 100
@@ -155,6 +158,7 @@ world-settings:
         flying-monsters-every: 200
         flying-monsters-for: 100
     entity-tracking-range:
+      display: 128
       players: 48
       animals: 48
       monsters: 48

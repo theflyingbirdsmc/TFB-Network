@@ -11,15 +11,15 @@ if("$System.env.MAVEN_URL" != null) {
 }
 
 dependencies {
-    implementation 'Server:Flamecord:1.5.7'
-    implementation 'NuVotifier:NuVotifier:2.7.3'
-    implementation 'ChatControlRed:BungeeControl-Red:3.15.0'
+    implementation 'Server:Flamecord:1.5.9'
+    implementation 'Votifier:Votifier:2.7.3'
+    implementation 'ChatControlRed:BungeeControlRed:3.15.0'
     implementation 'BuycraftX:BuycraftX-Bungee:12.0.8'
     implementation 'LuckPerms:LuckPerms-Bungee:5.4.98'
     implementation 'spark:spark-bungee:1.10.43'
     implementation 'Plan:Plan:5.5-build-2391'
-    implementation 'Reconnect:Reconnect:1.6.9'
-    implementation 'Vulcan:Vulcan-Bungee:1.0.6'
+    implementation 'BungeeReconnect:BungeeReconnect:1.6.9'
+    implementation 'Vulcan:VulcanBungee:1.0.6'
     implementation 'VotingPlugin:VotingPlugin:6.13.1'
 }
 

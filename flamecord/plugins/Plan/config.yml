@@ -6,6 +6,7 @@
 # -----------------------------------------------------
 Server:
     IP: mc.theflyingbirds.net
+    ServerName: Plan
 Network:
     Name: The Flying Birds
 # -----------------------------------------------------
@@ -19,7 +20,7 @@ Plugin:
         # Display update notification on the website
         Check_for_updates: true
         Notify_about_DEV_releases: false
-    Frontend_BETA: false
+    Use_Legacy_Frontend: false
 # -----------------------------------------------------
 # Supported databases: MySQL
 # -----------------------------------------------------
@@ -33,6 +34,9 @@ Database:
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
         Max_connections: 8
+        Max_Lifetime:
+            Time: 25
+            Unit: MINUTES
 # -----------------------------------------------------
 # More information about SSL Certificate Settings:
 # https://github.com/plan-player-analytics/Plan/wiki/SSL-Certificate-%28HTTPS%29-Set-Up
@@ -75,6 +79,11 @@ Webserver:
         # ! Make sure non-proxy access is not possible, it would allow IP spoofing !
         Use_X-Forwarded-For_Header: false
         IP_whitelist:
+            # Supported formats:
+            # IPv4 exact: "192.168.0.1", wildcard: "192.168.*.*", cidr: "192.168.0.0/16"
+            # IPv6 exact: "0:0:0:0:0:0:0:1", compressed: "1::1", cidr: "1234:db8:1234:1a:20::/64"
+            # More: https://seancfoley.github.io/IPAddress/ipaddress.html#supported-ip-address-parsing-formats
+            # Dynamic DNS hostname: "dns:intranet.example.com", updated once per minute
             Whitelist:
               - "192.168.0.0"
               - "0:0:0:0:0:0:0:1"
@@ -87,8 +96,14 @@ Webserver:
         Access_log:
             Print_to_console: false
             Remove_logs_after_days: 30
+        # Disable /auth/register endpoint
+        Disable_registration: false
     Disable_Webserver: false
     External_Webserver_address: "https://172.18.0.3:%port%"
+    # Use absolute path ("C:\Example\Path", "/var/example/path") or relative ("public_html" -> {server}/plugins/Plan/public_html)
+    # NOTE: All files in this directory can be read by anyone who can access the webserver.
+    # This can be used to host certbot http challenge file, or for customizing Plan React-bundle
+    Public_html_directory: "public_html"
 # -----------------------------------------------------
 Data_gathering:
     Geolocations: true
