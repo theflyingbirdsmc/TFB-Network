@@ -46,7 +46,7 @@ disabled_commands:
 - revertaddresses
 servers:
   lobby:
-    address: localhost:32001
+    address: 65.108.8.46:32001
     motd: ''
     restricted: false
   creative:
