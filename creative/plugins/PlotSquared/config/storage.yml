@@ -11,7 +11,7 @@ sqlite:
 mysql:
   # Should MySQL be used?
   use: true
-  host: "mariadb"
+  host: "localhost"
   port: "3306"
   user: "tfb_plotsquared"
   password: "kBk4x@oQq8ehZ8jF*3mUn&3HMrBz@f"
