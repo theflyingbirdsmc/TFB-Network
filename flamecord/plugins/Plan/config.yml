@@ -66,9 +66,9 @@ Webserver:
     Security:
         SSL_certificate:
             KeyStore_path: proxy
-            Key_pass: tfb123
-            Store_pass: tfb123
-            Alias: tfb
+            # Key_pass: tfb123
+            # Store_pass: tfb123
+            # Alias: tfb
         # HTTPS is required for Login.
         Disable_authentication: false
         # Cross-Origin Resource Sharing (Requests from non-Plan web pages)
