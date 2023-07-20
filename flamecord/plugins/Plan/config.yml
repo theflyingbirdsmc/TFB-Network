@@ -45,7 +45,7 @@ Webserver:
     Port: 8804
     Alternative_IP:
         # %port% is replaced automatically with Webserver.Port
-        Address: 172.18.0.3:%port%
+        Address: 0.0.0.0.:%port%
         Enabled: true
     # InternalIP usually does not need to be changed, only change it if you know what you're doing!
     # 0.0.0.0 allocates Internal (local) IP automatically for the WebServer.
@@ -99,7 +99,7 @@ Webserver:
         # Disable /auth/register endpoint
         Disable_registration: false
     Disable_Webserver: false
-    External_Webserver_address: "https://172.18.0.3:%port%"
+    External_Webserver_address: "https://0.0.0.0:%port%"
     # Use absolute path ("C:\Example\Path", "/var/example/path") or relative ("public_html" -> {server}/plugins/Plan/public_html)
     # NOTE: All files in this directory can be read by anyone who can access the webserver.
     # This can be used to host certbot http challenge file, or for customizing Plan React-bundle
