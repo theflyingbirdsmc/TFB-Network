@@ -3,14 +3,14 @@ prefix: ''
 # SQLite section
 sqlite:
   # Should SQLite be used?
-  use: true
+  use: false
   # The file to use
   db: "storage"
 
 # MySQL section
 mysql:
   # Should MySQL be used?
-  use: false
+  use: true
   host: "mariadb"
   port: "3306"
   user: "tfb_plotsquared"
