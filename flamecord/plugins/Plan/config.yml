@@ -45,7 +45,7 @@ Webserver:
     Port: 8804
     Alternative_IP:
         # %port% is replaced automatically with Webserver.Port
-        #Address: 0.0.0.0.:%port%
+        # Address: 0.0.0.0.:%port%
         Address: stats.theflyingbirds.net
         Enabled: true
     # InternalIP usually does not need to be changed, only change it if you know what you're doing!
@@ -67,9 +67,12 @@ Webserver:
     Security:
         SSL_certificate:
             KeyStore_path: proxy
-            # Key_pass: tfb123
-            # Store_pass: tfb123
-            # Alias: tfb
+            Key_pass: default
+            Store_pass: default
+            Alias: alias
+        # Key_pass: tfb123
+        # Store_pass: tfb123
+        # Alias: tfb
         # HTTPS is required for Login.
         Disable_authentication: false
         # Cross-Origin Resource Sharing (Requests from non-Plan web pages)
