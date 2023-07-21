@@ -4,7 +4,7 @@
 # https://github.com/plan-player-analytics/Plan/wiki/Bukkit-Configuration
 # -----------------------------------------------------
 Server:
-    ServerName: Vanilla_old
+    ServerName: Vanilla
 # -----------------------------------------------------
 Plugin:
     Logging:
