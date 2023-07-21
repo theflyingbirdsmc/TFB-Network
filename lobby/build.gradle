@@ -46,7 +46,7 @@ dependencies {
     implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
     implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Player:2.0.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
     implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
 }
