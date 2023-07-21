@@ -10,4 +10,17 @@
 #
 
 regions:
+    __global__:
+        members: {}
+        flags:
+            coral-fade: deny
+            build: deny
+            fall-damage: deny
+            invincible: allow
+            leaf-decay: deny
+            pvp: deny
+            fire-spread: deny
+        owners: {}
+        type: global
+        priority: 0
     titles-always-use-default-times: true
