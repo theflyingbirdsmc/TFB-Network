@@ -23,7 +23,7 @@ dependencies {
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
     implementation 'HexNicks:HexNicks:3.1.1'
-    // implementation 'GSit:GSit:1.4.10'
+    implementation 'GSit:GSit:1.4.10'
     implementation 'LibsDisguises:LibsDisguises:10.0.37'
     implementation 'LuckPerms:LuckPerms:5.4.98'
     implementation 'Multiverse-Core:Multiverse-Core:4.3.9'
