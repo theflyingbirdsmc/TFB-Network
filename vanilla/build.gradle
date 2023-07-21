@@ -19,7 +19,7 @@ dependencies {
     implementation 'CommandPanels:CommandPanels:3.19.1.0'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
     implementation 'CoreProtect:CoreProtect:21.3'
-    implementation 'Essentials:Essentials:2.20.0'
+    implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
     implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.20.0'
     implementation 'EssentialsChat:EssentialsChat:2.20.0'
     implementation 'EssentialsProtect:EssentialsProtect:2.20.0'
@@ -50,10 +50,11 @@ dependencies {
     implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
     implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Player:2.0.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
     implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-Vault:1.8.1'
     implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-World:1.2.2'
 }
 
 // TFB Artifactory

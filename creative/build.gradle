@@ -18,11 +18,7 @@ dependencies {
     implementation 'ChatControlRed:ChatControlRed:10.19.4'
     implementation 'CommandPanels:CommandPanels:3.19.1.0'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
-    implementation 'Essentials:Essentials:2.20.0'
-    implementation 'EssentialsAntiBuild:EssentialsAntiBuild:2.20.0'
-    implementation 'EssentialsChat:EssentialsChat:2.20.0'
-    implementation 'EssentialsGeoIP:EssentialsGeoIP:2.20.0'
-    implementation 'EssentialsProtect:EssentialsProtect:2.20.0'
+    implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
@@ -34,7 +30,6 @@ dependencies {
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
-    implementation 'SuperVanish:SuperVanish:6.2.16'
     implementation 'spark:spark:1.10.43'
     implementation 'TAB:TAB:4.0.3'
     implementation 'Vault:Vault:1.7.3-b131'
@@ -45,8 +40,8 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.5'
 
     // Server plugins
-    implementation 'PlotSquared:PlotSquared:6.11.1-Premium'
-    implementation 'PlotHider:PlotHider:6.0.1'
+    implementation 'PlotSquared:PlotSquared:7.0.0-RC.2-Premium'
+    // implementation 'PlotHider:PlotHider:6.0.1'
 
     //PlaceholderAPI Expansions
     implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
@@ -54,7 +49,7 @@ dependencies {
     implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
     implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Player:2.0.5'
+    implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
     implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
     implementation 'PAPI-Expansion:PAPI-Expansion-Vault:1.8.1'
     implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
