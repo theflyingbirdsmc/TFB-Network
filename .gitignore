@@ -28,7 +28,7 @@ TFB-**/logs/
 */plugins/EssentialsGeoIP/config.yml
 */plugins/Parkour/players/*
 .github/workflows/scripts/livevalues.yml
-**/world**
+/*/world*/
 **/.gradle
 *build/
 **/gradle.properties
