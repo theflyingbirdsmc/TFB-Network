@@ -2,8 +2,8 @@ spawns:
   default:
     world: f717b685-24fc-4f41-9bff-037195902266
     world-name: world_vanilla
-    x: 0.0
-    y: 200.0
-    z: 0.0
-    yaw: 0.0014138072729110718
-    pitch: 0.049849383533000946
+    x: 0.500
+    y: 201.0
+    z: 0.500
+    yaw: 0.0
+    pitch: 0.0
