@@ -116,7 +116,7 @@ Menu-Item:
 
 # List of the worlds where cosmetics are enabled!
 Enabled-Worlds:
-- parkour
+- world_parkour
 
 # List of the disabled cosmetics.
 # Set to true to disable it.
@@ -388,4 +388,4 @@ Blacklisted-Regions:
 Check-Update: true
 
 # Do not edit this.
-Config-Version: 2.0.4
+Config-Version: 2.0.6
