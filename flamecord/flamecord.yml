@@ -58,7 +58,7 @@ allow-invalid-names: false
 antibot:
   accounts:
     enabled: true
-    firewall: true
+    firewall: false
     limit: 3
     log: true
     whitelist:
@@ -84,7 +84,7 @@ antibot:
     time: 1000
     log: true
   firewall:
-    enabled: true
+    enabled: false
     exceptions:
     - BadPacketException
     - QuietException
