@@ -21,7 +21,7 @@ function translate() {
                 return "";
                 break;
             default:
-                return "&a🧭 &eClick here or use the &acompass &eto get started &a🧭";
+                return "&a🧭 &aClick here &eor use the &acompass &eto get started &a🧭";
         }
     } else { return "error"; }
 }
