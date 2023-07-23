@@ -19,8 +19,7 @@ dependencies {
     implementation 'CommandPanels:CommandPanels:3.19.1.0'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
     implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
-    implementation 'EssentialsChat:EssentialsChat:2.20.0'
-    implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
+    implementation 'EssentialsSpawn:EssentialsSpawn:2.20.1-dev+29-6012959'
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
     implementation 'HexNicks:HexNicks:3.1.1'
@@ -31,7 +30,6 @@ dependencies {
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
-    implementation 'SuperVanish:SuperVanish:6.2.16'
     implementation 'spark:spark:1.10.43'
     implementation 'TAB:TAB:4.0.3'
     implementation 'Vault:Vault:1.7.3-b131'
@@ -42,7 +40,7 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.5'
     
     // Local plugins
-    implementation 'VoidGen:VoidGen:2.2.1'
+    // implementation 'VoidGen:VoidGen:2.2.1'
     implementation 'Parkour:Parkour:7.2.0'
     implementation 'ParkourTopTen:ParkourTopTen:4.1'
 

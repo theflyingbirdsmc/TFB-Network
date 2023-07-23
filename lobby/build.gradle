@@ -30,7 +30,6 @@ dependencies {
     implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
-    // implementation 'SuperVanish:SuperVanish:6.2.16'
     implementation 'spark:spark:1.10.43'
     implementation 'TAB:TAB:4.0.3'
     implementation 'Vault:Vault:1.7.3-b131'
