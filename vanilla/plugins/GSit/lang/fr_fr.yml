@@ -1,4 +1,5 @@
 Plugin:
+  plugin-data: '[P]&c A connection to the data storage could not be established. Please check the server console!'
   
   plugin-enabled: '[P]&a Le plugin a été activé avec succès.'
   plugin-link: '[P]&a Lien avec&6 %Link%&a réussi !'

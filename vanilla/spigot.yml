@@ -59,6 +59,7 @@ players:
   disable-saving: false
 world-settings:
   default:
+    seed-trailruins: 83469867
     below-zero-generation-in-existing-chunks: true
     view-distance: default
     simulation-distance: default
@@ -77,6 +78,8 @@ world-settings:
     nerf-spawner-mobs: false
     mob-spawn-range: 3
     growth:
+      torchflower-modifier: 100
+      pitcherplant-modifier: 100
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
@@ -124,6 +127,7 @@ world-settings:
       tick-inactive-villagers: true
       ignore-spectators: false
     entity-tracking-range:
+      display: 128
       players: 48
       animals: 48
       monsters: 48

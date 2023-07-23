@@ -562,3 +562,96 @@
 
 # Found in the disguise options for Panda and uses a Gene
 "setGene": "setGene"
+
+# Found in the disguise options for Allay and uses a boolean
+"setCanDuplicate": "setCanDuplicate"
+
+# Found in the disguise options for Entity and uses a int
+"setTicksFrozen": "setTicksFrozen"
+
+# Found in the disguise options for Display and uses a Billboard
+"setBillboard": "setBillboard"
+
+# Found in the disguise options for Display and uses a float
+"setDisplayHeight": "setDisplayHeight"
+
+# Found in the disguise options for Display and uses a float
+"setDisplayWidth": "setDisplayWidth"
+
+# Found in the disguise options for Display and uses a Color
+"setGlowColorOverride": "setGlowColorOverride"
+
+# Found in the disguise options for Display and uses a int
+"setInterpolationDelay": "setInterpolationDelay"
+
+# Found in the disguise options for Display and uses a int
+"setInterpolationDuration": "setInterpolationDuration"
+
+# Found in the disguise options for Display and uses a Quaternionf
+"setLeftRotation": "setLeftRotation"
+
+# Found in the disguise options for Display and uses a Quaternionf
+"setRightRotation": "setRightRotation"
+
+# Found in the disguise options for Display and uses a Vector3f
+"setScale": "setScale"
+
+# Found in the disguise options for Display and uses a float
+"setShadowRadius": "setShadowRadius"
+
+# Found in the disguise options for Display and uses a float
+"setShadowStrength": "setShadowStrength"
+
+# Found in the disguise options for Display and uses a Transformation
+"setTransformation": "setTransformation"
+
+# Found in the disguise options for Display and uses a Vector3f
+"setTranslation": "setTranslation"
+
+# Found in the disguise options for Display and uses a float
+"setViewRange": "setViewRange"
+
+# Found in the disguise options for Goat and uses a boolean
+"setHasLeftHorn": "setHasLeftHorn"
+
+# Found in the disguise options for Goat and uses a boolean
+"setHasRightHorn": "setHasRightHorn"
+
+# Found in the disguise options for Interaction and uses a float
+"setInteractionHeight": "setInteractionHeight"
+
+# Found in the disguise options for Interaction and uses a float
+"setInteractionWidth": "setInteractionWidth"
+
+# Found in the disguise options for Interaction and uses a boolean
+"setResponsive": "setResponsive"
+
+# Found in the disguise options for ItemDisplay and uses a ItemDisplayTransform
+"setItemDisplayTransform": "setItemDisplayTransform"
+
+# Found in the disguise options for Slime and uses a int
+"setUnsafeSize": "setUnsafeSize"
+
+# Found in the disguise options for Player and uses a String
+"setTablistName": "setTablistName"
+
+# Found in the disguise options for TextDisplay and uses a TextAlignment
+"setAlignment": "setAlignment"
+
+# Found in the disguise options for TextDisplay and uses a Color
+"setBackgroundColor": "setBackgroundColor"
+
+# Found in the disguise options for TextDisplay and uses a boolean
+"setDefaultBackground": "setDefaultBackground"
+
+# Found in the disguise options for TextDisplay and uses a int
+"setLineWidth": "setLineWidth"
+
+# Found in the disguise options for TextDisplay and uses a boolean
+"setSeeThrough": "setSeeThrough"
+
+# Found in the disguise options for TextDisplay and uses a boolean
+"setShadowed": "setShadowed"
+
+# Found in the disguise options for TextDisplay and uses a String
+"setText": "setText"

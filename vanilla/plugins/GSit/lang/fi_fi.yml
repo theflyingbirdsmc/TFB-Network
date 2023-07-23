@@ -1,4 +1,5 @@
 Plugin:
+  plugin-data: '[P]&c A connection to the data storage could not be established. Please check the server console!'
   
   plugin-enabled: '[P]&a Laajennus käynnistyi onnistuneesti.'
   plugin-link: '[P]&a Yhdistettiin onnistuneesti&6 %Link%&a laajennukseen!'

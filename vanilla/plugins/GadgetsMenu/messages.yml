@@ -993,3 +993,5 @@ Received-Mystery-Boxes: '{PREFIX}&eYou''ve received &b{MYSTERY_BOXES} Mystery Eg
   &efrom &b{PLAYER}&e.'
 Failed-To-Reload-Plugin: '{PREFIX}&cUnable to reload GadgetsMenu plugin. The plugin
   has been disabled. You need to restart the server to re-enable the plugin.'
+Target-Player-No-Permission: '{PREFIX}&c{PLAYER} does not have the required permissions
+  to equip this cosmetic.'

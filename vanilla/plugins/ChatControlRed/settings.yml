@@ -161,6 +161,9 @@ Channels:
   #                 or other plugins. You may need adjusting this: 
   #                 https://github.com/kangarko/ChatControl-Red/wiki/Listener-Priorities
   #
+  # - Sound: A sound played to all players who read/write to the channel each time a message is posted.
+  #          See Sound_Notify.Sound for help
+  #
   List:
     Danish:
       Format: chat
@@ -268,12 +271,12 @@ Anti_Spam:
     # The threshold after which we will forgive the player for running the same command.
     Similarity_Time: 10 seconds
     
-    # Commands the player can type bypassing the Delay above. We check the command label
-    # so if you put "/tell" there, "/tell ANYTHING" will be matched.
+    # Commands the player can type bypassing the Delay above. Regular expressions are applied.
     #
     # Whitelist_Delay:
-    #   - /spawn
-    #   - /hello
+    #   - '/cmi spawn' (will match '/cmi spawn', '/cmi spawn blablabla' etc.)
+    #   - '/cmi spawn$' (will ONLY match '/cmi spawn', but no '/cmi spawn blablabla')
+    #   - '/cmi' (will match '/cmi', '/cmi spawn' etc.)
     Whitelist_Delay: []
     
     # Commands the player can type bypassing the Similarity above. We check the command label
@@ -377,14 +380,22 @@ Anti_Bot:
   # Prevent placing two signs with the same text. Blocks "AutoSign" hack where the hack client
   # automatically places a sign with the same text just by right clicking with it.
   Block_Same_Text_Signs: false
-  
-  # Filter bad player names from entering your server. Supports regular expressions. Example:
-  # Disallowed_Usernames:
-  #   - '(f+(\W|\d|_)*u+(\W|\d|_)*c+(\W|\d|_)*k+(\W|\d|_)*)'
-  #   - bitch
-  #   - asshole
+ 
+  # Prevent certain names from joining the server 
   Disallowed_Usernames:
-  - 'Notch'
+    
+    # Filter bad player names from entering your server. Supports regular expressions. Example:
+    # Disallowed_Usernames:
+    #   - '(f+(\W|\d|_)*u+(\W|\d|_)*c+(\W|\d|_)*k+(\W|\d|_)*)'
+    #   - bitch
+    #   - asshole
+    List:
+    - 'Notch'
+    
+    # Run the command for the kicked player as console. 
+    # Replace {player} with the player name and {uuid} as console.
+    Commands: []
+    
 
   # Control how fast the player can do certain actions.
   Cooldown:
@@ -514,14 +525,15 @@ Private_Messages:
   # Should we enable this feature?
   Enabled: false
   
+  # Should we send PMs over bungee cord? Requires Integration.BungeeCord.Enabled to be true
+  Bungee: true
+  
   # Send message as an advancement (requires Minecraft 1.12+)?
   # [IMPORTANT] This causes a performance penaulty visible in timings because Toasts must be
   # sent on the main server thread (otherwise your data in world/ folder(s) may be get corrupted)
   Toasts: false
   
-  # Format: sound_name, volume (float, from 0.0F to 1.0F), pitch (float, from 0.0F to 1.0F)
-  # For all available sounds, see https://mineacademy.org/sounds
-  # Set to "none" to disable
+  # See Sound_Notify.Sound for help, or set to none to disable
   Sound: ENTITY_CHICKEN_EGG 1F 1.5F
 
   # If you type /tell <player> we toggle automode for you, so chat messages will go to their inbox.
@@ -853,9 +865,7 @@ Motd:
   # What message is sent when the player is a newcomer? See the "Newcomer" section for settings.
   Format_Motd_Newcomer: motd
   
-  # Format: sound_name, volume (float, from 0.0F to 1.0F), pitch (float, from 0.0F to 1.0F)
-  # For all available sounds, see https://mineacademy.org/sounds
-  # Set to "none" to disable
+  # See Sound_Notify.Sound for help, or set to none to disable
   Sound: ENTITY_FIREWORK_LAUNCH 1F 0.1F
  
   # Commands to run. They will only be run when player joins and not in /motd or any other way.
@@ -876,9 +886,7 @@ Motd:
 Announcer:
   
   # Sound played when sending chat message announcements.
-  # Format: sound_name, volume (float, from 0.0F to 1.0F), pitch (float, from 0.0F to 1.0F)
-  # For all available sounds, see https://mineacademy.org/sounds. Set to "none" to disable
-  # Set to "none" to disable
+  # See Sound_Notify.Sound for help, or set to none to disable
   Chat_Sound: ENTITY_ARROW_HIT_PLAYER 1.0F 0.1F
 
 # -------------------------------------------------------------------------------------------------
@@ -919,6 +927,10 @@ Tag:
   # EDIT AS YOU WISH BUT THERE MUST BE AT LEAST ONE ALIAS
   Command_Aliases:
   - 'tag'
+  
+  # If player does not have a ChatControl nick, should we check Essentials/CMI?
+  # Has a slight performance penaulty.
+  Backward_Compatible: false
   
   # The max allowed length for a nick? (Colors are not counted)
   Max_Nick_Length: 10
