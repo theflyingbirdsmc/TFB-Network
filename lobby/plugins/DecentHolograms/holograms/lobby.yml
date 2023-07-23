@@ -1,4 +1,4 @@
-location: world_lobby:0.539:131.000:6.475
+location: world_lobby:0.500:131.000:2.500
 enabled: true
 display-range: 48
 update-range: 48
@@ -14,7 +14,7 @@ pages:
   - content: '%javascript_lobby_hologram_3,{player_locale_short}%'
     height: 0.3
   actions:
-    RIGHT:
-    - COMMAND:/tfb
     LEFT:
+    - COMMAND:/tfb
+    RIGHT:
     - COMMAND:/tfb
