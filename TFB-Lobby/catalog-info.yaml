@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Lobby
+  description: Lobby server for lobbying players
+  # labels:
+  #   example.com/custom: custom_label_value
+  # annotations:
+  #   example.com/service-discovery: artistweb
+  #   circleci.com/project-slug: github/example-org/artist-website
+  tags:
+    - paper
+    - "1-19-4"
+  links:
+    - url: https://panel.theflyingbirds.net/server/2433106a
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: server
+  lifecycle: production
+  owner: theflyingbirdsmc/bungeecord
+  # system: eu
+  # domain: tfb-network
