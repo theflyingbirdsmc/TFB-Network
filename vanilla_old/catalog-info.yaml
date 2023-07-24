@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: Parkour
-  description: Test your Parkour skills!
+  name: Vanilla_OLD
+  description: Vanilla survival
   # labels:
   #   example.com/custom: custom_label_value
   # annotations:
@@ -11,14 +11,15 @@ metadata:
   tags:
     - paper
     - "1-19-4"
+    - survival
   links:
-    - url: https://panel.theflyingbirds.net/server/31b03670
+    - url: https://panel.theflyingbirds.net/server/9aa935d0
       title: Admin Dashboard
       icon: dashboard
       type: admin-dashboard
 spec:
   type: server
   lifecycle: production
-  owner: theflyingbirdsmc/eu
+  owner: theflyingbirdsmc/dk
   # system: eu
   # domain: tfb-network
