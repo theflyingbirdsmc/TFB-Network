@@ -1,1 +1,112 @@
 configuration_version: v5
+worlds:
+  Creative:
+    plot:
+      height: 62
+      biome: minecraft:forest
+      sign_material: OAK_WALL_SIGN
+      size: 42
+      filling: minecraft:stone
+      auto_merge: false
+      bedrock: true
+      create_signs: true
+      floor: minecraft:grass_block
+    wall:
+      filling: minecraft:stone
+      block_claimed: minecraft:sandstone_slab
+      height: 62
+      block: minecraft:stone_slab
+      place_top_block: true
+    misc_spawn_unowned: false
+    road:
+      block: minecraft:quartz_block
+      flags: {}
+      height: 62
+      width: 7
+    home:
+      nonmembers: side
+      default: side
+    schematic:
+      specify_on_claim: false
+      on_claim: false
+      file: 'null'
+      schematics: []
+    chat:
+      forced: false
+      enabled: true
+    economy:
+      prices:
+        merge: 100
+        sell: 100
+        claim: 100
+      use: false
+    world:
+      max_gen_height: 319
+      max_height: 320
+      gamemode: creative
+      min_gen_height: -64
+      min_height: -63
+      border: false
+    event:
+      spawn:
+        egg: false
+        breeding: false
+        custom: true
+    natural_mob_spawning: false
+    mob_spawner_spawning: false
+    flags: {}
+  world_creative:
+    plot:
+      height: 62
+      biome: minecraft:forest
+      sign_material: OAK_WALL_SIGN
+      size: 42
+      filling: minecraft:stone
+      auto_merge: false
+      bedrock: true
+      create_signs: true
+      floor: minecraft:grass_block
+    wall:
+      filling: minecraft:stone
+      block_claimed: minecraft:sandstone_slab
+      height: 62
+      block: minecraft:stone_slab
+      place_top_block: true
+    misc_spawn_unowned: false
+    road:
+      block: minecraft:quartz_block
+      flags: {}
+      height: 62
+      width: 7
+    home:
+      nonmembers: side
+      default: side
+    schematic:
+      specify_on_claim: false
+      on_claim: false
+      file: 'null'
+      schematics: []
+    chat:
+      forced: false
+      enabled: true
+    economy:
+      prices:
+        merge: 100
+        sell: 100
+        claim: 100
+      use: false
+    world:
+      max_gen_height: 319
+      max_height: 320
+      gamemode: creative
+      min_gen_height: -64
+      min_height: -63
+      border: false
+    event:
+      spawn:
+        egg: false
+        breeding: false
+        custom: true
+    natural_mob_spawning: false
+    mob_spawner_spawning: false
+    flags: {}
