@@ -3,7 +3,7 @@ name: Build and Publish Lobby Docker Image to Nexus Artifactory
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - 'lobby/**'
       - .github/workflows/Lobby.yml

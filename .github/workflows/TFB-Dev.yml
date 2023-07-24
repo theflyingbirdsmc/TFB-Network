@@ -3,7 +3,7 @@ name: Build and Publish TFB Dev Docker Image to Nexus Artifactory
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - '.devcontainer/**'
 jobs:

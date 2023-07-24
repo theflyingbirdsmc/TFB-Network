@@ -3,7 +3,7 @@ name: Build and Publish Parkour Docker Image to Nexus Artifactory
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - 'parkour/**'
       - .github/workflows/Parkour.yml
