@@ -1,0 +1,151 @@
+panels:
+  parkour_ranked:
+    perm: default
+    rows: 6
+    title: '&8Ranked Parkour'
+    empty: air
+    item:
+        '45':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= parkour_menu
+        '49':
+          material: YELLOW_WOOL
+          stack: 1
+          name: '&cKeybindings'
+          lore:
+          - 'Left click to join'
+          - 'Right click to view stats'
+          - 'Middle click to view leaderboard'
+        '0':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_easy%&r (Views: &b%parkour_course_views_easy%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_easy_player%&8: &b%parkour_course_record_easy_time%'
+          - '&eCreated by: &f%parkour_course_creator_easy%'
+          - '&eReward: &b$%parkour_course_ecoreward_easy% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_easy%'
+          - '&eOnline: &b%parkour_course_players_easy%'
+          commands:
+          - left= parkour join easy
+          - right= parkour stats easy
+          - middle= parkour leaderboard easy
+        '9':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_medium%&r (Views: &b%parkour_course_views_medium%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_medium_player%&8: &b%parkour_course_record_medium_time%'
+          - '&eCreated by: &f%parkour_course_creator_medium%'
+          - '&eReward: &b$%parkour_course_ecoreward_medium% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_medium%'
+          - '&eOnline: &b%parkour_course_players_medium%'
+          commands:
+          - left= parkour join medium
+          - right= parkour stats medium
+          - middle= parkour leaderboard medium
+        '18':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_hard%&r (Views: &b%parkour_course_views_hard%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_hard_player%&8: &b%parkour_course_record_hard_time%'
+          - '&eCreated by: &f%parkour_course_creator_hard%'
+          - '&eReward: &b$%parkour_course_ecoreward_hard% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_hard%'
+          - '&eOnline: &b%parkour_course_players_hard%'
+          commands:
+          - left= parkour join hard
+          - right= parkour stats hard
+          - middle= parkour leaderboard hard
+        '27':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_expert%&r (Views: &b%parkour_course_views_expert%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_expert_player%&8: &b%parkour_course_record_expert_time%'
+          - '&eCreated by: &f%parkour_course_creator_expert%'
+          - '&eReward: &b$%parkour_course_ecoreward_expert% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_expert%'
+          - '&eOnline: &b%parkour_course_players_expert%'
+          commands:
+          - left= parkour join expert
+          - right= parkour stats expert
+          - middle= parkour leaderboard expert
+        '2':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_rainbowrun%&r (Views: &b%parkour_course_views_rainbowrun%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_rainbowrun_player%&8: &b%parkour_course_record_rainbowrun_time%'
+          - '&eCreated by: &f%parkour_course_creator_rainbowrun%'
+          - '&eReward: &b$%parkour_course_ecoreward_rainbowrun% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_rainbowrun%'
+          - '&eOnline: &b%parkour_course_players_rainbowrun%'
+          commands:
+          - left= parkour join rainbowrun
+          - right= parkour stats rainbowrun
+          - middle= parkour leaderboard rainbowrun
+        '11':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_rainbowclimb%&r (Views: &b%parkour_course_views_rainbowclimb%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_rainbowclimb_player%&8: &b%parkour_course_record_rainbowclimb_time%'
+          - '&eCreated by: &f%parkour_course_creator_rainbowclimb%'
+          - '&eReward: &b$%parkour_course_ecoreward_rainbowclimb% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_rainbowclimb%'
+          - '&eOnline: &b%parkour_course_players_rainbowclimb%'
+          commands:
+          - left= parkour join rainbowclimb
+          - right= parkour stats rainbowclimb
+          - middle= parkour leaderboard rainbowclimb
+        '20':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_rainbowfall%&r (Views: &b%parkour_course_views_rainbowfall%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_rainbowfall_player%&8: &b%parkour_course_record_rainbowfall_time%'
+          - '&eCreated by: &f%parkour_course_creator_rainbowfall%'
+          - '&eReward: &b$%parkour_course_ecoreward_rainbowfall% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_rainbowfall%'
+          - '&eOnline: &b%parkour_course_players_rainbowfall%'
+          commands:
+          - left= parkour join rainbowfall
+          - right= parkour stats rainbowfall
+          - middle= parkour leaderboard rainbowfall
+        '4':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_treeoflife%&r (Views: &b%parkour_course_views_treeoflife%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_treeoflife_player%&8: &b%parkour_course_record_treeoflife_time%'
+          - '&eCreated by: &f%parkour_course_creator_treeoflife%'
+          - '&eReward: &b$%parkour_course_ecoreward_treeoflife% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_treeoflife%'
+          - '&eOnline: &b%parkour_course_players_treeoflife%'
+          commands:
+          - left= parkour join treeoflife
+          - right= parkour stats treeoflife
+          - middle= parkour leaderboard treeoflife
+        '13':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_skywars%&r (Views: &b%parkour_course_views_skywars%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_skywars_player%&8: &b%parkour_course_record_skywars_time%'
+          - '&eCreated by: &f%parkour_course_creator_skywars%'
+          - '&eReward: &b$%parkour_course_ecoreward_skywars% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_skywars%'
+          - '&eOnline: &b%parkour_course_players_skywars%'
+          commands:
+          - left= parkour join skywars
+          - right= parkour stats skywars
+          - middle= parkour leaderboard skywars
+        '22':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_flyingvillage%&r (Views: &b%parkour_course_views_flyingvillage%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_flyingvillage_player%&8: &b%parkour_course_record_flyingvillage_time%'
+          - '&eCreated by: &f%parkour_course_creator_flyingvillage%'
+          - '&eReward: &b$%parkour_course_ecoreward_flyingvillage% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_flyingvillage%'
+          - '&eOnline: &b%parkour_course_players_flyingvillage%'
+          commands:
+          - left= parkour join flyingvillage
+          - right= parkour stats flyingvillage
+          - middle= parkour leaderboard flyingvillage

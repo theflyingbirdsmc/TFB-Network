@@ -1,0 +1,85 @@
+Animations:
+  None:
+    Name: '&aAnimation: None'
+    Material: BARRIER
+    Enabled: true
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aNone&7.'
+  Normal:
+    Name: '&aAnimation: Normal'
+    Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Enabled: true
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aNormal&7.'
+  CountDown:
+    Name: '&aAnimation: Countdown'
+    Material: CLOCK
+    Enabled: true
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aCountdown&7.'
+  Star:
+    Name: '&aAnimation: Crying Rubber Duck'
+    Material: head:92dce694ae9c4e3d9c1666be4a8e1313900fb3becd4a51cd8410ae4a38b4b7f6
+    Enabled: true
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Mystery-Box-Quality-Block:
+      Material: head:92dce694ae9c4e3d9c1666be4a8e1313900fb3becd4a51cd8410ae4a38b4b7f6
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aCrying Rubber Duck&7.'
+  Crafting:
+    Name: '&aAnimation: Budgie'
+    Material: CRAFTING_TABLE
+    Enabled: false
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Mystery-Box-Quality-Block:
+      Material: CRAFTING_TABLE
+      Rotational-Angle:
+        X: 270
+        Y: 0
+        Z: 45
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aCrafting&7.'
+  Summer:
+    Name: '&aAnimation: Colibri'
+    Material: SUNFLOWER
+    Enabled: false
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Mystery-Box-Quality-Block:
+      Material: SUNFLOWER
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aSummer&7.'
+  Halloween:
+    Name: '&aAnimation: Halloween'
+    Material: JACK_O_LANTERN
+    Enabled: false
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aHalloween&7.'
+  Holiday:
+    Name: '&aAnimation: Phoenix'
+    Material: head:23aaf7b1a778949696cb99d4f04ad1aa518ceee256c72e5ed65bfa5c2d88d9e
+    Enabled: true
+    Mini-Block:
+      Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+    Mystery-Box-Quality-Block:
+      Material: head:23aaf7b1a778949696cb99d4f04ad1aa518ceee256c72e5ed65bfa5c2d88d9e
+    Lore:
+    - '&7Set your Mystery Vault'
+    - '&7animation to &aPhoenix&7.'

@@ -1,0 +1,21 @@
+# -----------------------------------------------------------------------------------------
+# Represents a chat format file that can be used to stylize messages.
+# See the chat.yml for a tutorial on how this works.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  channel:
+    Hover:
+    - '&eClick to reply in channel'
+    Suggest_Command: '/s '
+    Message: '&8[&#ee2b23T&#3551d7F&#00ff00B &bStaff&8]'
+  player:
+    Hover:
+    - '&7Rank: &f%luckperms_primary_group_name%'
+    - '&7Server: &f{server_name}'
+    - '&eClick to join player'
+    Run_Command: /server {server_name}
+    Message: '&r {player_nick}'
+  message:
+    Message: ' &8»&r &b{message}'

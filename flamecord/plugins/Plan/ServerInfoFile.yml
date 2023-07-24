@@ -1,0 +1,6 @@
+# Changing the UUID in this file will make Plan regard your server as a completely new server
+# Tread with caution.
+Server:
+    ID: 1
+    UUID: "69486032-1c34-4a35-b272-e919a28e0022"
+    Web_address: "https://stats.theflyingbirds.net"

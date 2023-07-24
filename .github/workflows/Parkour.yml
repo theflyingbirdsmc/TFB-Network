@@ -2,8 +2,11 @@ name: Build and Publish Parkour Docker Image to Nexus Artifactory
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - 'TFB-Parkour/**'
+      - 'parkour/**'
+      - .github/workflows/Parkour.yml
 
 jobs:
   build-test-publish:
@@ -26,7 +29,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: cd TFB-Parkour && gradle server && gradle plugins
+        run: cd parkour && gradle update
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -40,7 +43,33 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./TFB-Parkour # specifying the directory where your Dockerfile is
-          file: ./TFB-Parkour/Dockerfile # specifying the path to your Dockerfile
+          context: ./parkour # specifying the directory where your Dockerfile is
+          file: ./parkour/Dockerfile # specifying the path to your Dockerfile
           push: true
           tags: ${{ secrets.MAVEN_DOCKER_REPO }}/parkour:latest # change this to your image name
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Cleanup
+        run: |
+          gh extension install actions/gh-actions-cache
+          
+          REPO=${{ github.repository }}
+          BRANCH="refs/pull/${{ github.event.pull_request.number }}/merge"
+
+          echo "Fetching list of cache key"
+          cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH | cut -f 1 )
+
+          ## Setting this to not fail the workflow while deleting cache keys. 
+          set +e
+          echo "Deleting caches..."
+          for cacheKey in $cacheKeysForPR
+          do
+              gh actions-cache delete $cacheKey -R $REPO -B $BRANCH --confirm
+          done
+          echo "Done"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

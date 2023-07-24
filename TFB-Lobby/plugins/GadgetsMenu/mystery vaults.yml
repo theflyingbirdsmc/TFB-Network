@@ -1,8 +1,0 @@
-Mystery-Vaults:
-  TFBVault:
-    BlockFace: EAST
-    Location:
-      world: world
-      x: -8.0
-      y: 65.0
-      z: -5.0

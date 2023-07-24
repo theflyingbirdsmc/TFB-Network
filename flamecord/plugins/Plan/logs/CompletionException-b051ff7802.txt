@@ -1,0 +1,77 @@
+b051ff7802 - Last occurred: 2023-07-19 Occurrences: 1
+---- Context 1 ----
+Plan v5.5 build 2391
+BungeeCord 1.5.9
+Server v1.5.9
+
+Transaction: class com.djrapitops.plan.extension.implementation.storage.transactions.providers.StoreProviderTransaction
+DB State: OPEN - fatal: false
+Error code: 1213
+INSERT INTO plan_extension_providers(name,text,description,priority,condition_name,show_in_players_table,hidden,provided_condition,format_type,player_name,tab_id,icon_id,plugin_id) VALUES (?,?,?,?,?,?,?,?,?,?,(SELECT id FROM plan_extension_tabs WHERE name=? AND plugin_id=(SELECT id FROM plan_extension_plugins WHERE name=? AND server_uuid=? LIMIT 1) LIMIT 1),?,(SELECT id FROM plan_extension_plugins WHERE name=? AND server_uuid=? LIMIT 1))
+Deadlock
+
+---- Stacktrace ----
+java.util.concurrent.CompletionException: com.djrapitops.plan.exceptions.database.DBOpException: SQL Failure: Deadlock found when trying to get lock; try restarting transaction
+   java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+   java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1770)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)
+Caused by:
+com.djrapitops.plan.exceptions.database.DBOpException: SQL Failure: Deadlock found when trying to get lock; try restarting transaction
+   com.djrapitops.plan.exceptions.database.DBOpException.forCause(DBOpException.java:152)
+   com.djrapitops.plan.storage.database.transactions.ExecStatement.execute(ExecStatement.java:57)
+   com.djrapitops.plan.extension.implementation.storage.transactions.providers.StoreProviderTransaction.lambda$storeProvider$0(StoreProviderTransaction.java:70)
+   com.djrapitops.plan.storage.database.transactions.Transaction.execute(Transaction.java:214)
+   com.djrapitops.plan.extension.implementation.storage.transactions.providers.StoreProviderTransaction.performOperations(StoreProviderTransaction.java:64)
+   com.djrapitops.plan.storage.database.transactions.Transaction.executeTransaction(Transaction.java:89)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$executeTransaction$4(SQLDB.java:348)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:78)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:56)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$executeTransaction$5(SQLDB.java:347)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)
+Caused by:
+com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Deadlock found when trying to get lock; try restarting transaction
+   com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:124)
+   com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+   com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+   plan.com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+   plan.com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+   com.djrapitops.plan.storage.database.transactions.ExecStatement.callExecute(ExecStatement.java:70)
+   com.djrapitops.plan.storage.database.transactions.ExecStatement.execute(ExecStatement.java:64)
+   com.djrapitops.plan.storage.database.transactions.ExecStatement.execute(ExecStatement.java:55)
+   com.djrapitops.plan.extension.implementation.storage.transactions.providers.StoreProviderTransaction.lambda$storeProvider$0(StoreProviderTransaction.java:70)
+   com.djrapitops.plan.storage.database.transactions.Transaction.execute(Transaction.java:214)
+   com.djrapitops.plan.extension.implementation.storage.transactions.providers.StoreProviderTransaction.performOperations(StoreProviderTransaction.java:64)
+   com.djrapitops.plan.storage.database.transactions.Transaction.executeTransaction(Transaction.java:89)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$executeTransaction$4(SQLDB.java:348)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:78)
+   com.djrapitops.plan.storage.database.DBAccessLock.performDatabaseOperation(DBAccessLock.java:56)
+   com.djrapitops.plan.storage.database.SQLDB.lambda$executeTransaction$5(SQLDB.java:347)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)
+   com.djrapitops.plan.storage.database.SQLDB.executeTransaction(SQLDB.java:337)
+   com.djrapitops.plan.extension.implementation.providers.gathering.DataValueGatherer.storePlayerNumber(DataValueGatherer.java:562)
+   com.djrapitops.plan.extension.implementation.providers.gathering.DataValueGatherer.lambda$gatherPlayer$11(DataValueGatherer.java:374)
+   java.base/java.util.Optional.ifPresent(Optional.java:178)
+   com.djrapitops.plan.extension.implementation.providers.gathering.DataValueGatherer.gatherPlayer(DataValueGatherer.java:374)
+   com.djrapitops.plan.extension.implementation.providers.gathering.DataValueGatherer.tryToUpdateValues(DataValueGatherer.java:344)
+   com.djrapitops.plan.extension.implementation.providers.gathering.DataValueGatherer.updateValues(DataValueGatherer.java:331)
+   com.djrapitops.plan.extension.ExtensionSvc.updatePlayerValues(ExtensionSvc.java:181)
+   com.djrapitops.plan.extension.ExtensionSvc.updatePlayerValues(ExtensionSvc.java:165)
+   com.djrapitops.plan.gathering.events.PlayerJoinEventConsumer.lambda$updatePlayerDataExtensionValues$11(PlayerJoinEventConsumer.java:195)
+   com.djrapitops.plan.processing.Processing.lambda$submitNonCritical$1(Processing.java:78)
+   java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+   java.base/java.lang.Thread.run(Thread.java:833)

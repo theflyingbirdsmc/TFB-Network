@@ -1,0 +1,32 @@
+panels:
+  parkour_casual:
+    perm: default
+    rows: 5
+    title: '&8Casual Parkour'
+    empty: air
+    item:
+        '36':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= parkour_menu
+        '40':
+          material: YELLOW_WOOL
+          stack: 1
+          name: '&cKeybindings'
+          lore:
+          - 'Left click to join'
+          - 'Right click to view stats'
+          - 'Middle click to view leaderboard'
+        '0':
+          material: BOOK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_momentumjump%&r (Views: &b%parkour_course_views_momentumjump%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_momentumjump_player%&8: &b%parkour_course_record_momentumjump_time%'
+          - '&eCreated by: &f%parkour_course_creator_momentumjump%'
+          - '&eReward: &b$%parkour_course_ecoreward_momentumjump% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_momentumjump%'
+          - '&eOnline: &b%parkour_course_players_momentumjump%'
+          commands:
+          - left= parkour join momentumjump

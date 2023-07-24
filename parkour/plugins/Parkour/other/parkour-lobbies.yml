@@ -1,0 +1,16 @@
+default: 
+   Location: 
+      world: world_parkour
+      x: 851.5283527344595
+      y: 70.0
+      z: 851.8459950618205
+      pitch: 0.29946065
+      yaw: -0.34109497
+tutorial: 
+   Location: 
+      world: world_parkour
+      x: 127.50878630675868
+      y: 10.0
+      z: -236.38260558599993
+      pitch: 90.0
+      yaw: -3.3503537

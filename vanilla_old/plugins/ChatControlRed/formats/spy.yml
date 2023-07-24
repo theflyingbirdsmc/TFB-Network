@@ -1,0 +1,23 @@
+# -----------------------------------------------------------------------------------------
+# The default spy format shown to players spying channels.
+# -----------------------------------------------------------------------------------------
+
+# The parts of this format.
+Parts:
+  
+  # See the chat.yml format file for a tutorial on how this works.
+  delete-chat:
+    Message: []
+
+  spies-prefix:
+    Message: []
+
+  channel:
+    Message: []
+
+  player-name:
+    #Message: "{player_nick}"
+    Message: []
+
+  message:
+    Message: []
