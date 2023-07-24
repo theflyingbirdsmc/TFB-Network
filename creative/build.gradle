@@ -19,7 +19,7 @@ dependencies {
     implementation 'CommandPanels:CommandPanels:3.19.1.0'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
     implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
-    implementation 'EssentialsSpawn:EssentialsSpawn:2.20.0'
+    implementation 'EssentialsSpawn:EssentialsSpawn:2.20.1-dev+29-6012959'
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.7.0'
     implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
     implementation 'HexNicks:HexNicks:3.1.1'
