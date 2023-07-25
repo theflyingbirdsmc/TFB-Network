@@ -4,7 +4,7 @@
 # https://github.com/plan-player-analytics/Plan/wiki/Bukkit-Configuration
 # -----------------------------------------------------
 Server:
-    ServerName: Factions
+    ServerName: Parkour
 # -----------------------------------------------------
 Plugin:
     Logging:
@@ -20,7 +20,7 @@ Plugin:
         Notify_about_DEV_releases: false
     Configuration:
         Allow_proxy_to_manage_settings: true
-    Frontend_BETA: false
+    Use_Legacy_Frontend: false
 # -----------------------------------------------------
 # Supported databases: SQLite, MySQL
 # -----------------------------------------------------
@@ -35,6 +35,9 @@ Database:
         # Launch options to append after mysql driver address
         Launch_options: "?rewriteBatchedStatements=true&useSSL=false&serverTimezone=UTC"
         Max_connections: 8
+        Max_Lifetime:
+            Time: 25
+            Unit: MINUTES
 # -----------------------------------------------------
 # More information about SSL Certificate Settings:
 # https://github.com/plan-player-analytics/Plan/wiki/SSL-Certificate-%28HTTPS%29-Set-Up
@@ -77,6 +80,11 @@ Webserver:
         # ! Make sure non-proxy access is not possible, it would allow IP spoofing !
         Use_X-Forwarded-For_Header: false
         IP_whitelist:
+            # Supported formats:
+            # IPv4 exact: "192.168.0.1", wildcard: "192.168.*.*", cidr: "192.168.0.0/16"
+            # IPv6 exact: "0:0:0:0:0:0:0:1", compressed: "1::1", cidr: "1234:db8:1234:1a:20::/64"
+            # More: https://seancfoley.github.io/IPAddress/ipaddress.html#supported-ip-address-parsing-formats
+            # Dynamic DNS hostname: "dns:intranet.example.com", updated once per minute
             Whitelist:
               - "192.168.0.0"
               - "0:0:0:0:0:0:0:1"
@@ -89,8 +97,14 @@ Webserver:
         Access_log:
             Print_to_console: false
             Remove_logs_after_days: 30
+        # Disable /auth/register endpoint
+        Disable_registration: false
     Disable_Webserver: true
     External_Webserver_address: https://stats.theflyingbirds.net
+    # Use absolute path ("C:\Example\Path", "/var/example/path") or relative ("public_html" -> {server}/plugins/Plan/public_html)
+    # NOTE: All files in this directory can be read by anyone who can access the webserver.
+    # This can be used to host certbot http challenge file, or for customizing Plan React-bundle
+    Public_html_directory: "public_html"
 # -----------------------------------------------------
 Data_gathering:
     Geolocations: true
@@ -220,9 +234,12 @@ World_aliases:
     # -----------------------------------------------------
     List:
         world: world
-        teen: teen
         world_nether: world_nether
-        world_the_end: "world_the_end"
+        parkour: parkour
+        Gokke: Gokke
+        TEST: "TEST"
+        temp: "temp"
+        world_parkour: "world_parkour"
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"
@@ -258,7 +275,8 @@ Export:
 Plugins:
     Buycraft:
         # http://help.buycraft.net/article/36-where-to-find-the-secret-key
-        Secret: '-'
+        Secret: ''
+        Enabled: false
     Economy (Vault):
         Enabled: true
     Essentials:
@@ -271,12 +289,15 @@ Plugins:
     LuckPerms:
         Enabled: true
     Permission Groups (Vault):
-        Enabled: true
+        Enabled: false
     PlaceholderAPI:
         Load_these_placeholders_on_join:
           - '%plan_server_uuid%'
         Tracked_player_placeholders:
-          - '%example_placeholder%'
+          - '%parkour_player_rank%'
+          - '%parkour_player_level%'
+          - '%parkour_player_courses_completed%'
+          - '%parkour_current_course_deaths%'
         Enabled: true
     Towny:
         HideTowns:
