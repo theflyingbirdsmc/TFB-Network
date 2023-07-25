@@ -45,9 +45,7 @@ ticks-per:
   autosave: 6000
 aliases: now-in-commands.yml
 worlds:
+  world_creative:
+    generator: PlotSquared
   Creative:
-    generator: PlotSquared
-  test:
-    generator: PlotSquared
-  TFBCreative:
     generator: PlotSquared
