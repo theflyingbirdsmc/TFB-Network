@@ -1,0 +1,57 @@
+Debug: false
+SendStreamerListOnJoin: false
+AllowedStreamers:
+- fuglen_tv
+DropOptions:
+  Interval: 2
+  DropChance: 5
+  RandomDrops: 1
+  AllowMultiStreams: true
+  DropsPerStreamer: true
+  DropsOnlyForOnlinePlayer: false
+  DropsOnlyForFollower: false
+  DropsOnRaid: true
+AllowedWorlds:
+- world_lobby
+BlacklistForTwitchChannel:
+- moobot
+- nightbot
+- streamlabs
+- streamelements
+- phantombot
+- wizebot
+- botisimo
+- coebot
+- deepbot
+AlwaysCommands:
+- chc bc chat &#ee2b23T#3551d7F#00ff00B&#6441A4Drops &8» &a%player% &ehave recieved
+  drops by watching &a%streamer%&6's &#6441A4Twitch &eStream!
+GeneralDrops:
+- gmysteryboxes give %player% 1 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false | sendtwitch
+  %streamer% @%twitchuser% recieved 1 Mystery Egg! PogChamp
+- gmysteryboxes gift %player% 1 msg=false | sendtwitch %streamer% @%twitchuser% recieved
+  1 Mystery Gift! PogChamp
+PlaceholderAPI:
+  PlayerTopDropsPrefix: '&2◄&6✪&2►'
+  Livetag: 🔴
+  Offlinetag: '&f[&7Offline&f]'
+Format:
+  OnlineFormat: '&b&n%streamer% - [Link]'
+  TopDropsFormat: '&f%number%. &6%player%&f - %amount%'
+  TwitchChatFormat: '[%twitchuser%](%twitchcolor%)&f: %twitchmessage%'
+BannedPlayerToBlacklist: true
+Discord:
+  SendLiveMessage: true
+  Webhook_Url: https://discord.com/api/webhooks/1125108740891365488/2RGOlhZL20byi8fycCxF2G9aYQn4rqehmYobcKA6jxarifTBtBrSDhPGT2qwrJN97kPo
+  Username: TFBDrops
+UseSimpleConnection: false
+GlobalStreamerTag: '#TFBDrops'
+UseCustomMetrics: true
+VerifyAccount: false
+StreamerDrops:
+  fuglen_tv:
+    IncludeGeneralDrops: true
+    Drops:
+    - gmysteryboxes give %player% 2 ex=7d c:(1:40,2:30,3:25,4:15,5:10) msg=false |
+      sendtwitch %streamer% @%twitchuser% recieved 2 Mystery Eggs! PogChamp PogChamp
+    UseGlobalStreamerTag: true

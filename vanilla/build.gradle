@@ -22,7 +22,7 @@ dependencies {
     implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
     implementation 'EssentialsSpawn:EssentialsSpawn:2.20.1-dev+29-6012959'
     implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
-    implementation 'GadgetsMenu:GadgetsMenu:5.8.4'
+    implementation 'GadgetsMenu:GadgetsMenu:5.9.0'
     implementation 'GSit:GSit:1.4.10'
     implementation 'HexNicks:HexNicks:3.1.1'
     implementation 'LibsDisguises:LibsDisguises:10.0.37'
