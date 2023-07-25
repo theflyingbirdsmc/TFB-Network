@@ -1,0 +1,23 @@
+panels:
+  dropper_playercourses:
+    perm: default
+    rows: 5
+    title: '&8Dropper Player Courses'
+    empty: air
+    panelType:
+    - static
+    item:
+        '36':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= dropper_menu
+        '40':
+          material: YELLOW_WOOL
+          stack: 1
+          name: '&cKeybindings'
+          lore:
+          - 'Left click to join'
+          - 'Right click to view stats'
+          - 'Middle click to view leaderboard'

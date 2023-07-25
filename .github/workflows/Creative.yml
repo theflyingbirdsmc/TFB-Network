@@ -2,8 +2,11 @@ name: Build and Publish Creative Docker Image to Nexus Artifactory
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - 'TFB-Creative/**'
+      - 'creative/**'
+      - .github/workflows/Creative.yml
 
 jobs:
   build-test-publish:
@@ -26,7 +29,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: cd TFB-Creative && gradle server && gradle plugins
+        run: cd creative && gradle update
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -40,8 +43,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./TFB-Creative # specifying the directory where your Dockerfile is
-          file: ./TFB-Creative/Dockerfile # specifying the path to your Dockerfile
+          context: ./creative # specifying the directory where your Dockerfile is
+          file: ./creative/Dockerfile # specifying the path to your Dockerfile
           push: true
           tags: ${{ secrets.MAVEN_DOCKER_REPO }}/creative:latest # change this to your image name
   cleanup:

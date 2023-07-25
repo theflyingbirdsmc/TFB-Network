@@ -1,0 +1,58 @@
+panels:
+  dropper_menu:
+    perm: default
+    rows: 3
+    title: '&8Dropper Menu'
+    empty: air
+    item:
+      '3':
+        material: DROPPER
+        stack: 1
+        name: '&fCasual Dropper'
+        commands:
+        - open= dropper_casual
+        lore:
+        - '&7Play however you want'
+        - '&7Be free like a bird'
+      '5':
+        material: DROPPER
+        stack: 1
+        name: '&fRanked Dropper'
+        enchanted: 
+        - true
+        commands:
+        - open= dropper_ranked
+        lore:
+        - '&7Earn levels by completing courses'
+        - '&7Courses gets increasingly harder'
+      '13':
+        material: EGG
+        stack: 1
+        name: '&fDropper Tutorial Coming Soon...'
+        lore:
+        - '&7Learn how to play the dropper mode'
+      '21':
+        material: PLAYER_HEAD
+        stack: 1
+        name: '&fDropper Player Courses'
+        commands:
+        - open= dropper_playercourses
+        lore:
+        - '&7Courses made by other players'
+        - '&7Create your own and let others play it!'
+      '23':
+        material: DIAMOND_SWORD
+        stack: 1
+        name: '&fDropper Challenges'
+        commands:
+        - open= dropper_challenges
+        lore:
+        - '&7Compete against your friends'
+        - '&7Special challenge only courses'
+        - '&7Set a wager, winner gets prize'
+      '18':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= main_menu

@@ -1,0 +1,115 @@
+VoteSites:
+  # VoteSite key
+  # Used for saving data for votesites
+  # Use a short name if you can
+  Minecraftlist:
+    # Enable voteSite
+    # If false, votesite will not be loaded by plugin
+    # Default: false
+    Enabled: true
+    
+    # Display name of voting site
+    Name: MinecraftList
+    
+    # Priority of this site
+    # Used for sorted list
+    # High prority, higher on the list
+    Priority: 5
+    
+    # If true, voteside will be hidden from some GUI's, similar to being disabled
+    Hidden: false
+    
+    # The serviceName from the vote, has to be correct to work correctly
+    # Gotten from voting on the site (will be in console/log)
+    # Usually is the main part of the url(e.g. PlanetMinecraft.com), but not always
+    # See console when you vote (it will notify you if the plugin didn't find a votingsite matching the service site
+    ServiceSite: Minecraftlist.dk
+    
+    # vote url for /vote
+    # Format for this can be set in Config.yml
+    # Do not include colors here
+    # If you need to force a url set the url as this:
+    # VoteURL: '[Text="ANY TEXT TO CLICK ON HERE",url="URLHERE"]'
+    VoteURL: '[Text="Minecraftlist.dk",url="https://minecraftlist.dk/vote/0f69fd50-8975-4172-a5bc-897846970489"]'
+    
+    # Time between votes in hours (used for /vote next)
+    # Most sites are 24 hours
+    VoteDelay: 0
+    
+    # Use to have a minute votedelay
+    # VoteDelayMin: 30
+
+        # Require waiting until votedelay time has pasted in order to accept vote
+    # Recommend: false
+    WaitUntilVoteDelay: false
+    
+    # Reset vote delay each day (for certain sites that do this)
+    # Recommend: false
+    VoteDelayDaily: true
+    
+    # Offset time for /vote next caculations
+    TimeOffSet: 6
+    
+    # If true, rewards can be executed offline (requires ForceOffline to be true in the reward)
+    # Setting this to true will execute the reward offline while the player is offline
+    # This basiclly disables offline voting if set to true, don't misinterpret this option
+    ForceOffline: false
+    
+    # VoteSite Material for some GUI's
+    # Removing this may result in an error, required on each site
+    DisplayItem:
+      Material: DIAMOND
+      Amount: 1
+    
+    # Rewards to give
+
+  # Site 2 example
+  Curseforge:
+    Enabled: true
+    
+    # Display name of voting site
+    Name: CurseForge
+    
+    Priority: 1
+    ServiceSite: CurseForge.com
+    VoteURL: '[Text="Curseforge.com",url="https://www.curseforge.com/servers/server/the-flying-birds"]'
+    
+    VoteDelay: 24
+    WaitUntilVoteDelay: false
+    
+    VoteDelayDaily: true
+    
+    # Offset time for /vote next caculations
+    TimeOffSet: 0
+    ForceOffline: false
+    DisplayItem:
+      Material: DIAMOND
+      Amount: 1
+
+  MineList:
+    Enabled: true
+    
+    # Display name of voting site
+    Name: MineList
+    
+    Priority: 10
+    ServiceSite: MineList.dk
+    VoteURL: '[Text="MineList.dk",url="https://minelist.dk/server/the-flying-birds/"]'
+    
+    VoteDelay: 24
+    WaitUntilVoteDelay: false
+    
+    VoteDelayDaily: true
+    
+    # Offset time for /vote next caculations
+    TimeOffSet: 0
+    ForceOffline: false
+    DisplayItem:
+      Material: DIAMOND
+      Amount: 1
+
+# Reward for any site
+# Similar to AnySiteReward
+# This requires the site to be configured in order to get the reward.
+EverySiteReward:
+  Rewards: MysteryEggs

@@ -1,0 +1,18 @@
+panels:
+  dropper_casual:
+    perm: default
+    rows: 3
+    title: '&8Casual Dropper'
+    empty: air
+    item:
+        '1':
+          material: BOOK
+          stack: 1
+          name: '&fComing Soon'
+          commands:
+        '18':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= dropper_menu

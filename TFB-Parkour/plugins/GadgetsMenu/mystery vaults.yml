@@ -1,8 +1,0 @@
-Mystery-Vaults:
-  Parkour:
-    BlockFace: NORTH
-    Location:
-      world: parkour
-      x: 846.0
-      y: 72.0
-      z: 858.0

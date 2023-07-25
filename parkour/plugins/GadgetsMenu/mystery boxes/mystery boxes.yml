@@ -1,0 +1,598 @@
+Mystery-Boxes:
+  Enabled: true
+  Loots-Can-Be-Found:
+    Hats: true
+    Animated Hats: true
+    Particles: true
+    Suits: true
+    Gadgets: true
+    Pets: true
+    Miniatures: true
+    Banners: true
+    Morphs: true
+    Emotes: true
+    Cloaks: true
+  Chances:
+    One-Star:
+      Common: 70
+      Rare: 15
+      Epic: 10
+      Legendary: 5
+    Two-Star:
+      Common: 70
+      Rare: 18
+      Epic: 12
+      Legendary: 6
+    Three-Star:
+      Common: 58
+      Rare: 20
+      Epic: 15
+      Legendary: 7
+    Four-Star:
+      Common: 52
+      Rare: 22
+      Epic: 18
+      Legendary: 8
+    Five-Star:
+      Rare: 40
+      Epic: 50
+      Legendary: 10
+  Rarity:
+    Common: '&aCommon'
+    Rare: '&9Rare'
+    Epic: '&5Epic'
+    Legendary: '&6Legendary'
+  Execute-Command:
+    Enabled: false
+    Command: pex user {PLAYER} add {PERMISSION}
+  Found-Loot:
+    Common:
+      Give-Pet-Items:
+        Enabled: true
+        Min: 20
+        Max: 30
+      Play-Sound:
+        Sound: ENTITY_CHICKEN_EGG
+      Send-Message:
+        Enabled: true
+        Message:
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        - '             &b&lMystery Egg'
+        - ''
+        - '  &7You found loot!'
+        - '  &71x &a&lCommon {LOOT}'
+        - '  &7{PET_ITEMS}x &a&lPet Items'
+        - ''
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    Rare:
+      Give-Pet-Items:
+        Enabled: true
+        Min: 25
+        Max: 35
+      Play-Sound:
+        Enabled: true
+        Sound: ENTITY_VILLAGER_AMBIENT
+      Send-Message:
+        Enabled: true
+        Message:
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        - '             &b&lMystery Egg'
+        - ''
+        - '  &7You found loot!'
+        - '  &71x &9&lRare {LOOT}'
+        - '  &7{PET_ITEMS}x &a&lPet Items'
+        - ''
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    Epic:
+      Give-Pet-Items:
+        Enabled: true
+        Min: 35
+        Max: 40
+      Play-Sound:
+        Enabled: true
+        Sound: ENTITY_PLAYER_LEVELUP
+      Send-Message:
+        Enabled: true
+        Message:
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        - '             &b&lMystery Egg'
+        - ''
+        - '  &7You found loot!'
+        - '  &71x &5&lEpic {LOOT}'
+        - '  &7{PET_ITEMS}x &a&lPet Items'
+        - ''
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    Legendary:
+      Give-Pet-Items:
+        Enabled: true
+        Min: 35
+        Max: 45
+      Play-Sound:
+        Enabled: true
+        Sound: ENTITY_ENDER_DRAGON_AMBIENT
+      Send-Message:
+        Enabled: true
+        Message:
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        - '             &b&lMystery Egg'
+        - ''
+        - '  &7You found loot!'
+        - '  &71x &6&lLegendary {LOOT}'
+        - '  &7{PET_ITEMS}x &a&lPet Items'
+        - ''
+        - ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+  Already-Had-Loot:
+    Common:
+      Give-Mystery-Dust:
+        Enabled: true
+        Min: 1
+        Max: 3
+      Send-Message:
+        Enabled: true
+        Message:
+        - '&7You already had &aCommon {LOOT} &7so you'
+        - '&7received &a{MYSTERY_DUST} Mystery Eggshells &7instead.'
+      Execute-Command:
+        Enabled: false
+        Command: eco give {PLAYER} 2
+    Rare:
+      Give-Mystery-Dust:
+        Enabled: true
+        Min: 4
+        Max: 8
+      Send-Message:
+        Enabled: true
+        Message:
+        - '&7You already had &9Rare {LOOT} &7so you'
+        - '&7received &a{MYSTERY_DUST} Mystery Eggshells &7instead.'
+      Execute-Command:
+        Enabled: false
+        Command: eco give {PLAYER} 5
+    Epic:
+      Give-Mystery-Dust:
+        Enabled: true
+        Min: 9
+        Max: 25
+      Send-Message:
+        Enabled: true
+        Message:
+        - '&7You already had &5Epic {LOOT} &7so you'
+        - '&7received &a{MYSTERY_DUST} Mystery Eggshells &7instead.'
+      Execute-Command:
+        Enabled: false
+        Command: eco give {PLAYER} 8
+    Legendary:
+      Give-Mystery-Dust:
+        Enabled: true
+        Min: 26
+        Max: 36
+      Send-Message:
+        Enabled: true
+        Message:
+        - '&7You already had &6Legendary {LOOT} &7so you'
+        - '&7received &a{MYSTERY_DUST} Mystery Eggshells &7instead.'
+      Execute-Command:
+        Enabled: false
+        Command: eco give {PLAYER} 12
+  Holograms:
+    Found-Loot:
+      Common: '&aCommon {LOOT}'
+      Rare: '&9Rare {LOOT}'
+      Epic: '&5Epic {LOOT}'
+      Legendary: '&6Legendary {LOOT}'
+    Mystery-Vault:
+      Line-1: '&bMystery Vault'
+      Line-2: '&e&lRight Click'
+    Individual-Holograms:
+      Enabled: true
+      Available-Mystery-Boxes:
+      - '&a{MYSTERY_BOXES} Available'
+      - '&f{MYSTERY_BOXES} Available'
+      Zero-Mystery-Box-Available: '&cNo Eggs Available'
+    Hologram-Height: 1.21
+  Broadcast:
+    Opening-Mystery-Box:
+      Enabled: false
+      Message: '&4T&1F&2B &aCosmetics &8» &7{PLAYER} &ris opening a Mystery Egg!'
+    Found-Loot:
+      Common:
+        Enabled: false
+        Message: '&8[&4T&1F&2B &aCosmetics&8] &7{PLAYER} &rfound a &aCommon {LOOT}&r!'
+      Rare:
+        Enabled: false
+        Message: '&b[Mystery Egg] &7{PLAYER} &rfound a &9Rare {LOOT}&r!'
+      Epic:
+        Enabled: false
+        Message: '&b[Mystery Egg] &7{PLAYER} &rfound a &5Epic {LOOT}&r!'
+      Legendary:
+        Enabled: true
+        Message: '&4T&1F&2B &aCosmetics &8» &7{PLAYER} &rfound a &6Legendary {LOOT}&r!'
+    Found-Mystery-Box:
+      One-Star:
+        Enabled: false
+        Message: '{PLAYER} &ffound a &e✰&7✰✰✰✰ &fMystery Egg!'
+      Two-Star:
+        Enabled: false
+        Message: '{PLAYER} &ffound a &e✰✰&7✰✰✰ &fMystery Egg!'
+      Three-Star:
+        Enabled: false
+        Message: '{PLAYER} &ffound a &e✰✰✰&7✰✰ &fMystery Egg!'
+      Four-Star:
+        Enabled: false
+        Message: '{PLAYER} &ffound a &e✰✰✰✰&7✰ &fMystery Egg!'
+      Five-Star:
+        Enabled: true
+        Message: '&4T&1F&2B &aCosmetics &8» {PLAYER} &ffound a &e✰✰✰✰✰ &fMystery Egg!'
+  Mystery-Boxes-Reward:
+    Enabled: true
+    Allow-AFK: false
+    Chance-To-Get-Mystery-Box: 75
+    Chance:
+      One-Star: 5
+      Two-Star: 10
+      Three-Star: 60
+      Four-Star: 20
+      Five-Star: 5
+    Expiry-Date-In-Days: 7
+    Play-Time:
+      Hours: 1
+      Minutes: 0
+      Seconds: 0
+    Enabled-Worlds:
+    - '*'
+    Message:
+      One-Star: '&fYou found a &e✰&7✰✰✰✰ &fMystery Egg!'
+      Two-Star: '&fYou found a &e✰✰&7✰✰✰ &fMystery Egg!'
+      Three-Star: '&fYou found a &e✰✰✰&7✰✰ &fMystery Egg!'
+      Four-Star: '&fYou found a &e✰✰✰✰&7✰ &fMystery Egg!'
+      Five-Star: '&fYou found a &e✰✰✰✰✰ &fMystery Egg!'
+  JSON-Messages:
+    Found-Mystery-Box:
+      One-Star:
+        Message:
+        - '&bMystery Egg'
+        - '&7Rarity: &e✰&7✰✰✰✰'
+        - '&7You can find &bMystery Egg &7by'
+        - '&7playing on the server.'
+      Two-Star:
+        Message:
+        - '&bMystery Egg'
+        - '&7Rarity: &e✰✰&7✰✰✰'
+        - '&7You can find &bMystery Egg &7by'
+        - '&7playing on the server.'
+      Three-Star:
+        Message:
+        - '&bMystery Egg'
+        - '&7Rarity: &e✰✰✰&7✰✰'
+        - '&7You can find &bMystery Egg &7by'
+        - '&7playing on the server.'
+      Four-Star:
+        Message:
+        - '&bMystery Egg'
+        - '&7Rarity: &e✰✰✰✰&7✰'
+        - '&7You can find &bMystery Egg &7by'
+        - '&7playing on the server.'
+      Five-Star:
+        Message:
+        - '&bMystery Egg'
+        - '&7Rarity: &e✰✰✰✰✰'
+        - '&7You can find &bMystery Egg &7by'
+        - '&7playing on the server.'
+    Found-Loot:
+      Common:
+        Message:
+        - '&aCommon {LOOT}'
+        - '&7Type: {CATEGORY}'
+        - '&7Rarity: &aCommon'
+      Rare:
+        Message:
+        - '&9Rare {LOOT}'
+        - '&7Type: {CATEGORY}'
+        - '&7Rarity: &9Rare'
+      Epic:
+        Message:
+        - '&5Epic {LOOT}'
+        - '&7Type: {CATEGORY}'
+        - '&7Rarity: &5Epic'
+      Legendary:
+        Message:
+        - '&6Legendary {LOOT}'
+        - '&7Type: {CATEGORY}'
+        - '&7Rarity: &6Legendary'
+    Mystery-Dust:
+      Message:
+      - '&bMystery Eggshells'
+      - '&7Can be used to craft &bMystery Eggs'
+      - '&7and unlock cosmetic items.'
+    Pet-Items:
+      Message:
+      - '&7View your &aPet Items &7by'
+      - '&bright-clicking &7one of your'
+      - '&7pets in the &bPets Menu.'
+  Types:
+    Normal-Mystery-Box:
+      One-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&aCommon {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰&7✰✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Two-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰&7✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Three-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&9Rare {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&5Epic {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰&7✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Four-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&9Rare {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&5Epic {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰&7✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Five-Star:
+        Name: '&aMystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&9Rare {ITEM_ONE}'
+        - '&5Epic {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&6Legendary {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰✰'
+        - '{EXPIRY_DATE}'
+        - ''
+        - '&eClick to open!'
+      Messages:
+        Expiry-Date: '&cExpires in {EXPIRY_DATE}'
+        Never-Expired: '&7This has no expiration date.'
+    Gifted-Mystery-Box:
+      One-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&aCommon {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'''
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰&7✰✰✰✰'
+        - ''
+        - '&7You received this gift from:'
+        - '&7{SENDER}'
+        - ''
+        - '&eClick to open!'
+      Two-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰&7✰✰✰'
+        - ''
+        - '&7You received this gift from:'
+        - '&7{SENDER}'
+        - ''
+        - '&eClick to open!'
+      Three-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&9Rare {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&5Epic {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰&7✰✰'
+        - ''
+        - '&7You received this gift from:'
+        - '&7{SENDER}'
+        - ''
+        - '&eClick to open!'
+      Four-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&9Rare {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&5Epic {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰&7✰'
+        - ''
+        - '&7You received this gift from:'
+        - '&7{SENDER}'
+        - ''
+        - '&eClick to open!'
+      Five-Star:
+        Name: '&dGifted Mystery Egg'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&9Rare {ITEM_ONE}'
+        - '&5Epic {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&6Legendary {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰✰'
+        - ''
+        - '&7You received this gift from:'
+        - '&7{SENDER}'
+        - ''
+        - '&eClick to open!'
+    Crafted-Mystery-Box:
+      One-Star:
+        Name: '&bCrafted Mystery Egg &e✰'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&aCommon {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰&7✰✰✰✰'
+        - '&bCrafted on {DATE}'
+        - ''
+        - '&eClick to open!'
+      Two-Star:
+        Name: '&bCrafted Mystery Egg &e✰✰'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&aCommon {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&9Rare {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰&7✰✰✰'
+        - '&bCrafted on {DATE}'
+        - ''
+        - '&eClick to open!'
+      Three-Star:
+        Name: '&bCrafted Mystery Egg &e✰✰✰'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&aCommon {ITEM_TWO}'
+        - '&9Rare {ITEM_THREE}'
+        - '&9Rare {ITEM_FOUR}'
+        - '&5Epic {ITEM_FIVE}'
+        - '&5Epic {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰&7✰✰'
+        - '&bCrafted on {DATE}'
+        - ''
+        - '&eClick to open!'
+      Four-Star:
+        Name: '&bCrafted Mystery Egg &e✰✰✰✰'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&aCommon {ITEM_ONE}'
+        - '&9Rare {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&5Epic {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰&7✰'
+        - '&bCrafted on {DATE}'
+        - ''
+        - '&eClick to open!'
+      Five-Star:
+        Name: '&bCrafted Mystery Egg &e✰✰✰✰✰'
+        Material: TURTLE_EGG
+        Lore:
+        - '&7This egg contains one of the following:'
+        - ''
+        - '&9Rare {ITEM_ONE}'
+        - '&5Epic {ITEM_TWO}'
+        - '&5Epic {ITEM_THREE}'
+        - '&6Legendary {ITEM_FOUR}'
+        - '&6Legendary {ITEM_FIVE}'
+        - '&6Legendary {ITEM_SIX}'
+        - '&6Legendary {ITEM_SEVEN}'
+        - ''
+        - '&7Quality: &e✰✰✰✰✰'
+        - '&bCrafted on {DATE}'
+        - ''
+        - '&eClick to open!'

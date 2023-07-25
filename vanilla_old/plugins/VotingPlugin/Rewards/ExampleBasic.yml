@@ -1,0 +1,152 @@
+# This is a reward file
+# Define rewards in here (Items, commands, etc)
+# File name is the reward name, without file extention
+# This reward is named "ExampleBasic"
+# That is what you put as a reward for other plugins, like VotingPlugin
+# DO NOT HAVE DUPLICATE NAMES!!
+
+# Wiki Page: 
+# https://github.com/BenCodez/AdvancedCore/wiki/Reward-files
+
+# This is basic reward file
+# You can have multiple reward files that contain all kinds of rewards
+# Below are some basic things you can have, see the advanced example for more
+
+# You can just remove values you don't want (just delete it)
+# If you just want money just have a reward file containg only "Money: 100", for example
+# You can simply copy and paste from here what you want
+# in other reward files, that is the way they are designed
+
+# If true:
+# Only allow one item with chance to go through (from items below)
+# If no chance specificied it will only give the first item
+OnlyOneItemChance: false
+
+# Items to give to user
+Items:
+  # Item
+  # This is not item display name
+  # No duplicate names
+  Diamond:
+    # Item Material
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+    Material: 'DIAMOND'
+    # Item data value (Eg 1:4, data is 4)
+    Data: 0
+    # Will only give Amount if min and max amounts are 0
+    Amount: 1
+    # Set item durability
+    # Set to 0 or remove line for no durability
+    #Durability: 100
+    
+    # Random amount of items between Min and Max will be given
+    # if min and max are not both 0
+    
+    # Min amount of items
+    #MinAmount: 1
+    
+    # Max amount of items
+    #MaxAmount: 4
+    
+    # Chance for this specific item to be given
+    #Chance: 30
+    
+    # Item name
+    # Remove this value to have no name
+    Name: '&aSpecial Diamond'
+    
+    # Lore
+    # Remove this value to have no lore
+    Lore: 
+    - 'Line 1'
+    
+    # Enchants
+    # use vanilla names
+    Enchants:
+      unbreaking: 1
+    
+    # Set glowing effect on item (enchanted item effect)
+    Glow: false
+      
+    # Skull options
+    #Skull: 'PLAYERNAME'
+    #SkullTexture: 'SKULLTEXTURE'
+     
+    # Hide enchants     
+    #ItemFlags:
+    #- HIDE_ENCHANTS
+    
+    # CustomModelData nbt tag
+    #CustomModelData: 100
+      
+    # Set power of firework
+    #Power: 1
+    
+    # Whether or not to break lore into more than 1 line
+    # Disable for certain custom items if needed
+    #CheckLoreLenth: true
+    #LoreLength: -1
+    
+    # Color of potion bottle
+    # 0-255
+    #PotionColor:
+      #Red: 0
+      #Green: 0
+      #Blue: 0
+      
+    #Potions:
+      #SPEED:
+        #Duration: 20
+        #Amplifier: 1
+      
+# Amount of money to give, requires vault
+# Use 0 to give none
+# Money is not per world
+# Use negative to take money
+# May need to use a command if it doesn't work
+Money: 1000
+
+# Pick random number between min and max money amount
+#Money:
+#  Min: 100
+#  Max: 3000
+
+#######
+# Experience rewards
+#######
+# Give player experience (not levels)
+#EXP: 100
+
+# Pick a random number between min and max EXP amount to give
+#EXP:
+#  Min: 100
+#  Max: 1000
+
+EXPLevels: 3
+
+# Random amount of EXP levels between 3 to 7
+# EXPLevels:
+  # Min: 3
+  # Max: 7
+
+# Commands to run
+# Use %player% for player name
+# Remove for no commands
+Commands:
+- say hi
+#Commands:
+  # Commands here will be run by console
+#  Console:
+#  - 'say %player% was lucky'
+  # Commands here are run by player
+#  Player:
+#  - 'vote total'
+
+# The messages are sent when rewards above are given to user
+# set to '' to give no message (or just remove the option)
+Messages:
+  Player: '&aMessage on reward'
+  Broadcast: '&aThis is a broadcast'
+  
+# Can also do this to message player
+#Message: '&aMessage to player'

@@ -1,0 +1,55 @@
+Custom-Miniatures:
+  Fisherman:
+    Name: '&9Fisherman Miniature'
+    Material: head:528da0e5b26eac1c4fbc562cd7a41bc7a644be00231cd2c23dd278f3c6861ca6
+    Mystery Dust: 32
+    Rarity: Rare
+    Enabled: false
+    CanBeFound: true
+    Purchasable: true
+    Lore:
+      Locked:
+      - '&7Select a Fisherman Miniature'
+      - '&7to follow you.'
+      Unlocked:
+      - '&7Select a Fisherman Miniature'
+      - '&7to follow you.'
+    Invisible: false
+    Rotate: false
+    Equipments:
+      Main-Hand:
+        Enabled: true
+        Material: FISHING_ROD
+      Helmet:
+        Enabled: true
+        Material: head:528da0e5b26eac1c4fbc562cd7a41bc7a644be00231cd2c23dd278f3c6861ca6
+      Chestplate:
+        Enabled: true
+        Material: LEATHER_CHESTPLATE:#455B93
+      Leggings:
+        Enabled: true
+        Material: LEATHER_LEGGINGS:#455B93
+      Boots:
+        Enabled: true
+        Material: LEATHER_BOOTS:#455B93
+  Soul-O-Lantern:
+    Name: '&5Soul Jack O''Lantern Miniature'
+    Material: head:b81c14a4df2a65135673211dd55dc9c577b8500143ec1293eda8e05009c851a8
+    Mystery Dust: 58
+    Rarity: Epic
+    Enabled: false
+    CanBeFound: true
+    Purchasable: true
+    Lore:
+      Locked:
+      - '&7Select a Soul Jack O''Lantern'
+      - '&7Miniature to follow you.'
+      Unlocked:
+      - '&7Select a Soul Jack O''Lantern'
+      - '&7Miniature to follow you.'
+    Invisible: true
+    Rotate: true
+    Equipments:
+      Helmet:
+        Enabled: true
+        Material: head:b81c14a4df2a65135673211dd55dc9c577b8500143ec1293eda8e05009c851a8

@@ -1,0 +1,45 @@
+panels:
+  parkour_playercourses:
+    perm: default
+    rows: 5
+    title: '&8Parkour Player Courses'
+    empty: air
+    panelType:
+    - static
+    item:
+        '36':
+          material: RED_WOOL
+          stack: 1
+          name: '&cGo Back'
+          commands:
+          - open= parkour_menu
+        '40':
+          material: YELLOW_WOOL
+          stack: 1
+          name: '&cKeybindings'
+          lore:
+          - 'Left click to join'
+          - 'Right click to view stats'
+          - 'Middle click to view leaderboard'
+        '0':
+          material: cps= TheProKillerGirl
+          stack: 1
+          name: '&r&b%parkour_course_displayname_netherdream%&r (Views: &b%parkour_course_views_netherdream%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_netherdream_player%&8: &b%parkour_course_record_netherdream_time%'
+          - '&eCreated by: &f%parkour_course_creator_netherdream%'
+          - '&eReward: &b$%parkour_course_ecoreward_netherdream% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_netherdream%'
+          - '&eOnline: &b%parkour_course_players_netherdream%'
+          commands:
+          - left= parkour join netherdream
+        '1':
+          material: cps= Skibet_DK
+          stack: 1
+          name: '&r&b%parkour_course_displayname_shipwool%&r (Views: &b%parkour_course_views_shipwool%&r)'
+          lore:
+          - '&eBest time: &f%parkour_course_record_shipwool_player%&8: &b%parkour_course_record_shipwool_time%'
+          - '&eCreated by: &f%parkour_course_creator_shipwool%'
+          - '&eReward: &b$%parkour_course_ecoreward_shipwool% &r+ &elvl up: &b%parkour_course_rewardparkourleveladd_shipwool%'
+          - '&eOnline: &b%parkour_course_players_shipwool%'
+          commands:
+          - left= parkour join shipwool
