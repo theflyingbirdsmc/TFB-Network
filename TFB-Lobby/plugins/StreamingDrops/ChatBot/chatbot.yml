@@ -1,0 +1,24 @@
+Twitch:
+  drops:
+    EnableBotCommands: true
+    Cooldown: 15
+    Channels:
+    - StreamingDrops
+    - '*'
+    ChannelExecuteWhitelist:
+    - morelaid
+    - '*'
+    MinecraftCommands:
+    - sendtwitch %streamer% @%twitchuser% has received %dropsamount% drops by viewing
+      twitch streams!
+  verify:
+    EnableBotCommands: true
+    Cooldown: 15
+    Channels:
+    - StreamingDrops
+    - '*'
+    ChannelExecuteWhitelist:
+    - morelaid
+    - '*'
+    MinecraftCommands:
+    - sd verify %streamer% %twitchuser% %args_1%

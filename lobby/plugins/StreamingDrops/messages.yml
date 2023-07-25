@@ -1,0 +1,55 @@
+NoPermission: '&4You do not have the permission for this command!'
+Reload: '&2The configuration was successfully reloaded'
+ActionFailed: '&4The executed action could not be completed successfully. Please check
+  the console or server logs.'
+OnlyForPlayers: '&4This command cannot be executed from the console!'
+PlayerSync: '&2Your account has been linked to your twitch channel'
+AddStreamer: '&2User was added to the list'
+StreamerExists: '&4The User is already in your list!'
+RemoveStreamer: '&eUser was removed from the list'
+PlayerNotFound: '&4Player could not be found!'
+DropsText: '&6It was checked if offline drops are pending for you!'
+NoStreamersLive: '&9There are currently no streamers live on twitch.tv, where you
+  can get drops!'
+StreamersLive: '&6The following supported streamers are currently live:'
+CurrentTimerText: The next drop will be in under %minutes% minutes!
+DropsAdded: '&2The new drop command was added!'
+DropsByStreamer: '&2Random drops were given to your viewers'
+InvalidTwitchChannel: '&4This twitch name cannot be used, because it is already linked
+  to an account!'
+DropsAmount: '&6You have already received %dropsamount% drops for watching streams.'
+DropsOnlyForFollower: '&4Only followers on Twitch can receive drops!'
+Loading: Searching...
+StreamerLiveBroadcast: '&6The streamer &2%streamer% &6is now live...'
+TopDropsHeader: '&f======== &2Top %amount% Drops &f========'
+TwitchCheck: '&fYou were found at &6%streamer%&f.'
+TwitchCheckNotFound: '&fYou were not recognized by any streamer! Please check your
+  link again later.'
+Discord:
+  Title: '%streamer% is live!'
+  Description: The streamer %streamer% is now live...
+  AdditionalText: 'Watch the stream to get Minecraft Drops:'
+  ContentMessage: ''
+WrongTwitchConnection: '&4Please enter only your &fTwitch name &4(without URL)'
+SDSettings:
+  BedrockHeader: '&5StreamingDrops &fSettings'
+  GetOwnDrops: Get drops from own stream
+  ValueSet: '&6The value was set!'
+  Header: '&6===============[&5 StreamingDrops &fSettings &6]==============='
+  Footer: '&6===============[&5 StreamingDrops &fSettings &6]==============='
+  EnableBotCommands: Enable StreamingDrops bot commands
+  ShowDropMessages: Show drop message in twitch chat
+  ShowTwitchChat: Show Twitch Chat in Minecraft
+  Allow: '&2「✔」'
+  Deny: '&4「✗」'
+  StreamerKey: '&6Your key:&r %streamerkey%'
+  NotificationActivation: Your channel has been successfully activated for notification.
+    The bot can now send Twitch messages in your channel!
+  ShowTwitchColorCode: Show color codes from Twitch chat
+ClearInventory: '&6Please empty your inventory first to be able to receive Twitch
+  Drops!'
+StreamerKeyNotSet: |-
+  &4Please enter the following key in your Twitch chat to enable Twitch notifications for your viewers:
+  "&f%streamerkey%&4"
+TwitchLink: '&4❤ &6Link your twitch channel with &d[/twitch <your twitch name>](suggest_command=/twitch
+  ) &6to get twitch drops &4❤'

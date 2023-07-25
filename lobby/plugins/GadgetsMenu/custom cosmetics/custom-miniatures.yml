@@ -1,43 +1,43 @@
 Custom-Miniatures:
-  Fisherman:
-    Name: '&9Fisherman Miniature'
-    Material: head:528da0e5b26eac1c4fbc562cd7a41bc7a644be00231cd2c23dd278f3c6861ca6
-    Mystery Dust: 32
-    Rarity: Rare
-    Enabled: false
-    CanBeFound: true
-    Purchasable: true
+  Fuglen:
+    Name: '{#084cfb}F{#296dfb}u{#4a8ffc}g{#6bb0fc}l{#8cd2fd}e{#adf3fd}n'
+    Material: head:6a71e0d288f79d0908e7c266abd42a5eb5dd722c5e3a5a2b8b3877d8c1597d6c
+    Mystery Dust: 1000
+    Rarity: Legendary
+    Enabled: true
+    CanBeFound: false
+    Purchasable: false
     Lore:
       Locked:
-      - '&7Select a Fisherman Miniature'
-      - '&7to follow you.'
+      - '&7Unlock {#084cfb}F{#296dfb}u{#4a8ffc}g{#6bb0fc}l{#8cd2fd}e{#adf3fd}n'
+      - '&7by watching Fuglen_TV on {#6441A4}Twitch&7.'
       Unlocked:
-      - '&7Select a Fisherman Miniature'
+      - '&7Get {#084cfb}F{#296dfb}u{#4a8ffc}g{#6bb0fc}l{#8cd2fd}e{#adf3fd}n'
       - '&7to follow you.'
     Invisible: false
     Rotate: false
     Equipments:
       Main-Hand:
         Enabled: true
-        Material: FISHING_ROD
+        Material: EGG
       Helmet:
         Enabled: true
-        Material: head:528da0e5b26eac1c4fbc562cd7a41bc7a644be00231cd2c23dd278f3c6861ca6
+        Material: head:6a71e0d288f79d0908e7c266abd42a5eb5dd722c5e3a5a2b8b3877d8c1597d6c
       Chestplate:
         Enabled: true
-        Material: LEATHER_CHESTPLATE:#455B93
+        Material: LEATHER_CHESTPLATE:#084cfb
       Leggings:
         Enabled: true
-        Material: LEATHER_LEGGINGS:#455B93
+        Material: LEATHER_LEGGINGS:#084cfb
       Boots:
         Enabled: true
-        Material: LEATHER_BOOTS:#455B93
+        Material: LEATHER_BOOTS:#084cfb
   Soul-O-Lantern:
     Name: '&5Soul Jack O''Lantern Miniature'
     Material: head:b81c14a4df2a65135673211dd55dc9c577b8500143ec1293eda8e05009c851a8
     Mystery Dust: 58
     Rarity: Epic
-    Enabled: false
+    Enabled: true
     CanBeFound: true
     Purchasable: true
     Lore:

@@ -1,0 +1,10 @@
+Twitch:
+  fuglen_tv:
+    EnableOwnDrops: true
+    EnableBotCommands: true
+    Rewards:
+      5 mystery eggs:
+      - randomdrop %streamer% %twitchuser%
+    ShowDropMessage: true
+    ShowTwitchChat: true
+    ShowTwitchColorCodes: false
