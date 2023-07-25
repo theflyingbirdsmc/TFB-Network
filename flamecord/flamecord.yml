@@ -57,7 +57,7 @@ logger:
 allow-invalid-names: false
 antibot:
   accounts:
-    enabled: true
+    enabled: false
     firewall: false
     limit: 3
     log: true
