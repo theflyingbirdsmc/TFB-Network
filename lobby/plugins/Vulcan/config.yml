@@ -140,7 +140,12 @@ client-brand-alerts:
   whitelist-enabled: false
   # The client brands that will be whitelisted This uses string comparison so it doesnt need to be exact, for example,
   # 'forge' will block Forge, 'lunar' will block lunar, etc.
-  whitelisted-client-brands: []
+  whitelisted-client-brands: 
+  - vanilla
+  - lunar
+  - optifine
+  - badlion
+  - multimc
 connection:
   desync:
     kick-enabled: true
