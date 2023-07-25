@@ -6,6 +6,7 @@
 # |        auto-update and minor-updates-only is HEAVILY RECOMMENDED
 # |------------------------------------------------------------------------
 config:
+  allow-unsafe-mini-message: false
   refresh-panels: true
   refresh-delay: 20
   panel-blocks: true
@@ -52,21 +53,31 @@ updater:
   minor-updates-only: true
   update-checks: true
 purchase:
+  permission:
+    enable: true
+    success: '&aYou have successfully passed the permission check for "%cp-args%".'
+    failure: '&cInefficient Permissions'
   data:
+    enable: true
     success: '&aSuccessfully Bought For $%cp-args%'
     failure: '&cInsufficient Funds!'
   coins:
+    enable: true
     success: '&aSuccessfully Bought For %cp-args% Coins.'
     failure: '&cInsufficient Coins!'
   currency:
+    enable: true
     success: '&aSuccessfully Bought For $%cp-args%'
     failure: '&cInsufficient Funds!'
   tokens:
+    enable: true
     success: '&aSuccessfully Bought For %cp-args% Tokens.'
     failure: '&cInsufficient Tokens!'
   item:
+    enable: true
     success: '&aSuccessfully Sold %cp-args%.'
     failure: '&cInsufficient Items!'
   xp:
+    enable: true
     success: '&aSuccessfully Bought For %cp-args% Experience.'
     failure: '&cInsufficient Experience!'

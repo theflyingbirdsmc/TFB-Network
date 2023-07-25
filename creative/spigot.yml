@@ -63,6 +63,10 @@ stats:
   forced-stats: {}
 world-settings:
   default:
+    seed-ancientcity: 20083232
+    seed-trailruins: 83469867
+    seed-buriedtreasure: 10387320
+    seed-mineshaft: default
     hopper-can-load-chunks: false
     seed-nether: 30084232
     below-zero-generation-in-existing-chunks: true
@@ -102,6 +106,8 @@ world-settings:
     end-portal-sound-radius: 0
     max-entity-collisions: 8
     growth:
+      torchflower-modifier: 100
+      pitcherplant-modifier: 100
       twistingvines-modifier: 100
       weepingvines-modifier: 100
       cavevines-modifier: 100
@@ -168,6 +174,7 @@ world-settings:
       exp: 3.0
       item: 2.5
     entity-tracking-range:
+      display: 128
       players: 48
       animals: 48
       monsters: 48

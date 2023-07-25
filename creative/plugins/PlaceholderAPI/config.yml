@@ -53,3 +53,10 @@ expansions:
     argument_split: ','
     use_quick_js: false
     enable_parse_command: false
+  vault:
+    formatting:
+      thousands: k
+      millions: M
+      billions: B
+      trillions: T
+      quadrillions: Q

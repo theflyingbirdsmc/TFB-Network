@@ -60,7 +60,7 @@ worlds:
       height: 62
       biome: minecraft:forest
       sign_material: OAK_WALL_SIGN
-      size: 42
+      size: 64
       filling: minecraft:stone
       auto_merge: false
       bedrock: true
@@ -68,9 +68,9 @@ worlds:
       floor: minecraft:grass_block
     wall:
       filling: minecraft:stone
-      block_claimed: minecraft:sandstone_slab
+      block_claimed: minecraft:spruce_slab
       height: 62
-      block: minecraft:stone_slab
+      block: minecraft:birch_slab
       place_top_block: true
     misc_spawn_unowned: false
     road:

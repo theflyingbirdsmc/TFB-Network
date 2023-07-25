@@ -29,9 +29,18 @@
 #   - Run_Command: One command (Minecraft only supports one) that will run upon clicking on part.
 #   - Insertion: The text to insert into the chat when this component
 #                (and child components) are clicked while pressing the shift key.
+#   - (1.16+) Copy_To_Clipboard: The text to copy to your clipboard when this component is clicked.
 #   - Inherit: (Limited) A name of another format from another file to import and use.
 #   - Inherit_Part: (Limited) A name of another part from this file to import and use.
-#   - Gradient: <from> - <to> (such as RED - GOLD or #123456 - #123456) Gradients for MC 1.16+.
+#   - (1.16+) Gradient: <from> - <to> (such as RED - GOLD or #123456 - #123456) Gradients for.
+#   - Image_File: Display the image to the left of this part. - Syntax: Image_File: creeper-image.png
+#   - Image_Head: Display the head of the specified player - Syntax: Image_Head: "Herobrine" | Image_Head: "{player}"
+#                (Can be a specific player, or you can use the {player} placeholder.
+#   - Image_Url: Display an image from the specified url - Syntax: Image_Url: "https://mywebsite.com/images/creeper.png"
+#   - Image_Height: Specify the image height when using an image
+#                (Default: 8)
+#   - Image_Type: Which characters should be used to render the image?
+#                (Default: BLOCK || Available: BLOCK, DARK_SHADE, MEDIUM_SHADE, LIGHT_SHADE)
 #
 #   For help and documentation, visit:
 #   https://github.com/kangarko/ChatControl-Red/wiki/formats

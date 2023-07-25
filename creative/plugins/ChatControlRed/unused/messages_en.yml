@@ -1,0 +1,9 @@
+Commands:
+  Color:
+    Reset_Decoration: Set {0} chat decoration to default
+    Success_Color: Set {0} chat color to {1}&7
+    Success_Decoration: Set {0} chat decoration to {1}&r&7
+    Reset: Set {0} chat color to default
+Player:
+  Cannot_Chat_Vanished: You can't write chat messages directly when you're vanished.
+    Use '/{label_channel} send' instead.
