@@ -4,15 +4,15 @@ listeners:
   force_default_server: true
   forced_hosts:
     pvp.md-5.net: pvp
-  host: 0.0.0.0:25565
+  host: 0.0.0.0:32000
   max_players: 2023
   motd: ''
   ping_passthrough: false
   priorities:
   - lobby
   proxy_protocol: false
-  query_enabled: false
-  query_port: 25565
+  query_enabled: true
+  query_port: 32000
   tab_list: GLOBAL_PING
   tab_size: 60
 remote_ping_cache: -1
