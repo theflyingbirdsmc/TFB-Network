@@ -116,7 +116,7 @@ scoreboard:
       - ''
       - '&6&lGeneral info'
       - ' &8» &eBalance&7: &f$%vault_eco_balance_commas%'
-      - ' &8» &e⌚&7: &f%world_time_world%'
+      - ' &8» &e⌚&7: &f%world_time_<world>%'
       - ' &8» &eBiome&7: &f%world_biome%'
 ping-spoof:
   enabled: false

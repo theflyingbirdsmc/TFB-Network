@@ -174,7 +174,7 @@ scoreboard:
     - ''
     - '&2&lGeneral info'
     - ' &8» &eBalance&7: &f$%vault_eco_balance_commas%'
-    - ' &8» &e⌚&7: &f%world_time_world%'
+    - ' &8» &e⌚&7: &f%world_time_<world>%'
     - ' &8» &eBiome&7: &f%world_biome%'
 
   #Formatted ONLY When A User is NOT in a Faction
@@ -191,7 +191,7 @@ scoreboard:
     - ''
     - '&6Server Info:'
     - '&f* &eBiome&7: &f%world_biome%'
-    - '&f* &e⌚&7: &f%world_time_world%'
+    - '&f* &e⌚&7: &f%world_time_<world>%'
 
 
 
