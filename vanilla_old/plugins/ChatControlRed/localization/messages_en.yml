@@ -231,13 +231,8 @@ Commands:
     Image_Error: 'Failed to broadcast image from ''{0}'': {1}. Please see console for more information.'
     Invalid_Image_Height: Image height must be between {0} and {1}.
     Chat_Body:
-    - '&8{chat_line}'
-    - '<center>&c&l! &6&l{type} &c&l!'
-    - '&8{chat_line}'
     - '&f{lines}'
-    - '{remaining_space}'
-    - '&8{chat_line}'
-    Chat_Body_Line_Color: GRAY
+    Chat_Body_Line_Color: WHITE
     Type: '(bungee ? ''NETWORK '' : '''') + ''ANNOUNCEMENT'''
     Success: Your announcement has been sent.
     Success_Network: Your announcement was sent to the {0} server.
