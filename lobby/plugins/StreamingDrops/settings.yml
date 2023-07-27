@@ -33,7 +33,7 @@ GeneralDrops:
   1 Mystery Gift! PogChamp
 PlaceholderAPI:
   PlayerTopDropsPrefix: '&2◄&6✪&2►'
-  Livetag: '🔴'
+  Livetag: '&4LIVE'
   Offlinetag: '&f[&7Offline&f]'
 Format:
   OnlineFormat: '&b&n%streamer% - [Link]'
