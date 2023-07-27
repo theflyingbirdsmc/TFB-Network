@@ -47,3 +47,4 @@ TFB-*/plugins/Plan/serverConfiguration/*.yml
 TFB-*/plugins/LibsDisguises/internal.yml
 TFB-*/plugins/ProtocolLib/lastupdate
 TFB-*/usercache.json
+lobby/plugins/StreamingDrops/user.yml
