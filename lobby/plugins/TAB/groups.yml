@@ -18,9 +18,9 @@ _DEFAULT_:
   tabprefix: "%vault-prefix%"
   tagprefix: "%vault-prefix%"
   customtabname: "%hexnicks_nick_hex%"
-  customtagname: "%essentials_nickname%" # don't forget to enable unlimited nametag mode to make this one work
-  tabsuffix: "%essentials_afk%"
-  tagsuffix: "%vault-suffix%"
+  customtagname: "%hexnicks_nick_hex%" # don't forget to enable unlimited nametag mode to make this one work
+  tabsuffix: "%streamingdrops_streamerlivetag%%essentials_afk%"
+  tagsuffix: "%streamingdrops_streamerlivetag%%essentials_afk%"
 
 per-world:
   world1:
