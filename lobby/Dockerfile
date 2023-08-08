@@ -10,4 +10,4 @@ ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
 WORKDIR /tfb
 
 RUN chmod +x *.jar
-CMD  ["java","-Xms128M","-Xmx1024M", "-jar", "server.jar", "nogui"]
+CMD  ["java","-Xms128M", "-Xmx4096M", "-jar", "server.jar", "nogui"]
