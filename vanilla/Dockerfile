@@ -7,4 +7,4 @@ COPY . /tfb/
 WORKDIR /tfb
 
 RUN chmod +x *.jar
-CMD ["java", "-XX:+UseParNewGC", "-XX:+CMSIncrementalPacing", "-XX:ParallelGCThreads=4", "-XX:+AggressiveOpts", "-Xms128M", "-Xmx8192M", "-jar", "server.jar", "nogui"]
+CMD ["java", "-XX:ParallelGCThreads=4", "-Xms128M", "-Xmx8192M", "-jar", "server.jar", "nogui"]
