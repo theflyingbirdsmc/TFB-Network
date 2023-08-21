@@ -90,7 +90,7 @@ task server(type: Copy) {
     delete fileTree(dir: '/.' , include: 'server.jar')
     }
     from configurations.compileClasspath
-    include 'Paper-*', 'Flamecord-*'
+    include 'Paper-*', 'Flamecord-*', 'Purpur-*'
     rename '.*-(.+)', 'server.jar'
     into "."
 }
