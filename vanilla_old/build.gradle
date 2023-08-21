@@ -70,7 +70,7 @@ task plugins(type: Copy) {
     delete fileTree(dir: 'plugins/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    exclude '*Paper*', '*Flamecord*', '*PAPI-Expansion*'
+    exclude '*Paper*', '*Flamecord*', '*PAPI-Expansion*, *Purpur*'
     into 'plugins'
 }
 
