@@ -1,8 +1,0 @@
-Mystery-Vaults:
-  vanilla:
-    BlockFace: NORTH
-    Location:
-      world: world
-      x: 13.0
-      y: 210.0
-      z: 24.0
