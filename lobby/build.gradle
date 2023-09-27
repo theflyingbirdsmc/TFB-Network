@@ -5,55 +5,55 @@ plugins {
 
 // Use environment instead of gradle.properties
 if("$System.env.MAVEN_URL" != null) {
-    ext.MAVEN_URL="$System.env.MAVEN_URL"
-    ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
-    ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
+    ext.MAVEN_URL="https://jfrog.rosenvold.tech/artifactory/plugins/"
+    ext.MAVEN_PASSWORD="cmVmdGtuOjAxOjE3MjcxOTQ4Mzc6cUdZaXVmcVFoZmZzRkNnTXE0b1VraHJQNDll"
+    ext.MAVEN_USERNAME="admin"
 }
 
 dependencies {
     // Network plugins
-    implementation 'Server:Paper:1.20.1-83'
-    implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
-    implementation 'BuycraftX:BuycraftX:12.0.8'
-    implementation 'ChatControlRed:ChatControlRed:10.19.4'
-    implementation 'CommandPanels:CommandPanels:3.19.1.0'
+    // implementation 'Server:Paper:1.20.1-83'
+    // implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
-    implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
-    implementation 'EssentialsSpawn:EssentialsSpawn:2.20.1-dev+29-6012959'
-    implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
-    implementation 'GadgetsMenu:GadgetsMenu:5.9.0'
-    implementation 'HexNicks:HexNicks:3.1.1'
-    implementation 'GSit:GSit:1.4.10'
-    implementation 'LibsDisguises:LibsDisguises:10.0.37'
-    implementation 'LuckPerms:LuckPerms:5.4.98'
-    implementation 'Multiverse-Core:Multiverse-Core:4.3.9'
-    implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
-    implementation 'Plan:Plan:5.5-build-2391'
-    implementation 'ProtocolLib:ProtocolLib:5.0.0'
-    implementation 'spark:spark:1.10.43'
-    implementation 'StreamingDrops:StreamingDrops:12.1'
-    implementation 'TAB:TAB:4.0.3'
-    implementation 'Vault:Vault:1.7.3-b131'
-    implementation 'ViaBackwards:ViaBackwards:4.7.0'
-    implementation 'ViaVersion:ViaVersion:4.7.0'
-    implementation 'VotingPlugin:VotingPlugin:6.13.1'
-    implementation 'WorldGuard:WorldGuard:7.0.9-beta1+2249-223b80c'
-    implementation 'Vulcan:Vulcan:2.7.5'
+    // implementation 'ChatControlRed:ChatControlRed:10.19.4'
+    // implementation 'CommandPanels:CommandPanels:3.19.1.0'
+    // implementation 'DecentHolograms:DecentHolograms:2.8.3'
+    // implementation 'Essentials:Essentials:2.20.1-dev+29-6012959'
+    // implementation 'EssentialsSpawn:EssentialsSpawn:2.20.1-dev+29-6012959'
+    // implementation 'FastAsyncWorldEdit:FastAsyncWorldEdit:2.6.5-SNAPSHOT-527;e0507e6'
+    // implementation 'GadgetsMenu:GadgetsMenu:5.9.0'
+    // implementation 'HexNicks:HexNicks:3.1.1'
+    // implementation 'GSit:GSit:1.4.10'
+    // implementation 'LibsDisguises:LibsDisguises:10.0.37'
+    // implementation 'LuckPerms:LuckPerms:5.4.98'
+    // implementation 'Multiverse-Core:Multiverse-Core:4.3.9'
+    // implementation 'PlaceholderAPI:PlaceholderAPI:2.11.3'
+    // implementation 'Plan:Plan:5.5-build-2391'
+    // implementation 'ProtocolLib:ProtocolLib:5.0.0'
+    // implementation 'spark:spark:1.10.43'
+    // implementation 'StreamingDrops:StreamingDrops:12.1'
+    // implementation 'TAB:TAB:4.0.3'
+    // implementation 'Vault:Vault:1.7.3-b131'
+    // implementation 'ViaBackwards:ViaBackwards:4.7.0'
+    // implementation 'ViaVersion:ViaVersion:4.7.0'
+    // implementation 'VotingPlugin:VotingPlugin:6.13.1'
+    // implementation 'WorldGuard:WorldGuard:7.0.9-beta1+2249-223b80c'
+    // implementation 'Vulcan:Vulcan:2.7.5'
 
-    //PlaceholderAPI Expansions
-    implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Essentials:1.5.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
+    // //PlaceholderAPI Expansions
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Essentials:1.5.2'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
+    // implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
 }
 
 // TFB Artifactory
 repositories {
-    mavenCentral {
+    maven {
         url "${MAVEN_URL}"
         credentials {
             username = "${MAVEN_USERNAME}"
