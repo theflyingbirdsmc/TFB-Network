@@ -2,7 +2,6 @@
 #
 # A full wiki on how to use this plugin can be found at:
 # https://wiki.helpch.at/clips-plugins/deluxemenus
-
 debug: false
 check_updates: true
 gui_menus:
