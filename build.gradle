@@ -1,90 +1,72 @@
 import java.util.jar.JarFile
 import org.yaml.snakeyaml.Yaml
 
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath("org.yaml:snakeyaml:2.0")
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10"
+  }
+}
+
+apply plugin: "com.jfrog.artifactory"
 apply plugin: 'java'
 apply plugin: 'groovy'
-// apply plugin: 'maven'
 apply plugin: 'maven-publish'
-apply plugin: 'com.jfrog.artifactory'
 
-repositories {
-    mavenCentral()
-    mavenLocal()
-}
 
-buildscript {
-dependencies{
-        classpath("org.yaml:snakeyaml:2.0")
-    }
-    repositories {
-        maven {
-            url 'https://jfrog.rosenvold.tech/artifactory/plugins'
-            credentials {
-                username = "admin" // Your Artifactory username
-                password = "cmVmdGtuOjAxOjE3MjczNzcyMDQ6UUJvelM5WHJxVndXb1FxNVh4djFta1ZnaEh6" // Your Artifactory password
-            }
-        }
-        mavenCentral()
-    }
-    // dependencies { classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.4" }
-}
 
-buildscript {
-    repositories {
-        maven {
-            url 'https://plugins.gradle.org/m2/'
-        }
-    }
-    dependencies {
-        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:5.1.9'
-    }
-}
 
-ext.filesToPublish = []
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
 
+def dists = []
+
 files.each { file ->
-    ext.filesToPublish << file
+    def jarFile = new JarFile(file)
+    def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
+    
+    if (pluginYml != null) {
+        def yaml = new Yaml()
+        def plugin = yaml.load(jarFile.getInputStream(pluginYml))
+        
+        def groupId = plugin.name
+        def artifactId = plugin.name
+        def version = plugin.version.toString()
+        
+        if (version.contains(" ")) {
+            version = version.replace(" ", "-")
+        }
+        
+        def path = file
+
+        println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+        dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+    }
 }
+
+// dists.each { dist ->
+//     println("DIST: groupId=${dist.groupId}, artifactId=${dist.artifactId}, version=${dist.version}, path=${dist.path}")
+// }
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
+        dists.each { dist ->
+            "$dist.artifactId"(MavenPublication) {
+                from components.java
+                
+                groupId dist.groupId
+                version = dist.version
+                artifactId = dist.artifactId
 
-            filesToPublish.each { file ->
-                def jarFile = new JarFile(file)
-                def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
-                if (pluginYml != null) {
-                    def yaml = new Yaml()
-                    def plugin = yaml.load(jarFile.getInputStream(pluginYml))
-                    def ARTIFACT_ID = plugin.name
-                    def ARTIFACT_VERSION = plugin.version.toString()
-                    if (ARTIFACT_VERSION.contains(" ")) {
-                        ARTIFACT_VERSION = ARTIFACT_VERSION.replace(" ", "-")
-                    }
-                    def ARTIFACT_GROUP = plugin.name
+                // from components.java
 
-                    groupId ARTIFACT_GROUP
-                    artifactId ARTIFACT_ID
-                    version ARTIFACT_VERSION
-
-                    // Publish the JAR file as an artifact
-                    artifact(file)
-
-                    println("Published $ARTIFACT_ID version $ARTIFACT_VERSION")
-                }
-            }
-        }
-    }
-
-    repositories {
-        maven {
-            url 'https://jfrog.rosenvold.tech/artifactory/plugins'
-            credentials {
-                username = "admin" // Your Artifactory username
-                password = "cmVmdGtuOjAxOjE3MjczNzcyMDQ6UUJvelM5WHJxVndXb1FxNVh4djFta1ZnaEh6" // Your Artifactory API key or password
+                artifact dist.path
             }
         }
     }
@@ -95,11 +77,16 @@ artifactory {
     publish {
         repository {
             repoKey = 'plugins'
-            username = "admin" // Your Artifactory username
-            password = "cmVmdGtuOjAxOjE3MjczNzcyMDQ6UUJvelM5WHJxVndXb1FxNVh4djFta1ZnaEh6" // Your Artifactory API key or password
+            username = "admin"
+            password = "cmVmdGtuOjAxOjE3Mjk1MTA3OTY6Q2FsdUxPME5ubmFwcGZFbHJGT1Z2dkJLOHZt"
         }
         defaults {
-            publications('mavenJava')
+            dists.each { dist ->
+                publications(dist.artifactId)
+            }
         }
     }
 }
+
+
+
