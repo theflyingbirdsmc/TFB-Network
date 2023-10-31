@@ -20,10 +20,51 @@ apply plugin: 'maven-publish'
 
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
+def allowedPrefixes = ["paper", "flamecord", "Expansion"]
 
 def dists = []
 
 files.each { file ->
+if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
+        def fileName = file.name - '.jar' // Remove the ".jar" extension
+        
+        if (fileName.startsWith("Expansion-")) {
+            // Handle Expansion files
+            def parts = fileName.split('_')
+            if (parts.size() >= 2) {
+                def groupId = "PAPI-Expansion"
+                def artifactId = parts[0].substring("Expansion-".length())
+                def version = parts[1]
+
+                def path = file
+
+                println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        } else {
+            // Handle Paper and FlameCord files
+            def parts = fileName.split('-')
+            if (parts.size() >= 3) {
+                def groupId = "Server"
+                def artifactId = parts[0]
+                def version = parts[1] + "-" + parts[2]
+                
+                // Extract the version from the file name
+                if (parts.size() > 3) {
+                    version += "-" + parts[3..-1].join("-")
+                }
+                
+                def path = file
+
+                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        }
+    }
+
+
     def jarFile = new JarFile(file)
     def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
     
@@ -75,7 +116,7 @@ artifactory {
         repository {
             repoKey = 'plugins'
             username = "admin"
-            password = "cmVmdGtuOjAxOjE3Mjk1MTA3OTY6Q2FsdUxPME5ubmFwcGZFbHJGT1Z2dkJLOHZt"
+            password = "cmVmdGtuOjAxOjE3MzAzMTk3Mzc6SnZSTWVCWk0yTzEzcUZHN0g1a1phQkplQ2ND"
         }
         defaults {
             dists.each { dist ->
