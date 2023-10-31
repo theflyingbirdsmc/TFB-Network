@@ -11,7 +11,7 @@ if("$System.env.MAVEN_URL" != null) {
 }
 
 dependencies {
-    implementation 'Server:Flamecord:1.5.9'
+    implementation 'Server:FlameCord:1.8.4'
     implementation 'Votifier:Votifier:2.7.3'
     implementation 'ChatControlRed:BungeeControlRed:3.15.0'
     implementation 'BuycraftX:BuycraftX-Bungee:12.0.8'
