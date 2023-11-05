@@ -25,46 +25,6 @@ def allowedPrefixes = ["paper", "flamecord", "Expansion"]
 def dists = []
 
 files.each { file ->
-if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
-        def fileName = file.name - '.jar' // Remove the ".jar" extension
-        
-        if (fileName.startsWith("Expansion-")) {
-            // Handle Expansion files
-            def parts = fileName.split('_')
-            if (parts.size() >= 2) {
-                def groupId = "PAPI-Expansion"
-                def artifactId = parts[0].substring("Expansion-".length())
-                def version = parts[1]
-
-                def path = file
-
-                println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-
-                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-            }
-        } else {
-            // Handle Paper and FlameCord files
-            def parts = fileName.split('-')
-            if (parts.size() >= 3) {
-                def groupId = "Server"
-                def artifactId = parts[0]
-                def version = parts[1] + "-" + parts[2]
-                
-                // Extract the version from the file name
-                if (parts.size() > 3) {
-                    version += "-" + parts[3..-1].join("-")
-                }
-                
-                def path = file
-
-                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-
-                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-            }
-        }
-    }
-
-
     def jarFile = new JarFile(file)
     def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
     
@@ -85,6 +45,46 @@ if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.
         println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
 
         dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+    }
+
+    if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
+        def fileName = file.name - '.jar' // Remove the ".jar" extension
+        
+        if (fileName.startsWith("Expansion-")) {
+            // Handle Expansion files
+            def parts = fileName.split('_')
+            if (parts.size() >= 2) {
+                def groupId = "PAPI-Expansion"
+                def artifactId = parts[0].substring("Expansion-".length())
+                def version = parts[1]
+
+                def path = file
+
+                println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        } else {
+            // Handle Paper and FlameCord files
+            if (fileName.startsWith("paper-")) {
+                def parts = fileName.split('-')
+                // println("Parts: " + parts[0].toString() + parts[1] + parts[2])
+                def groupId = "Server"
+                def artifactId = parts[0]
+                def version = parts[1] + "-" + parts[2]
+                
+                // Extract the version from the file name
+                if (parts.size() > 3) {
+                    version += "-" + parts[3..-1].join("-")
+                }
+                
+                def path = file
+
+                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        }
     }
 }
 
