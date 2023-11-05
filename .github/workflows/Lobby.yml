@@ -31,9 +31,9 @@ jobs:
 
       - name: Execute Gradle build
         env:
-          MAVEN_URL: https://jfrog.rosenvold.tech/artifactory
-          MAVEN_USERNAME: tfb
-          MAVEN_PASSWORD: cmVmdGtuOjAxOjE3MzA3MzI5MDM6RnU1aDJseTVvUlJEczZYYkdwV09kZVgzdDZT
+          MAVEN_URL: ${{ secrets.MAVEN_URL }}
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
         run: cd lobby && gradle update --no-build-cache
 
       # Login to Nexus Artifactory
@@ -51,7 +51,7 @@ jobs:
           context: ./lobby # specifying the directory where your Dockerfile is
           file: ./lobby/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: ${{ secrets.MAVEN_DOCKER_REPO }}/lobby:latest # change this to your image name
+          tags: ${{ secrets.DOCKER_REPO }}/lobby:latest # change this to your image name
           build-args: |
             STREAMINGDROPS_DISCORD_WEBHOOK=${{ secrets.STREAMINGDROPS_DISCORD_WEBHOOK }}
   cleanup:
