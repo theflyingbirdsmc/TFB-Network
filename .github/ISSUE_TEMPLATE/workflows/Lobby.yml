@@ -1,4 +1,4 @@
-name: Build and Publish Lobby Docker Image to Nexus Artifactory
+name: Build and Publish Lobby Docker Image
 
 on:
   push:
