@@ -31,7 +31,7 @@ dependencies {
     implementation 'Plan:Plan:5.5-build-2391'
     implementation 'ProtocolLib:ProtocolLib:5.0.0'
     implementation 'spark:spark:1.10.43'
-    implementation 'StreamingDrops:StreamingDrops:12.1'
+    implementation 'StreamingDrops:StreamingDrops:13.1'
     implementation 'TAB:TAB:4.0.3'
     implementation 'Vault:Vault:1.7.3-b131'
     implementation 'ViaVersion:ViaVersion:4.7.0'
