@@ -5,13 +5,13 @@ plugins {
 
 // Use environment instead of gradle.properties
 if("$System.env.MAVEN_URL" != null) {
-    ext.MAVEN_URL="$System.env.MAVEN_URL"
+    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
     ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
     ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
 }
 
 dependencies {
-    implementation 'Server:Flamecord:1.5.9'
+    // implementation 'Server:FlameCord:1.8.4'
     implementation 'Votifier:Votifier:2.7.3'
     implementation 'ChatControlRed:BungeeControlRed:3.15.0'
     implementation 'BuycraftX:BuycraftX-Bungee:12.0.8'
