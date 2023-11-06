@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.devcontainer/**'
+      - .github/workflows/TFB.yml
 jobs:
   build-test-publish:
     runs-on: ubuntu-latest
