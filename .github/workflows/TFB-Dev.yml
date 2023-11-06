@@ -1,4 +1,4 @@
-name: Build and Publish TFB Dev Docker Image to Nexus Artifactory
+name: TFB Dev
 
 on:
   push:

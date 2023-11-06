@@ -1,4 +1,4 @@
-name: Build and Publish Lobby Docker Image
+name: Lobby
 
 on:
   push:
