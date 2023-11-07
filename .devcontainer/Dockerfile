@@ -20,7 +20,7 @@ RUN wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip \
     && rm gradle-8.4-bin.zip
 
 # Set Gradle in the environment variables
-ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
+ENV PATH="/opt/gradle/gradle-8.4/bin:${PATH}"
 
 
 ARG MAVEN_URL
