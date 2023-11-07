@@ -9,7 +9,7 @@ buildscript {
   }
   dependencies {
     classpath("org.yaml:snakeyaml:2.0")
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10"
+    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4.33.1")
   }
 }
 
@@ -25,68 +25,88 @@ def allowedPrefixes = ["paper", "flamecord", "Expansion"]
 def dists = []
 
 files.each { file ->
-    def jarFile = new JarFile(file)
-    def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
-    
-    if (pluginYml != null) {
-        def yaml = new Yaml()
-        def plugin = yaml.load(jarFile.getInputStream(pluginYml))
-        
-        def groupId = plugin.name
-        def artifactId = plugin.name
-        def version = plugin.version.toString()
-        
+    // def jarFile = new JarFile(file)
+    // def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
+
+    // if (pluginYml != null) {
+        // def yaml = new Yaml()
+        // def plugin = yaml.load(jarFile.getInputStream(pluginYml))
+        Random random = new Random()
+        // random.nextInt(100 ** num)
+
+        def groupId = "test" + random.nextInt(100 ** 10).toString()
+        def artifactId = "test" + random.nextInt(100 ** 10).toString()
+        def version = "test" + random.nextInt(100 ** 10).toString()
+
         if (version.contains(" ")) {
             version = version.replace(" ", "-")
         }
-        
+
+        // Rename the JAR file to its artifactId.jar before setting the path
+        // def newFileName = "${artifactId}.jar"
+        // File newFile = new File(file.parent, newFileName)
+        // file.renameTo(newFile)
+        // file = newFile
+
         def path = file
 
         println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
 
         dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-    }
+    
 
-    if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
-        def fileName = file.name - '.jar' // Remove the ".jar" extension
-        
-        if (fileName.startsWith("Expansion-")) {
-            // Handle Expansion files
-            def parts = fileName.split('_')
-            if (parts.size() >= 2) {
-                def groupId = "PAPI-Expansion"
-                def artifactId = parts[0].substring("Expansion-".length())
-                def version = parts[1]
+    // if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
+    //     def fileName = file.name - '.jar' // Remove the ".jar" extension
 
-                def path = file
+    //     if (fileName.startsWith("Expansion-")) {
+    //         // Handle Expansion files
+    //         def parts = fileName.split('_')
+    //         if (parts.size() >= 2) {
+    //             def groupId = "PAPI-Expansion"
+    //             def artifactId = parts[0].substring("Expansion-".length())
+    //             def version = parts[1]
 
-                println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+    //             // Rename the JAR file to its artifactId.jar before setting the path
+    //             def newFileName = "${artifactId}.jar"
+    //             File newFile = new File(file.parent, newFileName)
+    //             file.renameTo(newFile)
+    //             file = newFile
 
-                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-            }
-        } else {
-            // Handle Paper and FlameCord files
-            if (fileName.startsWith("paper-")) {
-                def parts = fileName.split('-')
-                // println("Parts: " + parts[0].toString() + parts[1] + parts[2])
-                def groupId = "Server"
-                def artifactId = parts[0]
-                def version = parts[1] + "-" + parts[2]
-                
-                // Extract the version from the file name
-                if (parts.size() > 3) {
-                    version += "-" + parts[3..-1].join("-")
-                }
-                
-                def path = file
+    //             def path = file
 
-                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+    //             println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
 
-                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-            }
-        }
-    }
+    //             dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+    //         }
+    //     } else {
+    //         // Handle Paper and FlameCord files
+    //         if (fileName.startsWith("paper-")) {
+    //             def parts = fileName.split('-')
+    //             def groupId = "Server"
+    //             def artifactId = parts[0]
+    //             def version = parts[1] + "-" + parts[2]
+
+    //             if (parts.size() > 3) {
+    //                 version += "-" + parts[3..-1].join("-")
+    //             }
+
+    //             // Rename the JAR file to its artifactId.jar before setting the path
+    //             def newFileName = "${artifactId}.jar"
+    //             File newFile = new File(file.parent, newFileName)
+    //             file.renameTo(newFile)
+    //             file = newFile
+
+    //             def path = file
+
+    //             println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+    //             dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+    //         }
+    //     }
+    // }
 }
+
+
 
 // dists.each { dist ->
 //     println("DIST: groupId=${dist.groupId}, artifactId=${dist.artifactId}, version=${dist.version}, path=${dist.path}")
@@ -121,6 +141,7 @@ artifactory {
         defaults {
             dists.each { dist ->
                 publications(dist.artifactId)
+                // sleep(2 * 1000)
             }
         }
     }
