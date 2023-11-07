@@ -9,7 +9,7 @@ buildscript {
   }
   dependencies {
     classpath("org.yaml:snakeyaml:2.0")
-    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4.33.1")
+    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4.33.6")
   }
 }
 
