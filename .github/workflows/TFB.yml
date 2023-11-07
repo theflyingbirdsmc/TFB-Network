@@ -6,10 +6,10 @@ on:
       - main
     paths:
       - .github/workflows/TFB.yml
+      - .devcontainer/Dockerfile
 jobs:
   build-test-publish:
     runs-on: ubuntu-latest
-
     steps:
       # Check out the repository
       - name: Checkout code
