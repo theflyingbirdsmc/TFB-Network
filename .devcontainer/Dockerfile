@@ -15,9 +15,9 @@ RUN apt-get update \
 
 #install Gradle
 WORKDIR /opt/gradle
-RUN wget -q https://services.gradle.org/distributions/gradle-7.3-bin.zip \
-    && unzip gradle-7.3-bin.zip \
-    && rm gradle-7.3-bin.zip
+RUN wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip \
+    && unzip gradle-8.4-bin.zip \
+    && rm gradle-8.4-bin.zip
 
 # Set Gradle in the environment variables
 ENV PATH="/opt/gradle/gradle-7.3/bin:${PATH}"
