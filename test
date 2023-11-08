@@ -1,0 +1,86 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath("org.yaml:snakeyaml:2.0")
+    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10")
+    // classpath("com.jfrog.artifactory:5.1.10")
+  }
+}
+apply plugin: "com.jfrog.artifactory"
+
+def javaProjects() {
+    subprojects.findAll { new File(it.projectDir, '_plugins').directory }
+}
+
+allprojects {
+    // apply plugin: 'com.jfrog.artifactory'
+    // group = 'org.jfrog.test.gradle.publish'
+    // version = "5.1.10"
+    // status = 'Integration'
+    repositories {
+        maven {
+            url "https://jfrog.rosenvold.tech/artifactory/plugins"
+            credentials {
+                username "admin"
+                password "cmVmdGtuOjAxOjE3MzAzMTk3Mzc6SnZSTWVCWk0yTzEzcUZHN0g1a1phQkplQ2ND"
+            }
+        }
+    }
+}
+
+artifactoryPublish.skip = true
+
+configure(javaProjects()) {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'ivy-publish'
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+                artifact(file("_plugins/LuckPerms.jar"))
+            }
+            ivyJava(IvyPublication) {
+                from components.java
+            }
+        }
+    }
+}
+
+artifactoryPublish.skip = true
+
+artifactory {
+    clientConfig.setIncludeEnvVars(true)
+    clientConfig.info.addEnvironmentProperty('test.adding.dynVar', new java.util.Date().toString())
+
+    publish {
+        contextUrl = "https://jfrog.rosenvold.tech/artifactory"
+        repository {
+            repoKey = 'plugins'
+            username = "admin"
+            password = "cmVmdGtuOjAxOjE3MzAzMTk3Mzc6SnZSTWVCWk0yTzEzcUZHN0g1a1phQkplQ2ND"
+            // This is an optional section for configuring Ivy publication (when publishIvy = true).
+            ivy {
+                ivyLayout = '[organization]/[module]/ivy-[revision].xml'
+                artifactLayout = '[organization]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]'
+                mavenCompatible = true
+            }
+        }
+        defaults {
+            publications('mavenJava', 'ivyJava')
+            publishArtifacts = true
+            // Properties to be attached to the published artifacts.
+            println(properties.getSha1.toString())
+            properties.put("gradle.test.multi.values.key", "val1, val2, val3")
+            properties.put("gradle.test.single.value.key", "basic")
+            properties = ["gradle.test.single.value.key": 'basic', "gradle.test.multi.values.key": 'val1, val2, val3']
+            publishPom = true // Publish generated POM files to Artifactory (true by default)
+            publishIvy = true // Publish generated Ivy descriptor files to Artifactory (true by default)
+        }
+    }
+}

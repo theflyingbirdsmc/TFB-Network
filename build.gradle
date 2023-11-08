@@ -9,7 +9,9 @@ buildscript {
   }
   dependencies {
     classpath("org.yaml:snakeyaml:2.0")
-    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:4.33.1")
+    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10")
+    
+    // classpath("com.jfrog.artifactory:5.1.10")
   }
 }
 
@@ -17,6 +19,8 @@ apply plugin: "com.jfrog.artifactory"
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
+
+// buildDir = '_plugins'
 
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
@@ -51,6 +55,7 @@ files.each { file ->
         def path = file
 
         println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+        // println("Size: " + file.length())
 
         dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
     
@@ -107,7 +112,6 @@ files.each { file ->
 }
 
 
-
 // dists.each { dist ->
 //     println("DIST: groupId=${dist.groupId}, artifactId=${dist.artifactId}, version=${dist.version}, path=${dist.path}")
 // }
@@ -121,7 +125,7 @@ publishing {
                 groupId dist.groupId
                 version = dist.version
                 artifactId = dist.artifactId
-
+                println "File size: ${file('build/libs/TFB-Network.jar').length()} bytes"
                 // from components.java
 
                 artifact dist.path
@@ -147,5 +151,22 @@ artifactory {
     }
 }
 
+// artifactoryPublish.doLast {
+//     def buildInfo = artifactoryPublish.getBuildInfo()
 
+//     // Access and manipulate build-info data as needed
+//     println("Build name: " + buildInfo.getName())
+//     println("Build number: " + buildInfo.getNumber())
 
+//     // Access and manipulate module information
+//     buildInfo.getModules().each { module ->
+//         println("Module name: " + module.getId())
+//         module.getArtifacts().each { artifact ->
+//             println("Artifact name: " + artifact.getName())
+//             println("Artifact type: " + artifact.getType())
+//             println("Artifact SHA1: " + artifact.getChecksums().getSha1())
+//         }
+//     }
+
+//     // Your custom logic here
+// }
