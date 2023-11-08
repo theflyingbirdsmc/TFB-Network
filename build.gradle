@@ -34,7 +34,7 @@ if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.
             // println(parts)
             if (parts.size() >= 1) {
                 def groupId = "PAPI-Expansion"
-                def artifactId = parts[1]
+                def artifactId = "Expansion-" + parts[1]
                 def version = parts[2]
 
                 def path = file
