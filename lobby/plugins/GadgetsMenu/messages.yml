@@ -35,7 +35,7 @@ Items:
     Show-In-Lore: true
     Lore:
     - ''
-    - '&7Unlocked: &c{HASPERMISSION}/{SIZE} &8({PERCENTAGE}%)'
+    - '&7Unlocked: &c{UNLOCKED_ITEMS}/{SIZE} &8({PERCENTAGE}%)'
     - ''
     - '&eClick to browse!'
   Settings:
@@ -994,3 +994,7 @@ Failed-To-Reload-Plugin: '{PREFIX}&cUnable to reload GadgetsMenu plugin. The plu
   has been disabled. You need to restart the server to re-enable the plugin.'
 Target-Player-No-Permission: '{PREFIX}&c{PLAYER} does not have the required permissions
   to equip this cosmetic.'
+Player-Receive-Menu-Item: '{PREFIX}&eA menu selector has been added into your inventory!'
+Reset-Pet-Name: '&eSuccessfully reset the pet name.'
+Reset-Pet-Name-For-Player: '&eSuccessfully reset {PLAYER} {TYPE} pet''s name.'
+Invalid: Invalid

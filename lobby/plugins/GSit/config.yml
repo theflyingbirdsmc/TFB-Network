@@ -1,5 +1,8 @@
 Lang:
   
+  # Defines whether the client language should be used, if it is available
+  client-lang: true
+  
   # Defines the plugin language
   lang: en_en
 
@@ -11,10 +14,11 @@ Options:
   
   Emote:
     
+    # Defines whether a player's emote is restore on rejoin / reload
+    restore: true
+    
     # Defines the maximum range at which emotes can be seen
     max-distance: 192.0
-    
-    # Defines whether to create the default "happy" emote in the emotes folder if it is missing
     create-default-emote: true
   
   # Defines the worlds in which a player can sit, pose, crawl or emote (all other worlds will be blocked when the list is not empty)

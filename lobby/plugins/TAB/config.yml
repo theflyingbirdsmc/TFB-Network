@@ -124,11 +124,10 @@ placeholders:
   date-format: dd.MM.yyyy
   time-format: '[HH:mm:ss / h:mm a]'
   time-offset: 0
-  register-tab-expansion: true
 placeholder-output-replacements:
-  "%essentials_afk%":
-    "yes": " &8😴"
-    "no": ""
+  '%essentials_afk%':
+    'yes': ' &8😴'
+    'no': ''
   '%essentials_nickname%':
     '%essentials_nickname%': '%player%'
 conditions:
@@ -165,4 +164,6 @@ use-online-uuid-in-tablist: true
 global-playerlist:
   enabled: false
 layout:
+  enabled: false
+ping-spoof:
   enabled: false

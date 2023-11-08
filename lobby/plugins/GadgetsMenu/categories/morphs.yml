@@ -308,3 +308,5 @@ Morphs:
       - '&7lasers by right-clicking with'
       - '&7the Slimeball item in your'
       - '&7hotbar.'
+Settings:
+  Disable-Usage-If-Cannot-Break-Block: false

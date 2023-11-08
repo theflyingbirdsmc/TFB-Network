@@ -5,6 +5,10 @@ Animations:
     Enabled: true
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: 2.6
+        Z: 0.5
     Lore:
     - '&7Set your Mystery Vault'
     - '&7animation to &aNone&7.'
@@ -14,6 +18,10 @@ Animations:
     Enabled: true
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: 2.6
+        Z: 0.5
     Lore:
     - '&7Set your Mystery Vault'
     - '&7animation to &aNormal&7.'
@@ -23,6 +31,12 @@ Animations:
     Enabled: true
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Lore:
     - '&7Set your Mystery Vault'
     - '&7animation to &aCountdown&7.'
@@ -32,6 +46,12 @@ Animations:
     Enabled: true
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Mystery-Box-Quality-Block:
       Material: head:92dce694ae9c4e3d9c1666be4a8e1313900fb3becd4a51cd8410ae4a38b4b7f6
     Lore:
@@ -43,6 +63,12 @@ Animations:
     Enabled: false
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Mystery-Box-Quality-Block:
       Material: CRAFTING_TABLE
       Rotational-Angle:
@@ -58,6 +84,12 @@ Animations:
     Enabled: false
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Mystery-Box-Quality-Block:
       Material: SUNFLOWER
     Lore:
@@ -69,6 +101,12 @@ Animations:
     Enabled: false
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Lore:
     - '&7Set your Mystery Vault'
     - '&7animation to &aHalloween&7.'
@@ -78,6 +116,12 @@ Animations:
     Enabled: true
     Mini-Block:
       Material: head:77e90681f5aa18b17342479009877128f89974fbd24d381f7fceea79c915d0d2
+      Location-Offset:
+        X: 0.5
+        Y: -0.4
+        Z: 0.5
+      Location-Increment:
+        Y: 0.05
     Mystery-Box-Quality-Block:
       Material: head:23aaf7b1a778949696cb99d4f04ad1aa518ceee256c72e5ed65bfa5c2d88d9e
     Lore:

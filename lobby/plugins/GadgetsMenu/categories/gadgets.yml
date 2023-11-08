@@ -1207,3 +1207,5 @@ Gadgets:
           - '&7Launcher a wave of bats'
           - '&7and give you a temporary'
           - '&7invisibility.'
+Settings:
+  Disable-Usage-If-Cannot-Break-Block: false

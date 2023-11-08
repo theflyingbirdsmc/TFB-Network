@@ -16,6 +16,8 @@ Plugin:
 
 
 Messages:
+  action-sit-error: '[P]&c Due to an error you can''t sit here!'
+  action-pose-error: '[P]&c Due to an error you can''t pose here!'
   
   command-permission-error: '[P]&c 你不能執行此指令!'
   command-sender-error: '[P]&c 目前玩家不能執行此指令!'

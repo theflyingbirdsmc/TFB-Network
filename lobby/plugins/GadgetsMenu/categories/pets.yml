@@ -8899,3 +8899,284 @@ Pets:
           - '&7Hunger: {HUNGER}'
           - '&7Thirst: {THIRST}'
           - '&7Exercise: {EXERCISE}'
+  Camel:
+    Name: '&6Camel'
+    Material: head:74b8a333dfa92e7e5a95ad4ae2d84b1bafa33dc28c054925277f60e79dafc8c4
+    GUI-Name: Camel
+    Enabled: true
+    Lore:
+    - '&7Click here to see all pets'
+    - '&7in the Camel category!'
+    Types:
+      Camel:
+        Name: '&5Camel'
+        Material: head:74b8a333dfa92e7e5a95ad4ae2d84b1bafa33dc28c054925277f60e79dafc8c4
+        Mystery Dust: 65
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Camel'
+        Move-Speed: 0.7
+        Ride-Speed: 0.35
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
+        Pet-Item-Interest:
+          Dislike:
+          - Magma Cream
+          - Bone
+          - Rotten Flesh
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Milk
+          - Ball
+          Favourite:
+          - Hay
+          - Water
+          - Leash
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Camel yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Camel'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Camel:
+        Name: '&6Camel (Baby)'
+        Material: CACTUS
+        Mystery Dust: 75
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Camel (Baby)'
+        Move-Speed: 0.6
+        Ride-Speed: 0.3
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Magma Cream
+          - Bone
+          - Rotten Flesh
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Apple
+          - Water
+          - Ball
+          Favourite:
+          - Wheat
+          - Milk
+          - Stick
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Camel (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Camel (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+  Sniffer:
+    Name: '&6Sniffer'
+    Material: head:87ad920a66e38cc3426a5bff084667e8772116915e298098567c139f222e2c42
+    GUI-Name: Sniffer
+    Enabled: true
+    Lore:
+    - '&7Click here to see all pets'
+    - '&7in the Sniffer category!'
+    Types:
+      Sniffer:
+        Name: '&5Sniffer'
+        Material: head:87ad920a66e38cc3426a5bff084667e8772116915e298098567c139f222e2c42
+        Mystery Dust: 65
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Sniffer'
+        Move-Speed: 0.7
+        Ride-Speed: 0.4
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
+        Pet-Item-Interest:
+          Dislike:
+          - Magma Cream
+          - Bone
+          - Rotten Flesh
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Carrot
+          - Milk
+          - Ball
+          Favourite:
+          - Flower
+          - Water
+          - Leash
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Sniffer yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Sniffer'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Baby Sniffer:
+        Name: '&6Sniffer (Baby)'
+        Material: head:87ad920a66e38cc3426a5bff084667e8772116915e298098567c139f222e2c42
+        Mystery Dust: 75
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Sniffer (Baby)'
+        Move-Speed: 0.6
+        Ride-Speed: 0.4
+        Following-Distance: 3.0
+        Fixed-Distance: 2.0
+        Pet-Item-Interest:
+          Dislike:
+          - Magma Cream
+          - Bone
+          - Rotten Flesh
+          - Lava
+          - Sparring Sword
+          Really-Like:
+          - Carrot
+          - Water
+          - Leash
+          Favourite:
+          - Flower
+          - Milk
+          - Ball
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Sniffer (Baby) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Sniffer (Baby)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+  Vex:
+    Name: '&6Vex'
+    Material: head:869a7c6f0a7358c594c29d3d42cf7b69638ef3b5b3ec1f9d38150c8b2bff7813
+    GUI-Name: Vex
+    Enabled: true
+    Lore:
+    - '&7Click here to see all pets'
+    - '&7in the Vex category!'
+    Types:
+      Vex:
+        Name: '&5Vex'
+        Material: head:869a7c6f0a7358c594c29d3d42cf7b69638ef3b5b3ec1f9d38150c8b2bff7813
+        Mystery Dust: 68
+        Rarity: Epic
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&5Vex'
+        Move-Speed: 1.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Rotten Flesh
+          - Water
+          - Leash
+          Really-Like:
+          - Magma Cream
+          - Milk
+          - Ball
+          Favourite:
+          - Bone
+          - Lava
+          - Sparring Sword
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Vex yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Vex'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'
+      Angry Vex:
+        Name: '&6Vex (Angry)'
+        Material: head:95c080cc03dddacedb664287c7982b98ab7e1eebebb205b2f22b784ca4bb6515
+        Mystery Dust: 75
+        Rarity: Legendary
+        Enabled: true
+        CanBeFound: true
+        Purchasable: true
+        Default-Pet-Name: '&6Vex (Angry)'
+        Move-Speed: 1.7
+        Ride-Speed: 0.4
+        Following-Distance: 2.0
+        Fixed-Distance: 1.0
+        Pet-Item-Interest:
+          Dislike:
+          - Rotten Flesh
+          - Water
+          - Leash
+          Really-Like:
+          - Magma Cream
+          - Milk
+          - Ball
+          Favourite:
+          - Bone
+          - Lava
+          - Sparring Sword
+        Lore:
+          Locked:
+          - '&7Make this awesome and'
+          - '&7cuddly Vex (Angry) yours'
+          - '&7today!'
+          Unlocked:
+          - '{LEVEL}{PET_NAME}'
+          - '&7EXP: {EXP}'
+          - '&7Type: &9Vex (Angry)'
+          - ''
+          - '&7Status: {HAPPINESS}'
+          - ''
+          - '&7Hunger: {HUNGER}'
+          - '&7Thirst: {THIRST}'
+          - '&7Exercise: {EXERCISE}'

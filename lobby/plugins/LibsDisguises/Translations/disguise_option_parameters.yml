@@ -5683,3 +5683,21 @@
 
 # Used for the disguise option SoundGroup
 "TEXT_DISPLAY": "TEXT_DISPLAY"
+
+# Used for the disguise option EntityPose
+"LONG_JUMPING": "LONG_JUMPING"
+
+# Used for the disguise option EntityPose
+"CROAKING": "CROAKING"
+
+# Used for the disguise option EntityPose
+"USING_TONGUE": "USING_TONGUE"
+
+# Used for the disguise option EntityPose
+"SITTING": "SITTING"
+
+# Used for the disguise option EntityPose
+"ROARING": "ROARING"
+
+# Used for the disguise option EntityPose
+"EMERGING": "EMERGING"

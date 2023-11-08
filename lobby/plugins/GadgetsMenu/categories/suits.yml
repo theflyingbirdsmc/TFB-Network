@@ -827,3 +827,5 @@ Suits:
         Lore:
           Locked: ''
           Unlocked: ''
+Settings:
+  Disable-Usage-If-Cannot-Break-Block: false

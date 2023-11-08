@@ -118,7 +118,7 @@ entities:
     player-insomnia-start-ticks: 72000
     should-remove-dragon: false
     spawner-nerfed-mobs-should-jump: false
-    zombie-villager-infection-chance: -1.0
+    zombie-villager-infection-chance: default
     zombies-target-turtle-eggs: true
   entities-target-with-follow-range: false
   markers:
@@ -129,6 +129,9 @@ entities:
       wither-skeleton: true
     spiders-immune-to-poison-effect: true
     undead-immune-to-certain-effects: true
+  sniffer:
+    boosted-hatch-time: default
+    hatch-time: default
   spawning:
     all-chunks-are-slime-chunks: false
     alt-item-despawn-rate:
@@ -174,7 +177,7 @@ entities:
     - SleepingY
     - SleepingZ
     iron-golems-can-spawn-in-air: false
-    monster-spawn-max-light-level: -1
+    monster-spawn-max-light-level: default
     non-player-arrow-despawn-rate: default
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
@@ -202,6 +205,14 @@ entities:
     wateranimal-spawn-height:
       maximum: default
       minimum: default
+  tracking-range-y:
+    animal: default
+    display: default
+    enabled: false
+    misc: default
+    monster: default
+    other: default
+    player: default
 environment:
   disable-explosion-knockback: false
   disable-ice-and-snow: false
@@ -233,7 +244,6 @@ fishing-time-range:
 fixes:
   disable-unloaded-chunk-enderpearl-exploit: true
   falling-block-height-nerf: disabled
-  fix-curing-zombie-villager-discount-exploit: true
   fix-items-merging-through-walls: false
   prevent-tnt-from-moving-in-water: false
   remove-corrupt-tile-entities: false
@@ -250,6 +260,7 @@ lootables:
   refresh-min: 12h
   reset-seed-on-fill: true
   restrict-player-reloot: true
+  restrict-player-reloot-time: disabled
 maps:
   item-frame-cursor-limit: 128
   item-frame-cursor-update-interval: 10

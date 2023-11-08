@@ -661,3 +661,6 @@
 
 # Found in the disguise options for TextDisplay and uses a String
 "setText": "setText"
+
+# Found in the disguise options for Display and uses a int
+"setTeleportDuration": "setTeleportDuration"
