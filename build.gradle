@@ -9,14 +9,13 @@ buildscript {
   }
   dependencies {
     classpath("org.yaml:snakeyaml:2.0")
-    classpath("org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10")
-    // classpath("com.jfrog.artifactory:5.1.10")
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10"
   }
 }
 
 apply plugin: "com.jfrog.artifactory"
-apply plugin: 'java'
-apply plugin: 'groovy'
+// apply plugin: 'java'
+// apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 
 ext.dir = new File("_plugins")
@@ -28,101 +27,74 @@ def dists = []
 files.each { file ->
     def jarFile = new JarFile(file)
     def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
-
+    
     if (pluginYml != null) {
         def yaml = new Yaml()
         def plugin = yaml.load(jarFile.getInputStream(pluginYml))
-
-        def groupId = plugin.groupId
-        def artifactId = plugin.artifactId
-        def version = plugin.version.tostring()
-
+        
+        def groupId = plugin.name
+        def artifactId = plugin.name
+        def version = plugin.version.toString()
+        
         if (version.contains(" ")) {
             version = version.replace(" ", "-")
         }
-
-        // Rename the JAR file to its artifactId.jar before setting the path
-        // def newFileName = "${artifactId}.jar"
-        // File newFile = new File(file.parent, newFileName)
-        // file.renameTo(newFile)
-        // file = newFile
-
+        
         def path = file
 
         println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-        // println("Size: " + file.length())
 
         dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-    
+    }
 
-    // if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
-    //     def fileName = file.name - '.jar' // Remove the ".jar" extension
+    if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
+        def fileName = file.name - '.jar' // Remove the ".jar" extension
+        
+        if (fileName.startsWith("Expansion-")) {
+            // Handle Expansion files
+            def parts = fileName.split('_')
+            if (parts.size() >= 2) {
+                def groupId = "PAPI-Expansion"
+                def artifactId = parts[0].substring("Expansion-".length())
+                def version = parts[1]
 
-    //     if (fileName.startsWith("Expansion-")) {
-    //         // Handle Expansion files
-    //         def parts = fileName.split('_')
-    //         if (parts.size() >= 2) {
-    //             def groupId = "PAPI-Expansion"
-    //             def artifactId = parts[0].substring("Expansion-".length())
-    //             def version = parts[1]
+                def path = file
 
-    //             // Rename the JAR file to its artifactId.jar before setting the path
-    //             def newFileName = "${artifactId}.jar"
-    //             File newFile = new File(file.parent, newFileName)
-    //             file.renameTo(newFile)
-    //             file = newFile
+                println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
 
-    //             def path = file
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        } else {
+            // Handle Paper and FlameCord files
+            if (fileName.startsWith("paper-")) {
+                def parts = fileName.split('-')
+                // println("Parts: " + parts[0].toString() + parts[1] + parts[2])
+                def groupId = "Server"
+                def artifactId = parts[0]
+                def version = parts[1] + "-" + parts[2]
+                
+                // Extract the version from the file name
+                if (parts.size() > 3) {
+                    version += "-" + parts[3..-1].join("-")
+                }
+                
+                def path = file
 
-    //             println("Found Expansion JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
 
-    //             dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-    //         }
-    //     } else {
-    //         // Handle Paper and FlameCord files
-    //         if (fileName.startsWith("paper-")) {
-    //             def parts = fileName.split('-')
-    //             def groupId = "Server"
-    //             def artifactId = parts[0]
-    //             def version = parts[1] + "-" + parts[2]
-
-    //             if (parts.size() > 3) {
-    //                 version += "-" + parts[3..-1].join("-")
-    //             }
-
-    //             // Rename the JAR file to its artifactId.jar before setting the path
-    //             def newFileName = "${artifactId}.jar"
-    //             File newFile = new File(file.parent, newFileName)
-    //             file.renameTo(newFile)
-    //             file = newFile
-
-    //             def path = file
-
-    //             println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-
-    //             dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-    //         }
-    //     }
-    // }
+                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            }
+        }
+    }
 }
-
-
-// dists.each { dist ->
-//     println("DIST: groupId=${dist.groupId}, artifactId=${dist.artifactId}, version=${dist.version}, path=${dist.path}")
-// }
 
 publishing {
     publications {
         dists.each { dist ->
             "$dist.artifactId"(MavenPublication) {
-                println("Sleeping 1...")
-                sleep(5 * 1000)
-                from components.java
-                
                 groupId dist.groupId
                 version = dist.version
                 artifactId = dist.artifactId
-                println "File size: ${file('build/libs/TFB-Network.jar').length()} bytes"
 
                 artifact dist.path
             }
@@ -135,35 +107,13 @@ artifactory {
     publish {
         repository {
             repoKey = 'plugins'
-            username = "admin"
-            password = "cmVmdGtuOjAxOjE3MzAzMTk3Mzc6SnZSTWVCWk0yTzEzcUZHN0g1a1phQkplQ2ND"
+            username = "tfb"
+            password = "cmVmdGtuOjAxOjE3MzEwMDEyMDE6NzN3MHFERmpPZFNpT0NvaXFZbkd3bXhucVV2"
         }
         defaults {
             dists.each { dist ->
-                println("Sleeping 2...")
-                sleep(5 * 1000)
                 publications(dist.artifactId)
             }
         }
     }
 }
-
-// artifactoryPublish.doLast {
-//     def buildInfo = artifactoryPublish.getBuildInfo()
-
-//     // Access and manipulate build-info data as needed
-//     println("Build name: " + buildInfo.getName())
-//     println("Build number: " + buildInfo.getNumber())
-
-//     // Access and manipulate module information
-//     buildInfo.getModules().each { module ->
-//         println("Module name: " + module.getId())
-//         module.getArtifacts().each { artifact ->
-//             println("Artifact name: " + artifact.getName())
-//             println("Artifact type: " + artifact.getType())
-//             println("Artifact SHA1: " + artifact.getChecksums().getSha1())
-//         }
-//     }
-
-//     // Your custom logic here
-// }
