@@ -20,43 +20,22 @@ apply plugin: 'maven-publish'
 
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
-def allowedPrefixes = ["paper", "flamecord", "Expansion"]
+def allowedPrefixes = ["Paper", "Flamecord", "Expansion"]
 
 def dists = []
 
 files.each { file ->
-    def jarFile = new JarFile(file)
-    def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
-    
-    if (pluginYml != null) {
-        def yaml = new Yaml()
-        def plugin = yaml.load(jarFile.getInputStream(pluginYml))
-        
-        def groupId = plugin.name
-        def artifactId = plugin.name
-        def version = plugin.version.toString()
-        
-        if (version.contains(" ")) {
-            version = version.replace(" ", "-")
-        }
-        
-        def path = file
-
-        println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-
-        dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
-    }
-
-    if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
+if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.endsWith(".jar")) {
         def fileName = file.name - '.jar' // Remove the ".jar" extension
         
         if (fileName.startsWith("Expansion-")) {
             // Handle Expansion files
-            def parts = fileName.split('_')
-            if (parts.size() >= 2) {
+            def parts = fileName.split('-')
+            // println(parts)
+            if (parts.size() >= 1) {
                 def groupId = "PAPI-Expansion"
-                def artifactId = parts[0].substring("Expansion-".length())
-                def version = parts[1]
+                def artifactId = parts[1]
+                def version = parts[2]
 
                 def path = file
 
@@ -66,24 +45,45 @@ files.each { file ->
             }
         } else {
             // Handle Paper and FlameCord files
-            if (fileName.startsWith("paper-")) {
-                def parts = fileName.split('-')
-                // println("Parts: " + parts[0].toString() + parts[1] + parts[2])
-                def groupId = "Server"
-                def artifactId = parts[0]
-                def version = parts[1] + "-" + parts[2]
-                
-                // Extract the version from the file name
-                if (parts.size() > 3) {
-                    version += "-" + parts[3..-1].join("-")
-                }
-                
-                def path = file
-
-                println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
-
-                dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            def parts = fileName.split('-')
+            println(parts.toString())
+            def groupId = "Server"
+            def artifactId = parts[0]
+            def version = parts[1]
+            
+            // Extract the version from the file name
+            if (parts.size() > 2) {
+                version += "-" + parts[2]
             }
+            
+            def path = file
+
+            println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+            dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
+            
+        }
+    } else {
+        def jarFile = new JarFile(file)
+        def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
+        
+        if (pluginYml != null) {
+            def yaml = new Yaml()
+            def plugin = yaml.load(jarFile.getInputStream(pluginYml))
+            
+            def groupId = "Plugin"
+            def artifactId = plugin.name
+            def version = plugin.version.toString()
+            
+            if (version.contains(" ")) {
+                version = version.replace(" ", "-")
+            }
+            
+            def path = file
+
+            println("Found JAR: groupId=$groupId, artifactId=$artifactId, version=$version, path=$path")
+
+            dists << [groupId: groupId, artifactId: artifactId, version: version, path: path]
         }
     }
 }
