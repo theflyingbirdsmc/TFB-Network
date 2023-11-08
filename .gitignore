@@ -17,7 +17,7 @@ pkcs.p12
 .vscode-server
 cache
 libraries
-TFB-**/logs/
+**/logs/
 /FlameCord
 /pluGET
 */banned-ips.json
@@ -40,10 +40,11 @@ TFB-**/logs/
 **/plugins/Vulcan/violations.txt
 **/crash-reports/**
 **/plugins/Multiverse-Core/worlds.yml
-TFB-*/plugins/VotingPlugin/ServerData.yml
-TFB-*/plugins/ProtocolLib/lastupdate
-TFB-*/plugins/VotingPlugin/nonvotedplayerscache.yml
-TFB-*/plugins/Plan/serverConfiguration/*.yml
-TFB-*/plugins/LibsDisguises/internal.yml
-TFB-*/plugins/ProtocolLib/lastupdate
-TFB-*/usercache.json
+*/plugins/VotingPlugin/ServerData.yml
+*/plugins/ProtocolLib/lastupdate
+*/plugins/VotingPlugin/nonvotedplayerscache.yml
+*/plugins/Plan/serverConfiguration/*.yml
+*/plugins/Plan/Analysis Results
+*/plugins/LibsDisguises/internal.yml
+*/plugins/ProtocolLib/lastupdate
+*/usercache.json
