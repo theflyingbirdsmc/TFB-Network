@@ -10,7 +10,6 @@ buildscript {
   dependencies {
     classpath("org.yaml:snakeyaml:2.0")
     classpath("org.jfrog.buildinfo:build-info-extractor-gradle:5.1.10")
-    
     // classpath("com.jfrog.artifactory:5.1.10")
   }
 }
@@ -20,8 +19,6 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 
-// buildDir = '_plugins'
-
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
 def allowedPrefixes = ["paper", "flamecord", "Expansion"]
@@ -29,18 +26,16 @@ def allowedPrefixes = ["paper", "flamecord", "Expansion"]
 def dists = []
 
 files.each { file ->
-    // def jarFile = new JarFile(file)
-    // def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
+    def jarFile = new JarFile(file)
+    def pluginYml = (jarFile.getEntry("plugin.yml") != null) ? jarFile.getEntry("plugin.yml") : jarFile.getEntry("bungee.yml")
 
-    // if (pluginYml != null) {
-        // def yaml = new Yaml()
-        // def plugin = yaml.load(jarFile.getInputStream(pluginYml))
-        Random random = new Random()
-        // random.nextInt(100 ** num)
+    if (pluginYml != null) {
+        def yaml = new Yaml()
+        def plugin = yaml.load(jarFile.getInputStream(pluginYml))
 
-        def groupId = "test" + random.nextInt(100 ** 10).toString()
-        def artifactId = "test" + random.nextInt(100 ** 10).toString()
-        def version = "test" + random.nextInt(100 ** 10).toString()
+        def groupId = plugin.groupId
+        def artifactId = plugin.artifactId
+        def version = plugin.version.tostring()
 
         if (version.contains(" ")) {
             version = version.replace(" ", "-")
@@ -120,13 +115,14 @@ publishing {
     publications {
         dists.each { dist ->
             "$dist.artifactId"(MavenPublication) {
+                println("Sleeping 1...")
+                sleep(5 * 1000)
                 from components.java
                 
                 groupId dist.groupId
                 version = dist.version
                 artifactId = dist.artifactId
                 println "File size: ${file('build/libs/TFB-Network.jar').length()} bytes"
-                // from components.java
 
                 artifact dist.path
             }
@@ -144,8 +140,9 @@ artifactory {
         }
         defaults {
             dists.each { dist ->
+                println("Sleeping 2...")
+                sleep(5 * 1000)
                 publications(dist.artifactId)
-                // sleep(2 * 1000)
             }
         }
     }
