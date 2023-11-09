@@ -1,5 +1,4 @@
 FROM eclipse-temurin:17-jre-focal
-
 LABEL author="Lucas Christensen & Simon Fugl"
 
 COPY . /tfb/
