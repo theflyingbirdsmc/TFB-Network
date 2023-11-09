@@ -1,12 +1,12 @@
-name: Lobby
+name: Flamecord
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'lobby/**'
-      - .github/workflows/Lobby.yml
+      - 'flamecord/**'
+      - .github/workflows/Flamecord.yml
 
 jobs:
   build-test-publish:
@@ -34,7 +34,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: cd lobby && gradle update --no-build-cache
+        run: cd flamecord && gradle update --no-build-cache
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -48,10 +48,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./lobby # specifying the directory where your Dockerfile is
-          file: ./lobby/Dockerfile # specifying the path to your Dockerfile
+          context: ./flamecord # specifying the directory where your Dockerfile is
+          file: ./flamecord/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/lobby:latest # change this to your image name
+          tags: ${{ secrets.DOCKER_REPO }}/flamecord:latest # change this to your image name
           build-args: |
             STREAMINGDROPS_DISCORD_WEBHOOK=${{ secrets.STREAMINGDROPS_DISCORD_WEBHOOK }}
   cleanup:
