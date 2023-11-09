@@ -73,6 +73,9 @@ if (allowedPrefixes.any { prefix -> file.name.startsWith(prefix) } && file.name.
             
             def groupId = "Plugin"
             def artifactId = plugin.name
+            //Adds "-Bungee" to artifact name for plugins like LuckPerms that wont rename their plugin when it's a Bungee-plugin.
+            if(file.name.contains("Bungee") && !artifactId.contains("Bungee")) 
+                artifactId += "-Bungee"
             def version = plugin.version.toString()
             
             if (version.contains(" ")) {
