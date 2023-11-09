@@ -12,15 +12,15 @@ if("$System.env.MAVEN_URL" != null) {
 
 dependencies {
     // implementation 'Server:FlameCord:1.8.4'
-    implementation 'Votifier:Votifier:2.7.3'
-    implementation 'ChatControlRed:BungeeControlRed:3.15.0'
-    implementation 'BuycraftX:BuycraftX-Bungee:12.0.8'
-    implementation 'LuckPerms:LuckPerms-Bungee:5.4.98'
-    implementation 'spark:spark-bungee:1.10.43'
+    implementation 'Plugin:Votifier:2.7.3'
+    implementation 'Plugin:BungeeControl-Red:3.15.1'
+    implementation 'Plugin:BuycraftX-Bungee:12.0.8'
+    implementation 'Plugin:LuckPerms-Bungee:5.4.108'
+    implementation 'Plugin:spark-Bungee:1.10.55'
     implementation 'Plan:Plan:5.5-build-2391'
-    implementation 'BungeeReconnect:BungeeReconnect:1.6.9'
-    implementation 'Vulcan:VulcanBungee:1.0.6'
-    implementation 'VotingPlugin:VotingPlugin:6.13.1'
+    implementation 'Plugin:Reconnect-Bungee:1.6.10'
+    // implementation 'Vulcan:VulcanBungee:1.0.6'
+    implementation 'VotingPlugin:VotingPlugin:6.14.1'
 }
 
 // TFB Artifactory
