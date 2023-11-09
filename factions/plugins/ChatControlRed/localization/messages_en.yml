@@ -5,7 +5,7 @@
 #   Here you can customize 99% of all plugin messages and tooltips.
 #
 #   1) COLOR CODES are supported with the '&' character.
-#      - For usage, see http://minecraftwiki.net/wiki/Formatting_codes
+#      - For usage, see http://minecraft.wiki/w/Formatting_codes
 #      - When you use them, place quotes around the message like this: "Hello &cworld."
 #       - To use HEX colors, use #123456 syntax: "Hello #123456world."
 #
