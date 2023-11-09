@@ -8,8 +8,10 @@ WORKDIR /tfb
 ARG STREAMINGDROPS_DISCORD_WEBHOOK
 ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
 
+ARG MEMORY
+ENV MEMORY=$MEMORY
+
 EXPOSE 25565
 
 RUN chmod +x *.jar
-ENTRYPOINT ["tail", "-f", "/dev/null"]
-# CMD  ["java", "-Xms128M", "-Xmx2048M", "-jar", "server.jar", "nogui"]
+CMD  ["java", "-Xms128M", "-Xmx${MEMORY}", "-jar", "server.jar", "nogui"]
