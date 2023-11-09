@@ -11,4 +11,5 @@ ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
 EXPOSE 25565
 
 RUN chmod +x *.jar
-CMD  ["java", "-Xms128M", "-Xmx2048M", "-jar", "server.jar", "nogui"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+# CMD  ["java", "-Xms128M", "-Xmx2048M", "-jar", "server.jar", "nogui"]
