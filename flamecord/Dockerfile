@@ -12,4 +12,4 @@ ENV MEMORY=$MEMORY
 EXPOSE 25565
 
 RUN chmod +x *.jar
-CMD  ["java", "-Xms128M", "-Xmx${MEMORY}", "-jar", "server.jar", "nogui"]
+CMD  ["java", "-Xms128M", "-Xmx2048M", "-jar", "server.jar", "nogui"]
