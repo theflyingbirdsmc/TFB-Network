@@ -12,9 +12,9 @@ if("$System.env.MAVEN_URL" != null) {
 
 dependencies {
     // Network plugins
-    implementation 'Server:Paper:1.20.2-260'
-    implementation 'PlayerReferrals:PlayerReferrals:1.3.3'
-    implementation 'BuycraftX:BuycraftX:12.0.8'
+    implementation 'Server:Paper:1.20.2-280'
+    implementation 'Plugin:PlayerReferrals:1.3.3'
+    implementation 'Plugin:BuycraftX:12.0.8'
     implementation 'ChatControlRed:ChatControlRed:10.19.4'
     implementation 'CommandPanels:CommandPanels:3.19.1.0'
     implementation 'DecentHolograms:DecentHolograms:2.8.3'
@@ -41,15 +41,14 @@ dependencies {
     implementation 'Vulcan:Vulcan:2.7.5'
 
     //PlaceholderAPI Expansions
-    implementation 'PAPI-Expansion:PAPI-Expansion-Bungee:2.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Essentials:1.5.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Javascript:2.1.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-LuckPerms:5.4-R2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Pinger:1.0.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Player-temp:2.0.5'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Server:2.6.2'
-    implementation 'PAPI-Expansion:PAPI-Expansion-Vault:1.8.1'
-    implementation 'PAPI-Expansion:PAPI-Expansion-VotingPlugin:1.5'
+    implementation 'PAPI-Expansion:Expansion-Bungee:2.2'
+    implementation 'PAPI-Expansion:Expansion-Essentials:1.5.2'
+    implementation 'PAPI-Expansion:Expansion-Javascript:2.1.2'
+    implementation 'PAPI-Expansion:Expansion-LuckPerms:5.4'
+    implementation 'PAPI-Expansion:Expansion-Pinger:1.0.1'
+    implementation 'PAPI-Expansion:Expansion-Player:2.0.7'
+    implementation 'PAPI-Expansion:Expansion-Server:2.6.2'
+    implementation 'PAPI-Expansion:Expansion-VotingPlugin:1.5'
     implementation 'PAPI-Expansion:PAPI-Expansion-World:1.2.2'
 }
 
