@@ -54,6 +54,7 @@ antibot:
     - IR
     - PK
     log: true
+    whitelist: []
   fastchat:
     enabled: false
     firewall: true
@@ -70,6 +71,7 @@ antibot:
     log: true
     whitelist:
     - 127.0.0.1
+    - 62.243.56.151
     ipset: true
   nickname:
     enabled: true
@@ -87,6 +89,11 @@ antibot:
     firewall: true
     limit: 3
     log: true
+    login-commands:
+    - '/login '
+    - '/l '
+    - '/register '
+    - '/reg '
   ratelimit:
     enabled: true
     firewall: true
@@ -95,6 +102,7 @@ antibot:
     log: true
     whitelist:
     - 127.0.0.1
+    - 62.243.56.151
   reconnect:
     enabled: true
     attempts: 2
@@ -103,6 +111,12 @@ antibot:
     connection-threshold: 1
     connection-threshold-limit: 8000
     log: true
+    ping-attempts: 0
+    min-time: 1000
+    connections-trigger: 1
+    seconds-active: 2
+    geyser-bypass: true
+    whitelist: true
   packets:
     enabled: true
     log: true
@@ -118,6 +132,7 @@ antibot:
     email: flamecord@gmail.com
     whitelist:
     - 127.0.0.1
+    - 62.243.56.151
     lists:
     - https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt
     - https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt
@@ -130,3 +145,10 @@ antibot:
     - https://blocklist.greensnow.co/greensnow.txt
     - https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam_7d.ipset
 compression-level: 6
+balancer:
+  enabled: false
+  on-join: true
+  fallback: true
+  servers:
+  - lobby
+large-payloads: false
