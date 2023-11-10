@@ -65,7 +65,3 @@ servers:
     address: theflyingbirds.net:30005
     motd: ''
     restricted: false
-  vanilla_old:
-    address: theflyingbirds.net:30006
-    motd: ''
-    restricted: false
