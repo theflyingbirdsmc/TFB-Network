@@ -4,7 +4,31 @@ custom-motd:
     motds:
     - |-
       &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
-                 &cWe are under maintenance &7- &abrb :)
+                            &cGives you wings
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+                  &cMay contain traces of feathers!
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+                &cMay contain traces of bird seeds!
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+          &bThere are &a6 &bbirds for every human on &aearth
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+      &bThere are &a+11.000 &bbird species, which one are you?
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+      &eJoin our &9Discord &etoday! &8- &adiscord.theflyingbirds.net
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+      &eAwesome ranks available at &8- &ashop.theflyingbirds.net
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+      &eYou are awesome, dont let others tell you otherwise!
+    - |-
+      &r             <SOLID:ee2b23>T<SOLID:3551d7>F<SOLID:00ff00>B &8- <GRADIENT:ee2b23>The</GRADIENT:f26622> <GRADIENT:3551d7>Flying</GRADIENT:3adce1> <GRADIENT:00ff00>Birds</GRADIENT:faff00> &8| &e1.20.1&a
+      &r          &eSome day is not a day of the week.
   sample:
     enabled: false
     samples:
@@ -12,9 +36,9 @@ custom-motd:
       &eDefault &cFlameCord&e server &7(%onlineplayers%/%maxplayers%)
       &eEdit on &cflamecord.yml&7 (IridiumColorAPI HEX)
   protocol:
-    enabled: true
+    enabled: false
     name: '&c&lMaintenance'
-    always-show: true
+    always-show: false
   maxplayers:
     enabled: false
     amount: 1000
