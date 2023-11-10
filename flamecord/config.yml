@@ -30,8 +30,8 @@ log_pings: true
 connection_throttle_limit: 3
 server_connect_timeout: 5000
 timeout: 20000
-stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 player_limit: 2021
+prevent_proxy_connections: false
 ip_forward: true
 groups:
   md_5:
@@ -39,7 +39,7 @@ groups:
 remote_ping_timeout: 5000
 connection_throttle: 4000
 log_commands: false
-prevent_proxy_connections: false
+stats: eeff8c06-80b0-49a1-ab8c-697022039a24
 online_mode: true
 forge_support: false
 disabled_commands:
@@ -49,7 +49,7 @@ servers:
     address: theflyingbirds.net:30001
     motd: ''
     restricted: false
-  creative_eu:
+  creative:
     address: theflyingbirds.net:30002
     motd: ''
     restricted: false

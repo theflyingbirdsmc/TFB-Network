@@ -4,6 +4,119 @@ Commands:
     Success_Color: Set {0} chat color to {1}&7
     Success_Decoration: Set {0} chat decoration to {1}&r&7
     Reset: Set {0} chat color to default
+    Invalid_Color: '''Invalid chat color. Valid syntax: & color, name'' + (hasHex
+      ? ''or #<hex>'' : '''') + ''. Available: {0}'''
+  Real_Name:
+    Success: '''Player {0} has '' + (hasNick ? ''nick {1}'' : ''no nick'') + ''.'''
+  Message:
+    Toggled: '''{0} message {1} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'')
+      + ''&7.'''
+  Ignore:
+    Not_Ignoring: '(!otherPlayer ? ''You are'' : ''{0} is'') + '' not ignoring anyone.'''
+    Success: '(!otherPlayer ? ''You are '' : ''{0} is '') + (ignored ? ''&ano longer''
+      : ''&cnow'') + '' &7ignoring {1}.'''
+  Log:
+    Wrote_Book: ''' &7wrote book &f'' + (isSigned ? ''{title}'' : ''&oUnsigned&r'')'
+    No_Logs: '''No logs'' + (hasType ? '' for {0}'' : '''') + '' were found.'''
+    Listing_Header: '''Listing '' + (noType ? ''All'' : ''{0}'') + '' Logs'''
+    Tooltip_Rule: '''&7Rule: &f'' + (isUnnamed ? ''&oUnnamed.'' : ''{0}'')'
+  Announce:
+    Type: '(bungee ? ''NETWORK '' : '''') + ''ANNOUNCEMENT'''
+    Success: Your announcement has been sent.
+    Success_Network: Your announcement was sent to the {0} server.
+  Mail:
+    New_Usage: '(noPendingMail ? ''Right click to draft a new mail.'' : ''Right click
+      to continue writing mail.'') + '' Drop the item to discard.'''
+    Open_Tooltip_Script: 'read ? ''&7You have read this mail {0}.'' : ''&6You have
+      not read this mail.'''
+    Archive_Read_Tooltip: '''{0}&7: '' + (hasOpened ? ''&2read'' : ''&7unread'')'
+  Toggle:
+    Toggled_Group: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'') + ''
+      &7ignoring {0} message {1}.'''
+    Toggled_Group_All: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'')
+      + '' &7ignoring all {0} messages.'''
+    List_Plugin_Parts: '(isIgnoring ? ''&cignoring'' : ''&2receiving'')'
+  Mute:
+    Player_Or_Channel: ''' &7- &f{0} &7is '' + (muted ? ''&cmuted'' : ''&2not muted'')
+      + ''&7.'''
+    Mute_Success: '''The {type} has been muted by {player} for {duration}.'' + (!reason.isEmpty()
+      ? '' Reason: '' + reason : '''')'
+    Server: ''' &7This server is '' + (muted ? ''&cmuted'' : ''&2not muted'') + ''&7.'''
+    Change_Status_Tooltip: '''&6Click to '' + (muted ? ''un'' : '''') + ''mute'' +
+      (muted ? '''' : '' for 3 minutes'')'
+  Tag:
+    No_Tag: '''{0} presently do'' + (self ? '''' : ''es'') + '' not have a {1}.'''
+    Success_V2: '(remove ? ''Removed {0} for '' + (self ? ''you'' : ''{target}'')
+      + ''.'' : ''Set {0} to "{1}&7" for '' + (self ? ''you'' : ''{target}'') + ''.'')'
+  Clear:
+    Success: '(bungee ? ''Network'' : ''Game'') + '' chat has been cleared'' + (anonymous
+      ? '''' : '' by {0}'') + ''.'' + (!reason.isEmpty() ? '' Reason: {1}'' : '''')'
+  Info:
+    Newcomer: '''{0} '' + (newcomer ? ''&ais'' : ''&cis not'') + '' &7a newcomer.'''
+    Variables: '''&7Result (took {0}ms): &r'' + (replaced.isEmpty() ? ''&7&oEmpty
+      output.'' : replaced)'
+  List:
+    Usage_1: '''/{label} &7- List online players'' + (bungee ? '' on all servers''
+      : '''') + ''.'''
+    Header: '''Listing '' + (bungee ? ''Network'' : ''Online'') + '' Player(s)'''
+  Tell:
+    Conversation_Mode_Toggle: '(isConversing ? ''&cNo longer'' : ''&aNow'') + '' &7conversing
+      with {0}.'''
+  Points:
+    Set: '(removed ? ''Removed points from'' : ''Set {0} points to'') + '' player
+      {1} warning set {1}.'''
+  Region:
+    Point_Set: '''Set the '' + (primary ? ''primary'' : ''secondary'') + '' region
+      point.'''
+  Rule:
+    Toggle: '''Rule {0} has been '' + (toggle ? ''&cdisabled'' : ''&aenabled'') +
+      ''&7.'''
+  Spy:
+    Toggle: '''{0} is '' + (isSpying ? ''&cno longer'' : ''&anow'') + '' &7spying
+      {1}.'''
+  Toggled_Plugin_Part: '''&7You are '' + (ignoring ? ''&2no longer'' : ''&cnow'')
+    + '' &7ignoring {0}.'''
+  Book:
+    Save: '''Saved mail as book to books/{0}.yml.'' + (override ? '' Your old file
+      was overriden.'' : '''')'
 Player:
   Cannot_Chat_Vanished: You can't write chat messages directly when you're vanished.
     Use '/{label_channel} send' instead.
+  Channel_Range_Notification: '''{prefix_warn}There is no one in '' + (hasRange ?
+    ''range'' : ''channel'') + '' you can chat to.'''
+Menu:
+  Spy:
+    Channels_Toggle: '(isSpying ? ''&4No longer spying channel'' : ''&2Now spying
+      channel'') + ''!'''
+    Status: '(spying ? ''&bspying'' : ''&cdisabled'')'
+    Status_Toggle: '(isSpying ? ''&4'' : ''&2'') + ''Spying {type} '' + (isSpying
+      ? ''disabled'' : ''enabled'') + ''!'''
+    Toggle_Title: '(spying ? ''&4Disable'' : ''&2Enable'') + '' All'''
+Channels:
+  Join:
+    Already_Connected: '(self ? ''You are'' : ''Player is'') + '' already joined in
+      this channel in {0} mode.'''
+  List:
+    Mute_Tooltip: '''&6Click to '' + (muted ? ''un'' : '''') + ''mute this channel''
+      + (muted ? '''' : '' for 15 minutes'') + ''.'''
+    Join: ''' &8[&7'' + (joined ? ''&aLeave'' : ''Join'') + ''&8]'''
+    Mute: ''' &8[&7'' + (muted ? ''&cUnmute'' : ''Mute'') + ''&8]'''
+    Join_Tooltip: '''&6Click to '' + (joined ? ''leave'' : ''join'') + '' this channel.'''
+    Header: 'bungee ? ''Bungee'' : ''Online'' + '' Channel Players'''
+  Leave:
+    Switch_To_Reading_V2: '(self ? ''You'' : ''{target}'') + '' switched the &o{0}
+      &7channel to reading. Type the command again to leave.'''
+    Success_V2: ' (self ? ''You'' : ''{target}'') + '' left the &o{0} &7channel.'''
+    Not_Joined: '(self ? ''You are'' : ''{0} is'') + '' not joined in this channel.
+      '' + (channelsPlayerCanLeave.isEmpty() ? ''There are no channels '' + (self
+      ? ''you'' : ''player'') + '' can leave.'' : (self ? ''You'' : ''Player'') +
+      '' can leave channels: {1}'')'
+Checker:
+  Delay: '''Please wait {seconds} before your next '' + (chat ? ''message'' : ''command'')
+    + ''.'''
+  Similarity: '''Please do not '' + (chat ? ''type messages'' : ''run commands'')
+    + '' that are {similarity}% similar.'''
+  Move: '''Please move before typing '' + (chat ? ''into chat'' : ''commands'') +
+    ''.'''
+  Delay_After_Join: '''Please wait {seconds} before typing '' + (chat ? ''messages''
+    : ''commands'') + ''.'''

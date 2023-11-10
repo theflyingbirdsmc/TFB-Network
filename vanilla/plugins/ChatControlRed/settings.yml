@@ -8,7 +8,7 @@
 # !-----------------------------------------------------------------------------------------------!
 #
 #    1) COLOR CODES are supported with the '&' character.
-#       - For usage, see http://minecraft.wiki/w/Formatting_codes
+#       - For usage, see http://minecraftwiki.net/wiki/Formatting_codes
 #       - When you use them, place quotes around the message like this: "Hello &cworld."
 #       - To use HEX colors, use #123456 syntax: "Hello #123456world."
 #
@@ -208,6 +208,19 @@ Anti_Spam:
     # Since this uses the Similarity key above it only works if Similarity is not disabled.
     Similarity_Past_Messages: 2
     
+    # The minimum amount of similarity violations for message to be blocked and warn points given.
+    # Example if set to 1: 
+    # <kangarko> hey
+    # <kangarko> hey (blocked)
+    # <kangarko> hey (blocked)
+    #
+    # Example if set to 2: 
+    # <kangarko> hey
+    # <kangarko> hey
+    # <kangarko> hey (blocked)
+    #
+    Block_After_Times: 1
+    
     # The threshold after which we will forgive the player for writing the same message.
     Similarity_Time: 10 seconds
     
@@ -267,6 +280,9 @@ Anti_Spam:
     # /tell Notch t
     # Since this uses the Similarity key above it only works if Similarity is not disabled.
     Similarity_Past_Commands: 1
+    
+    # See the same key in Chat above for documentation and examples.
+    Block_After_Times: 1
     
     # The threshold after which we will forgive the player for running the same command.
     Similarity_Time: 10 seconds
@@ -928,8 +944,8 @@ Tag:
   Command_Aliases:
   - 'tag'
   
-  # If player does not have a ChatControl nick, should we check Essentials/CMI?
-  # Has a slight performance penaulty.
+  # Sould we check Essentials/CMI for a player's nick?
+  # Has a slight performance penaulty. Enable if you don't use our tag system or want backward compatibility.
   Backward_Compatible: false
   
   # The max allowed length for a nick? (Colors are not counted)
@@ -1060,6 +1076,14 @@ Spy:
   - '/reg'
   - '/login'
   - '/l'
+
+# -------------------------------------------------------------------------------------------------
+# Settings in regards to books
+# -------------------------------------------------------------------------------------------------
+Books:
+  # On Minecraft 1.18+ you can use https://docs.advntr.dev/minimessage/index.html in books.
+  # This makes legacy &c and #ccffdd codes in books invalid, you need to use the minimessage format.
+  MiniMessage_Format: true
 
 # -------------------------------------------------------------------------------------------------
 # Apply different the settings from this file for people with certain permissions.
@@ -1309,9 +1333,11 @@ Integration:
   # Integration with BungeeCord.
   BungeeCord:
  
-    # Hook to BungeeCord? **Install BungeeControl Red: https://www.mc-market.org/resources/24248/ **
-    # [IMPORTANT] Change your server-name key in server.properties first (make this key unique
-    # for each server)
+    # Hook to BungeeCord?
+    #
+    # [IMPORTANT] Install BungeeControl Red: https://www.mc-market.org/resources/24248 first.
+    # [IMPORTANT] Please write the 'server-name' key to your server.properties according 
+    #             to https://mineacademy.org/server-properties
     Enabled: true
       
     # The optional prefix before all messages so that you know where they are coming from.
@@ -1380,7 +1406,14 @@ Integration:
     # to turn into a blacklist, so that channels here will be excluded from spying.
     Spy_Channels_Whitelist:
     - '@blacklist'
- 
+
+
+# -------------------------------------------------------------------------------------------------
+# The image file name in images/ folder (example: "creeper.png") used when you have Image_Head
+# or Image_Url in your format (see formats/chat.yml for example) and it fails to download.
+# -------------------------------------------------------------------------------------------------
+Fallback_Player_Image: ''
+
 # -------------------------------------------------------------------------------------------------
 # Show important informational messages such as what channels players is joining into, etc. ?
 #
