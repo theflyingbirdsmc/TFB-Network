@@ -1,1 +1,14 @@
-[   {     "uuid": "f9dd5e0f-0d65-4f18-b6a9-6142898c4883",     "name": "Fuglen",     "level": 4   }   ]
+[
+    {
+      "uuid": "f9dd5e0f-0d65-4f18-b6a9-6142898c4883",
+      "name": "Fuglen",
+      "level": 4,
+      "bypassesPlayerLimit": true
+    },
+    {
+      "uuid": "2a007b6b-8868-45f4-a994-23e556fb3030",
+      "name": "lucasc_dk",
+      "level": 0,
+      "bypassesPlayerLimit": true
+    }
+]
