@@ -84,7 +84,7 @@ task expansions(type: Copy) {
     delete fileTree(dir: 'plugins/PlaceholderAPI/expansions/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    include '*PAPI-Expansion*'
+    include '*Expansion*'
     into 'plugins/PlaceholderAPI/expansions'
 }
 
