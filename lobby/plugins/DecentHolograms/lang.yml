@@ -1,7 +1,7 @@
 prefix: '&8[&3DecentHolograms&8] &7'
 no_perm: '{prefix}&cYou are not allowed to use this.'
 only_player: '{prefix}&cThis action can only be executed by player.'
-reloaded: '{prefix}Successfully reloaded!'
+reloaded: '{prefix}&aSuccessfully reloaded in %1$d ms!'
 command:
   use_help: '{prefix}Use &b/holograms help&7 to view possible commands.'
   usage: '{prefix}Usage: &b%1$s'
@@ -15,7 +15,7 @@ hologram:
   cloned: '{prefix}Hologram has been cloned!'
   deleted: '{prefix}Hologram has been deleted!'
   updated: '{prefix}Hologram has been updated!'
-  renamed: '{prefix}Hologram has been renamed!'
+  renamed: '{prefix}Hologram has been renamed! &7(&b%1$s&7 -> &b%2$s&7)'
   teleported: '{prefix}Teleported!'
   moved: '{prefix}Hologram has been moved!'
   aligned: '{prefix}Hologram has been aligned!'
