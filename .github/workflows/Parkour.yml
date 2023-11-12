@@ -52,8 +52,6 @@ jobs:
           file: ./parkour/Dockerfile # specifying the path to your Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_REPO }}/parkour:latest # change this to your image name
-          build-args: |
-            STREAMINGDROPS_DISCORD_WEBHOOK=${{ secrets.STREAMINGDROPS_DISCORD_WEBHOOK }}
   cleanup:
     runs-on: ubuntu-latest
     steps:
