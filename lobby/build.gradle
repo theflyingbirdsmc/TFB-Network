@@ -24,7 +24,7 @@ dependencies {
     implementation 'Plugin:GadgetsMenu:5.13.4'
     implementation 'Plugin:HexNicks:3.1.1'
     implementation 'Plugin:GSit:1.5.3'
-    implementation 'Plugin:LibsDisguises:10.0.38'
+    // implementation 'Plugin:LibsDisguises:10.0.38'
     implementation 'Plugin:LuckPerms:5.4.108'
     implementation 'Plugin:Multiverse-Core:4.3.12'
     implementation 'Plugin:PlaceholderAPI:2.11.5'
@@ -77,7 +77,7 @@ task expansions(type: Copy) {
     delete fileTree(dir: 'plugins/PlaceholderAPI/expansions/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    include '*PAPI-Expansion*'
+    include '*Expansion*'
     into 'plugins/PlaceholderAPI/expansions'
 }
 
