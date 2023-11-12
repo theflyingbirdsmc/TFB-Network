@@ -106,11 +106,12 @@ publishing {
 }
 
 artifactory {
-    contextUrl = ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
+    contextUrl = "https://jfrog.rosenvold.tech/artifactory"
     publish {
         repository {
-            username = ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
-            password = ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
+            repoKey = 'plugins'
+            username = "tfb"
+            password = "cmVmdGtuOjAxOjE3MzEzMTk4MzQ6N3NXMUFpc3l4NGlLRXlHWnlreG1yZ1FvNzc2"
         }
         defaults {
             dists.each { dist ->
