@@ -118,7 +118,7 @@ panels:
       '30':
         material: SLIME_BLOCK
         stack: 1
-        name: '%javascript_tfb_parkoureu_name,{player_locale_short}% &8(&7%pinger_gameversion_theflyingbirds.net:30004%&8)'
+        name: '%javascript_tfb_parkoureu_name,{player_locale_short}% &8(&7%pinger_gameversion_theflyingbirds.net:30003%&8)'
         lore:
         - '&eOnline&7: &a%bungee_parkour%'
         - '%javascript_tfb_parkoureu_lore,{player_locale_short}%'
