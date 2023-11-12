@@ -177,7 +177,7 @@ entities:
     - SleepingY
     - SleepingZ
     iron-golems-can-spawn-in-air: false
-    monster-spawn-max-light-level: default
+    monster-spawn-max-light-level: -1
     non-player-arrow-despawn-rate: default
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true

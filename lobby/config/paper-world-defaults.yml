@@ -118,7 +118,7 @@ entities:
     player-insomnia-start-ticks: 72000
     should-remove-dragon: false
     spawner-nerfed-mobs-should-jump: false
-    zombie-villager-infection-chance: default
+    zombie-villager-infection-chance: -1.0
     zombies-target-turtle-eggs: true
   entities-target-with-follow-range: false
   markers:
@@ -177,11 +177,11 @@ entities:
     - SleepingY
     - SleepingZ
     iron-golems-can-spawn-in-air: false
-    monster-spawn-max-light-level: default
+    monster-spawn-max-light-level: -1
     non-player-arrow-despawn-rate: default
     per-player-mob-spawns: true
     scan-for-legacy-ender-dragon: true
-    skeleton-horse-thunder-spawn-chance: 0.01
+    skeleton-horse-thunder-spawn-chance: default
     slime-spawn-height:
       slime-chunk:
         maximum: 40.0
@@ -233,7 +233,7 @@ environment:
   treasure-maps:
     enabled: true
     find-already-discovered:
-      loot-tables: 'false'
+      loot-tables: default
       villager-trade: false
   water-over-lava-flow-speed: 5
 feature-seeds:
@@ -244,15 +244,15 @@ fishing-time-range:
 fixes:
   disable-unloaded-chunk-enderpearl-exploit: true
   falling-block-height-nerf: disabled
+  fix-curing-zombie-villager-discount-exploit: true
   fix-items-merging-through-walls: false
   prevent-tnt-from-moving-in-water: false
-  remove-corrupt-tile-entities: false
   split-overstacked-loot: true
   tnt-entity-height-nerf: disabled
 hopper:
   cooldown-when-full: true
   disable-move-event: false
-  ignore-occluding-blocks: true
+  ignore-occluding-blocks: false
 lootables:
   auto-replenish: false
   max-refills: -1
@@ -281,7 +281,7 @@ misc:
   show-sign-click-command-failure-msgs-to-player: false
   update-pathfinding-on-block-update: true
 scoreboards:
-  allow-non-player-entities-on-scoreboards: false
+  allow-non-player-entities-on-scoreboards: true
   use-vanilla-world-scoreboard-name-coloring: false
 spawn:
   allow-using-signs-inside-spawn-protection: false
