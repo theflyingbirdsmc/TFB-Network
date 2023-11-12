@@ -118,7 +118,7 @@ entities:
     player-insomnia-start-ticks: 72000
     should-remove-dragon: false
     spawner-nerfed-mobs-should-jump: false
-    zombie-villager-infection-chance: default
+    zombie-villager-infection-chance: -1.0
     zombies-target-turtle-eggs: true
   entities-target-with-follow-range: false
   markers:
