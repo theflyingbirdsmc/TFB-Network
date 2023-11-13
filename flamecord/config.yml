@@ -53,12 +53,8 @@ servers:
     address: theflyingbirds.net:30002
     motd: ''
     restricted: false
-  factions:
-    address: theflyingbirds.net:30003
-    motd: ''
-    restricted: false
   parkour:
-    address: theflyingbirds.net:30004
+    address: theflyingbirds.net:30003
     motd: ''
     restricted: false
   vanilladk:
