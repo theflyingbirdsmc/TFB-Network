@@ -1,18 +1,24 @@
 FROM eclipse-temurin:17.0.9_9-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
-COPY . /tfb/
+# Set the working directory
 WORKDIR /tfb
 
-RUN ln -s /tfb/plugins/StreamingDrops/user.yml data/user.yml
+# Copy files to the /tfb directory
+COPY . /tfb/
 
+# Set environment variables
 ARG STREAMINGDROPS_DISCORD_WEBHOOK
 ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
 
-ARG MEMORY
-ENV MEMORY=$MEMORY
-
+# Expose the Minecraft server port
 EXPOSE 25565
 
+# Give execute permission to JAR files
 RUN chmod +x *.jar
-CMD  ["java", "-Xms128M", "-Xmx4096M", "-jar", "server.jar", "nogui"]
+
+# Use an entrypoint script
+COPY entrypoint.sh /tfb/
+RUN chmod +x /tfb/entrypoint.sh
+
+ENTRYPOINT ["/tfb/entrypoint.sh"]
