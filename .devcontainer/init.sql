@@ -53,3 +53,9 @@ DROP USER IF EXISTS 'tfb_hexnicks';
 CREATE USER 'tfb_hexnicks'@'%';
 CREATE DATABASE IF NOT EXISTS hexnicks;
 GRANT ALL ON hexnicks.* TO 'tfb_hexnicks'@'%' IDENTIFIED BY 'j77RqV*scJQ2RSjcx@nRNiXNU&Yow*';
+
+-- PARKOUR --
+DROP USER IF EXISTS 'tfb_parkour';
+CREATE USER 'tfb_parkour'@'%';
+CREATE DATABASE IF NOT EXISTS parkour;
+GRANT ALL ON parkour.* TO 'tfb_parkour'@'%' IDENTIFIED BY 'MqGR6uD4SFPXTmK6uweVMCZ7pkTTfi';
