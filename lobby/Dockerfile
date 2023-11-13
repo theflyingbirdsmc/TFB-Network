@@ -4,7 +4,7 @@ LABEL author="Lucas Christensen & Simon Fugl"
 COPY . /tfb/
 WORKDIR /tfb
 
-RUN ln -sf /tfb/plugins/StreamingDrops/user.yml /tfb/plugins/StreamingDrops/data/user.yml
+RUN touch /tfb/plugins/StreamingDrops/data/user.yml && ln -sf /tfb/plugins/StreamingDrops/user.yml /tfb/plugins/StreamingDrops/data/user.yml
 
 ARG STREAMINGDROPS_DISCORD_WEBHOOK
 ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
