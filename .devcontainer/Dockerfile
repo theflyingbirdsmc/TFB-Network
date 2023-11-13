@@ -31,9 +31,7 @@ ENV MAVEN_USERNAME=$MAVEN_USERNAME
 ENV MAVEN_PASSWORD=$MAVEN_PASSWORD
 
 EXPOSE 25565
-# EXPOSE 3306
 
-# RUN sudo service mariadb start && sudo mysql -u root < /docker-entrypoint-initdb.d/init.sql
 ARG USER=coder
 RUN useradd --groups sudo --no-create-home --shell /bin/bash ${USER} \
 	&& echo "${USER} ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/${USER} \
