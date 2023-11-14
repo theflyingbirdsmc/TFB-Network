@@ -18,7 +18,8 @@ EXPOSE 25565
 RUN chmod +x *.jar
 
 # Use an entrypoint script
-COPY entrypoint.sh /tfb/
-RUN chmod +x /tfb/entrypoint.sh
+# COPY entrypoint.sh /tfb/
+# RUN chmod +x /tfb/entrypoint.sh
 
-ENTRYPOINT ["/tfb/entrypoint.sh"]
+# ENTRYPOINT ["/tfb/entrypoint.sh"]
+CMD  ["java", "-Xms128M", "-Xmx8196M", "-jar", "server.jar", "nogui"]
