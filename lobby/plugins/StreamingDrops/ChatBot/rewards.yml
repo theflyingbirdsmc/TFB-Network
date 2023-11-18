@@ -1,13 +1,4 @@
 Twitch:
-  streamingdrops:
-    EnableBotCommands: true
-    Rewards:
-      your twitch reward title:
-      - randomdrop %streamer% %twitchuser%
-    ShowDropMessage: true
-    ShowTwitchChat: true
-    ShowTwitchColorCodes: false
-    EnableOwnDrops: false
   fuglen_tv:
     EnableOwnDrops: true
     EnableBotCommands: true
