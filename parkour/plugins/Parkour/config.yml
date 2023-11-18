@@ -41,6 +41,9 @@ OnCourse:
     Enabled: true
     Whitelist:
     - login
+  ParkourKit:
+    Enabled: true
+    IncludeVehicles: false
 OnFinish:
   BroadcastLevel: GLOBAL
   DisplayNewRecords: true
@@ -53,10 +56,12 @@ OnFinish:
   TeleportDelay: 0
   TeleportToJoinLocation: false
   UpdatePlayerDatabaseTime: true
+  GiveGainedItemsBack: false
 OnLeave:
   TeleportToLinkedLobby: true
   DestroyCourseProgress: true
   TeleportAway: true
+  GiveGainedItemsBack: false
 OnRestart:
   FullPlayerRestart: false
   RequireConfirmation: false
@@ -138,6 +143,7 @@ ParkourTool:
     Material: AIR
     Slot: 4
     SecondCooldown: 1
+  RemoveRightClickRestriction: false
 ParkourChallenge:
   HidePlayers: false
   CountdownFrom: 5
@@ -275,6 +281,7 @@ Other:
     OnlyReadyCourses: false
     CompletedCourseJoinMessage: false
     IncludeDeprecatedCommands: false
+    CurrencyName: true
   Time:
     StandardFormat: HH:mm:ss:SSS
     DetailedFormat: HH:mm:ss:SSS
@@ -303,10 +310,10 @@ SQLite:
   PathOverride: ''
 MySQL:
   Use: true
-  URL: jdbc:mysql://mariedb:3306/parkour?useSSL=false
+  URL: jdbc:mysql://mariadb:3306/parkour?useSSL=false
   Username: tfb_parkour
   Password: MqGR6uD4SFPXTmK6uweVMCZ7pkTTfi
   LegacyDriver: false
-Version: 7.1.0
+Version: 7.2.0
 LobbySettings:
   EnforceWorld: false
