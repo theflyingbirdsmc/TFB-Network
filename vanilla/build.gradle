@@ -21,7 +21,7 @@ dependencies {
     implementation 'Plugin:DecentHolograms:2.8.4'
     implementation 'Plugin:Essentials:2.20.1'
     implementation 'Plugin:EssentialsSpawn:2.20.1'
-    implementation 'Plugin:FastAsyncWorldEdit:2.8.2-20231108.221111-1'
+    implementation 'Plugin:FastAsyncWorldEdit:2.8.2'
     implementation 'Plugin:GadgetsMenu:5.13.4'
     implementation 'Plugin:HexNicks:3.1.1'
     implementation 'Plugin:GSit:1.5.3'

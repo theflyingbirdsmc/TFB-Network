@@ -302,10 +302,10 @@ Database:
 SQLite:
   PathOverride: ''
 MySQL:
-  Use: false
-  URL: jdbc:mysql://HOST:PORT/DATABASE?useSSL=false
-  Username: Username
-  Password: Password
+  Use: true
+  URL: jdbc:mysql://mariedb:3306/parkour?useSSL=false
+  Username: tfb_parkour
+  Password: MqGR6uD4SFPXTmK6uweVMCZ7pkTTfi
   LegacyDriver: false
 Version: 7.1.0
 LobbySettings:

@@ -13,6 +13,13 @@ buildscript {
   }
 }
 
+// Use environment instead of gradle.properties
+if("$System.env.MAVEN_URL" != null) {
+    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
+    ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
+    ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
+}
+
 apply plugin: "com.jfrog.artifactory"
 // apply plugin: 'java'
 // apply plugin: 'groovy'
@@ -106,12 +113,12 @@ publishing {
 }
 
 artifactory {
-    contextUrl = "https://jfrog.rosenvold.tech/artifactory"
+    contextUrl = "https://jfrog.theflyingbirds.net/artifactory"
     publish {
         repository {
             repoKey = 'plugins'
-            username = "tfb"
-            password = "cmVmdGtuOjAxOjE3MzEzMTk4MzQ6N3NXMUFpc3l4NGlLRXlHWnlreG1yZ1FvNzc2"
+            username = "${MAVEN_USERNAME}"
+            password = "${MAVEN_PASSWORD}"
         }
         defaults {
             dists.each { dist ->
