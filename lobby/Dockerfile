@@ -16,6 +16,7 @@ EXPOSE 25565
 
 # Give execute permission to JAR files
 RUN chmod +x *.jar
+RUN echo 0 > /proc/sys/kernel/yama/ptrace_scope
 
 # Use an entrypoint script
 # COPY entrypoint.sh /tfb/
