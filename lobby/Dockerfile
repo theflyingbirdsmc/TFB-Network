@@ -22,8 +22,9 @@ COPY . /tfb/
 ARG STREAMINGDROPS_DISCORD_WEBHOOK
 ENV STREAMINGDROPS_DISCORD_WEBHOOK=$STREAMINGDROPS_DISCORD_WEBHOOK
 
-# Expose the Minecraft server port
+# Expose the Minecraft and ssh server port
 EXPOSE 25565
+EXPOSE 22
 
 # Give execute permission to JAR files
 RUN chmod +x *.jar
