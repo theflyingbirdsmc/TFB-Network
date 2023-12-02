@@ -2,7 +2,7 @@ FROM eclipse-temurin:17.0.9_9-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # SSH
-RUN apt-get update && apt-get -y install openssh-server sudo
+RUN apt-get update && apt-get -y install openssh-server sudo reptyr nano
 RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
