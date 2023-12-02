@@ -7,7 +7,7 @@ RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
 RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN sudo service ssh restart
+RUN service ssh restart
 
 # change password root
 RUN echo "root:docker"|TFB123
