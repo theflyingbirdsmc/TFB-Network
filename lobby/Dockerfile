@@ -7,7 +7,7 @@ RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
 # RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
-# RUN service ssh restart
+RUN service ssh restart
 # Create a user named "tfb"
 RUN useradd -m -s /bin/bash tfb
 
