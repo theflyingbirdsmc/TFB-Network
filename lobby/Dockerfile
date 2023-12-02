@@ -1,6 +1,17 @@
 FROM eclipse-temurin:17.0.9_9-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
+# SSH
+RUN apt-get update && apt-get -y install openssh-server
+RUN mkdir -p /var/run/sshd
+
+# authorize SSH connection with root account
+RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sudo service ssh restart
+
+# change password root
+RUN echo "root:docker"|TFB123
+
 # Set the working directory
 WORKDIR /tfb
 
