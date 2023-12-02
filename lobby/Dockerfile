@@ -2,7 +2,7 @@ FROM eclipse-temurin:17.0.9_9-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # SSH
-RUN apt-get update && apt-get -y install openssh-server sudo reptyr nano
+RUN apt-get update && apt-get -y install openssh-server sudo reptyr nano gosu
 RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
@@ -35,8 +35,8 @@ EXPOSE 22
 RUN chmod +x *.jar
 
 # Use an entrypoint script
-# COPY entrypoint.sh /tfb/
-# RUN chmod +x /tfb/entrypoint.sh
+COPY entrypoint.sh /tfb/
+RUN chmod +x /tfb/entrypoint.sh
 
-# ENTRYPOINT ["/tfb/entrypoint.sh"]
-CMD ["/bin/bash", "-c", "/usr/sbin/sshd -D && java -Xms128M -Xmx8196M -jar server.jar nogui"]
+ENTRYPOINT ["/tfb/entrypoint.sh"]
+# CMD ["/bin/bash", "-c", "/usr/sbin/sshd -D && java -Xms128M -Xmx8196M -jar server.jar nogui"]
