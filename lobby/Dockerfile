@@ -6,11 +6,13 @@ RUN apt-get update && apt-get -y install openssh-server
 RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
-RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN service ssh restart
+# RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+# RUN service ssh restart
+# Create a user named "tfb"
+RUN useradd -m -s /bin/bash tfb
 
 # change password root
-RUN echo "root:TFB123"|chpasswd
+RUN echo "tfb:TFB123" | chpasswd
 
 # Set the working directory
 WORKDIR /tfb
