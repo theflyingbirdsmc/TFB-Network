@@ -2,7 +2,7 @@ FROM eclipse-temurin:17.0.9_9-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # SSH
-RUN apt-get update && apt-get -y install openssh-server
+RUN apt-get update && apt-get -y install openssh-server sudo
 RUN mkdir -p /var/run/sshd
 
 # authorize SSH connection with root account
@@ -39,4 +39,4 @@ RUN chmod +x *.jar
 # RUN chmod +x /tfb/entrypoint.sh
 
 # ENTRYPOINT ["/tfb/entrypoint.sh"]
-CMD  ["java", "-Xms128M", "-Xmx8196M", "-jar", "server.jar", "nogui"]
+CMD  ["/usr/sbin/sshd", "-D", "&&", "java", "-Xms128M", "-Xmx8196M", "-jar", "server.jar", "nogui"]
