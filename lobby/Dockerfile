@@ -39,4 +39,4 @@ RUN chmod +x *.jar
 # RUN chmod +x /tfb/entrypoint.sh
 
 # ENTRYPOINT ["/tfb/entrypoint.sh"]
-CMD  ["/usr/sbin/sshd", "-D", "&&", "java", "-Xms128M", "-Xmx8196M", "-jar", "server.jar", "nogui"]
+CMD ["/bin/bash", "-c", "/usr/sbin/sshd -D && java -Xms128M -Xmx8196M -jar server.jar nogui"]
