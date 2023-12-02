@@ -14,6 +14,9 @@ RUN useradd -m -s /bin/bash tfb
 # change password root
 RUN echo "tfb:TFB123" | chpasswd
 
+# Make "tfb" a sudoer
+RUN usermod -aG sudo tfb
+
 # Set the working directory
 WORKDIR /tfb
 
