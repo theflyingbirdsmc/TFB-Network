@@ -10,7 +10,7 @@ RUN sed -i '/^#/!s/PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN service ssh restart
 
 # change password root
-RUN echo "root:root"|TFB123
+RUN echo "root:TFB123"|chpasswd
 
 # Set the working directory
 WORKDIR /tfb
