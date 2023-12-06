@@ -1,12 +1,12 @@
-name: Flamecord
+name: proxy
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'flamecord/**'
-      - .github/workflows/Flamecord.yml
+      - 'proxy/**'
+      - .github/workflows/proxy.yml
 
 jobs:
   build-test-publish:
@@ -34,7 +34,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: cd flamecord && gradle update --no-build-cache
+        run: cd proxy && gradle update --no-build-cache
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -48,10 +48,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./flamecord # specifying the directory where your Dockerfile is
-          file: ./flamecord/Dockerfile # specifying the path to your Dockerfile
+          context: ./proxy # specifying the directory where your Dockerfile is
+          file: ./proxy/Dockerfile # specifying the path to your Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/flamecord:latest # change this to your image name
+          tags: ${{ secrets.DOCKER_REPO }}/proxy:latest # change this to your image name
   cleanup:
     runs-on: ubuntu-latest
     steps:

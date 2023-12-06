@@ -1,0 +1,27 @@
+prefix: '&4&lVulcan &8»'
+
+alerts:
+  format: '&4&lVulcan &7(%server%) &8» &f%player% &7failed &f%check% &7(&fType %type%&7) [&4%vl%&7/&4%max-vl%&7]'
+  hover-format:
+    - '&7Ping: &c%ping% &8| &7TPS: &c%tps% &8| &7Version: &c%client-version%'
+    - ''
+    - '&7Description:'
+    - '&7%description%'
+    - ''
+    - '&7Information:'
+    - '&7%info%'
+    - ''
+    - '&7Click to go to &b%server%&7.'
+  click-command: 'server %server%'
+
+punishments:
+  format: '&4&lVulcan &7(%server%) &8» &f%player% &7was punished for &f%check% &7(&fType %type%&7) [&4%max-vl%&7/&4%max-vl%&7]'
+
+messages:
+  no-permission: '&cYou don''t have permission to execute that command!'
+  alerts-enabled: '%prefix% &7Vulcan Bungee alerts &aenabled&7!'
+  alerts-disabled: '%prefix% &7Vulcan Bungee alerts &cdisabled&7!'
+
+settings:
+  dont-send-alerts-to-same-server: true
+  enable-alerts-on-join: true

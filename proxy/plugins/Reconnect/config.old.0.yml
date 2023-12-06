@@ -1,0 +1,95 @@
+# Reconnect --- config file
+# In this file, you can setup some basic settings for the plugin.
+
+# The current version of this configuration. Do NOT change this value!
+# If the plugin uses a more recent config version, this config gets replaced by it
+#   while a backup of the old config will be kept as "config.old.ver.<OLD VERSION>.yml".
+version: 15
+
+# Should debugging messages be shown?
+debug: false
+
+# This is for configuring custom animations.
+Animations:
+  # This is the placeholder of the animation. 
+  # It will be replaced with the correct animation when it is found in a value that supports animations
+  "%dots%":
+    # At what frequency should the animation play
+    # 1000 = 1 change per second
+    # Minimum value is update-rate
+    Delay Millis: 1000
+    # The animation itself
+    # You may use the %playerName% placeholder in animations
+    Animation:
+    - "&b.&7.."
+    - "&7.&b.&7."
+    - "&7..&b.&7"
+
+# This value should not be changed unless you are experiencing issues with titles "flickering" on bedrock clients
+# In which case you should change this value to 1 second (1000)
+# Minimum value is 50 Maximum value is 5000
+update-rate: 50
+
+# The default locale used for user messages when the users' locale is undefined
+default-locale: "en_US"
+
+# Titles, subtitles and actionbar messages are configured in the ./plugins/lang/ folder
+
+# The amount of milliseconds the plugin will wait before attempting to check if the server is alive.
+# This must be at least 500, however if you use an automatic restart plugin that kicks players
+#   reconnect may actually reconnect them before the server stops accepting new connections. This may cause unstable behavior.
+# Recommended value is 8000
+delay-before-trying: 8000
+
+# The amount of milliseconds the plugin will wait between each new connection attempt per player - per server.
+# Depending on server size and hardware having 20+ people reconnect at once can cause issues in the game, plugins and or databases.
+# if your server ends up hanging when people are reconnecting this (can) be an indicator that this value is too low
+#   or that the hardware your server is running on is too weak and or that the plugins/server are badly optimized.
+#   Also be sure to see connect-finalization-timeout
+# Recommended value is 1000
+delay-between-reconnects: 1000
+
+# How much MORE time between reconnects should we wait for a connection to finalize.
+# A connection is considered "finalized" once the server sends a dimension to the client.
+# This "can" help in preventing server overloads before allowing another reconnect attempt.
+# However you should still set delay-between-reconnects to a reasonable value in-case of plugins sending
+#   dimension changes to the client and or to issues (see above)
+# Recommended value is 2000
+connect-finalization-timeout: 2000
+
+# The amount of milliseconds the plugin will wait for the proxy-server connection to establish, before it decides to try again. 
+# Note: If a connection is not finalized within this timeframe another attempt will be made.
+# Any reconnect that times out will be chucked back at the start of the reconnect queue.
+# Cannot be less then 2000 + connect-finalization-timeout
+# Recommended value is 6000
+reconnect-timeout: 6000
+
+# The maximum amount of time the plugin will wait to connect everyone.
+# If this time limit is reached the plugin will first attempt to connect them to your fallback-server otherwise kicking them.
+# This value cannot be less than delay-before-trying + reconnect-timeout.
+# The default value is 240000 (240 seconds) if your server takes longer to restart and connect everyone set this higher.
+# be mindful to set this value high enough to also accommodate for delay-between-reconnects. 
+max-reconnect-time: 240000
+
+# Control what servers users are automatically reconnected to.
+servers:
+  # blacklist & whitelist mode
+  mode: blacklist
+  # The list of servers to apply the filter to
+  list:
+    - "some_server"
+    - "some_other_server"
+
+# This block is necessary for the plugin to differentiate whether a kick happened because of a shutdown or not.
+shutdown:  
+  # Note: Formatting codes (color codes) will be ignored here. So don't include them.
+  # When regex is set to false, the kick message must be equal to the following text if the player should be reconnected to that server.
+  # When regex is set to true, the regex must match the kick message if the player should be reconnected to that server.
+  # Leaving the text empty will lead the plugin to always reconnect the players, no matter what the actual kick-reason was.
+
+  # You can still use the "ServerReconnectEvent" as a plugin developer to decide on your own whether the user should be reconnected automatically
+  # or not.
+
+  # Default value = text: "((?i)^(server closed|server is restarting|outdated (server|client).*))+$"
+  text: "((?i)^(server closed|server is restarting|outdated (server|client).*))+$"
+  regex: true
