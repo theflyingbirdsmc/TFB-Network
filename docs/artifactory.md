@@ -9,7 +9,8 @@ which helped me setup some steps to redeploy Artifactory if its broken. Its easi
 - helm repo update
 
 ## Create Artifactory in its own namespace
-helm upgrade --install artifactory-oss --set artifactory.postgresql.postgresqlPassword=artifactory --set artifactory.nginx.enabled=false --set artifactory.ingress.enabled=true --set artifactory.ingress.hosts[0]="jfrog.theflyingbirds.net" --set artifactory.artifactory.service.type=NodePort --namespace artifactory-oss jfrog/artifactory-oss
-
+``` bash
+helm upgrade --install artifactory-oss --set artifactory.postgresql.postgresqlPassword=artifactory --set artifactory.nginx.enabled=false --set artifactory.ingress.enabled=true --set artifactory.ingress.hosts[0]="jfrog.theflyingbirds.net" --set artifactory.artifactory.service.type=ClusterIP --namespace artifactory-oss jfrog/artifactory-oss
+``` 
 ## Apply changes from Improved-Infrastructure
 - kubectl apply -f .\kubernetes\backend\jfrog\
