@@ -100,6 +100,8 @@ spec:
             value: "PAPER"
           - name: ONLINE_MODE
             value: "FALSE"
+          - name: SERVER_PORT
+            value: "25565"
         ports:
           - containerPort: 25565
         volumeMounts:
