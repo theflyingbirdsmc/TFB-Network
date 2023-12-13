@@ -15,7 +15,7 @@ buildscript {
 
 // Use environment instead of gradle.properties
 if("$System.env.MAVEN_URL" != null) {
-    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
+    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"tfb"
     ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
     ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
 }
@@ -27,7 +27,7 @@ apply plugin: 'maven-publish'
 
 ext.dir = new File("_plugins")
 def files = ext.dir.listFiles().findAll { it.isFile() && it.name.endsWith('.jar') }
-def allowedPrefixes = ["Paper", "Flamecord", "Expansion"]
+def allowedPrefixes = ["Paper", "Flamecord","Purpur", "Expansion"]
 
 def dists = []
 
@@ -116,7 +116,7 @@ artifactory {
     contextUrl = "https://jfrog.theflyingbirds.net/artifactory"
     publish {
         repository {
-            repoKey = 'plugins'
+            repoKey = 'tfb'
             username = "${MAVEN_USERNAME}"
             password = "${MAVEN_PASSWORD}"
         }

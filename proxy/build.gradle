@@ -5,13 +5,13 @@ plugins {
 
 // Use environment instead of gradle.properties
 if("$System.env.MAVEN_URL" != null) {
-    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"plugins"
+    ext.MAVEN_URL="$System.env.MAVEN_URL"+"/"+"tfb"
     ext.MAVEN_PASSWORD="$System.env.MAVEN_PASSWORD"
     ext.MAVEN_USERNAME="$System.env.MAVEN_USERNAME"
 }
 
 dependencies {
-    implementation 'Server:Flamecord:1.8.5'
+    implementation 'Server:Flamecord:1.9.1'
     implementation 'Plugin:Votifier:2.7.3'
     implementation 'Plugin:BungeeControl-Red-Bungee:3.15.1'
     implementation 'Plugin:BuycraftX-Bungee:12.0.8'
