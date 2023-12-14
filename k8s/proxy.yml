@@ -5,7 +5,7 @@ metadata:
   name: proxy
   namespace: tfb-servers
   annotations:
-    "mc-router.itzg.me/externalServerName": "mc.rosenvold.tech"
+    "mc-router.itzg.me/externalServerName": "mc.theflyingbirds.net"
 spec:
   ports:
     - port: 25565
