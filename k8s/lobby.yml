@@ -97,9 +97,15 @@ spec:
           - name: EULA
             value: "TRUE"
           - name: TYPE
-            value: "PAPER"
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "/data/server.jar"
           - name: ONLINE_MODE
             value: "FALSE"
+          - name: SERVER_PORT
+            value: "25565"
+          - name: "MEMORY"
+            value: "4G"
         ports:
           - containerPort: 25565
         volumeMounts:

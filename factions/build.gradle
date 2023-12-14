@@ -77,7 +77,7 @@ task plugins(type: Copy) {
     delete fileTree(dir: 'plugins/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    exclude '*Paper*', '*Flamecord*', '*PAPI-Expansion*'
+    exclude '*Paper*', '*Flamecord*', '*Expansion*', 'Purpur*'
     into 'plugins'
 }
 
@@ -87,7 +87,7 @@ task expansions(type: Copy) {
     delete fileTree(dir: 'plugins/PlaceholderAPI/expansions/.', include: '/*.jar')
     }
     from configurations.compileClasspath
-    include '*PAPI-Expansion*'
+    include '*Expansion*'
     into 'plugins/PlaceholderAPI/expansions'
 }
 
@@ -97,7 +97,7 @@ task server(type: Copy) {
     delete fileTree(dir: '/.' , include: 'server.jar')
     }
     from configurations.compileClasspath
-    include 'Paper-*', 'Flamecord-*'
+    include 'Paper-*', 'Flamecord-*', 'Purpur-*'
     rename '.*-(.+)', 'server.jar'
     into "."
 }
