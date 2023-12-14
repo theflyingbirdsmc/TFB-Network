@@ -2,7 +2,7 @@ version: "3.9"
 services:
   tfb:
     container_name: TFB
-    image: mcr.microsoft.com/devcontainers/java:17
+    image: mcr.microsoft.com/devcontainers/java:21
     depends_on:
       - database
     ports:
