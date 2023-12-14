@@ -26,7 +26,7 @@ Plugin:
 # -----------------------------------------------------
 Database:
     MySQL:
-        Host: mariadb
+        Host: mariadb-mariadb-galera
         Port: 3306
         User: tfb_plan
         Password: $Z@jJKSLcd7xUekU5qF&VW3#ndU&mm
