@@ -3,7 +3,7 @@
 #
 # MYSQL Required on all setups
 # MYSQL INFO --------------------------
-Host: 'tfb-database'
+Host: 'tfb-database-mariadb'
 # Default port is 3306
 Port: 3306
 Database: 'votingplugin'

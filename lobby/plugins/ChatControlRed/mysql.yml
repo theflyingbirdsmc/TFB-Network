@@ -20,7 +20,7 @@ Enabled: true
 Hikari: true
 
 # The host and the port to connect to
-Host: tfb-database
+Host: tfb-database-mariadb
 
 # The database name
 Database: chatcontrolred
