@@ -42,6 +42,13 @@ spec:
         secret:
           secretName: gradle-credentials
       initContainers:
+      - name: delete-old-jar-files
+        image: alpine
+        command: ["/bin/sh", "-c"]
+        args: ["rm -rf /data/*.jar && rm -rf /data/plugins/*.jar"]
+        volumeMounts:
+        - name: parkour-pv
+          mountPath: /data
       - name: git-sync
         image: k8s.gcr.io/git-sync-amd64:v2.0.6
         imagePullPolicy: Always

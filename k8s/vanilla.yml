@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vanilla
+  namespace: tfb-servers
+spec:
+  ports:
+    - port: 25565
+      targetPort: 25565
+  selector:
+    run: vanilla
+---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -30,6 +42,13 @@ spec:
         secret:
           secretName: gradle-credentials
       initContainers:
+      - name: delete-old-jar-files
+        image: alpine
+        command: ["/bin/sh", "-c"]
+        args: ["rm -rf /data/*.jar && rm -rf /data/plugins/*.jar"]
+        volumeMounts:
+        - name: vanilla-pv
+          mountPath: /data
       - name: git-sync
         image: k8s.gcr.io/git-sync-amd64:v2.0.6
         imagePullPolicy: Always
