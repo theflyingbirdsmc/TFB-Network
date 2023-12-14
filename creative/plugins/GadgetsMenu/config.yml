@@ -7,7 +7,7 @@
 Player-Data:
   Storage: mysql
   MySQL:
-    hostname: mariadb-mariadb-galera
+    hostname: tfb-database
     username: tfb_gadgetsmenu
     database: gadgetsmenu
     port: '3306'

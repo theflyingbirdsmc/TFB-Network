@@ -20,7 +20,7 @@ Enabled: true
 Hikari: true
 
 # The host and the port to connect to
-Host: mariadb-mariadb-galera:3306
+Host: tfb-database:3306
 
 # The database name
 Database: chatcontrolred
