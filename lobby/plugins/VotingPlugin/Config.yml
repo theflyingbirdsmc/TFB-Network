@@ -14,7 +14,7 @@ DataStorage: MYSQL
 # Information for mysql
 # See the end of the config for cache options
 MySQL:
-  Host: 'mariadb'
+  Host: 'tfb-database-mariadb'
   # Default port is 3306
   Port: 3306
   Database: 'votingplugin'

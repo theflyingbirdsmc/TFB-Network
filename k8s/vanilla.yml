@@ -122,11 +122,9 @@ spec:
             mountPath: /git-data
         resources:
           requests:
-            memory: "4Gi"
-            cpu: "1000m"
+            memory: "8Gi"
           limits:
-            memory: "4Gi"
-            cpu: "1000m"
+            memory: "8Gi"
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
