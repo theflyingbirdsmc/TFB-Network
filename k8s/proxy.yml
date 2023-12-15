@@ -8,8 +8,12 @@ metadata:
     "mc-router.itzg.me/externalServerName": "mc.theflyingbirds.net"
 spec:
   ports:
-    - port: 25565
+    - name: minecraft
+      port: 25565
       targetPort: 25565
+    - name: plan
+      port: 8804
+      targetPort: 8804
   selector:
     run: proxy
 ---
