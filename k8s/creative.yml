@@ -112,7 +112,7 @@ spec:
           - name: SERVER_PORT
             value: "25565"
           - name: "MEMORY"
-            value: "4G"
+            value: "5G"
         ports:
           - containerPort: 25565
         volumeMounts:
@@ -122,8 +122,6 @@ spec:
             mountPath: /git-data
         resources:
           requests:
-            memory: "5Gi"
-          limits:
             memory: "5Gi"
         readinessProbe:
           exec:
