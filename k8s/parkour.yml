@@ -123,8 +123,6 @@ spec:
         resources:
           requests:
             memory: "4Gi"
-          limits:
-            memory: "4Gi"
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
