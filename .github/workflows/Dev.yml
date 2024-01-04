@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/TFB.yml
+      - .github/workflows/Dev.yml
       - .devcontainer/Dockerfile
-      
+
 jobs:
   build-test-publish:
     runs-on: ubuntu-latest
