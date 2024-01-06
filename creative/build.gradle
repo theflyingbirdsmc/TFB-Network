@@ -51,6 +51,9 @@ dependencies {
     implementation 'PAPI-Expansion:Expansion-Player:2.0.7'
     implementation 'PAPI-Expansion:Expansion-Server:2.6.2'
     implementation 'PAPI-Expansion:Expansion-VotingPlugin:1.5'
+
+    // K8s Plugins
+    implementation 'Plugin:UnifiedMetrics:0.3.8'
 }
 
 // TFB Artifactory

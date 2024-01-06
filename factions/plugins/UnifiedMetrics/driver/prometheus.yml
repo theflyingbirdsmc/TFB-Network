@@ -1,0 +1,9 @@
+mode: "PUSHGATEWAY"
+pushGateway:
+  job: "unifiedmetrics"
+  url: "http://prometheus-prometheus-pushgateway.observability.svc:9091"
+  authentication:
+    scheme: "BASIC"
+    username: "username"
+    password: "password"
+  interval: 10

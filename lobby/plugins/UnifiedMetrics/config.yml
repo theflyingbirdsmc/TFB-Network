@@ -1,0 +1,14 @@
+server:
+  name: "tfb-lobby"
+metrics:
+  enabled: true
+  driver: "prometheus"
+  collectors:
+    systemGc: true
+    systemMemory: true
+    systemProcess: true
+    systemThread: true
+    server: true
+    world: true
+    tick: true
+    events: true
