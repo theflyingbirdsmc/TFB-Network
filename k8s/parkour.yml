@@ -4,9 +4,12 @@ metadata:
   name: parkour
   namespace: tfb-servers
 spec:
+  type: NodePort
   ports:
-    - port: 25565
-      targetPort: 25565
+  - name: parkour
+    port: 30003
+    targetPort: 30003
+    nodePort: 30003
   selector:
     run: parkour
 ---

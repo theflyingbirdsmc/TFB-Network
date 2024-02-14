@@ -4,9 +4,12 @@ metadata:
   name: creative
   namespace: tfb-servers
 spec:
+  type: NodePort
   ports:
-    - port: 25565
-      targetPort: 25565
+  - name: creative
+    port: 30002
+    targetPort: 30002
+    nodePort: 30002
   selector:
     run: creative
 ---
