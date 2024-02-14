@@ -46,11 +46,11 @@ disabled_commands:
 - revertaddresses
 servers:
   lobby:
-    address: mc.theflyingbirds.net:30001
+    address: theflyingbirds.net:30001
     motd: ''
     restricted: false
   creative:
-    address: mc.theflyingbirds.net:30002
+    address: 'theflyingbirds.net:30002'
     motd: ''
     restricted: false
   parkour:
