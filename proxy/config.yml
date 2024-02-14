@@ -5,7 +5,7 @@ listeners:
   forced_hosts:
     pvp.md-5.net: pvp
   host: 0.0.0.0:25565
-  max_players: 2023
+  max_players: 2024
   motd: ''
   ping_passthrough: false
   priorities:
