@@ -126,13 +126,13 @@ spec:
             memory: "4Gi"
         readinessProbe:
           exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "-port", "30001"]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "-port", "30001"]
           initialDelaySeconds: 120
           periodSeconds: 60
   volumeClaimTemplates:

@@ -5,8 +5,11 @@ metadata:
   name: proxy
   namespace: tfb-servers
   annotations:
-    "mc-router.itzg.me/externalServerName": "mc.theflyingbirds.net"
+  #  "mc-router.itzg.me/externalServerName": "mc.theflyingbirds.net"
+    metallb.universe.tf/allow-shared-ip: "mykey-65.108.8.46"
 spec:
+  type: LoadBalancer
+  loadBalancerIP: 65.108.8.46
   ports:
     - name: minecraft
       port: 25565
