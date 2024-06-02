@@ -10,7 +10,7 @@ RUN apt-get update \
 	zip \ 
 	unzip \
 	mariadb-server \
-	openjdk-17-jre \
+	openjdk-21-jre \
 	&& rm -rf /var/lib/apt/lists/*
 
 #install Gradle
