@@ -32,7 +32,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          file: ./Dockerfile
+          context: .devcontainer/
           push: true
           tags: ${{ secrets.HARBOR_DOCKER_REGISTRY }}/tfb-dev:latest
           build-args: |
