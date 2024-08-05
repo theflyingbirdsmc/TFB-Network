@@ -22,7 +22,7 @@ jobs:
     
       # Login to Harbor
       - name: Login to Nexus Docker Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ${{ secrets.HARBOR_DOCKER_REGISTRY }}
           username: ${{ secrets.HARBOR_USERNAME }}
