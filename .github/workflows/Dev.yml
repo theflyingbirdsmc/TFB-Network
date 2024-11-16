@@ -39,7 +39,7 @@ jobs:
             MAVEN_URL=${{ secrets.MAVEN_URL }}
             MAVEN_USERNAME=${{ secrets.MAVEN_USERNAME }}
             MAVEN_PASSWORD=${{ secrets.MAVEN_PASSWORD }}
-            
+
       - name: Get short commit SHA
         if: github.ref == 'refs/heads/main'
         id: vars
@@ -55,7 +55,7 @@ jobs:
 
       - name: Terraform init and validate
         run: |
-          cd .devcontainer/portal-dev
+          cd .devcontainer/tfb-dev
           terraform init -upgrade
           terraform validate
           
