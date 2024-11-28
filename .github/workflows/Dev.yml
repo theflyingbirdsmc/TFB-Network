@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - .github/workflows/Dev.yml
-      - .devcontainer/
+      - '.devcontainer/**'
 
 jobs:
   build-test-publish:
