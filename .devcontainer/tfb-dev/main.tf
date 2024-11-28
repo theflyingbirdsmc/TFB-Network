@@ -33,15 +33,6 @@ variable "use_kubeconfig" {
   default     = false
 }
 
-# data "coder_parameter" "namespace" {
-#   name         = "namespace"
-#   display_name = "Namespace"
-#   description  = "The Kubernetes namespace to create workspaces in (must exist prior to creating workspaces)"
-#   default      = "${lower(data.coder_workspace.me.name)}"
-#   mutable      = false
-#   type         = "string"
-# }
-
 data "coder_parameter" "repository" {
   name         = "repository"
   display_name = "Github repository"
