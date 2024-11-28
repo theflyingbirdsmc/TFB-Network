@@ -43,22 +43,6 @@ data "coder_parameter" "repository" {
   type         = "string"
 }
 
-# data "coder_parameter" "has_tfb_dev_workspace" {
-#   name         = "has_tfb_dev_workspace"
-#   display_name = "New TFB Dev Workspace"
-#   description  = "Do you already have a TFB Dev Workspace? (true/false)"
-#   type         = "bool"
-#   default      = false
-#   option {
-#     name  = "No, this is my first Workspace"
-#     value = false
-#   }
-#   option {
-#     name  = "Yes, I can't get enough :)"
-#     value = true
-#   }
-# }
-
 data "coder_parameter" "cpu" {
   name         = "cpu"
   display_name = "CPU"
