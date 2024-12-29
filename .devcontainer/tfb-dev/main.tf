@@ -441,7 +441,7 @@ resource "kubernetes_config_map" "hosts_config" {
     "hosts" = <<-EOT
       127.0.0.1 mc.theflyingbirds.net
       127.0.0.1 ${lower(data.coder_workspace.me.name)}
-      127.0.0.1 lobby danish-survival creative cs-tmm
+      127.0.0.1 lobby danish-survival creative cs-tmm parkour
     EOT
   }
 }
