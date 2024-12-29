@@ -478,7 +478,7 @@ resource "kubernetes_pod" "main" {
     }
     container {
       name              = "tfb-dev"
-      image             = "registry.theflyingbirds.net/tfb-network/tfb-dev:latest"
+      image             = "docker.theflyingbirds.net/tfb-network/tfb-dev:latest"
       image_pull_policy = "Always"
       command           = ["sh", "-c", coder_agent.main.init_script]
       port {
