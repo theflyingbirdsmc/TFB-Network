@@ -36,6 +36,8 @@ jobs:
       # Check out the Minecraft server repository
       - name: Checkout Minecraft server repository
         uses: actions/checkout@v3
+        with:
+          path: ${{ github.workspace }}
 
       # Set up Docker
       - name: Set up Docker Build
@@ -63,6 +65,13 @@ jobs:
           registry: ${{ secrets.DOCKER_REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: List files for debugging
+        run: |
+          echo "Contents of workspace:"
+          ls -R ${{ github.workspace }}
+          echo "Contents of TFB-Network:"
+          ls -R ${{ github.workspace }}/TFB-Network
 
       # Build and push Docker image
       - name: Build and push Docker image
