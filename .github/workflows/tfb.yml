@@ -71,4 +71,4 @@ jobs:
           context: . # context of the Minecraft server repository
           file: ../TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]'):latest
+          tags: ${{ secrets.DOCKER_REPO }}/parkour:latest
