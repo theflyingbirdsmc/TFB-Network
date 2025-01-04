@@ -57,6 +57,7 @@ jobs:
       # Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
+        run: pwd && ls -la
         with:
           context: . # or specify the appropriate context
           file: .github/docker/Dockerfile # path to the shared Dockerfile
