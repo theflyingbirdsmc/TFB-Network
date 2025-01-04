@@ -31,11 +31,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: theflyingbirdsmc/TFB-Network
-          path: /TFB-Network
+          path: TFB-Network
 
       # Check out the Minecraft server repository
       - name: Checkout Minecraft server repository
         uses: actions/checkout@v3
+        with:
+          path: server
 
       # Set up Docker
       - name: Set up Docker Build
@@ -69,7 +71,7 @@ jobs:
           echo "Contents of workspace:"
           ls ${{ github.workspace }}
           echo "Contents of TFB-Network:"
-          ls  /TFB-Network
+          ls  ${{ github.workspace }}/TFB-Network
 
       # Build and push Docker image
       - name: Build and push Docker image
