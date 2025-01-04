@@ -26,16 +26,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the Minecraft server repository
-      - name: Checkout Minecraft server repository
-        uses: actions/checkout@v3
-
       # Check out the repository containing the shared Dockerfile
       - name: Checkout shared Dockerfile repository
         uses: actions/checkout@v3
         with:
           repository: theflyingbirdsmc/TFB-Network
           path: ~/TFB-Network
+
+      # Check out the Minecraft server repository
+      - name: Checkout Minecraft server repository
+        uses: actions/checkout@v3
 
       # Set up Docker
       - name: Set up Docker Build
