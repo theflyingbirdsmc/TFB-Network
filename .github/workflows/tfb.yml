@@ -68,10 +68,7 @@ jobs:
 
       - name: List files for debugging
         run: |
-          echo "Contents of workspace:"
-          ls ${{ github.workspace }}
-          echo "Contents of TFB-Network:"
-          ls  ${{ github.workspace }}/TFB-Network
+          echo ${{ github.event.repository.name }}
 
       # Build and push Docker image
       - name: Build and push Docker image
