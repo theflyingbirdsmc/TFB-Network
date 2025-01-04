@@ -77,7 +77,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ${{ github.workspace }} # context of the Minecraft server repository
-          file: /TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
+          context: ${{ github.workspace }}/server # context of the Minecraft server repository
+          file: ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_REPO }}/parkour:latest
