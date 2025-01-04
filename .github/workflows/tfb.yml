@@ -34,8 +34,8 @@ jobs:
       - name: Checkout shared Dockerfile repository
         uses: actions/checkout@v3
         with:
-          repository: your-username/TFB-Network
-          path: TFB-Network
+          repository: theflyingbirdsmc/TFB-Network
+          path: ~/TFB-Network
 
       # Set up Docker
       - name: Set up Docker Build
@@ -69,7 +69,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: . # context of the Minecraft server repository
-          file: TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
+          file: ~/TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_REPO }}/$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]'):latest
 
