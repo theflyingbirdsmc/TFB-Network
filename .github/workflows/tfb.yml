@@ -54,14 +54,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # # Build and push Docker image
-      # - name: Build and push Docker image
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: ./proxy # specifying the directory where your Dockerfile is
-      #     file: ./proxy/Dockerfile # specifying the path to your Dockerfile
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_REPO }}/proxy:latest # change this to your image name
+      # Build and push Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: . # or specify the appropriate context
+          file: .github/docker/Dockerfile # path to the shared Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_REPO }}/${{ github.repository }}:latest
   cleanup:
     runs-on: ubuntu-latest
     steps:
