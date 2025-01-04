@@ -66,10 +66,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: List files for debugging
-        run: |
-          echo ${{ github.event.repository.name }}
-
       # Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -77,4 +73,4 @@ jobs:
           context: ${{ github.workspace }}/server # context of the Minecraft server repository
           file: ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/parkour:latest
+          tags: ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest
