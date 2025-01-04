@@ -44,7 +44,7 @@ jobs:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
-        run: env | grep MAVEN && ls -la && gradle update --no-build-cache --debug
+        run: gradle update --no-build-cache
 
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
@@ -61,7 +61,7 @@ jobs:
           context: . # or specify the appropriate context
           file: .github/docker/Dockerfile # path to the shared Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/$(basename ${{ github.repository }} | tr '[:upper:]' '[:lower:]'):latest
+          tags: ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest
   cleanup:
     runs-on: ubuntu-latest
     steps:
