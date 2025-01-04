@@ -31,13 +31,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: theflyingbirdsmc/TFB-Network
-          path: ${{ github.workspace }}/TFB-Network
+          path: /TFB-Network
 
       # Check out the Minecraft server repository
       - name: Checkout Minecraft server repository
         uses: actions/checkout@v3
-        with:
-          path: ${{ github.workspace }}
 
       # Set up Docker
       - name: Set up Docker Build
@@ -78,6 +76,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ${{ github.workspace }} # context of the Minecraft server repository
-          file: ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
+          file: /TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_REPO }}/parkour:latest
