@@ -61,7 +61,7 @@ jobs:
 
       # Build TFB Docker image
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest -f ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile ${{ github.workspace }}/server
+        run: docker build -t ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest -f ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile ${{ github.workspace }}/server --no-cache
       
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
