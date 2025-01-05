@@ -39,9 +39,6 @@ jobs:
         with:
           path: server
 
-      # Set up Docker
-      - name: Set up Docker Build
-        uses: docker/setup-buildx-action@v2
 
       - uses: actions/setup-java@v3
         with:
@@ -58,9 +55,17 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
         run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
 
+      # Set up Docker
+      - name: Set up Docker Build
+        uses: docker/setup-buildx-action@v3
+
+      # Build TFB Docker image
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest -f ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile ${{ github.workspace }}/server
+      
       # Login to Nexus Artifactory
       - name: Login to Nexus Docker Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ${{ secrets.DOCKER_REGISTRY }}
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -68,9 +73,4 @@ jobs:
 
       # Build and push Docker image
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: ${{ github.workspace }}/server # context of the Minecraft server repository
-          file: ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile # path to the shared Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest
+        run: docker push ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest
