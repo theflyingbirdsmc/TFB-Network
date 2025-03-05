@@ -77,6 +77,7 @@ jobs:
           coder templates push --yes $CODER_TEMPLATE_NAME \
               --directory $CODER_TEMPLATE_DIR \
               --name=$CODER_TEMPLATE_VERSION
+              
   cleanup:
     runs-on: ubuntu-latest
     steps:
