@@ -332,11 +332,6 @@ resource "kubernetes_config_map" "database_init" {
       CREATE DATABASE IF NOT EXISTS tfb_danish_survival_coreprotect;
       CALL grant_privileges_for_prefix('tfb_danish_survival');
 
-      -- PARKOUR --
-      CREATE USER 'tfb_parkour'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
-      CREATE DATABASE IF NOT EXISTS tfb_parkour_parkour;
-      CALL grant_privileges_for_prefix('tfb_parkour');
-
       -- COMMUNITY SERVER TMM --
       CREATE USER 'tfb_cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
       CREATE DATABASE IF NOT EXISTS tfb_cs_tmm_mcmmo;
@@ -414,17 +409,6 @@ resource "kubernetes_service" "tfb_danish_survival_db" {
   }
 }
 
-resource "kubernetes_service" "tfb_parkour_db" {
-  metadata {
-    name = "tfb-parkour-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
-  }
-  spec {
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace.me.owner)}.svc.cluster.local"
-  }
-}
-
 resource "kubernetes_config_map" "hosts_config" {
   # Add this block to ignore changes if the resource already exists
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
@@ -441,7 +425,7 @@ resource "kubernetes_config_map" "hosts_config" {
     "hosts" = <<-EOT
       127.0.0.1 mc.theflyingbirds.net
       127.0.0.1 ${lower(data.coder_workspace.me.name)}
-      127.0.0.1 lobby danish-survival creative cs-tmm parkour
+      127.0.0.1 lobby danish-survival creative cs-tmm
     EOT
   }
 }
@@ -478,7 +462,7 @@ resource "kubernetes_pod" "main" {
     }
     container {
       name              = "tfb-dev"
-      image             = "docker.theflyingbirds.net/tfb-network/tfb-dev:latest"
+      image             = "harbor.theflyingbirds.net/tfb/tfb-dev:latest"
       image_pull_policy = "Always"
       command           = ["sh", "-c", coder_agent.main.init_script]
       port {
