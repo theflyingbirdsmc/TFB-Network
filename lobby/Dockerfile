@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.9_9-jre-focal
+FROM eclipse-temurin:17.0.14_7-jre-focal
 LABEL author="Lucas Christensen & Simon Fugl"
 
 # SSH

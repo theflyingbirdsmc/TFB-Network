@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=eclipse-temurin:17.0.9_9-jre-focal
+ARG BASE_IMAGE=eclipse-temurin:17.0.14_7-jre-focal
 FROM ${BASE_IMAGE}
 
 LABEL author="Lucas Christensen & Simon Fugl"
