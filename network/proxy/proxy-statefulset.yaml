@@ -63,21 +63,21 @@ spec:
       - name: mariadb
         image: mariadb:11.1.2-jammy
         env:
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mariadb-secret
-              key: root-password
-        - name: MYSQL_DATABASE
-          value: tfb
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mariadb-secret
+                key: root-password
+          - name: MYSQL_DATABASE
+            value: tfb
         ports:
-        - containerPort: 3306
+          - containerPort: 3306
         volumeMounts:
-        - name: proxy-db-storage
-          mountPath: /var/lib/mysql
-        - name: config-volume
-          mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
-          subPath: my.cnf
+          - name: proxy-db-storage
+            mountPath: /var/lib/mysql
+          - name: config-volume
+            mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
+            subPath: my.cnf
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
