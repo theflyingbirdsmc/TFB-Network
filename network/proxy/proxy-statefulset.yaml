@@ -78,6 +78,10 @@ spec:
           - name: config-volume
             mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
             subPath: my.cnf
+      volumes:
+        - name: config-volume
+          configMap:
+            name: mariadb-config
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
