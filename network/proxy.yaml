@@ -6,5 +6,4 @@ metadata:
 spec:
   project: tfb-servers
   source:
-    repoURL: https://github.com/theflyingbirdsmc/proxy.git
     path: proxy
