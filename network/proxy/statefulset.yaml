@@ -29,8 +29,8 @@ spec:
         env:
           - name: TYPE
             value: "CUSTOM"
-          - name: BUNGEE_JAR_FILE
-            value: "/data/server.jar"
+          - name: CUSTOM_SERVER
+            value: "server.jar"
           - name: EULA
             value: "TRUE"
         ports:
