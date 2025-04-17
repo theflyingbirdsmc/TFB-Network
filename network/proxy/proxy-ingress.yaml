@@ -5,10 +5,9 @@ metadata:
   namespace: tfb-servers
   annotations:
     cert-manager.io/cluster-issuer: theflyingbirds-prod
-    nginx.ingress.kubernetes.io/use-proxy-protocol: "true"
 spec:
   rules:
-  - host: mc.theflyingbirds.net
+  - host: staging.theflyingbirds.net
     http:
       paths:
       - backend:
