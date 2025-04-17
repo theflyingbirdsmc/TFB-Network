@@ -30,7 +30,7 @@ spec:
           - name: TYPE
             value: "CUSTOM"
           - name: BUNGEE_JAR_FILE
-            value: "server.jar"
+            value: "/data/server.jar"
           - name: EULA
             value: "TRUE"
         ports:
