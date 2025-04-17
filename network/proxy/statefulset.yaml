@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: proxy
+  namespace: tfb-servers
+  labels:
+    run: proxy
+    backstage.io/kubernetes-id: proxy
+spec:
+  serviceName: "proxy"
+  replicas: 1
+  selector:
+    matchLabels:
+      run: proxy
+  template:
+    metadata:
+      labels:
+        run: proxy
+        backstage.io/kubernetes-id: proxy
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+      - name: proxy
+        image: docker.theflyingbirds.net/tfb-servers/proxy:latest
+        ports:
+          - containerPort: 25588
+          - containerPort: 8804
+          - containerPort: 8192
+        command: ["/bin/sh",]
+        args: [ "-c", "apt-get update && apt-get install -y screen && screen -dmS minecraft /usr/bin/run-bungeecord.sh && tail -f /dev/null"]
+        securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
+        volumeMounts:
+          - name: proxy-pv
+            mountPath: /tfb
+        resources:
+          requests:
+            memory: "4Gi"
+        readinessProbe:
+          exec:
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 20
+        livenessProbe:
+          exec:
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
+          initialDelaySeconds: 120
+          periodSeconds: 60
+  volumeClaimTemplates:
+  - metadata:
+      name: proxy-pv
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 10Gi

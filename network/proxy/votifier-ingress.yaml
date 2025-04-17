@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: votifier-ingress
+  namespace: tfb-servers
+  annotations:
+    cert-manager.io/cluster-issuer: theflyingbirds-prod
+spec:
+  tls:
+  - hosts:
+    - mc.theflyingbirds.net
+    secretName: votifier-tls
+  rules:
+  - host: mc.theflyingbirds.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: proxy
+            port:
+              number: 8192
+        path: /
+        pathType: Prefix

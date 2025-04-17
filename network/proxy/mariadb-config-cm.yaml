@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mariadb-config
+  namespace: tfb-servers
+data:
+  my.cnf: |
+    [mysqld]
+    max_allowed_packet=16M
+    max_connections=100000
+    bind-address=*
+    [Service]
+    LimitNOFILE=10000000
