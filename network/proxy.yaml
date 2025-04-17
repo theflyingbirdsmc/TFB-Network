@@ -15,8 +15,8 @@ spec:
   # loadBalancerIP: 95.217.44.106
   ports:
     - name: minecraft
-      port: 25588
-      targetPort: 25588
+      port: 25565
+      targetPort: 25565
     - name: plan
       port: 8804
       targetPort: 8804
@@ -237,6 +237,6 @@ spec:
           service:
             name: proxy
             port:
-              number: 25588
+              number: 25565
         path: /
         pathType: Prefix
