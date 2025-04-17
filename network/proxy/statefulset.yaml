@@ -33,6 +33,8 @@ spec:
             value: "/server/server.jar"
           - name: DEBIAN_FRONTEND
             value: noninteractive
+          - name: EULA
+            value: "TRUE"
         ports:
           - containerPort: 25588
           - containerPort: 8804
