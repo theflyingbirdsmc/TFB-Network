@@ -4,12 +4,15 @@ metadata:
   name: plan-ingress
   namespace: tfb-servers
   annotations:
-    cert-manager.io/cluster-issuer: theflyingbirds-prod
+    cert-manager.io/cluster-issuer: cloudflare-clusterissuer
 spec:
   tls:
   - hosts:
     - stats.theflyingbirds.net
     secretName: plan-tls
+    issuerRef:
+      name: cloudflare-clusterissuer
+      kind: ClusterIssuer
   rules:
   - host: stats.theflyingbirds.net
     http:

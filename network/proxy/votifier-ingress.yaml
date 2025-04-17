@@ -4,12 +4,15 @@ metadata:
   name: votifier-ingress
   namespace: tfb-servers
   annotations:
-    cert-manager.io/cluster-issuer: theflyingbirds-prod
+    cert-manager.io/cluster-issuer: cloudflare-clusterissuer
 spec:
   tls:
   - hosts:
     - mc.theflyingbirds.net
     secretName: votifier-tls
+    issuerRef:
+      name: cloudflare-clusterissuer
+      kind: ClusterIssuer
   rules:
   - host: mc.theflyingbirds.net
     http:
