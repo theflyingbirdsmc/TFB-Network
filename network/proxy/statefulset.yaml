@@ -51,6 +51,8 @@ spec:
             command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
           initialDelaySeconds: 120
           periodSeconds: 60
+      imagePullSecrets:
+        - name: regcred
   volumeClaimTemplates:
   - metadata:
       name: proxy-pv
