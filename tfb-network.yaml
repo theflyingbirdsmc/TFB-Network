@@ -1,8 +1,0 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: tfb-network
-spec:
-  source:
-    repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
-    path: network/
