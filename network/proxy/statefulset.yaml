@@ -30,9 +30,7 @@ spec:
           - name: TYPE
             value: "CUSTOM"
           - name: BUNGEE_JAR_FILE
-            value: "/server/server.jar"
-          - name: DEBIAN_FRONTEND
-            value: noninteractive
+            value: "server.jar"
           - name: EULA
             value: "TRUE"
         ports:
@@ -47,7 +45,7 @@ spec:
             allowPrivilegeEscalation: true
         volumeMounts:
           - name: proxy-pv
-            mountPath: /tfb
+            mountPath: /server
         resources:
           requests:
             memory: "4Gi"
