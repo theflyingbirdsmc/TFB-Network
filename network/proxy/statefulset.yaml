@@ -26,6 +26,13 @@ spec:
       containers:
       - name: proxy
         image: harbor.theflyingbirds.net/tfb-servers/proxy:latest
+        env:
+          - name: TYPE
+            value: "CUSTOM"
+          - name: BUNGEE_JAR_FILE
+            value: "/server/server.jar"
+          - name: DEBIAN_FRONTEND
+            value: noninteractive
         ports:
           - containerPort: 25588
           - containerPort: 8804
