@@ -39,7 +39,6 @@ spec:
           - containerPort: 8192
         # command: ["/bin/sh",]
         # args: [ "-c", "apt-get update && apt-get install -y screen && screen -dmS minecraft /usr/bin/run-bungeecord.sh && tail -f /dev/null"]
-        
         securityContext:
             runAsUser: 0
             runAsGroup: 0
@@ -74,7 +73,7 @@ spec:
         ports:
         - containerPort: 3306
         volumeMounts:
-        - name: db-storage
+        - name: proxy-db-storage
           mountPath: /var/lib/mysql
         - name: config-volume
           mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
@@ -90,7 +89,7 @@ spec:
         requests:
           storage: 10Gi
   - metadata:
-      name: db-storage
+      name: proxy-db-storage
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
