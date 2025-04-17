@@ -23,7 +23,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: proxy
-        image: docker.theflyingbirds.net/tfb-servers/proxy:latest
+        image: harbor.theflyingbirds.net/tfb-servers/proxy:latest
         ports:
           - containerPort: 25588
           - containerPort: 8804
