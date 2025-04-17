@@ -6,4 +6,14 @@ metadata:
 spec:
   project: tfb-servers
   source:
-    path: proxy
+    repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
+    path: network/proxy
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tfb-servers
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
