@@ -31,6 +31,8 @@ spec:
             value: "CUSTOM"
           - name: "CUSTOM_SERVER"
             value: "server.jar"
+          - name: "EXEC_DIRECTLY"
+            value: "true"
           - name: "MEMORY"
             value: "4G"
         ports:
