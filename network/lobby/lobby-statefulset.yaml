@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: lobby
+  namespace: tfb-servers
+  labels:
+    run: lobby
+    backstage.io/kubernetes-id: lobby
+spec:
+  serviceName: "lobby"
+  replicas: 1
+  selector:
+    matchLabels:
+      run: lobby
+  template:
+    metadata:
+      labels:
+        run: lobby
+        backstage.io/kubernetes-id: lobby
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      containers:
+      - name: lobby
+        image: harbor.theflyingbirds.net/tfb-servers/lobby:latest
+        env:
+          - name: TYPE
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "server.jar"
+          - name: "MEMORY"
+            value: "4G"
+        ports:
+          - containerPort: 30001
+        # command: ["/bin/sh",]
+        # args: [ "-c", "apt-get update && apt-get install -y screen && screen -dmS minecraft /usr/bin/run-bungeecord.sh && tail -f /dev/null"]
+        securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
+        volumeMounts:
+          - name: lobby-pv
+            mountPath: /server
+        resources:
+          requests:
+            memory: "4Gi"
+        readinessProbe:
+          exec:
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 20
+        livenessProbe:
+          exec:
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
+          initialDelaySeconds: 120
+          periodSeconds: 60
+      imagePullSecrets:
+        - name: regcred
+  volumeClaimTemplates:
+  - metadata:
+      name: lobby-pv
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 10Gi
