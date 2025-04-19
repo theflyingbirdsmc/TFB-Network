@@ -49,6 +49,7 @@ spec:
         resources:
           requests:
             memory: "4Gi"
+            cpu: "2000m"
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
