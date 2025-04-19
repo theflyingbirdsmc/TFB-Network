@@ -35,7 +35,7 @@ spec:
           - name: "EXEC_DIRECTLY"
             value: "true"
           - name: "ENABLE_RCON"
-            value: "false"
+            value: "true"
           - name: "MEMORY"
             value: "4G"
         ports:
