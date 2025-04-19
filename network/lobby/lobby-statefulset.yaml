@@ -26,6 +26,7 @@ spec:
       containers:
       - name: lobby
         image: harbor.theflyingbirds.net/tfb-servers/lobby:latest
+        tty: false
         env:
           - name: TYPE
             value: "CUSTOM"
