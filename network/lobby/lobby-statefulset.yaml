@@ -33,6 +33,8 @@ spec:
             value: "server.jar"
           - name: "EXEC_DIRECTLY"
             value: "true"
+          - name: "ENABLE_RCON"
+            value: "false"
           - name: "MEMORY"
             value: "4G"
         ports:
