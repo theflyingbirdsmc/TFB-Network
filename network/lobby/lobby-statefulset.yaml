@@ -48,7 +48,7 @@ spec:
             allowPrivilegeEscalation: true
         volumeMounts:
           - name: lobby-pv
-            mountPath: /server
+            mountPath: /data
         resources:
           requests:
             memory: "6Gi"
