@@ -48,7 +48,7 @@ spec:
             allowPrivilegeEscalation: true
         volumeMounts:
           - name: lobby-world-pv
-            mountPath: /data
+            mountPath: /data/world_lobby
         resources:
           requests:
             memory: "6Gi"
