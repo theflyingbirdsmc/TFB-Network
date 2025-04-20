@@ -47,8 +47,8 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: danish-survival-pv
-            mountPath: /data
+          - name: danish-survival-world-pv
+            mountPath: /data/world_danish_survival
         resources:
           requests:
             memory: "6Gi"
@@ -68,7 +68,7 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: danish-survival-pv
+      name: danish-survival-world-pv
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:

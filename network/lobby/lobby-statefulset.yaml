@@ -47,7 +47,7 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: lobby-pv
+          - name: lobby-world-pv
             mountPath: /data
         resources:
           requests:
@@ -68,7 +68,7 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: lobby-pv
+      name: lobby-world-pv
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
