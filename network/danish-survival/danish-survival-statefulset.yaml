@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: lobby
+  name: danish-survival
   namespace: tfb-servers
   labels:
-    run: lobby
-    backstage.io/kubernetes-id: lobby
+    run: danish-survival
+    backstage.io/kubernetes-id: danish-survival
 spec:
-  serviceName: "lobby"
+  serviceName: "danish-survival"
   replicas: 1
   selector:
     matchLabels:
-      run: lobby
+      run: danish-survival
   template:
     metadata:
       labels:
-        run: lobby
-        backstage.io/kubernetes-id: lobby
+        run: danish-survival
+        backstage.io/kubernetes-id: danish-survival
     spec:
       securityContext:
         runAsUser: 1000
@@ -24,8 +24,8 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
       containers:
-      - name: lobby
-        image: harbor.theflyingbirds.net/tfb-servers/lobby:latest
+      - name: danish-survival
+        image: harbor.theflyingbirds.net/tfb-servers/danish-survival:latest
         tty: true
         env:
           - name: TYPE
@@ -39,7 +39,7 @@ spec:
           - name: "MEMORY"
             value: "4G"
         ports:
-          - containerPort: 30001
+          - containerPort: 30005
         command: ["/bin/sh", "-c"]
         args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         securityContext:
@@ -47,30 +47,30 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: lobby-world-pv
-            mountPath: /data/world_lobby
+          - name: danish-survival-world-pv
+            mountPath: /data/world_danish_survival
         resources:
           requests:
             memory: "6Gi"
             cpu: "4000m"
         readinessProbe:
           exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001" ]
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005" ]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001"]
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: lobby-world-pv
+      name: danish-survival-world-pv
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 5Gi
+          storage: 15Gi
