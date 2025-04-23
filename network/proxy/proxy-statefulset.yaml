@@ -34,8 +34,8 @@ spec:
           - name: EULA
             value: "TRUE"
         ports:
-          - hostPort: 25565
           - containerPort: 25565
+            hostPort: 25565
           - containerPort: 8804
           - containerPort: 8192
         # command: ["/bin/sh",]
