@@ -6,12 +6,12 @@ metadata:
   annotations:
     backstage.io/kubernetes-id: proxy
     load-balancer.hetzner.cloud/uses-proxyprotocol: 'true'
+    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
   labels:
     backstage.io/kubernetes-id: proxy
 spec:
   type: LoadBalancer 
   externalTrafficPolicy: Local
-  # loadBalancerIP: 95.217.44.106
   ports:
     - name: minecraft
       port: 25565
