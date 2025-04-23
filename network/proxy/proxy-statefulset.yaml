@@ -39,7 +39,7 @@ spec:
           - containerPort: 8804
           - containerPort: 8192
         command: ["/bin/sh", "-c"]
-        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start.sh && tail -f /dev/null"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
