@@ -48,8 +48,18 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: cs-tmm-world-pv
-            mountPath: /data/world_danish_survival
+          - name: world-cs-tmm
+            mountPath: /data/world_cs_tmm
+          - name: world-cs-tmm-nether
+            mountPath: /data/world_cs_tmm_nether
+          - name: world-cs-tmm-the-end
+            mountPath: /data/world_cs_tmm_the_end
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-warps
+            mountPath: /data/plugins/Essentials/warps
+          - name: plugins-worldguard-worlds
+            mountPath: /data/plugins/WorldGuard/worlds
         resources:
           requests:
             memory: "6Gi"
@@ -69,9 +79,44 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: cs-tmm-world-pv
+      name: world-cs-tmm
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 25Gi
+  - metadata:
+      name: world-cs-tmm-nether
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 15Gi
+  - metadata:
+      name: world-cs-tmm-the-end
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: plugins-essentials-userdata
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-essentials-warps
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
