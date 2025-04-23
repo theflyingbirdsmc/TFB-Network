@@ -9,7 +9,7 @@ spec:
   type: ClusterIP
   ports:
   - name: cs-tmm
-    port: 30005
-    targetPort: 30005
+    port: 30100
+    targetPort: 30100
   selector:
     run: cs-tmm
