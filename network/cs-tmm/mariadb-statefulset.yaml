@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: tfb-cs-tmm-db
+  namespace: tfb-servers
+spec:
+  serviceName: "tfb-cs-tmm-db"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tfb-cs-tmm-db
+  template:
+    metadata:
+      labels:
+        app: tfb-cs-tmm-db
+    spec:
+      containers:
+      - name: mariadb
+        image: mariadb:11.1.2-jammy
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: root-password
+        - name: MYSQL_DATABASE
+          value: tfb
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: db-storage
+          mountPath: /var/lib/mysql
+        - name: config-volume
+          mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
+          subPath: my.cnf
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mariadb-config
+  volumeClaimTemplates:
+  - metadata:
+      name: db-storage
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 10Gi
