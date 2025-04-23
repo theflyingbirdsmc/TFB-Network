@@ -1,32 +1,32 @@
 -- LUCKPERMS --
 DROP USER IF EXISTS 'tfb_luckperms';
 CREATE USER 'tfb_luckperms'@'%';
-CREATE DATABASE IF NOT EXISTS luckperms;
-GRANT ALL ON luckperms.* TO 'tfb_luckperms'@'%' IDENTIFIED BY 'uEJq!fjGM!62*&cmX*mBRhT9L2@SgX';
+CREATE DATABASE IF NOT EXISTS tfb_network_luckperms;
+GRANT ALL ON tfb_network_luckperms.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- PLAN --
 DROP USER IF EXISTS 'tfb_plan'; 
 CREATE USER 'tfb_plan'@'%';
-CREATE DATABASE IF NOT EXISTS plan;
-GRANT ALL ON plan.* TO 'tfb_plan'@'%' IDENTIFIED BY '$Z@jJKSLcd7xUekU5qF&VW3#ndU&mm';
+CREATE DATABASE IF NOT EXISTS tfb_network_plan;
+GRANT ALL ON tfb_network_plan.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- VOTINGPLUGIN --
 DROP USER IF EXISTS 'tfb_votingplugin';
 CREATE USER 'tfb_votingplugin'@'%';
-CREATE DATABASE IF NOT EXISTS votingplugin;
-GRANT ALL ON votingplugin.* TO 'tfb_votingplugin'@'%' IDENTIFIED BY '5wZw5@ySSE@zZSd4b#QFrPfsedwhzz';
+CREATE DATABASE IF NOT EXISTS tfb_network_votingplugin;
+GRANT ALL ON tfb_network_votingplugin.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- GADGETSMENU --
 DROP USER IF EXISTS 'tfb_gadgetsmenu';
 CREATE USER 'tfb_gadgetsmenu'@'%';
-CREATE DATABASE IF NOT EXISTS gadgetsmenu;
-GRANT ALL ON gadgetsmenu.* TO 'tfb_gadgetsmenu'@'%' IDENTIFIED BY 'vF53CRgmZt*@8y6y3f#ku&L*d4*fj^';
+CREATE DATABASE IF NOT EXISTS tfb_network_gadgetsmenu;
+GRANT ALL ON tfb_network_gadgetsmenu.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- CHATCONTROLRED --
 DROP USER IF EXISTS 'tfb_chatcontrolred';
 CREATE USER 'tfb_chatcontrolred'@'%';
-CREATE DATABASE IF NOT EXISTS chatcontrolred;
-GRANT ALL ON chatcontrolred.* TO 'tfb_chatcontrolred'@'%' IDENTIFIED BY 'e&cqyYXtqjgfL!hEGMyFpqMi89!g9w';
+CREATE DATABASE IF NOT EXISTS tfb_network_chatcontrolred;
+GRANT ALL ON tfb_network_chatcontrolred.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- PLOTSQUARED --
 DROP USER IF EXISTS 'tfb_plotsquared';
@@ -44,8 +44,8 @@ FLUSH PRIVILEGES;
 -- PLAYERREFERALS --
 DROP USER IF EXISTS 'tfb_playerreferrals';
 CREATE USER 'tfb_playerreferrals'@'%';
-CREATE DATABASE IF NOT EXISTS playerreferals;
-GRANT ALL ON playerreferals.* TO 'tfb_playerreferrals'@'%' IDENTIFIED BY 'bxmJaWd#264#aT6JW$UQaQAmq3hbYd';
+CREATE DATABASE IF NOT EXISTS tfb_network_playerreferals;
+GRANT ALL ON tfb_network_playerreferals.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 FLUSH PRIVILEGES;
 
 -- HEXNICKS --
