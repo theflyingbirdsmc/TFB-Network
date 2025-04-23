@@ -38,8 +38,8 @@ spec:
             hostPort: 25565
           - containerPort: 8804
           - containerPort: 8192
-        command: ["/bin/sh",]
-        args: [ "-c", "apt-get update && apt-get install -y screen && screen -dmS minecraft /usr/bin/run-bungeecord.sh && tail -f /dev/null"]
+        command: ["/bin/sh", "-c"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /usr/bin/run-bungeecord.sh && tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
