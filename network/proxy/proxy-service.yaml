@@ -1,26 +1,25 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: proxy
-  namespace: tfb-servers
-  annotations:
-    backstage.io/kubernetes-id: proxy
-    load-balancer.hetzner.cloud/uses-proxyprotocol: 'true'
-    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-  labels:
-    backstage.io/kubernetes-id: proxy
-spec:
-  type: LoadBalancer 
-  externalTrafficPolicy: Local
-  ports:
-    - name: minecraft
-      port: 25565
-      targetPort: 25565
-    - name: plan
-      port: 8804
-      targetPort: 8804
-    - name: votifier
-      port: 8192
-      targetPort: 8192
-  selector:
-    run: proxy
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: proxy
+#   namespace: tfb-servers
+#   annotations:
+#     backstage.io/kubernetes-id: proxy
+#     load-balancer.hetzner.cloud/uses-proxyprotocol: 'true'
+#   labels:
+#     backstage.io/kubernetes-id: proxy
+# spec:
+#   type: LoadBalancer 
+#   externalTrafficPolicy: Local
+#   ports:
+#     - name: minecraft
+#       port: 25565
+#       targetPort: 25565
+#     - name: plan
+#       port: 8804
+#       targetPort: 8804
+#     - name: votifier
+#       port: 8192
+#       targetPort: 8192
+#   selector:
+#     run: proxy
