@@ -47,8 +47,18 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: danish-survival-world-pv
+          - name: danish-survival-world
             mountPath: /data/world_danish_survival
+          - name: danish-survival-world-nether
+            mountPath: /data/world_danish_survival_nether
+          - name: danish-survival-world-the-end
+            mountPath: /data/world_danish_survival_the_end
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-warps
+            mountPath: /data/plugins/Essentials/warps
+          - name: plugins-worldguard-worlds
+            mountPath: /data/plugins/WorldGuard/worlds
         resources:
           requests:
             memory: "6Gi"
@@ -68,9 +78,44 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: danish-survival-world-pv
+      name: danish-survival-world
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 15Gi
+  - metadata:
+      name: danish-survival-world-nether
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: danish-survival-world-the-end
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: plugins-essentials-userdata
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-essentials-warps
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
