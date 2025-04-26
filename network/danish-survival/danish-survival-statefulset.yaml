@@ -40,6 +40,8 @@ spec:
             value: "4G"
           - name: "REPLACE_ENV_VARIABLE_PREFIX"
             value: "TFB_"
+          - name: "REPLACE_ENV_IN_PLACE"
+            value: "true"
         envFrom:
           - secretRef:
               name: danish-survival-world-seed-secret
