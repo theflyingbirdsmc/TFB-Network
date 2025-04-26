@@ -84,7 +84,7 @@ spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 15Gi
+          storage: 5Gi
   - metadata:
       name: plugins-essentials-userdata
     spec:
