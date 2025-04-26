@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: creative
+  namespace: tfb-servers
+  labels:
+    backstage.io/kubernetes-id: creative
+spec:
+  type: ClusterIP
+  ports:
+  - name: creative
+    port: 30101
+    targetPort: 30101
+  selector:
+    run: creative

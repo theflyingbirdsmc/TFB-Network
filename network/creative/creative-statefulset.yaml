@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: creative
+  namespace: tfb-servers
+  labels:
+    run: creative
+    backstage.io/kubernetes-id: creative
+spec:
+  serviceName: "creative"
+  replicas: 1
+  selector:
+    matchLabels:
+      run: creative
+  template:
+    metadata:
+      labels:
+        run: creative
+        backstage.io/kubernetes-id: creative
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      containers:
+      - name: creative
+        image: harbor.theflyingbirds.net/tfb-servers/creative:latest
+        tty: true
+        env:
+          - name: TYPE
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "server.jar"
+          - name: "EXEC_DIRECTLY"
+            value: "false"
+          - name: "ENABLE_RCON"
+            value: "false"
+          - name: "MEMORY"
+            value: "4G"
+          - name: "REPLACE_ENV_VARIABLE_PREFIX"
+            value: "TFB_"
+          - name: "REPLACE_ENV_IN_PLACE"
+            value: "true"
+        ports:
+          - containerPort: 30101
+        command: ["/bin/sh", "-c"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        # args: ["tail -f /dev/null"]
+        securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
+        volumeMounts:
+          - name: creative-world
+            mountPath: /data/world_creative
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-warps
+            mountPath: /data/plugins/Essentials/warps
+          - name: plugins-worldguard-worlds
+            mountPath: /data/plugins/WorldGuard/worlds
+        resources:
+          requests:
+            memory: "6Gi"
+            cpu: "4000m"
+        readinessProbe:
+          exec:
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30101" ]
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 20
+        livenessProbe:
+          exec:
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30101"]
+          initialDelaySeconds: 120
+          periodSeconds: 60
+      imagePullSecrets:
+        - name: regcred
+  volumeClaimTemplates:
+  - metadata:
+      name: creative-world
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: plugins-essentials-userdata
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-essentials-warps
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
