@@ -42,7 +42,7 @@ spec:
             value: "TFB_"
         envFrom:
           - secretRef:
-              name: danish-survival-world-seed
+              name: danish-survival-world-seed-secret
         ports:
           - containerPort: 30005
         command: ["/bin/sh", "-c"]
