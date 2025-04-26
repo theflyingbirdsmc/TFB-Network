@@ -38,6 +38,11 @@ spec:
             value: "false"
           - name: "MEMORY"
             value: "4G"
+          - name: "REPLACE_ENV_VARIABLE_PREFIX"
+            value: "TFB_"
+        envFrom:
+          - secretRef:
+              name: danish-survival-world-seed
         ports:
           - containerPort: 30005
         command: ["/bin/sh", "-c"]
