@@ -23,6 +23,7 @@ spec:
         fsGroup: 1000
       nodeSelector:
         kubernetes.io/arch: amd64
+        topology.kubernetes.io/region: dc6
       containers:
       - name: danish-survival
         image: harbor.theflyingbirds.net/tfb-servers/danish-survival:latest
