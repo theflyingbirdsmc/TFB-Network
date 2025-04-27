@@ -59,12 +59,12 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: danish-survival-world
-            mountPath: /data/world_danish_survival
-          - name: danish-survival-world-nether
-            mountPath: /data/world_danish_survival_nether
-          - name: danish-survival-world-the-end
-            mountPath: /data/world_danish_survival_the_end
+          # - name: danish-survival-world
+          #   mountPath: /data/world_danish_survival
+          # - name: danish-survival-world-nether
+          #   mountPath: /data/world_danish_survival_nether
+          # - name: danish-survival-world-the-end
+          #   mountPath: /data/world_danish_survival_the_end
           - name: plugins-essentials-userdata
             mountPath: /data/plugins/Essentials/userdata
           - name: plugins-essentials-warps
