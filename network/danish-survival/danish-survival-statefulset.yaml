@@ -96,13 +96,13 @@ spec:
       resources:
         requests:
           storage: 15Gi
-  - metadata:
-      name: danish-survival-world-nether
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 15Gi
+  # - metadata:
+  #     name: danish-survival-world-nether
+  #   spec:
+  #     accessModes: ["ReadWriteOnce"]
+  #     resources:
+  #       requests:
+  #         storage: 15Gi
   - metadata:
       name: danish-survival-world-the-end
     spec:
