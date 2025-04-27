@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: creative
+  namespace: argocd
+spec:
+  project: tfb-servers
+  source:
+    repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
+    path: network/creative
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tfb-servers
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

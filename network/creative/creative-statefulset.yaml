@@ -1,32 +1,31 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: danish-survival
+  name: creative
   namespace: tfb-servers
   labels:
-    run: danish-survival
-    backstage.io/kubernetes-id: danish-survival
+    run: creative
+    backstage.io/kubernetes-id: creative
 spec:
-  serviceName: "danish-survival"
+  serviceName: "creative"
   replicas: 1
   selector:
     matchLabels:
-      run: danish-survival
+      run: creative
   template:
     metadata:
       labels:
-        run: danish-survival
-        backstage.io/kubernetes-id: danish-survival
+        run: creative
+        backstage.io/kubernetes-id: creative
     spec:
       securityContext:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
         kubernetes.io/arch: amd64
-        topology.kubernetes.io/region: dc6
       containers:
-      - name: danish-survival
-        image: harbor.theflyingbirds.net/tfb-servers/danish-survival:latest
+      - name: creative
+        image: harbor.theflyingbirds.net/tfb-servers/creative:latest
         tty: true
         env:
           - name: TYPE
@@ -43,14 +42,8 @@ spec:
             value: "TFB_"
           - name: "REPLACE_ENV_IN_PLACE"
             value: "true"
-        envFrom:
-          - secretRef:
-              name: world-danish-survival-seed-secret
-        envFrom:
-          - secretRef:
-              name: world-danish-survival-nether-seed-secret
         ports:
-          - containerPort: 30005
+          - containerPort: 30101
         command: ["/bin/sh", "-c"]
         args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         # args: ["tail -f /dev/null"]
@@ -59,12 +52,8 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: danish-survival-world
-            mountPath: /data/world_danish_survival
-          - name: danish-survival-world-nether
-            mountPath: /data/world_danish_survival_nether
-          - name: danish-survival-world-the-end
-            mountPath: /data/world_danish_survival_the_end
+          - name: creative-world
+            mountPath: /data/world_creative
           - name: plugins-essentials-userdata
             mountPath: /data/plugins/Essentials/userdata
           - name: plugins-essentials-warps
@@ -77,39 +66,25 @@ spec:
             cpu: "4000m"
         readinessProbe:
           exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005" ]
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30101" ]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005"]
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30101"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: danish-survival-world
+      name: creative-world
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 15Gi
-  - metadata:
-      name: danish-survival-world-nether
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 15Gi
-  - metadata:
-      name: danish-survival-world-the-end
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 15Gi
+          storage: 5Gi
   - metadata:
       name: plugins-essentials-userdata
     spec:
