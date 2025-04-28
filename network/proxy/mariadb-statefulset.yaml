@@ -29,6 +29,13 @@ spec:
           value: tfb
         ports:
         - containerPort: 3306
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "4"
+          limits:
+            memory: "4Gi"
+            cpu: "4"
         volumeMounts:
         - name: db-storage
           mountPath: /var/lib/mysql
