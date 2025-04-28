@@ -46,7 +46,6 @@ spec:
         envFrom:
           - secretRef:
               name: world-danish-survival-seed-secret
-        envFrom:
           - secretRef:
               name: world-danish-survival-nether-seed-secret
         ports:
