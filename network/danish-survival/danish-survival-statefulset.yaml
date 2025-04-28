@@ -74,17 +74,17 @@ spec:
           requests:
             memory: "6Gi"
             cpu: "4000m"
-        readinessProbe:
-          exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005" ]
-          initialDelaySeconds: 20
-          periodSeconds: 5
-          failureThreshold: 20
-        livenessProbe:
-          exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005"]
-          initialDelaySeconds: 120
-          periodSeconds: 60
+        # readinessProbe:
+        #   exec:
+        #     command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005" ]
+        #   initialDelaySeconds: 20
+        #   periodSeconds: 5
+        #   failureThreshold: 20
+        # livenessProbe:
+        #   exec:
+        #     command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30005"]
+        #   initialDelaySeconds: 120
+        #   periodSeconds: 60
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
