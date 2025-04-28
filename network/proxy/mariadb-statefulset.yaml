@@ -18,7 +18,7 @@ spec:
         topology.kubernetes.io/region: dc6
       containers:
       - name: mariadb
-        image: mariadb:11.1.2-jammy
+        image: mariadb:11.7.2
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
