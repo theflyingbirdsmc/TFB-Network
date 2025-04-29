@@ -52,13 +52,13 @@ spec:
             memory: "4Gi"
         readinessProbe:
           exec:
-            command: ["/health.sh"]
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "25565"]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/health.sh"]
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "25565"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
