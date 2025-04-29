@@ -52,13 +52,13 @@ spec:
             memory: "4Gi"
         readinessProbe:
           exec:
-            command: ["/health"]
+            command: ["/health.sh"]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/health"]
+            command: ["/health.sh"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
