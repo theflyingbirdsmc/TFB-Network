@@ -49,19 +49,16 @@ spec:
             mountPath: /data/logs
         resources:
           requests:
-            memory: "2Gi"
-            cpu: "1000m"
-        # readinessProbe:
-        #   exec:
-        #     command: [ "/usr/local/bin/mc-monitor", "status", "--host", "127.0.0.1"]
-        #   initialDelaySeconds: 20
-        #   periodSeconds: 5
-        #   failureThreshold: 20
+            memory: "4Gi"
+        readinessProbe:
+          exec:
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "127.0.0.1"]
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          failureThreshold: 20
         livenessProbe:
-          # exec:
-          #   command: ["/usr/local/bin/mc-monitor", "status", "--host", "127.0.0.1"]
-          tcpSocket:
-            port: 25565
+          exec:
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "127.0.0.1"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
