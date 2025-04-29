@@ -52,7 +52,7 @@ spec:
             memory: "4Gi"
         readinessProbe:
           exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost" ]
+            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "mc.theflyingbirds.net"]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
