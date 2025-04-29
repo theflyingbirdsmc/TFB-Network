@@ -52,13 +52,13 @@ spec:
             memory: "4Gi"
         readinessProbe:
           exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "mc.theflyingbirds.net"]
+            command: [ "/usr/local/bin/mc-monitor", "status", "-use-proxy", "--host", "127.0.0.1"]
           initialDelaySeconds: 20
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "mc.theflyingbirds.net"]
+            command: ["/usr/local/bin/mc-monitor", "status", "-use-proxy", "--host", "127.0.0.1"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
