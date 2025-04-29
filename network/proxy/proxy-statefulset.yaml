@@ -46,7 +46,7 @@ spec:
             allowPrivilegeEscalation: true
         volumeMounts:
           - name: proxy-pv
-            mountPath: /server
+            mountPath: /data/logs
         resources:
           requests:
             memory: "4Gi"
