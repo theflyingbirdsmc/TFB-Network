@@ -58,7 +58,7 @@ spec:
           failureThreshold: 20
         livenessProbe:
           exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
+            command: ["/usr/local/bin/mc-monitor", "status", "--host", "mc.theflyingbirds.net"]
           initialDelaySeconds: 120
           periodSeconds: 60
       imagePullSecrets:
