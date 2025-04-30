@@ -51,8 +51,8 @@ spec:
             mountPath: /data/world_lobby
         resources:
           requests:
-            memory: "6Gi"
-            cpu: "4000m"
+            memory: "4Gi"
+            cpu: "500m"
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001" ]
