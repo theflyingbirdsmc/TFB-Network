@@ -4,7 +4,7 @@ metadata:
   name: tfb-danish-survival-db
   namespace: tfb-servers
 spec:
-  serviceName: "tfb-danish-survival-db"
+  serviceName: tfb-danish-survival-db
   replicas: 1
   selector:
     matchLabels:
@@ -14,6 +14,9 @@ spec:
       labels:
         app: tfb-danish-survival-db
     spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+        topology.kubernetes.io/region: dc6
       containers:
       - name: mariadb
         image: mariadb:11.1.2-jammy
