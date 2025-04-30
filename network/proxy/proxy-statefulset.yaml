@@ -53,14 +53,17 @@ spec:
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "proxy-0", "--port", "25565"]
-          initialDelaySeconds: 20
-          periodSeconds: 5
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          timeoutSeconds: 10
           failureThreshold: 20
         livenessProbe:
           exec:
             command: ["/usr/local/bin/mc-monitor", "status", "--host", "proxy-0", "--port", "25565"]
           initialDelaySeconds: 120
-          periodSeconds: 60
+          periodSeconds: 120
+          timeoutSeconds: 10
+          failureThreshold: 20
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
