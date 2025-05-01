@@ -36,6 +36,8 @@ spec:
             value: "false"
           - name: "ENABLE_RCON"
             value: "false"
+          - name: "USE_AIKAR_FLAGS"
+            value: "true"
           - name: "MEMORY"
             value: "4G"
         ports:
@@ -59,14 +61,15 @@ spec:
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001" ]
-          initialDelaySeconds: 20
+          initialDelaySeconds: 30
           periodSeconds: 5
           failureThreshold: 20
         livenessProbe:
           exec:
             command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001"]
-          initialDelaySeconds: 120
-          periodSeconds: 60
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 20
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
