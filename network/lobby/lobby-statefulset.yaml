@@ -39,7 +39,7 @@ spec:
           - name: "USE_AIKAR_FLAGS"
             value: "true"
           - name: "MEMORY"
-            value: "4G"
+            value: "8G"
         ports:
           - containerPort: 30001
         command: ["/bin/sh", "-c"]
@@ -53,10 +53,10 @@ spec:
             mountPath: /data/world_lobby
         resources:
           requests:
-            memory: "4Gi"
+            memory: "8Gi"
             cpu: "250m"
           limits:
-            memory: "4Gi"
+            memory: "8Gi"
             cpu: "1000m"
         readinessProbe:
           exec:
