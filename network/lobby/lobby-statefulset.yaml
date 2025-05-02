@@ -36,8 +36,6 @@ spec:
             value: "false"
           - name: "ENABLE_RCON"
             value: "false"
-          - name: "USE_AIKAR_FLAGS"
-            value: "true"
           - name: "MEMORY"
             value: "4G"
         ports:
