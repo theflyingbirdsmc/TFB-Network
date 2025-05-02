@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: proxy
-  namespace: tfb-servers
+  namespace: tfb-network
   labels:
     run: proxy
     backstage.io/kubernetes-id: proxy
@@ -26,7 +26,7 @@ spec:
         topology.kubernetes.io/zone: dc1
       containers:
       - name: proxy
-        image: harbor.theflyingbirds.net/tfb-servers/proxy:latest
+        image: harbor.theflyingbirds.net/tfb-network/proxy:latest
         env:
           - name: TYPE
             value: "CUSTOM"

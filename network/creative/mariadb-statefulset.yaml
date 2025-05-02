@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: tfb-creative-db
-  namespace: tfb-servers
+  namespace: tfb-network
 spec:
   serviceName: "tfb-creative-db"
   replicas: 1

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: cs-tmm-db
-  namespace: tfb-servers
+  namespace: tfb-network
 spec:
   serviceName: cs-tmm-db
   replicas: 1

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mariadb-config
-  namespace: tfb-servers
+  namespace: tfb-network
 data:
   my.cnf: |
     [mysqld]

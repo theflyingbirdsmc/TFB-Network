@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: creative
-  namespace: tfb-servers
+  namespace: tfb-network
   labels:
     run: creative
     backstage.io/kubernetes-id: creative
@@ -25,7 +25,7 @@ spec:
         kubernetes.io/arch: amd64
       containers:
       - name: creative
-        image: harbor.theflyingbirds.net/tfb-servers/creative:latest
+        image: harbor.theflyingbirds.net/tfb-network/creative:latest
         tty: true
         env:
           - name: TYPE

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: cs-tmm
-  namespace: tfb-servers
+  namespace: tfb-network
   labels:
     run: cs-tmm
     backstage.io/kubernetes-id: cs-tmm
@@ -25,7 +25,7 @@ spec:
         topology.kubernetes.io/region: hel1
       containers:
       - name: cs-tmm
-        image: harbor.theflyingbirds.net/tfb-servers/cs-tmm:latest
+        image: harbor.theflyingbirds.net/tfb-network/cs-tmm:latest
         tty: true
         env:
           - name: TYPE

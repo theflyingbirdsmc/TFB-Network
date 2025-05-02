@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: votifier-ingress
-  namespace: tfb-servers
+  namespace: tfb-network
   annotations:
     cert-manager.io/cluster-issuer: cloudflare-clusterissuer
 spec:

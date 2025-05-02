@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: tfb-network-db
-  namespace: tfb-servers
+  namespace: tfb-network
 spec:
   serviceName: "tfb-network-db"
   replicas: 1

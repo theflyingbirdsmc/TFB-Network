@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: tfb-danish-survival-db
-  namespace: tfb-servers
+  namespace: tfb-network
 spec:
   ports:
   - port: 3306

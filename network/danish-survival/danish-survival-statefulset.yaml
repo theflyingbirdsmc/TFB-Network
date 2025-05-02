@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: danish-survival
-  namespace: tfb-servers
+  namespace: tfb-network
   labels:
     run: danish-survival
     backstage.io/kubernetes-id: danish-survival
@@ -25,7 +25,7 @@ spec:
         topology.kubernetes.io/region: hel1
       containers:
       - name: danish-survival
-        image: harbor.theflyingbirds.net/tfb-servers/danish-survival:latest
+        image: harbor.theflyingbirds.net/tfb-network/danish-survival:latest
         tty: true
         env:
           - name: TYPE

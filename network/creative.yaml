@@ -4,13 +4,13 @@ metadata:
   name: creative
   namespace: argocd
 spec:
-  project: tfb-servers
+  project: tfb-network
   source:
     repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
     path: network/creative
   destination:
     server: https://kubernetes.default.svc
-    namespace: tfb-servers
+    namespace: tfb-network
   syncPolicy:
     automated:
       prune: true

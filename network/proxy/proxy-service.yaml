@@ -2,7 +2,7 @@
 # kind: Service
 # metadata:
 #   name: proxy
-#   namespace: tfb-servers
+#   namespace: tfb-network
 #   annotations:
 #     backstage.io/kubernetes-id: proxy
 #     load-balancer.hetzner.cloud/uses-proxyprotocol: 'true'
