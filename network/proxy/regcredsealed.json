@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "regcred",
+    "namespace": "tfb-network",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "regcred",
+        "namespace": "tfb-network",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      ".dockerconfigjson": "AgA9DN5PGwhODK9EuTwlJn9qNiMrqCygT7XOG4+1eNLAyNhFfkAxb7G4tTJId6luVgixh5c8j3E4mVlwaHB8N/2IjGgn7LwEwXyvgaLC0Uph0Gdt+bCf3DSLh+SxS0RIoF0mUHVaEfU/hbjGkQeZvtdK9LpxyOzJYm1bwzktqU4RsiKdi6wohgwX1JPZ6dkNOQEHG9tDuAv6we/9hC7isXhS3atJ6a09Niau403V+lK6v1CG9S+JUJaOMZnzvezUFQBPxK5992KZbh5LK6oljbfb4q0q4PL0UUfCw/DTHFpLmRHFwBOeVaQGz7YQ4EMkp8fO+G2xSk1WFMQ/rhE2zzWjQo3TDHeDI1/ZAYbMx5pbrhyfObVWbdzYwhxJlmvJVgQ0q0lzZcVDYoMeFkiq837L7suAHktFSM2ft0tLUUe43IDlLBpaI8hBTvWevN1AUXBUBA/1sc/VxFMLSs+2bN/XTfCd3kzV5FWg6D+st7bUoLtkhRxp1ttBGwNSik+t25qgydzNPJcQUA1sehiy0uUVo9bdkcGyeMr/tK/k7PmqVhYsLG1GEm0AM5cDTNQtDBmKfqemKX5jUJwLFxqReOEA894ei3RmaXjgyrSIQDPvUPfAnO782xQmL+JPtuS9dE8Jmhtk1p8ZSeEtgSrIm28O9tqsKKH4SKC1qlGpL5nHciegGBF25qsBGxTXcIeH3dqL7W3ifpZrM7VKIoUKZyzJXTDAKv2Xm3M+YXlAaVwvPZxXe7PCgptJSMRcM5a6DQjBLUmebfYCxzbFAzBwkM+ufbt8WcwQcrd3EfCyLXpFnJL0iw1CFVfH+5AcnR8EziRJ7rWnP4boAwOUPiJ5BYXHFN27lryPgS1PjnIqJ97oh5t2ggJfHGTin8TUm8uIFwPmk1Y5QCxfDecYC6wMcRv9skzDKDXjq7qbkQ0qxnDc1RqKx5KpaROVPLIjoL7zcAYP0tCGSDtNkIuSBduB563WU4pqRZsImRmp7L8Byivk/wUBHbU5iPXdia5UOA=="
+    }
+  }
+}
