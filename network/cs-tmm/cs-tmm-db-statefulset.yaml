@@ -15,7 +15,7 @@ spec:
         app: cs-tmm-db
     spec:
       nodeSelector:
-        topology.kubernetes.io/region: dc6
+        hel1
       containers:
       - name: mariadb
         image: mariadb:11.7.2

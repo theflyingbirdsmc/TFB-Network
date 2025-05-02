@@ -16,7 +16,7 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
-        topology.kubernetes.io/region: dc6
+        hel1
       containers:
       - name: mariadb
         image: mariadb:11.1.2-jammy
