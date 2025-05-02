@@ -26,7 +26,6 @@ spec:
       containers:
       - name: lobby
         image: docker.theflyingbirds.net/tfb-network/lobby:latest
-        tty: true
         env:
           - name: TYPE
             value: "CUSTOM"
@@ -46,9 +45,9 @@ spec:
             runAsUser: 0
             runAsGroup: 0
             allowPrivilegeEscalation: true
-        volumeMounts:
-          - name: lobby-world-pv
-            mountPath: /data/world_lobby
+        # volumeMounts:
+        #   - name: lobby-world-pv
+        #     mountPath: /data/world_lobby
         resources:
           requests:
             memory: "4Gi"
@@ -76,11 +75,11 @@ spec:
           failureThreshold: 30
       imagePullSecrets:
         - name: regcred
-  volumeClaimTemplates:
-  - metadata:
-      name: lobby-world-pv
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 5Gi
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: lobby-world-pv
+  #   spec:
+  #     accessModes: ["ReadWriteOnce"]
+  #     resources:
+  #       requests:
+  #         storage: 5Gi
