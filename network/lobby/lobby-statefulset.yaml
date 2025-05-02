@@ -37,6 +37,8 @@ spec:
             value: "false"
           - name: "MEMORY"
             value: "4G"
+          - name: "EXTRA_ARGS"
+            value: "-DPaper.WorkerThreadCount=#"
         ports:
           - containerPort: 30001
         command: ["/bin/sh", "-c"]
@@ -51,10 +53,7 @@ spec:
         resources:
           requests:
             memory: "4Gi"
-            cpu: "2500m"
-          limits:
-            memory: "6Gi"
-            cpu: "3000m"
+            cpu: "1000m"
         livenessProbe:
           tcpSocket:
             port: 30001
