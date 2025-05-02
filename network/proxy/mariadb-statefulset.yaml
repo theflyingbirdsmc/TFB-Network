@@ -15,7 +15,7 @@ spec:
         app: tfb-network-db
     spec:
       nodeSelector:
-        hel1
+        topology.kubernetes.io/region: hel1
       containers:
       - name: mariadb
         image: mariadb:11.7.2
