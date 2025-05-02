@@ -39,7 +39,7 @@ spec:
           - name: "USE_AIKAR_FLAGS"
             value: "true"
           - name: "MEMORY"
-            value: ""
+            value: "4G"
         ports:
           - containerPort: 30001
         command: ["/bin/sh", "-c"]
@@ -57,7 +57,7 @@ spec:
             cpu: "250m"
           limits:
             memory: "6Gi"
-            cpu: "1000m"
+            cpu: "500m"
         readinessProbe:
           exec:
             command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30001" ]
