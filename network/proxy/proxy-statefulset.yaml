@@ -23,6 +23,7 @@ spec:
         fsGroup: 1000
       nodeSelector:
         topology.kubernetes.io/region: hel1
+        topology.kubernetes.io/zone: dc1
       containers:
       - name: proxy
         image: harbor.theflyingbirds.net/tfb-servers/proxy:latest
