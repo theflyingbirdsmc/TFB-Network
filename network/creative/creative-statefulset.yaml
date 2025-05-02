@@ -25,7 +25,7 @@ spec:
         kubernetes.io/arch: amd64
       containers:
       - name: creative
-        image: harbor.theflyingbirds.net/tfb-network/creative:latest
+        image: docker.theflyingbirds.net/tfb-network/creative:latest
         tty: true
         env:
           - name: TYPE

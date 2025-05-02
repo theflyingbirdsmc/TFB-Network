@@ -25,7 +25,7 @@ spec:
         topology.kubernetes.io/region: hel1
       containers:
       - name: lobby
-        image: harbor.theflyingbirds.net/tfb-network/lobby:latest
+        image: docker.theflyingbirds.net/tfb-network/lobby:latest
         tty: true
         env:
           - name: TYPE
