@@ -45,16 +45,16 @@ spec:
             runAsUser: 0
             runAsGroup: 0
             allowPrivilegeEscalation: true
-        # volumeMounts:
-        #   - name: lobby-world-pv
-        #     mountPath: /data/world_lobby
+        volumeMounts:
+          - name: lobby-world-pv
+            mountPath: /data/world_lobby
         resources:
           requests:
             memory: "4Gi"
             cpu: "250m"
           limits:
             memory: "6Gi"
-            cpu: "500m"
+            cpu: "1000m"
         livenessProbe:
           tcpSocket:
             port: 30001
@@ -75,11 +75,12 @@ spec:
           failureThreshold: 30
       imagePullSecrets:
         - name: regcred
-  # volumeClaimTemplates:
-  # - metadata:
-  #     name: lobby-world-pv
-  #   spec:
-  #     accessModes: ["ReadWriteOnce"]
-  #     resources:
-  #       requests:
-  #         storage: 5Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: lobby-world-pv
+    spec:
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
+      resources:
+        requests:
+          storage: 5Gi
