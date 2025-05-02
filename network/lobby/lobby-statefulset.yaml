@@ -51,10 +51,10 @@ spec:
         resources:
           requests:
             memory: "4Gi"
-            cpu: "250m"
+            cpu: "2500m"
           limits:
             memory: "6Gi"
-            cpu: "1000m"
+            cpu: "3000m"
         livenessProbe:
           tcpSocket:
             port: 30001
