@@ -22,7 +22,8 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
-        topology.kubernetes.io/region: hel1
+        "topology.kubernetes.io/region": hel1
+        "topology.kubernetes.io/hostname": tfb-root-eu
       containers:
       - name: danish-survival
         image: docker.theflyingbirds.net/tfb-network/danish-survival:latest
