@@ -17,7 +17,7 @@ spec:
       nodeSelector:
         kubernetes.io/arch: amd64
         "topology.kubernetes.io/region": hel1
-        "topology.kubernetes.io/hostname": tfb-root-eu
+        "kubernetes.io/hostname": tfb-root-eu
       containers:
       - name: mariadb
         image: mariadb:11.1.2-jammy
