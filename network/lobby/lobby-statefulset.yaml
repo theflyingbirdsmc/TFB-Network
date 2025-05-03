@@ -36,16 +36,12 @@ spec:
             value: "false"
           - name: "ENABLE_RCON"
             value: "false"
-          # - name: "VERSION"
-          #   value: "1.21.1"
-          # - name: "SERVER_PORT"
-          #   value: "30001"
           - name: "EULA"
             value: "TRUE"
           - name: "MEMORY"
             value: "4G"
-          # - name: "EXTRA_ARGS"
-          #   value: "-DPaper.WorkerThreadCount=#"
+          - name: "EXTRA_ARGS"
+            value: "-DPaper.WorkerThreadCount=#"
         ports:
           - containerPort: 30001
             hostPort: 30001
@@ -55,42 +51,39 @@ spec:
             runAsUser: 0
             runAsGroup: 0
             allowPrivilegeEscalation: true
-        volumes:
-          - name: minecraft-data
-            emptyDir: {}
-        # volumeMounts:
-        #   - name: lobby-world-pv
-        #     mountPath: /data/world_lobby
+        volumeMounts:
+          - name: lobby-world-pv
+            mountPath: /data/world_lobby
         resources:
           requests:
             memory: "4Gi"
             cpu: "1000m"
-        # livenessProbe:
-        #   tcpSocket:
-        #     port: 30001
-        #   initialDelaySeconds: 60
-        #   periodSeconds: 20
-        #   failureThreshold: 3
-        # readinessProbe:
-        #   tcpSocket:
-        #     port: 30001
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 10
-        #   failureThreshold: 2
-        # startupProbe:
-        #   tcpSocket:
-        #     port: 30001
-        #   initialDelaySeconds: 10
-        #   periodSeconds: 10
-        #   failureThreshold: 30
+        livenessProbe:
+          tcpSocket:
+            port: 30001
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 30001
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 2
+        startupProbe:
+          tcpSocket:
+            port: 30001
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
       imagePullSecrets:
         - name: regcred
-  # volumeClaimTemplates:
-  # - metadata:
-  #     name: lobby-world-pv
-  #   spec:
-  #     storageClassName: longhorn-tfb-network
-  #     accessModes: ["ReadWriteOncePod"]
-  #     resources:
-  #       requests:
-  #         storage: 5Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: lobby-world-pv
+    spec:
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
+      resources:
+        requests:
+          storage: 5Gi
