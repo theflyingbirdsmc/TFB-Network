@@ -25,21 +25,21 @@ spec:
         topology.kubernetes.io/region: hel1
       containers:
       - name: lobby
-        # image: docker.theflyingbirds.net/tfb-network/lobby:latest
-        image: itzg/minecraft-server:java21
+        image: docker.theflyingbirds.net/tfb-network/lobby:latest
+        # image: itzg/minecraft-server:java21
         env:
-          # - name: TYPE
-          #   value: "CUSTOM"
-          # - name: "CUSTOM_SERVER"
-          #   value: "server.jar"
-          # - name: "EXEC_DIRECTLY"
-          #   value: "false"
-          # - name: "ENABLE_RCON"
-          #   value: "false"
-          - name: "VERSION"
-            value: "1.21.1"
-          - name: "SERVER_PORT"
-            value: "30001"
+          - name: TYPE
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "server.jar"
+          - name: "EXEC_DIRECTLY"
+            value: "false"
+          - name: "ENABLE_RCON"
+            value: "false"
+          # - name: "VERSION"
+          #   value: "1.21.1"
+          # - name: "SERVER_PORT"
+          #   value: "30001"
           - name: "EULA"
             value: "TRUE"
           - name: "MEMORY"
@@ -49,8 +49,8 @@ spec:
         ports:
           - containerPort: 30001
             hostPort: 30001
-        # command: ["/bin/sh", "-c"]
-        # args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        command: ["/bin/sh", "-c"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
