@@ -78,19 +78,19 @@ spec:
             cpu: "1000m"
         livenessProbe:
           tcpSocket:
-            port: 30001
+            port: 30100
           initialDelaySeconds: 60
           periodSeconds: 20
           failureThreshold: 3
         readinessProbe:
           tcpSocket:
-            port: 30001
+            port: 30100
           initialDelaySeconds: 30
           periodSeconds: 10
           failureThreshold: 2
         startupProbe:
           tcpSocket:
-            port: 30001
+            port: 30100
           initialDelaySeconds: 10
           periodSeconds: 10
           failureThreshold: 30
