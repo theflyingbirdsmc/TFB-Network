@@ -59,24 +59,24 @@ spec:
           requests:
             memory: "4Gi"
             cpu: "250m"
-        livenessProbe:
-          tcpSocket:
-            port: 30001
-          initialDelaySeconds: 60
-          periodSeconds: 20
-          failureThreshold: 3
-        readinessProbe:
-          tcpSocket:
-            port: 30001
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          failureThreshold: 2
-        startupProbe:
-          tcpSocket:
-            port: 30001
-          initialDelaySeconds: 10
-          periodSeconds: 10
-          failureThreshold: 30
+        # livenessProbe:
+        #   tcpSocket:
+        #     port: 30001
+        #   initialDelaySeconds: 60
+        #   periodSeconds: 20
+        #   failureThreshold: 3
+        # readinessProbe:
+        #   tcpSocket:
+        #     port: 30001
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        #   failureThreshold: 2
+        # startupProbe:
+        #   tcpSocket:
+        #     port: 30001
+        #   initialDelaySeconds: 10
+        #   periodSeconds: 10
+        #   failureThreshold: 30
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
