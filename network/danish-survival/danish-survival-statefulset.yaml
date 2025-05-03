@@ -45,9 +45,7 @@ spec:
             value: "true"
         envFrom:
           - secretRef:
-              name: world-danish-survival-seed-secret
-          - secretRef:
-              name: world-danish-survival-nether-seed-secret
+              name: world-danish-survival-seed
         ports:
           - containerPort: 30005
         command: ["/bin/sh", "-c"]
@@ -78,19 +76,19 @@ spec:
             cpu: "1000m"
         livenessProbe:
           tcpSocket:
-            port: 30001
+            port: 30005
           initialDelaySeconds: 60
           periodSeconds: 20
           failureThreshold: 3
         readinessProbe:
           tcpSocket:
-            port: 30001
+            port: 30005
           initialDelaySeconds: 30
           periodSeconds: 10
           failureThreshold: 2
         startupProbe:
           tcpSocket:
-            port: 30001
+            port: 30005
           initialDelaySeconds: 10
           periodSeconds: 10
           failureThreshold: 30
