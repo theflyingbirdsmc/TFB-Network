@@ -1,61 +1,81 @@
 -- LUCKPERMS --
-DROP USER IF EXISTS 'tfb_luckperms';
-CREATE USER 'tfb_luckperms'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS tfb_network_luckperms;
 GRANT ALL ON tfb_network_luckperms.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- PLAN --
-DROP USER IF EXISTS 'tfb_plan'; 
-CREATE USER 'tfb_plan'@'%';
+DROP USER IF EXISTS 'tfb_network'; 
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS tfb_network_plan;
 GRANT ALL ON tfb_network_plan.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- VOTINGPLUGIN --
-DROP USER IF EXISTS 'tfb_votingplugin';
-CREATE USER 'tfb_votingplugin'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS tfb_network_votingplugin;
 GRANT ALL ON tfb_network_votingplugin.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- GADGETSMENU --
-DROP USER IF EXISTS 'tfb_gadgetsmenu';
-CREATE USER 'tfb_gadgetsmenu'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS tfb_network_gadgetsmenu;
 GRANT ALL ON tfb_network_gadgetsmenu.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- CHATCONTROLRED --
-DROP USER IF EXISTS 'tfb_chatcontrolred';
-CREATE USER 'tfb_chatcontrolred'@'%';
-CREATE DATABASE IF NOT EXISTS tfb_network_chatcontrolred;
-GRANT ALL ON tfb_network_chatcontrolred.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
+CREATE DATABASE IF NOT EXISTS tfb_network_chatcontrol;
+GRANT ALL ON tfb_network_chatcontrol.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- PLOTSQUARED --
-DROP USER IF EXISTS 'tfb_plotsquared';
-CREATE USER 'tfb_plotsquared'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS plotsquared;
-GRANT ALL ON plotsquared.* TO 'tfb_plotsquared'@'%' IDENTIFIED BY 'kBk4x@oQq8ehZ8jF*3mUn&3HMrBz@f';
+GRANT ALL ON plotsquared.* TO 'tfb_network'@'%' IDENTIFIED BY 'kBk4x@oQq8ehZ8jF*3mUn&3HMrBz@f';
 
 -- COREPROTECT --
-DROP USER IF EXISTS 'tfb_coreprotect';
-CREATE USER 'tfb_coreprotect'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS coreprotect;
 GRANT ALL ON coreprotect.* TO 'tfb_coreprotect'@'%' IDENTIFIED BY 'J$ca$cXuj!HQEijVEjh69KuTYC998E';
 FLUSH PRIVILEGES;
 
 -- PLAYERREFERALS --
-DROP USER IF EXISTS 'tfb_playerreferrals';
-CREATE USER 'tfb_playerreferrals'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS tfb_network_playerreferals;
 GRANT ALL ON tfb_network_playerreferals.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 FLUSH PRIVILEGES;
 
 -- HEXNICKS --
-DROP USER IF EXISTS 'tfb_hexnicks';
-CREATE USER 'tfb_hexnicks'@'%';
-CREATE DATABASE IF NOT EXISTS hexnicks;
-GRANT ALL ON hexnicks.* TO 'tfb_hexnicks'@'%' IDENTIFIED BY 'j77RqV*scJQ2RSjcx@nRNiXNU&Yow*';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
+CREATE DATABASE IF NOT EXISTS tfb_network_hexnicks;
+GRANT ALL ON tfb_network_hexnicks.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
 
 -- PARKOUR --
-DROP USER IF EXISTS 'tfb_parkour';
-CREATE USER 'tfb_parkour'@'%';
+DROP USER IF EXISTS 'tfb_network';
+CREATE USER 'tfb_network'@'%';
 CREATE DATABASE IF NOT EXISTS parkour;
 GRANT ALL ON parkour.* TO 'tfb_parkour'@'%' IDENTIFIED BY 'MqGR6uD4SFPXTmK6uweVMCZ7pkTTfi';
+
+CREATE USER 'tfb_network'@'%';
+CREATE DATABASE IF NOT EXISTS cs_tmm_coreprotect;
+CREATE DATABASE IF NOT EXISTS cs_tmm_mcmmo;
+CREATE DATABASE IF NOT EXISTS cs_tmm_griefdefender;
+CREATE DATABASE IF NOT EXISTS cs_tmm_discordsrv;
+GRANT ALL ON tfb_network_chatcontrol.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_gadgetsmenu.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_luckperms.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_plan.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_playerreferals.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_hexnicks.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+GRANT ALL ON tfb_network_votingplugin.* TO 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
+
+
+CREATE USER 'cs_tmm'@'%';
+GRANT ALL ON cs_tmm_coreprotect.* TO 'cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+GRANT ALL ON cs_tmm_griefdefender.* TO 'cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+GRANT ALL ON cs_tmm_discordsrv.* TO 'cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+GRANT ALL ON cs_tmm_mcmmo.* TO 'cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
