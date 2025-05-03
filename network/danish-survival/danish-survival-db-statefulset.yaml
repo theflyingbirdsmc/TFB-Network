@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: tfb-danish-survival-db
+  name: danish-survival-db
   namespace: tfb-network
 spec:
-  serviceName: tfb-danish-survival-db
+  serviceName: danish-survival-db
   replicas: 1
   selector:
     matchLabels:
-      app: tfb-danish-survival-db
+      app: danish-survival-db
   template:
     metadata:
       labels:
-        app: tfb-danish-survival-db
+        app: danish-survival-db
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
