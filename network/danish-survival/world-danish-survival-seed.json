@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "world-danish-survival-seed",
+    "namespace": "tfb-network",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "world-danish-survival-seed",
+        "namespace": "tfb-network",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "TFB_WORLD_DANISH_SURVIVAL_SEED": "AgAhaxFqQdpAJhJ4f79WRCbK2yMD7VMPSo4W1yho7tiUUpC6priZgvKQXeyupcf2MgzQTszKpKHZQuaIDwq/5MErMxhij6yPFAp1K3qhSaw6de8ush9EcNxKOekXmn9YgwRspHHSBHNv67IABtKLCI+kIvzJWDHo0WeCMEALiYYazuv/BbDQA5iDkW7VhG6xUVetNj9HZsj11tcmoUnvTE3VlABCFAWAYNp+pTHdubO5yL13I8ZpyjlBcG/O03njP8owHtHjcSRugY+EVqEJBRxfw36ZC+v/0ehQjF00sS14z6tkwo8pQURAuFm+V2j1zvI2rpdknlZrVrxXyM2LjGXRFSkytzBM9kzwdqAEkQTn31Yi+JwjFjLYdl97ptWURy4SGa5urfqJug443B1NbsvuY2Pz9pHgfbannMUPicmXPXe18aGqOaNcZtcIv9ScXl99XskNlyho5qBJFrz8iuigD+cDnQN7VSUrKpwQIOlwGaaf1nFyYdg2iv+jIoWZzLBEBozr5rRHHT4WkLWj3LFsZPw0+W+IE7ylVi2h58KtMjL62C1jKNa/iH5fxe3H2A8hNJsCsZBCgxy4JT4tXXSDEQX/DGK2LocTcr+feB0NPS1YOvbUoa4faLvcqjJrCggKNRuxhihA3s2KTG0nSLqo4+oe91jual1sQVFBHLXHwCliwn2TvnzObgORofsXSidlak36brGwPScvpOoaOKWbQySC"
+    }
+  }
+}
