@@ -36,8 +36,12 @@ spec:
             value: "false"
           - name: "ENABLE_RCON"
             value: "false"
+          - name: "REPLACE_ENV_VARIABLE_PREFIX"
+            value: "TFB_"
+          - name: "REPLACE_ENV_IN_PLACE"
+            value: "true"
           - name: "MEMORY"
-            value: "4G"
+            value: "8G"
         ports:
           - containerPort: 30100
         command: ["/bin/sh", "-c"]
@@ -61,7 +65,7 @@ spec:
             mountPath: /data/plugins/WorldGuard/worlds
         resources:
           requests:
-            memory: "6Gi"
+            memory: "8Gi"
             cpu: "1000m"
         readinessProbe:
           exec:
