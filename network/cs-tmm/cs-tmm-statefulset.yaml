@@ -45,10 +45,14 @@ spec:
         envFrom:
           - secretRef:
               name: cs-tmm-discord-token
+        envFrom:
+          - secretRef:
+              name: world-cs-tmm-seed
         ports:
           - containerPort: 30100
         command: ["/bin/sh", "-c"]
         args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        # args: ["tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
@@ -66,21 +70,30 @@ spec:
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
+          - name: plugins-multiverse-core-worlds
+            mountPath: /data/plugins/Multiverse-Core/worlds.yml
         resources:
           requests:
             memory: "8Gi"
             cpu: "1000m"
-        readinessProbe:
-          exec:
-            command: [ "/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30100" ]
-          initialDelaySeconds: 20
-          periodSeconds: 5
-          failureThreshold: 20
         livenessProbe:
-          exec:
-            command: ["/usr/local/bin/mc-monitor", "status", "--host", "localhost", "--port", "30100"]
-          initialDelaySeconds: 120
-          periodSeconds: 60
+          tcpSocket:
+            port: 30100
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 30100
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 2
+        startupProbe:
+          tcpSocket:
+            port: 30100
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
@@ -118,11 +131,18 @@ spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 1Gi
+          storage: 100Mi
   - metadata:
       name: plugins-worldguard-worlds
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 1Gi
+          storage: 100Mi
+  - metadata:
+      name: plugins-multiverse-core-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
