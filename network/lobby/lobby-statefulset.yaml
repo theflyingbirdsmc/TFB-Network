@@ -25,16 +25,23 @@ spec:
         topology.kubernetes.io/region: hel1
       containers:
       - name: lobby
-        image: docker.theflyingbirds.net/tfb-network/lobby:latest
+        # image: docker.theflyingbirds.net/tfb-network/lobby:latest
+        image: itzg/minecraft-server:java21
         env:
-          - name: TYPE
-            value: "CUSTOM"
-          - name: "CUSTOM_SERVER"
-            value: "server.jar"
-          - name: "EXEC_DIRECTLY"
-            value: "false"
-          - name: "ENABLE_RCON"
-            value: "false"
+          # - name: TYPE
+          #   value: "CUSTOM"
+          # - name: "CUSTOM_SERVER"
+          #   value: "server.jar"
+          # - name: "EXEC_DIRECTLY"
+          #   value: "false"
+          # - name: "ENABLE_RCON"
+          #   value: "false"
+          - name: "VERSION"
+            value: "1.21.1"
+          - name: "SERVER_PORT"
+            value: "30001"
+          - name: "EULA"
+            value: "TRUE"
           - name: "MEMORY"
             value: "4G"
           - name: "EXTRA_ARGS"
