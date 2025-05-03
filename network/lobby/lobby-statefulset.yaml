@@ -44,8 +44,8 @@ spec:
             value: "TRUE"
           - name: "MEMORY"
             value: "4G"
-          - name: "EXTRA_ARGS"
-            value: "-DPaper.WorkerThreadCount=#"
+          # - name: "EXTRA_ARGS"
+          #   value: "-DPaper.WorkerThreadCount=#"
         ports:
           - containerPort: 30001
         # command: ["/bin/sh", "-c"]
