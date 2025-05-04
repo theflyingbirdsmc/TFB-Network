@@ -46,7 +46,6 @@ spec:
         envFrom:
           - secretRef:
               name: cs-tmm-discord-token
-        envFrom:
           - secretRef:
               name: world-cs-tmm-seed
         ports:
@@ -71,8 +70,6 @@ spec:
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
-          - name: plugins-multiverse-core-worlds
-            mountPath: /data/plugins/Multiverse-Core/worlds.yml
         resources:
           requests:
             memory: "8Gi"
@@ -135,13 +132,6 @@ spec:
           storage: 100Mi
   - metadata:
       name: plugins-worldguard-worlds
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 100Mi
-  - metadata:
-      name: plugins-multiverse-core-worlds
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
