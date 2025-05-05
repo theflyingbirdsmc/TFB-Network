@@ -63,6 +63,12 @@ spec:
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
+          - name: plugins-parkour-courses
+            mountPath: /data/plugins/Parkour/courses
+          - name: plugins-parkour-sessions
+            mountPath: /data/plugins/Parkour/sessions
+          - name: plugins-parkour-players
+            mountPath: /data/plugins/Parkour/players
         resources:
           requests:
             memory: "4Gi"
