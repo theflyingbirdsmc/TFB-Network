@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: parkour
+  namespace: tfb-network
+  labels:
+    backstage.io/kubernetes-id: parkour
+spec:
+  type: ClusterIP
+  ports:
+  - name: parkour
+    port: 30102
+    targetPort: 30102
+  selector:
+    run: parkour

@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: parkour
+  namespace: tfb-network
+  labels:
+    run: parkour
+    backstage.io/kubernetes-id: parkour
+spec:
+  serviceName: "parkour"
+  replicas: 1
+  selector:
+    matchLabels:
+      run: parkour
+  template:
+    metadata:
+      labels:
+        run: parkour
+        backstage.io/kubernetes-id: parkour
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      nodeSelector:
+        "topology.kubernetes.io/region": hel1
+        "kubernetes.io/hostname": tfb-root-eu
+      containers:
+      - name: parkour
+        image: docker.theflyingbirds.net/tfb-network/parkour:latest
+        # image: itzg/minecraft-server:java21
+        env:
+          - name: TYPE
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "server.jar"
+          - name: "EXEC_DIRECTLY"
+            value: "false"
+          - name: "ENABLE_RCON"
+            value: "false"
+          - name: "EULA"
+            value: "TRUE"
+          - name: "MEMORY"
+            value: "4G"
+          # - name: "EXTRA_ARGS"
+          #   value: "--DPaper.WorkerThreadCount=#"
+        ports:
+          - containerPort: 30102
+        command: ["/bin/sh", "-c"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        # args: ["tail -f /dev/null"]
+        securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
+        volumeMounts:
+          - name: world-parkour-pv
+            mountPath: /data/world_parkour
+          - name: world-elytra-pv
+            mountPath: /data/world_elytra
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "500m"
+        livenessProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 2
+        startupProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
+      imagePullSecrets:
+        - name: regcred
+  volumeClaimTemplates:
+  - metadata:
+      name: world-elytra-pv
+    spec:
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
+      resources:
+        requests:
+          storage: 5Gi
+  - metadata:
+      name: world-parkour-pv
+    spec:
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
+      resources:
+        requests:
+          storage: 5Gi
