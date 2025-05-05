@@ -46,8 +46,8 @@ spec:
         ports:
           - containerPort: 30102
         command: ["/bin/sh", "-c"]
-        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
-        # args: ["tail -f /dev/null"]
+        # args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        args: ["tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
@@ -57,28 +57,34 @@ spec:
             mountPath: /data/world_parkour
           - name: world-elytra-pv
             mountPath: /data/world_elytra
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-warps
+            mountPath: /data/plugins/Essentials/warps
+          - name: plugins-worldguard-worlds
+            mountPath: /data/plugins/WorldGuard/worlds
         resources:
           requests:
             memory: "4Gi"
             cpu: "500m"
-        livenessProbe:
-          tcpSocket:
-            port: 30102
-          initialDelaySeconds: 60
-          periodSeconds: 20
-          failureThreshold: 3
-        readinessProbe:
-          tcpSocket:
-            port: 30102
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          failureThreshold: 2
-        startupProbe:
-          tcpSocket:
-            port: 30102
-          initialDelaySeconds: 10
-          periodSeconds: 10
-          failureThreshold: 30
+        # livenessProbe:
+        #   tcpSocket:
+        #     port: 30102
+        #   initialDelaySeconds: 60
+        #   periodSeconds: 20
+        #   failureThreshold: 3
+        # readinessProbe:
+        #   tcpSocket:
+        #     port: 30102
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        #   failureThreshold: 2
+        # startupProbe:
+        #   tcpSocket:
+        #     port: 30102
+        #   initialDelaySeconds: 10
+        #   periodSeconds: 10
+        #   failureThreshold: 30
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
@@ -98,3 +104,24 @@ spec:
       resources:
         requests:
           storage: 5Gi
+  - metadata:
+      name: plugins-essentials-userdata
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-essentials-warps
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
