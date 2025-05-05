@@ -69,6 +69,8 @@ spec:
             mountPath: /data/plugins/Parkour/sessions
           - name: plugins-parkour-players
             mountPath: /data/plugins/Parkour/players
+          - name: plugins-parkour-other
+            mountPath: /data/plugins/Parkour/other
         resources:
           requests:
             memory: "4Gi"
@@ -147,6 +149,13 @@ spec:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-players
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-parkour-other
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
