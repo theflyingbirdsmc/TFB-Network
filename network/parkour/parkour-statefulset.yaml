@@ -115,49 +115,56 @@ spec:
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 1Gi
   - metadata:
       name: plugins-essentials-warps
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-courses
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-sessions
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-players
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-other
     spec:
-      accessModes: ["ReadWriteOnce"]
+      storageClassName: longhorn-tfb-network
+      accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 100Mi
