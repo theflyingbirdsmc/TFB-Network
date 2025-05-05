@@ -62,8 +62,8 @@ spec:
             mountPath: /data/world_danish_survival_nether
           - name: danish-survival-world-the-end
             mountPath: /data/world_danish_survival_the_end
-          # - name: plugins-essentials-userdata
-          #   mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
           - name: plugins-essentials-warps
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
