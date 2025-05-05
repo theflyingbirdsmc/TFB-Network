@@ -125,3 +125,24 @@ spec:
       resources:
         requests:
           storage: 100Mi
+  - metadata:
+      name: plugins-parkour-courses
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-parkour-sessions
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-parkour-players
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
