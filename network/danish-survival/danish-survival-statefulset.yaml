@@ -100,7 +100,7 @@ spec:
   - metadata:
       name: danish-survival-world
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -108,7 +108,7 @@ spec:
   - metadata:
       name: danish-survival-world-nether
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -116,7 +116,7 @@ spec:
   - metadata:
       name: danish-survival-world-the-end
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -124,7 +124,7 @@ spec:
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -132,7 +132,7 @@ spec:
   - metadata:
       name: plugins-essentials-warps
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -140,7 +140,7 @@ spec:
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
