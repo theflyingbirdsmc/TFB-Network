@@ -51,6 +51,7 @@ spec:
   - metadata:
       name: db-storage
     spec:
+      storageClassName: local-path
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
