@@ -45,9 +45,9 @@ spec:
             value: "8G"
         envFrom:
           - secretRef:
-              name: test-discord-token
+              name: cs-tmm-discord-token
           - secretRef:
-              name: world-test-seed
+              name: world-cs-tmm-seed
         ports:
           - containerPort: 30101
         command: ["/bin/sh", "-c"]
