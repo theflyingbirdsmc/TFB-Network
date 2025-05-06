@@ -1,0 +1,139 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: test
+  namespace: tfb-network
+  labels:
+    run: test
+    backstage.io/kubernetes-id: test
+spec:
+  serviceName: test
+  replicas: 1
+  selector:
+    matchLabels:
+      run: test
+  template:
+    metadata:
+      labels:
+        run: test
+        backstage.io/kubernetes-id: test
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      nodeSelector:
+        "topology.kubernetes.io/region": hel1
+        "kubernetes.io/hostname": tfb-root-eu
+      containers:
+      - name: test
+        image: docker.theflyingbirds.net/tfb-network/cs-tmm:latest
+        tty: true
+        env:
+          - name: TYPE
+            value: "CUSTOM"
+          - name: "CUSTOM_SERVER"
+            value: "server.jar"
+          - name: "EXEC_DIRECTLY"
+            value: "false"
+          - name: "ENABLE_RCON"
+            value: "false"
+          - name: "REPLACE_ENV_VARIABLE_PREFIX"
+            value: "TFB_"
+          - name: "REPLACE_ENV_IN_PLACE"
+            value: "true"
+          - name: "MEMORY"
+            value: "8G"
+        envFrom:
+          - secretRef:
+              name: test-discord-token
+          - secretRef:
+              name: world-test-seed
+        ports:
+          - containerPort: 30101
+        command: ["/bin/sh", "-c"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        # args: ["tail -f /dev/null"]
+        securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            allowPrivilegeEscalation: true
+        volumeMounts:
+          - name: world-test
+            mountPath: /data/world_cs_tmm
+          - name: world-test-nether
+            mountPath: /data/world_cs_tmm_nether
+          - name: world-test-the-end
+            mountPath: /data/world_cs_tmm_the_end
+          - name: plugins-essentials-userdata
+            mountPath: /data/plugins/Essentials/userdata
+          - name: plugins-essentials-warps
+            mountPath: /data/plugins/Essentials/warps
+          - name: plugins-worldguard-worlds
+            mountPath: /data/plugins/WorldGuard/worlds
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "1000m"
+        livenessProbe:
+          tcpSocket:
+            port: 30101
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 30101
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 2
+        startupProbe:
+          tcpSocket:
+            port: 30101
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
+      imagePullSecrets:
+        - name: regcred
+  volumeClaimTemplates:
+  - metadata:
+      name: world-test
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 25Gi
+  - metadata:
+      name: world-test-nether
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: world-test-the-end
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 15Gi
+  - metadata:
+      name: plugins-essentials-userdata
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  - metadata:
+      name: plugins-essentials-warps
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi

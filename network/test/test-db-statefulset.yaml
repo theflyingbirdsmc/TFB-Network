@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: test-db
+  namespace: tfb-network
+spec:
+  serviceName: test-db
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-db
+  template:
+    metadata:
+      labels:
+        app: test-db
+    spec:
+      nodeSelector:
+        "topology.kubernetes.io/region": hel1
+        "kubernetes.io/hostname": tfb-root-eu
+      containers:
+      - name: mariadb
+        image: mariadb:11.7.2
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: root-password
+        - name: MYSQL_DATABASE
+          value: tfb
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: db-storage
+          mountPath: /var/lib/mysql
+        - name: config-volume
+          mountPath: /etc/mysql/mariadb.conf.d/99-bind-address.cnf
+          subPath: my.cnf
+      volumes:
+      - name: config-volume
+        configMap:
+          name: mariadb-config
+  volumeClaimTemplates:
+  - metadata:
+      name: db-storage
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 10Gi
