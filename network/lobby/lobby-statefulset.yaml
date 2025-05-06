@@ -83,7 +83,7 @@ spec:
   - metadata:
       name: lobby-world-pv
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
