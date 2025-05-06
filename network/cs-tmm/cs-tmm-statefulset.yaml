@@ -99,6 +99,7 @@ spec:
       name: world-cs-tmm
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 25Gi
@@ -106,6 +107,7 @@ spec:
       name: world-cs-tmm-nether
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 15Gi
@@ -113,6 +115,7 @@ spec:
       name: world-cs-tmm-the-end
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 15Gi
@@ -120,6 +123,7 @@ spec:
       name: plugins-essentials-userdata
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 1Gi
@@ -127,6 +131,7 @@ spec:
       name: plugins-essentials-warps
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
@@ -134,6 +139,7 @@ spec:
       name: plugins-worldguard-worlds
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
