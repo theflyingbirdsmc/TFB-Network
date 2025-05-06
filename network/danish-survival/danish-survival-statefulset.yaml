@@ -68,8 +68,6 @@ spec:
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
-          - name: danish-survival-userdata
-            mountPath: /data/plugins/Essentials/userdata
           # - name: plugins-multiverse-core-worlds
           #   mountPath: /data/plugins/Multiverse-Core/worlds.yml
         resources:
