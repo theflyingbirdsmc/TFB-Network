@@ -1,19 +1,19 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: test
-  namespace: argocd
-spec:
-  project: tfb-network
-  source:
-    repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
-    path: network/test
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: tfb-network
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: test
+#   namespace: argocd
+# spec:
+#   project: tfb-network
+#   source:
+#     repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
+#     path: network/test
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: tfb-network
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
