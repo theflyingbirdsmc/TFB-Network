@@ -113,19 +113,19 @@ data "coder_workspace" "me" {}
 resource "coder_agent" "main" {
   os                     = "linux"
   arch                   = "amd64"
-  startup_script_timeout = 180
-  startup_script         = <<-EOT
-    set -e
+  # startup_script_timeout = 180
+  # startup_script         = <<-EOT
+  #   set -e
 
-    # Clone repo from GitHub
-    if [ ! -d "/home/coder/dev" ]
-    then
-    mkdir dev 
-    # && cd dev && git clone https://github.com/theflyingbirdsmc/proxy.git
-    fi
-    # git clone ${data.coder_parameter.repository.value}
-    # fi
-  EOT
+  #   # Clone repo from GitHub
+  #   if [ ! -d "/home/coder/dev" ]
+  #   then
+  #   mkdir dev 
+  #   # && cd dev && git clone https://github.com/theflyingbirdsmc/proxy.git
+  #   fi
+  #   # git clone ${data.coder_parameter.repository.value}
+  #   # fi
+  # EOT
 
   # These environment variables allow you to make Git commits right away after creating a
   # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
