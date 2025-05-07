@@ -544,17 +544,13 @@ resource "kubernetes_pod" "main" {
     }
 
     affinity {
-      pod_anti_affinity {
-        preferred_during_scheduling_ignored_during_execution {
-          weight = 1
-          pod_affinity_term {
-            topology_key = "kubernetes.io/hostname"
-            label_selector {
-              match_expressions {
-                key      = "app.kubernetes.io/name"
-                operator = "In"
-                values   = ["coder-workspace"]
-              }
+      node_affinity {
+        required_during_scheduling_ignored_during_execution {
+          node_selector_term {
+            match_expressions {
+              key      = "kubernetes.io/hostname"
+              operator = "In"
+              values   = ["tfb-root-eu"]
             }
           }
         }
