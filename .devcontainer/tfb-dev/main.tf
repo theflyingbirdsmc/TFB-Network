@@ -525,7 +525,6 @@ resource "kubernetes_pod" "main" {
       }
     }
 
-
     volume {
       name = "home"
       persistent_volume_claim {
