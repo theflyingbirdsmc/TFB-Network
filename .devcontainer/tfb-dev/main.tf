@@ -534,7 +534,6 @@ resource "kubernetes_pod" "main" {
     }
 
     # Add the new volume block for the ConfigMap holding the custom /etc/hosts entry
-
     volume {
       name = "custom-etc-hosts"
       config_map {
