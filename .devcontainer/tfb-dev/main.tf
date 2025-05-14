@@ -132,10 +132,10 @@ resource "coder_agent" "main" {
   # You can remove this block if you'd prefer to configure Git manually or using
   # dotfiles. (see docs/dotfiles.md)
   env = {
-    GIT_AUTHOR_NAME     = "${data.coder_workspace.me.owner}"
-    GIT_COMMITTER_NAME  = "${data.coder_workspace.me.owner}"
-    GIT_AUTHOR_EMAIL    = "${data.coder_workspace.me.owner_email}"
-    GIT_COMMITTER_EMAIL = "${data.coder_workspace.me.owner_email}"
+    GIT_AUTHOR_NAME     = "${data.coder_workspace_owner.me.name}"
+    GIT_COMMITTER_NAME  = "${data.coder_workspace_owner.me.name}"
+    GIT_AUTHOR_EMAIL    = "${data.coder_workspace_owner.me.email}"
+    GIT_COMMITTER_EMAIL = "${data.coder_workspace_owner.me.email}"
   }
 
   # The following metadata blocks are optional. They are used to display
@@ -197,21 +197,21 @@ resource "coder_agent" "main" {
 
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
-    name      = "coder-${lower(data.coder_workspace.me.owner)}-${lower(data.coder_workspace.me.name)}-home"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
       "app.kubernetes.io/name"     = "coder-pvc"
-      "app.kubernetes.io/instance" = "coder-pvc-${lower(data.coder_workspace.me.owner)}-${lower(data.coder_workspace.me.name)}"
+      "app.kubernetes.io/instance" = "coder-pvc-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
       "app.kubernetes.io/part-of"  = "coder"
       // Coder specific labels.
       "com.coder.resource"       = "true"
       "com.coder.workspace.id"   = data.coder_workspace.me.id
       "com.coder.workspace.name" = data.coder_workspace.me.name
-      "com.coder.user.id"        = data.coder_workspace.me.owner_id
-      "com.coder.user.username"  = data.coder_workspace.me.owner
+      "com.coder.user.id"        = data.coder_workspace_owner.me.id
+      "com.coder.user.username"  = data.coder_workspace_owner.me.name
     }
     annotations = {
-      "com.coder.user.email" = data.coder_workspace.me.owner_email
+      "com.coder.user.email" = data.coder_workspace_owner.me.email
     }
   }
   wait_until_bound = false
@@ -228,7 +228,7 @@ resource "kubernetes_persistent_volume_claim" "home" {
 resource "kubernetes_pod" "tfb-network-db" {
   metadata {
     name      = "tfb-network-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
       "app.kubernetes.io/name"     = "tfb-network-db"
       "app.kubernetes.io/instance" = "tfb-network-db"
@@ -281,7 +281,7 @@ resource "kubernetes_config_map" "database_init" {
   # }
   metadata {
     name      = "database-init"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
 
   data = {
@@ -367,7 +367,7 @@ resource "kubernetes_service" "mariadb_service" {
   # }
   metadata {
     name      = "tfb-network-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
       app = "tfb-network-db"
     }
@@ -395,33 +395,33 @@ resource "kubernetes_service" "mariadb_service" {
 resource "kubernetes_service" "tfb_cs_tmm_db" {
   metadata {
     name = "tfb-cs-tmm-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
     type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace.me.owner)}.svc.cluster.local"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
 resource "kubernetes_service" "tfb_danish_survival_db" {
   metadata {
     name = "tfb-danish-survival-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
     type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace.me.owner)}.svc.cluster.local"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
 resource "kubernetes_service" "tfb_parkour_db" {
   metadata {
     name = "tfb-parkour-db"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
     type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace.me.owner)}.svc.cluster.local"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
@@ -434,7 +434,7 @@ resource "kubernetes_config_map" "hosts_config" {
 
   metadata {
     name      = "hosts-config"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
 
   data = {
@@ -451,20 +451,20 @@ resource "kubernetes_pod" "main" {
 
   metadata {
     name      = "${lower(data.coder_workspace.me.name)}"
-    namespace = "coder-${lower(data.coder_workspace.me.owner)}"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
       "app.kubernetes.io/name"     = "${lower(data.coder_workspace.me.name)}"
-      "app.kubernetes.io/instance" = "${lower(data.coder_workspace.me.owner)}-${lower(data.coder_workspace.me.name)}"
+      "app.kubernetes.io/instance" = "${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
       "app.kubernetes.io/part-of"  = "coder"
       // Coder specific labels.
       "com.coder.resource"       = "true"
       "com.coder.workspace.id"   = data.coder_workspace.me.id
       "com.coder.workspace.name" = data.coder_workspace.me.name
-      "com.coder.user.id"        = data.coder_workspace.me.owner_id
-      "com.coder.user.username"  = data.coder_workspace.me.owner
+      "com.coder.user.id"        = data.coder_workspace_owner.me.id
+      "com.coder.user.username"  = data.coder_workspace_owner.me.name
     }
     annotations = {
-      "com.coder.user.email" = data.coder_workspace.me.owner_email
+      "com.coder.user.email" = data.coder_workspace_owner.me.email
     }
   }
 
