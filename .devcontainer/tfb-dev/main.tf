@@ -3,15 +3,15 @@ terraform {
   required_providers {
     coder = {
       source  = "coder/coder"
-      version = "~> 0.7.0"
+      version = "~> 2.4.1"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.18"
+      version = "~> 2.36.0"
     }
     docker = {
       source  = "kreuzwerker/docker"
-      version = "3.0.2"
+      version = "3.5.0"
     }
   }
 }
@@ -495,6 +495,9 @@ resource "kubernetes_pod" "main" {
       }
       security_context {
         run_as_user = "1000"
+        capabilities {
+          add = ["NET_ADMIN", "SYS_TIME"]
+        }
       }
       env {
         name  = "CODER_AGENT_TOKEN"
@@ -534,6 +537,7 @@ resource "kubernetes_pod" "main" {
     }
 
     # Add the new volume block for the ConfigMap holding the custom /etc/hosts entry
+
     volume {
       name = "custom-etc-hosts"
       config_map {
