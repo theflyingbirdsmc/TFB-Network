@@ -115,8 +115,15 @@ resource "coder_agent" "main" {
   os                     = "linux"
   arch                   = "amd64"
   # startup_script_timeout = 180
-  # startup_script         = <<-EOT
-  #   set -e
+  startup_script         = <<-EOT
+    set -e
+
+    # Install the latest code-server.
+    # Append "--version x.x.x" to install a specific version of code-server.
+    curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
+
+    # Start code-server in the background.
+    /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
 
   #   # Clone repo from GitHub
   #   if [ ! -d "/home/coder/dev" ]
@@ -126,7 +133,7 @@ resource "coder_agent" "main" {
   #   fi
   #   # git clone ${data.coder_parameter.repository.value}
   #   # fi
-  # EOT
+    EOT
 
   # These environment variables allow you to make Git commits right away after creating a
   # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
@@ -193,6 +200,23 @@ resource "coder_agent" "main" {
     EOT
     interval = 60
     timeout  = 1
+  }
+}
+
+# code-server
+resource "coder_app" "code-server" {
+  agent_id     = coder_agent.main.id
+  slug         = "code-server"
+  display_name = "code-server"
+  icon         = "/icon/code.svg"
+  url          = "http://localhost:13337?folder=/home/coder"
+  subdomain    = false
+  share        = "owner"
+
+  healthcheck {
+    url       = "http://localhost:13337/healthz"
+    interval  = 3
+    threshold = 10
   }
 }
 
