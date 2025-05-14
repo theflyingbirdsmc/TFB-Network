@@ -3,7 +3,7 @@ terraform {
   required_providers {
     coder = {
       source  = "coder/coder"
-      version = "~> 2.4.1"
+      version = "~> 2.0"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -109,6 +109,7 @@ provider "kubernetes" {
 }
 
 data "coder_workspace" "me" {}
+data "coder_workspace_owner" "me" {}
 
 resource "coder_agent" "main" {
   os                     = "linux"
