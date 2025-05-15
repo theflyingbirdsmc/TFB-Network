@@ -427,24 +427,24 @@ resource "kubernetes_config_map" "database_init" {
       SET GLOBAL max_connections = 5000;
 
       -- DANISH SURVIVAL --
-      CREATE USER 'tfb_danish_survival'@'%' IDENTIFIED BY 'EhR3su7tKALaSpz#8V$MhF^8cs@7c*';
-      CREATE DATABASE IF NOT EXISTS tfb_danish_survival_mcmmo;
-      CREATE DATABASE IF NOT EXISTS tfb_danish_survival_griefdefender;
-      CREATE DATABASE IF NOT EXISTS tfb_danish_survival_coreprotect;
-      CALL grant_privileges_for_prefix('tfb_danish_survival');
+      CREATE USER 'danish_survival'@'%' IDENTIFIED BY 'EhR3su7tKALaSpz#8V$MhF^8cs@7c*';
+      CREATE DATABASE IF NOT EXISTS danish_survival_mcmmo;
+      CREATE DATABASE IF NOT EXISTS danish_survival_griefdefender;
+      CREATE DATABASE IF NOT EXISTS danish_survival_coreprotect;
+      CALL grant_privileges_for_prefix('danish_survival');
 
       -- PARKOUR --
-      CREATE USER 'tfb_parkour'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
-      CREATE DATABASE IF NOT EXISTS tfb_parkour_parkour;
-      CALL grant_privileges_for_prefix('tfb_parkour');
+      CREATE USER 'parkour'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+      CREATE DATABASE IF NOT EXISTS parkour_parkour;
+      CALL grant_privileges_for_prefix('parkour');
 
       -- COMMUNITY SERVER TMM --
-      CREATE USER 'tfb_cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
-      CREATE DATABASE IF NOT EXISTS tfb_cs_tmm_mcmmo;
-      CREATE DATABASE IF NOT EXISTS tfb_cs_tmm_griefdefender;
-      CREATE DATABASE IF NOT EXISTS tfb_cs_tmm_coreprotect;
-      CREATE DATABASE IF NOT EXISTS tfb_cs_tmm_discordsrv;
-      CALL grant_privileges_for_prefix('tfb_cs_tmm');
+      CREATE USER 'cs_tmm'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+      CREATE DATABASE IF NOT EXISTS cs_tmm_mcmmo;
+      CREATE DATABASE IF NOT EXISTS cs_tmm_griefdefender;
+      CREATE DATABASE IF NOT EXISTS cs_tmm_coreprotect;
+      CREATE DATABASE IF NOT EXISTS cs_tmm_discordsrv;
+      CALL grant_privileges_for_prefix('cs_tmm');
 
       -- TFB NETWORK PLUGINS --
       CREATE USER 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
@@ -581,6 +581,10 @@ resource "kubernetes_deployment" "main" {
           env {
             name  = "CODER_AGENT_TOKEN"
             value = coder_agent.main.token
+          }
+          env {
+            name  = "CODER_INNER_HOSTNAME"
+            value = data.coder_workspace.me.name
           }
           resources {
             requests = {
