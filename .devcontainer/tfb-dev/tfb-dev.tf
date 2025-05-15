@@ -557,12 +557,13 @@ resource "kubernetes_deployment" "main" {
         image_pull_secrets {
         name = "regcred"
         }
-
+        hostname          = "${lower(data.coder_workspace.me.name)}"
         container {
           name              = "tfb-dev"
           image             = "docker.theflyingbirds.net/tfb-services/tfb-dev:latest"
           image_pull_policy = "Always"
           command           = ["sh", "-c", coder_agent.main.init_script]
+          
         port {
             protocol = "UDP"
             container_port = 19132
@@ -581,10 +582,6 @@ resource "kubernetes_deployment" "main" {
           env {
             name  = "CODER_AGENT_TOKEN"
             value = coder_agent.main.token
-          }
-          env {
-            name  = "CODER_INNER_HOSTNAME"
-            value = data.coder_workspace.me.name
           }
           resources {
             requests = {
