@@ -198,7 +198,6 @@ resource "kubernetes_pod" "tfb-network-db" {
     container {
       name  = "tfb-network-db"
       image = "mariadb:11.1.2-jammy"
-      command = ["sh", "-c", coder_agent.main.init_script]
       port {
         container_port = 3306
       }
