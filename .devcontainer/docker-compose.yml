@@ -14,7 +14,7 @@ services:
       - ../..:/workspaces:cached
   database:
     container_name: Database
-    image: mariadb:11.0
+    image: mariadb:11.7
     restart: always
     ports:
       - 3306:3306
