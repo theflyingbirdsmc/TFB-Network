@@ -79,8 +79,7 @@ resource "coder_agent" "main" {
     if [ ! -d "/home/coder/dev" ]
     then
     mkdir dev 
-    && cd dev && git clone https://github.com/theflyingbirdsmc/proxy.git
-    && git clone https://github.com/theflyingbirdsmc/lobby.git
+    && cd dev && git clone https://github.com/theflyingbirdsmc/proxy.git && git clone https://github.com/theflyingbirdsmc/lobby.git
     fi
   EOT
 
