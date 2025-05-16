@@ -2,10 +2,16 @@
 terraform {
   required_providers {
     coder = {
-      source = "coder/coder"
+      source  = "coder/coder"
+      version = "~> 2.0"
     }
     kubernetes = {
-      source = "hashicorp/kubernetes"
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.36.0"
+    }
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "3.5.0"
     }
   }
 }
@@ -13,15 +19,6 @@ terraform {
 provider "coder" {
 }
 
-data "coder_parameter" "repository" {
-  name         = "repository"
-  display_name = "Github repository"
-  description  = "The server repository from TFB's Github (must exist prior to creating workspaces)"
-  default      = "https://github.com/theflyingbirdsmc/language-server"
-  mutable      =  false
-  icon         = "/icon/github.svg"
-  type         = "string"
-}
 
 data "coder_parameter" "cpu" {
   name         = "cpu"
@@ -59,7 +56,7 @@ data "coder_parameter" "home_disk_size" {
   mutable      = false
   validation {
     min = 1
-    max = 99999
+    max = 25
   }
 }
 
@@ -72,24 +69,32 @@ data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
 
 resource "coder_agent" "main" {
-  os             = "linux"
-  arch           = "amd64"
-  startup_script = <<-EOT
+  os                     = "linux"
+  arch                   = "amd64"
+  # startup_script_timeout = 180
+  startup_script         = <<-EOT
     set -e
 
-    # Install the latest code-server.
-    # Append "--version x.x.x" to install a specific version of code-server.
-    curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
-
-    # Start code-server in the background.
-    /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
+    # Clone repo from GitHub
+    if [ ! -d "/home/coder/dev" ]
+    then
+    mkdir dev 
+    && cd dev && git clone https://github.com/theflyingbirdsmc/proxy.git
+    && git clone https://github.com/theflyingbirdsmc/lobby.git
+    fi
   EOT
+
+  # These environment variables allow you to make Git commits right away after creating a
+  # workspace. Note that they take precedence over configuration defined in ~/.gitconfig!
+  # You can remove this block if you'd prefer to configure Git manually or using
+  # dotfiles. (see docs/dotfiles.md)
   env = {
     GIT_AUTHOR_NAME     = "${data.coder_workspace_owner.me.name}"
     GIT_COMMITTER_NAME  = "${data.coder_workspace_owner.me.name}"
     GIT_AUTHOR_EMAIL    = "${data.coder_workspace_owner.me.email}"
     GIT_COMMITTER_EMAIL = "${data.coder_workspace_owner.me.email}"
   }
+
   # The following metadata blocks are optional. They are used to display
   # information about your workspace in the dashboard. You can remove them
   # if you don't want to display any information.
@@ -147,23 +152,6 @@ resource "coder_agent" "main" {
   }
 }
 
-# code-server
-resource "coder_app" "code-server" {
-  agent_id     = coder_agent.main.id
-  slug         = "code-server"
-  display_name = "code-server"
-  icon         = "/icon/code.svg"
-  url          = "http://localhost:13337?folder=/home/coder"
-  subdomain    = false
-  share        = "owner"
-
-  healthcheck {
-    url       = "http://localhost:13337/healthz"
-    interval  = 3
-    threshold = 10
-  }
-}
-
 resource "kubernetes_persistent_volume_claim" "home" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
@@ -172,7 +160,7 @@ resource "kubernetes_persistent_volume_claim" "home" {
       "app.kubernetes.io/name"     = "coder-pvc"
       "app.kubernetes.io/instance" = "coder-pvc-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
       "app.kubernetes.io/part-of"  = "coder"
-      //Coder-specific labels.
+      // Coder specific labels.
       "com.coder.resource"       = "true"
       "com.coder.workspace.id"   = data.coder_workspace.me.id
       "com.coder.workspace.name" = data.coder_workspace.me.name
@@ -193,186 +181,55 @@ resource "kubernetes_persistent_volume_claim" "home" {
     }
   }
 }
-resource "kubernetes_config_map" "hosts_config" {
-  # Add this block to ignore changes if the resource already exists
-  # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
-  # lifecycle {
-  #   ignore_changes = all
-  # }
 
-  metadata {
-    name      = "hosts-config"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-
-  data = {
-    "hosts" = <<-EOT
-      127.0.0.1 mc.theflyingbirds.net
-      127.0.0.1 ${lower(data.coder_workspace.me.name)}
-      127.0.0.1 lobby danish-survival creative cs-tmm parkour
-    EOT
-  }
-}
-
-resource "kubernetes_service" "tfb_cs_tmm_db" {
-  metadata {
-    name = "tfb-cs-tmm-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
-
-resource "kubernetes_service" "tfb_danish_survival_db" {
-  metadata {
-    name = "tfb-danish-survival-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
-
-resource "kubernetes_service" "tfb_parkour_db" {
-  metadata {
-    name = "tfb-parkour-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
-
-resource "kubernetes_deployment" "tfb-network-db" {
-  count = data.coder_workspace.me.start_count
-  depends_on = [
-    kubernetes_persistent_volume_claim.home
-  ]
-  wait_for_rollout = false
+resource "kubernetes_pod" "tfb-network-db" {
   metadata {
     name      = "tfb-network-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
       "app.kubernetes.io/name"     = "tfb-network-db"
-      "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
+      "app.kubernetes.io/instance" = "tfb-network-db"
       "app.kubernetes.io/part-of"  = "coder"
-      "com.coder.resource"         = "true"
-      "com.coder.workspace.id"     = data.coder_workspace.me.id
-      "com.coder.workspace.name"   = data.coder_workspace.me.name
-      "com.coder.user.id"          = data.coder_workspace_owner.me.id
-      "com.coder.user.username"    = data.coder_workspace_owner.me.name
-    }
-    annotations = {
-      "com.coder.user.email" = data.coder_workspace_owner.me.email
     }
   }
 
   spec {
-    replicas = 1
-    selector {
-      match_labels = {
-        "app.kubernetes.io/name"     = "tfb-network-db"
-        "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
-        "app.kubernetes.io/part-of"  = "coder"
-        "com.coder.resource"         = "true"
-        "com.coder.workspace.id"     = data.coder_workspace.me.id
-        "com.coder.workspace.name"   = data.coder_workspace.me.name
-        "com.coder.user.id"          = data.coder_workspace_owner.me.id
-        "com.coder.user.username"    = data.coder_workspace_owner.me.name
+    container {
+      name  = "tfb-network-db"
+      image = "mariadb:11.1.2-jammy"
+      command = ["sh", "-c", coder_agent.main.init_script]
+      port {
+        container_port = 3306
+      }
+      env {
+        name  = "MYSQL_ROOT_PASSWORD"
+        value = "TFBPassword123!"
+      }
+      volume_mount {
+        name       = "database-init"
+        mount_path = "/docker-entrypoint-initdb.d"
+      }
+      resources {
+        requests = {
+          "cpu"    = "250m"
+          "memory" = "512Mi"
+        }
+        limits = {
+          "cpu"    = "${data.coder_parameter.cpu.value}"
+          "memory" = "${data.coder_parameter.memory.value}Gi"
+        }
       }
     }
-    strategy {
-      type = "Recreate"
-    }
 
-    template {
-      metadata {
-        labels = {
-          "app.kubernetes.io/name"     = "tfb-network-db"
-          "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
-          "app.kubernetes.io/part-of"  = "coder"
-          "com.coder.resource"         = "true"
-          "com.coder.workspace.id"     = data.coder_workspace.me.id
-          "com.coder.workspace.name"   = data.coder_workspace.me.name
-          "com.coder.user.id"          = data.coder_workspace_owner.me.id
-          "com.coder.user.username"    = data.coder_workspace_owner.me.name
-        }
-      }
-      spec {
-        security_context {
-          run_as_user     = 1000
-          fs_group        = 1000
-          run_as_non_root = true
-        }
-        image_pull_secrets {
-        name = "regcred"
-        }
-
-        container {
-          name              = "tfb-network-db"
-          image             = "mariadb:11.1.2-jammy"
-          image_pull_policy = "Always"
-          command           = ["sh", "-c", coder_agent.main.init_script]
-          port {
-            container_port = 3306
-          }
-          security_context {
-            run_as_user = "1000"
-          }
-          env {
-            name  = "MYSQL_ROOT_PASSWORD"
-            value = "TFBPassword123!"
-          }
-          resources {
-            requests = {
-              "cpu"    = "250m"
-              "memory" = "512Mi"
-            }
-            limits = {
-              "cpu"    = "${data.coder_parameter.cpu.value}"
-              "memory" = "${data.coder_parameter.memory.value}Gi"
-            }
-          }
-          volume_mount {
-            name       = "database-init"
-            mount_path = "/docker-entrypoint-initdb.d"
-          }
-        }
-
-        volume {
-          name = "database-init"
-          config_map {
-            name = kubernetes_config_map.database_init.metadata[0].name
-          }
-        }
-
-        affinity {
-          // This affinity attempts to spread out all workspace pods evenly across
-          // nodes.
-          pod_anti_affinity {
-            preferred_during_scheduling_ignored_during_execution {
-              weight = 1
-              pod_affinity_term {
-                topology_key = "kubernetes.io/hostname"
-                label_selector {
-                  match_expressions {
-                    key      = "app.kubernetes.io/name"
-                    operator = "In"
-                    values   = ["tfb-network-db"]
-                  }
-                }
-              }
-            }
-          }
-        }
+    volume {
+      name = "database-init"
+      config_map {
+        name = kubernetes_config_map.database_init.metadata[0].name
       }
     }
   }
 }
+
 
 resource "kubernetes_config_map" "database_init" {
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
@@ -493,24 +350,76 @@ resource "kubernetes_service" "mariadb_service" {
   }
 }
 
-resource "kubernetes_deployment" "main" {
-  count = data.coder_workspace.me.start_count
-  depends_on = [
-    kubernetes_persistent_volume_claim.home
-  ]
-  wait_for_rollout = false
+resource "kubernetes_service" "tfb_cs_tmm_db" {
   metadata {
-    name      = "tfb-dev"
+    name = "tfb-cs-tmm-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+  spec {
+    type = "ExternalName"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+  }
+}
+
+resource "kubernetes_service" "tfb_danish_survival_db" {
+  metadata {
+    name = "tfb-danish-survival-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+  spec {
+    type = "ExternalName"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+  }
+}
+
+resource "kubernetes_service" "tfb_parkour_db" {
+  metadata {
+    name = "tfb-parkour-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+  spec {
+    type = "ExternalName"
+    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+  }
+}
+
+resource "kubernetes_config_map" "hosts_config" {
+  # Add this block to ignore changes if the resource already exists
+  # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
+  # lifecycle {
+  #   ignore_changes = all
+  # }
+
+  metadata {
+    name      = "hosts-config"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+
+  data = {
+    "hosts" = <<-EOT
+      127.0.0.1 mc.theflyingbirds.net
+      127.0.0.1 ${lower(data.coder_workspace.me.name)}
+      127.0.0.1 lobby danish-survival creative cs-tmm parkour
+    EOT
+  }
+}
+
+resource "kubernetes_pod" "main" {
+  # count = data.coder_workspace.me.start_count
+
+  metadata {
+    name      = "${lower(data.coder_workspace.me.name)}"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
     labels = {
-      "app.kubernetes.io/name"     = "coder-workspace"
-      "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
+      "app.kubernetes.io/name"     = "${lower(data.coder_workspace.me.name)}"
+      "app.kubernetes.io/instance" = "${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
       "app.kubernetes.io/part-of"  = "coder"
-      "com.coder.resource"         = "true"
-      "com.coder.workspace.id"     = data.coder_workspace.me.id
-      "com.coder.workspace.name"   = data.coder_workspace.me.name
-      "com.coder.user.id"          = data.coder_workspace_owner.me.id
-      "com.coder.user.username"    = data.coder_workspace_owner.me.name
+      // Coder specific labels.
+      "com.coder.resource"       = "true"
+      "com.coder.workspace.id"   = data.coder_workspace.me.id
+      "com.coder.workspace.name" = data.coder_workspace.me.name
+      "com.coder.user.id"        = data.coder_workspace_owner.me.id
+      "com.coder.user.username"  = data.coder_workspace_owner.me.name
     }
     annotations = {
       "com.coder.user.email" = data.coder_workspace_owner.me.email
@@ -518,125 +427,91 @@ resource "kubernetes_deployment" "main" {
   }
 
   spec {
-    replicas = 1
-    selector {
-      match_labels = {
-        "app.kubernetes.io/name"     = "coder-workspace"
-        "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
-        "app.kubernetes.io/part-of"  = "coder"
-        "com.coder.resource"         = "true"
-        "com.coder.workspace.id"     = data.coder_workspace.me.id
-        "com.coder.workspace.name"   = data.coder_workspace.me.name
-        "com.coder.user.id"          = data.coder_workspace_owner.me.id
-        "com.coder.user.username"    = data.coder_workspace_owner.me.name
+    security_context {
+      run_as_user = "1000"
+      fs_group    = "1000"
+    }
+    image_pull_secrets {
+      name = "regcred"
+    }
+    hostname          = "${lower(data.coder_workspace.me.name)}"
+    container {
+      name              = "tfb-dev"
+      image             = "docker.theflyingbirds.net/tfb-services/tfb-dev:latest"
+      image_pull_policy = "Always"
+      command           = ["sh", "-c", coder_agent.main.init_script]
+      port {
+        protocol = "UDP"
+        container_port = 19132
+      }
+      port {
+        protocol = "TCP"
+        container_port = 25565
+      }
+      port {
+        protocol = "UDP"
+        container_port = 30001
+      }
+      security_context {
+        run_as_user = "1000"
+        capabilities {
+          add = ["NET_ADMIN", "SYS_TIME"]
+        }
+      }
+      env {
+        name  = "CODER_AGENT_TOKEN"
+        value = coder_agent.main.token
+      }
+      resources {
+        requests = {
+          "cpu"    = "250m"
+          "memory" = "512Mi"
+        }
+        limits = {
+          "cpu"    = "${data.coder_parameter.cpu.value}"
+          "memory" = "${data.coder_parameter.memory.value}Gi"
+        }
+      }
+      volume_mount {
+        mount_path = "/home/coder"
+        name       = "home"
+        read_only  = false
+      }
+
+      # Add this new volume mount for /etc/hosts
+      volume_mount {
+        name      = "custom-etc-hosts"
+        mount_path = "/etc/hosts"
+        sub_path   = "hosts"
+        read_only  = true
       }
     }
-    strategy {
-      type = "Recreate"
+
+    volume {
+      name = "home"
+      persistent_volume_claim {
+        claim_name = kubernetes_persistent_volume_claim.home.metadata[0].name
+        read_only  = false
+      }
     }
 
-    template {
-      metadata {
-        labels = {
-          "app.kubernetes.io/name"     = "coder-workspace"
-          "app.kubernetes.io/instance" = "coder-workspace-${data.coder_workspace.me.id}"
-          "app.kubernetes.io/part-of"  = "coder"
-          "com.coder.resource"         = "true"
-          "com.coder.workspace.id"     = data.coder_workspace.me.id
-          "com.coder.workspace.name"   = data.coder_workspace.me.name
-          "com.coder.user.id"          = data.coder_workspace_owner.me.id
-          "com.coder.user.username"    = data.coder_workspace_owner.me.name
-        }
+    # Add the new volume block for the ConfigMap holding the custom /etc/hosts entry
+
+    volume {
+      name = "custom-etc-hosts"
+      config_map {
+        name = kubernetes_config_map.hosts_config.metadata[0].name
       }
-      spec {
-        security_context {
-          run_as_user     = 1000
-          fs_group        = 1000
-          run_as_non_root = true
-        }
-        image_pull_secrets {
-        name = "regcred"
-        }
-        hostname          = "${lower(data.coder_workspace.me.name)}"
-        container {
-          name              = "tfb-dev"
-          image             = "docker.theflyingbirds.net/tfb-services/tfb-dev:latest"
-          image_pull_policy = "Always"
-          command           = ["sh", "-c", coder_agent.main.init_script]
-          
-        port {
-            protocol = "UDP"
-            container_port = 19132
-        }
-        port {
-            protocol = "TCP"
-            container_port = 25565
-        }
-        port {
-            protocol = "UDP"
-            container_port = 30001
-        }
-          security_context {
-            run_as_user = "1000"
-          }
-          env {
-            name  = "CODER_AGENT_TOKEN"
-            value = coder_agent.main.token
-          }
-          resources {
-            requests = {
-              "cpu"    = "250m"
-              "memory" = "512Mi"
-            }
-            limits = {
-              "cpu"    = "${data.coder_parameter.cpu.value}"
-              "memory" = "${data.coder_parameter.memory.value}Gi"
-            }
-          }
-          volume_mount {
-            mount_path = "/home/coder"
-            name       = "home"
-            read_only  = false
-          }
-          # Add this new volume mount for /etc/hosts
-          volume_mount {
-            name      = "custom-etc-hosts"
-            mount_path = "/etc/hosts"
-            sub_path   = "hosts"
-            read_only  = true
-          }
-        }
+    }
 
-        volume {
-          name = "home"
-          persistent_volume_claim {
-            claim_name = kubernetes_persistent_volume_claim.home.metadata.0.name
-            read_only  = false
-          }
-        }
-        volume {
-          name = "custom-etc-hosts"
-          config_map {
-            name = kubernetes_config_map.hosts_config.metadata[0].name
-          }
-        }
-
-        affinity {
-          // This affinity attempts to spread out all workspace pods evenly across
-          // nodes.
-          pod_anti_affinity {
-            preferred_during_scheduling_ignored_during_execution {
-              weight = 1
-              pod_affinity_term {
-                topology_key = "kubernetes.io/hostname"
-                label_selector {
-                  match_expressions {
-                    key      = "app.kubernetes.io/name"
-                    operator = "In"
-                    values   = ["coder-workspace"]
-                  }
-                }
-              }
+    affinity {
+      node_affinity {
+        required_during_scheduling_ignored_during_execution {
+          node_selector_term {
+            match_expressions {
+              key      = "kubernetes.io/hostname"
+              operator = "In"
+              values   = ["tfb-root-eu"]
             }
           }
         }
