@@ -210,6 +210,10 @@ resource "kubernetes_pod" "tfb-network-db" {
         name       = "database-init"
         mount_path = "/docker-entrypoint-initdb.d"
       }
+      volume_mount {
+        name       = "tfb-cnf"
+        mount_path = "/etc/mysql/mariadb.conf.d/99-bind-address.cnf"
+      }
       resources {
         requests = {
           "cpu"    = "250m"
@@ -226,6 +230,12 @@ resource "kubernetes_pod" "tfb-network-db" {
       name = "database-init"
       config_map {
         name = kubernetes_config_map.database_init.metadata[0].name
+      }
+    }
+    volume {
+      name = "tfb-cnf"
+      config_map {
+        name = kubernetes_config_map.tfb_cnf.metadata[0].name 
       }
     }
   }
@@ -316,6 +326,28 @@ resource "kubernetes_config_map" "database_init" {
       CREATE DATABASE IF NOT EXISTS tfb_network_streamingmodule;
       CALL grant_privileges_for_prefix('tfb_network');
     EOT
+  }
+}
+resource "kubernetes_config_map" "tfb_cnf" {
+  # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
+  # Add this block to ignore changes if the resource already exists
+  # lifecycle {
+  #   ignore_changes = all
+  # }
+  metadata {
+    name      = "tfb-cnf"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+
+  data = {
+    "tfb.cnf" = <<-EOT
+      [mysqld]
+      max_allowed_packet=16M
+      max_connections=10000000
+      bind-address=*
+      [Service]
+      LimitNOFILE=10000000
+      EOT
   }
 }
 
