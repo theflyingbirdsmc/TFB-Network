@@ -184,6 +184,37 @@ resource "kubernetes_persistent_volume_claim" "home" {
   }
 }
 
+resource "kubernetes_persistent_volume_claim" "tfb-network-db" {
+  metadata {
+    name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-tfb-network-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+    labels = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "coder-pvc-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}"
+      "app.kubernetes.io/part-of"  = "coder"
+      // Coder specific labels.
+      "com.coder.resource"       = "true"
+      "com.coder.workspace.id"   = data.coder_workspace.me.id
+      "com.coder.workspace.name" = data.coder_workspace.me.name
+      "com.coder.user.id"        = data.coder_workspace_owner.me.id
+      "com.coder.user.username"  = data.coder_workspace_owner.me.name
+    }
+    annotations = {
+      "com.coder.user.email" = data.coder_workspace_owner.me.email
+    }
+  }
+  wait_until_bound = false
+  spec {
+    storage_class_name = "local-path"
+    access_modes = ["ReadWriteOnce"]
+    resources {
+      requests = {
+        storage = "5Gi"
+      }
+    }
+  }
+}
+
 resource "kubernetes_pod" "tfb-network-db" {
   metadata {
     name      = "tfb-network-db"
@@ -214,15 +245,22 @@ resource "kubernetes_pod" "tfb-network-db" {
         name       = "tfb-cnf"
         mount_path = "/etc/mysql/mariadb.conf.d/99-bind-address.cnf"
       }
+      volume_mount {
+        name       = "tfb-network-db"
+        mount_path = "/var/lib/mysql"
+      }
       resources {
         requests = {
           "cpu"    = "250m"
           "memory" = "512Mi"
         }
-        limits = {
-          "cpu"    = "${data.coder_parameter.cpu.value}"
-          "memory" = "${data.coder_parameter.memory.value}Gi"
-        }
+      }
+    }
+    volume {
+      name = "tfb-network-db"
+      persistent_volume_claim {
+        claim_name = kubernetes_persistent_volume_claim.tfb-network-db.metadata[0].name
+        read_only  = false
       }
     }
 
