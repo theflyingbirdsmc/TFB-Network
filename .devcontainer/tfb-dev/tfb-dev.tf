@@ -308,7 +308,7 @@ resource "kubernetes_config_map" "database_init" {
       CREATE USER 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
       CREATE DATABASE IF NOT EXISTS tfb_network_plan;
       CREATE DATABASE IF NOT EXISTS tfb_network_luckperms;
-      CREATE DATABASE IF NOT EXISTS tfb_network_chatcontrolred;
+      CREATE DATABASE IF NOT EXISTS tfb_network_chatcontrol;
       CREATE DATABASE IF NOT EXISTS tfb_network_gadgetsmenu;
       CREATE DATABASE IF NOT EXISTS tfb_network_hexnicks;
       CREATE DATABASE IF NOT EXISTS tfb_network_votingplugin;
