@@ -174,7 +174,7 @@ resource "kubernetes_persistent_volume_claim" "home" {
   }
   wait_until_bound = false
   spec {
-    storage_class_name = ["local-path"]
+    storage_class_name = "local-path"
     access_modes = ["ReadWriteOnce"]
     resources {
       requests = {
