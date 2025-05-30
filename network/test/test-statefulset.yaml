@@ -22,7 +22,7 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
-        "topology.kubernetes.io/region": hel1
+        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: test

@@ -15,7 +15,7 @@ spec:
         app: cs-tmm-db
     spec:
       nodeSelector:
-        "topology.kubernetes.io/region": hel1
+        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: mariadb

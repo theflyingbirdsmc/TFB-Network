@@ -16,7 +16,7 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
-        "topology.kubernetes.io/region": hel1
+        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: mariadb
