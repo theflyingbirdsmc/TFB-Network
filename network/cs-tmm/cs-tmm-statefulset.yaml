@@ -22,7 +22,6 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
-        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: cs-tmm
