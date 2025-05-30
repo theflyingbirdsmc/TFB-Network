@@ -98,7 +98,7 @@ spec:
   - metadata:
       name: world-elytra-pv
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -106,7 +106,7 @@ spec:
   - metadata:
       name: world-parkour-pv
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -114,7 +114,7 @@ spec:
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -122,7 +122,7 @@ spec:
   - metadata:
       name: plugins-essentials-warps
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -130,7 +130,7 @@ spec:
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -138,7 +138,7 @@ spec:
   - metadata:
       name: plugins-parkour-courses
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -146,7 +146,7 @@ spec:
   - metadata:
       name: plugins-parkour-sessions
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -154,7 +154,7 @@ spec:
   - metadata:
       name: plugins-parkour-players
     spec:
-      storageClassName: longhorn-tfb-network
+      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -162,8 +162,8 @@ spec:
   - metadata:
       name: plugins-parkour-other
     spec:
-      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
+      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
