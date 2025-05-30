@@ -23,7 +23,7 @@ spec:
         fsGroup: 1000
       nodeSelector:
         "topology.kubernetes.io/region": hel1
-        "kubernetes.io/hostname": tfb-root-eu
+        "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: lobby
         image: docker.theflyingbirds.net/tfb-network/lobby:latest
