@@ -22,7 +22,8 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
-        "kubernetes.io/hostname": bm-tfb-cluster-2675687
+        "topology.kubernetes.io/region": hel1
+        "kubernetes.io/hostname": tfb-root-eu
       containers:
       - name: parkour
         image: docker.theflyingbirds.net/tfb-network/parkour:latest
@@ -45,8 +46,8 @@ spec:
         ports:
           - containerPort: 30102
         command: ["/bin/sh", "-c"]
-        # args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
-        args: ["tail -f /dev/null"]
+        args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
+        # args: ["tail -f /dev/null"]
         securityContext:
             runAsUser: 0
             runAsGroup: 0
@@ -74,31 +75,31 @@ spec:
           requests:
             memory: "4Gi"
             cpu: "500m"
-        # livenessProbe:
-        #   tcpSocket:
-        #     port: 30102
-        #   initialDelaySeconds: 60
-        #   periodSeconds: 20
-        #   failureThreshold: 3
-        # readinessProbe:
-        #   tcpSocket:
-        #     port: 30102
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 10
-        #   failureThreshold: 2
-        # startupProbe:
-        #   tcpSocket:
-        #     port: 30102
-        #   initialDelaySeconds: 10
-        #   periodSeconds: 10
-        #   failureThreshold: 30
+        livenessProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 60
+          periodSeconds: 20
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 2
+        startupProbe:
+          tcpSocket:
+            port: 30102
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          failureThreshold: 30
       imagePullSecrets:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
       name: world-elytra-pv
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -106,7 +107,7 @@ spec:
   - metadata:
       name: world-parkour-pv
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -114,7 +115,7 @@ spec:
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -122,7 +123,7 @@ spec:
   - metadata:
       name: plugins-essentials-warps
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -130,7 +131,7 @@ spec:
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -138,7 +139,7 @@ spec:
   - metadata:
       name: plugins-parkour-courses
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -146,7 +147,7 @@ spec:
   - metadata:
       name: plugins-parkour-sessions
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -154,7 +155,7 @@ spec:
   - metadata:
       name: plugins-parkour-players
     spec:
-      storageClassName: local-path
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -162,8 +163,8 @@ spec:
   - metadata:
       name: plugins-parkour-other
     spec:
+      storageClassName: longhorn-tfb-network
       accessModes: ["ReadWriteOncePod"]
-      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
