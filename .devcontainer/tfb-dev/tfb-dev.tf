@@ -19,7 +19,6 @@ terraform {
 provider "coder" {
 }
 
-
 data "coder_parameter" "cpu" {
   name         = "cpu"
   display_name = "CPU"
