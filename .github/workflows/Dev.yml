@@ -60,9 +60,11 @@ jobs:
           terraform validate
           
       # Step 2: Install the Coder CLI
-      - name: Install Coder CLI
-        run: |
-          curl -L https://coder.com/install.sh | sh
+      - name: Set up Coder CLI
+        uses: coder/setup-action@v1
+        with:
+          access_url: ${{ secrets.CODER_URL }}
+          coder_session_token: ${{ secrets.CODER_SESSION_TOKEN }}
 
       # Step 3: Set environment variables and push template
       - name: Push template to Coder
