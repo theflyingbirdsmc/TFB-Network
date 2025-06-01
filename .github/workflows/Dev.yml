@@ -68,9 +68,6 @@ jobs:
 
       # Step 3: Set environment variables and push template
       - name: Push template to Coder
-        env:
-          CODER_URL: ${{ secrets.CODER_URL }}
-          CODER_SESSION_TOKEN: ${{ secrets.CODER_SESSION_TOKEN }}
         run: |
           export CODER_TEMPLATE_NAME=TFB
           export CODER_TEMPLATE_DIR=.devcontainer/tfb-dev
