@@ -255,6 +255,7 @@ resource "kubernetes_pod" "tfb-network-db" {
         }
       }
     }
+
     volume {
       name = "tfb-network-db"
       persistent_volume_claim {
