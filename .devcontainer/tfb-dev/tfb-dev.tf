@@ -428,6 +428,11 @@ resource "kubernetes_service" "tfb_cs_tmm_db" {
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
+    selector = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "tfb-network-db"
+      "app.kubernetes.io/part-of"  = "coder"
+    }
     type = "ExternalName"
     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
@@ -439,6 +444,11 @@ resource "kubernetes_service" "tfb_danish_survival_db" {
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
+    selector = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "tfb-network-db"
+      "app.kubernetes.io/part-of"  = "coder"
+    }
     type = "ExternalName"
     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
@@ -450,6 +460,11 @@ resource "kubernetes_service" "tfb_parkour_db" {
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
+    selector = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "tfb-network-db"
+      "app.kubernetes.io/part-of"  = "coder"
+    }
     type = "ExternalName"
     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
