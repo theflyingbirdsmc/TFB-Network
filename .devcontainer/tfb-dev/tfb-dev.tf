@@ -582,7 +582,7 @@ resource "kubernetes_pod" "main" {
             match_expressions {
               key      = "kubernetes.io/hostname"
               operator = "In"
-              values   = ["bm-tfb-cluster-2675687"]
+              values   = ["bm-tfb-cluster-1556693"]
             }
           }
         }
