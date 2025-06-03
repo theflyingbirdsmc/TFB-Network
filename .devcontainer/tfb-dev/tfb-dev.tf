@@ -454,9 +454,9 @@ resource "kubernetes_service" "danish_survival_db" {
   }
 }
 
-resource "kubernetes_service" "tfb_parkour_db" {
+resource "kubernetes_service" "parkour_db" {
   metadata {
-    name = "tfb-parkour-db"
+    name = "parkour-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
