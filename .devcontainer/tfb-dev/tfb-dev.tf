@@ -434,7 +434,7 @@ resource "kubernetes_service" "cs_tmm_db" {
       "app.kubernetes.io/part-of"  = "coder"
     }
     type = "ExternalName"
-    external_name = "cs-tmm-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+    external_name = "tfb-network-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
@@ -450,7 +450,7 @@ resource "kubernetes_service" "danish_survival_db" {
       "app.kubernetes.io/part-of"  = "coder"
     }
     type = "ExternalName"
-    external_name = "danish-survival-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+    external_name = "tfb-network-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
@@ -466,7 +466,7 @@ resource "kubernetes_service" "tfb_parkour_db" {
       "app.kubernetes.io/part-of"  = "coder"
     }
     type = "ExternalName"
-    external_name = "tfb-parkour-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+    external_name = "tfb-network-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
   }
 }
 
