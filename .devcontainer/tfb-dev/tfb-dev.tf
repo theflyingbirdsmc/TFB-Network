@@ -422,53 +422,53 @@ resource "kubernetes_service" "mariadb_service" {
   }
 }
 
-resource "kubernetes_service" "tfb_cs_tmm_db" {
-  metadata {
-    name = "tfb-cs-tmm-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    selector = {
-      "app.kubernetes.io/name"     = "tfb-network-db"
-      "app.kubernetes.io/instance" = "tfb-network-db"
-      "app.kubernetes.io/part-of"  = "coder"
-    }
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
+# resource "kubernetes_service" "tfb_cs_tmm_db" {
+#   metadata {
+#     name = "tfb-cs-tmm-db"
+#     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+#   }
+#   spec {
+#     selector = {
+#       "app.kubernetes.io/name"     = "tfb-network-db"
+#       "app.kubernetes.io/instance" = "tfb-network-db"
+#       "app.kubernetes.io/part-of"  = "coder"
+#     }
+#     type = "ExternalName"
+#     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+#   }
+# }
 
-resource "kubernetes_service" "tfb_danish_survival_db" {
-  metadata {
-    name = "tfb-danish-survival-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    selector = {
-      "app.kubernetes.io/name"     = "tfb-network-db"
-      "app.kubernetes.io/instance" = "tfb-network-db"
-      "app.kubernetes.io/part-of"  = "coder"
-    }
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
+# resource "kubernetes_service" "tfb_danish_survival_db" {
+#   metadata {
+#     name = "tfb-danish-survival-db"
+#     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+#   }
+#   spec {
+#     selector = {
+#       "app.kubernetes.io/name"     = "tfb-network-db"
+#       "app.kubernetes.io/instance" = "tfb-network-db"
+#       "app.kubernetes.io/part-of"  = "coder"
+#     }
+#     type = "ExternalName"
+#     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+#   }
+# }
 
-resource "kubernetes_service" "tfb_parkour_db" {
-  metadata {
-    name = "tfb-parkour-db"
-    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
-  }
-  spec {
-    selector = {
-      "app.kubernetes.io/name"     = "tfb-network-db"
-      "app.kubernetes.io/instance" = "tfb-network-db"
-      "app.kubernetes.io/part-of"  = "coder"
-    }
-    type = "ExternalName"
-    external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
-  }
-}
+# resource "kubernetes_service" "tfb_parkour_db" {
+#   metadata {
+#     name = "tfb-parkour-db"
+#     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+#   }
+#   spec {
+#     selector = {
+#       "app.kubernetes.io/name"     = "tfb-network-db"
+#       "app.kubernetes.io/instance" = "tfb-network-db"
+#       "app.kubernetes.io/part-of"  = "coder"
+#     }
+#     type = "ExternalName"
+#     external_name = "${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+#   }
+# }
 
 resource "kubernetes_config_map" "hosts_config" {
   # Add this block to ignore changes if the resource already exists
@@ -487,6 +487,7 @@ resource "kubernetes_config_map" "hosts_config" {
       127.0.0.1 mc.theflyingbirds.net
       127.0.0.1 ${lower(data.coder_workspace.me.name)}
       127.0.0.1 lobby danish-survival creative cs-tmm parkour
+      tfb-network-db tfb-danish-survival-db tfb-parkour-db tfb-cs-tmm-db
     EOT
   }
 }
