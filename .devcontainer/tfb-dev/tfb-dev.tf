@@ -6,12 +6,7 @@ terraform {
       version = "~> 2.0"
     }
     kubernetes = {
-      source  = "hashicorp/kubernetes"
-      version = "~> 2.36.0"
-    }
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "3.5.0"
+      source = "hashicorp/kubernetes"
     }
   }
 }
@@ -527,23 +522,8 @@ resource "kubernetes_pod" "main" {
       image             = "docker.theflyingbirds.net/tfb-services/tfb-dev:latest"
       image_pull_policy = "Always"
       command           = ["sh", "-c", coder_agent.main.init_script]
-      port {
-        protocol = "UDP"
-        container_port = 19132
-      }
-      port {
-        protocol = "TCP"
-        container_port = 25565
-      }
-      port {
-        protocol = "UDP"
-        container_port = 30001
-      }
       security_context {
         run_as_user = "1000"
-        capabilities {
-          add = ["NET_ADMIN", "SYS_TIME"]
-        }
       }
       env {
         name  = "CODER_AGENT_TOKEN"
