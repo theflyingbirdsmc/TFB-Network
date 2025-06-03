@@ -487,7 +487,7 @@ resource "kubernetes_config_map" "hosts_config" {
       127.0.0.1 mc.theflyingbirds.net
       127.0.0.1 ${lower(data.coder_workspace.me.name)}
       127.0.0.1 lobby danish-survival creative cs-tmm parkour
-      tfb-network-db tfb-danish-survival-db tfb-parkour-db tfb-cs-tmm-db
+      ${kubernetes_service.mariadb_service.metadata.0.name}.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local tfb-danish-survival-db tfb-parkour-db tfb-cs-tmm-db
     EOT
   }
 }
