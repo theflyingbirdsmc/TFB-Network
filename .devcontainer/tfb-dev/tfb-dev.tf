@@ -209,7 +209,7 @@ resource "kubernetes_persistent_volume_claim" "tfb-network-db" {
   }
 }
 
-resource "kubernetes_pod" "tfb-network-db" {
+resource "kubernetes_deployment" "tfb-network-db" {
   metadata {
     name      = "tfb-network-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -486,7 +486,7 @@ resource "kubernetes_config_map" "hosts_config" {
   }
 }
 
-resource "kubernetes_pod" "main" {
+resource "kubernetes_deployment" "main" {
   # count = data.coder_workspace.me.start_count
 
   metadata {
