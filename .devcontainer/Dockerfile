@@ -20,14 +20,3 @@ ARG MAVEN_PASSWORD
 ENV MAVEN_URL=$MAVEN_URL
 ENV MAVEN_USERNAME=$MAVEN_USERNAME
 ENV MAVEN_PASSWORD=$MAVEN_PASSWORD
-
-EXPOSE 25565
-EXPOSE 30001
-
-ARG USER=coder
-RUN useradd --groups sudo --no-create-home --shell /bin/bash ${USER} \
-	&& echo "${USER} ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/${USER} \
-	&& chmod 0440 /etc/sudoers.d/${USER}
-	
-USER ${USER}
-WORKDIR /home/${USER}
