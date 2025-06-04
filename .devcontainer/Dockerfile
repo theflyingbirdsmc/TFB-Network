@@ -1,17 +1,9 @@
 FROM codercom/enterprise-base:ubuntu
 
-RUN apt-get update \
-	&& apt-get install -y \
-	curl \
-	git \
-	sudo \
-	vim \
-	wget \
-	zip \ 
-	unzip \
-	mariadb-server \
-	openjdk-21-jre \
-	&& rm -rf /var/lib/apt/lists/*
+RUN sudo apt-get update && \
+    sudo apt-get install --yes \
+    mariadb-server \
+    openjdk-21-jre
 
 #install Gradle
 WORKDIR /opt/gradle
