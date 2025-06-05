@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tfb-creative-db
+  name: creative-db
   namespace: tfb-network
 spec:
   ports:
   - port: 3306
     targetPort: 3306
   selector:
-    app: tfb-creative-db
+    app: creative-db

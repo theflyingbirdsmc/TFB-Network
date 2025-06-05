@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: tfb-creative-db
+  name: creative-db
   namespace: tfb-network
 spec:
-  serviceName: "tfb-creative-db"
+  serviceName: "creative-db"
   replicas: 1
   selector:
     matchLabels:
-      app: tfb-creative-db
+      app: creative-db
   template:
     metadata:
       labels:
-        app: tfb-creative-db
+        app: creative-db
     spec:
       containers:
       - name: mariadb
