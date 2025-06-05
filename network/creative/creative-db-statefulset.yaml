@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: mariadb
-        image: mariadb:11.1.2-jammy
+        image: mariadb:11.7.2
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
@@ -41,7 +41,8 @@ spec:
   - metadata:
       name: db-storage
     spec:
+      storageClassName: local-path
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 5Gi
+          storage: 10Gi
