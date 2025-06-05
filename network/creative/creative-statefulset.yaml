@@ -48,7 +48,7 @@ spec:
         #   - secretRef:
         #       name: world-creative-seed
         ports:
-          - containerPort: 30100
+          - containerPort: 30101
         command: ["/bin/sh", "-c"]
         args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         # args: ["tail -f /dev/null"]
@@ -71,19 +71,19 @@ spec:
             cpu: "1000m"
         livenessProbe:
           tcpSocket:
-            port: 30100
+            port: 30101
           initialDelaySeconds: 60
           periodSeconds: 20
           failureThreshold: 3
         readinessProbe:
           tcpSocket:
-            port: 30100
+            port: 30101
           initialDelaySeconds: 30
           periodSeconds: 10
           failureThreshold: 2
         startupProbe:
           tcpSocket:
-            port: 30100
+            port: 30101
           initialDelaySeconds: 10
           periodSeconds: 10
           failureThreshold: 30
