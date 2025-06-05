@@ -58,7 +58,7 @@ spec:
             allowPrivilegeEscalation: true
         volumeMounts:
           - name: world-creative
-            mountPath: /data/world_cs_tmm
+            mountPath: /data/world_creative
           - name: plugins-essentials-userdata
             mountPath: /data/plugins/Essentials/userdata
           - name: plugins-essentials-warps
