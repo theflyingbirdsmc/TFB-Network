@@ -365,7 +365,7 @@ resource "kubernetes_config_map" "database_init" {
       CALL grant_privileges_for_prefix('danish_survival');
 
       -- PARKOUR --
-      CREATE USER 'parkour'@'%' IDENTIFIED BY 'WaLFY@^9!yc8Kg*y^DPt6urL6MS$HV';
+      CREATE USER 'parkour'@'%' IDENTIFIED BY 'MqGR6uD4SFPXTmK6uweVMCZ7pkTTfi';
       CREATE DATABASE IF NOT EXISTS parkour_parkour;
       CALL grant_privileges_for_prefix('parkour');
 
