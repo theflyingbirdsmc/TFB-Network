@@ -26,7 +26,7 @@ spec:
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: test
-        image: docker.theflyingbirds.net/tfb-network/lobby:latest
+        image: docker.theflyingbirds.net/tfb-network/test:latest
         tty: true
         env:
           - name: TYPE
