@@ -9,7 +9,7 @@ spec:
   type: ClusterIP
   ports:
   - name: test
-    port: 30101
-    targetPort: 30100
+    port: 30999
+    targetPort: 30999
   selector:
     run: test
