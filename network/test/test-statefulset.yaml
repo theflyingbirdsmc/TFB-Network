@@ -26,7 +26,7 @@ spec:
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: test
-        image: docker.theflyingbirds.net/tfb-network/cs-tmm:latest
+        image: docker.theflyingbirds.net/tfb-network/test:latest
         tty: true
         env:
           - name: TYPE
@@ -42,12 +42,7 @@ spec:
           - name: "REPLACE_ENV_IN_PLACE"
             value: "true"
           - name: "MEMORY"
-            value: "8G"
-        envFrom:
-          - secretRef:
-              name: cs-tmm-discord-token
-          - secretRef:
-              name: world-cs-tmm-seed
+            value: "4G"
         ports:
           - containerPort: 30100
         command: ["/bin/sh", "-c"]
@@ -57,13 +52,13 @@ spec:
             runAsUser: 0
             runAsGroup: 0
             allowPrivilegeEscalation: true
-        volumes:
-          - name: minecraft-data
-            emptyDir: {}
+        volumeMounts:
+          - name: test-world-pv
+            mountPath: /data/world_test
         resources:
           requests:
-            memory: "8Gi"
-            cpu: "1000m"
+            memory: "4Gi"
+            cpu: "250m"
         livenessProbe:
           tcpSocket:
             port: 30100
@@ -84,3 +79,12 @@ spec:
           failureThreshold: 30
       imagePullSecrets:
         - name: regcred
+  volumeClaimTemplates:
+  - metadata:
+      name: test-world-pv
+    spec:
+      storageClassName: openebs-hostpath
+      accessModes: ["ReadWriteOncePod"]
+      resources:
+        requests:
+          storage: 5G
