@@ -15,7 +15,6 @@ spec:
         app: test-db
     spec:
       nodeSelector:
-        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: mariadb

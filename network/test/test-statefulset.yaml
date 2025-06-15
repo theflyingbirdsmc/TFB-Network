@@ -22,7 +22,6 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
       nodeSelector:
-        
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: test
@@ -44,7 +43,7 @@ spec:
           - name: "MEMORY"
             value: "4G"
         ports:
-          - containerPort: 30100
+          - containerPort: 30999
         command: ["/bin/sh", "-c"]
         args: ["apt-get update && apt-get install -y screen && screen -dmS minecraft /start && tail -f /dev/null"]
         # args: ["tail -f /dev/null"]
@@ -61,19 +60,19 @@ spec:
             cpu: "250m"
         livenessProbe:
           tcpSocket:
-            port: 30100
+            port: 30999
           initialDelaySeconds: 60
           periodSeconds: 20
           failureThreshold: 3
         readinessProbe:
           tcpSocket:
-            port: 30100
+            port: 30999
           initialDelaySeconds: 30
           periodSeconds: 10
           failureThreshold: 2
         startupProbe:
           tcpSocket:
-            port: 30100
+            port: 30999
           initialDelaySeconds: 10
           periodSeconds: 10
           failureThreshold: 30
