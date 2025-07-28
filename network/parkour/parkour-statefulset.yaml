@@ -70,6 +70,8 @@ spec:
             mountPath: /data/plugins/Parkour/players
           - name: plugins-parkour-other
             mountPath: /data/plugins/Parkour/other
+          - name: plugins-parkourtopten
+            mountPath: /data/plugins/ParkourTopTen
         resources:
           requests:
             memory: "4Gi"
@@ -161,6 +163,14 @@ spec:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-other
+    spec:
+      accessModes: ["ReadWriteOncePod"]
+      storageClassName: local-path
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-parkourtopten
     spec:
       accessModes: ["ReadWriteOncePod"]
       storageClassName: local-path
