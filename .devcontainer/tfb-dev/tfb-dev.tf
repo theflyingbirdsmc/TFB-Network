@@ -102,6 +102,7 @@ resource "coder_agent" "main" {
   # if you don't want to display any information.
   # For basic resources, you can use the `coder stat` command.
   # If you need more control, you can write your own script.
+
   env = {
     GIT_AUTHOR_NAME     = "${data.coder_workspace_owner.me.name}"
     GIT_COMMITTER_NAME  = "${data.coder_workspace_owner.me.name}"
