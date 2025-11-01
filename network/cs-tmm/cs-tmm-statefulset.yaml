@@ -68,7 +68,7 @@ spec:
           - name: plugins-essentials-warps
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-essentials-spawn
-            mountPath: /data/plugins/Essentials/spawn
+            mountPath: /data/plugins/Essentials/spawn.yml
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
         resources:
