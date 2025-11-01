@@ -67,8 +67,6 @@ spec:
             mountPath: /data/plugins/Essentials/userdata
           - name: plugins-essentials-warps
             mountPath: /data/plugins/Essentials/warps
-          - name: plugins-essentials-spawn
-            mountPath: /data/plugins/Essentials/spawn.yml
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
         resources:
@@ -130,14 +128,6 @@ spec:
           storage: 1Gi
   - metadata:
       name: plugins-essentials-warps
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      storageClassName: local-path
-      resources:
-        requests:
-          storage: 100Mi
-  - metadata:
-      name: plugins-essentials-spawn
     spec:
       accessModes: ["ReadWriteOnce"]
       storageClassName: local-path
