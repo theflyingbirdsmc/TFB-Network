@@ -25,14 +25,14 @@ jobs:
     steps:
       # Check out the repository containing the shared Dockerfile
       - name: Checkout shared Dockerfile repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           repository: theflyingbirdsmc/TFB-Network
           path: TFB-Network
 
       # Check out the Minecraft server repository
       - name: Checkout Minecraft server repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           path: server
 
