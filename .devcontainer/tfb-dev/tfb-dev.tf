@@ -376,6 +376,7 @@ resource "kubernetes_config_map" "database_init" {
       CREATE DATABASE IF NOT EXISTS cs_tmm_griefdefender;
       CREATE DATABASE IF NOT EXISTS cs_tmm_coreprotect;
       CREATE DATABASE IF NOT EXISTS cs_tmm_discordsrv;
+      CREATE DATABASE IF NOT EXISTS cs_tmm_jobs;
       CALL grant_privileges_for_prefix('cs_tmm');
 
       -- TFB NETWORK PLUGINS --
