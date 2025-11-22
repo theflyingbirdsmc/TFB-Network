@@ -379,6 +379,15 @@ resource "kubernetes_config_map" "database_init" {
       CREATE DATABASE IF NOT EXISTS cs_tmm_jobs;
       CALL grant_privileges_for_prefix('cs_tmm');
 
+      -- COMMUNITY SERVER AERIEWORKS --
+      CREATE USER 'aerieworks'@'%' IDENTIFIED BY 'dofvas-5Kutte-nupcas';
+      CREATE DATABASE IF NOT EXISTS aerieworks_mcmmo;
+      CREATE DATABASE IF NOT EXISTS aerieworks_griefdefender;
+      CREATE DATABASE IF NOT EXISTS aerieworks_coreprotect;
+      CREATE DATABASE IF NOT EXISTS aerieworks_discordsrv;
+      CREATE DATABASE IF NOT EXISTS aerieworks_jobs;
+      CALL grant_privileges_for_prefix('aerieworks');
+
       -- TFB NETWORK PLUGINS --
       CREATE USER 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
       CREATE DATABASE IF NOT EXISTS tfb_network_plan;
