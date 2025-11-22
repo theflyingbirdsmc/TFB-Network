@@ -379,6 +379,15 @@ resource "kubernetes_config_map" "database_init" {
       CREATE DATABASE IF NOT EXISTS cs_tmm_jobs;
       CALL grant_privileges_for_prefix('cs_tmm');
 
+      -- COMMUNITY SERVER AERIEWORKS --
+      CREATE USER 'aerieworks'@'%' IDENTIFIED BY 'dofvas-5Kutte-nupcas';
+      CREATE DATABASE IF NOT EXISTS aerieworks_mcmmo;
+      CREATE DATABASE IF NOT EXISTS aerieworks_griefdefender;
+      CREATE DATABASE IF NOT EXISTS aerieworks_coreprotect;
+      CREATE DATABASE IF NOT EXISTS aerieworks_discordsrv;
+      CREATE DATABASE IF NOT EXISTS aerieworks_jobs;
+      CALL grant_privileges_for_prefix('aerieworks');
+
       -- TFB NETWORK PLUGINS --
       CREATE USER 'tfb_network'@'%' IDENTIFIED BY 'ifFfF4cUeEYVXCZ4a5494sjVS8oBZL';
       CREATE DATABASE IF NOT EXISTS tfb_network_plan;
@@ -452,6 +461,22 @@ resource "kubernetes_service" "mariadb_service" {
 resource "kubernetes_service" "cs_tmm_db" {
   metadata {
     name = "cs-tmm-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+  spec {
+    selector = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "tfb-network-db"
+      "app.kubernetes.io/part-of"  = "coder"
+    }
+    type = "ExternalName"
+    external_name = "tfb-network-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+  }
+}
+
+resource "kubernetes_service" "aerieworks_db" {
+  metadata {
+    name = "aerieworks-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
   }
   spec {
