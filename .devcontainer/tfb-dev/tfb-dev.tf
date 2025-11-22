@@ -474,6 +474,22 @@ resource "kubernetes_service" "cs_tmm_db" {
   }
 }
 
+resource "kubernetes_service" "aerieworks_db" {
+  metadata {
+    name = "aerieworks-db"
+    namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
+  }
+  spec {
+    selector = {
+      "app.kubernetes.io/name"     = "tfb-network-db"
+      "app.kubernetes.io/instance" = "tfb-network-db"
+      "app.kubernetes.io/part-of"  = "coder"
+    }
+    type = "ExternalName"
+    external_name = "tfb-network-db.coder-${lower(data.coder_workspace_owner.me.name)}.svc.cluster.local"
+  }
+}
+
 resource "kubernetes_service" "danish_survival_db" {
   metadata {
     name = "danish-survival-db"
