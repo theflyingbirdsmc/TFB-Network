@@ -254,7 +254,7 @@ resource "kubernetes_pod" "tfb-network-db" {
   spec {
     container {
       name  = "tfb-network-db"
-      image = "mariadb:11.1.2-jammy"
+      image = "mariadb:11.3.2-jammy"
       port {
         container_port = 3306
       }
