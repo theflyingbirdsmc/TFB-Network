@@ -82,7 +82,7 @@ spec:
   - metadata:
       name: test-world-pv
     spec:
-      storageClassName: openebs-hostpath
+      storageClassName: openebs-loki-localpv
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
