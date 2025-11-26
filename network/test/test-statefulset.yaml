@@ -78,12 +78,19 @@ spec:
           failureThreshold: 30
       imagePullSecrets:
         - name: regcred
+      volumes:
+        - name: test-world-pv
+          persistentVolumeClaim:
+            claimName: test-world-pvc
   volumeClaimTemplates:
   - metadata:
-      name: test-world-pv
+      name: test-world-pvc
     spec:
       storageClassName: openebs-zfspv
-      accessModes: ["ReadWriteOnce"]
+      accessModes:
+      - ReadWriteOnce
       resources:
         requests:
+          storage: 1G
+        limits:
           storage: 1G
