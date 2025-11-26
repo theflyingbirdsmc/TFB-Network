@@ -82,7 +82,7 @@ spec:
   - metadata:
       name: test-world-pv
     spec:
-      storageClassName: local-storage
+      storageClassName: openebs-zfspv
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
