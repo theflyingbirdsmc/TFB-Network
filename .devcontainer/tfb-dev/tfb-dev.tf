@@ -302,6 +302,19 @@ resource "kubernetes_pod" "tfb-network-db" {
         name = kubernetes_config_map.tfb_cnf.metadata[0].name 
       }
     }
+    affinity {
+      node_affinity {
+        required_during_scheduling_ignored_during_execution {
+          node_selector_term {
+            match_expressions {
+              key      = "kubernetes.io/hostname"
+              operator = "In"
+              values   = ["bm-tfb-cluster-2675687"]
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -678,7 +691,7 @@ resource "kubernetes_deployment" "main" {
                 match_expressions {
                   key      = "kubernetes.io/hostname"
                   operator = "In"
-                  values   = ["bm-tfb-cluster-1556693"]
+                  values   = ["bm-tfb-cluster-2675687"]
                 }
               }
             }
