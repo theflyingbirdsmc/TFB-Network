@@ -95,21 +95,21 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: danish-survival-world
+      name: world-danish-survival
     spec:
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 15Gi
   - metadata:
-      name: danish-survival-world-nether
+      name: world-danish-survival-nether
     spec:
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
           storage: 6Gi
   - metadata:
-      name: danish-survival-world-the-end
+      name: world-danish-survival-the-end
     spec:
       accessModes: ["ReadWriteOncePod"]
       resources:
