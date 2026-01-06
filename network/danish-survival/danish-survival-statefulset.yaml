@@ -97,7 +97,6 @@ spec:
   - metadata:
       name: danish-survival-world
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -105,7 +104,6 @@ spec:
   - metadata:
       name: danish-survival-world-nether
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -113,7 +111,6 @@ spec:
   - metadata:
       name: danish-survival-world-the-end
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -121,7 +118,6 @@ spec:
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -129,7 +125,6 @@ spec:
   - metadata:
       name: plugins-essentials-warps
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
@@ -137,7 +132,6 @@ spec:
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      storageClassName: local-path
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
