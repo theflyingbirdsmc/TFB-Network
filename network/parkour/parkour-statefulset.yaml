@@ -52,9 +52,9 @@ spec:
             runAsGroup: 0
             allowPrivilegeEscalation: true
         volumeMounts:
-          - name: world-parkour-pv
+          - name: world-parkour
             mountPath: /data/world_parkour
-          - name: world-elytra-pv
+          - name: world-elytra
             mountPath: /data/world_elytra
           - name: plugins-essentials-userdata
             mountPath: /data/plugins/Essentials/userdata
