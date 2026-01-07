@@ -100,64 +100,56 @@ spec:
   - metadata:
       name: world-elytra-pv
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 5Gi
   - metadata:
       name: world-parkour-pv
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 5Gi
   - metadata:
       name: plugins-essentials-userdata
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 1Gi
   - metadata:
       name: plugins-essentials-warps
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-worldguard-worlds
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-courses
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-sessions
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 100Mi
   - metadata:
       name: plugins-parkour-players
     spec:
-      storageClassName: local-path
-      accessModes: ["ReadWriteOncePod"]
+      accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 100Mi
