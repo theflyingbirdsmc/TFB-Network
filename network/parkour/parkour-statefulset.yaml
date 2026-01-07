@@ -98,14 +98,14 @@ spec:
         - name: regcred
   volumeClaimTemplates:
   - metadata:
-      name: world-elytra-pv
+      name: world-elytra
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
           storage: 5Gi
   - metadata:
-      name: world-parkour-pv
+      name: world-parkour
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
