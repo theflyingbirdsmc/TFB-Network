@@ -42,11 +42,6 @@ spec:
             value: "true"
           - name: "MEMORY"
             value: "4G"
-        # envFrom:
-        #   - secretRef:
-        #       name: creative-discord-token
-        #   - secretRef:
-        #       name: world-creative-seed
         ports:
           - containerPort: 30101
         command: ["/bin/sh", "-c"]
@@ -94,7 +89,6 @@ spec:
       name: world-creative
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: local-path
       resources:
         requests:
           storage: 25Gi
@@ -102,7 +96,6 @@ spec:
       name: plugins-essentials-userdata
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: local-path
       resources:
         requests:
           storage: 1Gi
@@ -110,7 +103,6 @@ spec:
       name: plugins-essentials-warps
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
@@ -118,7 +110,6 @@ spec:
       name: plugins-worldguard-worlds
     spec:
       accessModes: ["ReadWriteOnce"]
-      storageClassName: local-path
       resources:
         requests:
           storage: 100Mi
