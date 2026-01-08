@@ -1,5 +1,6 @@
 FROM codercom/enterprise-base:ubuntu
 
+# Install mariadb and jdk
 RUN sudo apt-get update && \
     sudo apt-get install --yes \
     mariadb-server \
@@ -20,3 +21,4 @@ ARG MAVEN_PASSWORD
 ENV MAVEN_URL=$MAVEN_URL
 ENV MAVEN_USERNAME=$MAVEN_USERNAME
 ENV MAVEN_PASSWORD=$MAVEN_PASSWORD
+
