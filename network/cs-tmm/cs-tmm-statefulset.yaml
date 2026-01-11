@@ -69,6 +69,8 @@ spec:
             mountPath: /data/plugins/Essentials/warps
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
+          - name: plugins-citizens-saves
+            mountPath: /data/plugins/Citizens/saves
         resources:
           requests:
             memory: "8Gi"
@@ -131,6 +133,13 @@ spec:
           storage: 100Mi
   - metadata:
       name: plugins-worldguard-worlds
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
+  - metadata:
+      name: plugins-citizens-saves
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
