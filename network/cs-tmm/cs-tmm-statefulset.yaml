@@ -70,7 +70,7 @@ spec:
           - name: plugins-worldguard-worlds
             mountPath: /data/plugins/WorldGuard/worlds
           - name: plugins-citizens-saves
-            mountPath: /data/plugins/Citizens/saves
+            mountPath: /data/plugins/Citizens/data
         resources:
           requests:
             memory: "8Gi"
