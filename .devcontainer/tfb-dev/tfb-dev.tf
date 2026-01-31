@@ -59,7 +59,7 @@ data "coder_parameter" "home_disk_size" {
   default      = "10"
   type         = "number"
   icon         = "/emojis/1f4be.png"
-  mutable      = false
+  mutable      = true
   validation {
     min = 1
     max = 99999
