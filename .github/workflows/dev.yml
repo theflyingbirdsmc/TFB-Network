@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/Dev.yml
+      - .github/workflows/dev.yml
       - '.devcontainer/**'
 
 jobs:
