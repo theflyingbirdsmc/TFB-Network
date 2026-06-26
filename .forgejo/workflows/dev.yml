@@ -61,7 +61,7 @@ jobs:
           
       # Step 2: Install the Coder CLI
       - name: Set up Coder CLI
-        uses: coder/setup-action@v1
+        uses: https://github.com/coder/setup-action@v1
         with:
           access_url: ${{ secrets.CODER_URL }}
           coder_session_token: ${{ secrets.CODER_SESSION_TOKEN }}
