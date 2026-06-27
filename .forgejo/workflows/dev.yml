@@ -11,14 +11,17 @@ on:
 
 jobs:
   build-test-publish:
-    runs-on: bookworm-lxc
+    runs-on: docker
     steps:
       # Check out the repository
       # - name: Checkout code
       #   uses: https://github.com/actions/checkout@v6
-      - run: apt update && apt --quiet install --yes -qq docker.io
-      - run: docker ps -a
-      - run: docker run --rm -it ubuntu echo "Hello, world!"
+      - name: Docker CLI installation
+        run: |
+          apt update
+          apt install -y ca-certificates curl
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sh get-docker.sh
 
       # Set up Docker
       # - name: Set up Docker Build
