@@ -12,8 +12,11 @@ jobs:
     runs-on: bookworm-lxc
     steps:
       # Check out the repository
-      - name: Checkout code
-        uses: https://github.com/actions/checkout@v6
+      # - name: Checkout code
+      #   uses: https://github.com/actions/checkout@v6
+      - run: apt update && apt --quiet install --yes -qq docker.io
+      - run: docker ps -a
+      - run: docker run --rm -it ubuntu echo "Hello, world!"
 
       # Set up Docker
       # - name: Set up Docker Build
