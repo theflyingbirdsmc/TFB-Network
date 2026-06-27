@@ -13,7 +13,7 @@ jobs:
     steps:
       # Check out the repository
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: https://github.com/actions/checkout@v6
 
       # Set up Docker
       - name: Set up Docker Build
