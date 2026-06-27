@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-test-publish:
-    runs-on: debian
+    runs-on: bookworm-lxc
     steps:
       # Check out the repository
       - name: Checkout code
