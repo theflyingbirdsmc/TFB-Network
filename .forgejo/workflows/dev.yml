@@ -36,7 +36,7 @@ jobs:
         with:
           context: .devcontainer/
           push: true
-          tags: forge.theflyingbirds.net/tfb/tfb-dev:latest
+          tags: forge.theflyingbirds.net/tfb/dev:latest
           labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/tfb/network
           build-args: |
             MAVEN_URL=${{ secrets.MAVEN_URL }}
