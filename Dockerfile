@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=eclipse-temurin:17.0.9_9-jre-focal
 FROM ${BASE_IMAGE}
 
-LABEL author="Lucas Christensen & Simon Fugl"
+LABEL author="Simon Fugl"
 
 WORKDIR /tfb
 EXPOSE 25565

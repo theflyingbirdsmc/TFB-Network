@@ -9,12 +9,13 @@ on:
       - '.devcontainer/**'
 
 jobs:
-  build-test-publish:
+  build-docker-image:
     runs-on: debian
     steps:
       # Check out the repository
       - name: Checkout code
         uses: https://github.com/actions/checkout@v6
+
       - name: Docker CLI installation
         run: |
           apt update
@@ -22,7 +23,7 @@ jobs:
           curl -fsSL https://get.docker.com -o get-docker.sh
           sh get-docker.sh
     
-      # Login to Harbor
+      # Login to TFB Registry
       - name: Login to TFB Docker Registry
         uses: docker/login-action@v3
         with:
@@ -43,6 +44,9 @@ jobs:
             MAVEN_USERNAME=${{ secrets.TFB_REGISTRY_USERNAME }}
             MAVEN_PASSWORD=${{ secrets.TFB_REGISTRY_TOKEN }}
 
+  publish-coder-template:
+    runs-on: debian
+    steps:
       - name: Get short commit SHA
         if: github.ref == 'refs/heads/main'
         id: vars
@@ -79,29 +83,3 @@ jobs:
           coder templates push --yes $CODER_TEMPLATE_NAME \
               --directory $CODER_TEMPLATE_DIR \
               --name=$CODER_TEMPLATE_VERSION
-              
-  cleanup:
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-        
-      - name: Cleanup
-        run: |
-          gh extension install actions/gh-actions-cache
-          
-          REPO=${{ github.repository }}
-          BRANCH="refs/pull/${{ github.event.pull_request.number }}/merge"
-
-          echo "Fetching list of cache key"
-          cacheKeysForPR=$(gh actions-cache list -R $REPO -B $BRANCH | cut -f 1 )
-
-          ## Setting this to not fail the workflow while deleting cache keys. 
-          set +e
-          echo "Deleting caches..."
-          for cacheKey in $cacheKeysForPR
-          do
-              gh actions-cache delete $cacheKey -R $REPO -B $BRANCH --confirm
-          done
-          echo "Done"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

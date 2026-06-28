@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and deploy TFB server
 
 on:
   workflow_call:
@@ -20,54 +20,61 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: debian
 
     steps:
       # Check out the repository containing the shared Dockerfile
       - name: Checkout shared Dockerfile repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          repository: theflyingbirdsmc/TFB-Network
-          path: TFB-Network
+          repository: tfb/network
+          path: network
 
       # Check out the Minecraft server repository
-      - name: Checkout Minecraft server repository
-        uses: actions/checkout@v3
+      - name: Checkout TFB server repository
+        uses: actions/checkout@v4
         with:
           path: server
 
-
-      - uses: actions/setup-java@v3
+      - uses: https://github.com/actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '21'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: https://github.com/gradle/actions/tree/main/setup-gradle@v6
 
       - name: Execute Gradle build
         env:
-          MAVEN_URL: ${{ secrets.MAVEN_URL }}
-          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+          MAVEN_URL: forge.theflyingbirds.net
+          MAVEN_USERNAME: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.TFB_REGISTRY_TOKEN }}
         run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
 
-      # Set up Docker
-      - name: Set up Docker Build
-        uses: docker/setup-buildx-action@v3
-
-      # Build TFB Docker image
-      - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest -f ${{ github.workspace }}/TFB-Network/.github/docker/Dockerfile ${{ github.workspace }}/server --no-cache
-      
-      # Login to Nexus Artifactory
-      - name: Login to Nexus Docker Registry
+      - name: Docker CLI installation
+        run: |
+          apt update
+          apt install -y ca-certificates curl
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sh get-docker.sh
+    
+      # Login to TFB Registry
+      - name: Login to TFB Docker Registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ secrets.DOCKER_REGISTRY }}
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: forge.theflyingbirds.net
+          username: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          password: ${{ secrets.TFB_REGISTRY_TOKEN }}
 
       # Build and push Docker image
       - name: Build and push Docker image
-        run: docker push ${{ secrets.DOCKER_REPO }}/${{ github.event.repository.name }}:latest
+        uses: docker/build-push-action@v5
+        with:
+          context: .devcontainer
+          push: true
+          tags: forge.theflyingbirds.net/tfb/dev:latest
+          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/tfb/network
+
+      # Build TFB Docker image
+      - name: Build Docker image
+        run: docker build -t forge.theflyingbirds.net/${{ forge.event.repository }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
