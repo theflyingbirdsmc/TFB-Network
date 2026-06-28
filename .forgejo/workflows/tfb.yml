@@ -36,7 +36,7 @@ jobs:
           java-version: '21'
 
       - name: Setup Gradle
-        uses: https://github.com/gradle/actions/tree/main/setup-gradle@v6
+        uses: https://github.com/gradle/actions/setup-gradle@v6
 
       - name: Execute Gradle build
         env:
