@@ -47,6 +47,9 @@ jobs:
   publish-coder-template:
     runs-on: debian
     steps:
+      - name: Checkout code
+        uses: https://github.com/actions/checkout@v6
+        
       - name: Get short commit SHA
         if: github.ref == 'refs/heads/main'
         id: vars
