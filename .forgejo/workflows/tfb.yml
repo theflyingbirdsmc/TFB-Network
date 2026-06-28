@@ -21,7 +21,7 @@ jobs:
       - name: Checkout shared Dockerfile repository
         uses: actions/checkout@v4
         with:
-          repository: tfb/network
+          repository: forge.theflyingbirds.net/tfb/network
           path: network
 
       # Check out the Minecraft server repository
