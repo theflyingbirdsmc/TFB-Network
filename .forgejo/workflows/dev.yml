@@ -1,6 +1,5 @@
 name: TFB Dev env
 
-
 on:
   push:
     branches:
@@ -27,7 +26,7 @@ jobs:
       - name: Login to TFB Docker Registry
         uses: docker/login-action@v3
         with:
-          registry: ${{ secrets.DOCKER_REGISTRY }}
+          registry: ${{ secrets.DOCKER_REPO_TFB_NETWORK }}
           username: ${{ secrets.TFB_DOCKER_USERNAME }}
           password: ${{ secrets.TFB_DOCKER_PASSWORD }}
 
@@ -37,7 +36,7 @@ jobs:
         with:
           context: .devcontainer/
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}/tfb-dev:latest
+          tags: ${{ secrets.DOCKER_REPO_TFB_NETWORK }}/tfb-dev:latest
           build-args: |
             MAVEN_URL=${{ secrets.MAVEN_URL }}
             MAVEN_USERNAME=${{ secrets.MAVEN_USERNAME }}
