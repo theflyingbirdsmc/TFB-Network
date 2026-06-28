@@ -3,19 +3,13 @@ name: Build and deploy TFB server
 on:
   workflow_call:
     secrets:
-      MAVEN_URL:
+      REGISTRY_URL:
         required: true
-      MAVEN_USERNAME:
+      REGISTRY_USERNAME:
         required: true
-      MAVEN_PASSWORD:
+      REGISTRY_TOKEN:
         required: true
-      DOCKER_PASSWORD:
-        required: true
-      DOCKER_USERNAME:
-        required: true
-      DOCKER_REGISTRY:
-        required: true
-      DOCKER_REPO:
+      REGISTRY_REPO:
         required: true
 
 jobs:
@@ -47,8 +41,8 @@ jobs:
       - name: Execute Gradle build
         env:
           MAVEN_URL: forge.theflyingbirds.net
-          MAVEN_USERNAME: ${{ secrets.TFB_REGISTRY_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.TFB_REGISTRY_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.REGISTRY_TOKEN }}
         run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
 
       - name: Docker CLI installation
@@ -63,8 +57,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: forge.theflyingbirds.net
-          username: ${{ secrets.TFB_REGISTRY_USERNAME }}
-          password: ${{ secrets.TFB_REGISTRY_TOKEN }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
 
       # Build and push Docker image
       - name: Build and push Docker image
@@ -77,4 +71,4 @@ jobs:
 
       # Build TFB Docker image
       - name: Build Docker image
-        run: docker build -t forge.theflyingbirds.net/${{ forge.event.repository }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
+        run: docker build -t forge.theflyingbirds.net/${{ forge.repository }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
