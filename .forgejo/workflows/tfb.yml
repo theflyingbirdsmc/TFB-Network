@@ -23,6 +23,7 @@ jobs:
         with:
           repository: TFB/network
           ref: main
+          path: network
 
       # Check out the Minecraft server repository
       - name: Checkout TFB server repository
