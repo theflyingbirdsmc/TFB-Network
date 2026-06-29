@@ -2,15 +2,15 @@ name: Build and deploy TFB server
 
 on:
   workflow_call:
-    # inputs:
-    #   REGISTRY_URL:
-    #     required: true
-    #   REGISTRY_USERNAME:
-    #     required: true
-    #   REGISTRY_TOKEN:
-    #     required: true
-    #   REGISTRY_REPO:
-    #     required: true
+    inputs:
+      REGISTRY_URL:
+        required: true
+      REGISTRY_USERNAME:
+        required: true
+      REGISTRY_TOKEN:
+        required: true
+      REGISTRY_REPO:
+        required: true
 
 jobs:
   build:
