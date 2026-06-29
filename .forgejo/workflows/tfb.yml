@@ -5,12 +5,16 @@ on:
     inputs:
       REGISTRY_URL:
         required: true
+        type: string
       REGISTRY_USERNAME:
         required: true
+        type: string
       REGISTRY_TOKEN:
         required: true
+        type: string
       REGISTRY_REPO:
         required: true
+        type: string
 
 jobs:
   build:
