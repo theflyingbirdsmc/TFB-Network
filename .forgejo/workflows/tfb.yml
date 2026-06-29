@@ -48,7 +48,7 @@ jobs:
       - name: Execute Gradle build
         working-directory: server
         env:
-          MAVEN_URL: forge.theflyingbirds.net
+          MAVEN_URL: https://forge.theflyingbirds.net/api/packages/TFB/maven
           MAVEN_USERNAME: ${{ inputs.REGISTRY_USERNAME }}
           MAVEN_PASSWORD: ${{ inputs.REGISTRY_TOKEN }}
         run: gradle update --no-build-cache
