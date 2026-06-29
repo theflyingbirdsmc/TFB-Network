@@ -44,7 +44,8 @@ jobs:
           MAVEN_URL: forge.theflyingbirds.net
           MAVEN_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.REGISTRY_TOKEN }}
-        run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
+        # run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
+        run: gradle build
 
       - name: Docker CLI installation
         run: |
