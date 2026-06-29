@@ -36,16 +36,18 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Setup Gradle
-        uses: https://github.com/gradle/actions/setup-gradle@v6
+      - name: Install Gradle
+        run: |
+          apt-get update
+          apt-get install -y gradle
 
       - name: Execute Gradle build
+        working-directory: server
         env:
           MAVEN_URL: forge.theflyingbirds.net
           MAVEN_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.REGISTRY_TOKEN }}
-        # run: cd ${{ github.workspace }}/server && gradle update --no-build-cache
-        run: gradle build
+        run: gradle update --no-build-cache
 
       - name: Docker CLI installation
         run: |
