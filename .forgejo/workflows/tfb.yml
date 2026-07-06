@@ -23,7 +23,7 @@ jobs:
     steps:
       # Check out the repository containing the shared Dockerfile
       - name: Checkout shared Dockerfile repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: TFB/network
           ref: main
@@ -65,17 +65,17 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: forge.theflyingbirds.net
-          username: ${{ inputs.REGISTRY_USERNAME }}
-          password: ${{ inputs.REGISTRY_TOKEN }}
+          username: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          password: ${{ secrets.TFB_REGISTRY_TOKEN }}
 
       # Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .devcontainer
+          context: server
           push: true
-          tags: forge.theflyingbirds.net/tfb/dev:latest
-          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/tfb/network
+          tags: forge.theflyingbirds.net/${{ forge.repository }}:latest
+          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ forge.repository }}
 
       # Build TFB Docker image
       - name: Build Docker image
