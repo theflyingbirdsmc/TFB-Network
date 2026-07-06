@@ -70,7 +70,9 @@ jobs:
 
       - name: Convert repository name to lowercase
         id: lowercase
-        run: echo "repo=${{ forge.repository }} | tr '[:upper:]' '[:lower:]'" >> $FORGEJO_OUTPUT
+        run: |
+          repo="$(echo "${{ forge.repository }}" | tr '[:upper:]' '[:lower:]')"
+          echo "repo=$repo" >> "$FORGEJO_OUTPUT"
 
       # Build and push Docker image
       - name: Build and push Docker image
@@ -83,4 +85,4 @@ jobs:
 
       # Build TFB Docker image
       - name: Build Docker image
-        run: docker build -t forge.theflyingbirds.net/${{ inputs.REGISTRY_REPO }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
+        run: docker build -t forge.theflyingbirds.net/${{ inputs.TFB_REGISTRY_REPO }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
