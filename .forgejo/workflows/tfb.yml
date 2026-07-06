@@ -68,8 +68,9 @@ jobs:
           username: ${{ secrets.TFB_REGISTRY_USERNAME }}
           password: ${{ secrets.TFB_REGISTRY_TOKEN }}
 
-      - name: Convert string to lowercase
-        run: export LOWERCASE_REPO=$(echo ${{ forge.repository }} | tr '[:upper:]' '[:lower:]')
+      - name: Convert repository name to lowercase
+        id: lowercase
+        run: echo "repo=${{ forge.repository }} | tr '[:upper:]' '[:lower:]'" >> $FORGEJO_OUTPUT
 
       # Build and push Docker image
       - name: Build and push Docker image
@@ -77,8 +78,8 @@ jobs:
         with:
           context: server
           push: true
-          tags: forge.theflyingbirds.net/${{ LOWERCASE_REPO }}:latest
-          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ LOWERCASE_REPO }}
+          tags: forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}:latest
+          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}
 
       # Build TFB Docker image
       - name: Build Docker image
