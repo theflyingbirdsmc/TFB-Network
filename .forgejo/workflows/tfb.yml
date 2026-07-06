@@ -68,10 +68,12 @@ jobs:
           username: ${{ secrets.TFB_REGISTRY_USERNAME }}
           password: ${{ secrets.TFB_REGISTRY_TOKEN }}
 
+      - name: Convert string to lowercase
+        run: LOWERCASE_REPO=$(echo ${{ forge.repository }} | tr '[:upper:]' '[:lower:]')
+
       # Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
-        run: LOWERCASE_REPO=$(echo ${{ forge.repository }} | tr '[:upper:]' '[:lower:]')
         with:
           context: server
           push: true
