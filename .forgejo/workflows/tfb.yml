@@ -3,16 +3,16 @@ name: Build and deploy TFB server
 on:
   workflow_call:
     inputs:
-      REGISTRY_URL:
+      TFB_REGISTRY_URL:
         required: true
         type: string
-      REGISTRY_USERNAME:
+      TFB_REGISTRY_USERNAME:
         required: true
         type: string
-      REGISTRY_TOKEN:
+      TFB_REGISTRY_TOKEN:
         required: true
         type: string
-      REGISTRY_REPO:
+      TFB_REGISTRY_REPO:
         required: true
         type: string
 
