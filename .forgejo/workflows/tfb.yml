@@ -71,11 +71,12 @@ jobs:
       # Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
+        run: LOWERCASE_REPO=$(echo ${{ forge.repository }} | tr '[:upper:]' '[:lower:]')
         with:
           context: server
           push: true
-          tags: forge.theflyingbirds.net/${{ forge.repository }}:latest
-          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ forge.repository }}
+          tags: forge.theflyingbirds.net/${{ LOWERCASE_REPO }}:latest
+          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ LOWERCASE_REPO }}
 
       # Build TFB Docker image
       - name: Build Docker image
