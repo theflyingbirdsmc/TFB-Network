@@ -82,7 +82,3 @@ jobs:
           push: true
           tags: forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}:latest
           labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}
-
-      # Build TFB Docker image
-      - name: Build Docker image
-        run: docker build -t forge.theflyingbirds.net/${{ inputs.TFB_REGISTRY_REPO }}:latest -f ${{ forge.workspace }}/network/.forgejo/docker/Dockerfile ${{ forge.workspace }}/server --no-cache
