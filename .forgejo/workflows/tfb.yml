@@ -2,13 +2,13 @@ name: Build and deploy TFB server
 
 on:
   workflow_call:
-    # inputs:
-    #   TFB_REGISTRY_USERNAME:
-    #     required: true
-    #     type: string
-    #   TFB_REGISTRY_TOKEN:
-    #     required: true
-    #     type: string
+    inputs:
+      TFB_REGISTRY_USERNAME:
+        required: true
+        type: string
+      TFB_REGISTRY_TOKEN:
+        required: true
+        type: string
 
 jobs:
   build:
