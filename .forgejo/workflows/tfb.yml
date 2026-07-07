@@ -49,8 +49,8 @@ jobs:
         working-directory: server
         env:
           MAVEN_URL: https://forge.theflyingbirds.net/api/packages/TFB/maven
-          MAVEN_USERNAME: ${{ inputs.TFB_REGISTRY_USERNAME }}
-          MAVEN_PASSWORD: ${{ inputs.TFB_REGISTRY_TOKEN }}
+          MAVEN_USERNAME: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.TFB_REGISTRY_TOKEN }}
         run: gradle update --no-build-cache
 
       - name: Docker CLI installation
