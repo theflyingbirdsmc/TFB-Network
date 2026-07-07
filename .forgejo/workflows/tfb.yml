@@ -64,11 +64,14 @@ jobs:
       - name: Login to TFB Docker Registry
         uses: https://github.com/docker/login-action@v4
         with:
-          registry: forge.theflyingbirds.net
-          username: ${{ secrets.TFB_REGISTRY_USERNAME }}
-          password: ${{ secrets.TFB_REGISTRY_TOKEN }}
+          # registry: forge.theflyingbirds.net
+          # username: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          # password: ${{ secrets.TFB_REGISTRY_TOKEN }}
+          registry-auth: |
+            - registry: forge.theflyingbirds.net
+              username: ${{ secrets.TFB_REGISTRY_USERNAME }}
+              password: ${{ secrets.TFB_REGISTRY_TOKEN }}
           logout: true
-          ecr: auto
 
       - name: Convert repository name to lowercase
         id: lowercase
