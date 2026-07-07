@@ -62,7 +62,7 @@ jobs:
     
       # Login to TFB Registry
       - name: Login to TFB Docker Registry
-        uses: docker/login-action@v4
+        uses: https://github.com/docker/login-action@v4
         with:
           registry: forge.theflyingbirds.net
           username: ${{ secrets.TFB_REGISTRY_USERNAME }}
