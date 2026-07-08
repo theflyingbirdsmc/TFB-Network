@@ -92,8 +92,8 @@ resource "coder_agent" "main" {
     then
     mkdir dev 
     cd dev
-    git clone https://github.com/theflyingbirdsmc/proxy.git
-    git clone https://github.com/theflyingbirdsmc/lobby.git
+    git clone https://forge.theflyingbirds.net/tfb/proxy.git
+    git clone https://forge.theflyingbirds.net/tfb/lobby.git
     fi
   EOT
 
