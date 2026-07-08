@@ -614,7 +614,7 @@ resource "kubernetes_deployment" "main" {
         hostname          = "${lower(data.coder_workspace.me.name)}"
         container {
         name              = "tfb-dev"
-          image             = "docker.theflyingbirds.net/tfb-services/tfb-dev:latest"
+          image             = "forge.theflyingbirds.net/tfb/dev:latest"
           image_pull_policy = "Always"
           command           = ["sh", "-c", coder_agent.main.init_script]
           security_context {
