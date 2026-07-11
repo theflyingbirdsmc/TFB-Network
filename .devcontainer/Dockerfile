@@ -8,12 +8,13 @@ RUN sudo apt-get update && \
 
 #install Gradle
 WORKDIR /opt/gradle
-RUN wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip \
-    && unzip gradle-8.4-bin.zip \
-    && rm gradle-8.4-bin.zip
+RUN wget -q https://services.gradle.org/distributions/gradle-9.6.1-bin.zip \
+
+    && unzip gradle-9.6.1-bin.zip \
+    && rm gradle-9.6.1-bin.zip
 
 # Set Gradle in the environment variables
-ENV PATH="/opt/gradle/gradle-8.4/bin:${PATH}"
+ENV PATH="/opt/gradle/gradle-9.6.1/bin:${PATH}"
 ARG MAVEN_URL
 ARG MAVEN_USERNAME
 ARG MAVEN_PASSWORD
