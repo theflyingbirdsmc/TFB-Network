@@ -4,7 +4,7 @@ FROM codercom/enterprise-base:ubuntu
 RUN sudo apt-get update && \
     sudo apt-get install --yes \
     mariadb-server \
-    openjdk-25-jre
+    openjdk-25-jdk
 
 #install Gradle
 WORKDIR /opt/gradle
