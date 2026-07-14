@@ -75,3 +75,4 @@ jobs:
           push: true
           tags: forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}:latest
           labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/${{ steps.lowercase.outputs.repo }}
+          
