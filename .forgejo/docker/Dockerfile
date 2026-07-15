@@ -1,15 +1,15 @@
 FROM docker.io/library/node:lts
 
-user root
+USER root
 
-RUN sudo apt-get update && \
-    sudo apt-get install --yes \
+RUN apt-get update && \
+    apt-get install --yes \
     openjdk-25-jdk \
     ca-certificates \
     curl
 
 RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
-    sudo sh get-docker.sh
+    sh get-docker.sh
 
 WORKDIR /opt/gradle
 
