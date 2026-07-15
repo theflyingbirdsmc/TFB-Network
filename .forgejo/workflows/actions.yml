@@ -1,0 +1,41 @@
+name: TFB Dev env
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .forgejo/workflows/actions.yml
+      - '.forgejo/docker/**'
+
+jobs:
+  build-docker-image:
+    runs-on: debian
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: https://github.com/actions/checkout@v6
+
+      - name: Docker CLI installation
+        run: |
+          apt update
+          apt install -y ca-certificates curl
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sh get-docker.sh
+    
+      # Login to TFB Registry
+      - name: Login to TFB Docker Registry
+        uses: docker/login-action@v3
+        with:
+          registry: forge.theflyingbirds.net
+          username: ${{ secrets.TFB_REGISTRY_USERNAME }}
+          password: ${{ secrets.TFB_REGISTRY_TOKEN }}
+
+      # Build and push Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .forgejo/docker/
+          push: true
+          tags: forge.theflyingbirds.net/tfb/actions:latest
+          labels: org.opencontainers.image.source=https://forge.theflyingbirds.net/tfb/network
