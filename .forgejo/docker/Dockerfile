@@ -3,7 +3,7 @@ FROM code.forgejo.org/forgejo/runner:12.13
 user root
 RUN apk update && \
     apk add \
-    openjdk-25-jdk \
+    openjdk25-jdk \
     ca-certificates \
     sudo \
     curl
