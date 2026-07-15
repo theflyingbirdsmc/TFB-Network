@@ -5,9 +5,10 @@ RUN apk update && \
     openjdk-25-jdk \
     ca-certificates \
     sudo \
-    curl && \
-    curl -fsSL https://get.docker.com -o get-docker.sh && \
-    sudo bash get-docker.sh
+    curl
+    
+RUN curl -fsSL https://get.docker.com -o get-docker.sh && \
+    sudo sh get-docker.sh
 
 WORKDIR /opt/gradle
 RUN wget -q https://services.gradle.org/distributions/gradle-9.6.1-bin.zip \
