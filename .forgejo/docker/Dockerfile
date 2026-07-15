@@ -1,9 +1,9 @@
-FROM docker.io/library/node:lts
+FROM docker.io/library/node:lts-trixie
 
 USER root
 
-RUN apt-get update && \
-    apt-get install --yes \
+RUN apt update && \
+    apt install --yes \
     openjdk-25-jdk \
     ca-certificates \
     curl
