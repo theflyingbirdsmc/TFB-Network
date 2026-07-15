@@ -2,7 +2,7 @@ FROM code.forgejo.org/forgejo/runner:12.13
 
 user root
 RUN apk update && \
-    apk add --yes \
+    apk add \
     openjdk-25-jdk \
     ca-certificates \
     sudo \
