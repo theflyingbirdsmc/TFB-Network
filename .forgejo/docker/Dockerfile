@@ -1,7 +1,7 @@
 FROM code.forgejo.org/forgejo/runner:12.13
 
-RUN sudo apt-get update && \
-    sudo apt-get install --yes \
+RUN apk update && \
+    apk add --yes \
     openjdk-25-jdk \
     ca-certificates \
     curl && \
