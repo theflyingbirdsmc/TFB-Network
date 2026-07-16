@@ -18,7 +18,7 @@ jobs:
 
       # Set up Docker
       - name: Set up Docker Build
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
     
       # Login to Harbor
       - name: Login to Nexus Docker Registry
