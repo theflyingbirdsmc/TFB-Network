@@ -15,13 +15,6 @@ jobs:
       # Check out the repository
       - name: Checkout code
         uses: https://github.com/actions/checkout@v6
-
-      - name: Docker CLI installation
-        run: |
-          apt update
-          apt install -y ca-certificates curl
-          curl -fsSL https://get.docker.com -o get-docker.sh
-          sh get-docker.sh
     
       # Login to TFB Registry
       - name: Login to TFB Docker Registry
