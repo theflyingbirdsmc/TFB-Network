@@ -32,8 +32,7 @@ jobs:
       - name: Execute Gradle build
         working-directory: server
         env:
-          TFB_REGISTRY_USERNAME: ${{ inputs.TFB_REGISTRY_USERNAME }}
-          TFB_REGISTRY_TOKEN: ${{ inputs.TFB_REGISTRY_TOKEN }}
+          TFB_REGISTRY_TOKEN: ${{ secrets.TFB_REGISTRY_TOKEN }}
         run: gradle update --no-build-cache
     
       # Login to TFB Registry
