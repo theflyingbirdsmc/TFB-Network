@@ -178,7 +178,7 @@ resource "coder_app" "code-server" {
   }
 }
 
-resource "kubernetes_persistent_volume_claim" "home" {
+resource "kubernetes_persistent_volume_claim_v1" "home" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-home"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -208,7 +208,7 @@ resource "kubernetes_persistent_volume_claim" "home" {
   }
 }
 
-resource "kubernetes_persistent_volume_claim" "tfb-network-db" {
+resource "kubernetes_persistent_volume_claim_v1" "tfb-network-db" {
   metadata {
     name      = "coder-${lower(data.coder_workspace_owner.me.name)}-${lower(data.coder_workspace.me.name)}-tfb-network-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -238,7 +238,7 @@ resource "kubernetes_persistent_volume_claim" "tfb-network-db" {
   }
 }
 
-resource "kubernetes_pod" "tfb-network-db" {
+resource "kubernetes_pod_v1" "tfb-network-db" {
   metadata {
     name      = "tfb-network-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -283,7 +283,7 @@ resource "kubernetes_pod" "tfb-network-db" {
     volume {
       name = "tfb-network-db"
       persistent_volume_claim {
-        claim_name = kubernetes_persistent_volume_claim.tfb-network-db.metadata[0].name
+        claim_name = kubernetes_persistent_volume_claim_v1.tfb-network-db.metadata[0].name
         read_only  = false
       }
     }
@@ -291,20 +291,20 @@ resource "kubernetes_pod" "tfb-network-db" {
     volume {
       name = "database-init"
       config_map {
-        name = kubernetes_config_map.database_init.metadata[0].name
+        name = kubernetes_config_map_v1.database_init.metadata[0].name
       }
     }
     volume {
       name = "tfb-cnf"
       config_map {
-        name = kubernetes_config_map.tfb_cnf.metadata[0].name 
+        name = kubernetes_config_map_v1.tfb_cnf.metadata[0].name 
       }
     }
   }
 }
 
 
-resource "kubernetes_config_map" "database_init" {
+resource "kubernetes_config_map_v1" "database_init" {
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
   # Add this block to ignore changes if the resource already exists
   # lifecycle {
@@ -400,7 +400,7 @@ resource "kubernetes_config_map" "database_init" {
     EOT
   }
 }
-resource "kubernetes_config_map" "tfb_cnf" {
+resource "kubernetes_config_map_v1" "tfb_cnf" {
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
   # Add this block to ignore changes if the resource already exists
   # lifecycle {
@@ -423,7 +423,7 @@ resource "kubernetes_config_map" "tfb_cnf" {
   }
 }
 
-resource "kubernetes_service" "mariadb_service" {
+resource "kubernetes_service_v1" "mariadb_service" {
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
   # Add this block to ignore changes if the resource already exists
   # lifecycle {
@@ -456,7 +456,7 @@ resource "kubernetes_service" "mariadb_service" {
   }
 }
 
-resource "kubernetes_service" "cs_tmm_db" {
+resource "kubernetes_service_v1" "cs_tmm_db" {
   metadata {
     name = "cs-tmm-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -472,7 +472,7 @@ resource "kubernetes_service" "cs_tmm_db" {
   }
 }
 
-resource "kubernetes_service" "aerieworks_db" {
+resource "kubernetes_service_v1" "aerieworks_db" {
   metadata {
     name = "aerieworks-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -488,7 +488,7 @@ resource "kubernetes_service" "aerieworks_db" {
   }
 }
 
-resource "kubernetes_service" "danish_survival_db" {
+resource "kubernetes_service_v1" "danish_survival_db" {
   metadata {
     name = "danish-survival-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -504,7 +504,7 @@ resource "kubernetes_service" "danish_survival_db" {
   }
 }
 
-resource "kubernetes_service" "parkour_db" {
+resource "kubernetes_service_v1" "parkour_db" {
   metadata {
     name = "parkour-db"
     namespace = "coder-${lower(data.coder_workspace_owner.me.name)}"
@@ -520,7 +520,7 @@ resource "kubernetes_service" "parkour_db" {
   }
 }
 
-resource "kubernetes_config_map" "hosts_config" {
+resource "kubernetes_config_map_v1" "hosts_config" {
   # Add this block to ignore changes if the resource already exists
   # count = data.coder_parameter.has_tfb_dev_workspace.value ? 0 : 1 // Should not create database if already exist
   # lifecycle {
@@ -547,10 +547,10 @@ resource "kubernetes_config_map" "hosts_config" {
   }
 }
 
-resource "kubernetes_deployment" "main" {
+resource "kubernetes_deployment_v1" "main" {
   count = data.coder_workspace.me.start_count
   depends_on = [
-    kubernetes_persistent_volume_claim.home
+    kubernetes_persistent_volume_claim_v1.home
   ]
   wait_for_rollout = false
   metadata {
@@ -657,7 +657,7 @@ resource "kubernetes_deployment" "main" {
         volume {
           name = "home"
           persistent_volume_claim {
-            claim_name = kubernetes_persistent_volume_claim.home.metadata.0.name
+            claim_name = kubernetes_persistent_volume_claim_v1.home.metadata.0.name
             read_only  = false
           }
         }
@@ -665,7 +665,7 @@ resource "kubernetes_deployment" "main" {
         volume {
           name = "custom-etc-hosts"
           config_map {
-            name = kubernetes_config_map.hosts_config.metadata[0].name
+            name = kubernetes_config_map_v1.hosts_config.metadata[0].name
           }
         }
 
