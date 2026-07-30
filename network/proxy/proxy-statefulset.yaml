@@ -29,10 +29,10 @@ spec:
         env:
           - name: TYPE
             value: "CUSTOM"
-          - name: BUNGEE_JAR_URL
-            value: "CUSTOM"
-          - name: CUSTOM_SERVER
-            value: "server.jar"
+          - name: BUNGEE_JAR_FILE
+            value: "/server/server.jar"
+          - name: CUSTOM_FAMILY
+            value: "waterfall"
           - name: EULA
             value: "TRUE"
         ports:
