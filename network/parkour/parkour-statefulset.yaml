@@ -25,7 +25,7 @@ spec:
         "kubernetes.io/hostname": bm-tfb-cluster-2675687
       containers:
       - name: parkour
-        image: docker.theflyingbirds.net/tfb-network/parkour:latest
+        image: forge.theflyingbirds.net/tfb/parkour:latest
         # image: itzg/minecraft-server:java21
         env:
           - name: TYPE
