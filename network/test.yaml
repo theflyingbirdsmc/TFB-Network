@@ -6,7 +6,7 @@ metadata:
 spec:
   project: tfb-network
   source:
-    repoURL: https://github.com/theflyingbirdsmc/TFB-Network.git
+    repoURL: https://forge.theflyingbirds.net/TFB/network.git
     path: network/test
   destination:
     server: https://kubernetes.default.svc
