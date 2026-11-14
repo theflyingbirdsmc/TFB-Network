@@ -1,0 +1,16 @@
+// Resolve through Coder on each build, rather than persisting an expiring token.
+def forgejoToken = providers.exec {
+    commandLine 'coder', 'external-auth', 'access-token', 'primary-forge'
+}.standardOutput.asText.map { output ->
+    def token = output.trim()
+    if (!token) {
+        throw new GradleException('Coder returned an empty Forgejo access token.')
+    }
+    token
+}
+
+gradle.beforeProject { project ->
+    if (!System.getenv('TFB_REGISTRY_TOKEN') && !project.findProperty('TFB_REGISTRY_TOKEN')) {
+        project.ext.TFB_REGISTRY_TOKEN = forgejoToken.get()
+    }
+}

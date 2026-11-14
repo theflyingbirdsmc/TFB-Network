@@ -80,6 +80,12 @@ resource "coder_agent" "main" {
   startup_script = <<-EOT
     set -e
 
+    # Share Forgejo authentication across all Gradle builds in this workspace.
+    mkdir -p "$${GRADLE_USER_HOME:-$HOME/.gradle}/init.d"
+    cat > "$${GRADLE_USER_HOME:-$HOME/.gradle}/init.d/forgejo.init.gradle" <<'GRADLE'
+    ${file("${path.module}/forgejo.init.gradle")}
+    GRADLE
+
     # Install the latest code-server.
     # Append "--version x.x.x" to install a specific version of code-server.
     curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --prefix=/tmp/code-server
