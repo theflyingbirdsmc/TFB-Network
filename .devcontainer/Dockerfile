@@ -15,11 +15,4 @@ RUN wget -q https://services.gradle.org/distributions/gradle-9.6.1-bin.zip \
 
 # Set Gradle in the environment variables
 ENV PATH="/opt/gradle/gradle-9.6.1/bin:${PATH}"
-ARG TFB_REGISTRY_URL
-ARG TFB_REGISTRY_USERNAME
-ARG TFB_REGISTRY_TOKEN
-
-ENV TFB_REGISTRY_URL=$TFB_REGISTRY_URL
-ENV TFB_REGISTRY_USERNAME=$TFB_REGISTRY_USERNAME
-ENV TFB_REGISTRY_TOKEN=$TFB_REGISTRY_TOKEN
 
