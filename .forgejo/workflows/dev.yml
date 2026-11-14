@@ -35,7 +35,7 @@ jobs:
           build-args: |
             MAVEN_URL=${{ secrets.MAVEN_URL }}
             MAVEN_USERNAME=${{ secrets.TFB_REGISTRY_USERNAME }}
-            MAVEN_PASSWORD=${{ secrets.TFB_REGISTRY_TOKEN }}
+            MAVEN_TOKEN=${{ secrets.TFB_REGISTRY_TOKEN }}
 
   publish-coder-template:
     runs-on: debian
