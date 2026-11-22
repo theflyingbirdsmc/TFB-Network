@@ -82,7 +82,6 @@ spec:
   - metadata:
       name: lobby-world-pv
     spec:
-      storageClassName: openebs-zfspv
       accessModes: ["ReadWriteOncePod"]
       resources:
         requests:
