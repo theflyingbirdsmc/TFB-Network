@@ -45,8 +45,6 @@ spec:
         envFrom:
           - secretRef:
               name: cs-tmm-discord-token
-          - secretRef:
-              name: world-cs-tmm-seed
         ports:
           - containerPort: 30100
         command: ["/bin/sh", "-c"]
